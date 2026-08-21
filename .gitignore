@@ -1,0 +1,15 @@
+# srodowisko
+.venv/
+__pycache__/
+*.pyc
+
+# zasoby anatomiczne - pobierane i przetwarzane lokalnie (setki MB)
+# odtwarza je: python tools/fetch_assets.py
+assets/
+
+# opisy punktow z "A Manual of Acupuncture" (Deadman) - material chroniony
+# prawem autorskim, generowane lokalnie: python tools/import_meta.py <sciezka>
+data/point_meta.json
+
+# zrzuty robocze
+*.tmp

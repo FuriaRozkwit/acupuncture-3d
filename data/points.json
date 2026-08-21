@@ -1,0 +1,6742 @@
+{
+ "version": 1,
+ "coordinate_system": "+X = prawa strona, +Y = przod, +Z = gora; kotwice w cun",
+ "channels": {
+  "LU": {
+   "pl": "Pluca",
+   "en": "Lung",
+   "zh": "手太陰肺经",
+   "element": "Metal",
+   "color": "#e3e8f0",
+   "clock": 1
+  },
+  "LI": {
+   "pl": "Jelito grube",
+   "en": "Large Intestine",
+   "zh": "手阳明大肠经",
+   "element": "Metal",
+   "color": "#b9c4d4",
+   "clock": 2
+  },
+  "ST": {
+   "pl": "Zoladek",
+   "en": "Stomach",
+   "zh": "足阳明胃经",
+   "element": "Earth",
+   "color": "#e0a83c",
+   "clock": 3
+  },
+  "SP": {
+   "pl": "Sledziona",
+   "en": "Spleen",
+   "zh": "足太陰脾经",
+   "element": "Earth",
+   "color": "#c98b2e",
+   "clock": 4
+  },
+  "HT": {
+   "pl": "Serce",
+   "en": "Heart",
+   "zh": "手少陰心经",
+   "element": "Fire",
+   "color": "#e04a44",
+   "clock": 5
+  },
+  "SI": {
+   "pl": "Jelito cienkie",
+   "en": "Small Intestine",
+   "zh": "手太阳小肠经",
+   "element": "Fire",
+   "color": "#b83b36",
+   "clock": 6
+  },
+  "BL": {
+   "pl": "Pecherz moczowy",
+   "en": "Bladder",
+   "zh": "足太阳膡胱经",
+   "element": "Water",
+   "color": "#4d8fd6",
+   "clock": 7
+  },
+  "KI": {
+   "pl": "Nerki",
+   "en": "Kidney",
+   "zh": "足少陰肾经",
+   "element": "Water",
+   "color": "#2f5f9e",
+   "clock": 8
+  },
+  "PC": {
+   "pl": "Osierdzie",
+   "en": "Pericardium",
+   "zh": "手厥陰心包经",
+   "element": "Fire",
+   "color": "#d977b8",
+   "clock": 9
+  },
+  "SJ": {
+   "pl": "Potrojny ogrzewacz",
+   "en": "San Jiao",
+   "zh": "手少阳三焦经",
+   "element": "Fire",
+   "color": "#a95a9c",
+   "clock": 10
+  },
+  "GB": {
+   "pl": "Pecherzyk zolciowy",
+   "en": "Gall Bladder",
+   "zh": "足少阳胆经",
+   "element": "Wood",
+   "color": "#57c08a",
+   "clock": 11
+  },
+  "LR": {
+   "pl": "Watroba",
+   "en": "Liver",
+   "zh": "足厥陰肝经",
+   "element": "Wood",
+   "color": "#2f9463",
+   "clock": 12
+  },
+  "REN": {
+   "pl": "Naczynie poczecia",
+   "en": "Conception vessel",
+   "zh": "任脉",
+   "element": "-",
+   "color": "#f0c674",
+   "clock": 13
+  },
+  "DU": {
+   "pl": "Naczynie gubernatora",
+   "en": "Governing vessel",
+   "zh": "督脉",
+   "element": "-",
+   "color": "#c6d3e4",
+   "clock": 14
+  }
+ },
+ "points": [
+  {
+   "code": "LU-1",
+   "channel": "LU",
+   "index": 1,
+   "pinyin": "Zhongfu",
+   "english": "Middle Palace vo",
+   "categories": [
+    "Front-Mu point of the Lung Is",
+    "Meeting point of the Lung and Spleen channels"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.772,
+    "lat": 6,
+    "face": "anterior"
+   },
+   "note_pl": "1. przestrzen miedzyzebrowa, 6 cun od linii posrodkowej"
+  },
+  {
+   "code": "LU-2",
+   "channel": "LU",
+   "index": 2,
+   "pinyin": "Yunmen",
+   "english": "Cloud Gate",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.795,
+    "lat": 6,
+    "face": "anterior"
+   },
+   "note_pl": "pod obojczykiem, w zaglebieniu podobojczykowym"
+  },
+  {
+   "code": "LU-3",
+   "channel": "LU",
+   "index": 3,
+   "pinyin": "Tianfu",
+   "english": "Palace of Heaven A",
+   "categories": [
+    "Point of the Window of Heaven Kea"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "upper_arm",
+    "cun": 3,
+    "from": "p0",
+    "az": 35
+   },
+   "note_pl": "3 cun ponizej przedniego faldu pachowego"
+  },
+  {
+   "code": "LU-4",
+   "channel": "LU",
+   "index": 4,
+   "pinyin": "Xiabai",
+   "english": "Clasping the White",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "upper_arm",
+    "cun": 4,
+    "from": "p0",
+    "az": 35
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "LU-5",
+   "channel": "LU",
+   "index": 5,
+   "pinyin": "Chize",
+   "english": "Cubit Marsh",
+   "categories": [
+    "He-Sea and Water point of the Lung channel 4"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "forearm",
+    "cun": 0,
+    "from": "p0",
+    "az": 45
+   },
+   "note_pl": "fald lokciowy, promieniowo od sciegna dwuglowego"
+  },
+  {
+   "code": "LU-6",
+   "channel": "LU",
+   "index": 6,
+   "pinyin": "Kongzui",
+   "english": "Maximum Opening",
+   "categories": [
+    "Xi-Cleft point of the Lung channel Kz"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "forearm",
+    "cun": 5,
+    "from": "p0",
+    "az": 55
+   },
+   "note_pl": "7 cun powyzej faldu nadgarstka"
+  },
+  {
+   "code": "LU-7",
+   "channel": "LU",
+   "index": 7,
+   "pinyin": "Lieque",
+   "english": "Broken Sequence ′",
+   "categories": [
+    "Luo-Connecting point of the Lung channel \"Eb.",
+    "Confluent point of the Conception vessel",
+    "Gao Wu Command point",
+    "Ma Dan-yang Heavenly Star point"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "forearm",
+    "cun": 1.5,
+    "from": "p1",
+    "az": 70
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "LU-8",
+   "channel": "LU",
+   "index": 8,
+   "pinyin": "Jingqu",
+   "english": "Channel Gutter $%",
+   "categories": [
+    "Jing-River and Metal point of the Lung channel *&"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "forearm",
+    "cun": 1,
+    "from": "p1",
+    "az": 72
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "LU-9",
+   "channel": "LU",
+   "index": 9,
+   "pinyin": "Taiyuan",
+   "english": "Supreme Abyss",
+   "categories": [
+    "Shu-Stream, Yuan-Source and Earth point ia",
+    "Hui-Meeting point of the Vessels"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "forearm",
+    "cun": 0.3,
+    "from": "p1",
+    "az": 68
+   },
+   "note_pl": "fald nadgarstka, przy tetnicy promieniowej"
+  },
+  {
+   "code": "LU-10",
+   "channel": "LU",
+   "index": 10,
+   "pinyin": "Yuji",
+   "english": "Fish Border yw",
+   "categories": [
+    "Ying-Spring and Fire point of the Lung channel we"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "hand",
+    "t": 0.3,
+    "az": 78
+   },
+   "note_pl": "srodek I kosci srodrecza, strona dloniowa"
+  },
+  {
+   "code": "LU-11",
+   "channel": "LU",
+   "index": 11,
+   "pinyin": "Shaoshang",
+   "english": "Lesser Shang",
+   "categories": [
+    "Jing-Well and Wood point of the Lung channel al",
+    "Sun Si-miao Ghost point"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "hand",
+    "t": 0.52,
+    "az": 95
+   },
+   "note_pl": "kacik paznokcia kciuka od strony promieniowej"
+  },
+  {
+   "code": "LI-1",
+   "channel": "LI",
+   "index": 1,
+   "pinyin": "Shangyang",
+   "english": "Shang Yang |",
+   "categories": [
+    "Jing-Well and Metal point of the Large Intestine %"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "hand",
+    "t": 0.62,
+    "az": 100
+   },
+   "note_pl": "kacik paznokcia palca wskazujacego"
+  },
+  {
+   "code": "LI-2",
+   "channel": "LI",
+   "index": 2,
+   "pinyin": "Erjian",
+   "english": "Second Space",
+   "categories": [
+    "Ying-Spring and Water point of the Large A"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "hand",
+    "t": 0.55,
+    "az": 105
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "LI-3",
+   "channel": "LI",
+   "index": 3,
+   "pinyin": "Sanjian",
+   "english": "Third Space —",
+   "categories": [
+    "Shu-Stream and Wood point of the Large (a)"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "hand",
+    "t": 0.45,
+    "az": 108
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "LI-4",
+   "channel": "LI",
+   "index": 4,
+   "pinyin": "Hegu",
+   "english": "Joining Valley",
+   "categories": [
+    "Yuan-Source point of the Large Intestine channel An",
+    "Gao Wu Command point",
+    "Ma Dan-yang Heavenly Star point"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "hand",
+    "t": 0.3,
+    "az": 120
+   },
+   "note_pl": "grzbiet dloni, miedzy I a II koscia srodrecza"
+  },
+  {
+   "code": "LI-5",
+   "channel": "LI",
+   "index": 5,
+   "pinyin": "Yangxi",
+   "english": "Yang Stream",
+   "categories": [
+    "Jing-River and Fire point of the VA"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "hand",
+    "t": 0.06,
+    "az": 125
+   },
+   "note_pl": "tabakierka anatomiczna"
+  },
+  {
+   "code": "LI-6",
+   "channel": "LI",
+   "index": 6,
+   "pinyin": "Pianli",
+   "english": "Veering Passage",
+   "categories": [
+    "Luo-Connecting point of the Large ie"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "forearm",
+    "cun": 3,
+    "from": "p1",
+    "az": 115
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "LI-7",
+   "channel": "LI",
+   "index": 7,
+   "pinyin": "Wenliu",
+   "english": "Warm Flow",
+   "categories": [
+    "Xi-Cleft point of the Large Intestine channel \\ vs"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "forearm",
+    "cun": 5,
+    "from": "p1",
+    "az": 115
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "LI-8",
+   "channel": "LI",
+   "index": 8,
+   "pinyin": "Xialian",
+   "english": "Lower Angle",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "forearm",
+    "cun": 4,
+    "from": "p0",
+    "az": 110
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "LI-9",
+   "channel": "LI",
+   "index": 9,
+   "pinyin": "Shanglian",
+   "english": "Upper Angle",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "forearm",
+    "cun": 3,
+    "from": "p0",
+    "az": 110
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "LI-10",
+   "channel": "LI",
+   "index": 10,
+   "pinyin": "Shousanli",
+   "english": "Arm Three Miles",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "forearm",
+    "cun": 2,
+    "from": "p0",
+    "az": 110
+   },
+   "note_pl": "2 cun ponizej LI-11"
+  },
+  {
+   "code": "LI-11",
+   "channel": "LI",
+   "index": 11,
+   "pinyin": "Quchi",
+   "english": "He-Sea and Earth point of the Large Intestine Y",
+   "categories": [
+    "He-Sea and Earth point of the Large Intestine Y",
+    "Sun Si-miao Ghost point",
+    "Ma Dan-yang Heavenly Star point"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "forearm",
+    "cun": 0,
+    "from": "p0",
+    "az": 118
+   },
+   "note_pl": "boczny koniec faldu lokciowego przy zgietym lokciu"
+  },
+  {
+   "code": "LI-12",
+   "channel": "LI",
+   "index": 12,
+   "pinyin": "Zhouliao",
+   "english": "Elbow Crevice",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "upper_arm",
+    "cun": 1,
+    "from": "p1",
+    "az": 120
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "LI-13",
+   "channel": "LI",
+   "index": 13,
+   "pinyin": "Shouwuli",
+   "english": "Arm Five Miles",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "upper_arm",
+    "cun": 3,
+    "from": "p1",
+    "az": 115
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "LI-14",
+   "channel": "LI",
+   "index": 14,
+   "pinyin": "Binao",
+   "english": "Upper Arm",
+   "categories": [
+    "Meeting point of the Large Intestine A%"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "upper_arm",
+    "cun": 6,
+    "from": "p1",
+    "az": 110
+   },
+   "note_pl": "przyczep miesnia naramiennego"
+  },
+  {
+   "code": "LI-15",
+   "channel": "LI",
+   "index": 15,
+   "pinyin": "Jianyu",
+   "english": "Shoulder Bone",
+   "categories": [
+    "Meeting point of the Large Intestine channel a"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "upper_arm",
+    "t": 0.02,
+    "az": 105
+   },
+   "note_pl": "zaglebienie przednio-dolne wyrostka barkowego"
+  },
+  {
+   "code": "LI-16",
+   "channel": "LI",
+   "index": 16,
+   "pinyin": "Jugu",
+   "english": "Great Bone",
+   "categories": [
+    "Meeting point of the Large Intestine channel 4"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.828,
+    "lat": 4.2,
+    "face": "anterior",
+    "out": 0.2
+   },
+   "note_pl": "miedzy wyrostkiem barkowym a obojczykiem"
+  },
+  {
+   "code": "LI-17",
+   "channel": "LI",
+   "index": 17,
+   "pinyin": "Tianding",
+   "english": "Heaven’s Tripod",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "neck",
+    "z_frac": 0.84,
+    "az": 62
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "LI-18",
+   "channel": "LI",
+   "index": 18,
+   "pinyin": "Futu",
+   "english": "Support the Prominence",
+   "categories": [
+    "Point of the Window of Heaven ra"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "neck",
+    "z_frac": 0.845,
+    "az": 62
+   },
+   "note_pl": "na wysokosci chrzastki tarczowatej, miedzy glowami SCM"
+  },
+  {
+   "code": "LI-19",
+   "channel": "LI",
+   "index": 19,
+   "pinyin": "Kouheliao",
+   "english": "Mouth Grain Crevice",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "head",
+    "z_frac": 0.898,
+    "az": 14
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "LI-20",
+   "channel": "LI",
+   "index": 20,
+   "pinyin": "Yingxiang",
+   "english": "Welcome Fragrance",
+   "categories": [
+    "Meeting point of the Large Intestine and Ay-"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "head",
+    "z_frac": 0.893,
+    "az": 18
+   },
+   "note_pl": "w bruzdzie nosowo-wargowej, przy skrzydelku nosa"
+  },
+  {
+   "code": "ST-1",
+   "channel": "ST",
+   "index": 1,
+   "pinyin": "Chengqi",
+   "english": "Container of Tears",
+   "categories": [
+    "Meeting point of the Stomach channel with ne"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "head",
+    "z_frac": 0.918,
+    "az": 15
+   },
+   "note_pl": "miedzy galka oczna a dolnym brzegiem oczodolu"
+  },
+  {
+   "code": "ST-2",
+   "channel": "ST",
+   "index": 2,
+   "pinyin": "Sibai",
+   "english": "Four Whites",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "head",
+    "z_frac": 0.91,
+    "az": 15
+   },
+   "note_pl": "otwor podoczodolowy"
+  },
+  {
+   "code": "ST-3",
+   "channel": "ST",
+   "index": 3,
+   "pinyin": "Juliao",
+   "english": "Great Crevice",
+   "categories": [
+    "Meeting point of the Stomach channel"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "head",
+    "z_frac": 0.899,
+    "az": 17
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "ST-4",
+   "channel": "ST",
+   "index": 4,
+   "pinyin": "Dicang",
+   "english": "Earth Granary '丶",
+   "categories": [
+    "Meeting point of the Stomach and (or"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "head",
+    "z_frac": 0.889,
+    "az": 13
+   },
+   "note_pl": "kacik ust"
+  },
+  {
+   "code": "ST-5",
+   "channel": "ST",
+   "index": 5,
+   "pinyin": "Daying",
+   "english": "Great Welcome",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "head",
+    "z_frac": 0.878,
+    "az": 45
+   },
+   "note_pl": "przed miesniem zwaczem, na tetnicy twarzowej"
+  },
+  {
+   "code": "ST-6",
+   "channel": "ST",
+   "index": 6,
+   "pinyin": "Jiache",
+   "english": "Jaw Bone",
+   "categories": [
+    "Sun Si-miao Ghost point :"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "head",
+    "z_frac": 0.881,
+    "az": 60
+   },
+   "note_pl": "wypuklosc zwacza przy zacisnietych zebach"
+  },
+  {
+   "code": "ST-7",
+   "channel": "ST",
+   "index": 7,
+   "pinyin": "Xiaguan",
+   "english": "Below the Joint",
+   "categories": [
+    "Meeting point of the Stomach and Gall Bladder (4"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "head",
+    "z_frac": 0.9,
+    "az": 68
+   },
+   "note_pl": "pod lukiem jarzmowym"
+  },
+  {
+   "code": "ST-8",
+   "channel": "ST",
+   "index": 8,
+   "pinyin": "Touwei",
+   "english": "Head's Binding 目",
+   "categories": [
+    "Meeting point of the Stomach and Gall Bladder ih"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "head",
+    "z_frac": 0.957,
+    "az": 40
+   },
+   "note_pl": "kacik czolowy linii wlosow"
+  },
+  {
+   "code": "ST-9",
+   "channel": "ST",
+   "index": 9,
+   "pinyin": "Renying",
+   "english": "Man「s Welcome",
+   "categories": [
+    "Meeting point of the Stomach and",
+    "Point of the Window of Heaven",
+    "Point of the Sea of Qi"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "neck",
+    "z_frac": 0.845,
+    "lat": 1.5,
+    "face": "anterior"
+   },
+   "note_pl": "na wysokosci chrzastki tarczowatej, przy tetnicy szyjnej"
+  },
+  {
+   "code": "ST-10",
+   "channel": "ST",
+   "index": 10,
+   "pinyin": "Shuitu",
+   "english": "Water Prominence",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "neck",
+    "z_frac": 0.828,
+    "lat": 1.8,
+    "face": "anterior"
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "ST-11",
+   "channel": "ST",
+   "index": 11,
+   "pinyin": "Qishe",
+   "english": "Abode of Qi 白",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.806,
+    "lat": 2,
+    "face": "anterior"
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "ST-12",
+   "channel": "ST",
+   "index": 12,
+   "pinyin": "Quepen",
+   "english": "Empty Basin Gp",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.812,
+    "lat": 4,
+    "face": "anterior"
+   },
+   "note_pl": "srodek dolu nadobojczykowego"
+  },
+  {
+   "code": "ST-13",
+   "channel": "ST",
+   "index": 13,
+   "pinyin": "Qihu",
+   "english": "Qi Door 心",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.8,
+    "lat": 4,
+    "face": "anterior"
+   },
+   "note_pl": "pod obojczykiem"
+  },
+  {
+   "code": "ST-14",
+   "channel": "ST",
+   "index": 14,
+   "pinyin": "Kufang",
+   "english": "Kufang ST-14",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.775,
+    "lat": 4,
+    "face": "anterior"
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "ST-15",
+   "channel": "ST",
+   "index": 15,
+   "pinyin": "Wuyi",
+   "english": "Room Screen",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.755,
+    "lat": 4,
+    "face": "anterior"
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "ST-16",
+   "channel": "ST",
+   "index": 16,
+   "pinyin": "Yingchuang",
+   "english": "Breast Window",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.737,
+    "lat": 4,
+    "face": "anterior"
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "ST-17",
+   "channel": "ST",
+   "index": 17,
+   "pinyin": "Ruzhong",
+   "english": "Middle of the Breast ou",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.72,
+    "lat": 4,
+    "face": "anterior"
+   },
+   "note_pl": "srodek brodawki sutkowej"
+  },
+  {
+   "code": "ST-18",
+   "channel": "ST",
+   "index": 18,
+   "pinyin": "Rugen",
+   "english": "Root of the Breast 芽L)",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.702,
+    "lat": 4,
+    "face": "anterior"
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "ST-19",
+   "channel": "ST",
+   "index": 19,
+   "pinyin": "Burong",
+   "english": "Not Contained",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_from": "umbilicus",
+    "z_cun": 6,
+    "lat": 2,
+    "face": "anterior"
+   },
+   "note_pl": "2 cun bocznie od linii posrodkowej, 6 cun powyzej pepka"
+  },
+  {
+   "code": "ST-20",
+   "channel": "ST",
+   "index": 20,
+   "pinyin": "Chengman",
+   "english": "Supporting Fullness",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_from": "umbilicus",
+    "z_cun": 5,
+    "lat": 2,
+    "face": "anterior"
+   },
+   "note_pl": "2 cun bocznie od linii posrodkowej, 5 cun powyzej pepka"
+  },
+  {
+   "code": "ST-21",
+   "channel": "ST",
+   "index": 21,
+   "pinyin": "Liangmen",
+   "english": "Beam Gate bed",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_from": "umbilicus",
+    "z_cun": 4,
+    "lat": 2,
+    "face": "anterior"
+   },
+   "note_pl": "2 cun bocznie od linii posrodkowej, 4 cun powyzej pepka"
+  },
+  {
+   "code": "ST-22",
+   "channel": "ST",
+   "index": 22,
+   "pinyin": "Guanmen",
+   "english": "Pass Gate",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_from": "umbilicus",
+    "z_cun": 3,
+    "lat": 2,
+    "face": "anterior"
+   },
+   "note_pl": "2 cun bocznie od linii posrodkowej, 3 cun powyzej pepka"
+  },
+  {
+   "code": "ST-23",
+   "channel": "ST",
+   "index": 23,
+   "pinyin": "Taiyi",
+   "english": "Supreme Unity 目咒",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_from": "umbilicus",
+    "z_cun": 2,
+    "lat": 2,
+    "face": "anterior"
+   },
+   "note_pl": "2 cun bocznie od linii posrodkowej, 2 cun powyzej pepka"
+  },
+  {
+   "code": "ST-24",
+   "channel": "ST",
+   "index": 24,
+   "pinyin": "Huaroumen",
+   "english": "Slippery Flesh Gate Y 丨",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_from": "umbilicus",
+    "z_cun": 1,
+    "lat": 2,
+    "face": "anterior"
+   },
+   "note_pl": "2 cun bocznie od linii posrodkowej, 1 cun powyzej pepka"
+  },
+  {
+   "code": "ST-25",
+   "channel": "ST",
+   "index": 25,
+   "pinyin": "Tianshu",
+   "english": "Heavens Pivot",
+   "categories": [
+    "Front-Mu point of the Large Intestine"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_from": "umbilicus",
+    "z_cun": 0,
+    "lat": 2,
+    "face": "anterior"
+   },
+   "note_pl": "2 cun bocznie od pepka"
+  },
+  {
+   "code": "ST-26",
+   "channel": "ST",
+   "index": 26,
+   "pinyin": "Wailing",
+   "english": "Outer Mound i] ve",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_from": "umbilicus",
+    "z_cun": -1,
+    "lat": 2,
+    "face": "anterior"
+   },
+   "note_pl": "2 cun bocznie od linii posrodkowej, 1 cun ponizej pepka"
+  },
+  {
+   "code": "ST-27",
+   "channel": "ST",
+   "index": 27,
+   "pinyin": "Daju",
+   "english": "The Great",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_from": "umbilicus",
+    "z_cun": -2,
+    "lat": 2,
+    "face": "anterior"
+   },
+   "note_pl": "2 cun bocznie od linii posrodkowej, 2 cun ponizej pepka"
+  },
+  {
+   "code": "ST-28",
+   "channel": "ST",
+   "index": 28,
+   "pinyin": "Shuidao",
+   "english": "Water Passage",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_from": "umbilicus",
+    "z_cun": -3,
+    "lat": 2,
+    "face": "anterior"
+   },
+   "note_pl": "2 cun bocznie od linii posrodkowej, 3 cun ponizej pepka"
+  },
+  {
+   "code": "ST-29",
+   "channel": "ST",
+   "index": 29,
+   "pinyin": "Guilai",
+   "english": "Return",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_from": "umbilicus",
+    "z_cun": -4,
+    "lat": 2,
+    "face": "anterior"
+   },
+   "note_pl": "2 cun bocznie od linii posrodkowej, 4 cun ponizej pepka"
+  },
+  {
+   "code": "ST-30",
+   "channel": "ST",
+   "index": 30,
+   "pinyin": "Qichong",
+   "english": "Rushing Qi",
+   "categories": [
+    "Meeting point of the Stomach channel with \"f",
+    "Point of the Sea of Water and Grain"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_from": "umbilicus",
+    "z_cun": -5,
+    "lat": 2,
+    "face": "anterior"
+   },
+   "note_pl": "2 cun bocznie od linii posrodkowej, 5 cun ponizej pepka"
+  },
+  {
+   "code": "ST-31",
+   "channel": "ST",
+   "index": 31,
+   "pinyin": "Biguan",
+   "english": "Thigh Gate",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "thigh",
+    "cun": 0,
+    "from": "p0",
+    "az": 30
+   },
+   "note_pl": "na wysokosci dolnego brzegu spojenia lonowego"
+  },
+  {
+   "code": "ST-32",
+   "channel": "ST",
+   "index": 32,
+   "pinyin": "Futu",
+   "english": "Crouching Rabbit Kk",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "thigh",
+    "cun": 6,
+    "from": "p1",
+    "az": 20
+   },
+   "note_pl": "6 cun powyzej gornego brzegu rzepki"
+  },
+  {
+   "code": "ST-33",
+   "channel": "ST",
+   "index": 33,
+   "pinyin": "Yinshi",
+   "english": "Yin Market Z",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "thigh",
+    "cun": 3,
+    "from": "p1",
+    "az": 25
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "ST-34",
+   "channel": "ST",
+   "index": 34,
+   "pinyin": "Liangqiu",
+   "english": "Ridge Mound",
+   "categories": [
+    "Xi-Cleft point of the Stomac"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "thigh",
+    "cun": 2,
+    "from": "p1",
+    "az": 22
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "ST-35",
+   "channel": "ST",
+   "index": 35,
+   "pinyin": "Dubi",
+   "english": "Calf’s Nose 4s",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "shank",
+    "cun": 0,
+    "from": "p0",
+    "az": 25
+   },
+   "note_pl": "zaglebienie bocznie od wiezadla rzepki"
+  },
+  {
+   "code": "ST-36",
+   "channel": "ST",
+   "index": 36,
+   "pinyin": "Zusanli",
+   "english": "Leg Three Miles",
+   "categories": [
+    "Gao Wu Command point",
+    "Ma Dan-yang Heavenly Star point",
+    "Point of the Sea of Water and Grain 9",
+    "He-Sea and Earth point of the Stomach channel x"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "shank",
+    "cun": 3,
+    "from": "p0",
+    "az": 22
+   },
+   "note_pl": "3 cun ponizej ST-35, szerokosc palca bocznie od grzebienia piszczeli"
+  },
+  {
+   "code": "ST-37",
+   "channel": "ST",
+   "index": 37,
+   "pinyin": "Shangjuxu",
+   "english": "Upper Great Void",
+   "categories": [
+    "Lower He-Sea point of the Large Intestine",
+    "Point of the Sea of Blood"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "shank",
+    "cun": 6,
+    "from": "p0",
+    "az": 22
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "ST-38",
+   "channel": "ST",
+   "index": 38,
+   "pinyin": "Tiaokou",
+   "english": "Lines Opening",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "shank",
+    "cun": 8,
+    "from": "p0",
+    "az": 22
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "ST-39",
+   "channel": "ST",
+   "index": 39,
+   "pinyin": "Xiajuxu",
+   "english": "M",
+   "categories": [
+    "Lower He-Sea point of the Small Intestine",
+    "Point of the Sea of Blood &"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "shank",
+    "cun": 9,
+    "from": "p0",
+    "az": 22
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "ST-40",
+   "channel": "ST",
+   "index": 40,
+   "pinyin": "Fenglong",
+   "english": "Abundant Bulge",
+   "categories": [
+    "Luo-Connecting point of the Stomach channel se"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "shank",
+    "cun": 8,
+    "from": "p0",
+    "az": 38
+   },
+   "note_pl": "2 szerokosci palca bocznie od ST-38"
+  },
+  {
+   "code": "ST-41",
+   "channel": "ST",
+   "index": 41,
+   "pinyin": "Jiexi",
+   "english": "Stream Divide",
+   "categories": [
+    "Jing-River and Fire point of the Stomach channel }"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "foot",
+    "t": 0.2,
+    "az": 0
+   },
+   "note_pl": "srodek faldu stawu skokowego; w modelu przesuniete nieco na grzbiet stopy, bo kostka i stopa zlewaja sie w jedna brylę"
+  },
+  {
+   "code": "ST-42",
+   "channel": "ST",
+   "index": 42,
+   "pinyin": "Chongyang",
+   "english": "Rushing Yang",
+   "categories": [
+    "Yuan-Source point of the Stomach channel %"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "foot",
+    "t": 0.35,
+    "az": 5
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "ST-43",
+   "channel": "ST",
+   "index": 43,
+   "pinyin": "Xiangu",
+   "english": "Sunken Valley",
+   "categories": [
+    "Shu-Stream and Wood point of the Stomach aX"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "foot",
+    "t": 0.52,
+    "az": 10
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "ST-44",
+   "channel": "ST",
+   "index": 44,
+   "pinyin": "Neiting",
+   "english": "Inner Courtyard",
+   "categories": [
+    "Ying-Spring and Water point of the Stomach ke",
+    "Ma Dan-yang Heavenly Star point"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "foot",
+    "t": 0.72,
+    "az": 12
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "ST-45",
+   "channel": "ST",
+   "index": 45,
+   "pinyin": "Lidui",
+   "english": "Strict Exchange",
+   "categories": [
+    "Jing-Well and Metal point of the ¥,"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "foot",
+    "t": 0.9,
+    "az": 15
+   },
+   "note_pl": "kacik paznokcia II palca stopy"
+  },
+  {
+   "code": "SP-1",
+   "channel": "SP",
+   "index": 1,
+   "pinyin": "Yinbai",
+   "english": "Hidden White r%.",
+   "categories": [
+    "Jing-Well and Wood point of the re)",
+    "Sun Si-miao Ghost point"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "foot",
+    "t": 0.9,
+    "az": -70
+   },
+   "note_pl": "kacik paznokcia palucha od strony przysrodkowej"
+  },
+  {
+   "code": "SP-2",
+   "channel": "SP",
+   "index": 2,
+   "pinyin": "Dadu",
+   "english": "Great Metropolis x",
+   "categories": [
+    "Ying-Spring and Fire point of the Rf"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "foot",
+    "t": 0.8,
+    "az": -75
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "SP-3",
+   "channel": "SP",
+   "index": 3,
+   "pinyin": "Taibai",
+   "english": "Supreme White",
+   "categories": [
+    "Shu-Stream, Yuan-Source and Earth (4",
+    "point of the Spleen channel"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "foot",
+    "t": 0.62,
+    "az": -80
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "SP-4",
+   "channel": "SP",
+   "index": 4,
+   "pinyin": "Gongsun",
+   "english": "Grandfather Grandson",
+   "categories": [
+    "Luo-Connecting point of the Spleen channel i.",
+    "Confluent point of the Penetrating vessel"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "foot",
+    "t": 0.45,
+    "az": -80
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "SP-5",
+   "channel": "SP",
+   "index": 5,
+   "pinyin": "Shangqiu",
+   "english": "Shang Mound",
+   "categories": [
+    "Jing-River and Metal point of the tt."
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "foot",
+    "t": 0.12,
+    "az": -70
+   },
+   "note_pl": "przednio-dolnie od kostki przysrodkowej"
+  },
+  {
+   "code": "SP-6",
+   "channel": "SP",
+   "index": 6,
+   "pinyin": "Sanyinjiao",
+   "english": "Three Yin Intersection ~",
+   "categories": [
+    "Meeting point of the Spleen, Liver and ¢&"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "shank",
+    "cun": 3,
+    "from": "p1",
+    "az": -80
+   },
+   "note_pl": "3 cun powyzej kostki przysrodkowej, przy brzegu piszczeli"
+  },
+  {
+   "code": "SP-7",
+   "channel": "SP",
+   "index": 7,
+   "pinyin": "Lougu",
+   "english": "Dripping Valley ka",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "shank",
+    "cun": 6,
+    "from": "p1",
+    "az": -80
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "SP-8",
+   "channel": "SP",
+   "index": 8,
+   "pinyin": "Diji",
+   "english": "Earth Pivot",
+   "categories": [
+    "Xi-Cleft point of the Spleen channel"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "shank",
+    "cun": 3,
+    "from": "p0",
+    "az": -75
+   },
+   "note_pl": "3 cun ponizej SP-9"
+  },
+  {
+   "code": "SP-9",
+   "channel": "SP",
+   "index": 9,
+   "pinyin": "Yinlingquan",
+   "english": "Yin Mound Spring",
+   "categories": [
+    "He-Sea and Water point of the Spleen channel"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "shank",
+    "cun": 0.5,
+    "from": "p0",
+    "az": -80
+   },
+   "note_pl": "pod klykciem przysrodkowym piszczeli"
+  },
+  {
+   "code": "SP-10",
+   "channel": "SP",
+   "index": 10,
+   "pinyin": "Xuehai",
+   "english": "Sea of Blood w.",
+   "categories": [
+    "Sea of Blood w."
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "thigh",
+    "cun": 2,
+    "from": "p1",
+    "az": -45
+   },
+   "note_pl": "2 cun powyzej rzepki, wypuklosc miesnia obszernego przysrodkowego"
+  },
+  {
+   "code": "SP-11",
+   "channel": "SP",
+   "index": 11,
+   "pinyin": "Jimen",
+   "english": "Winnowing Gate 与",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "thigh",
+    "cun": 6,
+    "from": "p1",
+    "az": -55
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "SP-12",
+   "channel": "SP",
+   "index": 12,
+   "pinyin": "Chongmen",
+   "english": "Rushing Gate",
+   "categories": [
+    "Meeting point of the Spleen and Liver 4 ]"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.492,
+    "lat": 3.5,
+    "face": "anterior"
+   },
+   "note_pl": "fald pachwinowy, bocznie od tetnicy udowej"
+  },
+  {
+   "code": "SP-13",
+   "channel": "SP",
+   "index": 13,
+   "pinyin": "Fushe",
+   "english": "Abode of the Fu {",
+   "categories": [
+    "Meeting point of the Spleen and Liver 4"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.512,
+    "lat": 4,
+    "face": "anterior"
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "SP-14",
+   "channel": "SP",
+   "index": 14,
+   "pinyin": "Fujie",
+   "english": "Abdomen Knot",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_from": "umbilicus",
+    "z_cun": -1.3,
+    "lat": 4,
+    "face": "anterior"
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "SP-15",
+   "channel": "SP",
+   "index": 15,
+   "pinyin": "Daheng",
+   "english": "Great Horizontal",
+   "categories": [
+    "Meeting point of the Spleen cl"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_from": "umbilicus",
+    "z_cun": 0,
+    "lat": 4,
+    "face": "anterior"
+   },
+   "note_pl": "4 cun bocznie od pepka"
+  },
+  {
+   "code": "SP-16",
+   "channel": "SP",
+   "index": 16,
+   "pinyin": "Fuai",
+   "english": "Abdomen Sorrow Ad",
+   "categories": [
+    "Meeting point of the Spleen channel with"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_from": "umbilicus",
+    "z_cun": 3,
+    "lat": 4,
+    "face": "anterior"
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "SP-17",
+   "channel": "SP",
+   "index": 17,
+   "pinyin": "Shidou",
+   "english": "Food Cavity",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.702,
+    "lat": 6,
+    "face": "anterior"
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "SP-18",
+   "channel": "SP",
+   "index": 18,
+   "pinyin": "Tianxi",
+   "english": "Heavenly Stream",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.72,
+    "lat": 6,
+    "face": "anterior"
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "SP-19",
+   "channel": "SP",
+   "index": 19,
+   "pinyin": "Xiongxiang",
+   "english": "Chest Village",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.737,
+    "lat": 6,
+    "face": "anterior"
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "SP-20",
+   "channel": "SP",
+   "index": 20,
+   "pinyin": "Zhourong",
+   "english": "Encircling Glory",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.755,
+    "lat": 6,
+    "face": "anterior"
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "SP-21",
+   "channel": "SP",
+   "index": 21,
+   "pinyin": "Dabao",
+   "english": "Great Wrapping",
+   "categories": [
+    "Great Luo-Connecting point of the Spleen ‘an"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.735,
+    "lat": 6,
+    "face": "lateral"
+   },
+   "note_pl": "linia pachowa srodkowa, 6. przestrzen miedzyzebrowa"
+  },
+  {
+   "code": "HT-1",
+   "channel": "HT",
+   "index": 1,
+   "pinyin": "Jiquan",
+   "english": "Summit Spring",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.79,
+    "lat": 6,
+    "face": "lateral"
+   },
+   "note_pl": "srodek dolu pachowego - model nie ma zachylka pachowego, punkt pokazany na bocznej scianie klatki"
+  },
+  {
+   "code": "HT-2",
+   "channel": "HT",
+   "index": 2,
+   "pinyin": "Qingling",
+   "english": "Green Spirit",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "upper_arm",
+    "cun": 3,
+    "from": "p1",
+    "az": -35
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "HT-3",
+   "channel": "HT",
+   "index": 3,
+   "pinyin": "Shaohai",
+   "english": "He-Sea and Water point of the Heart channel",
+   "categories": [
+    "He-Sea and Water point of the Heart channel"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "forearm",
+    "cun": 0,
+    "from": "p0",
+    "az": -55
+   },
+   "note_pl": "przysrodkowy koniec faldu lokciowego"
+  },
+  {
+   "code": "HT-4",
+   "channel": "HT",
+   "index": 4,
+   "pinyin": "Lingdao",
+   "english": "Spirit Path be iS",
+   "categories": [
+    "Jing-River and Metal point of the Heart ‘aA"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "forearm",
+    "cun": 1.5,
+    "from": "p1",
+    "az": -60
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "HT-5",
+   "channel": "HT",
+   "index": 5,
+   "pinyin": "Tongli",
+   "english": "Penetrating the Interior",
+   "categories": [
+    "Luo-Connecting point of the Heart channel \\",
+    "Ma Dan-yang Heavenly Star point"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "forearm",
+    "cun": 1,
+    "from": "p1",
+    "az": -62
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "HT-6",
+   "channel": "HT",
+   "index": 6,
+   "pinyin": "Yinxi",
+   "english": "Yin Cleft",
+   "categories": [
+    "Xi-Cleft point of the Heart channel 仁"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "forearm",
+    "cun": 0.5,
+    "from": "p1",
+    "az": -62
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "HT-7",
+   "channel": "HT",
+   "index": 7,
+   "pinyin": "Shenmen",
+   "english": "Spirit Gate",
+   "categories": [
+    "Shu-Stream, Yuan-Source and Earth point (4"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "forearm",
+    "cun": 0.3,
+    "from": "p1",
+    "az": -60
+   },
+   "note_pl": "fald nadgarstka, przy kosci grochowatej"
+  },
+  {
+   "code": "HT-8",
+   "channel": "HT",
+   "index": 8,
+   "pinyin": "Shaofu",
+   "english": "Lesser Palace yr 4",
+   "categories": [
+    "Ying-Spring and Fire point of the Heart channel Mt"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "hand",
+    "t": 0.35,
+    "az": -35
+   },
+   "note_pl": "dlon, miedzy IV a V koscia srodrecza"
+  },
+  {
+   "code": "HT-9",
+   "channel": "HT",
+   "index": 9,
+   "pinyin": "Shaochong",
+   "english": "Lesser Rushing",
+   "categories": [
+    "Jing-Well and Wood point of the Heart channel if"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "hand",
+    "t": 0.6,
+    "az": -60
+   },
+   "note_pl": "kacik paznokcia V palca"
+  },
+  {
+   "code": "SI-1",
+   "channel": "SI",
+   "index": 1,
+   "pinyin": "Shaoze",
+   "english": "Lesser Marsh",
+   "categories": [
+    "Jing-Well and Metal point of the Small \\F"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "hand",
+    "t": 0.62,
+    "az": -110
+   },
+   "note_pl": "kacik paznokcia V palca od strony lokciowej"
+  },
+  {
+   "code": "SI-2",
+   "channel": "SI",
+   "index": 2,
+   "pinyin": "Qiangu",
+   "english": "aol",
+   "categories": [
+    "Ying-Spring and Water point of the Small"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "hand",
+    "t": 0.5,
+    "az": -115
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "SI-3",
+   "channel": "SI",
+   "index": 3,
+   "pinyin": "Houxi",
+   "english": "Back Stream",
+   "categories": [
+    "Shu-Stream and Wood point of the Small ) [",
+    "Confluent point of the Governing vessel"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "hand",
+    "t": 0.35,
+    "az": -120
+   },
+   "note_pl": "koniec faldu dloni przy zacisnietej piesci"
+  },
+  {
+   "code": "SI-4",
+   "channel": "SI",
+   "index": 4,
+   "pinyin": "Wangu",
+   "english": "Wrist Bone",
+   "categories": [
+    "Yuan-Source point of the Small Intestine"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "hand",
+    "t": 0.15,
+    "az": -125
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "SI-5",
+   "channel": "SI",
+   "index": 5,
+   "pinyin": "Yanggu",
+   "english": "Yang Valley",
+   "categories": [
+    "Jing-River and Fire point of the Small"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "forearm",
+    "cun": 0,
+    "from": "p1",
+    "az": -125
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "SI-6",
+   "channel": "SI",
+   "index": 6,
+   "pinyin": "Yanglao",
+   "english": "Support the Aged",
+   "categories": [
+    "Xi-Cleft point of the Small Intestine channel &"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "forearm",
+    "cun": 1,
+    "from": "p1",
+    "az": -130
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "SI-7",
+   "channel": "SI",
+   "index": 7,
+   "pinyin": "Zhizheng",
+   "english": "Branch of the Upright",
+   "categories": [
+    "Luo-Connecting point of the Small Intestine na"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "forearm",
+    "cun": 5,
+    "from": "p1",
+    "az": -140
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "SI-8",
+   "channel": "SI",
+   "index": 8,
+   "pinyin": "Xiaohai",
+   "english": "Small Sea",
+   "categories": [
+    "He-Sea and Earth point of the Small Intestine }&"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "forearm",
+    "cun": 0,
+    "from": "p0",
+    "az": -150
+   },
+   "note_pl": "miedzy wyrostkiem lokciowym a nadklykciem przysrodkowym"
+  },
+  {
+   "code": "SI-9",
+   "channel": "SI",
+   "index": 9,
+   "pinyin": "Jianzhen",
+   "english": "True Shoulder",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.772,
+    "lat": 5.5,
+    "face": "posterior"
+   },
+   "note_pl": "1 cun powyzej tylnego faldu pachowego"
+  },
+  {
+   "code": "SI-10",
+   "channel": "SI",
+   "index": 10,
+   "pinyin": "Naoshu",
+   "english": "Upper Arm Shu At",
+   "categories": [
+    "Meeting point of the Small Intestine and"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.8,
+    "lat": 5,
+    "face": "posterior"
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "SI-11",
+   "channel": "SI",
+   "index": 11,
+   "pinyin": "Tianzong",
+   "english": "Heavenly Gathering K",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.76,
+    "lat": 4,
+    "face": "posterior"
+   },
+   "note_pl": "srodek lopatki"
+  },
+  {
+   "code": "SI-12",
+   "channel": "SI",
+   "index": 12,
+   "pinyin": "Bingfeng",
+   "english": "Grasping the Wind i",
+   "categories": [
+    "Meeting point of the Small Intestine, Large AR"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.795,
+    "lat": 4,
+    "face": "posterior"
+   },
+   "note_pl": "srodek dolu nadgrzebieniowego"
+  },
+  {
+   "code": "SI-13",
+   "channel": "SI",
+   "index": 13,
+   "pinyin": "Quyuan",
+   "english": "Crooked Wall % 3)",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.8,
+    "lat": 3,
+    "face": "posterior"
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "SI-14",
+   "channel": "SI",
+   "index": 14,
+   "pinyin": "Jianwaishu",
+   "english": "Outer Shoulder Shu She",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "T1",
+    "dz_cun": -0.4,
+    "lat": 3,
+    "face": "posterior"
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "SI-15",
+   "channel": "SI",
+   "index": 15,
+   "pinyin": "Jianzhongshu",
+   "english": "Middle Shoulder Shu",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "C7",
+    "dz_cun": -0.4,
+    "lat": 2,
+    "face": "posterior"
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "SI-16",
+   "channel": "SI",
+   "index": 16,
+   "pinyin": "Tianchuang",
+   "english": "Heavenly Window",
+   "categories": [
+    "Point of the Window of Heaven *"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "neck",
+    "z_frac": 0.845,
+    "az": 115
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "SI-17",
+   "channel": "SI",
+   "index": 17,
+   "pinyin": "Tianrong",
+   "english": "Heavenly Appearance",
+   "categories": [
+    "Point of the Window of Heaven"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "neck",
+    "z_frac": 0.862,
+    "az": 135
+   },
+   "note_pl": "za katem zuchwy, przy przednim brzegu SCM"
+  },
+  {
+   "code": "SI-18",
+   "channel": "SI",
+   "index": 18,
+   "pinyin": "Quanliao",
+   "english": "Cheek Bone Crevice",
+   "categories": [
+    "Meeting point of the Small Intestine and Sanjiao 4"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "head",
+    "z_frac": 0.912,
+    "az": 55
+   },
+   "note_pl": "pod kascia jarzmowa, pionowo pod bocznym katem oka"
+  },
+  {
+   "code": "SI-19",
+   "channel": "SI",
+   "index": 19,
+   "pinyin": "Tinggong",
+   "english": "Palace of Hearing",
+   "categories": [
+    "Meeting point of the Small Intestine, Sanjiao and a"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "head",
+    "z_frac": 0.918,
+    "az": 78
+   },
+   "note_pl": "przed skrawkiem malzowiny, przy otwartych ustach"
+  },
+  {
+   "code": "BL-1",
+   "channel": "BL",
+   "index": 1,
+   "pinyin": "Jingming",
+   "english": "Bright Eyes",
+   "categories": [
+    "Meeting point of the Bladder, Small Intestine,"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "head",
+    "z_frac": 0.926,
+    "az": 12
+   },
+   "note_pl": "przy przysrodkowym kaciku oka"
+  },
+  {
+   "code": "BL-2",
+   "channel": "BL",
+   "index": 2,
+   "pinyin": "Zanzhu",
+   "english": "Gathered Bamboo",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "head",
+    "z_frac": 0.933,
+    "az": 18
+   },
+   "note_pl": "przysrodkowy koniec brwi"
+  },
+  {
+   "code": "BL-3",
+   "channel": "BL",
+   "index": 3,
+   "pinyin": "Meichong",
+   "english": "Eyebrows’ Pouring",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "head",
+    "arc_cun": 0.5,
+    "lat": 0.75
+   },
+   "note_pl": "0,5 cun w obrebie linii wlosow, ok. 0,6 cun bocznie"
+  },
+  {
+   "code": "BL-4",
+   "channel": "BL",
+   "index": 4,
+   "pinyin": "Quchai",
+   "english": "Crooked Curve",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "head",
+    "arc_cun": 0.5,
+    "lat": 1.5
+   },
+   "note_pl": "0,5 cun powyzej linii wlosow, 1,5 cun bocznie"
+  },
+  {
+   "code": "BL-5",
+   "channel": "BL",
+   "index": 5,
+   "pinyin": "Wuchu",
+   "english": "Fifth Place ps",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "head",
+    "arc_cun": 1.0,
+    "lat": 1.5
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "BL-6",
+   "channel": "BL",
+   "index": 6,
+   "pinyin": "Chengguang",
+   "english": "Receiving Light",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "head",
+    "arc_cun": 2.5,
+    "lat": 1.5
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "BL-7",
+   "channel": "BL",
+   "index": 7,
+   "pinyin": "Tongtian",
+   "english": "Heavenly Connection",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "head",
+    "arc_cun": 4.0,
+    "lat": 1.5
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "BL-8",
+   "channel": "BL",
+   "index": 8,
+   "pinyin": "Luoque",
+   "english": "Declining Connection",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "head",
+    "arc_cun": 5.5,
+    "lat": 1.5
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "BL-9",
+   "channel": "BL",
+   "index": 9,
+   "pinyin": "Yuzhen",
+   "english": "Jade Pillow",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "head",
+    "arc_cun": 9.5,
+    "lat": 1.3
+   },
+   "note_pl": "2,5 cun powyzej tylnej linii wlosow"
+  },
+  {
+   "code": "BL-10",
+   "channel": "BL",
+   "index": 10,
+   "pinyin": "Tianzhu",
+   "english": "Celestial Pillar KR",
+   "categories": [
+    "Point of the Window of Heaven 4 4"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "neck",
+    "z_frac": 0.862,
+    "az": 165
+   },
+   "note_pl": "1,3 cun bocznie od DU-15, na miesniu czworobocznym"
+  },
+  {
+   "code": "BL-11",
+   "channel": "BL",
+   "index": 11,
+   "pinyin": "Dazhu",
+   "english": "Great Shuttle",
+   "categories": [
+    "Meeting point of the Bladder, Small Intestine, AP",
+    "Hui-Meeting point of Bones",
+    "Point of the Sea of Blood"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "T1",
+    "dz_cun": -0.4,
+    "lat": 1.5,
+    "face": "posterior"
+   },
+   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego T1"
+  },
+  {
+   "code": "BL-12",
+   "channel": "BL",
+   "index": 12,
+   "pinyin": "Fengmen",
+   "english": "Wind Gate",
+   "categories": [
+    "Meeting point of the Bladder channel with l J"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "T2",
+    "dz_cun": -0.4,
+    "lat": 1.5,
+    "face": "posterior"
+   },
+   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego T2"
+  },
+  {
+   "code": "BL-13",
+   "channel": "BL",
+   "index": 13,
+   "pinyin": "Feishu",
+   "english": "Lung Shu Af",
+   "categories": [
+    "Back-Shu point of the Lung At"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "T3",
+    "dz_cun": -0.4,
+    "lat": 1.5,
+    "face": "posterior"
+   },
+   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego T3"
+  },
+  {
+   "code": "BL-14",
+   "channel": "BL",
+   "index": 14,
+   "pinyin": "Jueyinshu",
+   "english": "Jueyin Shu",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "T4",
+    "dz_cun": -0.4,
+    "lat": 1.5,
+    "face": "posterior"
+   },
+   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego T4"
+  },
+  {
+   "code": "BL-15",
+   "channel": "BL",
+   "index": 15,
+   "pinyin": "Xinshu",
+   "english": "Heart Shu",
+   "categories": [
+    "Back-Shu point of the Heart ;"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "T5",
+    "dz_cun": -0.4,
+    "lat": 1.5,
+    "face": "posterior"
+   },
+   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego T5"
+  },
+  {
+   "code": "BL-16",
+   "channel": "BL",
+   "index": 16,
+   "pinyin": "Dushu",
+   "english": "Governor Shu",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "T6",
+    "dz_cun": -0.4,
+    "lat": 1.5,
+    "face": "posterior"
+   },
+   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego T6"
+  },
+  {
+   "code": "BL-17",
+   "channel": "BL",
+   "index": 17,
+   "pinyin": "Geshu",
+   "english": "Diaphragm Shu Kh",
+   "categories": [
+    "Hui-Meeting point of Blood 4)"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "T7",
+    "dz_cun": -0.4,
+    "lat": 1.5,
+    "face": "posterior"
+   },
+   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego T7"
+  },
+  {
+   "code": "BL-18",
+   "channel": "BL",
+   "index": 18,
+   "pinyin": "Ganshu",
+   "english": "Liver Shu At",
+   "categories": [
+    "Back-Shu point of the Liver 4"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "T9",
+    "dz_cun": -0.4,
+    "lat": 1.5,
+    "face": "posterior"
+   },
+   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego T9"
+  },
+  {
+   "code": "BL-19",
+   "channel": "BL",
+   "index": 19,
+   "pinyin": "Danshu",
+   "english": "Gall bladder Shu y",
+   "categories": [
+    "Back-Shu point of the Gall Bladder"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "T10",
+    "dz_cun": -0.4,
+    "lat": 1.5,
+    "face": "posterior"
+   },
+   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego T10"
+  },
+  {
+   "code": "BL-20",
+   "channel": "BL",
+   "index": 20,
+   "pinyin": "Pishu",
+   "english": "Spleen Shu",
+   "categories": [
+    "Back-Shu point of the Spleen wr)"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "T11",
+    "dz_cun": -0.4,
+    "lat": 1.5,
+    "face": "posterior"
+   },
+   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego T11"
+  },
+  {
+   "code": "BL-21",
+   "channel": "BL",
+   "index": 21,
+   "pinyin": "Weishu",
+   "english": "Stomach Shu `",
+   "categories": [
+    "Back-Shu point of the Stomach Ay"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "T12",
+    "dz_cun": -0.4,
+    "lat": 1.5,
+    "face": "posterior"
+   },
+   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego T12"
+  },
+  {
+   "code": "BL-22",
+   "channel": "BL",
+   "index": 22,
+   "pinyin": "Sanjiaoshu",
+   "english": "Sanjiao Shu",
+   "categories": [
+    "Back-Shu point of the Sanjiao"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "L1",
+    "dz_cun": -0.4,
+    "lat": 1.5,
+    "face": "posterior"
+   },
+   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego L1"
+  },
+  {
+   "code": "BL-23",
+   "channel": "BL",
+   "index": 23,
+   "pinyin": "Shenshu",
+   "english": "Kidney Shu 付",
+   "categories": [
+    "Back-Shu point of the Kidneys iy"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "L2",
+    "dz_cun": -0.4,
+    "lat": 1.5,
+    "face": "posterior"
+   },
+   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego L2"
+  },
+  {
+   "code": "BL-24",
+   "channel": "BL",
+   "index": 24,
+   "pinyin": "Qihaishu",
+   "english": "Sea of Qi Shu i",
+   "categories": [
+    "Sea of Qi Shu i"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "L3",
+    "dz_cun": -0.4,
+    "lat": 1.5,
+    "face": "posterior"
+   },
+   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego L3"
+  },
+  {
+   "code": "BL-25",
+   "channel": "BL",
+   "index": 25,
+   "pinyin": "Dachangshu",
+   "english": "Large Intestine Shu",
+   "categories": [
+    "Back-Shu point of the Large Intestine i"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "L4",
+    "dz_cun": -0.4,
+    "lat": 1.5,
+    "face": "posterior"
+   },
+   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego L4"
+  },
+  {
+   "code": "BL-26",
+   "channel": "BL",
+   "index": 26,
+   "pinyin": "Guanyuanshu",
+   "english": "Gate of Origin Shu",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "L5",
+    "dz_cun": -0.4,
+    "lat": 1.5,
+    "face": "posterior"
+   },
+   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego L5"
+  },
+  {
+   "code": "BL-27",
+   "channel": "BL",
+   "index": 27,
+   "pinyin": "Xiaochangshu",
+   "english": "Small Intestine Shu ~) 弛",
+   "categories": [
+    "Back-Shu point of the Small Intestine MM"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "S1",
+    "dz_cun": -0.4,
+    "lat": 1.5,
+    "face": "posterior"
+   },
+   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego S1"
+  },
+  {
+   "code": "BL-28",
+   "channel": "BL",
+   "index": 28,
+   "pinyin": "Pangguangshu",
+   "english": "Bladder Shu At",
+   "categories": [
+    "Back-Shu point of the Bladder Ax,"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "S2",
+    "dz_cun": -0.4,
+    "lat": 1.5,
+    "face": "posterior"
+   },
+   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego S2"
+  },
+  {
+   "code": "BL-29",
+   "channel": "BL",
+   "index": 29,
+   "pinyin": "Zhonglushu",
+   "english": "Mid-Spine Shu a",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "S3",
+    "dz_cun": -0.4,
+    "lat": 1.5,
+    "face": "posterior"
+   },
+   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego S3"
+  },
+  {
+   "code": "BL-30",
+   "channel": "BL",
+   "index": 30,
+   "pinyin": "Baihuanshu",
+   "english": "White Ring Shu z)",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "S4",
+    "dz_cun": -0.4,
+    "lat": 1.5,
+    "face": "posterior"
+   },
+   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego S4"
+  },
+  {
+   "code": "BL-31",
+   "channel": "BL",
+   "index": 31,
+   "pinyin": "Shangliao",
+   "english": "Upper Crevice",
+   "categories": [
+    "Meeting point of the Bladder and Gall Bladder 7"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "S1",
+    "dz_cun": -0.4,
+    "lat": 0.8,
+    "face": "posterior"
+   },
+   "note_pl": "otwor krzyzowy 1"
+  },
+  {
+   "code": "BL-32",
+   "channel": "BL",
+   "index": 32,
+   "pinyin": "Ciliao",
+   "english": "Second Crevice 4",
+   "categories": [
+    "Meeting point of the Bladder and Gall Bladder 4"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "S2",
+    "dz_cun": -0.4,
+    "lat": 0.8,
+    "face": "posterior"
+   },
+   "note_pl": "otwor krzyzowy 2"
+  },
+  {
+   "code": "BL-33",
+   "channel": "BL",
+   "index": 33,
+   "pinyin": "Zhongliao",
+   "english": "Middle Crevice",
+   "categories": [
+    "Meeting point of the Bladder and Gall Bladder"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "S3",
+    "dz_cun": -0.4,
+    "lat": 0.8,
+    "face": "posterior"
+   },
+   "note_pl": "otwor krzyzowy 3"
+  },
+  {
+   "code": "BL-34",
+   "channel": "BL",
+   "index": 34,
+   "pinyin": "Xialiao",
+   "english": "Lower Crevice",
+   "categories": [
+    "Meeting point of the Bladder, and Gall Bladder 48"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "S4",
+    "dz_cun": -0.4,
+    "lat": 0.8,
+    "face": "posterior"
+   },
+   "note_pl": "otwor krzyzowy 4"
+  },
+  {
+   "code": "BL-35",
+   "channel": "BL",
+   "index": 35,
+   "pinyin": "Huiyang",
+   "english": "Meeting of Yang",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "coccyx",
+    "dz_cun": 0.0,
+    "lat": 0.5,
+    "face": "posterior"
+   },
+   "note_pl": "0,5 cun bocznie od szczytu kosci guzicznej"
+  },
+  {
+   "code": "BL-36",
+   "channel": "BL",
+   "index": 36,
+   "pinyin": "Chengfu",
+   "english": "Hold and Support",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "thigh",
+    "cun": 0,
+    "from": "p0",
+    "az": 180
+   },
+   "note_pl": "srodek faldu posladkowego"
+  },
+  {
+   "code": "BL-37",
+   "channel": "BL",
+   "index": 37,
+   "pinyin": "Yinmen",
+   "english": "Gate of Abundance",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "thigh",
+    "cun": 6,
+    "from": "p0",
+    "az": 180
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "BL-38",
+   "channel": "BL",
+   "index": 38,
+   "pinyin": "Fuxi",
+   "english": "Floating Cleft",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "thigh",
+    "cun": 1,
+    "from": "p1",
+    "az": 175
+   },
+   "note_pl": "1 cun powyzej faldu podkolanowego"
+  },
+  {
+   "code": "BL-39",
+   "channel": "BL",
+   "index": 39,
+   "pinyin": "Weiyang",
+   "english": "Outside of the Crook",
+   "categories": [
+    "Lower He-Sea point of the 5"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "shank",
+    "cun": 0,
+    "from": "p0",
+    "az": 160
+   },
+   "note_pl": "boczny koniec faldu podkolanowego"
+  },
+  {
+   "code": "BL-40",
+   "channel": "BL",
+   "index": 40,
+   "pinyin": "Weizhong",
+   "english": "Middle of the Crook",
+   "categories": [
+    "He-Sea and Earth point of the Bladder channel",
+    "Gao Wu Command point",
+    "Ma Dan-yang Heavenly Star point"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "shank",
+    "cun": 0,
+    "from": "p0",
+    "az": 180
+   },
+   "note_pl": "srodek faldu podkolanowego"
+  },
+  {
+   "code": "BL-41",
+   "channel": "BL",
+   "index": 41,
+   "pinyin": "Fufen",
+   "english": "Attached Branch",
+   "categories": [
+    "Meeting point of the Bladder and Small Intestine J)"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "T2",
+    "dz_cun": -0.4,
+    "lat": 3,
+    "face": "posterior"
+   },
+   "note_pl": "3 cun bocznie od wyrostka kolczystego T2"
+  },
+  {
+   "code": "BL-42",
+   "channel": "BL",
+   "index": 42,
+   "pinyin": "Pohu",
+   "english": "Door of the Corporeal Soul",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "T3",
+    "dz_cun": -0.4,
+    "lat": 3,
+    "face": "posterior"
+   },
+   "note_pl": "3 cun bocznie od wyrostka kolczystego T3"
+  },
+  {
+   "code": "BL-43",
+   "channel": "BL",
+   "index": 43,
+   "pinyin": "Gaohuangshu",
+   "english": "Vital Region Shu",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "T4",
+    "dz_cun": -0.4,
+    "lat": 3,
+    "face": "posterior"
+   },
+   "note_pl": "3 cun bocznie od wyrostka kolczystego T4"
+  },
+  {
+   "code": "BL-44",
+   "channel": "BL",
+   "index": 44,
+   "pinyin": "Shentang",
+   "english": "Hall of the Spirit",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "T5",
+    "dz_cun": -0.4,
+    "lat": 3,
+    "face": "posterior"
+   },
+   "note_pl": "3 cun bocznie od wyrostka kolczystego T5"
+  },
+  {
+   "code": "BL-45",
+   "channel": "BL",
+   "index": 45,
+   "pinyin": "Yixi",
+   "english": "Yi Xi &",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "T6",
+    "dz_cun": -0.4,
+    "lat": 3,
+    "face": "posterior"
+   },
+   "note_pl": "3 cun bocznie od wyrostka kolczystego T6"
+  },
+  {
+   "code": "BL-46",
+   "channel": "BL",
+   "index": 46,
+   "pinyin": "Geguan",
+   "english": "Diaphragm Gate ha",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "T7",
+    "dz_cun": -0.4,
+    "lat": 3,
+    "face": "posterior"
+   },
+   "note_pl": "3 cun bocznie od wyrostka kolczystego T7"
+  },
+  {
+   "code": "BL-47",
+   "channel": "BL",
+   "index": 47,
+   "pinyin": "Hunmen",
+   "english": "Gate of the Ethereal Soul",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "T9",
+    "dz_cun": -0.4,
+    "lat": 3,
+    "face": "posterior"
+   },
+   "note_pl": "3 cun bocznie od wyrostka kolczystego T9"
+  },
+  {
+   "code": "BL-48",
+   "channel": "BL",
+   "index": 48,
+   "pinyin": "Yanggang",
+   "english": "Yang’s’ Key Link",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "T10",
+    "dz_cun": -0.4,
+    "lat": 3,
+    "face": "posterior"
+   },
+   "note_pl": "3 cun bocznie od wyrostka kolczystego T10"
+  },
+  {
+   "code": "BL-49",
+   "channel": "BL",
+   "index": 49,
+   "pinyin": "Yishe",
+   "english": "Abode of Thought J",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "T11",
+    "dz_cun": -0.4,
+    "lat": 3,
+    "face": "posterior"
+   },
+   "note_pl": "3 cun bocznie od wyrostka kolczystego T11"
+  },
+  {
+   "code": "BL-50",
+   "channel": "BL",
+   "index": 50,
+   "pinyin": "Weicang",
+   "english": "Stomach Granary",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "T12",
+    "dz_cun": -0.4,
+    "lat": 3,
+    "face": "posterior"
+   },
+   "note_pl": "3 cun bocznie od wyrostka kolczystego T12"
+  },
+  {
+   "code": "BL-51",
+   "channel": "BL",
+   "index": 51,
+   "pinyin": "Huangmen",
+   "english": "Vitals Gate",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "L1",
+    "dz_cun": -0.4,
+    "lat": 3,
+    "face": "posterior"
+   },
+   "note_pl": "3 cun bocznie od wyrostka kolczystego L1"
+  },
+  {
+   "code": "BL-52",
+   "channel": "BL",
+   "index": 52,
+   "pinyin": "Zhishi",
+   "english": "Residence of the Will",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "L2",
+    "dz_cun": -0.4,
+    "lat": 3,
+    "face": "posterior"
+   },
+   "note_pl": "3 cun bocznie od wyrostka kolczystego L2"
+  },
+  {
+   "code": "BL-53",
+   "channel": "BL",
+   "index": 53,
+   "pinyin": "Baohuang",
+   "english": "Bladder’s Vitals Le",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "S2",
+    "dz_cun": -0.4,
+    "lat": 3,
+    "face": "posterior"
+   },
+   "note_pl": "3 cun bocznie od wyrostka kolczystego S2"
+  },
+  {
+   "code": "BL-54",
+   "channel": "BL",
+   "index": 54,
+   "pinyin": "Zhibian",
+   "english": "Order’s Limit",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "S4",
+    "dz_cun": -0.4,
+    "lat": 3,
+    "face": "posterior"
+   },
+   "note_pl": "3 cun bocznie od wyrostka kolczystego S4"
+  },
+  {
+   "code": "BL-55",
+   "channel": "BL",
+   "index": 55,
+   "pinyin": "Heyang",
+   "english": "Confluence of Yang 口",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "shank",
+    "cun": 2,
+    "from": "p0",
+    "az": 180
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "BL-56",
+   "channel": "BL",
+   "index": 56,
+   "pinyin": "Chengjin",
+   "english": "",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "shank",
+    "cun": 5,
+    "from": "p0",
+    "az": 180
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "BL-57",
+   "channel": "BL",
+   "index": 57,
+   "pinyin": "Chengshan",
+   "english": "Support the Mountain",
+   "categories": [
+    "Ma Dan-yang Heavenly Star point"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "shank",
+    "cun": 8,
+    "from": "p0",
+    "az": 180
+   },
+   "note_pl": "szczyt brzuscow miesnia brzuchatego lydki"
+  },
+  {
+   "code": "BL-58",
+   "channel": "BL",
+   "index": 58,
+   "pinyin": "Feiyang",
+   "english": "Soaring Upwards",
+   "categories": [
+    "Luo-Connecting point of the Bladder channel 3"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "shank",
+    "cun": 7,
+    "from": "p1",
+    "az": 168
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "BL-59",
+   "channel": "BL",
+   "index": 59,
+   "pinyin": "Fuyang",
+   "english": "Instep Yang Ma",
+   "categories": [
+    "Xi-Cleft point of the Yang Motility vessel 1%"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "shank",
+    "cun": 3,
+    "from": "p1",
+    "az": 170
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "BL-60",
+   "channel": "BL",
+   "index": 60,
+   "pinyin": "Kunlun",
+   "english": "Kunlun Mountains",
+   "categories": [
+    "Jing-River and Fire point of the Bladder channel Gr",
+    "Ma Dan-yang Heavenly Star point"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "shank",
+    "cun": 0,
+    "from": "p1",
+    "az": 150
+   },
+   "note_pl": "miedzy kostka boczna a sciegnem Achillesa"
+  },
+  {
+   "code": "BL-61",
+   "channel": "BL",
+   "index": 61,
+   "pinyin": "Pucan",
+   "english": "Servant’s Respect",
+   "categories": [
+    "Meeting point of the Bladder channel with the 吊"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "foot",
+    "t": 0.08,
+    "az": 150
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "BL-62",
+   "channel": "BL",
+   "index": 62,
+   "pinyin": "Shenmai",
+   "english": "Extending Vessel",
+   "categories": [
+    "Confluent point of the Yang Motility vessel Ak",
+    "Sun Si-miao Ghost point"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "foot",
+    "t": 0.1,
+    "az": 110
+   },
+   "note_pl": "tuz ponizej kostki bocznej"
+  },
+  {
+   "code": "BL-63",
+   "channel": "BL",
+   "index": 63,
+   "pinyin": "Jinmen",
+   "english": "Xi-Cleft point of the Bladder channel",
+   "categories": [
+    "Xi-Cleft point of the Bladder channel",
+    "Meeting point of the Bladder channel with"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "foot",
+    "t": 0.2,
+    "az": 115
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "BL-64",
+   "channel": "BL",
+   "index": 64,
+   "pinyin": "Jinggu",
+   "english": "Capital Bone 7",
+   "categories": [
+    "Yuan-Source point of the Bladder channel |"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "foot",
+    "t": 0.35,
+    "az": 115
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "BL-65",
+   "channel": "BL",
+   "index": 65,
+   "pinyin": "Shugu",
+   "english": "Restraining Bone",
+   "categories": [
+    "Shu-Stream and Wood point of the “A"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "foot",
+    "t": 0.55,
+    "az": 115
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "BL-66",
+   "channel": "BL",
+   "index": 66,
+   "pinyin": "Zutonggu",
+   "english": "Foot Connecting Valley",
+   "categories": [
+    "Ying-Spring and Water point of the Bladder ut"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "foot",
+    "t": 0.75,
+    "az": 118
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "BL-67",
+   "channel": "BL",
+   "index": 67,
+   "pinyin": "Zhiyin",
+   "english": "Reaching Yin a",
+   "categories": [
+    "Jing-Well and Metal point of"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "foot",
+    "t": 0.92,
+    "az": 120
+   },
+   "note_pl": "kacik paznokcia V palca stopy"
+  },
+  {
+   "code": "KI-1",
+   "channel": "KI",
+   "index": 1,
+   "pinyin": "Yongquan",
+   "english": "Gushing Spring",
+   "categories": [
+    "Jing-Well and Wood point of the Kidney channel RK"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "foot",
+    "t": 0.42,
+    "az": 180
+   },
+   "note_pl": "podeszwa, na granicy 1/3 przedniej i 2/3 tylnych"
+  },
+  {
+   "code": "KI-2",
+   "channel": "KI",
+   "index": 2,
+   "pinyin": "Rangu",
+   "english": "Blazing Valley >",
+   "categories": [
+    "Ying-Spring and Fire point of the Kidney channel AN"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "foot",
+    "t": 0.25,
+    "az": -140
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "KI-3",
+   "channel": "KI",
+   "index": 3,
+   "pinyin": "Taixi",
+   "english": "Supreme Stream",
+   "categories": [
+    "Shu-Stream, Yuan-Source and Earth point of V¥."
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "shank",
+    "cun": 0,
+    "from": "p1",
+    "az": -140
+   },
+   "note_pl": "miedzy kostka przysrodkowa a sciegnem Achillesa"
+  },
+  {
+   "code": "KI-4",
+   "channel": "KI",
+   "index": 4,
+   "pinyin": "Dazhong",
+   "english": "Great Bell xn",
+   "categories": [
+    "Luo-Connecting point of the Kidney channel 4G"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "foot",
+    "t": 0.05,
+    "az": -160
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "KI-5",
+   "channel": "KI",
+   "index": 5,
+   "pinyin": "Shuiquan",
+   "english": "Water Spring",
+   "categories": [
+    "Xi-Cleft point of the Kidney channel €"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "foot",
+    "t": 0.08,
+    "az": -145
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "KI-6",
+   "channel": "KI",
+   "index": 6,
+   "pinyin": "Zhaohai",
+   "english": "Shining Sea owe",
+   "categories": [
+    "Confluent point of the Yin Motility vessel 4"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "foot",
+    "t": 0.03,
+    "az": -110
+   },
+   "note_pl": "tuz ponizej kostki przysrodkowej"
+  },
+  {
+   "code": "KI-7",
+   "channel": "KI",
+   "index": 7,
+   "pinyin": "Fuliu",
+   "english": "Returning Current",
+   "categories": [
+    "Jing-River and Metal point of the Kidney channel 1g"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "shank",
+    "cun": 2,
+    "from": "p1",
+    "az": -160
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "KI-8",
+   "channel": "KI",
+   "index": 8,
+   "pinyin": "Jiaoxin",
+   "english": "Exchange Belief",
+   "categories": [
+    "Xi-Cleft point of the Yin Motility vessel Ax"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "shank",
+    "cun": 2,
+    "from": "p1",
+    "az": -130
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "KI-9",
+   "channel": "KI",
+   "index": 9,
+   "pinyin": "Zhubin",
+   "english": "Guest House ˇ",
+   "categories": [
+    "Xi-Cleft point of the Yin Linking vessel 4"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "shank",
+    "cun": 5,
+    "from": "p1",
+    "az": -150
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "KI-10",
+   "channel": "KI",
+   "index": 10,
+   "pinyin": "Yingu",
+   "english": "Yin Valley",
+   "categories": [
+    "He-Sea and water point of the Kidney channel 72s"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "shank",
+    "cun": 0,
+    "from": "p0",
+    "az": -170
+   },
+   "note_pl": "przysrodkowy koniec faldu podkolanowego"
+  },
+  {
+   "code": "KI-11",
+   "channel": "KI",
+   "index": 11,
+   "pinyin": "Henggu",
+   "english": "Pubic Bone 匹",
+   "categories": [
+    "Meeting point of the Kidney channel with i"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_from": "umbilicus",
+    "z_cun": -5,
+    "lat": 0.5,
+    "face": "anterior"
+   },
+   "note_pl": "0,5 cun bocznie od linii posrodkowej brzucha"
+  },
+  {
+   "code": "KI-12",
+   "channel": "KI",
+   "index": 12,
+   "pinyin": "Dahe",
+   "english": "Great Luminance",
+   "categories": [
+    "Meeting point of the Kidney channel with Af"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_from": "umbilicus",
+    "z_cun": -4,
+    "lat": 0.5,
+    "face": "anterior"
+   },
+   "note_pl": "0,5 cun bocznie od linii posrodkowej brzucha"
+  },
+  {
+   "code": "KI-13",
+   "channel": "KI",
+   "index": 13,
+   "pinyin": "Qixue",
+   "english": "Qi Cave &",
+   "categories": [
+    "Meeting point of the Kidney channel with J X"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_from": "umbilicus",
+    "z_cun": -3,
+    "lat": 0.5,
+    "face": "anterior"
+   },
+   "note_pl": "0,5 cun bocznie od linii posrodkowej brzucha"
+  },
+  {
+   "code": "KI-14",
+   "channel": "KI",
+   "index": 14,
+   "pinyin": "Siman",
+   "english": "Four Fullnesses",
+   "categories": [
+    "Meeting point of the Kidney channel with | (@)"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_from": "umbilicus",
+    "z_cun": -2,
+    "lat": 0.5,
+    "face": "anterior"
+   },
+   "note_pl": "0,5 cun bocznie od linii posrodkowej brzucha"
+  },
+  {
+   "code": "KI-15",
+   "channel": "KI",
+   "index": 15,
+   "pinyin": "Zhongzhu",
+   "english": "Middle Flow",
+   "categories": [
+    "Meeting point of the Kidney channel with yy"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_from": "umbilicus",
+    "z_cun": -1,
+    "lat": 0.5,
+    "face": "anterior"
+   },
+   "note_pl": "0,5 cun bocznie od linii posrodkowej brzucha"
+  },
+  {
+   "code": "KI-16",
+   "channel": "KI",
+   "index": 16,
+   "pinyin": "Huangshu",
+   "english": "Vitals Shu",
+   "categories": [
+    "Meeting point of the Kidney channel with AY"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_from": "umbilicus",
+    "z_cun": 0,
+    "lat": 0.5,
+    "face": "anterior"
+   },
+   "note_pl": "0,5 cun bocznie od linii posrodkowej brzucha"
+  },
+  {
+   "code": "KI-17",
+   "channel": "KI",
+   "index": 17,
+   "pinyin": "Shangqu",
+   "english": "Shang Bend",
+   "categories": [
+    "Meeting point of the Kidney"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_from": "umbilicus",
+    "z_cun": 2,
+    "lat": 0.5,
+    "face": "anterior"
+   },
+   "note_pl": "0,5 cun bocznie od linii posrodkowej brzucha"
+  },
+  {
+   "code": "KI-18",
+   "channel": "KI",
+   "index": 18,
+   "pinyin": "Shiguan",
+   "english": "Stone Pass",
+   "categories": [
+    "Meeting point of the Kidney channel with Wee"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_from": "umbilicus",
+    "z_cun": 3,
+    "lat": 0.5,
+    "face": "anterior"
+   },
+   "note_pl": "0,5 cun bocznie od linii posrodkowej brzucha"
+  },
+  {
+   "code": "KI-19",
+   "channel": "KI",
+   "index": 19,
+   "pinyin": "Yindu",
+   "english": "Yin Metropolis",
+   "categories": [
+    "Meeting point of the Kidney channel with p"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_from": "umbilicus",
+    "z_cun": 4,
+    "lat": 0.5,
+    "face": "anterior"
+   },
+   "note_pl": "0,5 cun bocznie od linii posrodkowej brzucha"
+  },
+  {
+   "code": "KI-20",
+   "channel": "KI",
+   "index": 20,
+   "pinyin": "Futonggu",
+   "english": "Abdomen Connecting Va",
+   "categories": [
+    "Meeting point of the Kidney"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_from": "umbilicus",
+    "z_cun": 5,
+    "lat": 0.5,
+    "face": "anterior"
+   },
+   "note_pl": "0,5 cun bocznie od linii posrodkowej brzucha"
+  },
+  {
+   "code": "KI-21",
+   "channel": "KI",
+   "index": 21,
+   "pinyin": "Youmen",
+   "english": "Hidden Gate uw)",
+   "categories": [
+    "Meeting point of the Kidney channel with f4"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_from": "umbilicus",
+    "z_cun": 6,
+    "lat": 0.5,
+    "face": "anterior"
+   },
+   "note_pl": "0,5 cun bocznie od linii posrodkowej brzucha"
+  },
+  {
+   "code": "KI-22",
+   "channel": "KI",
+   "index": 22,
+   "pinyin": "Bulang",
+   "english": "Walking Corridor ¥",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.702,
+    "lat": 2,
+    "face": "anterior"
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "KI-23",
+   "channel": "KI",
+   "index": 23,
+   "pinyin": "Shenfeng",
+   "english": "Spirit Seal ap",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.72,
+    "lat": 2,
+    "face": "anterior"
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "KI-24",
+   "channel": "KI",
+   "index": 24,
+   "pinyin": "Lingxu",
+   "english": "Spirit Ruin &",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.737,
+    "lat": 2,
+    "face": "anterior"
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "KI-25",
+   "channel": "KI",
+   "index": 25,
+   "pinyin": "Shencang",
+   "english": "Spirit Storehouse Ap",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.755,
+    "lat": 2,
+    "face": "anterior"
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "KI-26",
+   "channel": "KI",
+   "index": 26,
+   "pinyin": "Yuzhong",
+   "english": "Comfortable Chest",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.775,
+    "lat": 2,
+    "face": "anterior"
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "KI-27",
+   "channel": "KI",
+   "index": 27,
+   "pinyin": "Shufu",
+   "english": "Yunmen LU-2 (Supplementing Life).",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.795,
+    "lat": 2,
+    "face": "anterior"
+   },
+   "note_pl": "pod obojczykiem, 2 cun bocznie"
+  },
+  {
+   "code": "PC-1",
+   "channel": "PC",
+   "index": 1,
+   "pinyin": "Tianchi",
+   "english": "Heavenly Pool",
+   "categories": [
+    "Meeting point of the Pericardium, Gall Bladder, ( &",
+    "Point of the Window of Heaven"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.745,
+    "lat": 5,
+    "face": "lateral"
+   },
+   "note_pl": "1 cun bocznie od brodawki sutkowej"
+  },
+  {
+   "code": "PC-2",
+   "channel": "PC",
+   "index": 2,
+   "pinyin": "Tianquan",
+   "english": "Heavenly Spring A",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "upper_arm",
+    "cun": 2,
+    "from": "p0",
+    "az": -10
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "PC-3",
+   "channel": "PC",
+   "index": 3,
+   "pinyin": "Quze",
+   "english": "Marsh at the Crook",
+   "categories": [
+    "He-Sea and Water point of the \\¥"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "forearm",
+    "cun": 0,
+    "from": "p0",
+    "az": -8
+   },
+   "note_pl": "fald lokciowy, lokciowo od sciegna dwuglowego"
+  },
+  {
+   "code": "PC-4",
+   "channel": "PC",
+   "index": 4,
+   "pinyin": "Ximen",
+   "english": "Xi-Cleft point of the Pericardium channel [ ‘I",
+   "categories": [
+    "Xi-Cleft Gate",
+    "Xi-Cleft point of the Pericardium channel [ ‘I"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "forearm",
+    "cun": 5,
+    "from": "p1",
+    "az": 0
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "PC-5",
+   "channel": "PC",
+   "index": 5,
+   "pinyin": "Jianshi",
+   "english": "Intermediate Messenger Aa",
+   "categories": [
+    "Jing-River and Metal point of the"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "forearm",
+    "cun": 3,
+    "from": "p1",
+    "az": 0
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "PC-6",
+   "channel": "PC",
+   "index": 6,
+   "pinyin": "Neiguan",
+   "english": "Inner Pass",
+   "categories": [
+    "Luo-Connecting point of the Pericardium channel aA",
+    "Confluent point of the Yin Linking vessel"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "forearm",
+    "cun": 2,
+    "from": "p1",
+    "az": 0
+   },
+   "note_pl": "2 cun powyzej faldu nadgarstka, miedzy sciegnami"
+  },
+  {
+   "code": "PC-7",
+   "channel": "PC",
+   "index": 7,
+   "pinyin": "Daling",
+   "english": "Great Mound",
+   "categories": [
+    "Shu-Stream, Yuan-Source and Earth point of te",
+    "Sun Si-miao Ghost point"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "forearm",
+    "cun": 0.3,
+    "from": "p1",
+    "az": 0
+   },
+   "note_pl": "srodek faldu nadgarstka"
+  },
+  {
+   "code": "PC-8",
+   "channel": "PC",
+   "index": 8,
+   "pinyin": "Laogong",
+   "english": "Palace of Toil",
+   "categories": [
+    "Ying-Spring and Fire point of the » 4",
+    "Sun Si-miao Ghost point"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "hand",
+    "t": 0.33,
+    "az": 0
+   },
+   "note_pl": "srodek dloni, miedzy II a III koscia srodrecza"
+  },
+  {
+   "code": "PC-9",
+   "channel": "PC",
+   "index": 9,
+   "pinyin": "Zhongchong",
+   "english": "Middle Rushing",
+   "categories": [
+    "Jing-Well and Wood point of the by"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "hand",
+    "t": 0.95,
+    "az": 0
+   },
+   "note_pl": "szczyt III palca"
+  },
+  {
+   "code": "SJ-1",
+   "channel": "SJ",
+   "index": 1,
+   "pinyin": "Guanchong",
+   "english": "Rushing Pass 人",
+   "categories": [
+    "Jing-Well and Metal point of the Sanjiao channel iv"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "hand",
+    "t": 0.68,
+    "az": -160
+   },
+   "note_pl": "kacik paznokcia IV palca od strony lokciowej"
+  },
+  {
+   "code": "SJ-2",
+   "channel": "SJ",
+   "index": 2,
+   "pinyin": "Yemen",
+   "english": "Fluid Gate",
+   "categories": [
+    "Ying-Spring and Water point of the Sanjiao ( |"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "hand",
+    "t": 0.58,
+    "az": -170
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "SJ-3",
+   "channel": "SJ",
+   "index": 3,
+   "pinyin": "Zhongzhu",
+   "english": "Central Islet",
+   "categories": [
+    "Shu-Stream and Wood point of the Sanjiao 4 i"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "hand",
+    "t": 0.42,
+    "az": 185
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "SJ-4",
+   "channel": "SJ",
+   "index": 4,
+   "pinyin": "Yangchi",
+   "english": "Yang Pool",
+   "categories": [
+    "Yuan-Source point of the Sanjiao channel Pe,"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "forearm",
+    "cun": 0.3,
+    "from": "p1",
+    "az": 180
+   },
+   "note_pl": "srodek faldu nadgarstka od strony grzbietowej"
+  },
+  {
+   "code": "SJ-5",
+   "channel": "SJ",
+   "index": 5,
+   "pinyin": "Waiguan",
+   "english": "Outer Pass",
+   "categories": [
+    "Luo-Connecting point of the Sanjiao channel a4",
+    "Confluent point of the Yang Linking vessel"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "forearm",
+    "cun": 2,
+    "from": "p1",
+    "az": 180
+   },
+   "note_pl": "2 cun powyzej SJ-4, miedzy koscia promieniowa a lokciowa"
+  },
+  {
+   "code": "SJ-6",
+   "channel": "SJ",
+   "index": 6,
+   "pinyin": "Zhigou",
+   "english": "Branch Ditch",
+   "categories": [
+    "Jing-River and Fire point of the Sanjiao channel"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "forearm",
+    "cun": 3,
+    "from": "p1",
+    "az": 180
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "SJ-7",
+   "channel": "SJ",
+   "index": 7,
+   "pinyin": "Huizong",
+   "english": "Ancestral Meeting",
+   "categories": [
+    "Xi-Cleft point of the Sanjiao channel 4x"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "forearm",
+    "cun": 3,
+    "from": "p1",
+    "az": 195
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "SJ-8",
+   "channel": "SJ",
+   "index": 8,
+   "pinyin": "Sanyangluo",
+   "english": "Three Yang Luo",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "forearm",
+    "cun": 4,
+    "from": "p1",
+    "az": 180
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "SJ-9",
+   "channel": "SJ",
+   "index": 9,
+   "pinyin": "Sidu",
+   "english": "",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "forearm",
+    "cun": 5,
+    "from": "p0",
+    "az": 180
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "SJ-10",
+   "channel": "SJ",
+   "index": 10,
+   "pinyin": "Tianjing",
+   "english": "Heavenly Well",
+   "categories": [
+    "He-Sea and Earth point of t]"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "upper_arm",
+    "cun": 1,
+    "from": "p1",
+    "az": 180
+   },
+   "note_pl": "1 cun powyzej wyrostka lokciowego"
+  },
+  {
+   "code": "SJ-11",
+   "channel": "SJ",
+   "index": 11,
+   "pinyin": "Qinglengyuan",
+   "english": "Clear Cold Abyss",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "upper_arm",
+    "cun": 2,
+    "from": "p1",
+    "az": 180
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "SJ-12",
+   "channel": "SJ",
+   "index": 12,
+   "pinyin": "Xiaoluo",
+   "english": "Dispersing Luo River",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "upper_arm",
+    "cun": 4,
+    "from": "p1",
+    "az": 180
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "SJ-13",
+   "channel": "SJ",
+   "index": 13,
+   "pinyin": "Naohui",
+   "english": "Upper Arm Meeting N%",
+   "categories": [
+    "Meeting point of the Sanjiao channel and p"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "upper_arm",
+    "cun": 5,
+    "from": "p1",
+    "az": 170
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "SJ-14",
+   "channel": "SJ",
+   "index": 14,
+   "pinyin": "Jianliao",
+   "english": "Shoulder Crevice",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "upper_arm",
+    "t": 0.02,
+    "az": 150
+   },
+   "note_pl": "tylno-dolnie od wyrostka barkowego"
+  },
+  {
+   "code": "SJ-15",
+   "channel": "SJ",
+   "index": 15,
+   "pinyin": "Tianliao",
+   "english": "Heavenly Crevice K",
+   "categories": [
+    "Meeting point of the Sanjiao and Gall Bladder"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.812,
+    "lat": 3.2,
+    "face": "posterior"
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "SJ-16",
+   "channel": "SJ",
+   "index": 16,
+   "pinyin": "Tianyou",
+   "english": "Window of Heaven",
+   "categories": [
+    "Window of Heaven",
+    "Point of the Window of Heaven Ki"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "neck",
+    "z_frac": 0.855,
+    "az": 150
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "SJ-17",
+   "channel": "SJ",
+   "index": 17,
+   "pinyin": "Yifeng",
+   "english": "Wind Screen a",
+   "categories": [
+    "Meeting point of the Sanjiao and Gall Bladder Jes"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "head",
+    "z_frac": 0.895,
+    "az": 95
+   },
+   "note_pl": "za platkiem ucha"
+  },
+  {
+   "code": "SJ-18",
+   "channel": "SJ",
+   "index": 18,
+   "pinyin": "Qimai",
+   "english": "Spasm Vessel PP ~",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "head",
+    "z_frac": 0.905,
+    "az": 105
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "SJ-19",
+   "channel": "SJ",
+   "index": 19,
+   "pinyin": "Luxi",
+   "english": "Skull’s Rest",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "head",
+    "z_frac": 0.918,
+    "az": 110
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "SJ-20",
+   "channel": "SJ",
+   "index": 20,
+   "pinyin": "Jiaosun",
+   "english": "Minute Angle",
+   "categories": [
+    "Meeting point of the Sanjiac"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "head",
+    "z_frac": 0.938,
+    "az": 100
+   },
+   "note_pl": "nad szczytem malzowiny"
+  },
+  {
+   "code": "SJ-21",
+   "channel": "SJ",
+   "index": 21,
+   "pinyin": "Ermen",
+   "english": "Ear Gate",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "head",
+    "z_frac": 0.923,
+    "az": 82
+   },
+   "note_pl": "powyzej SI-19, przed wcięciem malzowiny"
+  },
+  {
+   "code": "SJ-22",
+   "channel": "SJ",
+   "index": 22,
+   "pinyin": "Erheliao",
+   "english": "Ear Harmony Crevice f",
+   "categories": [
+    "Meeting point of the Sanjiao, Gall Bladder and"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "head",
+    "z_frac": 0.928,
+    "az": 72
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "SJ-23",
+   "channel": "SJ",
+   "index": 23,
+   "pinyin": "Sizhukong",
+   "english": "Silken Bamboo Hollow",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "head",
+    "z_frac": 0.93,
+    "az": 38
+   },
+   "note_pl": "boczny koniec brwi"
+  },
+  {
+   "code": "GB-1",
+   "channel": "GB",
+   "index": 1,
+   "pinyin": "Tongziliao",
+   "english": "Pupil Crevice",
+   "categories": [
+    "Meeting point of the Gall Bladder,"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "head",
+    "z_frac": 0.925,
+    "az": 45
+   },
+   "note_pl": "0,5 cun bocznie od bocznego kacika oka"
+  },
+  {
+   "code": "GB-2",
+   "channel": "GB",
+   "index": 2,
+   "pinyin": "Tinghui",
+   "english": "Meeting of Hearing Fe",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "head",
+    "z_frac": 0.908,
+    "az": 80
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "GB-3",
+   "channel": "GB",
+   "index": 3,
+   "pinyin": "Shangguan",
+   "english": "Above the Joint",
+   "categories": [
+    "Meeting point of the Gall Bl"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "head",
+    "z_frac": 0.918,
+    "az": 75
+   },
+   "note_pl": "nad lukiem jarzmowym"
+  },
+  {
+   "code": "GB-4",
+   "channel": "GB",
+   "index": 4,
+   "pinyin": "Hanyan",
+   "english": "Jaw Serenity",
+   "categories": [
+    "Meeting point of the Gall Bladder, Sanjiao and fe"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "head",
+    "z_frac": 0.942,
+    "az": 62
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "GB-5",
+   "channel": "GB",
+   "index": 5,
+   "pinyin": "Xuanlu",
+   "english": "Suspended Skull —",
+   "categories": [
+    "Meeting point of the Gall Bladder, Stomach, a"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "head",
+    "z_frac": 0.945,
+    "az": 70
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "GB-6",
+   "channel": "GB",
+   "index": 6,
+   "pinyin": "Xuanli",
+   "english": "Suspended Hair",
+   "categories": [
+    "Meeting point of the Gall Bl"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "head",
+    "z_frac": 0.942,
+    "az": 78
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "GB-7",
+   "channel": "GB",
+   "index": 7,
+   "pinyin": "Qubin",
+   "english": "Crook of the Temple",
+   "categories": [
+    "Meeting point of the Gall Bladder &"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "head",
+    "z_frac": 0.938,
+    "az": 88
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "GB-8",
+   "channel": "GB",
+   "index": 8,
+   "pinyin": "Shuaigu",
+   "english": "Leading Valley",
+   "categories": [
+    "Meeting point of the Gall Bladder A»"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "head",
+    "z_frac": 0.95,
+    "az": 95
+   },
+   "note_pl": "1,5 cun powyzej szczytu malzowiny"
+  },
+  {
+   "code": "GB-9",
+   "channel": "GB",
+   "index": 9,
+   "pinyin": "Tianchong",
+   "english": "Heavenly Rushing",
+   "categories": [
+    "Meeting point of the Gall Bladder ie"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "head",
+    "z_frac": 0.95,
+    "az": 108
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "GB-10",
+   "channel": "GB",
+   "index": 10,
+   "pinyin": "Fubai",
+   "english": "Floating White",
+   "categories": [
+    "Meeting point of the Gall Bladder re]"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "head",
+    "z_frac": 0.942,
+    "az": 118
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "GB-11",
+   "channel": "GB",
+   "index": 11,
+   "pinyin": "Touqiaoyin",
+   "english": "Yin Portals of the Head",
+   "categories": [
+    "Meeting point of the Gall Bladder, Bladder,"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "head",
+    "z_frac": 0.932,
+    "az": 128
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "GB-12",
+   "channel": "GB",
+   "index": 12,
+   "pinyin": "Wangu",
+   "english": "Mastoid Process",
+   "categories": [
+    "Meeting point of the Gall Bladder and |"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "head",
+    "z_frac": 0.902,
+    "az": 130
+   },
+   "note_pl": "w zaglebieniu za wyrostkiem sutkowatym"
+  },
+  {
+   "code": "GB-13",
+   "channel": "GB",
+   "index": 13,
+   "pinyin": "Benshen",
+   "english": "Root of the Spirit",
+   "categories": [
+    "Meeting point of the Gall Bladder channel Ae"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "head",
+    "arc_cun": 0.5,
+    "lat": 3.0
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "GB-14",
+   "channel": "GB",
+   "index": 14,
+   "pinyin": "Yangbai",
+   "english": "Yang White",
+   "categories": [
+    "Meeting point of the Gall Bladder with Al)"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "head",
+    "z_frac": 0.947,
+    "az": 25
+   },
+   "note_pl": "1 cun powyzej srodka brwi"
+  },
+  {
+   "code": "GB-15",
+   "channel": "GB",
+   "index": 15,
+   "pinyin": "Toulinqi",
+   "english": "Head Governor of Tears 口",
+   "categories": [
+    "Meeting point of the Gall Bladder as"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "head",
+    "arc_cun": 0.5,
+    "lat": 2.25
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "GB-16",
+   "channel": "GB",
+   "index": 16,
+   "pinyin": "Muchuang",
+   "english": "Window of the Eye",
+   "categories": [
+    "Window of the Eye",
+    "Meeting point of the Gall Bladder channel ea]"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "head",
+    "arc_cun": 1.5,
+    "lat": 2.25
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "GB-17",
+   "channel": "GB",
+   "index": 17,
+   "pinyin": "Zhengying",
+   "english": "Upright Nutrition",
+   "categories": [
+    "Meeting point of the Gall Bladder channel -"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "head",
+    "arc_cun": 2.5,
+    "lat": 2.25
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "GB-18",
+   "channel": "GB",
+   "index": 18,
+   "pinyin": "Chengling",
+   "english": "Support Spirit AN",
+   "categories": [
+    "Meeting point of the Gall Bladder channel ecg"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "head",
+    "arc_cun": 4.0,
+    "lat": 2.25
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "GB-19",
+   "channel": "GB",
+   "index": 19,
+   "pinyin": "Naokong",
+   "english": "Brain Hollow",
+   "categories": [
+    "Meeting point of the Gall Bladder channel"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "head",
+    "arc_cun": 8.5,
+    "lat": 2.25
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "GB-20",
+   "channel": "GB",
+   "index": 20,
+   "pinyin": "Fengchi",
+   "english": "Wind Pool",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "neck",
+    "z_frac": 0.868,
+    "az": 145
+   },
+   "note_pl": "pod potylica, miedzy SCM a czworobocznym"
+  },
+  {
+   "code": "GB-21",
+   "channel": "GB",
+   "index": 21,
+   "pinyin": "Jianjing",
+   "english": "Shoulder Well",
+   "categories": [
+    "Meeting point of the Gall Bladder, +"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.827,
+    "lat": 5.5,
+    "face": "posterior",
+    "out": 0.3
+   },
+   "note_pl": "szczyt barku, w polowie miedzy DU-14 a wyrostkiem barkowym"
+  },
+  {
+   "code": "GB-22",
+   "channel": "GB",
+   "index": 22,
+   "pinyin": "Yuanye",
+   "english": "Armpit Abyss i",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.752,
+    "lat": 6.5,
+    "face": "lateral"
+   },
+   "note_pl": "3 cun ponizej dolu pachowego"
+  },
+  {
+   "code": "GB-23",
+   "channel": "GB",
+   "index": 23,
+   "pinyin": "Zhejin",
+   "english": "Flank Sinews",
+   "categories": [
+    "Meeting point of the Gall Bladder An"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.745,
+    "lat": 6.0,
+    "face": "lateral"
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "GB-24",
+   "channel": "GB",
+   "index": 24,
+   "pinyin": "Riyue",
+   "english": "Sun and Moon",
+   "categories": [
+    "Meeting point of the Gall Bladder and Spleen A",
+    "Front-Mu point of the Gall Bladder"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.7,
+    "lat": 4,
+    "face": "anterior"
+   },
+   "note_pl": "7. przestrzen miedzyzebrowa"
+  },
+  {
+   "code": "GB-25",
+   "channel": "GB",
+   "index": 25,
+   "pinyin": "Jingmen",
+   "english": "Capital Gate <{~",
+   "categories": [
+    "Front-Mu point of the Kidneys 目"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.66,
+    "lat": 5.5,
+    "face": "lateral"
+   },
+   "note_pl": "wolny koniec XII zebra"
+  },
+  {
+   "code": "GB-26",
+   "channel": "GB",
+   "index": 26,
+   "pinyin": "Daimai",
+   "english": "Girdling Vessel",
+   "categories": [
+    "Meeting point of the Gall Bladder channel fk"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_from": "umbilicus",
+    "z_cun": 0,
+    "lat": 6,
+    "face": "lateral"
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "GB-27",
+   "channel": "GB",
+   "index": 27,
+   "pinyin": "Wushu",
+   "english": "Five Pivots",
+   "categories": [
+    "Meeting point of the Gall Bladder channel yA"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.56,
+    "lat": 5,
+    "face": "anterior"
+   },
+   "note_pl": "przy kolcu biodrowym przednim gornym"
+  },
+  {
+   "code": "GB-28",
+   "channel": "GB",
+   "index": 28,
+   "pinyin": "Weidao",
+   "english": "Linking Path 乡t′暮_",
+   "categories": [
+    "Meeting point of the Gall Bladder channel rc"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.548,
+    "lat": 5.5,
+    "face": "anterior"
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "GB-29",
+   "channel": "GB",
+   "index": 29,
+   "pinyin": "Juliao",
+   "english": "Stationary Crevice",
+   "categories": [
+    "Meeting point of the Gall Bladder channel"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.53,
+    "lat": 6.5,
+    "face": "lateral"
+   },
+   "note_pl": "miedzy kolcem biodrowym przednim gornym a krętarzem wiekszym"
+  },
+  {
+   "code": "GB-30",
+   "channel": "GB",
+   "index": 30,
+   "pinyin": "Huantiao",
+   "english": "Jumping Circle 3",
+   "categories": [
+    "Meeting point of the Gall Bladder and Yi,",
+    "Ma Dan-yang Heavenly Star point"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "thigh",
+    "t": 0.02,
+    "az": 160
+   },
+   "note_pl": "posladek, 1/3 odleglosci od krętarza do rozworu krzyzowego"
+  },
+  {
+   "code": "GB-31",
+   "channel": "GB",
+   "index": 31,
+   "pinyin": "Fengshi",
+   "english": "Wind Market",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "thigh",
+    "cun": 7,
+    "from": "p1",
+    "az": 90
+   },
+   "note_pl": "tam, gdzie siega czubek srodkowego palca zwisajacej reki"
+  },
+  {
+   "code": "GB-32",
+   "channel": "GB",
+   "index": 32,
+   "pinyin": "Zhongdu",
+   "english": "Middle Ditch",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "thigh",
+    "cun": 5,
+    "from": "p1",
+    "az": 90
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "GB-33",
+   "channel": "GB",
+   "index": 33,
+   "pinyin": "Xiyangguan",
+   "english": "Knee Yang Gate >",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "thigh",
+    "cun": 0.5,
+    "from": "p1",
+    "az": 95
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "GB-34",
+   "channel": "GB",
+   "index": 34,
+   "pinyin": "Yanglingquan",
+   "english": "Yang Mound Spring",
+   "categories": [
+    "He-Sea and Earth point of the Gall Bladder channel fk",
+    "Hui-meeting point of Sinecws",
+    "Ma Dan-yang Heavenly Star point"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "shank",
+    "cun": 1,
+    "from": "p0",
+    "az": 80
+   },
+   "note_pl": "w zaglebieniu przednio-dolnie od glowy strzalki"
+  },
+  {
+   "code": "GB-35",
+   "channel": "GB",
+   "index": 35,
+   "pinyin": "Yangjiao",
+   "english": "Yang Intersection",
+   "categories": [
+    "Xi-Cleft point of the Yang Linking vessel"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "shank",
+    "cun": 7,
+    "from": "p1",
+    "az": 100
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "GB-36",
+   "channel": "GB",
+   "index": 36,
+   "pinyin": "Waiqiu",
+   "english": "Outer Hill",
+   "categories": [
+    "Xi-Cleft point of the Gall Bladder channel ft"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "shank",
+    "cun": 7,
+    "from": "p1",
+    "az": 85
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "GB-37",
+   "channel": "GB",
+   "index": 37,
+   "pinyin": "Guangming",
+   "english": "Bright Light",
+   "categories": [
+    "Luo-Connecting point of the"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "shank",
+    "cun": 5,
+    "from": "p1",
+    "az": 88
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "GB-38",
+   "channel": "GB",
+   "index": 38,
+   "pinyin": "Yangfu",
+   "english": "Yang Assistance",
+   "categories": [
+    "Jing-River and Fire point of the Ph"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "shank",
+    "cun": 4,
+    "from": "p1",
+    "az": 88
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "GB-39",
+   "channel": "GB",
+   "index": 39,
+   "pinyin": "Xuanzhong",
+   "english": "Suspended Bell v",
+   "categories": [
+    "Hui-Meeting point for Marrow AG"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "shank",
+    "cun": 3,
+    "from": "p1",
+    "az": 90
+   },
+   "note_pl": "3 cun powyzej kostki bocznej"
+  },
+  {
+   "code": "GB-40",
+   "channel": "GB",
+   "index": 40,
+   "pinyin": "Qiuxu",
+   "english": "Mound of Ruins",
+   "categories": [
+    "Yuan-Source point of the Gall Bladder channel dis"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "foot",
+    "t": 0.12,
+    "az": 95
+   },
+   "note_pl": "przednio-dolnie od kostki bocznej"
+  },
+  {
+   "code": "GB-41",
+   "channel": "GB",
+   "index": 41,
+   "pinyin": "Zulinqi",
+   "english": "Foot Governor of Tears",
+   "categories": [
+    "Shu-Stream and Wood point of the Gall",
+    "Confluent point of the Girdling vessel"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "foot",
+    "t": 0.5,
+    "az": 60
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "GB-42",
+   "channel": "GB",
+   "index": 42,
+   "pinyin": "Diwuhui",
+   "english": "Earth Five Meetings",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "foot",
+    "t": 0.62,
+    "az": 60
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "GB-43",
+   "channel": "GB",
+   "index": 43,
+   "pinyin": "Xiaxi",
+   "english": "Clamped Stream",
+   "categories": [
+    "Ying-Spring and Water point of the 化李"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "foot",
+    "t": 0.8,
+    "az": 65
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "GB-44",
+   "channel": "GB",
+   "index": 44,
+   "pinyin": "Zuqiaoyin",
+   "english": "Yin Portals of the Foot",
+   "categories": [
+    "Jing-Well and Metal point of the"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "foot",
+    "t": 0.92,
+    "az": 80
+   },
+   "note_pl": "kacik paznokcia IV palca stopy"
+  },
+  {
+   "code": "LR-1",
+   "channel": "LR",
+   "index": 1,
+   "pinyin": "Dadun",
+   "english": "Big Mound",
+   "categories": [
+    "Jing-Well and Wood point of the Liver channel ig"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "foot",
+    "t": 0.9,
+    "az": -20
+   },
+   "note_pl": "kacik paznokcia palucha od strony bocznej"
+  },
+  {
+   "code": "LR-2",
+   "channel": "LR",
+   "index": 2,
+   "pinyin": "Xingjian",
+   "english": "Moving Between",
+   "categories": [
+    "Ying-Spring and Fire point of the Liver channel nei"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "foot",
+    "t": 0.78,
+    "az": -40
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "LR-3",
+   "channel": "LR",
+   "index": 3,
+   "pinyin": "Taichong",
+   "english": "Great Rushing",
+   "categories": [
+    "Shu-Stream, Yuan-Source and Earth point of",
+    "Ma Dan-yang Heavenly Star point"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "foot",
+    "t": 0.6,
+    "az": -30
+   },
+   "note_pl": "zaglebienie miedzy I a II koscia srodstopia"
+  },
+  {
+   "code": "LR-4",
+   "channel": "LR",
+   "index": 4,
+   "pinyin": "Zhongfeng",
+   "english": "Middle Seal",
+   "categories": [
+    "Jing-River and Metal point of ay"
+   ],
+   "side": "bilateral",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "foot",
+    "t": 0.1,
+    "az": -55
+   },
+   "note_pl": "przed kostka przysrodkowa"
+  },
+  {
+   "code": "LR-5",
+   "channel": "LR",
+   "index": 5,
+   "pinyin": "Ligou",
+   "english": "Woodworm Canal \\",
+   "categories": [
+    "Luo-Connecting point of the Liver channel. i"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "shank",
+    "cun": 5,
+    "from": "p1",
+    "az": -95
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "LR-6",
+   "channel": "LR",
+   "index": 6,
+   "pinyin": "Zhongdu",
+   "english": "Central Capital",
+   "categories": [
+    "Xi-Cleft point of the Liver channel a"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "shank",
+    "cun": 7,
+    "from": "p1",
+    "az": -95
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "LR-7",
+   "channel": "LR",
+   "index": 7,
+   "pinyin": "Xiguan",
+   "english": "Knee Joint",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "shank",
+    "cun": 5,
+    "from": "p0",
+    "az": -85
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "LR-8",
+   "channel": "LR",
+   "index": 8,
+   "pinyin": "Ququan",
+   "english": "Spring at the Crook",
+   "categories": [
+    "He-Sea and Water point of the Liver channel x"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "shank",
+    "cun": 0,
+    "from": "p0",
+    "az": -140
+   },
+   "note_pl": "przysrodkowy koniec faldu podkolanowego przy zgietym kolanie"
+  },
+  {
+   "code": "LR-9",
+   "channel": "LR",
+   "index": 9,
+   "pinyin": "Yinbao",
+   "english": "Yin Wrapping ee",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "thigh",
+    "cun": 4,
+    "from": "p1",
+    "az": -110
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "LR-10",
+   "channel": "LR",
+   "index": 10,
+   "pinyin": "Zuwuli",
+   "english": "Leg Five Miles",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "thigh",
+    "cun": 3,
+    "from": "p0",
+    "az": -95
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "LR-11",
+   "channel": "LR",
+   "index": 11,
+   "pinyin": "Yinlian",
+   "english": "Yin Corner",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "thigh",
+    "cun": 3.5,
+    "from": "p0",
+    "az": -100
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "LR-12",
+   "channel": "LR",
+   "index": 12,
+   "pinyin": "Jimai",
+   "english": "Urgent Pulse",
+   "categories": [],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.495,
+    "lat": 2.5,
+    "face": "anterior"
+   },
+   "note_pl": "fald pachwinowy"
+  },
+  {
+   "code": "LR-13",
+   "channel": "LR",
+   "index": 13,
+   "pinyin": "Zhangmen",
+   "english": "Completion Gate",
+   "categories": [
+    "Front-Mu point of the Spleen | ]",
+    "Hui-Meeting point of the zang",
+    "Meeting point of the Liver and Gall Bladder"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.64,
+    "lat": 5.5,
+    "face": "lateral"
+   },
+   "note_pl": "wolny koniec XI zebra"
+  },
+  {
+   "code": "LR-14",
+   "channel": "LR",
+   "index": 14,
+   "pinyin": "Qimen",
+   "english": "Cycle Gate",
+   "categories": [
+    "Front-Mu point of the Liver }",
+    "Meeting point of the Liver and Spleen"
+   ],
+   "side": "bilateral",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.7,
+    "lat": 4,
+    "face": "anterior"
+   },
+   "note_pl": "6. przestrzen miedzyzebrowa, pionowo pod brodawka"
+  },
+  {
+   "code": "REN-1",
+   "channel": "REN",
+   "index": 1,
+   "pinyin": "Huiyin",
+   "english": "Meeting of Yin",
+   "categories": [
+    "Meeting point of the Conception, Penetrating (‘>",
+    "Sun Si-miao Ghost point"
+   ],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.452,
+    "az": 0
+   },
+   "note_pl": "krocze"
+  },
+  {
+   "code": "REN-2",
+   "channel": "REN",
+   "index": 2,
+   "pinyin": "Qugu",
+   "english": "Curved Bone",
+   "categories": [
+    "Meeting point of the Conception vessel “a"
+   ],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_from": "pubis",
+    "z_cun": 0,
+    "lat": 0,
+    "face": "anterior"
+   },
+   "note_pl": "gorny brzeg spojenia lonowego"
+  },
+  {
+   "code": "REN-3",
+   "channel": "REN",
+   "index": 3,
+   "pinyin": "Zhongji",
+   "english": "Middle Pole",
+   "categories": [
+    "Front-Mu point of the Bladder",
+    "Meeting point of the Conception vessel with"
+   ],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_from": "pubis",
+    "z_cun": 1,
+    "lat": 0,
+    "face": "anterior"
+   },
+   "note_pl": "1 cun powyzej spojenia lonowego"
+  },
+  {
+   "code": "REN-4",
+   "channel": "REN",
+   "index": 4,
+   "pinyin": "Guanyuan",
+   "english": "Gate of Origin",
+   "categories": [
+    "Front-Mu point of the Small Intestine 7a",
+    "Meeting point of the Conception vessel with"
+   ],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_from": "pubis",
+    "z_cun": 2,
+    "lat": 0,
+    "face": "anterior"
+   },
+   "note_pl": "2 cun powyzej spojenia lonowego"
+  },
+  {
+   "code": "REN-5",
+   "channel": "REN",
+   "index": 5,
+   "pinyin": "Shimen",
+   "english": "Stone Gate",
+   "categories": [
+    "Front-Mu point of the Sanjiao } |"
+   ],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_from": "pubis",
+    "z_cun": 3,
+    "lat": 0,
+    "face": "anterior"
+   },
+   "note_pl": "3 cun powyzej spojenia lonowego"
+  },
+  {
+   "code": "REN-6",
+   "channel": "REN",
+   "index": 6,
+   "pinyin": "Qihai",
+   "english": "Sea of Qi",
+   "categories": [
+    "Sea of Qi"
+   ],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_from": "umbilicus",
+    "z_cun": -1.5,
+    "lat": 0,
+    "face": "anterior"
+   },
+   "note_pl": "1.5 cun ponizej pepka"
+  },
+  {
+   "code": "REN-7",
+   "channel": "REN",
+   "index": 7,
+   "pinyin": "Yinjiao",
+   "english": "Yin Intersection",
+   "categories": [
+    "Meeting point of the Conception and Penetrating Re"
+   ],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_from": "umbilicus",
+    "z_cun": -1,
+    "lat": 0,
+    "face": "anterior"
+   },
+   "note_pl": "1 cun ponizej pepka"
+  },
+  {
+   "code": "REN-8",
+   "channel": "REN",
+   "index": 8,
+   "pinyin": "Shenque",
+   "english": "Spirit Gateway",
+   "categories": [],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_from": "umbilicus",
+    "z_cun": 0,
+    "lat": 0,
+    "face": "anterior"
+   },
+   "note_pl": "srodek pepka"
+  },
+  {
+   "code": "REN-9",
+   "channel": "REN",
+   "index": 9,
+   "pinyin": "Shuifen",
+   "english": "Water Separation",
+   "categories": [],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_from": "umbilicus",
+    "z_cun": 1,
+    "lat": 0,
+    "face": "anterior"
+   },
+   "note_pl": "1 cun powyzej pepka"
+  },
+  {
+   "code": "REN-10",
+   "channel": "REN",
+   "index": 10,
+   "pinyin": "Xiawan",
+   "english": "Lower Cavity",
+   "categories": [
+    "Meeting point of the Conception vessel KK"
+   ],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_from": "umbilicus",
+    "z_cun": 2,
+    "lat": 0,
+    "face": "anterior"
+   },
+   "note_pl": "2 cun powyzej pepka"
+  },
+  {
+   "code": "REN-11",
+   "channel": "REN",
+   "index": 11,
+   "pinyin": "Jianli",
+   "english": "Strengthen the Interior",
+   "categories": [],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_from": "umbilicus",
+    "z_cun": 3,
+    "lat": 0,
+    "face": "anterior"
+   },
+   "note_pl": "3 cun powyzej pepka"
+  },
+  {
+   "code": "REN-12",
+   "channel": "REN",
+   "index": 12,
+   "pinyin": "Zhongwan",
+   "english": "Middle Cavity",
+   "categories": [
+    "Front-Mu point of the Stomach Ri,",
+    "Hui-Meeting point of the Fu",
+    "Meeting point of the Conception vessel with"
+   ],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_from": "umbilicus",
+    "z_cun": 4,
+    "lat": 0,
+    "face": "anterior"
+   },
+   "note_pl": "4 cun powyzej pepka"
+  },
+  {
+   "code": "REN-13",
+   "channel": "REN",
+   "index": 13,
+   "pinyin": "Shangwan",
+   "english": "Upper Cavity",
+   "categories": [
+    "Meeting point of the Conception vessel with Ke"
+   ],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_from": "umbilicus",
+    "z_cun": 5,
+    "lat": 0,
+    "face": "anterior"
+   },
+   "note_pl": "5 cun powyzej pepka"
+  },
+  {
+   "code": "REN-14",
+   "channel": "REN",
+   "index": 14,
+   "pinyin": "Juque",
+   "english": "Great Gateway",
+   "categories": [
+    "Front-Mu point of the Heart af"
+   ],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_from": "umbilicus",
+    "z_cun": 6,
+    "lat": 0,
+    "face": "anterior"
+   },
+   "note_pl": "6 cun powyzej pepka"
+  },
+  {
+   "code": "REN-15",
+   "channel": "REN",
+   "index": 15,
+   "pinyin": "Jiuwei",
+   "english": "Turtledove Tail -",
+   "categories": [
+    "Luo-Connecting point of the Conception vessel Vea"
+   ],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_from": "umbilicus",
+    "z_cun": 7,
+    "lat": 0,
+    "face": "anterior"
+   },
+   "note_pl": "7 cun powyzej pepka"
+  },
+  {
+   "code": "REN-16",
+   "channel": "REN",
+   "index": 16,
+   "pinyin": "Zhongting",
+   "english": "Central Courtyard",
+   "categories": [],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.7,
+    "lat": 0,
+    "face": "anterior"
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "REN-17",
+   "channel": "REN",
+   "index": 17,
+   "pinyin": "Shanzhong",
+   "english": "Chest Centre AG",
+   "categories": [
+    "Front-Mu point of the Pericardium",
+    "Hui-Meeting point of the Qi ie",
+    "Point of the Sea of Qi",
+    "Meeting point of the Conception vessel with the"
+   ],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.72,
+    "lat": 0,
+    "face": "anterior"
+   },
+   "note_pl": "na mostku, na wysokosci brodawek"
+  },
+  {
+   "code": "REN-18",
+   "channel": "REN",
+   "index": 18,
+   "pinyin": "Yutang",
+   "english": "Jade Hall i",
+   "categories": [],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.737,
+    "lat": 0,
+    "face": "anterior"
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "REN-19",
+   "channel": "REN",
+   "index": 19,
+   "pinyin": "Zigong",
+   "english": "Purple Palace",
+   "categories": [],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.755,
+    "lat": 0,
+    "face": "anterior"
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "REN-20",
+   "channel": "REN",
+   "index": 20,
+   "pinyin": "Huagai",
+   "english": "Magnificent Canopy",
+   "categories": [],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.772,
+    "lat": 0,
+    "face": "anterior"
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "REN-21",
+   "channel": "REN",
+   "index": 21,
+   "pinyin": "Xuanji",
+   "english": "Jade Pivot re",
+   "categories": [],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.788,
+    "lat": 0,
+    "face": "anterior"
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "REN-22",
+   "channel": "REN",
+   "index": 22,
+   "pinyin": "Tiantu",
+   "english": "Heavenly Prominence k",
+   "categories": [
+    "Meeting point of the Conception ~~",
+    "Point of the Window of Heaven"
+   ],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.802,
+    "lat": 0,
+    "face": "anterior"
+   },
+   "note_pl": "wciecie szyjne mostka"
+  },
+  {
+   "code": "REN-23",
+   "channel": "REN",
+   "index": 23,
+   "pinyin": "Lianquan",
+   "english": "Corner Spring",
+   "categories": [
+    "Meeting point of the Conception R"
+   ],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "neck",
+    "z_frac": 0.85,
+    "az": 0
+   },
+   "note_pl": "powyzej kosci gnykowej"
+  },
+  {
+   "code": "REN-24",
+   "channel": "REN",
+   "index": 24,
+   "pinyin": "Chengjiang",
+   "english": "Container of Fluids ee",
+   "categories": [
+    "Meeting point of the Conception vessel with ag",
+    "Sun Si-miao Ghost point"
+   ],
+   "side": "midline",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "head",
+    "z_frac": 0.879,
+    "az": 0
+   },
+   "note_pl": "bruzda bródkowo-wargowa"
+  },
+  {
+   "code": "DU-1",
+   "channel": "DU",
+   "index": 1,
+   "pinyin": "Changqiang",
+   "english": "Long Strong",
+   "categories": [
+    "Luo-Connecting point of the Governing vessel %",
+    "Meeting point of the Governing vessel with"
+   ],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.472,
+    "lat": 0,
+    "face": "posterior"
+   },
+   "note_pl": "miedzy szczytem kosci guzicznej a odbytem"
+  },
+  {
+   "code": "DU-2",
+   "channel": "DU",
+   "index": 2,
+   "pinyin": "Yaoshu",
+   "english": "Lumbar Shu",
+   "categories": [],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "z_frac": 0.512,
+    "lat": 0,
+    "face": "posterior"
+   },
+   "note_pl": "rozwor krzyzowy"
+  },
+  {
+   "code": "DU-3",
+   "channel": "DU",
+   "index": 3,
+   "pinyin": "Yaoyangguan",
+   "english": "Lumbar Yang Gate Ak",
+   "categories": [],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "L4",
+    "dz_cun": -0.4,
+    "lat": 0,
+    "face": "posterior"
+   },
+   "note_pl": "ponizej wyrostka kolczystego L4"
+  },
+  {
+   "code": "DU-4",
+   "channel": "DU",
+   "index": 4,
+   "pinyin": "Mingmen",
+   "english": "Gate of Life",
+   "categories": [],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "L2",
+    "dz_cun": -0.4,
+    "lat": 0,
+    "face": "posterior"
+   },
+   "note_pl": "ponizej wyrostka kolczystego L2"
+  },
+  {
+   "code": "DU-5",
+   "channel": "DU",
+   "index": 5,
+   "pinyin": "Xuanshu",
+   "english": "Suspended Pivot l",
+   "categories": [],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "L1",
+    "dz_cun": -0.4,
+    "lat": 0,
+    "face": "posterior"
+   },
+   "note_pl": "ponizej wyrostka kolczystego L1"
+  },
+  {
+   "code": "DU-6",
+   "channel": "DU",
+   "index": 6,
+   "pinyin": "Jizhong",
+   "english": "Centre of the Spine",
+   "categories": [],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "T11",
+    "dz_cun": -0.4,
+    "lat": 0,
+    "face": "posterior"
+   },
+   "note_pl": "ponizej wyrostka kolczystego T11"
+  },
+  {
+   "code": "DU-7",
+   "channel": "DU",
+   "index": 7,
+   "pinyin": "Zhongshu",
+   "english": "Central Pivot",
+   "categories": [],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "T10",
+    "dz_cun": -0.4,
+    "lat": 0,
+    "face": "posterior"
+   },
+   "note_pl": "ponizej wyrostka kolczystego T10"
+  },
+  {
+   "code": "DU-8",
+   "channel": "DU",
+   "index": 8,
+   "pinyin": "Jinsuo",
+   "english": "Sinew Contraction",
+   "categories": [],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "T9",
+    "dz_cun": -0.4,
+    "lat": 0,
+    "face": "posterior"
+   },
+   "note_pl": "ponizej wyrostka kolczystego T9"
+  },
+  {
+   "code": "DU-9",
+   "channel": "DU",
+   "index": 9,
+   "pinyin": "Zhiyang",
+   "english": "Reaching Yang",
+   "categories": [],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "T7",
+    "dz_cun": -0.4,
+    "lat": 0,
+    "face": "posterior"
+   },
+   "note_pl": "ponizej wyrostka kolczystego T7"
+  },
+  {
+   "code": "DU-10",
+   "channel": "DU",
+   "index": 10,
+   "pinyin": "Lingtai",
+   "english": "Spirit Tower",
+   "categories": [],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "T6",
+    "dz_cun": -0.4,
+    "lat": 0,
+    "face": "posterior"
+   },
+   "note_pl": "ponizej wyrostka kolczystego T6"
+  },
+  {
+   "code": "DU-11",
+   "channel": "DU",
+   "index": 11,
+   "pinyin": "Shendao",
+   "english": "Spirit Pathway 1",
+   "categories": [],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "T5",
+    "dz_cun": -0.4,
+    "lat": 0,
+    "face": "posterior"
+   },
+   "note_pl": "ponizej wyrostka kolczystego T5"
+  },
+  {
+   "code": "DU-12",
+   "channel": "DU",
+   "index": 12,
+   "pinyin": "Shenzhu",
+   "english": "Body Pillar",
+   "categories": [],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "T3",
+    "dz_cun": -0.4,
+    "lat": 0,
+    "face": "posterior"
+   },
+   "note_pl": "ponizej wyrostka kolczystego T3"
+  },
+  {
+   "code": "DU-13",
+   "channel": "DU",
+   "index": 13,
+   "pinyin": "Taodao",
+   "english": "Way of Happiness",
+   "categories": [
+    "Meeting point of the Governing vessel with a"
+   ],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "T1",
+    "dz_cun": -0.4,
+    "lat": 0,
+    "face": "posterior"
+   },
+   "note_pl": "ponizej wyrostka kolczystego T1"
+  },
+  {
+   "code": "DU-14",
+   "channel": "DU",
+   "index": 14,
+   "pinyin": "Dazhui",
+   "english": "Great Vertebra",
+   "categories": [
+    "Meeting point of the Governing vessel with Ai",
+    "Point of the Sea of Qi"
+   ],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "trunk",
+    "vertebra": "C7",
+    "dz_cun": -0.4,
+    "lat": 0,
+    "face": "posterior"
+   },
+   "note_pl": "ponizej wyrostka kolczystego C7"
+  },
+  {
+   "code": "DU-15",
+   "channel": "DU",
+   "index": 15,
+   "pinyin": "Yamen",
+   "english": "Gate of Muteness",
+   "categories": [
+    "Meeting point of the Governing and f x",
+    "Point of the Sea of Qi"
+   ],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "neck",
+    "z_frac": 0.858,
+    "az": 180
+   },
+   "note_pl": "0,5 cun powyzej tylnej linii wlosow"
+  },
+  {
+   "code": "DU-16",
+   "channel": "DU",
+   "index": 16,
+   "pinyin": "Fengfu",
+   "english": "Palace of Wind Ja",
+   "categories": [
+    "Meeting point of the Governing and ht",
+    "Point of the Sea of Marrow",
+    "Point of the Window of Heavei",
+    "Sun Si-miao Ghost point"
+   ],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "neck",
+    "z_frac": 0.87,
+    "az": 180
+   },
+   "note_pl": "pod guzowatoscia potyliczna zewnetrzna"
+  },
+  {
+   "code": "DU-17",
+   "channel": "DU",
+   "index": 17,
+   "pinyin": "Naohu",
+   "english": "Brain’s Door",
+   "categories": [
+    "Meeting point of the Governing vessel with F i"
+   ],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "head",
+    "arc_cun": 9.5
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "DU-18",
+   "channel": "DU",
+   "index": 18,
+   "pinyin": "Qiangjian",
+   "english": "Unyielding Space",
+   "categories": [],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "head",
+    "arc_cun": 8.0
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "DU-19",
+   "channel": "DU",
+   "index": 19,
+   "pinyin": "Houding",
+   "english": "Behind the Crown",
+   "categories": [],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "head",
+    "arc_cun": 6.5
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "DU-20",
+   "channel": "DU",
+   "index": 20,
+   "pinyin": "Baihui",
+   "english": "Hundred Meetings G",
+   "categories": [
+    "Meeting point of the Governing vessel with the",
+    "Point of the Sea of Marrow"
+   ],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "head",
+    "arc_cun": 5.0
+   },
+   "note_pl": "5 cun za przednia linia wlosow, na szczycie glowy"
+  },
+  {
+   "code": "DU-21",
+   "channel": "DU",
+   "index": 21,
+   "pinyin": "Qianding",
+   "english": "Baihui DU-20",
+   "categories": [],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "head",
+    "arc_cun": 3.5
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "DU-22",
+   "channel": "DU",
+   "index": 22,
+   "pinyin": "Xinhui",
+   "english": "Fontanelle Meeting 4a",
+   "categories": [],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "head",
+    "arc_cun": 2.0
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "DU-23",
+   "channel": "DU",
+   "index": 23,
+   "pinyin": "Shangxing",
+   "english": "Upper Star",
+   "categories": [
+    "Sun Si-miao Ghost point ye"
+   ],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "head",
+    "arc_cun": 1.0
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "DU-24",
+   "channel": "DU",
+   "index": 24,
+   "pinyin": "Shenting",
+   "english": "Courtyard of the Spirit",
+   "categories": [
+    "Meeting point of the Governing vessel with ji"
+   ],
+   "side": "midline",
+   "accuracy": "anchored",
+   "anchor": {
+    "seg": "head",
+    "arc_cun": 0.5
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "DU-25",
+   "channel": "DU",
+   "index": 25,
+   "pinyin": "Suliao",
+   "english": "White Crevice a",
+   "categories": [],
+   "side": "midline",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "head",
+    "z_frac": 0.906,
+    "az": 0
+   },
+   "note_pl": "czubek nosa"
+  },
+  {
+   "code": "DU-26",
+   "channel": "DU",
+   "index": 26,
+   "pinyin": "Renzhong",
+   "english": "Man「s Middle",
+   "categories": [
+    "Meeting point of the Governing vessel with the",
+    "Sun Si-miao Ghost point"
+   ],
+   "side": "midline",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "head",
+    "z_frac": 0.897,
+    "az": 0
+   },
+   "note_pl": "gorna 1/3 rowka nosowo-wargowego"
+  },
+  {
+   "code": "DU-27",
+   "channel": "DU",
+   "index": 27,
+   "pinyin": "Duiduan",
+   "english": "Extremity of the Mouth",
+   "categories": [],
+   "side": "midline",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "head",
+    "z_frac": 0.891,
+    "az": 0
+   },
+   "note_pl": ""
+  },
+  {
+   "code": "DU-28",
+   "channel": "DU",
+   "index": 28,
+   "pinyin": "Yinjiao",
+   "english": "Gum Intersection",
+   "categories": [
+    "Meeting point of the Governing vessel with sa"
+   ],
+   "side": "midline",
+   "accuracy": "approx",
+   "anchor": {
+    "seg": "head",
+    "z_frac": 0.887,
+    "az": 0
+   },
+   "note_pl": "wedzidelko wargi gornej"
+  }
+ ]
+}

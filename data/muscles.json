@@ -1,0 +1,10981 @@
+{
+ "source": "Z-Anatomy (CC BY-SA 4.0), eksport i obrobka: tools/blender_export.py + prepare_meshes.py",
+ "coordinate_system": "+X = prawa strona, +Y = przod, +Z = gora, metry",
+ "skeleton": {
+  "file": "skeleton.vtp",
+  "polys": 220000
+ },
+ "muscles": [
+  {
+   "id": "abdominal-part-of-pectoralis-major-muscle-l",
+   "name": "(Abdominal part of pectoralis major muscle)",
+   "side": "L",
+   "file": "muscles/abdominal-part-of-pectoralis-major-muscle-l.vtp",
+   "polys": 1508,
+   "centroid": [
+    -0.11512,
+    0.0692,
+    1.24826
+   ],
+   "axis": [
+    -0.4526,
+    -0.5564,
+    0.69683
+   ],
+   "extent": [
+    -0.09476,
+    0.14764
+   ],
+   "flatness": 0.12,
+   "volume_l": 0.0276
+  },
+  {
+   "id": "abdominal-part-of-pectoralis-major-muscle-r",
+   "name": "(Abdominal part of pectoralis major muscle)",
+   "side": "R",
+   "file": "muscles/abdominal-part-of-pectoralis-major-muscle-r.vtp",
+   "polys": 1508,
+   "centroid": [
+    0.11512,
+    0.0692,
+    1.24826
+   ],
+   "axis": [
+    0.4526,
+    -0.5564,
+    0.69683
+   ],
+   "extent": [
+    -0.09476,
+    0.14764
+   ],
+   "flatness": 0.12,
+   "volume_l": 0.0276
+  },
+  {
+   "id": "adductor-minimus-l",
+   "name": "(Adductor minimus)",
+   "side": "L",
+   "file": "muscles/adductor-minimus-l.vtp",
+   "polys": 948,
+   "centroid": [
+    -0.07822,
+    -0.00036,
+    0.76446
+   ],
+   "axis": [
+    0.62893,
+    0.27333,
+    0.72783
+   ],
+   "extent": [
+    -0.04286,
+    0.09108
+   ],
+   "flatness": 0.21,
+   "volume_l": 0.0139
+  },
+  {
+   "id": "adductor-minimus-r",
+   "name": "(Adductor minimus)",
+   "side": "R",
+   "file": "muscles/adductor-minimus-r.vtp",
+   "polys": 948,
+   "centroid": [
+    0.07822,
+    -0.00036,
+    0.76446
+   ],
+   "axis": [
+    -0.62893,
+    0.27333,
+    0.72783
+   ],
+   "extent": [
+    -0.04286,
+    0.09108
+   ],
+   "flatness": 0.21,
+   "volume_l": 0.0139
+  },
+  {
+   "id": "opponens-digiti-minimi-muscle-of-foot-l",
+   "name": "(Opponens digiti minimi muscle of foot)",
+   "side": "L",
+   "file": "muscles/opponens-digiti-minimi-muscle-of-foot-l.vtp",
+   "polys": 236,
+   "centroid": [
+    -0.11805,
+    0.01496,
+    0.02174
+   ],
+   "axis": [
+    0.44976,
+    -0.87746,
+    0.16669
+   ],
+   "extent": [
+    -0.02586,
+    0.02186
+   ],
+   "flatness": 0.176,
+   "volume_l": 0.0005
+  },
+  {
+   "id": "opponens-digiti-minimi-muscle-of-foot-r",
+   "name": "(Opponens digiti minimi muscle of foot)",
+   "side": "R",
+   "file": "muscles/opponens-digiti-minimi-muscle-of-foot-r.vtp",
+   "polys": 236,
+   "centroid": [
+    0.11805,
+    0.01496,
+    0.02174
+   ],
+   "axis": [
+    -0.44976,
+    -0.87746,
+    0.16669
+   ],
+   "extent": [
+    -0.02586,
+    0.02186
+   ],
+   "flatness": 0.176,
+   "volume_l": 0.0005
+  },
+  {
+   "id": "abductor-digiti-minimi-of-foot-l",
+   "name": "Abductor digiti minimi of foot",
+   "side": "L",
+   "file": "muscles/abductor-digiti-minimi-of-foot-l.vtp",
+   "polys": 1280,
+   "centroid": [
+    -0.10551,
+    -0.01442,
+    0.01905
+   ],
+   "axis": [
+    0.44785,
+    -0.89313,
+    0.0419
+   ],
+   "extent": [
+    -0.08075,
+    0.0571
+   ],
+   "flatness": 0.116,
+   "volume_l": 0.0049
+  },
+  {
+   "id": "abductor-digiti-minimi-of-foot-r",
+   "name": "Abductor digiti minimi of foot",
+   "side": "R",
+   "file": "muscles/abductor-digiti-minimi-of-foot-r.vtp",
+   "polys": 1280,
+   "centroid": [
+    0.10551,
+    -0.01442,
+    0.01905
+   ],
+   "axis": [
+    -0.44785,
+    -0.89313,
+    0.0419
+   ],
+   "extent": [
+    -0.08075,
+    0.0571
+   ],
+   "flatness": 0.116,
+   "volume_l": 0.0049
+  },
+  {
+   "id": "abductor-digiti-minimi-of-hand-l",
+   "name": "Abductor digiti minimi of hand",
+   "side": "L",
+   "file": "muscles/abductor-digiti-minimi-of-hand-l.vtp",
+   "polys": 672,
+   "centroid": [
+    -0.23568,
+    0.0415,
+    0.80758
+   ],
+   "axis": [
+    -0.16119,
+    -0.17564,
+    0.97117
+   ],
+   "extent": [
+    -0.02997,
+    0.03844
+   ],
+   "flatness": 0.154,
+   "volume_l": 0.0022
+  },
+  {
+   "id": "abductor-digiti-minimi-of-hand-r",
+   "name": "Abductor digiti minimi of hand",
+   "side": "R",
+   "file": "muscles/abductor-digiti-minimi-of-hand-r.vtp",
+   "polys": 672,
+   "centroid": [
+    0.23568,
+    0.0415,
+    0.80758
+   ],
+   "axis": [
+    0.16119,
+    -0.17564,
+    0.97117
+   ],
+   "extent": [
+    -0.02997,
+    0.03844
+   ],
+   "flatness": 0.154,
+   "volume_l": 0.0022
+  },
+  {
+   "id": "abductor-hallucis-l",
+   "name": "Abductor hallucis",
+   "side": "L",
+   "file": "muscles/abductor-hallucis-l.vtp",
+   "polys": 1688,
+   "centroid": [
+    -0.06262,
+    0.00921,
+    0.02834
+   ],
+   "axis": [
+    -0.04123,
+    -0.99727,
+    0.06121
+   ],
+   "extent": [
+    -0.07613,
+    0.06925
+   ],
+   "flatness": 0.164,
+   "volume_l": 0.01
+  },
+  {
+   "id": "abductor-hallucis-r",
+   "name": "Abductor hallucis",
+   "side": "R",
+   "file": "muscles/abductor-hallucis-r.vtp",
+   "polys": 1688,
+   "centroid": [
+    0.06262,
+    0.00921,
+    0.02834
+   ],
+   "axis": [
+    0.04123,
+    -0.99727,
+    0.06121
+   ],
+   "extent": [
+    -0.07613,
+    0.06925
+   ],
+   "flatness": 0.164,
+   "volume_l": 0.01
+  },
+  {
+   "id": "abductor-pollicis-brevis-l",
+   "name": "Abductor pollicis brevis",
+   "side": "L",
+   "file": "muscles/abductor-pollicis-brevis-l.vtp",
+   "polys": 624,
+   "centroid": [
+    -0.28815,
+    0.04009,
+    0.84364
+   ],
+   "axis": [
+    0.6405,
+    -0.43101,
+    0.63561
+   ],
+   "extent": [
+    -0.0363,
+    0.02639
+   ],
+   "flatness": 0.201,
+   "volume_l": 0.0021
+  },
+  {
+   "id": "abductor-pollicis-brevis-r",
+   "name": "Abductor pollicis brevis",
+   "side": "R",
+   "file": "muscles/abductor-pollicis-brevis-r.vtp",
+   "polys": 624,
+   "centroid": [
+    0.28815,
+    0.04009,
+    0.84364
+   ],
+   "axis": [
+    -0.6405,
+    -0.43101,
+    0.63561
+   ],
+   "extent": [
+    -0.0363,
+    0.02639
+   ],
+   "flatness": 0.201,
+   "volume_l": 0.0021
+  },
+  {
+   "id": "abductor-pollicis-longus-l",
+   "name": "Abductor pollicis longus",
+   "side": "L",
+   "file": "muscles/abductor-pollicis-longus-l.vtp",
+   "polys": 2462,
+   "centroid": [
+    -0.26011,
+    -0.01065,
+    0.93587
+   ],
+   "axis": [
+    0.32168,
+    -0.26093,
+    0.91018
+   ],
+   "extent": [
+    -0.11097,
+    0.09534
+   ],
+   "flatness": 0.12,
+   "volume_l": 0.018
+  },
+  {
+   "id": "abductor-pollicis-longus-r",
+   "name": "Abductor pollicis longus",
+   "side": "R",
+   "file": "muscles/abductor-pollicis-longus-r.vtp",
+   "polys": 2462,
+   "centroid": [
+    0.26011,
+    -0.01065,
+    0.93587
+   ],
+   "axis": [
+    -0.32168,
+    -0.26093,
+    0.91018
+   ],
+   "extent": [
+    -0.11097,
+    0.09534
+   ],
+   "flatness": 0.12,
+   "volume_l": 0.018
+  },
+  {
+   "id": "acromial-part-of-deltoid-muscle-l",
+   "name": "Acromial part of deltoid muscle",
+   "side": "L",
+   "file": "muscles/acromial-part-of-deltoid-muscle-l.vtp",
+   "polys": 2964,
+   "centroid": [
+    -0.20367,
+    -0.03043,
+    1.36661
+   ],
+   "axis": [
+    0.3262,
+    -0.12067,
+    0.93757
+   ],
+   "extent": [
+    -0.09477,
+    0.05719
+   ],
+   "flatness": 0.332,
+   "volume_l": 0.1016
+  },
+  {
+   "id": "acromial-part-of-deltoid-muscle-r",
+   "name": "Acromial part of deltoid muscle",
+   "side": "R",
+   "file": "muscles/acromial-part-of-deltoid-muscle-r.vtp",
+   "polys": 2964,
+   "centroid": [
+    0.20367,
+    -0.03043,
+    1.36661
+   ],
+   "axis": [
+    -0.3262,
+    -0.12067,
+    0.93757
+   ],
+   "extent": [
+    -0.09477,
+    0.05719
+   ],
+   "flatness": 0.332,
+   "volume_l": 0.1016
+  },
+  {
+   "id": "adductor-brevis-l",
+   "name": "Adductor brevis",
+   "side": "L",
+   "file": "muscles/adductor-brevis-l.vtp",
+   "polys": 2132,
+   "centroid": [
+    -0.07116,
+    0.00972,
+    0.74989
+   ],
+   "axis": [
+    0.41082,
+    0.23686,
+    0.88041
+   ],
+   "extent": [
+    -0.08471,
+    0.10479
+   ],
+   "flatness": 0.285,
+   "volume_l": 0.0501
+  },
+  {
+   "id": "adductor-brevis-r",
+   "name": "Adductor brevis",
+   "side": "R",
+   "file": "muscles/adductor-brevis-r.vtp",
+   "polys": 2132,
+   "centroid": [
+    0.07116,
+    0.00972,
+    0.74989
+   ],
+   "axis": [
+    -0.41082,
+    0.23686,
+    0.88041
+   ],
+   "extent": [
+    -0.08471,
+    0.10479
+   ],
+   "flatness": 0.285,
+   "volume_l": 0.0501
+  },
+  {
+   "id": "adductor-longus-l",
+   "name": "Adductor longus",
+   "side": "L",
+   "file": "muscles/adductor-longus-l.vtp",
+   "polys": 3714,
+   "centroid": [
+    -0.05744,
+    0.02046,
+    0.70556
+   ],
+   "axis": [
+    0.24248,
+    0.18973,
+    0.95142
+   ],
+   "extent": [
+    -0.13156,
+    0.14457
+   ],
+   "flatness": 0.192,
+   "volume_l": 0.1349
+  },
+  {
+   "id": "adductor-longus-r",
+   "name": "Adductor longus",
+   "side": "R",
+   "file": "muscles/adductor-longus-r.vtp",
+   "polys": 3714,
+   "centroid": [
+    0.05744,
+    0.02046,
+    0.70556
+   ],
+   "axis": [
+    -0.24248,
+    0.18973,
+    0.95142
+   ],
+   "extent": [
+    -0.13156,
+    0.14457
+   ],
+   "flatness": 0.192,
+   "volume_l": 0.1349
+  },
+  {
+   "id": "adductor-magnus-l",
+   "name": "Adductor magnus",
+   "side": "L",
+   "file": "muscles/adductor-magnus-l.vtp",
+   "polys": 4000,
+   "centroid": [
+    -0.06416,
+    -0.01616,
+    0.6558
+   ],
+   "axis": [
+    -0.00198,
+    0.02508,
+    0.99968
+   ],
+   "extent": [
+    -0.19335,
+    0.16526
+   ],
+   "flatness": 0.261,
+   "volume_l": 0.4673
+  },
+  {
+   "id": "adductor-magnus-r",
+   "name": "Adductor magnus",
+   "side": "R",
+   "file": "muscles/adductor-magnus-r.vtp",
+   "polys": 4000,
+   "centroid": [
+    0.06416,
+    -0.01616,
+    0.6558
+   ],
+   "axis": [
+    0.00198,
+    0.02508,
+    0.99968
+   ],
+   "extent": [
+    -0.19335,
+    0.16526
+   ],
+   "flatness": 0.261,
+   "volume_l": 0.4673
+  },
+  {
+   "id": "anconeus-muscle-l",
+   "name": "Anconeus muscle",
+   "side": "L",
+   "file": "muscles/anconeus-muscle-l.vtp",
+   "polys": 1442,
+   "centroid": [
+    -0.22618,
+    -0.05293,
+    1.07161
+   ],
+   "axis": [
+    -0.0595,
+    -0.15773,
+    0.98569
+   ],
+   "extent": [
+    -0.05825,
+    0.04785
+   ],
+   "flatness": 0.229,
+   "volume_l": 0.0083
+  },
+  {
+   "id": "anconeus-muscle-r",
+   "name": "Anconeus muscle",
+   "side": "R",
+   "file": "muscles/anconeus-muscle-r.vtp",
+   "polys": 1442,
+   "centroid": [
+    0.22618,
+    -0.05293,
+    1.07161
+   ],
+   "axis": [
+    0.0595,
+    -0.15773,
+    0.98569
+   ],
+   "extent": [
+    -0.05825,
+    0.04785
+   ],
+   "flatness": 0.229,
+   "volume_l": 0.0083
+  },
+  {
+   "id": "anterior-belly-of-digastric-muscle-l",
+   "name": "Anterior belly of digastric muscle",
+   "side": "L",
+   "file": "muscles/anterior-belly-of-digastric-muscle-l.vtp",
+   "polys": 392,
+   "centroid": [
+    -0.00992,
+    0.05387,
+    1.50167
+   ],
+   "axis": [
+    -0.16799,
+    -0.98231,
+    0.08271
+   ],
+   "extent": [
+    -0.01664,
+    0.02068
+   ],
+   "flatness": 0.229,
+   "volume_l": 0.0007
+  },
+  {
+   "id": "anterior-belly-of-digastric-muscle-r",
+   "name": "Anterior belly of digastric muscle",
+   "side": "R",
+   "file": "muscles/anterior-belly-of-digastric-muscle-r.vtp",
+   "polys": 392,
+   "centroid": [
+    0.00992,
+    0.05387,
+    1.50167
+   ],
+   "axis": [
+    0.16799,
+    -0.98231,
+    0.08271
+   ],
+   "extent": [
+    -0.01664,
+    0.02068
+   ],
+   "flatness": 0.229,
+   "volume_l": 0.0007
+  },
+  {
+   "id": "ary-epiglottic-part-of-oblique-arytenoid-muscle-l",
+   "name": "Ary-epiglottic part of oblique arytenoid muscle",
+   "side": "L",
+   "file": "muscles/ary-epiglottic-part-of-oblique-arytenoid-muscle-l.vtp",
+   "polys": 1022,
+   "centroid": [
+    -0.00692,
+    0.01347,
+    1.49302
+   ],
+   "axis": [
+    -0.12124,
+    0.46446,
+    0.87726
+   ],
+   "extent": [
+    -0.01345,
+    0.01305
+   ],
+   "flatness": 0.077,
+   "volume_l": 0.0
+  },
+  {
+   "id": "ary-epiglottic-part-of-oblique-arytenoid-muscle-r",
+   "name": "Ary-epiglottic part of oblique arytenoid muscle",
+   "side": "R",
+   "file": "muscles/ary-epiglottic-part-of-oblique-arytenoid-muscle-r.vtp",
+   "polys": 1022,
+   "centroid": [
+    0.00692,
+    0.01347,
+    1.49302
+   ],
+   "axis": [
+    0.12124,
+    0.46446,
+    0.87726
+   ],
+   "extent": [
+    -0.01345,
+    0.01305
+   ],
+   "flatness": 0.077,
+   "volume_l": 0.0
+  },
+  {
+   "id": "ascending-part-of-trapezius-muscle-l",
+   "name": "Ascending part of trapezius muscle",
+   "side": "L",
+   "file": "muscles/ascending-part-of-trapezius-muscle-l.vtp",
+   "polys": 3998,
+   "centroid": [
+    -0.03422,
+    -0.05693,
+    1.47941
+   ],
+   "axis": [
+    0.52114,
+    -0.19389,
+    0.83116
+   ],
+   "extent": [
+    -0.09989,
+    0.09828
+   ],
+   "flatness": 0.486,
+   "volume_l": 0.0862
+  },
+  {
+   "id": "ascending-part-of-trapezius-muscle-r",
+   "name": "Ascending part of trapezius muscle",
+   "side": "R",
+   "file": "muscles/ascending-part-of-trapezius-muscle-r.vtp",
+   "polys": 3998,
+   "centroid": [
+    0.03422,
+    -0.05693,
+    1.47941
+   ],
+   "axis": [
+    -0.52114,
+    -0.19389,
+    0.83116
+   ],
+   "extent": [
+    -0.09989,
+    0.09828
+   ],
+   "flatness": 0.486,
+   "volume_l": 0.0862
+  },
+  {
+   "id": "brachialis-muscle-l",
+   "name": "Brachialis muscle",
+   "side": "L",
+   "file": "muscles/brachialis-muscle-l.vtp",
+   "polys": 3478,
+   "centroid": [
+    -0.21508,
+    -0.02622,
+    1.15956
+   ],
+   "axis": [
+    0.07135,
+    -0.02499,
+    0.99714
+   ],
+   "extent": [
+    -0.10741,
+    0.12554
+   ],
+   "flatness": 0.233,
+   "volume_l": 0.0837
+  },
+  {
+   "id": "brachialis-muscle-r",
+   "name": "Brachialis muscle",
+   "side": "R",
+   "file": "muscles/brachialis-muscle-r.vtp",
+   "polys": 3478,
+   "centroid": [
+    0.21508,
+    -0.02622,
+    1.15956
+   ],
+   "axis": [
+    -0.07135,
+    -0.02499,
+    0.99714
+   ],
+   "extent": [
+    -0.10741,
+    0.12554
+   ],
+   "flatness": 0.233,
+   "volume_l": 0.0837
+  },
+  {
+   "id": "brachioradialis-muscle-l",
+   "name": "Brachioradialis muscle",
+   "side": "L",
+   "file": "muscles/brachioradialis-muscle-l.vtp",
+   "polys": 3998,
+   "centroid": [
+    -0.25808,
+    -0.01277,
+    1.0475
+   ],
+   "axis": [
+    0.16887,
+    -0.16695,
+    0.9714
+   ],
+   "extent": [
+    -0.19197,
+    0.16992
+   ],
+   "flatness": 0.106,
+   "volume_l": 0.0877
+  },
+  {
+   "id": "brachioradialis-muscle-r",
+   "name": "Brachioradialis muscle",
+   "side": "R",
+   "file": "muscles/brachioradialis-muscle-r.vtp",
+   "polys": 3998,
+   "centroid": [
+    0.25808,
+    -0.01277,
+    1.0475
+   ],
+   "axis": [
+    -0.16887,
+    -0.16695,
+    0.9714
+   ],
+   "extent": [
+    -0.19197,
+    0.16992
+   ],
+   "flatness": 0.106,
+   "volume_l": 0.0877
+  },
+  {
+   "id": "bucinator-l",
+   "name": "Bucinator",
+   "side": "L",
+   "file": "muscles/bucinator-l.vtp",
+   "polys": 884,
+   "centroid": [
+    -0.03158,
+    0.05725,
+    1.5353
+   ],
+   "axis": [
+    -0.20938,
+    -0.57601,
+    0.79018
+   ],
+   "extent": [
+    -0.02242,
+    0.01943
+   ],
+   "flatness": 0.581,
+   "volume_l": 0.0014
+  },
+  {
+   "id": "bucinator-r",
+   "name": "Bucinator",
+   "side": "R",
+   "file": "muscles/bucinator-r.vtp",
+   "polys": 884,
+   "centroid": [
+    0.03158,
+    0.05725,
+    1.5353
+   ],
+   "axis": [
+    0.20938,
+    -0.57601,
+    0.79018
+   ],
+   "extent": [
+    -0.02242,
+    0.01943
+   ],
+   "flatness": 0.581,
+   "volume_l": 0.0014
+  },
+  {
+   "id": "calcaneal-tendon-l",
+   "name": "Calcaneal tendon",
+   "side": "L",
+   "file": "muscles/calcaneal-tendon-l.vtp",
+   "polys": 3999,
+   "centroid": [
+    -0.07757,
+    -0.07597,
+    0.16411
+   ],
+   "axis": [
+    -0.07995,
+    0.04491,
+    0.99579
+   ],
+   "extent": [
+    -0.13985,
+    0.08378
+   ],
+   "flatness": 0.223,
+   "volume_l": 0.0238
+  },
+  {
+   "id": "calcaneal-tendon-r",
+   "name": "Calcaneal tendon",
+   "side": "R",
+   "file": "muscles/calcaneal-tendon-r.vtp",
+   "polys": 3999,
+   "centroid": [
+    0.07757,
+    -0.07597,
+    0.16411
+   ],
+   "axis": [
+    0.07995,
+    0.04491,
+    0.99579
+   ],
+   "extent": [
+    -0.13985,
+    0.08378
+   ],
+   "flatness": 0.223,
+   "volume_l": 0.0238
+  },
+  {
+   "id": "clavicular-head-of-pectoralis-major-muscle-l",
+   "name": "Clavicular head of pectoralis major muscle",
+   "side": "L",
+   "file": "muscles/clavicular-head-of-pectoralis-major-muscle-l.vtp",
+   "polys": 850,
+   "centroid": [
+    -0.11537,
+    0.02012,
+    1.37491
+   ],
+   "axis": [
+    0.84621,
+    0.2767,
+    0.45537
+   ],
+   "extent": [
+    -0.11374,
+    0.0919
+   ],
+   "flatness": 0.208,
+   "volume_l": 0.052
+  },
+  {
+   "id": "clavicular-head-of-pectoralis-major-muscle-r",
+   "name": "Clavicular head of pectoralis major muscle",
+   "side": "R",
+   "file": "muscles/clavicular-head-of-pectoralis-major-muscle-r.vtp",
+   "polys": 850,
+   "centroid": [
+    0.11537,
+    0.02012,
+    1.37491
+   ],
+   "axis": [
+    -0.84621,
+    0.2767,
+    0.45537
+   ],
+   "extent": [
+    -0.11374,
+    0.0919
+   ],
+   "flatness": 0.208,
+   "volume_l": 0.052
+  },
+  {
+   "id": "clavicular-part-of-deltoid-muscle-l",
+   "name": "Clavicular part of deltoid muscle",
+   "side": "L",
+   "file": "muscles/clavicular-part-of-deltoid-muscle-l.vtp",
+   "polys": 2902,
+   "centroid": [
+    -0.1597,
+    -0.00363,
+    1.37771
+   ],
+   "axis": [
+    0.67537,
+    -0.0691,
+    0.73424
+   ],
+   "extent": [
+    -0.11126,
+    0.07654
+   ],
+   "flatness": 0.377,
+   "volume_l": 0.072
+  },
+  {
+   "id": "clavicular-part-of-deltoid-muscle-r",
+   "name": "Clavicular part of deltoid muscle",
+   "side": "R",
+   "file": "muscles/clavicular-part-of-deltoid-muscle-r.vtp",
+   "polys": 2902,
+   "centroid": [
+    0.1597,
+    -0.00363,
+    1.37771
+   ],
+   "axis": [
+    -0.67537,
+    -0.0691,
+    0.73424
+   ],
+   "extent": [
+    -0.11126,
+    0.07654
+   ],
+   "flatness": 0.377,
+   "volume_l": 0.072
+  },
+  {
+   "id": "coccygeus-muscle-l",
+   "name": "Coccygeus muscle",
+   "side": "L",
+   "file": "muscles/coccygeus-muscle-l.vtp",
+   "polys": 1034,
+   "centroid": [
+    -0.0224,
+    -0.0678,
+    0.86429
+   ],
+   "axis": [
+    -0.80308,
+    0.43083,
+    0.41164
+   ],
+   "extent": [
+    -0.02758,
+    0.02889
+   ],
+   "flatness": 0.676,
+   "volume_l": 0.0036
+  },
+  {
+   "id": "coccygeus-muscle-r",
+   "name": "Coccygeus muscle",
+   "side": "R",
+   "file": "muscles/coccygeus-muscle-r.vtp",
+   "polys": 1034,
+   "centroid": [
+    0.0224,
+    -0.0678,
+    0.86429
+   ],
+   "axis": [
+    0.80308,
+    0.43083,
+    0.41164
+   ],
+   "extent": [
+    -0.02758,
+    0.02889
+   ],
+   "flatness": 0.676,
+   "volume_l": 0.0036
+  },
+  {
+   "id": "common-tendinous-ring-l",
+   "name": "Common tendinous ring",
+   "side": "L",
+   "file": "muscles/common-tendinous-ring-l.vtp",
+   "polys": 362,
+   "centroid": [
+    -0.01614,
+    0.03401,
+    1.59973
+   ],
+   "axis": [
+    0.24164,
+    0.58123,
+    0.77703
+   ],
+   "extent": [
+    -0.00368,
+    0.00346
+   ],
+   "flatness": 0.933,
+   "volume_l": 0.0
+  },
+  {
+   "id": "common-tendinous-ring-r",
+   "name": "Common tendinous ring",
+   "side": "R",
+   "file": "muscles/common-tendinous-ring-r.vtp",
+   "polys": 362,
+   "centroid": [
+    0.01614,
+    0.03401,
+    1.59973
+   ],
+   "axis": [
+    -0.24164,
+    0.58123,
+    0.77703
+   ],
+   "extent": [
+    -0.00368,
+    0.00346
+   ],
+   "flatness": 0.933,
+   "volume_l": 0.0
+  },
+  {
+   "id": "coracobrachialis-muscle-l",
+   "name": "Coracobrachialis muscle",
+   "side": "L",
+   "file": "muscles/coracobrachialis-muscle-l.vtp",
+   "polys": 1160,
+   "centroid": [
+    -0.16488,
+    -0.01885,
+    1.31686
+   ],
+   "axis": [
+    0.33581,
+    0.18106,
+    0.92436
+   ],
+   "extent": [
+    -0.0894,
+    0.07982
+   ],
+   "flatness": 0.112,
+   "volume_l": 0.0235
+  },
+  {
+   "id": "coracobrachialis-muscle-r",
+   "name": "Coracobrachialis muscle",
+   "side": "R",
+   "file": "muscles/coracobrachialis-muscle-r.vtp",
+   "polys": 1160,
+   "centroid": [
+    0.16488,
+    -0.01885,
+    1.31686
+   ],
+   "axis": [
+    -0.33581,
+    0.18106,
+    0.92436
+   ],
+   "extent": [
+    -0.0894,
+    0.07982
+   ],
+   "flatness": 0.112,
+   "volume_l": 0.0235
+  },
+  {
+   "id": "corrugator-supercilii-l",
+   "name": "Corrugator supercilii",
+   "side": "L",
+   "file": "muscles/corrugator-supercilii-l.vtp",
+   "polys": 278,
+   "centroid": [
+    -0.02126,
+    0.08041,
+    1.61266
+   ],
+   "axis": [
+    -0.8277,
+    0.00723,
+    0.56113
+   ],
+   "extent": [
+    -0.01596,
+    0.01274
+   ],
+   "flatness": 0.224,
+   "volume_l": 0.0002
+  },
+  {
+   "id": "corrugator-supercilii-r",
+   "name": "Corrugator supercilii",
+   "side": "R",
+   "file": "muscles/corrugator-supercilii-r.vtp",
+   "polys": 278,
+   "centroid": [
+    0.02126,
+    0.08041,
+    1.61266
+   ],
+   "axis": [
+    0.8277,
+    0.00723,
+    0.56113
+   ],
+   "extent": [
+    -0.01596,
+    0.01274
+   ],
+   "flatness": 0.224,
+   "volume_l": 0.0002
+  },
+  {
+   "id": "deep-head-of-flexor-pollicis-brevis-l",
+   "name": "Deep head of flexor pollicis brevis",
+   "side": "L",
+   "file": "muscles/deep-head-of-flexor-pollicis-brevis-l.vtp",
+   "polys": 746,
+   "centroid": [
+    -0.28947,
+    0.03889,
+    0.84035
+   ],
+   "axis": [
+    0.8269,
+    -0.2458,
+    0.50579
+   ],
+   "extent": [
+    -0.03265,
+    0.02361
+   ],
+   "flatness": 0.428,
+   "volume_l": 0.0022
+  },
+  {
+   "id": "deep-head-of-flexor-pollicis-brevis-r",
+   "name": "Deep head of flexor pollicis brevis",
+   "side": "R",
+   "file": "muscles/deep-head-of-flexor-pollicis-brevis-r.vtp",
+   "polys": 746,
+   "centroid": [
+    0.28947,
+    0.03889,
+    0.84035
+   ],
+   "axis": [
+    -0.8269,
+    -0.2458,
+    0.50579
+   ],
+   "extent": [
+    -0.03265,
+    0.02361
+   ],
+   "flatness": 0.428,
+   "volume_l": 0.0022
+  },
+  {
+   "id": "deep-head-of-pronator-teres-l",
+   "name": "Deep head of pronator teres",
+   "side": "L",
+   "file": "muscles/deep-head-of-pronator-teres-l.vtp",
+   "polys": 1114,
+   "centroid": [
+    -0.2443,
+    -0.01169,
+    1.03463
+   ],
+   "axis": [
+    0.51026,
+    -0.10367,
+    0.85375
+   ],
+   "extent": [
+    -0.05272,
+    0.05694
+   ],
+   "flatness": 0.203,
+   "volume_l": 0.0056
+  },
+  {
+   "id": "deep-head-of-pronator-teres-r",
+   "name": "Deep head of pronator teres",
+   "side": "R",
+   "file": "muscles/deep-head-of-pronator-teres-r.vtp",
+   "polys": 1114,
+   "centroid": [
+    0.2443,
+    -0.01169,
+    1.03463
+   ],
+   "axis": [
+    -0.51026,
+    -0.10367,
+    0.85375
+   ],
+   "extent": [
+    -0.05272,
+    0.05694
+   ],
+   "flatness": 0.203,
+   "volume_l": 0.0056
+  },
+  {
+   "id": "deep-part-of-masseter-l",
+   "name": "Deep part of masseter",
+   "side": "L",
+   "file": "muscles/deep-part-of-masseter-l.vtp",
+   "polys": 994,
+   "centroid": [
+    -0.04896,
+    0.02455,
+    1.54779
+   ],
+   "axis": [
+    -0.33229,
+    -0.21087,
+    0.9193
+   ],
+   "extent": [
+    -0.04001,
+    0.03487
+   ],
+   "flatness": 0.299,
+   "volume_l": 0.0044
+  },
+  {
+   "id": "deep-part-of-masseter-r",
+   "name": "Deep part of masseter",
+   "side": "R",
+   "file": "muscles/deep-part-of-masseter-r.vtp",
+   "polys": 994,
+   "centroid": [
+    0.04896,
+    0.02455,
+    1.54779
+   ],
+   "axis": [
+    0.33229,
+    -0.21087,
+    0.9193
+   ],
+   "extent": [
+    -0.04001,
+    0.03487
+   ],
+   "flatness": 0.299,
+   "volume_l": 0.0044
+  },
+  {
+   "id": "depressor-anguli-oris-l",
+   "name": "Depressor anguli oris",
+   "side": "L",
+   "file": "muscles/depressor-anguli-oris-l.vtp",
+   "polys": 594,
+   "centroid": [
+    -0.02367,
+    0.06613,
+    1.50929
+   ],
+   "axis": [
+    -0.48197,
+    -0.18576,
+    0.85627
+   ],
+   "extent": [
+    -0.01658,
+    0.02767
+   ],
+   "flatness": 0.745,
+   "volume_l": 0.0009
+  },
+  {
+   "id": "depressor-anguli-oris-r",
+   "name": "Depressor anguli oris",
+   "side": "R",
+   "file": "muscles/depressor-anguli-oris-r.vtp",
+   "polys": 594,
+   "centroid": [
+    0.02367,
+    0.06613,
+    1.50929
+   ],
+   "axis": [
+    0.48197,
+    -0.18576,
+    0.85627
+   ],
+   "extent": [
+    -0.01658,
+    0.02767
+   ],
+   "flatness": 0.745,
+   "volume_l": 0.0009
+  },
+  {
+   "id": "depressor-labii-inferioris-l",
+   "name": "Depressor labii inferioris",
+   "side": "L",
+   "file": "muscles/depressor-labii-inferioris-l.vtp",
+   "polys": 832,
+   "centroid": [
+    -0.01859,
+    0.07482,
+    1.51567
+   ],
+   "axis": [
+    -0.75659,
+    -0.61941,
+    0.20951
+   ],
+   "extent": [
+    -0.01938,
+    0.01992
+   ],
+   "flatness": 0.701,
+   "volume_l": 0.001
+  },
+  {
+   "id": "depressor-labii-inferioris-r",
+   "name": "Depressor labii inferioris",
+   "side": "R",
+   "file": "muscles/depressor-labii-inferioris-r.vtp",
+   "polys": 832,
+   "centroid": [
+    0.01859,
+    0.07482,
+    1.51567
+   ],
+   "axis": [
+    0.75659,
+    -0.61941,
+    0.20951
+   ],
+   "extent": [
+    -0.01938,
+    0.01992
+   ],
+   "flatness": 0.701,
+   "volume_l": 0.001
+  },
+  {
+   "id": "depressor-septi-nasi-l",
+   "name": "Depressor septi nasi",
+   "side": "L",
+   "file": "muscles/depressor-septi-nasi-l.vtp",
+   "polys": 276,
+   "centroid": [
+    -0.0062,
+    0.08691,
+    1.54767
+   ],
+   "axis": [
+    0.72794,
+    0.16336,
+    0.6659
+   ],
+   "extent": [
+    -0.01105,
+    0.0094
+   ],
+   "flatness": 0.659,
+   "volume_l": 0.0002
+  },
+  {
+   "id": "depressor-septi-nasi-r",
+   "name": "Depressor septi nasi",
+   "side": "R",
+   "file": "muscles/depressor-septi-nasi-r.vtp",
+   "polys": 276,
+   "centroid": [
+    0.0062,
+    0.08691,
+    1.54767
+   ],
+   "axis": [
+    -0.72794,
+    0.16336,
+    0.6659
+   ],
+   "extent": [
+    -0.01105,
+    0.0094
+   ],
+   "flatness": 0.659,
+   "volume_l": 0.0002
+  },
+  {
+   "id": "descending-part-of-trapezius-muscle-l",
+   "name": "Descending part of trapezius muscle",
+   "side": "L",
+   "file": "muscles/descending-part-of-trapezius-muscle-l.vtp",
+   "polys": 4000,
+   "centroid": [
+    -0.0381,
+    -0.10411,
+    1.31185
+   ],
+   "axis": [
+    -0.28265,
+    0.00726,
+    0.95919
+   ],
+   "extent": [
+    -0.19483,
+    0.11513
+   ],
+   "flatness": 0.402,
+   "volume_l": 0.1398
+  },
+  {
+   "id": "descending-part-of-trapezius-muscle-r",
+   "name": "Descending part of trapezius muscle",
+   "side": "R",
+   "file": "muscles/descending-part-of-trapezius-muscle-r.vtp",
+   "polys": 4000,
+   "centroid": [
+    0.0381,
+    -0.10411,
+    1.31185
+   ],
+   "axis": [
+    0.28265,
+    0.00726,
+    0.95919
+   ],
+   "extent": [
+    -0.19483,
+    0.11513
+   ],
+   "flatness": 0.402,
+   "volume_l": 0.1398
+  },
+  {
+   "id": "diaphragm",
+   "name": "Diaphragm",
+   "side": "C",
+   "file": "muscles/diaphragm.vtp",
+   "polys": 3999,
+   "centroid": [
+    0.00241,
+    0.00634,
+    1.17516
+   ],
+   "axis": [
+    0.9915,
+    -0.00402,
+    0.13001
+   ],
+   "extent": [
+    -0.13528,
+    0.12588
+   ],
+   "flatness": 0.789,
+   "volume_l": 0.6138
+  },
+  {
+   "id": "dorsal-interossei-muscles-of-foot-l",
+   "name": "Dorsal interossei muscles of foot",
+   "side": "L",
+   "file": "muscles/dorsal-interossei-muscles-of-foot-l.vtp",
+   "polys": 1946,
+   "centroid": [
+    -0.10295,
+    0.0499,
+    0.03662
+   ],
+   "axis": [
+    -0.42679,
+    -0.89104,
+    0.15458
+   ],
+   "extent": [
+    -0.04315,
+    0.03466
+   ],
+   "flatness": 0.892,
+   "volume_l": 0.004
+  },
+  {
+   "id": "dorsal-interossei-muscles-of-foot-r",
+   "name": "Dorsal interossei muscles of foot",
+   "side": "R",
+   "file": "muscles/dorsal-interossei-muscles-of-foot-r.vtp",
+   "polys": 1946,
+   "centroid": [
+    0.10295,
+    0.0499,
+    0.03662
+   ],
+   "axis": [
+    0.42679,
+    -0.89104,
+    0.15458
+   ],
+   "extent": [
+    -0.04315,
+    0.03466
+   ],
+   "flatness": 0.892,
+   "volume_l": 0.004
+  },
+  {
+   "id": "dorsal-interossei-muscles-of-hand-l",
+   "name": "Dorsal interossei muscles of hand",
+   "side": "L",
+   "file": "muscles/dorsal-interossei-muscles-of-hand-l.vtp",
+   "polys": 1364,
+   "centroid": [
+    -0.27658,
+    0.02867,
+    0.79398
+   ],
+   "axis": [
+    -0.81325,
+    -0.13264,
+    0.56659
+   ],
+   "extent": [
+    -0.03826,
+    0.03759
+   ],
+   "flatness": 0.874,
+   "volume_l": 0.0046
+  },
+  {
+   "id": "dorsal-interossei-muscles-of-hand-r",
+   "name": "Dorsal interossei muscles of hand",
+   "side": "R",
+   "file": "muscles/dorsal-interossei-muscles-of-hand-r.vtp",
+   "polys": 1364,
+   "centroid": [
+    0.27658,
+    0.02867,
+    0.79398
+   ],
+   "axis": [
+    0.81325,
+    -0.13264,
+    0.56659
+   ],
+   "extent": [
+    -0.03826,
+    0.03759
+   ],
+   "flatness": 0.874,
+   "volume_l": 0.0046
+  },
+  {
+   "id": "dorsal-parts-of-lateral-intertransversarii-lumborum-muscles-l",
+   "name": "Dorsal parts of lateral intertransversarii lumborum muscles",
+   "side": "L",
+   "file": "muscles/dorsal-parts-of-lateral-intertransversarii-lumborum-muscles-l.vtp",
+   "polys": 720,
+   "centroid": [
+    -0.03472,
+    -0.03591,
+    1.06664
+   ],
+   "axis": [
+    0.0994,
+    -0.12943,
+    0.98659
+   ],
+   "extent": [
+    -0.07003,
+    0.08262
+   ],
+   "flatness": 0.117,
+   "volume_l": 0.0058
+  },
+  {
+   "id": "dorsal-parts-of-lateral-intertransversarii-lumborum-muscles-r",
+   "name": "Dorsal parts of lateral intertransversarii lumborum muscles",
+   "side": "R",
+   "file": "muscles/dorsal-parts-of-lateral-intertransversarii-lumborum-muscles-r.vtp",
+   "polys": 720,
+   "centroid": [
+    0.03472,
+    -0.03591,
+    1.06664
+   ],
+   "axis": [
+    -0.0994,
+    -0.12943,
+    0.98659
+   ],
+   "extent": [
+    -0.07003,
+    0.08262
+   ],
+   "flatness": 0.117,
+   "volume_l": 0.0058
+  },
+  {
+   "id": "extensor-carpi-radialis-brevis-l",
+   "name": "Extensor carpi radialis brevis",
+   "side": "L",
+   "file": "muscles/extensor-carpi-radialis-brevis-l.vtp",
+   "polys": 3142,
+   "centroid": [
+    -0.26123,
+    -0.02465,
+    0.99049
+   ],
+   "axis": [
+    0.12319,
+    -0.21507,
+    0.9688
+   ],
+   "extent": [
+    -0.16903,
+    0.15087
+   ],
+   "flatness": 0.063,
+   "volume_l": 0.0221
+  },
+  {
+   "id": "extensor-carpi-radialis-brevis-r",
+   "name": "Extensor carpi radialis brevis",
+   "side": "R",
+   "file": "muscles/extensor-carpi-radialis-brevis-r.vtp",
+   "polys": 3142,
+   "centroid": [
+    0.26123,
+    -0.02465,
+    0.99049
+   ],
+   "axis": [
+    -0.12319,
+    -0.21507,
+    0.9688
+   ],
+   "extent": [
+    -0.16903,
+    0.15087
+   ],
+   "flatness": 0.063,
+   "volume_l": 0.0221
+  },
+  {
+   "id": "extensor-carpi-radialis-longus-l",
+   "name": "Extensor carpi radialis longus",
+   "side": "L",
+   "file": "muscles/extensor-carpi-radialis-longus-l.vtp",
+   "polys": 3706,
+   "centroid": [
+    -0.26435,
+    -0.02418,
+    1.02144
+   ],
+   "axis": [
+    0.13006,
+    -0.19531,
+    0.97208
+   ],
+   "extent": [
+    -0.19786,
+    0.1458
+   ],
+   "flatness": 0.069,
+   "volume_l": 0.0282
+  },
+  {
+   "id": "extensor-carpi-radialis-longus-r",
+   "name": "Extensor carpi radialis longus",
+   "side": "R",
+   "file": "muscles/extensor-carpi-radialis-longus-r.vtp",
+   "polys": 3706,
+   "centroid": [
+    0.26435,
+    -0.02418,
+    1.02144
+   ],
+   "axis": [
+    -0.13006,
+    -0.19531,
+    0.97208
+   ],
+   "extent": [
+    -0.19786,
+    0.1458
+   ],
+   "flatness": 0.069,
+   "volume_l": 0.0282
+  },
+  {
+   "id": "extensor-digiti-minimi-l",
+   "name": "Extensor digiti minimi",
+   "side": "L",
+   "file": "muscles/extensor-digiti-minimi-l.vtp",
+   "polys": 2152,
+   "centroid": [
+    -0.24405,
+    -0.01483,
+    0.93904
+   ],
+   "axis": [
+    0.00744,
+    -0.2585,
+    0.96598
+   ],
+   "extent": [
+    -0.17552,
+    0.17218
+   ],
+   "flatness": 0.066,
+   "volume_l": 0.0076
+  },
+  {
+   "id": "extensor-digiti-minimi-r",
+   "name": "Extensor digiti minimi",
+   "side": "R",
+   "file": "muscles/extensor-digiti-minimi-r.vtp",
+   "polys": 2152,
+   "centroid": [
+    0.24405,
+    -0.01483,
+    0.93904
+   ],
+   "axis": [
+    -0.00744,
+    -0.2585,
+    0.96598
+   ],
+   "extent": [
+    -0.17552,
+    0.17218
+   ],
+   "flatness": 0.066,
+   "volume_l": 0.0076
+  },
+  {
+   "id": "extensor-digitorum-l",
+   "name": "Extensor digitorum",
+   "side": "L",
+   "file": "muscles/extensor-digitorum-l.vtp",
+   "polys": 4000,
+   "centroid": [
+    -0.26047,
+    0.00089,
+    0.87731
+   ],
+   "axis": [
+    0.07109,
+    -0.29416,
+    0.95311
+   ],
+   "extent": [
+    -0.16529,
+    0.24686
+   ],
+   "flatness": 0.135,
+   "volume_l": 0.0326
+  },
+  {
+   "id": "extensor-digitorum-r",
+   "name": "Extensor digitorum",
+   "side": "R",
+   "file": "muscles/extensor-digitorum-r.vtp",
+   "polys": 4000,
+   "centroid": [
+    0.26047,
+    0.00089,
+    0.87731
+   ],
+   "axis": [
+    -0.07109,
+    -0.29416,
+    0.95311
+   ],
+   "extent": [
+    -0.16529,
+    0.24686
+   ],
+   "flatness": 0.135,
+   "volume_l": 0.0326
+  },
+  {
+   "id": "extensor-digitorum-brevis-l",
+   "name": "Extensor digitorum brevis",
+   "side": "L",
+   "file": "muscles/extensor-digitorum-brevis-l.vtp",
+   "polys": 3184,
+   "centroid": [
+    -0.10468,
+    0.02672,
+    0.04837
+   ],
+   "axis": [
+    0.078,
+    -0.94607,
+    0.31444
+   ],
+   "extent": [
+    -0.09506,
+    0.0595
+   ],
+   "flatness": 0.212,
+   "volume_l": 0.0099
+  },
+  {
+   "id": "extensor-digitorum-brevis-r",
+   "name": "Extensor digitorum brevis",
+   "side": "R",
+   "file": "muscles/extensor-digitorum-brevis-r.vtp",
+   "polys": 3184,
+   "centroid": [
+    0.10468,
+    0.02672,
+    0.04837
+   ],
+   "axis": [
+    -0.078,
+    -0.94607,
+    0.31444
+   ],
+   "extent": [
+    -0.09506,
+    0.0595
+   ],
+   "flatness": 0.212,
+   "volume_l": 0.0099
+  },
+  {
+   "id": "extensor-digitorum-longus-l",
+   "name": "Extensor digitorum longus",
+   "side": "L",
+   "file": "muscles/extensor-digitorum-longus-l.vtp",
+   "polys": 3176,
+   "centroid": [
+    -0.10785,
+    -0.02962,
+    0.26976
+   ],
+   "axis": [
+    -0.05347,
+    0.01835,
+    0.9984
+   ],
+   "extent": [
+    -0.17938,
+    0.14911
+   ],
+   "flatness": 0.076,
+   "volume_l": 0.0307
+  },
+  {
+   "id": "extensor-digitorum-longus-r",
+   "name": "Extensor digitorum longus",
+   "side": "R",
+   "file": "muscles/extensor-digitorum-longus-r.vtp",
+   "polys": 3176,
+   "centroid": [
+    0.10785,
+    -0.02962,
+    0.26976
+   ],
+   "axis": [
+    0.05347,
+    0.01835,
+    0.9984
+   ],
+   "extent": [
+    -0.17938,
+    0.14911
+   ],
+   "flatness": 0.076,
+   "volume_l": 0.0307
+  },
+  {
+   "id": "extensor-hallucis-brevis-l",
+   "name": "Extensor hallucis brevis",
+   "side": "L",
+   "file": "muscles/extensor-hallucis-brevis-l.vtp",
+   "polys": 1118,
+   "centroid": [
+    -0.0852,
+    0.02569,
+    0.05384
+   ],
+   "axis": [
+    -0.2069,
+    -0.9355,
+    0.28641
+   ],
+   "extent": [
+    -0.07206,
+    0.05276
+   ],
+   "flatness": 0.213,
+   "volume_l": 0.0047
+  },
+  {
+   "id": "extensor-hallucis-brevis-r",
+   "name": "Extensor hallucis brevis",
+   "side": "R",
+   "file": "muscles/extensor-hallucis-brevis-r.vtp",
+   "polys": 1118,
+   "centroid": [
+    0.0852,
+    0.02569,
+    0.05384
+   ],
+   "axis": [
+    0.2069,
+    -0.9355,
+    0.28641
+   ],
+   "extent": [
+    -0.07206,
+    0.05276
+   ],
+   "flatness": 0.213,
+   "volume_l": 0.0047
+  },
+  {
+   "id": "extensor-hallucis-longus-l",
+   "name": "Extensor hallucis longus",
+   "side": "L",
+   "file": "muscles/extensor-hallucis-longus-l.vtp",
+   "polys": 2362,
+   "centroid": [
+    -0.0928,
+    -0.01496,
+    0.16229
+   ],
+   "axis": [
+    -0.14441,
+    -0.38714,
+    0.91064
+   ],
+   "extent": [
+    -0.17286,
+    0.14005
+   ],
+   "flatness": 0.254,
+   "volume_l": 0.0082
+  },
+  {
+   "id": "extensor-hallucis-longus-r",
+   "name": "Extensor hallucis longus",
+   "side": "R",
+   "file": "muscles/extensor-hallucis-longus-r.vtp",
+   "polys": 2362,
+   "centroid": [
+    0.0928,
+    -0.01496,
+    0.16229
+   ],
+   "axis": [
+    0.14441,
+    -0.38714,
+    0.91064
+   ],
+   "extent": [
+    -0.17286,
+    0.14005
+   ],
+   "flatness": 0.254,
+   "volume_l": 0.0082
+  },
+  {
+   "id": "extensor-indicis-l",
+   "name": "Extensor indicis",
+   "side": "L",
+   "file": "muscles/extensor-indicis-l.vtp",
+   "polys": 1142,
+   "centroid": [
+    -0.26589,
+    0.01352,
+    0.84808
+   ],
+   "axis": [
+    0.34362,
+    -0.28465,
+    0.89493
+   ],
+   "extent": [
+    -0.15398,
+    0.08037
+   ],
+   "flatness": 0.089,
+   "volume_l": 0.0035
+  },
+  {
+   "id": "extensor-indicis-r",
+   "name": "Extensor indicis",
+   "side": "R",
+   "file": "muscles/extensor-indicis-r.vtp",
+   "polys": 1142,
+   "centroid": [
+    0.26589,
+    0.01352,
+    0.84808
+   ],
+   "axis": [
+    -0.34362,
+    -0.28465,
+    0.89493
+   ],
+   "extent": [
+    -0.15398,
+    0.08037
+   ],
+   "flatness": 0.089,
+   "volume_l": 0.0035
+  },
+  {
+   "id": "extensor-pollicis-brevis-l",
+   "name": "Extensor pollicis brevis",
+   "side": "L",
+   "file": "muscles/extensor-pollicis-brevis-l.vtp",
+   "polys": 1176,
+   "centroid": [
+    -0.27412,
+    0.0059,
+    0.88426
+   ],
+   "axis": [
+    0.47937,
+    -0.33905,
+    0.80948
+   ],
+   "extent": [
+    -0.09633,
+    0.07183
+   ],
+   "flatness": 0.136,
+   "volume_l": 0.004
+  },
+  {
+   "id": "extensor-pollicis-brevis-r",
+   "name": "Extensor pollicis brevis",
+   "side": "R",
+   "file": "muscles/extensor-pollicis-brevis-r.vtp",
+   "polys": 1176,
+   "centroid": [
+    0.27412,
+    0.0059,
+    0.88426
+   ],
+   "axis": [
+    -0.47937,
+    -0.33905,
+    0.80948
+   ],
+   "extent": [
+    -0.09633,
+    0.07183
+   ],
+   "flatness": 0.136,
+   "volume_l": 0.004
+  },
+  {
+   "id": "extensor-pollicis-longus-l",
+   "name": "Extensor pollicis longus",
+   "side": "L",
+   "file": "muscles/extensor-pollicis-longus-l.vtp",
+   "polys": 1602,
+   "centroid": [
+    -0.2697,
+    0.00895,
+    0.885
+   ],
+   "axis": [
+    0.45938,
+    -0.3395,
+    0.8208
+   ],
+   "extent": [
+    -0.13083,
+    0.11496
+   ],
+   "flatness": 0.116,
+   "volume_l": 0.0056
+  },
+  {
+   "id": "extensor-pollicis-longus-r",
+   "name": "Extensor pollicis longus",
+   "side": "R",
+   "file": "muscles/extensor-pollicis-longus-r.vtp",
+   "polys": 1602,
+   "centroid": [
+    0.2697,
+    0.00895,
+    0.885
+   ],
+   "axis": [
+    -0.45938,
+    -0.3395,
+    0.8208
+   ],
+   "extent": [
+    -0.13083,
+    0.11496
+   ],
+   "flatness": 0.116,
+   "volume_l": 0.0056
+  },
+  {
+   "id": "external-abdominal-oblique-muscle-l",
+   "name": "External abdominal oblique muscle",
+   "side": "L",
+   "file": "muscles/external-abdominal-oblique-muscle-l.vtp",
+   "polys": 4000,
+   "centroid": [
+    -0.07013,
+    0.06864,
+    1.0917
+   ],
+   "axis": [
+    -0.12574,
+    0.01921,
+    0.99188
+   ],
+   "extent": [
+    -0.23635,
+    0.19347
+   ],
+   "flatness": 0.566,
+   "volume_l": 0.2536
+  },
+  {
+   "id": "external-abdominal-oblique-muscle-r",
+   "name": "External abdominal oblique muscle",
+   "side": "R",
+   "file": "muscles/external-abdominal-oblique-muscle-r.vtp",
+   "polys": 4000,
+   "centroid": [
+    0.07013,
+    0.06864,
+    1.0917
+   ],
+   "axis": [
+    0.12574,
+    0.01921,
+    0.99188
+   ],
+   "extent": [
+    -0.23635,
+    0.19347
+   ],
+   "flatness": 0.566,
+   "volume_l": 0.2536
+  },
+  {
+   "id": "external-anal-sphincter-l",
+   "name": "External anal sphincter",
+   "side": "L",
+   "file": "muscles/external-anal-sphincter-l.vtp",
+   "polys": 202,
+   "centroid": [
+    -0.0047,
+    -0.05588,
+    0.81016
+   ],
+   "axis": [
+    -0.02027,
+    -0.72803,
+    0.68524
+   ],
+   "extent": [
+    -0.01405,
+    0.01629
+   ],
+   "flatness": 0.391,
+   "volume_l": 0.0005
+  },
+  {
+   "id": "external-anal-sphincter-r",
+   "name": "External anal sphincter",
+   "side": "R",
+   "file": "muscles/external-anal-sphincter-r.vtp",
+   "polys": 202,
+   "centroid": [
+    0.0047,
+    -0.05588,
+    0.81016
+   ],
+   "axis": [
+    0.02027,
+    -0.72803,
+    0.68524
+   ],
+   "extent": [
+    -0.01405,
+    0.01629
+   ],
+   "flatness": 0.391,
+   "volume_l": 0.0005
+  },
+  {
+   "id": "external-intercostal-muscles-l",
+   "name": "External intercostal muscles",
+   "side": "L",
+   "file": "muscles/external-intercostal-muscles-l.vtp",
+   "polys": 11096,
+   "centroid": [
+    -0.09389,
+    -0.02982,
+    1.26683
+   ],
+   "axis": [
+    0.08967,
+    0.06453,
+    0.99388
+   ],
+   "extent": [
+    -0.19675,
+    0.17904
+   ],
+   "flatness": 0.572,
+   "volume_l": 0.0724
+  },
+  {
+   "id": "external-intercostal-muscles-r",
+   "name": "External intercostal muscles",
+   "side": "R",
+   "file": "muscles/external-intercostal-muscles-r.vtp",
+   "polys": 11098,
+   "centroid": [
+    0.09389,
+    -0.02983,
+    1.26681
+   ],
+   "axis": [
+    -0.08967,
+    0.06461,
+    0.99387
+   ],
+   "extent": [
+    -0.19673,
+    0.17905
+   ],
+   "flatness": 0.572,
+   "volume_l": 0.0724
+  },
+  {
+   "id": "external-part-of-thyro-arytenoid-muscle-l",
+   "name": "External part of thyro-arytenoid muscle",
+   "side": "L",
+   "file": "muscles/external-part-of-thyro-arytenoid-muscle-l.vtp",
+   "polys": 2236,
+   "centroid": [
+    -0.00573,
+    0.01309,
+    1.47608
+   ],
+   "axis": [
+    -0.19723,
+    -0.9541,
+    0.2254
+   ],
+   "extent": [
+    -0.01288,
+    0.0081
+   ],
+   "flatness": 0.271,
+   "volume_l": 0.0001
+  },
+  {
+   "id": "external-part-of-thyro-arytenoid-muscle-r",
+   "name": "External part of thyro-arytenoid muscle",
+   "side": "R",
+   "file": "muscles/external-part-of-thyro-arytenoid-muscle-r.vtp",
+   "polys": 2236,
+   "centroid": [
+    0.00573,
+    0.01309,
+    1.47608
+   ],
+   "axis": [
+    0.19723,
+    -0.9541,
+    0.2254
+   ],
+   "extent": [
+    -0.01288,
+    0.0081
+   ],
+   "flatness": 0.271,
+   "volume_l": 0.0001
+  },
+  {
+   "id": "fibularis-brevis-muscle-l",
+   "name": "Fibularis brevis muscle",
+   "side": "L",
+   "file": "muscles/fibularis-brevis-muscle-l.vtp",
+   "polys": 3446,
+   "centroid": [
+    -0.10481,
+    -0.049,
+    0.13491
+   ],
+   "axis": [
+    -0.05063,
+    -0.0699,
+    0.99627
+   ],
+   "extent": [
+    -0.11084,
+    0.15916
+   ],
+   "flatness": 0.195,
+   "volume_l": 0.0174
+  },
+  {
+   "id": "fibularis-brevis-muscle-r",
+   "name": "Fibularis brevis muscle",
+   "side": "R",
+   "file": "muscles/fibularis-brevis-muscle-r.vtp",
+   "polys": 3446,
+   "centroid": [
+    0.10481,
+    -0.049,
+    0.13491
+   ],
+   "axis": [
+    0.05063,
+    -0.0699,
+    0.99627
+   ],
+   "extent": [
+    -0.11084,
+    0.15916
+   ],
+   "flatness": 0.195,
+   "volume_l": 0.0174
+  },
+  {
+   "id": "fibularis-longus-muscle-l",
+   "name": "Fibularis longus muscle",
+   "side": "L",
+   "file": "muscles/fibularis-longus-muscle-l.vtp",
+   "polys": 4000,
+   "centroid": [
+    -0.11277,
+    -0.04022,
+    0.22128
+   ],
+   "axis": [
+    -0.09004,
+    -0.08527,
+    0.99228
+   ],
+   "extent": [
+    -0.19472,
+    0.18688
+   ],
+   "flatness": 0.152,
+   "volume_l": 0.0641
+  },
+  {
+   "id": "fibularis-longus-muscle-r",
+   "name": "Fibularis longus muscle",
+   "side": "R",
+   "file": "muscles/fibularis-longus-muscle-r.vtp",
+   "polys": 4000,
+   "centroid": [
+    0.11277,
+    -0.04022,
+    0.22128
+   ],
+   "axis": [
+    0.09004,
+    -0.08527,
+    0.99228
+   ],
+   "extent": [
+    -0.19472,
+    0.18688
+   ],
+   "flatness": 0.152,
+   "volume_l": 0.0641
+  },
+  {
+   "id": "fibularis-tertius-muscle-l",
+   "name": "Fibularis tertius muscle",
+   "side": "L",
+   "file": "muscles/fibularis-tertius-muscle-l.vtp",
+   "polys": 586,
+   "centroid": [
+    -0.10461,
+    -0.01589,
+    0.08646
+   ],
+   "axis": [
+    0.14344,
+    -0.42745,
+    0.89259
+   ],
+   "extent": [
+    -0.0612,
+    0.07265
+   ],
+   "flatness": 0.12,
+   "volume_l": 0.0013
+  },
+  {
+   "id": "fibularis-tertius-muscle-r",
+   "name": "Fibularis tertius muscle",
+   "side": "R",
+   "file": "muscles/fibularis-tertius-muscle-r.vtp",
+   "polys": 586,
+   "centroid": [
+    0.10461,
+    -0.01589,
+    0.08646
+   ],
+   "axis": [
+    -0.14344,
+    -0.42745,
+    0.89259
+   ],
+   "extent": [
+    -0.0612,
+    0.07265
+   ],
+   "flatness": 0.12,
+   "volume_l": 0.0013
+  },
+  {
+   "id": "flexor-carpi-radialis-l",
+   "name": "Flexor carpi radialis",
+   "side": "L",
+   "file": "muscles/flexor-carpi-radialis-l.vtp",
+   "polys": 1666,
+   "centroid": [
+    -0.23031,
+    0.00851,
+    0.99186
+   ],
+   "axis": [
+    0.27454,
+    -0.1996,
+    0.94063
+   ],
+   "extent": [
+    -0.16945,
+    0.13519
+   ],
+   "flatness": 0.076,
+   "volume_l": 0.0247
+  },
+  {
+   "id": "flexor-carpi-radialis-r",
+   "name": "Flexor carpi radialis",
+   "side": "R",
+   "file": "muscles/flexor-carpi-radialis-r.vtp",
+   "polys": 1666,
+   "centroid": [
+    0.23031,
+    0.00851,
+    0.99186
+   ],
+   "axis": [
+    -0.27454,
+    -0.1996,
+    0.94063
+   ],
+   "extent": [
+    -0.16945,
+    0.13519
+   ],
+   "flatness": 0.076,
+   "volume_l": 0.0247
+  },
+  {
+   "id": "flexor-digiti-minimi-of-foot-l",
+   "name": "Flexor digiti minimi of foot",
+   "side": "L",
+   "file": "muscles/flexor-digiti-minimi-of-foot-l.vtp",
+   "polys": 464,
+   "centroid": [
+    -0.12204,
+    0.02924,
+    0.01673
+   ],
+   "axis": [
+    0.39599,
+    -0.89793,
+    0.1921
+   ],
+   "extent": [
+    -0.04089,
+    0.03828
+   ],
+   "flatness": 0.114,
+   "volume_l": 0.0014
+  },
+  {
+   "id": "flexor-digiti-minimi-of-foot-r",
+   "name": "Flexor digiti minimi of foot",
+   "side": "R",
+   "file": "muscles/flexor-digiti-minimi-of-foot-r.vtp",
+   "polys": 464,
+   "centroid": [
+    0.12204,
+    0.02924,
+    0.01673
+   ],
+   "axis": [
+    -0.39599,
+    -0.89793,
+    0.1921
+   ],
+   "extent": [
+    -0.04089,
+    0.03828
+   ],
+   "flatness": 0.114,
+   "volume_l": 0.0014
+  },
+  {
+   "id": "flexor-digiti-minimi-of-hand-l",
+   "name": "Flexor digiti minimi of hand",
+   "side": "L",
+   "file": "muscles/flexor-digiti-minimi-of-hand-l.vtp",
+   "polys": 308,
+   "centroid": [
+    -0.24082,
+    0.04117,
+    0.80781
+   ],
+   "axis": [
+    -0.24333,
+    -0.23283,
+    0.94158
+   ],
+   "extent": [
+    -0.02867,
+    0.03716
+   ],
+   "flatness": 0.094,
+   "volume_l": 0.0008
+  },
+  {
+   "id": "flexor-digiti-minimi-of-hand-r",
+   "name": "Flexor digiti minimi of hand",
+   "side": "R",
+   "file": "muscles/flexor-digiti-minimi-of-hand-r.vtp",
+   "polys": 308,
+   "centroid": [
+    0.24082,
+    0.04117,
+    0.80781
+   ],
+   "axis": [
+    0.24333,
+    -0.23283,
+    0.94158
+   ],
+   "extent": [
+    -0.02867,
+    0.03716
+   ],
+   "flatness": 0.094,
+   "volume_l": 0.0008
+  },
+  {
+   "id": "flexor-digitorum-brevis-l",
+   "name": "Flexor digitorum brevis",
+   "side": "L",
+   "file": "muscles/flexor-digitorum-brevis-l.vtp",
+   "polys": 3224,
+   "centroid": [
+    -0.09902,
+    0.03721,
+    0.01389
+   ],
+   "axis": [
+    0.24777,
+    -0.96779,
+    0.04454
+   ],
+   "extent": [
+    -0.07957,
+    0.10752
+   ],
+   "flatness": 0.215,
+   "volume_l": 0.0162
+  },
+  {
+   "id": "flexor-digitorum-brevis-r",
+   "name": "Flexor digitorum brevis",
+   "side": "R",
+   "file": "muscles/flexor-digitorum-brevis-r.vtp",
+   "polys": 3224,
+   "centroid": [
+    0.09902,
+    0.03721,
+    0.01389
+   ],
+   "axis": [
+    -0.24777,
+    -0.96779,
+    0.04454
+   ],
+   "extent": [
+    -0.07957,
+    0.10752
+   ],
+   "flatness": 0.215,
+   "volume_l": 0.0162
+  },
+  {
+   "id": "flexor-digitorum-longus-l",
+   "name": "Flexor digitorum longus",
+   "side": "L",
+   "file": "muscles/flexor-digitorum-longus-l.vtp",
+   "polys": 4000,
+   "centroid": [
+    -0.08382,
+    -0.00057,
+    0.1056
+   ],
+   "axis": [
+    0.12691,
+    -0.40738,
+    0.9044
+   ],
+   "extent": [
+    -0.14072,
+    0.23809
+   ],
+   "flatness": 0.402,
+   "volume_l": 0.0466
+  },
+  {
+   "id": "flexor-digitorum-longus-r",
+   "name": "Flexor digitorum longus",
+   "side": "R",
+   "file": "muscles/flexor-digitorum-longus-r.vtp",
+   "polys": 4000,
+   "centroid": [
+    0.08382,
+    -0.00057,
+    0.1056
+   ],
+   "axis": [
+    -0.12691,
+    -0.40738,
+    0.9044
+   ],
+   "extent": [
+    -0.14072,
+    0.23809
+   ],
+   "flatness": 0.402,
+   "volume_l": 0.0466
+  },
+  {
+   "id": "flexor-digitorum-profundus-l",
+   "name": "Flexor digitorum profundus",
+   "side": "L",
+   "file": "muscles/flexor-digitorum-profundus-l.vtp",
+   "polys": 4000,
+   "centroid": [
+    -0.25214,
+    0.02174,
+    0.87862
+   ],
+   "axis": [
+    0.15146,
+    -0.26624,
+    0.95193
+   ],
+   "extent": [
+    -0.18055,
+    0.2074
+   ],
+   "flatness": 0.134,
+   "volume_l": 0.0606
+  },
+  {
+   "id": "flexor-digitorum-profundus-r",
+   "name": "Flexor digitorum profundus",
+   "side": "R",
+   "file": "muscles/flexor-digitorum-profundus-r.vtp",
+   "polys": 4000,
+   "centroid": [
+    0.25214,
+    0.02174,
+    0.87862
+   ],
+   "axis": [
+    -0.15146,
+    -0.26624,
+    0.95193
+   ],
+   "extent": [
+    -0.18055,
+    0.2074
+   ],
+   "flatness": 0.134,
+   "volume_l": 0.0606
+  },
+  {
+   "id": "flexor-hallucis-longus-l",
+   "name": "Flexor hallucis longus",
+   "side": "L",
+   "file": "muscles/flexor-hallucis-longus-l.vtp",
+   "polys": 4000,
+   "centroid": [
+    -0.08606,
+    -0.02807,
+    0.14345
+   ],
+   "axis": [
+    -0.12269,
+    -0.37039,
+    0.92074
+   ],
+   "extent": [
+    -0.17791,
+    0.17968
+   ],
+   "flatness": 0.376,
+   "volume_l": 0.0521
+  },
+  {
+   "id": "flexor-hallucis-longus-r",
+   "name": "Flexor hallucis longus",
+   "side": "R",
+   "file": "muscles/flexor-hallucis-longus-r.vtp",
+   "polys": 4000,
+   "centroid": [
+    0.08606,
+    -0.02807,
+    0.14345
+   ],
+   "axis": [
+    0.12269,
+    -0.37039,
+    0.92074
+   ],
+   "extent": [
+    -0.17791,
+    0.17968
+   ],
+   "flatness": 0.376,
+   "volume_l": 0.0521
+  },
+  {
+   "id": "flexor-pollicis-longus-l",
+   "name": "Flexor pollicis longus",
+   "side": "L",
+   "file": "muscles/flexor-pollicis-longus-l.vtp",
+   "polys": 1666,
+   "centroid": [
+    -0.27121,
+    0.01228,
+    0.91084
+   ],
+   "axis": [
+    0.26509,
+    -0.32287,
+    0.90856
+   ],
+   "extent": [
+    -0.1461,
+    0.11527
+   ],
+   "flatness": 0.132,
+   "volume_l": 0.0061
+  },
+  {
+   "id": "flexor-pollicis-longus-r",
+   "name": "Flexor pollicis longus",
+   "side": "R",
+   "file": "muscles/flexor-pollicis-longus-r.vtp",
+   "polys": 1666,
+   "centroid": [
+    0.27121,
+    0.01228,
+    0.91084
+   ],
+   "axis": [
+    -0.26509,
+    -0.32287,
+    0.90856
+   ],
+   "extent": [
+    -0.1461,
+    0.11527
+   ],
+   "flatness": 0.132,
+   "volume_l": 0.0061
+  },
+  {
+   "id": "frontalis-muscle-l",
+   "name": "Frontalis muscle",
+   "side": "L",
+   "file": "muscles/frontalis-muscle-l.vtp",
+   "polys": 4000,
+   "centroid": [
+    -0.02959,
+    0.07447,
+    1.63889
+   ],
+   "axis": [
+    -0.3771,
+    -0.44103,
+    0.81443
+   ],
+   "extent": [
+    -0.03978,
+    0.04306
+   ],
+   "flatness": 0.752,
+   "volume_l": 0.0088
+  },
+  {
+   "id": "frontalis-muscle-r",
+   "name": "Frontalis muscle",
+   "side": "R",
+   "file": "muscles/frontalis-muscle-r.vtp",
+   "polys": 4000,
+   "centroid": [
+    0.02959,
+    0.07447,
+    1.63889
+   ],
+   "axis": [
+    0.3771,
+    -0.44103,
+    0.81443
+   ],
+   "extent": [
+    -0.03978,
+    0.04306
+   ],
+   "flatness": 0.752,
+   "volume_l": 0.0088
+  },
+  {
+   "id": "genioglossus-muscle-l",
+   "name": "Genioglossus muscle",
+   "side": "L",
+   "file": "muscles/genioglossus-muscle-l.vtp",
+   "polys": 3746,
+   "centroid": [
+    -0.0049,
+    0.05232,
+    1.51712
+   ],
+   "axis": [
+    0.06093,
+    0.87473,
+    0.48077
+   ],
+   "extent": [
+    -0.02297,
+    0.02799
+   ],
+   "flatness": 0.665,
+   "volume_l": 0.0065
+  },
+  {
+   "id": "genioglossus-muscle-r",
+   "name": "Genioglossus muscle",
+   "side": "R",
+   "file": "muscles/genioglossus-muscle-r.vtp",
+   "polys": 3746,
+   "centroid": [
+    0.0049,
+    0.05232,
+    1.51712
+   ],
+   "axis": [
+    -0.06093,
+    0.87473,
+    0.48077
+   ],
+   "extent": [
+    -0.02297,
+    0.02799
+   ],
+   "flatness": 0.665,
+   "volume_l": 0.0065
+  },
+  {
+   "id": "geniohyoid-muscle-l",
+   "name": "Geniohyoid muscle",
+   "side": "L",
+   "file": "muscles/geniohyoid-muscle-l.vtp",
+   "polys": 530,
+   "centroid": [
+    -0.00514,
+    0.0428,
+    1.50634
+   ],
+   "axis": [
+    0.12185,
+    0.99221,
+    0.02576
+   ],
+   "extent": [
+    -0.01367,
+    0.02722
+   ],
+   "flatness": 0.311,
+   "volume_l": 0.0009
+  },
+  {
+   "id": "geniohyoid-muscle-r",
+   "name": "Geniohyoid muscle",
+   "side": "R",
+   "file": "muscles/geniohyoid-muscle-r.vtp",
+   "polys": 530,
+   "centroid": [
+    0.00514,
+    0.0428,
+    1.50634
+   ],
+   "axis": [
+    -0.12185,
+    0.99221,
+    0.02576
+   ],
+   "extent": [
+    -0.01367,
+    0.02722
+   ],
+   "flatness": 0.311,
+   "volume_l": 0.0009
+  },
+  {
+   "id": "gluteus-maximus-muscle-l",
+   "name": "Gluteus maximus muscle",
+   "side": "L",
+   "file": "muscles/gluteus-maximus-muscle-l.vtp",
+   "polys": 3326,
+   "centroid": [
+    -0.07772,
+    -0.06785,
+    0.85378
+   ],
+   "axis": [
+    0.29632,
+    -0.24103,
+    0.92417
+   ],
+   "extent": [
+    -0.15519,
+    0.11797
+   ],
+   "flatness": 0.603,
+   "volume_l": 0.419
+  },
+  {
+   "id": "gluteus-maximus-muscle-r",
+   "name": "Gluteus maximus muscle",
+   "side": "R",
+   "file": "muscles/gluteus-maximus-muscle-r.vtp",
+   "polys": 3326,
+   "centroid": [
+    0.07772,
+    -0.06785,
+    0.85378
+   ],
+   "axis": [
+    -0.29632,
+    -0.24103,
+    0.92417
+   ],
+   "extent": [
+    -0.15519,
+    0.11797
+   ],
+   "flatness": 0.603,
+   "volume_l": 0.419
+  },
+  {
+   "id": "gluteus-medius-muscle-l",
+   "name": "Gluteus medius muscle",
+   "side": "L",
+   "file": "muscles/gluteus-medius-muscle-l.vtp",
+   "polys": 4000,
+   "centroid": [
+    -0.11593,
+    -0.03081,
+    0.91818
+   ],
+   "axis": [
+    0.21548,
+    0.10886,
+    0.97042
+   ],
+   "extent": [
+    -0.09195,
+    0.08104
+   ],
+   "flatness": 0.644,
+   "volume_l": 0.2309
+  },
+  {
+   "id": "gluteus-medius-muscle-r",
+   "name": "Gluteus medius muscle",
+   "side": "R",
+   "file": "muscles/gluteus-medius-muscle-r.vtp",
+   "polys": 4000,
+   "centroid": [
+    0.11593,
+    -0.03081,
+    0.91818
+   ],
+   "axis": [
+    -0.21548,
+    0.10886,
+    0.97042
+   ],
+   "extent": [
+    -0.09195,
+    0.08104
+   ],
+   "flatness": 0.644,
+   "volume_l": 0.2309
+  },
+  {
+   "id": "gluteus-minimus-muscle-l",
+   "name": "Gluteus minimus muscle",
+   "side": "L",
+   "file": "muscles/gluteus-minimus-muscle-l.vtp",
+   "polys": 4000,
+   "centroid": [
+    -0.11986,
+    -0.01398,
+    0.90138
+   ],
+   "axis": [
+    0.35417,
+    0.05435,
+    0.9336
+   ],
+   "extent": [
+    -0.07329,
+    0.06899
+   ],
+   "flatness": 0.483,
+   "volume_l": 0.1269
+  },
+  {
+   "id": "gluteus-minimus-muscle-r",
+   "name": "Gluteus minimus muscle",
+   "side": "R",
+   "file": "muscles/gluteus-minimus-muscle-r.vtp",
+   "polys": 4000,
+   "centroid": [
+    0.11986,
+    -0.01398,
+    0.90137
+   ],
+   "axis": [
+    -0.35417,
+    0.05435,
+    0.9336
+   ],
+   "extent": [
+    -0.07329,
+    0.06899
+   ],
+   "flatness": 0.483,
+   "volume_l": 0.1269
+  },
+  {
+   "id": "gracilis-muscle-l",
+   "name": "Gracilis muscle",
+   "side": "L",
+   "file": "muscles/gracilis-muscle-l.vtp",
+   "polys": 4000,
+   "centroid": [
+    -0.02603,
+    -0.00468,
+    0.63425
+   ],
+   "axis": [
+    0.06054,
+    0.13217,
+    0.98938
+   ],
+   "extent": [
+    -0.29152,
+    0.20728
+   ],
+   "flatness": 0.101,
+   "volume_l": 0.1125
+  },
+  {
+   "id": "gracilis-muscle-r",
+   "name": "Gracilis muscle",
+   "side": "R",
+   "file": "muscles/gracilis-muscle-r.vtp",
+   "polys": 4000,
+   "centroid": [
+    0.02603,
+    -0.00468,
+    0.63425
+   ],
+   "axis": [
+    -0.06054,
+    0.13217,
+    0.98938
+   ],
+   "extent": [
+    -0.29152,
+    0.20728
+   ],
+   "flatness": 0.101,
+   "volume_l": 0.1125
+  },
+  {
+   "id": "humeral-head-of-extensor-carpi-ulnaris-l",
+   "name": "Humeral head of extensor carpi ulnaris",
+   "side": "L",
+   "file": "muscles/humeral-head-of-extensor-carpi-ulnaris-l.vtp",
+   "polys": 830,
+   "centroid": [
+    -0.23679,
+    -0.02477,
+    0.96865
+   ],
+   "axis": [
+    0.03192,
+    -0.25555,
+    0.96627
+   ],
+   "extent": [
+    -0.13353,
+    0.16364
+   ],
+   "flatness": 0.065,
+   "volume_l": 0.0102
+  },
+  {
+   "id": "humeral-head-of-extensor-carpi-ulnaris-r",
+   "name": "Humeral head of extensor carpi ulnaris",
+   "side": "R",
+   "file": "muscles/humeral-head-of-extensor-carpi-ulnaris-r.vtp",
+   "polys": 830,
+   "centroid": [
+    0.23679,
+    -0.02477,
+    0.96865
+   ],
+   "axis": [
+    -0.03192,
+    -0.25555,
+    0.96627
+   ],
+   "extent": [
+    -0.13353,
+    0.16364
+   ],
+   "flatness": 0.065,
+   "volume_l": 0.0102
+  },
+  {
+   "id": "humeral-head-of-flexor-carpi-ulnaris-l",
+   "name": "Humeral head of flexor carpi ulnaris",
+   "side": "L",
+   "file": "muscles/humeral-head-of-flexor-carpi-ulnaris-l.vtp",
+   "polys": 3912,
+   "centroid": [
+    -0.21141,
+    -0.00684,
+    0.97887
+   ],
+   "axis": [
+    0.23564,
+    -0.23726,
+    0.94244
+   ],
+   "extent": [
+    -0.15422,
+    0.13425
+   ],
+   "flatness": 0.069,
+   "volume_l": 0.029
+  },
+  {
+   "id": "humeral-head-of-flexor-carpi-ulnaris-r",
+   "name": "Humeral head of flexor carpi ulnaris",
+   "side": "R",
+   "file": "muscles/humeral-head-of-flexor-carpi-ulnaris-r.vtp",
+   "polys": 3912,
+   "centroid": [
+    0.21141,
+    -0.00684,
+    0.97887
+   ],
+   "axis": [
+    -0.23564,
+    -0.23726,
+    0.94244
+   ],
+   "extent": [
+    -0.15422,
+    0.13425
+   ],
+   "flatness": 0.069,
+   "volume_l": 0.029
+  },
+  {
+   "id": "humero-ulnar-head-of-flexor-digitorum-superficialis-l",
+   "name": "Humero-ulnar head of flexor digitorum superficialis",
+   "side": "L",
+   "file": "muscles/humero-ulnar-head-of-flexor-digitorum-superficialis-l.vtp",
+   "polys": 4000,
+   "centroid": [
+    -0.24206,
+    0.02128,
+    0.89509
+   ],
+   "axis": [
+    0.19898,
+    -0.23238,
+    0.95206
+   ],
+   "extent": [
+    -0.18603,
+    0.22916
+   ],
+   "flatness": 0.116,
+   "volume_l": 0.0523
+  },
+  {
+   "id": "humero-ulnar-head-of-flexor-digitorum-superficialis-r",
+   "name": "Humero-ulnar head of flexor digitorum superficialis",
+   "side": "R",
+   "file": "muscles/humero-ulnar-head-of-flexor-digitorum-superficialis-r.vtp",
+   "polys": 4000,
+   "centroid": [
+    0.24194,
+    0.02119,
+    0.8955
+   ],
+   "axis": [
+    -0.19867,
+    -0.23226,
+    0.95215
+   ],
+   "extent": [
+    -0.18646,
+    0.22872
+   ],
+   "flatness": 0.116,
+   "volume_l": 0.0523
+  },
+  {
+   "id": "hyoglossus-muscle-l",
+   "name": "Hyoglossus muscle",
+   "side": "L",
+   "file": "muscles/hyoglossus-muscle-l.vtp",
+   "polys": 1424,
+   "centroid": [
+    -0.00989,
+    0.04682,
+    1.5114
+   ],
+   "axis": [
+    0.05648,
+    0.72281,
+    0.68874
+   ],
+   "extent": [
+    -0.01774,
+    0.02095
+   ],
+   "flatness": 0.369,
+   "volume_l": 0.0006
+  },
+  {
+   "id": "hyoglossus-muscle-r",
+   "name": "Hyoglossus muscle",
+   "side": "R",
+   "file": "muscles/hyoglossus-muscle-r.vtp",
+   "polys": 1424,
+   "centroid": [
+    0.00989,
+    0.04682,
+    1.5114
+   ],
+   "axis": [
+    -0.05648,
+    0.72281,
+    0.68874
+   ],
+   "extent": [
+    -0.01774,
+    0.02095
+   ],
+   "flatness": 0.369,
+   "volume_l": 0.0006
+  },
+  {
+   "id": "iliacus-muscle-l",
+   "name": "Iliacus muscle",
+   "side": "L",
+   "file": "muscles/iliacus-muscle-l.vtp",
+   "polys": 4000,
+   "centroid": [
+    -0.08657,
+    0.01057,
+    0.90791
+   ],
+   "axis": [
+    -0.04372,
+    -0.08001,
+    0.99583
+   ],
+   "extent": [
+    -0.13227,
+    0.09816
+   ],
+   "flatness": 0.34,
+   "volume_l": 0.1401
+  },
+  {
+   "id": "iliacus-muscle-r",
+   "name": "Iliacus muscle",
+   "side": "R",
+   "file": "muscles/iliacus-muscle-r.vtp",
+   "polys": 4000,
+   "centroid": [
+    0.08657,
+    0.01057,
+    0.90791
+   ],
+   "axis": [
+    0.04372,
+    -0.08001,
+    0.99583
+   ],
+   "extent": [
+    -0.13227,
+    0.09816
+   ],
+   "flatness": 0.34,
+   "volume_l": 0.1401
+  },
+  {
+   "id": "iliococcygeus-muscle-l",
+   "name": "Iliococcygeus muscle",
+   "side": "L",
+   "file": "muscles/iliococcygeus-muscle-l.vtp",
+   "polys": 1962,
+   "centroid": [
+    -0.02842,
+    -0.04411,
+    0.84406
+   ],
+   "axis": [
+    -0.45288,
+    0.86333,
+    0.22261
+   ],
+   "extent": [
+    -0.03637,
+    0.04115
+   ],
+   "flatness": 0.692,
+   "volume_l": 0.0074
+  },
+  {
+   "id": "iliococcygeus-muscle-r",
+   "name": "Iliococcygeus muscle",
+   "side": "R",
+   "file": "muscles/iliococcygeus-muscle-r.vtp",
+   "polys": 1962,
+   "centroid": [
+    0.02842,
+    -0.04411,
+    0.84406
+   ],
+   "axis": [
+    0.45288,
+    0.86333,
+    0.22261
+   ],
+   "extent": [
+    -0.03637,
+    0.04115
+   ],
+   "flatness": 0.692,
+   "volume_l": 0.0074
+  },
+  {
+   "id": "iliocostalis-colli-muscle",
+   "name": "Iliocostalis colli muscle",
+   "side": "C",
+   "file": "muscles/iliocostalis-colli-muscle.vtp",
+   "polys": 2050,
+   "centroid": [
+    -0.05363,
+    -0.05879,
+    1.40962
+   ],
+   "axis": [
+    0.2325,
+    0.45672,
+    0.85869
+   ],
+   "extent": [
+    -0.1019,
+    0.09834
+   ],
+   "flatness": 0.101,
+   "volume_l": 0.0071
+  },
+  {
+   "id": "iliocostalis-colli-muscle-r",
+   "name": "Iliocostalis colli muscle",
+   "side": "R",
+   "file": "muscles/iliocostalis-colli-muscle-r.vtp",
+   "polys": 2050,
+   "centroid": [
+    0.05363,
+    -0.05879,
+    1.40962
+   ],
+   "axis": [
+    -0.2325,
+    0.45672,
+    0.85869
+   ],
+   "extent": [
+    -0.1019,
+    0.09834
+   ],
+   "flatness": 0.101,
+   "volume_l": 0.0071
+  },
+  {
+   "id": "iliocostalis-lumborum-muscle-l",
+   "name": "Iliocostalis lumborum muscle",
+   "side": "L",
+   "file": "muscles/iliocostalis-lumborum-muscle-l.vtp",
+   "polys": 4000,
+   "centroid": [
+    -0.05727,
+    -0.07535,
+    1.07448
+   ],
+   "axis": [
+    -0.2124,
+    -0.03088,
+    0.97669
+   ],
+   "extent": [
+    -0.19496,
+    0.20352
+   ],
+   "flatness": 0.105,
+   "volume_l": 0.0595
+  },
+  {
+   "id": "iliocostalis-lumborum-muscle-r",
+   "name": "Iliocostalis lumborum muscle",
+   "side": "R",
+   "file": "muscles/iliocostalis-lumborum-muscle-r.vtp",
+   "polys": 4000,
+   "centroid": [
+    0.05727,
+    -0.07535,
+    1.07448
+   ],
+   "axis": [
+    0.2124,
+    -0.03088,
+    0.97669
+   ],
+   "extent": [
+    -0.19496,
+    0.20352
+   ],
+   "flatness": 0.105,
+   "volume_l": 0.0595
+  },
+  {
+   "id": "iliocostalis-thoracis-muscle-l",
+   "name": "Iliocostalis thoracis muscle",
+   "side": "L",
+   "file": "muscles/iliocostalis-thoracis-muscle-l.vtp",
+   "polys": 4000,
+   "centroid": [
+    -0.06946,
+    -0.08175,
+    1.28178
+   ],
+   "axis": [
+    -0.0519,
+    0.0776,
+    0.99563
+   ],
+   "extent": [
+    -0.15756,
+    0.16048
+   ],
+   "flatness": 0.196,
+   "volume_l": 0.0269
+  },
+  {
+   "id": "iliocostalis-thoracis-muscle-r",
+   "name": "Iliocostalis thoracis muscle",
+   "side": "R",
+   "file": "muscles/iliocostalis-thoracis-muscle-r.vtp",
+   "polys": 4000,
+   "centroid": [
+    0.06946,
+    -0.08175,
+    1.28178
+   ],
+   "axis": [
+    0.0519,
+    0.0776,
+    0.99563
+   ],
+   "extent": [
+    -0.15756,
+    0.16048
+   ],
+   "flatness": 0.196,
+   "volume_l": 0.0269
+  },
+  {
+   "id": "iliopectineal-arch-l",
+   "name": "Iliopectineal arch",
+   "side": "L",
+   "file": "muscles/iliopectineal-arch-l.vtp",
+   "polys": 26,
+   "centroid": [
+    -0.05834,
+    0.04184,
+    0.86813
+   ],
+   "axis": [
+    -0.62334,
+    0.45831,
+    0.63357
+   ],
+   "extent": [
+    -0.01899,
+    0.02316
+   ],
+   "flatness": 0.302,
+   "volume_l": 0.122
+  },
+  {
+   "id": "iliopectineal-arch-r",
+   "name": "Iliopectineal arch",
+   "side": "R",
+   "file": "muscles/iliopectineal-arch-r.vtp",
+   "polys": 280,
+   "centroid": [
+    0.05826,
+    0.04177,
+    0.86806
+   ],
+   "axis": [
+    0.61666,
+    0.47033,
+    0.63129
+   ],
+   "extent": [
+    -0.01885,
+    0.02329
+   ],
+   "flatness": 0.281,
+   "volume_l": 0.0003
+  },
+  {
+   "id": "iliotibial-tract-l",
+   "name": "Iliotibial tract",
+   "side": "L",
+   "file": "muscles/iliotibial-tract-l.vtp",
+   "polys": 4000,
+   "centroid": [
+    -0.13077,
+    -0.00995,
+    0.71033
+   ],
+   "axis": [
+    -0.06347,
+    -0.00794,
+    0.99795
+   ],
+   "extent": [
+    -0.31898,
+    0.28578
+   ],
+   "flatness": 0.092,
+   "volume_l": 0.0818
+  },
+  {
+   "id": "iliotibial-tract-r",
+   "name": "Iliotibial tract",
+   "side": "R",
+   "file": "muscles/iliotibial-tract-r.vtp",
+   "polys": 4000,
+   "centroid": [
+    0.13077,
+    -0.00995,
+    0.71033
+   ],
+   "axis": [
+    0.06347,
+    -0.00794,
+    0.99795
+   ],
+   "extent": [
+    -0.31898,
+    0.28578
+   ],
+   "flatness": 0.092,
+   "volume_l": 0.0818
+  },
+  {
+   "id": "inferior-gemellus-muscle-l",
+   "name": "Inferior gemellus muscle",
+   "side": "L",
+   "file": "muscles/inferior-gemellus-muscle-l.vtp",
+   "polys": 976,
+   "centroid": [
+    -0.08093,
+    -0.04603,
+    0.8435
+   ],
+   "axis": [
+    -0.8192,
+    0.5537,
+    0.14942
+   ],
+   "extent": [
+    -0.02797,
+    0.0591
+   ],
+   "flatness": 0.171,
+   "volume_l": 0.0046
+  },
+  {
+   "id": "inferior-gemellus-muscle-r",
+   "name": "Inferior gemellus muscle",
+   "side": "R",
+   "file": "muscles/inferior-gemellus-muscle-r.vtp",
+   "polys": 976,
+   "centroid": [
+    0.08093,
+    -0.04603,
+    0.8435
+   ],
+   "axis": [
+    0.8192,
+    0.5537,
+    0.14942
+   ],
+   "extent": [
+    -0.02797,
+    0.0591
+   ],
+   "flatness": 0.171,
+   "volume_l": 0.0046
+  },
+  {
+   "id": "inferior-head-of-lateral-pterygoid-muscle-l",
+   "name": "Inferior head of lateral pterygoid muscle",
+   "side": "L",
+   "file": "muscles/inferior-head-of-lateral-pterygoid-muscle-l.vtp",
+   "polys": 326,
+   "centroid": [
+    -0.03259,
+    0.02113,
+    1.56625
+   ],
+   "axis": [
+    -0.49753,
+    -0.65095,
+    0.57335
+   ],
+   "extent": [
+    -0.01443,
+    0.01865
+   ],
+   "flatness": 0.378,
+   "volume_l": 0.0005
+  },
+  {
+   "id": "inferior-head-of-lateral-pterygoid-muscle-r",
+   "name": "Inferior head of lateral pterygoid muscle",
+   "side": "R",
+   "file": "muscles/inferior-head-of-lateral-pterygoid-muscle-r.vtp",
+   "polys": 326,
+   "centroid": [
+    0.03259,
+    0.02113,
+    1.56625
+   ],
+   "axis": [
+    0.49753,
+    -0.65095,
+    0.57335
+   ],
+   "extent": [
+    -0.01443,
+    0.01865
+   ],
+   "flatness": 0.378,
+   "volume_l": 0.0005
+  },
+  {
+   "id": "inferior-oblique-muscle-l",
+   "name": "Inferior oblique muscle",
+   "side": "L",
+   "file": "muscles/inferior-oblique-muscle-l.vtp",
+   "polys": 1148,
+   "centroid": [
+    -0.03322,
+    0.06385,
+    1.58228
+   ],
+   "axis": [
+    -0.74064,
+    -0.603,
+    0.29637
+   ],
+   "extent": [
+    -0.02334,
+    0.01265
+   ],
+   "flatness": 0.298,
+   "volume_l": 0.0003
+  },
+  {
+   "id": "inferior-oblique-muscle-r",
+   "name": "Inferior oblique muscle",
+   "side": "R",
+   "file": "muscles/inferior-oblique-muscle-r.vtp",
+   "polys": 1148,
+   "centroid": [
+    0.03322,
+    0.06385,
+    1.58228
+   ],
+   "axis": [
+    0.74064,
+    -0.603,
+    0.29637
+   ],
+   "extent": [
+    -0.02334,
+    0.01265
+   ],
+   "flatness": 0.298,
+   "volume_l": 0.0003
+  },
+  {
+   "id": "inferior-pharyngeal-constrictor-l",
+   "name": "Inferior pharyngeal constrictor",
+   "side": "L",
+   "file": "muscles/inferior-pharyngeal-constrictor-l.vtp",
+   "polys": 3696,
+   "centroid": [
+    -0.01046,
+    0.00179,
+    1.48126
+   ],
+   "axis": [
+    0.02166,
+    0.02092,
+    0.99955
+   ],
+   "extent": [
+    -0.02107,
+    0.04412
+   ],
+   "flatness": 0.441,
+   "volume_l": 0.003
+  },
+  {
+   "id": "inferior-pharyngeal-constrictor-r",
+   "name": "Inferior pharyngeal constrictor",
+   "side": "R",
+   "file": "muscles/inferior-pharyngeal-constrictor-r.vtp",
+   "polys": 3696,
+   "centroid": [
+    0.01046,
+    0.00179,
+    1.48126
+   ],
+   "axis": [
+    -0.02166,
+    0.02092,
+    0.99955
+   ],
+   "extent": [
+    -0.02107,
+    0.04412
+   ],
+   "flatness": 0.441,
+   "volume_l": 0.003
+  },
+  {
+   "id": "inferior-rectus-muscle-l",
+   "name": "Inferior rectus muscle",
+   "side": "L",
+   "file": "muscles/inferior-rectus-muscle-l.vtp",
+   "polys": 1736,
+   "centroid": [
+    -0.02486,
+    0.05524,
+    1.5833
+   ],
+   "axis": [
+    0.33017,
+    -0.86177,
+    0.38514
+   ],
+   "extent": [
+    -0.01822,
+    0.02921
+   ],
+   "flatness": 0.203,
+   "volume_l": 0.0006
+  },
+  {
+   "id": "inferior-rectus-muscle-r",
+   "name": "Inferior rectus muscle",
+   "side": "R",
+   "file": "muscles/inferior-rectus-muscle-r.vtp",
+   "polys": 1736,
+   "centroid": [
+    0.02486,
+    0.05524,
+    1.5833
+   ],
+   "axis": [
+    -0.33017,
+    -0.86177,
+    0.38514
+   ],
+   "extent": [
+    -0.01822,
+    0.02921
+   ],
+   "flatness": 0.203,
+   "volume_l": 0.0006
+  },
+  {
+   "id": "inferior-tarsus-l",
+   "name": "Inferior tarsus",
+   "side": "L",
+   "file": "muscles/inferior-tarsus-l.vtp",
+   "polys": 108,
+   "centroid": [
+    -0.03154,
+    0.07397,
+    1.58341
+   ],
+   "axis": [
+    -0.97714,
+    -0.21058,
+    0.02909
+   ],
+   "extent": [
+    -0.01195,
+    0.01274
+   ],
+   "flatness": 0.257,
+   "volume_l": 0.0001
+  },
+  {
+   "id": "inferior-tarsus-r",
+   "name": "Inferior tarsus",
+   "side": "R",
+   "file": "muscles/inferior-tarsus-r.vtp",
+   "polys": 108,
+   "centroid": [
+    0.03154,
+    0.07397,
+    1.58341
+   ],
+   "axis": [
+    0.97714,
+    -0.21058,
+    0.02909
+   ],
+   "extent": [
+    -0.01195,
+    0.01274
+   ],
+   "flatness": 0.257,
+   "volume_l": 0.0001
+  },
+  {
+   "id": "infraspinatus-muscle-l",
+   "name": "Infraspinatus muscle",
+   "side": "L",
+   "file": "muscles/infraspinatus-muscle-l.vtp",
+   "polys": 3166,
+   "centroid": [
+    -0.12886,
+    -0.08009,
+    1.35797
+   ],
+   "axis": [
+    -0.71793,
+    0.48373,
+    0.50058
+   ],
+   "extent": [
+    -0.08835,
+    0.09072
+   ],
+   "flatness": 0.348,
+   "volume_l": 0.1215
+  },
+  {
+   "id": "infraspinatus-muscle-r",
+   "name": "Infraspinatus muscle",
+   "side": "R",
+   "file": "muscles/infraspinatus-muscle-r.vtp",
+   "polys": 3166,
+   "centroid": [
+    0.12886,
+    -0.08009,
+    1.35797
+   ],
+   "axis": [
+    0.71793,
+    0.48373,
+    0.50058
+   ],
+   "extent": [
+    -0.08835,
+    0.09072
+   ],
+   "flatness": 0.348,
+   "volume_l": 0.1215
+  },
+  {
+   "id": "innermost-intercostal-muscles-l",
+   "name": "Innermost intercostal muscles",
+   "side": "L",
+   "file": "muscles/innermost-intercostal-muscles-l.vtp",
+   "polys": 8322,
+   "centroid": [
+    -0.10769,
+    -0.00668,
+    1.24958
+   ],
+   "axis": [
+    0.09456,
+    -0.00176,
+    0.99552
+   ],
+   "extent": [
+    -0.16527,
+    0.16142
+   ],
+   "flatness": 0.674,
+   "volume_l": 0.0536
+  },
+  {
+   "id": "innermost-intercostal-muscles-r",
+   "name": "Innermost intercostal muscles",
+   "side": "R",
+   "file": "muscles/innermost-intercostal-muscles-r.vtp",
+   "polys": 8330,
+   "centroid": [
+    0.10772,
+    -0.00679,
+    1.24915
+   ],
+   "axis": [
+    -0.09407,
+    0.00132,
+    0.99556
+   ],
+   "extent": [
+    -0.16487,
+    0.16177
+   ],
+   "flatness": 0.674,
+   "volume_l": 0.0536
+  },
+  {
+   "id": "intermediate-tendon-of-digastric-muscle-l",
+   "name": "Intermediate tendon of digastric muscle",
+   "side": "L",
+   "file": "muscles/intermediate-tendon-of-digastric-muscle-l.vtp",
+   "polys": 228,
+   "centroid": [
+    -0.01409,
+    0.03472,
+    1.50293
+   ],
+   "axis": [
+    -0.6873,
+    -0.20031,
+    0.69821
+   ],
+   "extent": [
+    -0.00538,
+    0.00451
+   ],
+   "flatness": 0.815,
+   "volume_l": 0.0
+  },
+  {
+   "id": "intermediate-tendon-of-digastric-muscle-r",
+   "name": "Intermediate tendon of digastric muscle",
+   "side": "R",
+   "file": "muscles/intermediate-tendon-of-digastric-muscle-r.vtp",
+   "polys": 228,
+   "centroid": [
+    0.01409,
+    0.03472,
+    1.50293
+   ],
+   "axis": [
+    0.6873,
+    -0.20031,
+    0.69821
+   ],
+   "extent": [
+    -0.00538,
+    0.00451
+   ],
+   "flatness": 0.815,
+   "volume_l": 0.0
+  },
+  {
+   "id": "internal-abdominal-oblique-muscle-l",
+   "name": "Internal abdominal oblique muscle",
+   "side": "L",
+   "file": "muscles/internal-abdominal-oblique-muscle-l.vtp",
+   "polys": 3999,
+   "centroid": [
+    -0.06082,
+    0.06494,
+    1.0562
+   ],
+   "axis": [
+    0.11987,
+    0.24692,
+    0.96159
+   ],
+   "extent": [
+    -0.19425,
+    0.19533
+   ],
+   "flatness": 0.634,
+   "volume_l": 0.1812
+  },
+  {
+   "id": "internal-abdominal-oblique-muscle-r",
+   "name": "Internal abdominal oblique muscle",
+   "side": "R",
+   "file": "muscles/internal-abdominal-oblique-muscle-r.vtp",
+   "polys": 3999,
+   "centroid": [
+    0.06087,
+    0.06493,
+    1.05628
+   ],
+   "axis": [
+    -0.12132,
+    0.24742,
+    0.96128
+   ],
+   "extent": [
+    -0.19419,
+    0.1953
+   ],
+   "flatness": 0.632,
+   "volume_l": 0.1821
+  },
+  {
+   "id": "internal-intercostal-muscles-l",
+   "name": "Internal intercostal muscles",
+   "side": "L",
+   "file": "muscles/internal-intercostal-muscles-l.vtp",
+   "polys": 9647,
+   "centroid": [
+    -0.10204,
+    0.00324,
+    1.23584
+   ],
+   "axis": [
+    0.05368,
+    0.09622,
+    0.99391
+   ],
+   "extent": [
+    -0.15532,
+    0.1692
+   ],
+   "flatness": 0.711,
+   "volume_l": 0.0171
+  },
+  {
+   "id": "internal-intercostal-muscles-r",
+   "name": "Internal intercostal muscles",
+   "side": "R",
+   "file": "muscles/internal-intercostal-muscles-r.vtp",
+   "polys": 9647,
+   "centroid": [
+    0.10204,
+    0.00324,
+    1.23584
+   ],
+   "axis": [
+    -0.05368,
+    0.09622,
+    0.99391
+   ],
+   "extent": [
+    -0.15532,
+    0.1692
+   ],
+   "flatness": 0.711,
+   "volume_l": 0.0171
+  },
+  {
+   "id": "interspinales-colli-muscles-l",
+   "name": "Interspinales colli muscles",
+   "side": "L",
+   "file": "muscles/interspinales-colli-muscles-l.vtp",
+   "polys": 444,
+   "centroid": [
+    -0.0036,
+    -0.05394,
+    1.48907
+   ],
+   "axis": [
+    -0.00874,
+    0.25049,
+    0.96808
+   ],
+   "extent": [
+    -0.04348,
+    0.05025
+   ],
+   "flatness": 0.106,
+   "volume_l": 0.0006
+  },
+  {
+   "id": "interspinales-colli-muscles-r",
+   "name": "Interspinales colli muscles",
+   "side": "R",
+   "file": "muscles/interspinales-colli-muscles-r.vtp",
+   "polys": 444,
+   "centroid": [
+    0.0036,
+    -0.05394,
+    1.48907
+   ],
+   "axis": [
+    0.00874,
+    0.25049,
+    0.96808
+   ],
+   "extent": [
+    -0.04348,
+    0.05025
+   ],
+   "flatness": 0.106,
+   "volume_l": 0.0006
+  },
+  {
+   "id": "interspinales-lumborum-muscles-l",
+   "name": "Interspinales lumborum muscles",
+   "side": "L",
+   "file": "muscles/interspinales-lumborum-muscles-l.vtp",
+   "polys": 562,
+   "centroid": [
+    -0.00273,
+    -0.0682,
+    1.07263
+   ],
+   "axis": [
+    -0.00788,
+    -0.12089,
+    0.99263
+   ],
+   "extent": [
+    -0.08513,
+    0.07589
+   ],
+   "flatness": 0.055,
+   "volume_l": 0.0011
+  },
+  {
+   "id": "interspinales-lumborum-muscles-r",
+   "name": "Interspinales lumborum muscles",
+   "side": "R",
+   "file": "muscles/interspinales-lumborum-muscles-r.vtp",
+   "polys": 562,
+   "centroid": [
+    0.00273,
+    -0.0682,
+    1.07263
+   ],
+   "axis": [
+    0.00788,
+    -0.12089,
+    0.99263
+   ],
+   "extent": [
+    -0.08513,
+    0.07589
+   ],
+   "flatness": 0.055,
+   "volume_l": 0.0011
+  },
+  {
+   "id": "interspinales-thoracis-muscles-l",
+   "name": "Interspinales thoracis muscles",
+   "side": "L",
+   "file": "muscles/interspinales-thoracis-muscles-l.vtp",
+   "polys": 198,
+   "centroid": [
+    -0.0032,
+    -0.08947,
+    1.40649
+   ],
+   "axis": [
+    -0.03251,
+    0.33781,
+    0.94065
+   ],
+   "extent": [
+    -0.0262,
+    0.02156
+   ],
+   "flatness": 0.126,
+   "volume_l": 0.0004
+  },
+  {
+   "id": "interspinales-thoracis-muscles-r",
+   "name": "Interspinales thoracis muscles",
+   "side": "R",
+   "file": "muscles/interspinales-thoracis-muscles-r.vtp",
+   "polys": 198,
+   "centroid": [
+    0.0032,
+    -0.08947,
+    1.40649
+   ],
+   "axis": [
+    0.03251,
+    0.33781,
+    0.94065
+   ],
+   "extent": [
+    -0.0262,
+    0.02156
+   ],
+   "flatness": 0.126,
+   "volume_l": 0.0004
+  },
+  {
+   "id": "lateral-crico-arytenoid-muscle-l",
+   "name": "Lateral crico-arytenoid muscle",
+   "side": "L",
+   "file": "muscles/lateral-crico-arytenoid-muscle-l.vtp",
+   "polys": 1624,
+   "centroid": [
+    -0.01018,
+    0.00333,
+    1.47527
+   ],
+   "axis": [
+    0.06819,
+    -0.70411,
+    0.70681
+   ],
+   "extent": [
+    -0.00801,
+    0.00627
+   ],
+   "flatness": 0.404,
+   "volume_l": 0.0
+  },
+  {
+   "id": "lateral-crico-arytenoid-muscle-r",
+   "name": "Lateral crico-arytenoid muscle",
+   "side": "R",
+   "file": "muscles/lateral-crico-arytenoid-muscle-r.vtp",
+   "polys": 1624,
+   "centroid": [
+    0.01018,
+    0.00333,
+    1.47527
+   ],
+   "axis": [
+    -0.06819,
+    -0.70411,
+    0.70681
+   ],
+   "extent": [
+    -0.00801,
+    0.00627
+   ],
+   "flatness": 0.404,
+   "volume_l": 0.0
+  },
+  {
+   "id": "lateral-head-of-flexor-hallucis-brevis-l",
+   "name": "Lateral head of flexor hallucis brevis",
+   "side": "L",
+   "file": "muscles/lateral-head-of-flexor-hallucis-brevis-l.vtp",
+   "polys": 966,
+   "centroid": [
+    -0.07222,
+    0.03774,
+    0.02853
+   ],
+   "axis": [
+    0.14752,
+    -0.90812,
+    0.39186
+   ],
+   "extent": [
+    -0.05212,
+    0.03731
+   ],
+   "flatness": 0.192,
+   "volume_l": 0.0056
+  },
+  {
+   "id": "lateral-head-of-flexor-hallucis-brevis-r",
+   "name": "Lateral head of flexor hallucis brevis",
+   "side": "R",
+   "file": "muscles/lateral-head-of-flexor-hallucis-brevis-r.vtp",
+   "polys": 966,
+   "centroid": [
+    0.07222,
+    0.03774,
+    0.02853
+   ],
+   "axis": [
+    -0.14752,
+    -0.90812,
+    0.39186
+   ],
+   "extent": [
+    -0.05212,
+    0.03731
+   ],
+   "flatness": 0.192,
+   "volume_l": 0.0056
+  },
+  {
+   "id": "lateral-head-of-gastrocnemius-l",
+   "name": "Lateral head of gastrocnemius",
+   "side": "L",
+   "file": "muscles/lateral-head-of-gastrocnemius-l.vtp",
+   "polys": 3998,
+   "centroid": [
+    -0.10586,
+    -0.07413,
+    0.36653
+   ],
+   "axis": [
+    0.00462,
+    0.15082,
+    0.98855
+   ],
+   "extent": [
+    -0.14526,
+    0.12815
+   ],
+   "flatness": 0.202,
+   "volume_l": 0.2075
+  },
+  {
+   "id": "lateral-head-of-gastrocnemius-r",
+   "name": "Lateral head of gastrocnemius",
+   "side": "R",
+   "file": "muscles/lateral-head-of-gastrocnemius-r.vtp",
+   "polys": 3998,
+   "centroid": [
+    0.10586,
+    -0.07413,
+    0.36653
+   ],
+   "axis": [
+    -0.00462,
+    0.15082,
+    0.98855
+   ],
+   "extent": [
+    -0.14526,
+    0.12815
+   ],
+   "flatness": 0.202,
+   "volume_l": 0.2075
+  },
+  {
+   "id": "lateral-head-of-triceps-brachii-l",
+   "name": "Lateral head of triceps brachii",
+   "side": "L",
+   "file": "muscles/lateral-head-of-triceps-brachii-l.vtp",
+   "polys": 3628,
+   "centroid": [
+    -0.21116,
+    -0.05962,
+    1.22605
+   ],
+   "axis": [
+    0.15609,
+    0.04368,
+    0.98678
+   ],
+   "extent": [
+    -0.13123,
+    0.13561
+   ],
+   "flatness": 0.194,
+   "volume_l": 0.145
+  },
+  {
+   "id": "lateral-head-of-triceps-brachii-r",
+   "name": "Lateral head of triceps brachii",
+   "side": "R",
+   "file": "muscles/lateral-head-of-triceps-brachii-r.vtp",
+   "polys": 3628,
+   "centroid": [
+    0.21116,
+    -0.05962,
+    1.22605
+   ],
+   "axis": [
+    -0.15609,
+    0.04368,
+    0.98678
+   ],
+   "extent": [
+    -0.13123,
+    0.13561
+   ],
+   "flatness": 0.194,
+   "volume_l": 0.145
+  },
+  {
+   "id": "lateral-rectus-muscle-l",
+   "name": "Lateral rectus muscle",
+   "side": "L",
+   "file": "muscles/lateral-rectus-muscle-l.vtp",
+   "polys": 1600,
+   "centroid": [
+    -0.03699,
+    0.05606,
+    1.59437
+   ],
+   "axis": [
+    0.52358,
+    -0.82276,
+    0.2212
+   ],
+   "extent": [
+    -0.01554,
+    0.0317
+   ],
+   "flatness": 0.2,
+   "volume_l": 0.0005
+  },
+  {
+   "id": "lateral-rectus-muscle-r",
+   "name": "Lateral rectus muscle",
+   "side": "R",
+   "file": "muscles/lateral-rectus-muscle-r.vtp",
+   "polys": 1600,
+   "centroid": [
+    0.03699,
+    0.05606,
+    1.59437
+   ],
+   "axis": [
+    -0.52358,
+    -0.82276,
+    0.2212
+   ],
+   "extent": [
+    -0.01554,
+    0.0317
+   ],
+   "flatness": 0.2,
+   "volume_l": 0.0005
+  },
+  {
+   "id": "latissimus-dorsi-muscle-l",
+   "name": "Latissimus dorsi muscle",
+   "side": "L",
+   "file": "muscles/latissimus-dorsi-muscle-l.vtp",
+   "polys": 4000,
+   "centroid": [
+    -0.07872,
+    -0.07026,
+    1.15132
+   ],
+   "axis": [
+    -0.40839,
+    0.07295,
+    0.90989
+   ],
+   "extent": [
+    -0.23187,
+    0.21718
+   ],
+   "flatness": 0.382,
+   "volume_l": 0.3838
+  },
+  {
+   "id": "latissimus-dorsi-muscle-r",
+   "name": "Latissimus dorsi muscle",
+   "side": "R",
+   "file": "muscles/latissimus-dorsi-muscle-r.vtp",
+   "polys": 4000,
+   "centroid": [
+    0.07872,
+    -0.07026,
+    1.15132
+   ],
+   "axis": [
+    0.40839,
+    0.07295,
+    0.90989
+   ],
+   "extent": [
+    -0.23187,
+    0.21718
+   ],
+   "flatness": 0.382,
+   "volume_l": 0.3838
+  },
+  {
+   "id": "levator-anguli-oris-l",
+   "name": "Levator anguli oris",
+   "side": "L",
+   "file": "muscles/levator-anguli-oris-l.vtp",
+   "polys": 330,
+   "centroid": [
+    -0.01973,
+    0.0778,
+    1.55284
+   ],
+   "axis": [
+    0.14958,
+    -0.09689,
+    0.98399
+   ],
+   "extent": [
+    -0.0107,
+    0.00937
+   ],
+   "flatness": 0.964,
+   "volume_l": 0.0002
+  },
+  {
+   "id": "levator-anguli-oris-r",
+   "name": "Levator anguli oris",
+   "side": "R",
+   "file": "muscles/levator-anguli-oris-r.vtp",
+   "polys": 330,
+   "centroid": [
+    0.01973,
+    0.0778,
+    1.55284
+   ],
+   "axis": [
+    -0.14958,
+    -0.09689,
+    0.98399
+   ],
+   "extent": [
+    -0.0107,
+    0.00937
+   ],
+   "flatness": 0.964,
+   "volume_l": 0.0002
+  },
+  {
+   "id": "levator-labii-superioris-l",
+   "name": "Levator labii superioris",
+   "side": "L",
+   "file": "muscles/levator-labii-superioris-l.vtp",
+   "polys": 540,
+   "centroid": [
+    -0.0226,
+    0.07652,
+    1.56681
+   ],
+   "axis": [
+    -0.61444,
+    -0.40494,
+    0.67711
+   ],
+   "extent": [
+    -0.02039,
+    0.01601
+   ],
+   "flatness": 0.631,
+   "volume_l": 0.0004
+  },
+  {
+   "id": "levator-labii-superioris-r",
+   "name": "Levator labii superioris",
+   "side": "R",
+   "file": "muscles/levator-labii-superioris-r.vtp",
+   "polys": 540,
+   "centroid": [
+    0.0226,
+    0.07652,
+    1.56681
+   ],
+   "axis": [
+    0.61444,
+    -0.40494,
+    0.67711
+   ],
+   "extent": [
+    -0.02039,
+    0.01601
+   ],
+   "flatness": 0.631,
+   "volume_l": 0.0004
+  },
+  {
+   "id": "levator-nasolabialis-l",
+   "name": "Levator nasolabialis",
+   "side": "L",
+   "file": "muscles/levator-nasolabialis-l.vtp",
+   "polys": 172,
+   "centroid": [
+    -0.01372,
+    0.08067,
+    1.57309
+   ],
+   "axis": [
+    0.06966,
+    -0.18445,
+    0.98037
+   ],
+   "extent": [
+    -0.01537,
+    0.01381
+   ],
+   "flatness": 0.185,
+   "volume_l": 0.0001
+  },
+  {
+   "id": "levator-nasolabialis-r",
+   "name": "Levator nasolabialis",
+   "side": "R",
+   "file": "muscles/levator-nasolabialis-r.vtp",
+   "polys": 172,
+   "centroid": [
+    0.01372,
+    0.08067,
+    1.57309
+   ],
+   "axis": [
+    -0.06966,
+    -0.18445,
+    0.98037
+   ],
+   "extent": [
+    -0.01537,
+    0.01381
+   ],
+   "flatness": 0.185,
+   "volume_l": 0.0001
+  },
+  {
+   "id": "levator-palpebrae-superioris-l",
+   "name": "Levator palpebrae superioris",
+   "side": "L",
+   "file": "muscles/levator-palpebrae-superioris-l.vtp",
+   "polys": 2152,
+   "centroid": [
+    -0.02899,
+    0.06551,
+    1.60332
+   ],
+   "axis": [
+    0.3558,
+    -0.93033,
+    0.08889
+   ],
+   "extent": [
+    -0.01243,
+    0.03655
+   ],
+   "flatness": 0.492,
+   "volume_l": 0.0008
+  },
+  {
+   "id": "levator-palpebrae-superioris-r",
+   "name": "Levator palpebrae superioris",
+   "side": "R",
+   "file": "muscles/levator-palpebrae-superioris-r.vtp",
+   "polys": 2152,
+   "centroid": [
+    0.02899,
+    0.06551,
+    1.60332
+   ],
+   "axis": [
+    -0.3558,
+    -0.93033,
+    0.08889
+   ],
+   "extent": [
+    -0.01243,
+    0.03655
+   ],
+   "flatness": 0.492,
+   "volume_l": 0.0008
+  },
+  {
+   "id": "levator-scapulae-l",
+   "name": "Levator scapulae",
+   "side": "L",
+   "file": "muscles/levator-scapulae-l.vtp",
+   "polys": 3082,
+   "centroid": [
+    -0.04909,
+    -0.04783,
+    1.45529
+   ],
+   "axis": [
+    0.28104,
+    0.50849,
+    0.81392
+   ],
+   "extent": [
+    -0.08412,
+    0.08746
+   ],
+   "flatness": 0.148,
+   "volume_l": 0.0135
+  },
+  {
+   "id": "levator-scapulae-r",
+   "name": "Levator scapulae",
+   "side": "R",
+   "file": "muscles/levator-scapulae-r.vtp",
+   "polys": 3082,
+   "centroid": [
+    0.04909,
+    -0.04783,
+    1.45529
+   ],
+   "axis": [
+    -0.28104,
+    0.50849,
+    0.81392
+   ],
+   "extent": [
+    -0.08412,
+    0.08746
+   ],
+   "flatness": 0.148,
+   "volume_l": 0.0135
+  },
+  {
+   "id": "levatores-breves-costarum-l",
+   "name": "Levatores breves costarum",
+   "side": "L",
+   "file": "muscles/levatores-breves-costarum-l.vtp",
+   "polys": 2690,
+   "centroid": [
+    -0.0468,
+    -0.07656,
+    1.28694
+   ],
+   "axis": [
+    0.00282,
+    0.07347,
+    0.99729
+   ],
+   "extent": [
+    -0.15572,
+    0.16916
+   ],
+   "flatness": 0.163,
+   "volume_l": 0.0063
+  },
+  {
+   "id": "levatores-breves-costarum-r",
+   "name": "Levatores breves costarum",
+   "side": "R",
+   "file": "muscles/levatores-breves-costarum-r.vtp",
+   "polys": 2690,
+   "centroid": [
+    0.0468,
+    -0.07656,
+    1.28694
+   ],
+   "axis": [
+    -0.00282,
+    0.07347,
+    0.99729
+   ],
+   "extent": [
+    -0.15572,
+    0.16916
+   ],
+   "flatness": 0.163,
+   "volume_l": 0.0063
+  },
+  {
+   "id": "levatores-longi-costarum-l",
+   "name": "Levatores longi costarum",
+   "side": "L",
+   "file": "muscles/levatores-longi-costarum-l.vtp",
+   "polys": 4000,
+   "centroid": [
+    -0.04876,
+    -0.07705,
+    1.3032
+   ],
+   "axis": [
+    0.00361,
+    0.09593,
+    0.99538
+   ],
+   "extent": [
+    -0.17618,
+    0.15589
+   ],
+   "flatness": 0.16,
+   "volume_l": 0.0147
+  },
+  {
+   "id": "levatores-longi-costarum-r",
+   "name": "Levatores longi costarum",
+   "side": "R",
+   "file": "muscles/levatores-longi-costarum-r.vtp",
+   "polys": 4000,
+   "centroid": [
+    0.04876,
+    -0.07705,
+    1.3032
+   ],
+   "axis": [
+    -0.00361,
+    0.09593,
+    0.99538
+   ],
+   "extent": [
+    -0.17618,
+    0.15589
+   ],
+   "flatness": 0.16,
+   "volume_l": 0.0147
+  },
+  {
+   "id": "linea-alba",
+   "name": "Linea alba",
+   "side": "C",
+   "file": "muscles/linea-alba.vtp",
+   "polys": 338,
+   "centroid": [
+    -0.00132,
+    0.09104,
+    1.08037
+   ],
+   "axis": [
+    0.00037,
+    0.1443,
+    0.98953
+   ],
+   "extent": [
+    -0.24367,
+    0.1574
+   ],
+   "flatness": 0.066,
+   "volume_l": 0.0628
+  },
+  {
+   "id": "long-head-of-biceps-brachii-l",
+   "name": "Long head of biceps brachii",
+   "side": "L",
+   "file": "muscles/long-head-of-biceps-brachii-l.vtp",
+   "polys": 3218,
+   "centroid": [
+    -0.20495,
+    -0.01346,
+    1.22793
+   ],
+   "axis": [
+    0.18047,
+    0.01238,
+    0.9835
+   ],
+   "extent": [
+    -0.1798,
+    0.18508
+   ],
+   "flatness": 0.106,
+   "volume_l": 0.1097
+  },
+  {
+   "id": "long-head-of-biceps-brachii-r",
+   "name": "Long head of biceps brachii",
+   "side": "R",
+   "file": "muscles/long-head-of-biceps-brachii-r.vtp",
+   "polys": 3218,
+   "centroid": [
+    0.20495,
+    -0.01346,
+    1.22793
+   ],
+   "axis": [
+    -0.18047,
+    0.01238,
+    0.9835
+   ],
+   "extent": [
+    -0.1798,
+    0.18508
+   ],
+   "flatness": 0.106,
+   "volume_l": 0.1097
+  },
+  {
+   "id": "long-head-of-biceps-femoris-l",
+   "name": "Long head of biceps femoris",
+   "side": "L",
+   "file": "muscles/long-head-of-biceps-femoris-l.vtp",
+   "polys": 3998,
+   "centroid": [
+    -0.09553,
+    -0.04805,
+    0.60929
+   ],
+   "axis": [
+    0.1274,
+    0.0056,
+    0.99184
+   ],
+   "extent": [
+    -0.21619,
+    0.21311
+   ],
+   "flatness": 0.129,
+   "volume_l": 0.3892
+  },
+  {
+   "id": "long-head-of-biceps-femoris-r",
+   "name": "Long head of biceps femoris",
+   "side": "R",
+   "file": "muscles/long-head-of-biceps-femoris-r.vtp",
+   "polys": 3998,
+   "centroid": [
+    0.09553,
+    -0.04805,
+    0.60929
+   ],
+   "axis": [
+    -0.1274,
+    0.0056,
+    0.99184
+   ],
+   "extent": [
+    -0.21619,
+    0.21311
+   ],
+   "flatness": 0.129,
+   "volume_l": 0.3892
+  },
+  {
+   "id": "long-head-of-triceps-brachii-l",
+   "name": "Long head of triceps brachii",
+   "side": "L",
+   "file": "muscles/long-head-of-triceps-brachii-l.vtp",
+   "polys": 3950,
+   "centroid": [
+    -0.18045,
+    -0.06031,
+    1.23855
+   ],
+   "axis": [
+    0.25022,
+    0.04017,
+    0.96736
+   ],
+   "extent": [
+    -0.14839,
+    0.13069
+   ],
+   "flatness": 0.131,
+   "volume_l": 0.1555
+  },
+  {
+   "id": "long-head-of-triceps-brachii-r",
+   "name": "Long head of triceps brachii",
+   "side": "R",
+   "file": "muscles/long-head-of-triceps-brachii-r.vtp",
+   "polys": 3950,
+   "centroid": [
+    0.18045,
+    -0.06031,
+    1.23855
+   ],
+   "axis": [
+    -0.25022,
+    0.04017,
+    0.96736
+   ],
+   "extent": [
+    -0.14839,
+    0.13069
+   ],
+   "flatness": 0.131,
+   "volume_l": 0.1555
+  },
+  {
+   "id": "longissimus-capitis-muscle-l",
+   "name": "Longissimus capitis muscle",
+   "side": "L",
+   "file": "muscles/longissimus-capitis-muscle-l.vtp",
+   "polys": 1574,
+   "centroid": [
+    -0.03377,
+    -0.03243,
+    1.48758
+   ],
+   "axis": [
+    -0.1404,
+    0.22435,
+    0.96434
+   ],
+   "extent": [
+    -0.08036,
+    0.08344
+   ],
+   "flatness": 0.24,
+   "volume_l": 0.0044
+  },
+  {
+   "id": "longissimus-capitis-muscle-r",
+   "name": "Longissimus capitis muscle",
+   "side": "R",
+   "file": "muscles/longissimus-capitis-muscle-r.vtp",
+   "polys": 1574,
+   "centroid": [
+    0.03377,
+    -0.03243,
+    1.48758
+   ],
+   "axis": [
+    0.1404,
+    0.22435,
+    0.96434
+   ],
+   "extent": [
+    -0.08036,
+    0.08344
+   ],
+   "flatness": 0.24,
+   "volume_l": 0.0044
+  },
+  {
+   "id": "longissimus-colli-muscle-l",
+   "name": "Longissimus colli muscle",
+   "side": "L",
+   "file": "muscles/longissimus-colli-muscle-l.vtp",
+   "polys": 1826,
+   "centroid": [
+    -0.03282,
+    -0.0489,
+    1.43371
+   ],
+   "axis": [
+    0.02484,
+    0.45379,
+    0.89076
+   ],
+   "extent": [
+    -0.1109,
+    0.09265
+   ],
+   "flatness": 0.087,
+   "volume_l": 0.006
+  },
+  {
+   "id": "longissimus-colli-muscle-r",
+   "name": "Longissimus colli muscle",
+   "side": "R",
+   "file": "muscles/longissimus-colli-muscle-r.vtp",
+   "polys": 1826,
+   "centroid": [
+    0.03282,
+    -0.0489,
+    1.43371
+   ],
+   "axis": [
+    -0.02484,
+    0.45379,
+    0.89076
+   ],
+   "extent": [
+    -0.1109,
+    0.09265
+   ],
+   "flatness": 0.087,
+   "volume_l": 0.006
+  },
+  {
+   "id": "longissimus-thoracis-muscle-l",
+   "name": "Longissimus thoracis muscle",
+   "side": "L",
+   "file": "muscles/longissimus-thoracis-muscle-l.vtp",
+   "polys": 4000,
+   "centroid": [
+    -0.03393,
+    -0.07284,
+    1.20091
+   ],
+   "axis": [
+    -0.08641,
+    -0.0217,
+    0.99602
+   ],
+   "extent": [
+    -0.30084,
+    0.24674
+   ],
+   "flatness": 0.118,
+   "volume_l": 0.1266
+  },
+  {
+   "id": "longissimus-thoracis-muscle-r",
+   "name": "Longissimus thoracis muscle",
+   "side": "R",
+   "file": "muscles/longissimus-thoracis-muscle-r.vtp",
+   "polys": 4000,
+   "centroid": [
+    0.03393,
+    -0.07284,
+    1.20091
+   ],
+   "axis": [
+    0.08641,
+    -0.0217,
+    0.99602
+   ],
+   "extent": [
+    -0.30084,
+    0.24674
+   ],
+   "flatness": 0.118,
+   "volume_l": 0.1266
+  },
+  {
+   "id": "longus-capitis-muscle-l",
+   "name": "Longus capitis muscle",
+   "side": "L",
+   "file": "muscles/longus-capitis-muscle-l.vtp",
+   "polys": 1980,
+   "centroid": [
+    -0.01836,
+    -0.00172,
+    1.51046
+   ],
+   "axis": [
+    0.17233,
+    0.1069,
+    0.97922
+   ],
+   "extent": [
+    -0.05223,
+    0.06058
+   ],
+   "flatness": 0.126,
+   "volume_l": 0.0044
+  },
+  {
+   "id": "longus-capitis-muscle-r",
+   "name": "Longus capitis muscle",
+   "side": "R",
+   "file": "muscles/longus-capitis-muscle-r.vtp",
+   "polys": 1980,
+   "centroid": [
+    0.01836,
+    -0.00172,
+    1.51046
+   ],
+   "axis": [
+    -0.17233,
+    0.1069,
+    0.97922
+   ],
+   "extent": [
+    -0.05223,
+    0.06058
+   ],
+   "flatness": 0.126,
+   "volume_l": 0.0044
+  },
+  {
+   "id": "longus-colli-muscle-l",
+   "name": "Longus colli muscle",
+   "side": "L",
+   "file": "muscles/longus-colli-muscle-l.vtp",
+   "polys": 4000,
+   "centroid": [
+    -0.01252,
+    -0.008,
+    1.47605
+   ],
+   "axis": [
+    -0.02807,
+    0.14382,
+    0.9892
+   ],
+   "extent": [
+    -0.09067,
+    0.06921
+   ],
+   "flatness": 0.153,
+   "volume_l": 0.0109
+  },
+  {
+   "id": "longus-colli-muscle-r",
+   "name": "Longus colli muscle",
+   "side": "R",
+   "file": "muscles/longus-colli-muscle-r.vtp",
+   "polys": 4000,
+   "centroid": [
+    0.01252,
+    -0.008,
+    1.47605
+   ],
+   "axis": [
+    0.02807,
+    0.14382,
+    0.9892
+   ],
+   "extent": [
+    -0.09067,
+    0.06921
+   ],
+   "flatness": 0.153,
+   "volume_l": 0.0109
+  },
+  {
+   "id": "lumbrical-muscles-of-foot-l",
+   "name": "Lumbrical muscles of foot",
+   "side": "L",
+   "file": "muscles/lumbrical-muscles-of-foot-l.vtp",
+   "polys": 418,
+   "centroid": [
+    -0.07968,
+    0.03669,
+    0.02324
+   ],
+   "axis": [
+    0.12263,
+    -0.97284,
+    0.19634
+   ],
+   "extent": [
+    -0.05212,
+    0.04358
+   ],
+   "flatness": 0.074,
+   "volume_l": 0.0014
+  },
+  {
+   "id": "lumbrical-muscles-of-foot-r",
+   "name": "Lumbrical muscles of foot",
+   "side": "R",
+   "file": "muscles/lumbrical-muscles-of-foot-r.vtp",
+   "polys": 418,
+   "centroid": [
+    0.07968,
+    0.03669,
+    0.02324
+   ],
+   "axis": [
+    -0.12263,
+    -0.97284,
+    0.19634
+   ],
+   "extent": [
+    -0.05212,
+    0.04358
+   ],
+   "flatness": 0.074,
+   "volume_l": 0.0014
+  },
+  {
+   "id": "lumbrical-muscles-of-hand-l",
+   "name": "Lumbrical muscles of hand",
+   "side": "L",
+   "file": "muscles/lumbrical-muscles-of-hand-l.vtp",
+   "polys": 1368,
+   "centroid": [
+    -0.26759,
+    0.03869,
+    0.78416
+   ],
+   "axis": [
+    0.33013,
+    -0.18487,
+    0.92566
+   ],
+   "extent": [
+    -0.0563,
+    0.04454
+   ],
+   "flatness": 0.8,
+   "volume_l": 0.0026
+  },
+  {
+   "id": "lumbrical-muscles-of-hand-r",
+   "name": "Lumbrical muscles of hand",
+   "side": "R",
+   "file": "muscles/lumbrical-muscles-of-hand-r.vtp",
+   "polys": 1368,
+   "centroid": [
+    0.26759,
+    0.03869,
+    0.78416
+   ],
+   "axis": [
+    -0.33013,
+    -0.18487,
+    0.92566
+   ],
+   "extent": [
+    -0.0563,
+    0.04454
+   ],
+   "flatness": 0.8,
+   "volume_l": 0.0026
+  },
+  {
+   "id": "medial-head-of-flexor-hallucis-brevis-l",
+   "name": "Medial head of flexor hallucis brevis",
+   "side": "L",
+   "file": "muscles/medial-head-of-flexor-hallucis-brevis-l.vtp",
+   "polys": 514,
+   "centroid": [
+    -0.06477,
+    0.0494,
+    0.02776
+   ],
+   "axis": [
+    0.06894,
+    -0.89624,
+    0.43818
+   ],
+   "extent": [
+    -0.04069,
+    0.04844
+   ],
+   "flatness": 0.124,
+   "volume_l": 0.0026
+  },
+  {
+   "id": "medial-head-of-flexor-hallucis-brevis-r",
+   "name": "Medial head of flexor hallucis brevis",
+   "side": "R",
+   "file": "muscles/medial-head-of-flexor-hallucis-brevis-r.vtp",
+   "polys": 514,
+   "centroid": [
+    0.06477,
+    0.0494,
+    0.02776
+   ],
+   "axis": [
+    -0.06894,
+    -0.89624,
+    0.43818
+   ],
+   "extent": [
+    -0.04069,
+    0.04844
+   ],
+   "flatness": 0.124,
+   "volume_l": 0.0026
+  },
+  {
+   "id": "medial-head-of-gastrocnemius-l",
+   "name": "Medial head of gastrocnemius",
+   "side": "L",
+   "file": "muscles/medial-head-of-gastrocnemius-l.vtp",
+   "polys": 3998,
+   "centroid": [
+    -0.05993,
+    -0.06386,
+    0.37038
+   ],
+   "axis": [
+    0.01372,
+    0.13374,
+    0.99092
+   ],
+   "extent": [
+    -0.16417,
+    0.14058
+   ],
+   "flatness": 0.223,
+   "volume_l": 0.3096
+  },
+  {
+   "id": "medial-head-of-gastrocnemius-r",
+   "name": "Medial head of gastrocnemius",
+   "side": "R",
+   "file": "muscles/medial-head-of-gastrocnemius-r.vtp",
+   "polys": 3998,
+   "centroid": [
+    0.05993,
+    -0.06385,
+    0.37041
+   ],
+   "axis": [
+    -0.01376,
+    0.13365,
+    0.99093
+   ],
+   "extent": [
+    -0.16421,
+    0.14054
+   ],
+   "flatness": 0.223,
+   "volume_l": 0.3096
+  },
+  {
+   "id": "medial-head-of-triceps-brachii-l",
+   "name": "Medial head of triceps brachii",
+   "side": "L",
+   "file": "muscles/medial-head-of-triceps-brachii-l.vtp",
+   "polys": 2686,
+   "centroid": [
+    -0.19547,
+    -0.04705,
+    1.17497
+   ],
+   "axis": [
+    0.15556,
+    0.05903,
+    0.98606
+   ],
+   "extent": [
+    -0.08958,
+    0.1473
+   ],
+   "flatness": 0.213,
+   "volume_l": 0.0727
+  },
+  {
+   "id": "medial-head-of-triceps-brachii-r",
+   "name": "Medial head of triceps brachii",
+   "side": "R",
+   "file": "muscles/medial-head-of-triceps-brachii-r.vtp",
+   "polys": 2686,
+   "centroid": [
+    0.19547,
+    -0.04705,
+    1.17497
+   ],
+   "axis": [
+    -0.15556,
+    0.05903,
+    0.98606
+   ],
+   "extent": [
+    -0.08958,
+    0.1473
+   ],
+   "flatness": 0.213,
+   "volume_l": 0.0727
+  },
+  {
+   "id": "medial-pterygoid-muscle-l",
+   "name": "Medial pterygoid muscle",
+   "side": "L",
+   "file": "muscles/medial-pterygoid-muscle-l.vtp",
+   "polys": 496,
+   "centroid": [
+    -0.02853,
+    0.02492,
+    1.54762
+   ],
+   "axis": [
+    0.39309,
+    0.3935,
+    0.83105
+   ],
+   "extent": [
+    -0.02272,
+    0.02702
+   ],
+   "flatness": 0.542,
+   "volume_l": 0.0028
+  },
+  {
+   "id": "medial-pterygoid-muscle-r",
+   "name": "Medial pterygoid muscle",
+   "side": "R",
+   "file": "muscles/medial-pterygoid-muscle-r.vtp",
+   "polys": 496,
+   "centroid": [
+    0.02853,
+    0.02492,
+    1.54762
+   ],
+   "axis": [
+    -0.39309,
+    0.3935,
+    0.83105
+   ],
+   "extent": [
+    -0.02272,
+    0.02702
+   ],
+   "flatness": 0.542,
+   "volume_l": 0.0028
+  },
+  {
+   "id": "medial-rectus-muscle-l",
+   "name": "Medial rectus muscle",
+   "side": "L",
+   "file": "muscles/medial-rectus-muscle-l.vtp",
+   "polys": 1252,
+   "centroid": [
+    -0.01774,
+    0.05896,
+    1.59308
+   ],
+   "axis": [
+    0.16907,
+    -0.96116,
+    0.21816
+   ],
+   "extent": [
+    -0.01525,
+    0.02684
+   ],
+   "flatness": 0.194,
+   "volume_l": 0.0004
+  },
+  {
+   "id": "medial-rectus-muscle-r",
+   "name": "Medial rectus muscle",
+   "side": "R",
+   "file": "muscles/medial-rectus-muscle-r.vtp",
+   "polys": 1252,
+   "centroid": [
+    0.01774,
+    0.05896,
+    1.59308
+   ],
+   "axis": [
+    -0.16907,
+    -0.96116,
+    0.21816
+   ],
+   "extent": [
+    -0.01525,
+    0.02684
+   ],
+   "flatness": 0.194,
+   "volume_l": 0.0004
+  },
+  {
+   "id": "mentalis-muscle-l",
+   "name": "Mentalis muscle",
+   "side": "L",
+   "file": "muscles/mentalis-muscle-l.vtp",
+   "polys": 166,
+   "centroid": [
+    -0.00746,
+    0.079,
+    1.50458
+   ],
+   "axis": [
+    -0.61026,
+    -0.27885,
+    0.7415
+   ],
+   "extent": [
+    -0.00758,
+    0.00961
+   ],
+   "flatness": 0.459,
+   "volume_l": 0.0001
+  },
+  {
+   "id": "mentalis-muscle-r",
+   "name": "Mentalis muscle",
+   "side": "R",
+   "file": "muscles/mentalis-muscle-r.vtp",
+   "polys": 166,
+   "centroid": [
+    0.00746,
+    0.079,
+    1.50458
+   ],
+   "axis": [
+    0.61026,
+    -0.27885,
+    0.7415
+   ],
+   "extent": [
+    -0.00758,
+    0.00961
+   ],
+   "flatness": 0.459,
+   "volume_l": 0.0001
+  },
+  {
+   "id": "middle-pharyngeal-constrictor-l",
+   "name": "Middle pharyngeal constrictor",
+   "side": "L",
+   "file": "muscles/middle-pharyngeal-constrictor-l.vtp",
+   "polys": 2948,
+   "centroid": [
+    -0.01185,
+    0.01203,
+    1.51716
+   ],
+   "axis": [
+    0.29221,
+    -0.56309,
+    0.77301
+   ],
+   "extent": [
+    -0.0254,
+    0.02833
+   ],
+   "flatness": 0.496,
+   "volume_l": 0.0026
+  },
+  {
+   "id": "middle-pharyngeal-constrictor-r",
+   "name": "Middle pharyngeal constrictor",
+   "side": "R",
+   "file": "muscles/middle-pharyngeal-constrictor-r.vtp",
+   "polys": 2948,
+   "centroid": [
+    0.01185,
+    0.01203,
+    1.51716
+   ],
+   "axis": [
+    -0.29221,
+    -0.56309,
+    0.77301
+   ],
+   "extent": [
+    -0.0254,
+    0.02833
+   ],
+   "flatness": 0.496,
+   "volume_l": 0.0026
+  },
+  {
+   "id": "multifidus-colli-muscle-l",
+   "name": "Multifidus colli muscle",
+   "side": "L",
+   "file": "muscles/multifidus-colli-muscle-l.vtp",
+   "polys": 1390,
+   "centroid": [
+    -0.01499,
+    -0.03473,
+    1.49135
+   ],
+   "axis": [
+    0.03902,
+    0.04595,
+    0.99818
+   ],
+   "extent": [
+    -0.05119,
+    0.0473
+   ],
+   "flatness": 0.275,
+   "volume_l": 0.0027
+  },
+  {
+   "id": "multifidus-colli-muscle-r",
+   "name": "Multifidus colli muscle",
+   "side": "R",
+   "file": "muscles/multifidus-colli-muscle-r.vtp",
+   "polys": 1390,
+   "centroid": [
+    0.01499,
+    -0.03473,
+    1.49135
+   ],
+   "axis": [
+    -0.03902,
+    0.04595,
+    0.99818
+   ],
+   "extent": [
+    -0.05119,
+    0.0473
+   ],
+   "flatness": 0.275,
+   "volume_l": 0.0027
+  },
+  {
+   "id": "multifidus-lumborum-muscle-l",
+   "name": "Multifidus lumborum muscle",
+   "side": "L",
+   "file": "muscles/multifidus-lumborum-muscle-l.vtp",
+   "polys": 2820,
+   "centroid": [
+    -0.02192,
+    -0.04385,
+    1.06497
+   ],
+   "axis": [
+    0.09279,
+    -0.12439,
+    0.98789
+   ],
+   "extent": [
+    -0.07394,
+    0.09266
+   ],
+   "flatness": 0.213,
+   "volume_l": 0.0057
+  },
+  {
+   "id": "multifidus-lumborum-muscle-r",
+   "name": "Multifidus lumborum muscle",
+   "side": "R",
+   "file": "muscles/multifidus-lumborum-muscle-r.vtp",
+   "polys": 2820,
+   "centroid": [
+    0.02192,
+    -0.04385,
+    1.06497
+   ],
+   "axis": [
+    -0.09279,
+    -0.12439,
+    0.98789
+   ],
+   "extent": [
+    -0.07394,
+    0.09266
+   ],
+   "flatness": 0.213,
+   "volume_l": 0.0057
+  },
+  {
+   "id": "multifidus-thoracis-muscle-l",
+   "name": "Multifidus thoracis muscle",
+   "side": "L",
+   "file": "muscles/multifidus-thoracis-muscle-l.vtp",
+   "polys": 3902,
+   "centroid": [
+    -0.01417,
+    -0.07609,
+    1.30747
+   ],
+   "axis": [
+    -0.00808,
+    0.04024,
+    0.99916
+   ],
+   "extent": [
+    -0.16218,
+    0.14588
+   ],
+   "flatness": 0.126,
+   "volume_l": 0.008
+  },
+  {
+   "id": "multifidus-thoracis-muscle-r",
+   "name": "Multifidus thoracis muscle",
+   "side": "R",
+   "file": "muscles/multifidus-thoracis-muscle-r.vtp",
+   "polys": 3902,
+   "centroid": [
+    0.01417,
+    -0.07609,
+    1.30747
+   ],
+   "axis": [
+    0.00808,
+    0.04024,
+    0.99916
+   ],
+   "extent": [
+    -0.16218,
+    0.14588
+   ],
+   "flatness": 0.126,
+   "volume_l": 0.008
+  },
+  {
+   "id": "mylohyoid-muscle-l",
+   "name": "Mylohyoid muscle",
+   "side": "L",
+   "file": "muscles/mylohyoid-muscle-l.vtp",
+   "polys": 1122,
+   "centroid": [
+    -0.0082,
+    0.04972,
+    1.50441
+   ],
+   "axis": [
+    -0.45653,
+    -0.82471,
+    0.33383
+   ],
+   "extent": [
+    -0.02423,
+    0.02733
+   ],
+   "flatness": 0.679,
+   "volume_l": 0.0021
+  },
+  {
+   "id": "mylohyoid-muscle-r",
+   "name": "Mylohyoid muscle",
+   "side": "R",
+   "file": "muscles/mylohyoid-muscle-r.vtp",
+   "polys": 1122,
+   "centroid": [
+    0.0082,
+    0.04972,
+    1.50441
+   ],
+   "axis": [
+    0.45653,
+    -0.82471,
+    0.33383
+   ],
+   "extent": [
+    -0.02423,
+    0.02733
+   ],
+   "flatness": 0.679,
+   "volume_l": 0.0021
+  },
+  {
+   "id": "nasalis-muscle-l",
+   "name": "Nasalis muscle",
+   "side": "L",
+   "file": "muscles/nasalis-muscle-l.vtp",
+   "polys": 704,
+   "centroid": [
+    -0.00844,
+    0.08896,
+    1.58165
+   ],
+   "axis": [
+    0.28165,
+    0.06463,
+    0.95734
+   ],
+   "extent": [
+    -0.01946,
+    0.02168
+   ],
+   "flatness": 0.702,
+   "volume_l": 0.0005
+  },
+  {
+   "id": "nasalis-muscle-r",
+   "name": "Nasalis muscle",
+   "side": "R",
+   "file": "muscles/nasalis-muscle-r.vtp",
+   "polys": 704,
+   "centroid": [
+    0.00844,
+    0.08896,
+    1.58165
+   ],
+   "axis": [
+    -0.28165,
+    0.06463,
+    0.95734
+   ],
+   "extent": [
+    -0.01946,
+    0.02168
+   ],
+   "flatness": 0.702,
+   "volume_l": 0.0005
+  },
+  {
+   "id": "oblique-head-of-adductor-hallucis-l",
+   "name": "Oblique head of adductor hallucis",
+   "side": "L",
+   "file": "muscles/oblique-head-of-adductor-hallucis-l.vtp",
+   "polys": 904,
+   "centroid": [
+    -0.09118,
+    0.02864,
+    0.03244
+   ],
+   "axis": [
+    -0.24367,
+    -0.91526,
+    0.32081
+   ],
+   "extent": [
+    -0.04349,
+    0.02703
+   ],
+   "flatness": 0.291,
+   "volume_l": 0.0051
+  },
+  {
+   "id": "oblique-head-of-adductor-hallucis-r",
+   "name": "Oblique head of adductor hallucis",
+   "side": "R",
+   "file": "muscles/oblique-head-of-adductor-hallucis-r.vtp",
+   "polys": 904,
+   "centroid": [
+    0.09118,
+    0.02864,
+    0.03244
+   ],
+   "axis": [
+    0.24367,
+    -0.91526,
+    0.32081
+   ],
+   "extent": [
+    -0.04349,
+    0.02703
+   ],
+   "flatness": 0.291,
+   "volume_l": 0.0051
+  },
+  {
+   "id": "oblique-head-of-adductor-pollicis-l",
+   "name": "Oblique head of adductor pollicis",
+   "side": "L",
+   "file": "muscles/oblique-head-of-adductor-pollicis-l.vtp",
+   "polys": 450,
+   "centroid": [
+    -0.28196,
+    0.03243,
+    0.8278
+   ],
+   "axis": [
+    0.8025,
+    -0.37501,
+    0.46407
+   ],
+   "extent": [
+    -0.03577,
+    0.02063
+   ],
+   "flatness": 0.191,
+   "volume_l": 0.0013
+  },
+  {
+   "id": "oblique-head-of-adductor-pollicis-r",
+   "name": "Oblique head of adductor pollicis",
+   "side": "R",
+   "file": "muscles/oblique-head-of-adductor-pollicis-r.vtp",
+   "polys": 450,
+   "centroid": [
+    0.28196,
+    0.03243,
+    0.8278
+   ],
+   "axis": [
+    -0.8025,
+    -0.37501,
+    0.46407
+   ],
+   "extent": [
+    -0.03577,
+    0.02063
+   ],
+   "flatness": 0.191,
+   "volume_l": 0.0013
+  },
+  {
+   "id": "oblique-part-of-cricothyroid-muscle-l",
+   "name": "Oblique part of cricothyroid muscle",
+   "side": "L",
+   "file": "muscles/oblique-part-of-cricothyroid-muscle-l.vtp",
+   "polys": 2060,
+   "centroid": [
+    -0.01152,
+    0.01175,
+    1.46381
+   ],
+   "axis": [
+    -0.36099,
+    -0.85353,
+    0.37573
+   ],
+   "extent": [
+    -0.01131,
+    0.00751
+   ],
+   "flatness": 0.298,
+   "volume_l": 0.0001
+  },
+  {
+   "id": "oblique-part-of-cricothyroid-muscle-r",
+   "name": "Oblique part of cricothyroid muscle",
+   "side": "R",
+   "file": "muscles/oblique-part-of-cricothyroid-muscle-r.vtp",
+   "polys": 2060,
+   "centroid": [
+    0.01152,
+    0.01175,
+    1.46381
+   ],
+   "axis": [
+    0.36099,
+    -0.85353,
+    0.37573
+   ],
+   "extent": [
+    -0.01131,
+    0.00751
+   ],
+   "flatness": 0.298,
+   "volume_l": 0.0001
+  },
+  {
+   "id": "obliquus-inferior-capitis-muscle-l",
+   "name": "Obliquus inferior capitis muscle",
+   "side": "L",
+   "file": "muscles/obliquus-inferior-capitis-muscle-l.vtp",
+   "polys": 540,
+   "centroid": [
+    -0.02182,
+    -0.03356,
+    1.52685
+   ],
+   "axis": [
+    -0.65229,
+    0.59892,
+    0.46456
+   ],
+   "extent": [
+    -0.02998,
+    0.0291
+   ],
+   "flatness": 0.165,
+   "volume_l": 0.0024
+  },
+  {
+   "id": "obliquus-inferior-capitis-muscle-r",
+   "name": "Obliquus inferior capitis muscle",
+   "side": "R",
+   "file": "muscles/obliquus-inferior-capitis-muscle-r.vtp",
+   "polys": 540,
+   "centroid": [
+    0.02182,
+    -0.03356,
+    1.52685
+   ],
+   "axis": [
+    0.65229,
+    0.59892,
+    0.46456
+   ],
+   "extent": [
+    -0.02998,
+    0.0291
+   ],
+   "flatness": 0.165,
+   "volume_l": 0.0024
+  },
+  {
+   "id": "obliquus-superior-capitis-muscle-l",
+   "name": "Obliquus superior capitis muscle",
+   "side": "L",
+   "file": "muscles/obliquus-superior-capitis-muscle-l.vtp",
+   "polys": 654,
+   "centroid": [
+    -0.03786,
+    -0.04024,
+    1.55487
+   ],
+   "axis": [
+    0.15619,
+    -0.90674,
+    0.39169
+   ],
+   "extent": [
+    -0.02793,
+    0.0277
+   ],
+   "flatness": 0.215,
+   "volume_l": 0.0012
+  },
+  {
+   "id": "obliquus-superior-capitis-muscle-r",
+   "name": "Obliquus superior capitis muscle",
+   "side": "R",
+   "file": "muscles/obliquus-superior-capitis-muscle-r.vtp",
+   "polys": 654,
+   "centroid": [
+    0.03786,
+    -0.04024,
+    1.55487
+   ],
+   "axis": [
+    -0.15619,
+    -0.90674,
+    0.39169
+   ],
+   "extent": [
+    -0.02793,
+    0.0277
+   ],
+   "flatness": 0.215,
+   "volume_l": 0.0012
+  },
+  {
+   "id": "obturator-externus-l",
+   "name": "Obturator externus",
+   "side": "L",
+   "file": "muscles/obturator-externus-l.vtp",
+   "polys": 1156,
+   "centroid": [
+    -0.06679,
+    -0.01142,
+    0.83202
+   ],
+   "axis": [
+    -0.92298,
+    -0.37167,
+    0.09988
+   ],
+   "extent": [
+    -0.05005,
+    0.057
+   ],
+   "flatness": 0.34,
+   "volume_l": 0.0199
+  },
+  {
+   "id": "obturator-externus-r",
+   "name": "Obturator externus",
+   "side": "R",
+   "file": "muscles/obturator-externus-r.vtp",
+   "polys": 1156,
+   "centroid": [
+    0.06679,
+    -0.01142,
+    0.83202
+   ],
+   "axis": [
+    0.92298,
+    -0.37167,
+    0.09988
+   ],
+   "extent": [
+    -0.05005,
+    0.057
+   ],
+   "flatness": 0.34,
+   "volume_l": 0.0199
+  },
+  {
+   "id": "obturator-internus-l",
+   "name": "Obturator internus",
+   "side": "L",
+   "file": "muscles/obturator-internus-l.vtp",
+   "polys": 3760,
+   "centroid": [
+    -0.04883,
+    -0.01895,
+    0.84785
+   ],
+   "axis": [
+    -0.56194,
+    -0.82514,
+    0.05799
+   ],
+   "extent": [
+    -0.04608,
+    0.04323
+   ],
+   "flatness": 0.601,
+   "volume_l": 0.0192
+  },
+  {
+   "id": "obturator-internus-r",
+   "name": "Obturator internus",
+   "side": "R",
+   "file": "muscles/obturator-internus-r.vtp",
+   "polys": 3760,
+   "centroid": [
+    0.04883,
+    -0.01895,
+    0.84785
+   ],
+   "axis": [
+    0.56194,
+    -0.82514,
+    0.05799
+   ],
+   "extent": [
+    -0.04608,
+    0.04323
+   ],
+   "flatness": 0.601,
+   "volume_l": 0.0192
+  },
+  {
+   "id": "occipitalis-muscle-l",
+   "name": "Occipitalis muscle",
+   "side": "L",
+   "file": "muscles/occipitalis-muscle-l.vtp",
+   "polys": 2602,
+   "centroid": [
+    -0.04005,
+    -0.08542,
+    1.60172
+   ],
+   "axis": [
+    0.72,
+    -0.6823,
+    0.12677
+   ],
+   "extent": [
+    -0.03291,
+    0.03206
+   ],
+   "flatness": 0.652,
+   "volume_l": 0.003
+  },
+  {
+   "id": "occipitalis-muscle-r",
+   "name": "Occipitalis muscle",
+   "side": "R",
+   "file": "muscles/occipitalis-muscle-r.vtp",
+   "polys": 2602,
+   "centroid": [
+    0.04005,
+    -0.08542,
+    1.60172
+   ],
+   "axis": [
+    -0.72,
+    -0.6823,
+    0.12677
+   ],
+   "extent": [
+    -0.03291,
+    0.03206
+   ],
+   "flatness": 0.652,
+   "volume_l": 0.003
+  },
+  {
+   "id": "omohyoid-muscle-l",
+   "name": "Omohyoid muscle",
+   "side": "L",
+   "file": "muscles/omohyoid-muscle-l.vtp",
+   "polys": 2706,
+   "centroid": [
+    -0.06005,
+    -0.00958,
+    1.4345
+   ],
+   "axis": [
+    0.61375,
+    0.55047,
+    0.56594
+   ],
+   "extent": [
+    -0.07559,
+    0.08805
+   ],
+   "flatness": 0.152,
+   "volume_l": 0.0046
+  },
+  {
+   "id": "omohyoid-muscle-r",
+   "name": "Omohyoid muscle",
+   "side": "R",
+   "file": "muscles/omohyoid-muscle-r.vtp",
+   "polys": 2706,
+   "centroid": [
+    0.06005,
+    -0.00958,
+    1.4345
+   ],
+   "axis": [
+    -0.61375,
+    0.55047,
+    0.56594
+   ],
+   "extent": [
+    -0.07559,
+    0.08805
+   ],
+   "flatness": 0.152,
+   "volume_l": 0.0046
+  },
+  {
+   "id": "opponens-digiti-minimi-muscle-of-hand-l",
+   "name": "Opponens digiti minimi muscle of hand",
+   "side": "L",
+   "file": "muscles/opponens-digiti-minimi-muscle-of-hand-l.vtp",
+   "polys": 420,
+   "centroid": [
+    -0.24219,
+    0.03551,
+    0.81252
+   ],
+   "axis": [
+    -0.29807,
+    -0.13485,
+    0.94497
+   ],
+   "extent": [
+    -0.02072,
+    0.03005
+   ],
+   "flatness": 0.283,
+   "volume_l": 0.0012
+  },
+  {
+   "id": "opponens-digiti-minimi-muscle-of-hand-r",
+   "name": "Opponens digiti minimi muscle of hand",
+   "side": "R",
+   "file": "muscles/opponens-digiti-minimi-muscle-of-hand-r.vtp",
+   "polys": 420,
+   "centroid": [
+    0.24219,
+    0.03551,
+    0.81252
+   ],
+   "axis": [
+    0.29807,
+    -0.13485,
+    0.94497
+   ],
+   "extent": [
+    -0.02072,
+    0.03005
+   ],
+   "flatness": 0.283,
+   "volume_l": 0.0012
+  },
+  {
+   "id": "opponens-pollicis-muscle-l",
+   "name": "Opponens pollicis muscle",
+   "side": "L",
+   "file": "muscles/opponens-pollicis-muscle-l.vtp",
+   "polys": 384,
+   "centroid": [
+    -0.28406,
+    0.03502,
+    0.83407
+   ],
+   "axis": [
+    0.74602,
+    -0.48253,
+    0.45893
+   ],
+   "extent": [
+    -0.03586,
+    0.0216
+   ],
+   "flatness": 0.168,
+   "volume_l": 0.001
+  },
+  {
+   "id": "opponens-pollicis-muscle-r",
+   "name": "Opponens pollicis muscle",
+   "side": "R",
+   "file": "muscles/opponens-pollicis-muscle-r.vtp",
+   "polys": 384,
+   "centroid": [
+    0.28406,
+    0.03502,
+    0.83407
+   ],
+   "axis": [
+    -0.74602,
+    -0.48253,
+    0.45893
+   ],
+   "extent": [
+    -0.03586,
+    0.0216
+   ],
+   "flatness": 0.168,
+   "volume_l": 0.001
+  },
+  {
+   "id": "orbicularis-oris-muscle-l",
+   "name": "Orbicularis oris muscle",
+   "side": "L",
+   "file": "muscles/orbicularis-oris-muscle-l.vtp",
+   "polys": 1880,
+   "centroid": [
+    -0.01419,
+    0.08283,
+    1.53209
+   ],
+   "axis": [
+    -0.29968,
+    -0.06412,
+    0.95188
+   ],
+   "extent": [
+    -0.02643,
+    0.01878
+   ],
+   "flatness": 0.95,
+   "volume_l": 0.0032
+  },
+  {
+   "id": "orbicularis-oris-muscle-r",
+   "name": "Orbicularis oris muscle",
+   "side": "R",
+   "file": "muscles/orbicularis-oris-muscle-r.vtp",
+   "polys": 1880,
+   "centroid": [
+    0.01419,
+    0.08283,
+    1.53209
+   ],
+   "axis": [
+    0.29968,
+    -0.06412,
+    0.95188
+   ],
+   "extent": [
+    -0.02643,
+    0.01878
+   ],
+   "flatness": 0.95,
+   "volume_l": 0.0032
+  },
+  {
+   "id": "orbital-part-of-orbicularis-oculi-l",
+   "name": "Orbital part of orbicularis oculi",
+   "side": "L",
+   "file": "muscles/orbital-part-of-orbicularis-oculi-l.vtp",
+   "polys": 2390,
+   "centroid": [
+    -0.03282,
+    0.07179,
+    1.59372
+   ],
+   "axis": [
+    0.81203,
+    0.40624,
+    0.41903
+   ],
+   "extent": [
+    -0.02689,
+    0.02757
+   ],
+   "flatness": 0.885,
+   "volume_l": 0.0044
+  },
+  {
+   "id": "orbital-part-of-orbicularis-oculi-r",
+   "name": "Orbital part of orbicularis oculi",
+   "side": "R",
+   "file": "muscles/orbital-part-of-orbicularis-oculi-r.vtp",
+   "polys": 2390,
+   "centroid": [
+    0.03282,
+    0.07179,
+    1.59372
+   ],
+   "axis": [
+    -0.81203,
+    0.40624,
+    0.41903
+   ],
+   "extent": [
+    -0.02689,
+    0.02757
+   ],
+   "flatness": 0.885,
+   "volume_l": 0.0044
+  },
+  {
+   "id": "palatopharyngeus-muscle-l",
+   "name": "Palatopharyngeus muscle",
+   "side": "L",
+   "file": "muscles/palatopharyngeus-muscle-l.vtp",
+   "polys": 4000,
+   "centroid": [
+    -0.00963,
+    0.0072,
+    1.50693
+   ],
+   "axis": [
+    0.03044,
+    0.11037,
+    0.99342
+   ],
+   "extent": [
+    -0.04399,
+    0.0444
+   ],
+   "flatness": 0.165,
+   "volume_l": 0.0027
+  },
+  {
+   "id": "palatopharyngeus-muscle-r",
+   "name": "Palatopharyngeus muscle",
+   "side": "R",
+   "file": "muscles/palatopharyngeus-muscle-r.vtp",
+   "polys": 4000,
+   "centroid": [
+    0.00963,
+    0.0072,
+    1.50693
+   ],
+   "axis": [
+    -0.03044,
+    0.11037,
+    0.99342
+   ],
+   "extent": [
+    -0.04399,
+    0.0444
+   ],
+   "flatness": 0.165,
+   "volume_l": 0.0027
+  },
+  {
+   "id": "palmar-interossei-muscles-l",
+   "name": "Palmar interossei muscles",
+   "side": "L",
+   "file": "muscles/palmar-interossei-muscles-l.vtp",
+   "polys": 174,
+   "centroid": [
+    -0.24527,
+    0.03625,
+    0.79858
+   ],
+   "axis": [
+    -0.05302,
+    -0.41444,
+    0.90853
+   ],
+   "extent": [
+    -0.02283,
+    0.01937
+   ],
+   "flatness": 0.094,
+   "volume_l": 0.0003
+  },
+  {
+   "id": "palmar-interossei-muscles-r",
+   "name": "Palmar interossei muscles",
+   "side": "R",
+   "file": "muscles/palmar-interossei-muscles-r.vtp",
+   "polys": 174,
+   "centroid": [
+    0.24527,
+    0.03625,
+    0.79858
+   ],
+   "axis": [
+    0.05302,
+    -0.41444,
+    0.90853
+   ],
+   "extent": [
+    -0.02283,
+    0.01937
+   ],
+   "flatness": 0.094,
+   "volume_l": 0.0003
+  },
+  {
+   "id": "palmaris-longus-muscle-l",
+   "name": "Palmaris longus muscle",
+   "side": "L",
+   "file": "muscles/palmaris-longus-muscle-l.vtp",
+   "polys": 4000,
+   "centroid": [
+    -0.24537,
+    0.02671,
+    0.88891
+   ],
+   "axis": [
+    0.24936,
+    -0.18817,
+    0.94995
+   ],
+   "extent": [
+    -0.11363,
+    0.23743
+   ],
+   "flatness": 0.106,
+   "volume_l": 0.0174
+  },
+  {
+   "id": "palmaris-longus-muscle-r",
+   "name": "Palmaris longus muscle",
+   "side": "R",
+   "file": "muscles/palmaris-longus-muscle-r.vtp",
+   "polys": 4000,
+   "centroid": [
+    0.24537,
+    0.02671,
+    0.88891
+   ],
+   "axis": [
+    -0.24936,
+    -0.18817,
+    0.94995
+   ],
+   "extent": [
+    -0.11363,
+    0.23743
+   ],
+   "flatness": 0.106,
+   "volume_l": 0.0174
+  },
+  {
+   "id": "palpebral-part-of-orbicularis-oculi-l",
+   "name": "Palpebral part of orbicularis oculi",
+   "side": "L",
+   "file": "muscles/palpebral-part-of-orbicularis-oculi-l.vtp",
+   "polys": 830,
+   "centroid": [
+    -0.03118,
+    0.0732,
+    1.591
+   ],
+   "axis": [
+    -0.97076,
+    -0.23967,
+    0.01313
+   ],
+   "extent": [
+    -0.01782,
+    0.01671
+   ],
+   "flatness": 0.599,
+   "volume_l": 0.0008
+  },
+  {
+   "id": "palpebral-part-of-orbicularis-oculi-r",
+   "name": "Palpebral part of orbicularis oculi",
+   "side": "R",
+   "file": "muscles/palpebral-part-of-orbicularis-oculi-r.vtp",
+   "polys": 830,
+   "centroid": [
+    0.03118,
+    0.0732,
+    1.591
+   ],
+   "axis": [
+    0.97076,
+    -0.23967,
+    0.01313
+   ],
+   "extent": [
+    -0.01782,
+    0.01671
+   ],
+   "flatness": 0.599,
+   "volume_l": 0.0008
+  },
+  {
+   "id": "pectineus-muscle-l",
+   "name": "Pectineus muscle",
+   "side": "L",
+   "file": "muscles/pectineus-muscle-l.vtp",
+   "polys": 1952,
+   "centroid": [
+    -0.05703,
+    0.03214,
+    0.81669
+   ],
+   "axis": [
+    0.46021,
+    0.33008,
+    0.82417
+   ],
+   "extent": [
+    -0.09619,
+    0.05399
+   ],
+   "flatness": 0.275,
+   "volume_l": 0.0568
+  },
+  {
+   "id": "pectineus-muscle-r",
+   "name": "Pectineus muscle",
+   "side": "R",
+   "file": "muscles/pectineus-muscle-r.vtp",
+   "polys": 1952,
+   "centroid": [
+    0.05703,
+    0.03214,
+    0.81669
+   ],
+   "axis": [
+    -0.46021,
+    0.33008,
+    0.82417
+   ],
+   "extent": [
+    -0.09619,
+    0.05399
+   ],
+   "flatness": 0.275,
+   "volume_l": 0.0568
+  },
+  {
+   "id": "pectoralis-minor-muscle-l",
+   "name": "Pectoralis minor muscle",
+   "side": "L",
+   "file": "muscles/pectoralis-minor-muscle-l.vtp",
+   "polys": 3998,
+   "centroid": [
+    -0.11028,
+    0.03711,
+    1.33443
+   ],
+   "axis": [
+    -0.15398,
+    -0.5508,
+    0.82031
+   ],
+   "extent": [
+    -0.08172,
+    0.08616
+   ],
+   "flatness": 0.291,
+   "volume_l": 0.0385
+  },
+  {
+   "id": "pectoralis-minor-muscle-r",
+   "name": "Pectoralis minor muscle",
+   "side": "R",
+   "file": "muscles/pectoralis-minor-muscle-r.vtp",
+   "polys": 3998,
+   "centroid": [
+    0.11028,
+    0.03711,
+    1.33443
+   ],
+   "axis": [
+    0.15398,
+    -0.5508,
+    0.82031
+   ],
+   "extent": [
+    -0.08172,
+    0.08616
+   ],
+   "flatness": 0.291,
+   "volume_l": 0.0385
+  },
+  {
+   "id": "piriformis-muscle-l",
+   "name": "Piriformis muscle",
+   "side": "L",
+   "file": "muscles/piriformis-muscle-l.vtp",
+   "polys": 1500,
+   "centroid": [
+    -0.06977,
+    -0.04534,
+    0.88732
+   ],
+   "axis": [
+    0.84634,
+    -0.31601,
+    0.42876
+   ],
+   "extent": [
+    -0.07497,
+    0.05638
+   ],
+   "flatness": 0.312,
+   "volume_l": 0.0309
+  },
+  {
+   "id": "piriformis-muscle-r",
+   "name": "Piriformis muscle",
+   "side": "R",
+   "file": "muscles/piriformis-muscle-r.vtp",
+   "polys": 1500,
+   "centroid": [
+    0.06977,
+    -0.04534,
+    0.88732
+   ],
+   "axis": [
+    -0.84634,
+    -0.31601,
+    0.42876
+   ],
+   "extent": [
+    -0.07497,
+    0.05638
+   ],
+   "flatness": 0.312,
+   "volume_l": 0.0309
+  },
+  {
+   "id": "plantar-interossei-muscles-l",
+   "name": "Plantar interossei muscles",
+   "side": "L",
+   "file": "muscles/plantar-interossei-muscles-l.vtp",
+   "polys": 1242,
+   "centroid": [
+    -0.10831,
+    0.0485,
+    0.02789
+   ],
+   "axis": [
+    0.19509,
+    -0.93813,
+    0.2861
+   ],
+   "extent": [
+    -0.03627,
+    0.03405
+   ],
+   "flatness": 0.563,
+   "volume_l": 0.0013
+  },
+  {
+   "id": "plantar-interossei-muscles-r",
+   "name": "Plantar interossei muscles",
+   "side": "R",
+   "file": "muscles/plantar-interossei-muscles-r.vtp",
+   "polys": 1242,
+   "centroid": [
+    0.10831,
+    0.0485,
+    0.02789
+   ],
+   "axis": [
+    -0.19509,
+    -0.93813,
+    0.2861
+   ],
+   "extent": [
+    -0.03627,
+    0.03405
+   ],
+   "flatness": 0.563,
+   "volume_l": 0.0013
+  },
+  {
+   "id": "plantaris-muscle-l",
+   "name": "Plantaris muscle",
+   "side": "L",
+   "file": "muscles/plantaris-muscle-l.vtp",
+   "polys": 4000,
+   "centroid": [
+    -0.07665,
+    -0.0625,
+    0.31046
+   ],
+   "axis": [
+    -0.09382,
+    0.07924,
+    0.99243
+   ],
+   "extent": [
+    -0.28312,
+    0.20494
+   ],
+   "flatness": 0.079,
+   "volume_l": 0.0304
+  },
+  {
+   "id": "plantaris-muscle-r",
+   "name": "Plantaris muscle",
+   "side": "R",
+   "file": "muscles/plantaris-muscle-r.vtp",
+   "polys": 4000,
+   "centroid": [
+    0.07666,
+    -0.0625,
+    0.31054
+   ],
+   "axis": [
+    0.09379,
+    0.07922,
+    0.99243
+   ],
+   "extent": [
+    -0.28321,
+    0.20485
+   ],
+   "flatness": 0.079,
+   "volume_l": 0.0304
+  },
+  {
+   "id": "platysma-l",
+   "name": "Platysma",
+   "side": "L",
+   "file": "muscles/platysma-l.vtp",
+   "polys": 3998,
+   "centroid": [
+    -0.04073,
+    0.02571,
+    1.45734
+   ],
+   "axis": [
+    0.62664,
+    0.51651,
+    0.58356
+   ],
+   "extent": [
+    -0.1151,
+    0.08075
+   ],
+   "flatness": 0.593,
+   "volume_l": 0.0342
+  },
+  {
+   "id": "platysma-r",
+   "name": "Platysma",
+   "side": "R",
+   "file": "muscles/platysma-r.vtp",
+   "polys": 3998,
+   "centroid": [
+    0.04073,
+    0.02571,
+    1.45734
+   ],
+   "axis": [
+    -0.62664,
+    0.51651,
+    0.58356
+   ],
+   "extent": [
+    -0.1151,
+    0.08075
+   ],
+   "flatness": 0.593,
+   "volume_l": 0.0342
+  },
+  {
+   "id": "popliteus-muscle-l",
+   "name": "Popliteus muscle",
+   "side": "L",
+   "file": "muscles/popliteus-muscle-l.vtp",
+   "polys": 1132,
+   "centroid": [
+    -0.08657,
+    -0.0494,
+    0.40234
+   ],
+   "axis": [
+    -0.48824,
+    -0.13863,
+    0.86163
+   ],
+   "extent": [
+    -0.06822,
+    0.06648
+   ],
+   "flatness": 0.222,
+   "volume_l": 0.0211
+  },
+  {
+   "id": "popliteus-muscle-r",
+   "name": "Popliteus muscle",
+   "side": "R",
+   "file": "muscles/popliteus-muscle-r.vtp",
+   "polys": 1132,
+   "centroid": [
+    0.08657,
+    -0.0494,
+    0.40234
+   ],
+   "axis": [
+    0.48824,
+    -0.13863,
+    0.86163
+   ],
+   "extent": [
+    -0.06822,
+    0.06648
+   ],
+   "flatness": 0.222,
+   "volume_l": 0.0211
+  },
+  {
+   "id": "posterior-belly-of-digastric-muscle-l",
+   "name": "Posterior belly of digastric muscle",
+   "side": "L",
+   "file": "muscles/posterior-belly-of-digastric-muscle-l.vtp",
+   "polys": 1276,
+   "centroid": [
+    -0.04025,
+    -0.00311,
+    1.54283
+   ],
+   "axis": [
+    -0.47279,
+    -0.56695,
+    0.67456
+   ],
+   "extent": [
+    -0.06281,
+    0.03705
+   ],
+   "flatness": 0.125,
+   "volume_l": 0.0027
+  },
+  {
+   "id": "posterior-belly-of-digastric-muscle-r",
+   "name": "Posterior belly of digastric muscle",
+   "side": "R",
+   "file": "muscles/posterior-belly-of-digastric-muscle-r.vtp",
+   "polys": 1276,
+   "centroid": [
+    0.04025,
+    -0.00311,
+    1.54283
+   ],
+   "axis": [
+    0.47279,
+    -0.56695,
+    0.67456
+   ],
+   "extent": [
+    -0.06281,
+    0.03705
+   ],
+   "flatness": 0.125,
+   "volume_l": 0.0027
+  },
+  {
+   "id": "posterior-crico-arytenoid-muscle-l",
+   "name": "Posterior crico-arytenoid muscle",
+   "side": "L",
+   "file": "muscles/posterior-crico-arytenoid-muscle-l.vtp",
+   "polys": 1812,
+   "centroid": [
+    -0.00645,
+    -0.0036,
+    1.47109
+   ],
+   "axis": [
+    -0.16765,
+    0.18369,
+    0.96858
+   ],
+   "extent": [
+    -0.00541,
+    0.00893
+   ],
+   "flatness": 0.754,
+   "volume_l": 0.0002
+  },
+  {
+   "id": "posterior-crico-arytenoid-muscle-r",
+   "name": "Posterior crico-arytenoid muscle",
+   "side": "R",
+   "file": "muscles/posterior-crico-arytenoid-muscle-r.vtp",
+   "polys": 1812,
+   "centroid": [
+    0.00645,
+    -0.0036,
+    1.47109
+   ],
+   "axis": [
+    0.16765,
+    0.18369,
+    0.96858
+   ],
+   "extent": [
+    -0.00541,
+    0.00893
+   ],
+   "flatness": 0.754,
+   "volume_l": 0.0002
+  },
+  {
+   "id": "procerus-muscle-l",
+   "name": "Procerus muscle",
+   "side": "L",
+   "file": "muscles/procerus-muscle-l.vtp",
+   "polys": 546,
+   "centroid": [
+    -0.00908,
+    0.08626,
+    1.61433
+   ],
+   "axis": [
+    -0.33667,
+    -0.02636,
+    0.94125
+   ],
+   "extent": [
+    -0.02142,
+    0.01436
+   ],
+   "flatness": 0.593,
+   "volume_l": 0.0004
+  },
+  {
+   "id": "procerus-muscle-r",
+   "name": "Procerus muscle",
+   "side": "R",
+   "file": "muscles/procerus-muscle-r.vtp",
+   "polys": 546,
+   "centroid": [
+    0.00908,
+    0.08626,
+    1.61433
+   ],
+   "axis": [
+    0.33667,
+    -0.02636,
+    0.94125
+   ],
+   "extent": [
+    -0.02142,
+    0.01436
+   ],
+   "flatness": 0.593,
+   "volume_l": 0.0004
+  },
+  {
+   "id": "pronator-quadratus-l",
+   "name": "Pronator quadratus",
+   "side": "L",
+   "file": "muscles/pronator-quadratus-l.vtp",
+   "polys": 1020,
+   "centroid": [
+    -0.25408,
+    0.01381,
+    0.89584
+   ],
+   "axis": [
+    0.3576,
+    -0.33453,
+    0.8719
+   ],
+   "extent": [
+    -0.03216,
+    0.03346
+   ],
+   "flatness": 0.62,
+   "volume_l": 0.0072
+  },
+  {
+   "id": "pronator-quadratus-r",
+   "name": "Pronator quadratus",
+   "side": "R",
+   "file": "muscles/pronator-quadratus-r.vtp",
+   "polys": 1020,
+   "centroid": [
+    0.25408,
+    0.01381,
+    0.89584
+   ],
+   "axis": [
+    -0.3576,
+    -0.33453,
+    0.8719
+   ],
+   "extent": [
+    -0.03216,
+    0.03346
+   ],
+   "flatness": 0.62,
+   "volume_l": 0.0072
+  },
+  {
+   "id": "psoas-major-l",
+   "name": "Psoas major",
+   "side": "L",
+   "file": "muscles/psoas-major-l.vtp",
+   "polys": 4000,
+   "centroid": [
+    -0.04506,
+    -0.00587,
+    0.99162
+   ],
+   "axis": [
+    0.19551,
+    -0.04616,
+    0.97962
+   ],
+   "extent": [
+    -0.22235,
+    0.1661
+   ],
+   "flatness": 0.179,
+   "volume_l": 0.1954
+  },
+  {
+   "id": "psoas-major-r",
+   "name": "Psoas major",
+   "side": "R",
+   "file": "muscles/psoas-major-r.vtp",
+   "polys": 4000,
+   "centroid": [
+    0.04506,
+    -0.00587,
+    0.99162
+   ],
+   "axis": [
+    -0.19551,
+    -0.04616,
+    0.97962
+   ],
+   "extent": [
+    -0.22235,
+    0.1661
+   ],
+   "flatness": 0.179,
+   "volume_l": 0.1954
+  },
+  {
+   "id": "pubo-analis-muscle-l",
+   "name": "Pubo-analis muscle",
+   "side": "L",
+   "file": "muscles/pubo-analis-muscle-l.vtp",
+   "polys": 1440,
+   "centroid": [
+    -0.01637,
+    -0.02322,
+    0.8259
+   ],
+   "axis": [
+    -0.17272,
+    0.97403,
+    0.14643
+   ],
+   "extent": [
+    -0.04248,
+    0.04077
+   ],
+   "flatness": 0.325,
+   "volume_l": 0.0062
+  },
+  {
+   "id": "pubo-analis-muscle-r",
+   "name": "Pubo-analis muscle",
+   "side": "R",
+   "file": "muscles/pubo-analis-muscle-r.vtp",
+   "polys": 1440,
+   "centroid": [
+    0.01637,
+    -0.02322,
+    0.8259
+   ],
+   "axis": [
+    0.17272,
+    0.97403,
+    0.14643
+   ],
+   "extent": [
+    -0.04248,
+    0.04077
+   ],
+   "flatness": 0.325,
+   "volume_l": 0.0062
+  },
+  {
+   "id": "pubococcygeus-muscle-l",
+   "name": "Pubococcygeus muscle",
+   "side": "L",
+   "file": "muscles/pubococcygeus-muscle-l.vtp",
+   "polys": 2512,
+   "centroid": [
+    -0.01661,
+    -0.03445,
+    0.83532
+   ],
+   "axis": [
+    0.1161,
+    -0.98128,
+    0.15364
+   ],
+   "extent": [
+    -0.05148,
+    0.04566
+   ],
+   "flatness": 0.311,
+   "volume_l": 0.0064
+  },
+  {
+   "id": "pubococcygeus-muscle-r",
+   "name": "Pubococcygeus muscle",
+   "side": "R",
+   "file": "muscles/pubococcygeus-muscle-r.vtp",
+   "polys": 2512,
+   "centroid": [
+    0.01661,
+    -0.03445,
+    0.83532
+   ],
+   "axis": [
+    -0.1161,
+    -0.98128,
+    0.15364
+   ],
+   "extent": [
+    -0.05148,
+    0.04566
+   ],
+   "flatness": 0.311,
+   "volume_l": 0.0064
+  },
+  {
+   "id": "pyramidalis-muscle-l",
+   "name": "Pyramidalis muscle",
+   "side": "L",
+   "file": "muscles/pyramidalis-muscle-l.vtp",
+   "polys": 1112,
+   "centroid": [
+    -0.01416,
+    0.06113,
+    0.87683
+   ],
+   "axis": [
+    0.15187,
+    0.35591,
+    0.9221
+   ],
+   "extent": [
+    -0.03026,
+    0.04763
+   ],
+   "flatness": 0.34,
+   "volume_l": 0.0022
+  },
+  {
+   "id": "pyramidalis-muscle-r",
+   "name": "Pyramidalis muscle",
+   "side": "R",
+   "file": "muscles/pyramidalis-muscle-r.vtp",
+   "polys": 1112,
+   "centroid": [
+    0.01416,
+    0.06113,
+    0.87683
+   ],
+   "axis": [
+    -0.15187,
+    0.35591,
+    0.9221
+   ],
+   "extent": [
+    -0.03026,
+    0.04763
+   ],
+   "flatness": 0.34,
+   "volume_l": 0.0022
+  },
+  {
+   "id": "quadratus-femoris-muscle-l",
+   "name": "Quadratus femoris muscle",
+   "side": "L",
+   "file": "muscles/quadratus-femoris-muscle-l.vtp",
+   "polys": 1646,
+   "centroid": [
+    -0.09123,
+    -0.03358,
+    0.81491
+   ],
+   "axis": [
+    -0.9435,
+    -0.13277,
+    0.30361
+   ],
+   "extent": [
+    -0.03802,
+    0.03609
+   ],
+   "flatness": 0.551,
+   "volume_l": 0.0129
+  },
+  {
+   "id": "quadratus-femoris-muscle-r",
+   "name": "Quadratus femoris muscle",
+   "side": "R",
+   "file": "muscles/quadratus-femoris-muscle-r.vtp",
+   "polys": 1646,
+   "centroid": [
+    0.09123,
+    -0.03358,
+    0.81491
+   ],
+   "axis": [
+    0.9435,
+    -0.13277,
+    0.30361
+   ],
+   "extent": [
+    -0.03802,
+    0.03609
+   ],
+   "flatness": 0.551,
+   "volume_l": 0.0129
+  },
+  {
+   "id": "quadratus-lumborum-muscle-l",
+   "name": "Quadratus lumborum muscle",
+   "side": "L",
+   "file": "muscles/quadratus-lumborum-muscle-l.vtp",
+   "polys": 2832,
+   "centroid": [
+    -0.04028,
+    -0.05354,
+    1.05096
+   ],
+   "axis": [
+    0.03244,
+    0.0465,
+    0.99839
+   ],
+   "extent": [
+    -0.11107,
+    0.09646
+   ],
+   "flatness": 0.214,
+   "volume_l": 0.0868
+  },
+  {
+   "id": "quadratus-lumborum-muscle-r",
+   "name": "Quadratus lumborum muscle",
+   "side": "R",
+   "file": "muscles/quadratus-lumborum-muscle-r.vtp",
+   "polys": 2832,
+   "centroid": [
+    0.04028,
+    -0.05354,
+    1.05096
+   ],
+   "axis": [
+    -0.03244,
+    0.0465,
+    0.99839
+   ],
+   "extent": [
+    -0.11107,
+    0.09646
+   ],
+   "flatness": 0.214,
+   "volume_l": 0.0868
+  },
+  {
+   "id": "quadratus-plantae-muscle-l",
+   "name": "Quadratus plantae muscle",
+   "side": "L",
+   "file": "muscles/quadratus-plantae-muscle-l.vtp",
+   "polys": 1176,
+   "centroid": [
+    -0.08564,
+    -0.02263,
+    0.02499
+   ],
+   "axis": [
+    -0.2914,
+    0.9552,
+    0.05174
+   ],
+   "extent": [
+    -0.03823,
+    0.04015
+   ],
+   "flatness": 0.316,
+   "volume_l": 0.0048
+  },
+  {
+   "id": "quadratus-plantae-muscle-r",
+   "name": "Quadratus plantae muscle",
+   "side": "R",
+   "file": "muscles/quadratus-plantae-muscle-r.vtp",
+   "polys": 1176,
+   "centroid": [
+    0.08564,
+    -0.02263,
+    0.02499
+   ],
+   "axis": [
+    0.2914,
+    0.9552,
+    0.05174
+   ],
+   "extent": [
+    -0.03823,
+    0.04015
+   ],
+   "flatness": 0.316,
+   "volume_l": 0.0048
+  },
+  {
+   "id": "radial-head-of-flexor-digitorum-superficialis-l",
+   "name": "Radial head of flexor digitorum superficialis",
+   "side": "L",
+   "file": "muscles/radial-head-of-flexor-digitorum-superficialis-l.vtp",
+   "polys": 1276,
+   "centroid": [
+    -0.24934,
+    0.00458,
+    0.9681
+   ],
+   "axis": [
+    0.09616,
+    -0.24703,
+    0.96422
+   ],
+   "extent": [
+    -0.10776,
+    0.08541
+   ],
+   "flatness": 0.131,
+   "volume_l": 0.0194
+  },
+  {
+   "id": "radial-head-of-flexor-digitorum-superficialis-r",
+   "name": "Radial head of flexor digitorum superficialis",
+   "side": "R",
+   "file": "muscles/radial-head-of-flexor-digitorum-superficialis-r.vtp",
+   "polys": 1276,
+   "centroid": [
+    0.24934,
+    0.00458,
+    0.9681
+   ],
+   "axis": [
+    -0.09616,
+    -0.24703,
+    0.96422
+   ],
+   "extent": [
+    -0.10776,
+    0.08541
+   ],
+   "flatness": 0.131,
+   "volume_l": 0.0194
+  },
+  {
+   "id": "rectus-abdominis-muscle-l",
+   "name": "Rectus abdominis muscle",
+   "side": "L",
+   "file": "muscles/rectus-abdominis-muscle-l.vtp",
+   "polys": 4000,
+   "centroid": [
+    -0.04189,
+    0.09767,
+    1.11585
+   ],
+   "axis": [
+    -0.05303,
+    0.11661,
+    0.99176
+   ],
+   "extent": [
+    -0.27136,
+    0.14251
+   ],
+   "flatness": 0.192,
+   "volume_l": 0.2525
+  },
+  {
+   "id": "rectus-abdominis-muscle-r",
+   "name": "Rectus abdominis muscle",
+   "side": "R",
+   "file": "muscles/rectus-abdominis-muscle-r.vtp",
+   "polys": 4000,
+   "centroid": [
+    0.04189,
+    0.09767,
+    1.11585
+   ],
+   "axis": [
+    0.05303,
+    0.11661,
+    0.99176
+   ],
+   "extent": [
+    -0.27136,
+    0.14251
+   ],
+   "flatness": 0.192,
+   "volume_l": 0.2525
+  },
+  {
+   "id": "rectus-anterior-capitis-muscle-l",
+   "name": "Rectus anterior capitis muscle",
+   "side": "L",
+   "file": "muscles/rectus-anterior-capitis-muscle-l.vtp",
+   "polys": 396,
+   "centroid": [
+    -0.01408,
+    -0.00241,
+    1.55515
+   ],
+   "axis": [
+    0.74384,
+    0.0904,
+    0.66221
+   ],
+   "extent": [
+    -0.01706,
+    0.014
+   ],
+   "flatness": 0.383,
+   "volume_l": 0.0006
+  },
+  {
+   "id": "rectus-anterior-capitis-muscle-r",
+   "name": "Rectus anterior capitis muscle",
+   "side": "R",
+   "file": "muscles/rectus-anterior-capitis-muscle-r.vtp",
+   "polys": 396,
+   "centroid": [
+    0.01408,
+    -0.00241,
+    1.55515
+   ],
+   "axis": [
+    -0.74384,
+    0.0904,
+    0.66221
+   ],
+   "extent": [
+    -0.01706,
+    0.014
+   ],
+   "flatness": 0.383,
+   "volume_l": 0.0006
+  },
+  {
+   "id": "rectus-femoris-muscle-l",
+   "name": "Rectus femoris muscle",
+   "side": "L",
+   "file": "muscles/rectus-femoris-muscle-l.vtp",
+   "polys": 3998,
+   "centroid": [
+    -0.10323,
+    0.02312,
+    0.65205
+   ],
+   "axis": [
+    -0.06402,
+    0.01375,
+    0.99785
+   ],
+   "extent": [
+    -0.28259,
+    0.26349
+   ],
+   "flatness": 0.114,
+   "volume_l": 0.3356
+  },
+  {
+   "id": "rectus-femoris-muscle-r",
+   "name": "Rectus femoris muscle",
+   "side": "R",
+   "file": "muscles/rectus-femoris-muscle-r.vtp",
+   "polys": 3998,
+   "centroid": [
+    0.10323,
+    0.02312,
+    0.65205
+   ],
+   "axis": [
+    0.06402,
+    0.01375,
+    0.99785
+   ],
+   "extent": [
+    -0.28259,
+    0.26349
+   ],
+   "flatness": 0.114,
+   "volume_l": 0.3356
+  },
+  {
+   "id": "rectus-lateralis-capitis-muscle-l",
+   "name": "Rectus lateralis capitis muscle",
+   "side": "L",
+   "file": "muscles/rectus-lateralis-capitis-muscle-l.vtp",
+   "polys": 360,
+   "centroid": [
+    -0.03625,
+    -0.01482,
+    1.55058
+   ],
+   "axis": [
+    -0.0792,
+    -0.52894,
+    0.84495
+   ],
+   "extent": [
+    -0.00958,
+    0.01196
+   ],
+   "flatness": 0.505,
+   "volume_l": 0.0005
+  },
+  {
+   "id": "rectus-lateralis-capitis-muscle-r",
+   "name": "Rectus lateralis capitis muscle",
+   "side": "R",
+   "file": "muscles/rectus-lateralis-capitis-muscle-r.vtp",
+   "polys": 360,
+   "centroid": [
+    0.03625,
+    -0.01482,
+    1.55058
+   ],
+   "axis": [
+    0.0792,
+    -0.52894,
+    0.84495
+   ],
+   "extent": [
+    -0.00958,
+    0.01196
+   ],
+   "flatness": 0.505,
+   "volume_l": 0.0005
+  },
+  {
+   "id": "rectus-posterior-major-capitis-muscle-l",
+   "name": "Rectus posterior major capitis muscle",
+   "side": "L",
+   "file": "muscles/rectus-posterior-major-capitis-muscle-l.vtp",
+   "polys": 788,
+   "centroid": [
+    -0.02043,
+    -0.04979,
+    1.54303
+   ],
+   "axis": [
+    -0.57124,
+    0.00238,
+    0.82078
+   ],
+   "extent": [
+    -0.03481,
+    0.02106
+   ],
+   "flatness": 0.39,
+   "volume_l": 0.0044
+  },
+  {
+   "id": "rectus-posterior-major-capitis-muscle-r",
+   "name": "Rectus posterior major capitis muscle",
+   "side": "R",
+   "file": "muscles/rectus-posterior-major-capitis-muscle-r.vtp",
+   "polys": 788,
+   "centroid": [
+    0.02043,
+    -0.04979,
+    1.54303
+   ],
+   "axis": [
+    0.57124,
+    0.00238,
+    0.82078
+   ],
+   "extent": [
+    -0.03481,
+    0.02106
+   ],
+   "flatness": 0.39,
+   "volume_l": 0.0044
+  },
+  {
+   "id": "rectus-posterior-minor-capitis-muscle-l",
+   "name": "Rectus posterior minor capitis muscle",
+   "side": "L",
+   "file": "muscles/rectus-posterior-minor-capitis-muscle-l.vtp",
+   "polys": 432,
+   "centroid": [
+    -0.01053,
+    -0.05733,
+    1.55247
+   ],
+   "axis": [
+    -0.3873,
+    -0.63072,
+    0.67245
+   ],
+   "extent": [
+    -0.02059,
+    0.01371
+   ],
+   "flatness": 0.537,
+   "volume_l": 0.0014
+  },
+  {
+   "id": "rectus-posterior-minor-capitis-muscle-r",
+   "name": "Rectus posterior minor capitis muscle",
+   "side": "R",
+   "file": "muscles/rectus-posterior-minor-capitis-muscle-r.vtp",
+   "polys": 432,
+   "centroid": [
+    0.01053,
+    -0.05733,
+    1.55247
+   ],
+   "axis": [
+    0.3873,
+    -0.63072,
+    0.67245
+   ],
+   "extent": [
+    -0.02059,
+    0.01371
+   ],
+   "flatness": 0.537,
+   "volume_l": 0.0014
+  },
+  {
+   "id": "rhomboid-major-muscle-l",
+   "name": "Rhomboid major muscle",
+   "side": "L",
+   "file": "muscles/rhomboid-major-muscle-l.vtp",
+   "polys": 4000,
+   "centroid": [
+    -0.03044,
+    -0.09992,
+    1.36079
+   ],
+   "axis": [
+    0.46294,
+    0.12016,
+    0.87821
+   ],
+   "extent": [
+    -0.11629,
+    0.0851
+   ],
+   "flatness": 0.242,
+   "volume_l": 0.0214
+  },
+  {
+   "id": "rhomboid-major-muscle-r",
+   "name": "Rhomboid major muscle",
+   "side": "R",
+   "file": "muscles/rhomboid-major-muscle-r.vtp",
+   "polys": 4000,
+   "centroid": [
+    0.03044,
+    -0.09992,
+    1.36079
+   ],
+   "axis": [
+    -0.46294,
+    0.12016,
+    0.87821
+   ],
+   "extent": [
+    -0.11629,
+    0.0851
+   ],
+   "flatness": 0.242,
+   "volume_l": 0.0214
+  },
+  {
+   "id": "rhomboid-minor-muscle-l",
+   "name": "Rhomboid minor muscle",
+   "side": "L",
+   "file": "muscles/rhomboid-minor-muscle-l.vtp",
+   "polys": 1494,
+   "centroid": [
+    -0.02822,
+    -0.08891,
+    1.4131
+   ],
+   "axis": [
+    0.58229,
+    0.18792,
+    0.79097
+   ],
+   "extent": [
+    -0.06386,
+    0.05829
+   ],
+   "flatness": 0.141,
+   "volume_l": 0.006
+  },
+  {
+   "id": "rhomboid-minor-muscle-r",
+   "name": "Rhomboid minor muscle",
+   "side": "R",
+   "file": "muscles/rhomboid-minor-muscle-r.vtp",
+   "polys": 1494,
+   "centroid": [
+    0.02822,
+    -0.08891,
+    1.4131
+   ],
+   "axis": [
+    -0.58229,
+    0.18792,
+    0.79097
+   ],
+   "extent": [
+    -0.06386,
+    0.05829
+   ],
+   "flatness": 0.141,
+   "volume_l": 0.006
+  },
+  {
+   "id": "risorius-muscle-l",
+   "name": "Risorius muscle",
+   "side": "L",
+   "file": "muscles/risorius-muscle-l.vtp",
+   "polys": 592,
+   "centroid": [
+    -0.04088,
+    0.05127,
+    1.52937
+   ],
+   "axis": [
+    0.49578,
+    0.84226,
+    0.21165
+   ],
+   "extent": [
+    -0.00908,
+    0.02381
+   ],
+   "flatness": 0.766,
+   "volume_l": 0.0007
+  },
+  {
+   "id": "risorius-muscle-r",
+   "name": "Risorius muscle",
+   "side": "R",
+   "file": "muscles/risorius-muscle-r.vtp",
+   "polys": 592,
+   "centroid": [
+    0.04088,
+    0.05127,
+    1.52937
+   ],
+   "axis": [
+    -0.49578,
+    0.84226,
+    0.21165
+   ],
+   "extent": [
+    -0.00908,
+    0.02381
+   ],
+   "flatness": 0.766,
+   "volume_l": 0.0007
+  },
+  {
+   "id": "rotatores-l",
+   "name": "Rotatores",
+   "side": "L",
+   "file": "muscles/rotatores-l.vtp",
+   "polys": 4000,
+   "centroid": [
+    -0.01458,
+    -0.06735,
+    1.23462
+   ],
+   "axis": [
+    0.00652,
+    0.00055,
+    0.99998
+   ],
+   "extent": [
+    -0.34964,
+    0.28586
+   ],
+   "flatness": 0.1,
+   "volume_l": 0.0388
+  },
+  {
+   "id": "rotatores-r",
+   "name": "Rotatores",
+   "side": "R",
+   "file": "muscles/rotatores-r.vtp",
+   "polys": 4000,
+   "centroid": [
+    0.01458,
+    -0.06735,
+    1.23462
+   ],
+   "axis": [
+    -0.00652,
+    0.00055,
+    0.99998
+   ],
+   "extent": [
+    -0.34964,
+    0.28586
+   ],
+   "flatness": 0.1,
+   "volume_l": 0.0388
+  },
+  {
+   "id": "sartorius-muscle-l",
+   "name": "Sartorius muscle",
+   "side": "L",
+   "file": "muscles/sartorius-muscle-l.vtp",
+   "polys": 3998,
+   "centroid": [
+    -0.06415,
+    0.01954,
+    0.6509
+   ],
+   "axis": [
+    -0.12965,
+    0.12578,
+    0.98355
+   ],
+   "extent": [
+    -0.30062,
+    0.30369
+   ],
+   "flatness": 0.113,
+   "volume_l": 0.0724
+  },
+  {
+   "id": "sartorius-muscle-r",
+   "name": "Sartorius muscle",
+   "side": "R",
+   "file": "muscles/sartorius-muscle-r.vtp",
+   "polys": 3998,
+   "centroid": [
+    0.06415,
+    0.01954,
+    0.6509
+   ],
+   "axis": [
+    0.12965,
+    0.12578,
+    0.98355
+   ],
+   "extent": [
+    -0.30062,
+    0.30369
+   ],
+   "flatness": 0.113,
+   "volume_l": 0.0724
+  },
+  {
+   "id": "scalenus-anterior-muscle-l",
+   "name": "Scalenus anterior muscle",
+   "side": "L",
+   "file": "muscles/scalenus-anterior-muscle-l.vtp",
+   "polys": 1386,
+   "centroid": [
+    -0.03354,
+    -0.00107,
+    1.4551
+   ],
+   "axis": [
+    0.34516,
+    -0.1841,
+    0.92031
+   ],
+   "extent": [
+    -0.04844,
+    0.04036
+   ],
+   "flatness": 0.169,
+   "volume_l": 0.0028
+  },
+  {
+   "id": "scalenus-anterior-muscle-r",
+   "name": "Scalenus anterior muscle",
+   "side": "R",
+   "file": "muscles/scalenus-anterior-muscle-r.vtp",
+   "polys": 1386,
+   "centroid": [
+    0.03354,
+    -0.00107,
+    1.4551
+   ],
+   "axis": [
+    -0.34516,
+    -0.1841,
+    0.92031
+   ],
+   "extent": [
+    -0.04844,
+    0.04036
+   ],
+   "flatness": 0.169,
+   "volume_l": 0.0028
+  },
+  {
+   "id": "scalenus-medius-muscle-l",
+   "name": "Scalenus medius muscle",
+   "side": "L",
+   "file": "muscles/scalenus-medius-muscle-l.vtp",
+   "polys": 2078,
+   "centroid": [
+    -0.03562,
+    -0.01195,
+    1.46535
+   ],
+   "axis": [
+    0.24212,
+    -0.01836,
+    0.97007
+   ],
+   "extent": [
+    -0.04876,
+    0.05435
+   ],
+   "flatness": 0.238,
+   "volume_l": 0.0048
+  },
+  {
+   "id": "scalenus-medius-muscle-r",
+   "name": "Scalenus medius muscle",
+   "side": "R",
+   "file": "muscles/scalenus-medius-muscle-r.vtp",
+   "polys": 2078,
+   "centroid": [
+    0.03562,
+    -0.01195,
+    1.46535
+   ],
+   "axis": [
+    -0.24212,
+    -0.01836,
+    0.97007
+   ],
+   "extent": [
+    -0.04876,
+    0.05435
+   ],
+   "flatness": 0.238,
+   "volume_l": 0.0048
+  },
+  {
+   "id": "scalenus-posterior-muscle-l",
+   "name": "Scalenus posterior muscle",
+   "side": "L",
+   "file": "muscles/scalenus-posterior-muscle-l.vtp",
+   "polys": 1326,
+   "centroid": [
+    -0.04583,
+    -0.02377,
+    1.44846
+   ],
+   "axis": [
+    0.58999,
+    0.32415,
+    0.73948
+   ],
+   "extent": [
+    -0.03531,
+    0.0353
+   ],
+   "flatness": 0.226,
+   "volume_l": 0.0023
+  },
+  {
+   "id": "scalenus-posterior-muscle-r",
+   "name": "Scalenus posterior muscle",
+   "side": "R",
+   "file": "muscles/scalenus-posterior-muscle-r.vtp",
+   "polys": 1326,
+   "centroid": [
+    0.04583,
+    -0.02377,
+    1.44846
+   ],
+   "axis": [
+    -0.58999,
+    0.32415,
+    0.73948
+   ],
+   "extent": [
+    -0.03531,
+    0.0353
+   ],
+   "flatness": 0.226,
+   "volume_l": 0.0023
+  },
+  {
+   "id": "scapular-spinal-part-of-deltoid-muscle-l",
+   "name": "Scapular spinal part of deltoid muscle",
+   "side": "L",
+   "file": "muscles/scapular-spinal-part-of-deltoid-muscle-l.vtp",
+   "polys": 4000,
+   "centroid": [
+    -0.18274,
+    -0.06727,
+    1.34267
+   ],
+   "axis": [
+    0.59899,
+    -0.31277,
+    0.73715
+   ],
+   "extent": [
+    -0.09512,
+    0.08684
+   ],
+   "flatness": 0.444,
+   "volume_l": 0.1907
+  },
+  {
+   "id": "scapular-spinal-part-of-deltoid-muscle-r",
+   "name": "Scapular spinal part of deltoid muscle",
+   "side": "R",
+   "file": "muscles/scapular-spinal-part-of-deltoid-muscle-r.vtp",
+   "polys": 4000,
+   "centroid": [
+    0.18274,
+    -0.06727,
+    1.34267
+   ],
+   "axis": [
+    -0.59899,
+    -0.31277,
+    0.73715
+   ],
+   "extent": [
+    -0.09512,
+    0.08684
+   ],
+   "flatness": 0.444,
+   "volume_l": 0.1907
+  },
+  {
+   "id": "semimembranosus-muscle-l",
+   "name": "Semimembranosus muscle",
+   "side": "L",
+   "file": "muscles/semimembranosus-muscle-l.vtp",
+   "polys": 4000,
+   "centroid": [
+    -0.04572,
+    -0.0428,
+    0.58097
+   ],
+   "axis": [
+    0.01967,
+    0.01119,
+    0.99974
+   ],
+   "extent": [
+    -0.19557,
+    0.22244
+   ],
+   "flatness": 0.141,
+   "volume_l": 0.3341
+  },
+  {
+   "id": "semimembranosus-muscle-r",
+   "name": "Semimembranosus muscle",
+   "side": "R",
+   "file": "muscles/semimembranosus-muscle-r.vtp",
+   "polys": 4000,
+   "centroid": [
+    0.04572,
+    -0.0428,
+    0.58097
+   ],
+   "axis": [
+    -0.01967,
+    0.01119,
+    0.99974
+   ],
+   "extent": [
+    -0.19557,
+    0.22244
+   ],
+   "flatness": 0.141,
+   "volume_l": 0.3341
+  },
+  {
+   "id": "semispinalis-colli-muscle-l",
+   "name": "Semispinalis colli muscle",
+   "side": "L",
+   "file": "muscles/semispinalis-colli-muscle-l.vtp",
+   "polys": 2584,
+   "centroid": [
+    -0.01789,
+    -0.05779,
+    1.44129
+   ],
+   "axis": [
+    0.14061,
+    0.35332,
+    0.92487
+   ],
+   "extent": [
+    -0.08513,
+    0.06601
+   ],
+   "flatness": 0.236,
+   "volume_l": 0.0067
+  },
+  {
+   "id": "semispinalis-colli-muscle-r",
+   "name": "Semispinalis colli muscle",
+   "side": "R",
+   "file": "muscles/semispinalis-colli-muscle-r.vtp",
+   "polys": 2584,
+   "centroid": [
+    0.01789,
+    -0.05779,
+    1.44129
+   ],
+   "axis": [
+    -0.14061,
+    0.35332,
+    0.92487
+   ],
+   "extent": [
+    -0.08513,
+    0.06601
+   ],
+   "flatness": 0.236,
+   "volume_l": 0.0067
+  },
+  {
+   "id": "semispinalis-thoracis-muscle-r",
+   "name": "Semispinalis thoracis muscle",
+   "side": "R",
+   "file": "muscles/semispinalis-thoracis-muscle-r.vtp",
+   "polys": 4000,
+   "centroid": [
+    0.0153,
+    -0.08635,
+    1.3019
+   ],
+   "axis": [
+    -0.05797,
+    -0.04749,
+    0.99719
+   ],
+   "extent": [
+    -0.15332,
+    0.12855
+   ],
+   "flatness": 0.116,
+   "volume_l": 0.0162
+  },
+  {
+   "id": "semispinalis-thoracis-muscle-l",
+   "name": "Semispinalis thoracis muscle",
+   "side": "L",
+   "file": "muscles/semispinalis-thoracis-muscle-l.vtp",
+   "polys": 4000,
+   "centroid": [
+    -0.0153,
+    -0.08635,
+    1.3019
+   ],
+   "axis": [
+    0.05797,
+    -0.04749,
+    0.99719
+   ],
+   "extent": [
+    -0.15332,
+    0.12855
+   ],
+   "flatness": 0.116,
+   "volume_l": 0.0162
+  },
+  {
+   "id": "semitendinosus-muscle-l",
+   "name": "Semitendinosus muscle",
+   "side": "L",
+   "file": "muscles/semitendinosus-muscle-l.vtp",
+   "polys": 4000,
+   "centroid": [
+    -0.05035,
+    -0.05246,
+    0.60739
+   ],
+   "axis": [
+    -0.00505,
+    -0.01323,
+    0.9999
+   ],
+   "extent": [
+    -0.2562,
+    0.20398
+   ],
+   "flatness": 0.09,
+   "volume_l": 0.1332
+  },
+  {
+   "id": "semitendinosus-muscle-r",
+   "name": "Semitendinosus muscle",
+   "side": "R",
+   "file": "muscles/semitendinosus-muscle-r.vtp",
+   "polys": 4000,
+   "centroid": [
+    0.05035,
+    -0.05246,
+    0.60739
+   ],
+   "axis": [
+    0.00505,
+    -0.01323,
+    0.9999
+   ],
+   "extent": [
+    -0.2562,
+    0.20398
+   ],
+   "flatness": 0.09,
+   "volume_l": 0.1332
+  },
+  {
+   "id": "serratus-anterior-muscle-l",
+   "name": "Serratus anterior muscle",
+   "side": "L",
+   "file": "muscles/serratus-anterior-muscle-l.vtp",
+   "polys": 3998,
+   "centroid": [
+    -0.10967,
+    -0.03526,
+    1.30783
+   ],
+   "axis": [
+    0.26643,
+    -0.19993,
+    0.94289
+   ],
+   "extent": [
+    -0.1617,
+    0.11509
+   ],
+   "flatness": 0.606,
+   "volume_l": 0.1604
+  },
+  {
+   "id": "serratus-anterior-muscle-r",
+   "name": "Serratus anterior muscle",
+   "side": "R",
+   "file": "muscles/serratus-anterior-muscle-r.vtp",
+   "polys": 3998,
+   "centroid": [
+    0.10967,
+    -0.03526,
+    1.30783
+   ],
+   "axis": [
+    -0.26643,
+    -0.19993,
+    0.94289
+   ],
+   "extent": [
+    -0.1617,
+    0.11509
+   ],
+   "flatness": 0.606,
+   "volume_l": 0.1604
+  },
+  {
+   "id": "serratus-posterior-inferior-muscle-l",
+   "name": "Serratus posterior inferior muscle",
+   "side": "L",
+   "file": "muscles/serratus-posterior-inferior-muscle-l.vtp",
+   "polys": 4000,
+   "centroid": [
+    -0.04448,
+    -0.07589,
+    1.10644
+   ],
+   "axis": [
+    -0.59624,
+    -0.06398,
+    0.80025
+   ],
+   "extent": [
+    -0.09423,
+    0.10703
+   ],
+   "flatness": 0.415,
+   "volume_l": 0.0659
+  },
+  {
+   "id": "serratus-posterior-inferior-muscle-r",
+   "name": "Serratus posterior inferior muscle",
+   "side": "R",
+   "file": "muscles/serratus-posterior-inferior-muscle-r.vtp",
+   "polys": 4000,
+   "centroid": [
+    0.04448,
+    -0.07589,
+    1.10644
+   ],
+   "axis": [
+    0.59624,
+    -0.06398,
+    0.80025
+   ],
+   "extent": [
+    -0.09423,
+    0.10703
+   ],
+   "flatness": 0.415,
+   "volume_l": 0.0659
+  },
+  {
+   "id": "serratus-posterior-superior-muscle-l",
+   "name": "Serratus posterior superior muscle",
+   "side": "L",
+   "file": "muscles/serratus-posterior-superior-muscle-l.vtp",
+   "polys": 4000,
+   "centroid": [
+    -0.04712,
+    -0.07342,
+    1.40803
+   ],
+   "axis": [
+    0.74605,
+    -0.06358,
+    0.66285
+   ],
+   "extent": [
+    -0.08347,
+    0.07176
+   ],
+   "flatness": 0.465,
+   "volume_l": 0.0217
+  },
+  {
+   "id": "serratus-posterior-superior-muscle-r",
+   "name": "Serratus posterior superior muscle",
+   "side": "R",
+   "file": "muscles/serratus-posterior-superior-muscle-r.vtp",
+   "polys": 4000,
+   "centroid": [
+    0.04712,
+    -0.07342,
+    1.40803
+   ],
+   "axis": [
+    -0.74605,
+    -0.06358,
+    0.66285
+   ],
+   "extent": [
+    -0.08347,
+    0.07176
+   ],
+   "flatness": 0.465,
+   "volume_l": 0.0217
+  },
+  {
+   "id": "short-head-of-biceps-brachii-l",
+   "name": "Short head of biceps brachii",
+   "side": "L",
+   "file": "muscles/short-head-of-biceps-brachii-l.vtp",
+   "polys": 2696,
+   "centroid": [
+    -0.18423,
+    -0.01057,
+    1.25078
+   ],
+   "axis": [
+    0.21577,
+    0.01947,
+    0.97625
+   ],
+   "extent": [
+    -0.13045,
+    0.15239
+   ],
+   "flatness": 0.116,
+   "volume_l": 0.0834
+  },
+  {
+   "id": "short-head-of-biceps-brachii-r",
+   "name": "Short head of biceps brachii",
+   "side": "R",
+   "file": "muscles/short-head-of-biceps-brachii-r.vtp",
+   "polys": 2696,
+   "centroid": [
+    0.18423,
+    -0.01057,
+    1.25079
+   ],
+   "axis": [
+    -0.21577,
+    0.01947,
+    0.97625
+   ],
+   "extent": [
+    -0.13045,
+    0.15239
+   ],
+   "flatness": 0.116,
+   "volume_l": 0.0834
+  },
+  {
+   "id": "short-head-of-biceps-femoris-l",
+   "name": "Short head of biceps femoris",
+   "side": "L",
+   "file": "muscles/short-head-of-biceps-femoris-l.vtp",
+   "polys": 2476,
+   "centroid": [
+    -0.10672,
+    -0.03535,
+    0.5322
+   ],
+   "axis": [
+    0.08709,
+    0.10971,
+    0.99014
+   ],
+   "extent": [
+    -0.12995,
+    0.17317
+   ],
+   "flatness": 0.103,
+   "volume_l": 0.0648
+  },
+  {
+   "id": "short-head-of-biceps-femoris-r",
+   "name": "Short head of biceps femoris",
+   "side": "R",
+   "file": "muscles/short-head-of-biceps-femoris-r.vtp",
+   "polys": 2476,
+   "centroid": [
+    0.10672,
+    -0.03535,
+    0.5322
+   ],
+   "axis": [
+    -0.08709,
+    0.10971,
+    0.99014
+   ],
+   "extent": [
+    -0.12995,
+    0.17317
+   ],
+   "flatness": 0.103,
+   "volume_l": 0.0648
+  },
+  {
+   "id": "soleus-muscle-l",
+   "name": "Soleus muscle",
+   "side": "L",
+   "file": "muscles/soleus-muscle-l.vtp",
+   "polys": 4000,
+   "centroid": [
+    -0.08653,
+    -0.05733,
+    0.28942
+   ],
+   "axis": [
+    -0.09472,
+    0.08252,
+    0.99208
+   ],
+   "extent": [
+    -0.1573,
+    0.12179
+   ],
+   "flatness": 0.301,
+   "volume_l": 0.3073
+  },
+  {
+   "id": "soleus-muscle-r",
+   "name": "Soleus muscle",
+   "side": "R",
+   "file": "muscles/soleus-muscle-r.vtp",
+   "polys": 4000,
+   "centroid": [
+    0.08653,
+    -0.05733,
+    0.28942
+   ],
+   "axis": [
+    0.09472,
+    0.08252,
+    0.99208
+   ],
+   "extent": [
+    -0.1573,
+    0.12179
+   ],
+   "flatness": 0.301,
+   "volume_l": 0.3073
+  },
+  {
+   "id": "spinalis-capitis-muscle-l",
+   "name": "Spinalis capitis muscle",
+   "side": "L",
+   "file": "muscles/spinalis-capitis-muscle-l.vtp",
+   "polys": 2560,
+   "centroid": [
+    -0.02401,
+    -0.04907,
+    1.52085
+   ],
+   "axis": [
+    0.0112,
+    -0.35273,
+    0.93566
+   ],
+   "extent": [
+    -0.07064,
+    0.05918
+   ],
+   "flatness": 0.219,
+   "volume_l": 0.009
+  },
+  {
+   "id": "spinalis-capitis-muscle-r",
+   "name": "Spinalis capitis muscle",
+   "side": "R",
+   "file": "muscles/spinalis-capitis-muscle-r.vtp",
+   "polys": 2560,
+   "centroid": [
+    0.02401,
+    -0.04907,
+    1.52085
+   ],
+   "axis": [
+    -0.0112,
+    -0.35273,
+    0.93566
+   ],
+   "extent": [
+    -0.07064,
+    0.05918
+   ],
+   "flatness": 0.219,
+   "volume_l": 0.009
+  },
+  {
+   "id": "spinalis-colli-muscle-l",
+   "name": "Spinalis colli muscle",
+   "side": "L",
+   "file": "muscles/spinalis-colli-muscle-l.vtp",
+   "polys": 596,
+   "centroid": [
+    -0.00462,
+    -0.06275,
+    1.45924
+   ],
+   "axis": [
+    0.01322,
+    0.40064,
+    0.91614
+   ],
+   "extent": [
+    -0.05799,
+    0.05588
+   ],
+   "flatness": 0.078,
+   "volume_l": 0.0014
+  },
+  {
+   "id": "spinalis-colli-muscle-r",
+   "name": "Spinalis colli muscle",
+   "side": "R",
+   "file": "muscles/spinalis-colli-muscle-r.vtp",
+   "polys": 596,
+   "centroid": [
+    0.00462,
+    -0.06275,
+    1.45924
+   ],
+   "axis": [
+    -0.01322,
+    0.40064,
+    0.91614
+   ],
+   "extent": [
+    -0.05799,
+    0.05588
+   ],
+   "flatness": 0.078,
+   "volume_l": 0.0014
+  },
+  {
+   "id": "spinalis-thoracis-muscle-l",
+   "name": "Spinalis thoracis muscle",
+   "side": "L",
+   "file": "muscles/spinalis-thoracis-muscle-l.vtp",
+   "polys": 3998,
+   "centroid": [
+    -0.00514,
+    -0.08687,
+    1.23581
+   ],
+   "axis": [
+    0.00187,
+    -0.1152,
+    0.99334
+   ],
+   "extent": [
+    -0.20427,
+    0.17383
+   ],
+   "flatness": 0.057,
+   "volume_l": 0.0085
+  },
+  {
+   "id": "spinalis-thoracis-muscle-r",
+   "name": "Spinalis thoracis muscle",
+   "side": "R",
+   "file": "muscles/spinalis-thoracis-muscle-r.vtp",
+   "polys": 3998,
+   "centroid": [
+    0.00514,
+    -0.08687,
+    1.23581
+   ],
+   "axis": [
+    -0.00187,
+    -0.1152,
+    0.99334
+   ],
+   "extent": [
+    -0.20427,
+    0.17383
+   ],
+   "flatness": 0.057,
+   "volume_l": 0.0085
+  },
+  {
+   "id": "splenius-capitis-muscle-l",
+   "name": "Splenius capitis muscle",
+   "side": "L",
+   "file": "muscles/splenius-capitis-muscle-l.vtp",
+   "polys": 4000,
+   "centroid": [
+    -0.02039,
+    -0.05989,
+    1.47131
+   ],
+   "axis": [
+    -0.23361,
+    0.35464,
+    0.90535
+   ],
+   "extent": [
+    -0.12195,
+    0.11088
+   ],
+   "flatness": 0.159,
+   "volume_l": 0.0299
+  },
+  {
+   "id": "splenius-capitis-muscle-r",
+   "name": "Splenius capitis muscle",
+   "side": "R",
+   "file": "muscles/splenius-capitis-muscle-r.vtp",
+   "polys": 4000,
+   "centroid": [
+    0.02039,
+    -0.05989,
+    1.47131
+   ],
+   "axis": [
+    0.23361,
+    0.35464,
+    0.90535
+   ],
+   "extent": [
+    -0.12195,
+    0.11088
+   ],
+   "flatness": 0.159,
+   "volume_l": 0.0299
+  },
+  {
+   "id": "splenius-colli-muscle-l",
+   "name": "Splenius colli muscle",
+   "side": "L",
+   "file": "muscles/splenius-colli-muscle-l.vtp",
+   "polys": 3998,
+   "centroid": [
+    -0.01791,
+    -0.08027,
+    1.38682
+   ],
+   "axis": [
+    -0.15204,
+    0.38881,
+    0.90869
+   ],
+   "extent": [
+    -0.10236,
+    0.17039
+   ],
+   "flatness": 0.139,
+   "volume_l": 0.0142
+  },
+  {
+   "id": "splenius-colli-muscle-r",
+   "name": "Splenius colli muscle",
+   "side": "R",
+   "file": "muscles/splenius-colli-muscle-r.vtp",
+   "polys": 3998,
+   "centroid": [
+    0.01791,
+    -0.08027,
+    1.38682
+   ],
+   "axis": [
+    0.15204,
+    0.38881,
+    0.90869
+   ],
+   "extent": [
+    -0.10236,
+    0.17039
+   ],
+   "flatness": 0.139,
+   "volume_l": 0.0142
+  },
+  {
+   "id": "sternocleidomastoid-muscle-l",
+   "name": "Sternocleidomastoid muscle",
+   "side": "L",
+   "file": "muscles/sternocleidomastoid-muscle-l.vtp",
+   "polys": 3998,
+   "centroid": [
+    -0.03582,
+    0.01598,
+    1.46957
+   ],
+   "axis": [
+    -0.19018,
+    -0.4267,
+    0.88417
+   ],
+   "extent": [
+    -0.1009,
+    0.12369
+   ],
+   "flatness": 0.147,
+   "volume_l": 0.0423
+  },
+  {
+   "id": "sternocleidomastoid-muscle-r",
+   "name": "Sternocleidomastoid muscle",
+   "side": "R",
+   "file": "muscles/sternocleidomastoid-muscle-r.vtp",
+   "polys": 3998,
+   "centroid": [
+    0.03582,
+    0.01598,
+    1.46957
+   ],
+   "axis": [
+    0.19018,
+    -0.4267,
+    0.88417
+   ],
+   "extent": [
+    -0.1009,
+    0.12369
+   ],
+   "flatness": 0.147,
+   "volume_l": 0.0423
+  },
+  {
+   "id": "sternocostal-head-of-pectoralis-major-muscle-l",
+   "name": "Sternocostal head of pectoralis major muscle",
+   "side": "L",
+   "file": "muscles/sternocostal-head-of-pectoralis-major-muscle-l.vtp",
+   "polys": 3222,
+   "centroid": [
+    -0.08745,
+    0.07316,
+    1.30774
+   ],
+   "axis": [
+    -0.74679,
+    -0.55669,
+    0.36386
+   ],
+   "extent": [
+    -0.09765,
+    0.13495
+   ],
+   "flatness": 0.682,
+   "volume_l": 0.4476
+  },
+  {
+   "id": "sternocostal-head-of-pectoralis-major-muscle-r",
+   "name": "Sternocostal head of pectoralis major muscle",
+   "side": "R",
+   "file": "muscles/sternocostal-head-of-pectoralis-major-muscle-r.vtp",
+   "polys": 3222,
+   "centroid": [
+    0.08745,
+    0.07316,
+    1.30774
+   ],
+   "axis": [
+    0.74679,
+    -0.55669,
+    0.36386
+   ],
+   "extent": [
+    -0.09765,
+    0.13495
+   ],
+   "flatness": 0.682,
+   "volume_l": 0.4476
+  },
+  {
+   "id": "sternohyoid-muscle-l",
+   "name": "Sternohyoid muscle",
+   "side": "L",
+   "file": "muscles/sternohyoid-muscle-l.vtp",
+   "polys": 1394,
+   "centroid": [
+    -0.01266,
+    0.02683,
+    1.43896
+   ],
+   "axis": [
+    0.04414,
+    0.02206,
+    0.99878
+   ],
+   "extent": [
+    -0.04908,
+    0.05858
+   ],
+   "flatness": 0.166,
+   "volume_l": 0.004
+  },
+  {
+   "id": "sternohyoid-muscle-r",
+   "name": "Sternohyoid muscle",
+   "side": "R",
+   "file": "muscles/sternohyoid-muscle-r.vtp",
+   "polys": 1394,
+   "centroid": [
+    0.01266,
+    0.02683,
+    1.43896
+   ],
+   "axis": [
+    -0.04414,
+    0.02206,
+    0.99878
+   ],
+   "extent": [
+    -0.04908,
+    0.05858
+   ],
+   "flatness": 0.166,
+   "volume_l": 0.004
+  },
+  {
+   "id": "sternothyroid-muscle-l",
+   "name": "Sternothyroid muscle",
+   "side": "L",
+   "file": "muscles/sternothyroid-muscle-l.vtp",
+   "polys": 1088,
+   "centroid": [
+    -0.01377,
+    0.02246,
+    1.41797
+   ],
+   "axis": [
+    -0.03654,
+    -0.19394,
+    0.98033
+   ],
+   "extent": [
+    -0.03883,
+    0.06375
+   ],
+   "flatness": 0.146,
+   "volume_l": 0.004
+  },
+  {
+   "id": "sternothyroid-muscle-r",
+   "name": "Sternothyroid muscle",
+   "side": "R",
+   "file": "muscles/sternothyroid-muscle-r.vtp",
+   "polys": 1088,
+   "centroid": [
+    0.01377,
+    0.02246,
+    1.41797
+   ],
+   "axis": [
+    0.03654,
+    -0.19394,
+    0.98033
+   ],
+   "extent": [
+    -0.03883,
+    0.06375
+   ],
+   "flatness": 0.146,
+   "volume_l": 0.004
+  },
+  {
+   "id": "straight-part-of-cricothyroid-muscle-l",
+   "name": "Straight part of cricothyroid muscle",
+   "side": "L",
+   "file": "muscles/straight-part-of-cricothyroid-muscle-l.vtp",
+   "polys": 1180,
+   "centroid": [
+    -0.00765,
+    0.01076,
+    1.46917
+   ],
+   "axis": [
+    -0.59122,
+    -0.35425,
+    0.72455
+   ],
+   "extent": [
+    -0.00746,
+    0.0069
+   ],
+   "flatness": 0.473,
+   "volume_l": 0.0
+  },
+  {
+   "id": "straight-part-of-cricothyroid-muscle-r",
+   "name": "Straight part of cricothyroid muscle",
+   "side": "R",
+   "file": "muscles/straight-part-of-cricothyroid-muscle-r.vtp",
+   "polys": 1180,
+   "centroid": [
+    0.00765,
+    0.01076,
+    1.46917
+   ],
+   "axis": [
+    0.59122,
+    -0.35425,
+    0.72455
+   ],
+   "extent": [
+    -0.00746,
+    0.0069
+   ],
+   "flatness": 0.473,
+   "volume_l": 0.0
+  },
+  {
+   "id": "stylohyoid-muscle-l",
+   "name": "Stylohyoid muscle",
+   "side": "L",
+   "file": "muscles/stylohyoid-muscle-l.vtp",
+   "polys": 694,
+   "centroid": [
+    -0.02528,
+    0.01713,
+    1.5237
+   ],
+   "axis": [
+    -0.37832,
+    -0.52405,
+    0.76305
+   ],
+   "extent": [
+    -0.03267,
+    0.04714
+   ],
+   "flatness": 0.078,
+   "volume_l": 0.0009
+  },
+  {
+   "id": "stylohyoid-muscle-r",
+   "name": "Stylohyoid muscle",
+   "side": "R",
+   "file": "muscles/stylohyoid-muscle-r.vtp",
+   "polys": 694,
+   "centroid": [
+    0.02528,
+    0.01713,
+    1.5237
+   ],
+   "axis": [
+    0.37832,
+    -0.52405,
+    0.76305
+   ],
+   "extent": [
+    -0.03267,
+    0.04714
+   ],
+   "flatness": 0.078,
+   "volume_l": 0.0009
+  },
+  {
+   "id": "stylopharyngeus-muscle-l",
+   "name": "Stylopharyngeus muscle",
+   "side": "L",
+   "file": "muscles/stylopharyngeus-muscle-l.vtp",
+   "polys": 3998,
+   "centroid": [
+    -0.02204,
+    0.01031,
+    1.52118
+   ],
+   "axis": [
+    -0.32958,
+    -0.13693,
+    0.93414
+   ],
+   "extent": [
+    -0.03035,
+    0.04142
+   ],
+   "flatness": 0.317,
+   "volume_l": 0.0011
+  },
+  {
+   "id": "stylopharyngeus-muscle-r",
+   "name": "Stylopharyngeus muscle",
+   "side": "R",
+   "file": "muscles/stylopharyngeus-muscle-r.vtp",
+   "polys": 3998,
+   "centroid": [
+    0.02204,
+    0.01031,
+    1.52118
+   ],
+   "axis": [
+    0.32958,
+    -0.13693,
+    0.93414
+   ],
+   "extent": [
+    -0.03035,
+    0.04142
+   ],
+   "flatness": 0.317,
+   "volume_l": 0.0011
+  },
+  {
+   "id": "subclavius-muscle-l",
+   "name": "Subclavius muscle",
+   "side": "L",
+   "file": "muscles/subclavius-muscle-l.vtp",
+   "polys": 794,
+   "centroid": [
+    -0.06154,
+    0.0266,
+    1.39667
+   ],
+   "axis": [
+    -0.73796,
+    -0.63444,
+    0.23001
+   ],
+   "extent": [
+    -0.04099,
+    0.05782
+   ],
+   "flatness": 0.161,
+   "volume_l": 0.0033
+  },
+  {
+   "id": "subclavius-muscle-r",
+   "name": "Subclavius muscle",
+   "side": "R",
+   "file": "muscles/subclavius-muscle-r.vtp",
+   "polys": 794,
+   "centroid": [
+    0.06154,
+    0.0266,
+    1.39667
+   ],
+   "axis": [
+    0.73796,
+    -0.63444,
+    0.23001
+   ],
+   "extent": [
+    -0.04099,
+    0.05782
+   ],
+   "flatness": 0.161,
+   "volume_l": 0.0033
+  },
+  {
+   "id": "subscapularis-muscle-l",
+   "name": "Subscapularis muscle",
+   "side": "L",
+   "file": "muscles/subscapularis-muscle-l.vtp",
+   "polys": 2954,
+   "centroid": [
+    -0.11715,
+    -0.05112,
+    1.35909
+   ],
+   "axis": [
+    -0.60569,
+    0.6841,
+    0.40637
+   ],
+   "extent": [
+    -0.08818,
+    0.07628
+   ],
+   "flatness": 0.397,
+   "volume_l": 0.0392
+  },
+  {
+   "id": "subscapularis-muscle-r",
+   "name": "Subscapularis muscle",
+   "side": "R",
+   "file": "muscles/subscapularis-muscle-r.vtp",
+   "polys": 2954,
+   "centroid": [
+    0.11715,
+    -0.05112,
+    1.35909
+   ],
+   "axis": [
+    0.60569,
+    0.6841,
+    0.40637
+   ],
+   "extent": [
+    -0.08818,
+    0.07628
+   ],
+   "flatness": 0.397,
+   "volume_l": 0.0392
+  },
+  {
+   "id": "superficial-head-of-flexor-pollicis-brevis-l",
+   "name": "Superficial head of flexor pollicis brevis",
+   "side": "L",
+   "file": "muscles/superficial-head-of-flexor-pollicis-brevis-l.vtp",
+   "polys": 276,
+   "centroid": [
+    -0.2874,
+    0.04553,
+    0.83223
+   ],
+   "axis": [
+    0.81416,
+    -0.27506,
+    0.51135
+   ],
+   "extent": [
+    -0.03008,
+    0.0227
+   ],
+   "flatness": 0.169,
+   "volume_l": 0.0011
+  },
+  {
+   "id": "superficial-head-of-flexor-pollicis-brevis-r",
+   "name": "Superficial head of flexor pollicis brevis",
+   "side": "R",
+   "file": "muscles/superficial-head-of-flexor-pollicis-brevis-r.vtp",
+   "polys": 276,
+   "centroid": [
+    0.2874,
+    0.04553,
+    0.83223
+   ],
+   "axis": [
+    -0.81416,
+    -0.27506,
+    0.51135
+   ],
+   "extent": [
+    -0.03008,
+    0.0227
+   ],
+   "flatness": 0.169,
+   "volume_l": 0.0011
+  },
+  {
+   "id": "superficial-head-of-pronator-teres-l",
+   "name": "Superficial head of pronator teres",
+   "side": "L",
+   "file": "muscles/superficial-head-of-pronator-teres-l.vtp",
+   "polys": 2546,
+   "centroid": [
+    -0.24002,
+    -0.01085,
+    1.04623
+   ],
+   "axis": [
+    0.47991,
+    -0.06932,
+    0.87457
+   ],
+   "extent": [
+    -0.07461,
+    0.09097
+   ],
+   "flatness": 0.155,
+   "volume_l": 0.0136
+  },
+  {
+   "id": "superficial-head-of-pronator-teres-r",
+   "name": "Superficial head of pronator teres",
+   "side": "R",
+   "file": "muscles/superficial-head-of-pronator-teres-r.vtp",
+   "polys": 2546,
+   "centroid": [
+    0.24002,
+    -0.01085,
+    1.04623
+   ],
+   "axis": [
+    -0.47991,
+    -0.06932,
+    0.87457
+   ],
+   "extent": [
+    -0.07461,
+    0.09097
+   ],
+   "flatness": 0.155,
+   "volume_l": 0.0136
+  },
+  {
+   "id": "superficial-part-of-masseter-l",
+   "name": "Superficial part of masseter",
+   "side": "L",
+   "file": "muscles/superficial-part-of-masseter-l.vtp",
+   "polys": 1404,
+   "centroid": [
+    -0.04986,
+    0.03719,
+    1.54549
+   ],
+   "axis": [
+    -0.34807,
+    0.07111,
+    0.93477
+   ],
+   "extent": [
+    -0.03533,
+    0.03118
+   ],
+   "flatness": 0.525,
+   "volume_l": 0.0051
+  },
+  {
+   "id": "superficial-part-of-masseter-r",
+   "name": "Superficial part of masseter",
+   "side": "R",
+   "file": "muscles/superficial-part-of-masseter-r.vtp",
+   "polys": 1404,
+   "centroid": [
+    0.04986,
+    0.03719,
+    1.54549
+   ],
+   "axis": [
+    0.34807,
+    0.07111,
+    0.93477
+   ],
+   "extent": [
+    -0.03533,
+    0.03118
+   ],
+   "flatness": 0.525,
+   "volume_l": 0.0051
+  },
+  {
+   "id": "superior-gemellus-muscle-l",
+   "name": "Superior gemellus muscle",
+   "side": "L",
+   "file": "muscles/superior-gemellus-muscle-l.vtp",
+   "polys": 404,
+   "centroid": [
+    -0.07751,
+    -0.039,
+    0.86115
+   ],
+   "axis": [
+    0.86911,
+    -0.43886,
+    0.22816
+   ],
+   "extent": [
+    -0.05788,
+    0.0374
+   ],
+   "flatness": 0.162,
+   "volume_l": 0.0054
+  },
+  {
+   "id": "superior-gemellus-muscle-r",
+   "name": "Superior gemellus muscle",
+   "side": "R",
+   "file": "muscles/superior-gemellus-muscle-r.vtp",
+   "polys": 404,
+   "centroid": [
+    0.07751,
+    -0.039,
+    0.86115
+   ],
+   "axis": [
+    -0.86911,
+    -0.43886,
+    0.22816
+   ],
+   "extent": [
+    -0.05788,
+    0.0374
+   ],
+   "flatness": 0.162,
+   "volume_l": 0.0054
+  },
+  {
+   "id": "superior-head-of-lateral-pterygoid-muscle-l",
+   "name": "Superior head of lateral pterygoid muscle",
+   "side": "L",
+   "file": "muscles/superior-head-of-lateral-pterygoid-muscle-l.vtp",
+   "polys": 226,
+   "centroid": [
+    -0.03373,
+    0.0197,
+    1.57514
+   ],
+   "axis": [
+    0.647,
+    0.69073,
+    0.32292
+   ],
+   "extent": [
+    -0.01145,
+    0.01686
+   ],
+   "flatness": 0.349,
+   "volume_l": 0.0009
+  },
+  {
+   "id": "superior-head-of-lateral-pterygoid-muscle-r",
+   "name": "Superior head of lateral pterygoid muscle",
+   "side": "R",
+   "file": "muscles/superior-head-of-lateral-pterygoid-muscle-r.vtp",
+   "polys": 226,
+   "centroid": [
+    0.03373,
+    0.0197,
+    1.57514
+   ],
+   "axis": [
+    -0.647,
+    0.69073,
+    0.32292
+   ],
+   "extent": [
+    -0.01145,
+    0.01686
+   ],
+   "flatness": 0.349,
+   "volume_l": 0.0009
+  },
+  {
+   "id": "superior-oblique-muscle-l",
+   "name": "Superior oblique muscle",
+   "side": "L",
+   "file": "muscles/superior-oblique-muscle-l.vtp",
+   "polys": 1750,
+   "centroid": [
+    -0.02404,
+    0.05856,
+    1.60176
+   ],
+   "axis": [
+    -0.07582,
+    0.98523,
+    0.15355
+   ],
+   "extent": [
+    -0.02556,
+    0.01836
+   ],
+   "flatness": 0.869,
+   "volume_l": 0.0005
+  },
+  {
+   "id": "superior-oblique-muscle-r",
+   "name": "Superior oblique muscle",
+   "side": "R",
+   "file": "muscles/superior-oblique-muscle-r.vtp",
+   "polys": 1750,
+   "centroid": [
+    0.02404,
+    0.05856,
+    1.60176
+   ],
+   "axis": [
+    0.07582,
+    0.98523,
+    0.15355
+   ],
+   "extent": [
+    -0.02556,
+    0.01836
+   ],
+   "flatness": 0.869,
+   "volume_l": 0.0005
+  },
+  {
+   "id": "superior-pharyngeal-constrictor-l",
+   "name": "Superior pharyngeal constrictor",
+   "side": "L",
+   "file": "muscles/superior-pharyngeal-constrictor-l.vtp",
+   "polys": 4000,
+   "centroid": [
+    -0.01489,
+    0.01597,
+    1.54754
+   ],
+   "axis": [
+    -0.78095,
+    0.62369,
+    0.03347
+   ],
+   "extent": [
+    -0.01728,
+    0.02777
+   ],
+   "flatness": 0.912,
+   "volume_l": 0.0043
+  },
+  {
+   "id": "superior-pharyngeal-constrictor-r",
+   "name": "Superior pharyngeal constrictor",
+   "side": "R",
+   "file": "muscles/superior-pharyngeal-constrictor-r.vtp",
+   "polys": 4000,
+   "centroid": [
+    0.01489,
+    0.01597,
+    1.54754
+   ],
+   "axis": [
+    0.78095,
+    0.62369,
+    0.03347
+   ],
+   "extent": [
+    -0.01728,
+    0.02777
+   ],
+   "flatness": 0.912,
+   "volume_l": 0.0043
+  },
+  {
+   "id": "superior-rectus-muscle-l",
+   "name": "Superior rectus muscle",
+   "side": "L",
+   "file": "muscles/superior-rectus-muscle-l.vtp",
+   "polys": 1284,
+   "centroid": [
+    -0.02719,
+    0.05846,
+    1.60188
+   ],
+   "axis": [
+    0.36857,
+    -0.92876,
+    0.03963
+   ],
+   "extent": [
+    -0.01637,
+    0.02744
+   ],
+   "flatness": 0.211,
+   "volume_l": 0.0005
+  },
+  {
+   "id": "superior-rectus-muscle-r",
+   "name": "Superior rectus muscle",
+   "side": "R",
+   "file": "muscles/superior-rectus-muscle-r.vtp",
+   "polys": 1284,
+   "centroid": [
+    0.02719,
+    0.05846,
+    1.60188
+   ],
+   "axis": [
+    -0.36857,
+    -0.92876,
+    0.03963
+   ],
+   "extent": [
+    -0.01637,
+    0.02744
+   ],
+   "flatness": 0.211,
+   "volume_l": 0.0005
+  },
+  {
+   "id": "superior-tarsus-l",
+   "name": "Superior tarsus",
+   "side": "L",
+   "file": "muscles/superior-tarsus-l.vtp",
+   "polys": 178,
+   "centroid": [
+    -0.03165,
+    0.07479,
+    1.59769
+   ],
+   "axis": [
+    0.97186,
+    0.22215,
+    0.0783
+   ],
+   "extent": [
+    -0.01359,
+    0.01305
+   ],
+   "flatness": 0.332,
+   "volume_l": 0.0001
+  },
+  {
+   "id": "superior-tarsus-r",
+   "name": "Superior tarsus",
+   "side": "R",
+   "file": "muscles/superior-tarsus-r.vtp",
+   "polys": 178,
+   "centroid": [
+    0.03165,
+    0.07479,
+    1.59769
+   ],
+   "axis": [
+    -0.97186,
+    0.22215,
+    0.0783
+   ],
+   "extent": [
+    -0.01359,
+    0.01305
+   ],
+   "flatness": 0.332,
+   "volume_l": 0.0001
+  },
+  {
+   "id": "supinator-l",
+   "name": "Supinator",
+   "side": "L",
+   "file": "muscles/supinator-l.vtp",
+   "polys": 2754,
+   "centroid": [
+    -0.24755,
+    -0.02837,
+    1.05142
+   ],
+   "axis": [
+    0.15064,
+    -0.2274,
+    0.96208
+   ],
+   "extent": [
+    -0.0657,
+    0.06452
+   ],
+   "flatness": 0.268,
+   "volume_l": 0.0129
+  },
+  {
+   "id": "supinator-r",
+   "name": "Supinator",
+   "side": "R",
+   "file": "muscles/supinator-r.vtp",
+   "polys": 2754,
+   "centroid": [
+    0.24755,
+    -0.02837,
+    1.05142
+   ],
+   "axis": [
+    -0.15064,
+    -0.2274,
+    0.96208
+   ],
+   "extent": [
+    -0.0657,
+    0.06452
+   ],
+   "flatness": 0.268,
+   "volume_l": 0.0129
+  },
+  {
+   "id": "supraspinatus-muscle-l",
+   "name": "Supraspinatus muscle",
+   "side": "L",
+   "file": "muscles/supraspinatus-muscle-l.vtp",
+   "polys": 1430,
+   "centroid": [
+    -0.14842,
+    -0.04513,
+    1.39855
+   ],
+   "axis": [
+    -0.82663,
+    0.55504,
+    0.0928
+   ],
+   "extent": [
+    -0.09477,
+    0.0528
+   ],
+   "flatness": 0.176,
+   "volume_l": 0.0324
+  },
+  {
+   "id": "supraspinatus-muscle-r",
+   "name": "Supraspinatus muscle",
+   "side": "R",
+   "file": "muscles/supraspinatus-muscle-r.vtp",
+   "polys": 1430,
+   "centroid": [
+    0.14842,
+    -0.04513,
+    1.39855
+   ],
+   "axis": [
+    0.82663,
+    0.55504,
+    0.0928
+   ],
+   "extent": [
+    -0.09477,
+    0.0528
+   ],
+   "flatness": 0.176,
+   "volume_l": 0.0324
+  },
+  {
+   "id": "temporalis-muscle-l",
+   "name": "Temporalis muscle",
+   "side": "L",
+   "file": "muscles/temporalis-muscle-l.vtp",
+   "polys": 4000,
+   "centroid": [
+    -0.05966,
+    0.01738,
+    1.61045
+   ],
+   "axis": [
+    -0.27746,
+    -0.66651,
+    0.69193
+   ],
+   "extent": [
+    -0.06893,
+    0.07037
+   ],
+   "flatness": 0.619,
+   "volume_l": 0.0202
+  },
+  {
+   "id": "temporalis-muscle-r",
+   "name": "Temporalis muscle",
+   "side": "R",
+   "file": "muscles/temporalis-muscle-r.vtp",
+   "polys": 4000,
+   "centroid": [
+    0.05966,
+    0.01738,
+    1.61045
+   ],
+   "axis": [
+    0.27746,
+    -0.66651,
+    0.69193
+   ],
+   "extent": [
+    -0.06893,
+    0.07037
+   ],
+   "flatness": 0.619,
+   "volume_l": 0.0202
+  },
+  {
+   "id": "temporoparietalis-muscle-l",
+   "name": "Temporoparietalis muscle",
+   "side": "L",
+   "file": "muscles/temporoparietalis-muscle-l.vtp",
+   "polys": 4000,
+   "centroid": [
+    -0.06453,
+    -0.01843,
+    1.63545
+   ],
+   "axis": [
+    0.02989,
+    0.71245,
+    0.70108
+   ],
+   "extent": [
+    -0.0587,
+    0.06102
+   ],
+   "flatness": 0.774,
+   "volume_l": 0.022
+  },
+  {
+   "id": "temporoparietalis-muscle-r",
+   "name": "Temporoparietalis muscle",
+   "side": "R",
+   "file": "muscles/temporoparietalis-muscle-r.vtp",
+   "polys": 4000,
+   "centroid": [
+    0.06453,
+    -0.01843,
+    1.63545
+   ],
+   "axis": [
+    -0.02989,
+    0.71245,
+    0.70108
+   ],
+   "extent": [
+    -0.0587,
+    0.06102
+   ],
+   "flatness": 0.774,
+   "volume_l": 0.022
+  },
+  {
+   "id": "tendon-of-extensor-digitorum-longus-l",
+   "name": "Tendon of extensor digitorum longus",
+   "side": "L",
+   "file": "muscles/tendon-of-extensor-digitorum-longus-l.vtp",
+   "polys": 3998,
+   "centroid": [
+    -0.1049,
+    0.04369,
+    0.04953
+   ],
+   "axis": [
+    0.17783,
+    -0.83602,
+    0.51908
+   ],
+   "extent": [
+    -0.0851,
+    0.07533
+   ],
+   "flatness": 0.274,
+   "volume_l": 0.0046
+  },
+  {
+   "id": "tendon-of-extensor-digitorum-longus-r",
+   "name": "Tendon of extensor digitorum longus",
+   "side": "R",
+   "file": "muscles/tendon-of-extensor-digitorum-longus-r.vtp",
+   "polys": 3998,
+   "centroid": [
+    0.1048,
+    0.04348,
+    0.04972
+   ],
+   "axis": [
+    -0.17679,
+    -0.83627,
+    0.51903
+   ],
+   "extent": [
+    -0.08541,
+    0.07504
+   ],
+   "flatness": 0.273,
+   "volume_l": 0.0046
+  },
+  {
+   "id": "teres-major-muscle-l",
+   "name": "Teres major muscle",
+   "side": "L",
+   "file": "muscles/teres-major-muscle-l.vtp",
+   "polys": 1154,
+   "centroid": [
+    -0.14636,
+    -0.05688,
+    1.30086
+   ],
+   "axis": [
+    -0.58705,
+    0.63939,
+    0.49654
+   ],
+   "extent": [
+    -0.07758,
+    0.06212
+   ],
+   "flatness": 0.187,
+   "volume_l": 0.0146
+  },
+  {
+   "id": "teres-major-muscle-r",
+   "name": "Teres major muscle",
+   "side": "R",
+   "file": "muscles/teres-major-muscle-r.vtp",
+   "polys": 1154,
+   "centroid": [
+    0.14636,
+    -0.05688,
+    1.30086
+   ],
+   "axis": [
+    0.58705,
+    0.63939,
+    0.49654
+   ],
+   "extent": [
+    -0.07758,
+    0.06212
+   ],
+   "flatness": 0.187,
+   "volume_l": 0.0146
+  },
+  {
+   "id": "teres-minor-muscle-l",
+   "name": "Teres minor muscle",
+   "side": "L",
+   "file": "muscles/teres-minor-muscle-l.vtp",
+   "polys": 1522,
+   "centroid": [
+    -0.15143,
+    -0.06395,
+    1.34674
+   ],
+   "axis": [
+    -0.68329,
+    0.46905,
+    0.55956
+   ],
+   "extent": [
+    -0.0776,
+    0.06894
+   ],
+   "flatness": 0.199,
+   "volume_l": 0.0415
+  },
+  {
+   "id": "teres-minor-muscle-r",
+   "name": "Teres minor muscle",
+   "side": "R",
+   "file": "muscles/teres-minor-muscle-r.vtp",
+   "polys": 1522,
+   "centroid": [
+    0.15143,
+    -0.06395,
+    1.34674
+   ],
+   "axis": [
+    0.68329,
+    0.46905,
+    0.55956
+   ],
+   "extent": [
+    -0.0776,
+    0.06894
+   ],
+   "flatness": 0.199,
+   "volume_l": 0.0415
+  },
+  {
+   "id": "thyro-epiglottic-part-of-thyro-arytenoid-muscle-l",
+   "name": "Thyro-epiglottic part of thyro-arytenoid muscle",
+   "side": "L",
+   "file": "muscles/thyro-epiglottic-part-of-thyro-arytenoid-muscle-l.vtp",
+   "polys": 3110,
+   "centroid": [
+    -0.00597,
+    0.0171,
+    1.48923
+   ],
+   "axis": [
+    -0.25369,
+    -0.25498,
+    0.93307
+   ],
+   "extent": [
+    -0.01457,
+    0.01263
+   ],
+   "flatness": 0.703,
+   "volume_l": 0.0002
+  },
+  {
+   "id": "thyro-epiglottic-part-of-thyro-arytenoid-muscle-r",
+   "name": "Thyro-epiglottic part of thyro-arytenoid muscle",
+   "side": "R",
+   "file": "muscles/thyro-epiglottic-part-of-thyro-arytenoid-muscle-r.vtp",
+   "polys": 3110,
+   "centroid": [
+    0.00597,
+    0.0171,
+    1.48923
+   ],
+   "axis": [
+    0.25369,
+    -0.25498,
+    0.93307
+   ],
+   "extent": [
+    -0.01457,
+    0.01263
+   ],
+   "flatness": 0.703,
+   "volume_l": 0.0002
+  },
+  {
+   "id": "thyrohyoid-muscle-l",
+   "name": "Thyrohyoid muscle",
+   "side": "L",
+   "file": "muscles/thyrohyoid-muscle-l.vtp",
+   "polys": 700,
+   "centroid": [
+    -0.01438,
+    0.01968,
+    1.48498
+   ],
+   "axis": [
+    0.03273,
+    0.57243,
+    0.8193
+   ],
+   "extent": [
+    -0.01631,
+    0.01375
+   ],
+   "flatness": 0.732,
+   "volume_l": 0.0007
+  },
+  {
+   "id": "thyrohyoid-muscle-r",
+   "name": "Thyrohyoid muscle",
+   "side": "R",
+   "file": "muscles/thyrohyoid-muscle-r.vtp",
+   "polys": 700,
+   "centroid": [
+    0.01438,
+    0.01968,
+    1.48498
+   ],
+   "axis": [
+    -0.03273,
+    0.57243,
+    0.8193
+   ],
+   "extent": [
+    -0.01631,
+    0.01375
+   ],
+   "flatness": 0.732,
+   "volume_l": 0.0007
+  },
+  {
+   "id": "tibialis-anterior-muscle-l",
+   "name": "Tibialis anterior muscle",
+   "side": "L",
+   "file": "muscles/tibialis-anterior-muscle-l.vtp",
+   "polys": 3526,
+   "centroid": [
+    -0.09092,
+    -0.00855,
+    0.22856
+   ],
+   "axis": [
+    -0.13305,
+    -0.07317,
+    0.9884
+   ],
+   "extent": [
+    -0.19028,
+    0.1829
+   ],
+   "flatness": 0.141,
+   "volume_l": 0.1029
+  },
+  {
+   "id": "tibialis-anterior-muscle-r",
+   "name": "Tibialis anterior muscle",
+   "side": "R",
+   "file": "muscles/tibialis-anterior-muscle-r.vtp",
+   "polys": 3526,
+   "centroid": [
+    0.09092,
+    -0.00855,
+    0.22856
+   ],
+   "axis": [
+    0.13305,
+    -0.07317,
+    0.9884
+   ],
+   "extent": [
+    -0.19028,
+    0.1829
+   ],
+   "flatness": 0.141,
+   "volume_l": 0.1029
+  },
+  {
+   "id": "tibialis-posterior-muscle-l",
+   "name": "Tibialis posterior muscle",
+   "side": "L",
+   "file": "muscles/tibialis-posterior-muscle-l.vtp",
+   "polys": 4000,
+   "centroid": [
+    -0.07703,
+    -0.02251,
+    0.15216
+   ],
+   "axis": [
+    -0.10341,
+    -0.11977,
+    0.9874
+   ],
+   "extent": [
+    -0.11718,
+    0.23069
+   ],
+   "flatness": 0.137,
+   "volume_l": 0.052
+  },
+  {
+   "id": "tibialis-posterior-muscle-r",
+   "name": "Tibialis posterior muscle",
+   "side": "R",
+   "file": "muscles/tibialis-posterior-muscle-r.vtp",
+   "polys": 4000,
+   "centroid": [
+    0.07703,
+    -0.02251,
+    0.15216
+   ],
+   "axis": [
+    0.10341,
+    -0.11977,
+    0.9874
+   ],
+   "extent": [
+    -0.11718,
+    0.23069
+   ],
+   "flatness": 0.137,
+   "volume_l": 0.052
+  },
+  {
+   "id": "transverse-arytenoid-muscle",
+   "name": "Transverse arytenoid muscle",
+   "side": "C",
+   "file": "muscles/transverse-arytenoid-muscle.vtp",
+   "polys": 1822,
+   "centroid": [
+    0.00078,
+    0.00573,
+    1.47655
+   ],
+   "axis": [
+    0.99999,
+    -4e-05,
+    0.00503
+   ],
+   "extent": [
+    -0.00747,
+    0.00721
+   ],
+   "flatness": 0.381,
+   "volume_l": 0.0001
+  },
+  {
+   "id": "transverse-head-of-adductor-hallucis-l",
+   "name": "Transverse head of adductor hallucis",
+   "side": "L",
+   "file": "muscles/transverse-head-of-adductor-hallucis-l.vtp",
+   "polys": 366,
+   "centroid": [
+    -0.10274,
+    0.0635,
+    0.01778
+   ],
+   "axis": [
+    -0.92063,
+    -0.38885,
+    0.0352
+   ],
+   "extent": [
+    -0.02691,
+    0.02379
+   ],
+   "flatness": 0.263,
+   "volume_l": 0.001
+  },
+  {
+   "id": "transverse-head-of-adductor-hallucis-r",
+   "name": "Transverse head of adductor hallucis",
+   "side": "R",
+   "file": "muscles/transverse-head-of-adductor-hallucis-r.vtp",
+   "polys": 366,
+   "centroid": [
+    0.10274,
+    0.0635,
+    0.01778
+   ],
+   "axis": [
+    0.92063,
+    -0.38885,
+    0.0352
+   ],
+   "extent": [
+    -0.02691,
+    0.02379
+   ],
+   "flatness": 0.263,
+   "volume_l": 0.001
+  },
+  {
+   "id": "transverse-head-of-adductor-pollicis-l",
+   "name": "Transverse head of adductor pollicis",
+   "side": "L",
+   "file": "muscles/transverse-head-of-adductor-pollicis-l.vtp",
+   "polys": 1014,
+   "centroid": [
+    -0.28567,
+    0.03207,
+    0.80989
+   ],
+   "axis": [
+    0.93304,
+    -0.33836,
+    0.12226
+   ],
+   "extent": [
+    -0.02712,
+    0.02142
+   ],
+   "flatness": 0.82,
+   "volume_l": 0.0034
+  },
+  {
+   "id": "transverse-head-of-adductor-pollicis-r",
+   "name": "Transverse head of adductor pollicis",
+   "side": "R",
+   "file": "muscles/transverse-head-of-adductor-pollicis-r.vtp",
+   "polys": 1014,
+   "centroid": [
+    0.28567,
+    0.03207,
+    0.80989
+   ],
+   "axis": [
+    -0.93304,
+    -0.33836,
+    0.12226
+   ],
+   "extent": [
+    -0.02712,
+    0.02142
+   ],
+   "flatness": 0.82,
+   "volume_l": 0.0034
+  },
+  {
+   "id": "transverse-part-of-trapezius-muscle-l",
+   "name": "Transverse part of trapezius muscle",
+   "side": "L",
+   "file": "muscles/transverse-part-of-trapezius-muscle-l.vtp",
+   "polys": 2992,
+   "centroid": [
+    -0.04922,
+    -0.08712,
+    1.41322
+   ],
+   "axis": [
+    -0.96682,
+    0.25451,
+    0.02201
+   ],
+   "extent": [
+    -0.05561,
+    0.12762
+   ],
+   "flatness": 0.33,
+   "volume_l": 0.0477
+  },
+  {
+   "id": "transverse-part-of-trapezius-muscle-r",
+   "name": "Transverse part of trapezius muscle",
+   "side": "R",
+   "file": "muscles/transverse-part-of-trapezius-muscle-r.vtp",
+   "polys": 2992,
+   "centroid": [
+    0.04922,
+    -0.08712,
+    1.41322
+   ],
+   "axis": [
+    0.96682,
+    0.25451,
+    0.02201
+   ],
+   "extent": [
+    -0.05561,
+    0.12762
+   ],
+   "flatness": 0.33,
+   "volume_l": 0.0477
+  },
+  {
+   "id": "transversus-abdominis-muscle-l",
+   "name": "Transversus abdominis muscle",
+   "side": "L",
+   "file": "muscles/transversus-abdominis-muscle-l.vtp",
+   "polys": 4000,
+   "centroid": [
+    -0.07315,
+    0.03405,
+    1.06623
+   ],
+   "axis": [
+    -0.14039,
+    -0.16391,
+    0.97643
+   ],
+   "extent": [
+    -0.23015,
+    0.21119
+   ],
+   "flatness": 0.565,
+   "volume_l": 0.3164
+  },
+  {
+   "id": "transversus-abdominis-muscle-r",
+   "name": "Transversus abdominis muscle",
+   "side": "R",
+   "file": "muscles/transversus-abdominis-muscle-r.vtp",
+   "polys": 4000,
+   "centroid": [
+    0.07315,
+    0.03405,
+    1.06623
+   ],
+   "axis": [
+    0.14039,
+    -0.16391,
+    0.97643
+   ],
+   "extent": [
+    -0.23015,
+    0.21119
+   ],
+   "flatness": 0.565,
+   "volume_l": 0.3164
+  },
+  {
+   "id": "transversus-thoracis-muscle-l",
+   "name": "Transversus thoracis muscle",
+   "side": "L",
+   "file": "muscles/transversus-thoracis-muscle-l.vtp",
+   "polys": 1670,
+   "centroid": [
+    -0.03353,
+    0.08739,
+    1.27797
+   ],
+   "axis": [
+    0.08017,
+    -0.29671,
+    0.9516
+   ],
+   "extent": [
+    -0.07303,
+    0.08386
+   ],
+   "flatness": 0.509,
+   "volume_l": 0.0112
+  },
+  {
+   "id": "transversus-thoracis-muscle-r",
+   "name": "Transversus thoracis muscle",
+   "side": "R",
+   "file": "muscles/transversus-thoracis-muscle-r.vtp",
+   "polys": 1670,
+   "centroid": [
+    0.03353,
+    0.08739,
+    1.27797
+   ],
+   "axis": [
+    -0.08017,
+    -0.29671,
+    0.9516
+   ],
+   "extent": [
+    -0.07303,
+    0.08386
+   ],
+   "flatness": 0.509,
+   "volume_l": 0.0112
+  },
+  {
+   "id": "ulnar-head-of-extensor-carpi-ulnaris-l",
+   "name": "Ulnar head of extensor carpi ulnaris",
+   "side": "L",
+   "file": "muscles/ulnar-head-of-extensor-carpi-ulnaris-l.vtp",
+   "polys": 582,
+   "centroid": [
+    -0.23111,
+    -0.00717,
+    0.94447
+   ],
+   "axis": [
+    0.08134,
+    -0.25512,
+    0.96348
+   ],
+   "extent": [
+    -0.11969,
+    0.09313
+   ],
+   "flatness": 0.059,
+   "volume_l": 0.0064
+  },
+  {
+   "id": "ulnar-head-of-extensor-carpi-ulnaris-r",
+   "name": "Ulnar head of extensor carpi ulnaris",
+   "side": "R",
+   "file": "muscles/ulnar-head-of-extensor-carpi-ulnaris-r.vtp",
+   "polys": 582,
+   "centroid": [
+    0.23111,
+    -0.00717,
+    0.94447
+   ],
+   "axis": [
+    -0.08134,
+    -0.25512,
+    0.96348
+   ],
+   "extent": [
+    -0.11969,
+    0.09313
+   ],
+   "flatness": 0.059,
+   "volume_l": 0.0064
+  },
+  {
+   "id": "ulnar-head-of-flexor-carpi-ulnaris-l",
+   "name": "Ulnar head of flexor carpi ulnaris",
+   "side": "L",
+   "file": "muscles/ulnar-head-of-flexor-carpi-ulnaris-l.vtp",
+   "polys": 1466,
+   "centroid": [
+    -0.21486,
+    -0.02632,
+    1.00142
+   ],
+   "axis": [
+    0.11789,
+    -0.27598,
+    0.95391
+   ],
+   "extent": [
+    -0.12749,
+    0.10254
+   ],
+   "flatness": 0.124,
+   "volume_l": 0.0231
+  },
+  {
+   "id": "ulnar-head-of-flexor-carpi-ulnaris-r",
+   "name": "Ulnar head of flexor carpi ulnaris",
+   "side": "R",
+   "file": "muscles/ulnar-head-of-flexor-carpi-ulnaris-r.vtp",
+   "polys": 1466,
+   "centroid": [
+    0.21486,
+    -0.02632,
+    1.00142
+   ],
+   "axis": [
+    -0.11789,
+    -0.27598,
+    0.95391
+   ],
+   "extent": [
+    -0.12749,
+    0.10254
+   ],
+   "flatness": 0.124,
+   "volume_l": 0.0231
+  },
+  {
+   "id": "vastus-intermedius-muscle-l",
+   "name": "Vastus intermedius muscle",
+   "side": "L",
+   "file": "muscles/vastus-intermedius-muscle-l.vtp",
+   "polys": 3998,
+   "centroid": [
+    -0.10407,
+    0.01218,
+    0.59382
+   ],
+   "axis": [
+    -0.09067,
+    0.01245,
+    0.9958
+   ],
+   "extent": [
+    -0.19621,
+    0.21346
+   ],
+   "flatness": 0.134,
+   "volume_l": 0.2631
+  },
+  {
+   "id": "vastus-intermedius-muscle-r",
+   "name": "Vastus intermedius muscle",
+   "side": "R",
+   "file": "muscles/vastus-intermedius-muscle-r.vtp",
+   "polys": 3998,
+   "centroid": [
+    0.10407,
+    0.01218,
+    0.59382
+   ],
+   "axis": [
+    0.09067,
+    0.01245,
+    0.9958
+   ],
+   "extent": [
+    -0.19621,
+    0.21346
+   ],
+   "flatness": 0.134,
+   "volume_l": 0.2631
+  },
+  {
+   "id": "vastus-lateralis-muscle-l",
+   "name": "Vastus lateralis muscle",
+   "side": "L",
+   "file": "muscles/vastus-lateralis-muscle-l.vtp",
+   "polys": 4000,
+   "centroid": [
+    -0.12291,
+    0.00312,
+    0.60189
+   ],
+   "axis": [
+    -0.08576,
+    -0.01738,
+    0.99616
+   ],
+   "extent": [
+    -0.22056,
+    0.23684
+   ],
+   "flatness": 0.189,
+   "volume_l": 0.4775
+  },
+  {
+   "id": "vastus-lateralis-muscle-r",
+   "name": "Vastus lateralis muscle",
+   "side": "R",
+   "file": "muscles/vastus-lateralis-muscle-r.vtp",
+   "polys": 4000,
+   "centroid": [
+    0.12291,
+    0.00312,
+    0.60189
+   ],
+   "axis": [
+    0.08576,
+    -0.01738,
+    0.99616
+   ],
+   "extent": [
+    -0.22056,
+    0.23684
+   ],
+   "flatness": 0.189,
+   "volume_l": 0.4775
+  },
+  {
+   "id": "vastus-medialis-muscle-l",
+   "name": "Vastus medialis muscle",
+   "side": "L",
+   "file": "muscles/vastus-medialis-muscle-l.vtp",
+   "polys": 4000,
+   "centroid": [
+    -0.07008,
+    0.01667,
+    0.57834
+   ],
+   "axis": [
+    -0.08811,
+    0.05942,
+    0.99434
+   ],
+   "extent": [
+    -0.19143,
+    0.21545
+   ],
+   "flatness": 0.172,
+   "volume_l": 0.3042
+  },
+  {
+   "id": "vastus-medialis-muscle-r",
+   "name": "Vastus medialis muscle",
+   "side": "R",
+   "file": "muscles/vastus-medialis-muscle-r.vtp",
+   "polys": 4000,
+   "centroid": [
+    0.07008,
+    0.01667,
+    0.57834
+   ],
+   "axis": [
+    0.08811,
+    0.05942,
+    0.99434
+   ],
+   "extent": [
+    -0.19143,
+    0.21545
+   ],
+   "flatness": 0.172,
+   "volume_l": 0.3042
+  },
+  {
+   "id": "ventral-parts-of-lateral-intertransversarii-lumborum-muscles-l",
+   "name": "Ventral parts of lateral intertransversarii lumborum muscles",
+   "side": "L",
+   "file": "muscles/ventral-parts-of-lateral-intertransversarii-lumborum-muscles-l.vtp",
+   "polys": 996,
+   "centroid": [
+    -0.0227,
+    -0.02483,
+    1.04897
+   ],
+   "axis": [
+    0.12477,
+    -0.05559,
+    0.99063
+   ],
+   "extent": [
+    -0.05705,
+    0.06051
+   ],
+   "flatness": 0.11,
+   "volume_l": 0.0024
+  },
+  {
+   "id": "ventral-parts-of-lateral-intertransversarii-lumborum-muscles-r",
+   "name": "Ventral parts of lateral intertransversarii lumborum muscles",
+   "side": "R",
+   "file": "muscles/ventral-parts-of-lateral-intertransversarii-lumborum-muscles-r.vtp",
+   "polys": 996,
+   "centroid": [
+    0.0227,
+    -0.02483,
+    1.04897
+   ],
+   "axis": [
+    -0.12477,
+    -0.05559,
+    0.99063
+   ],
+   "extent": [
+    -0.05705,
+    0.06051
+   ],
+   "flatness": 0.11,
+   "volume_l": 0.0024
+  },
+  {
+   "id": "zygomaticus-major-muscle-l",
+   "name": "Zygomaticus major muscle",
+   "side": "L",
+   "file": "muscles/zygomaticus-major-muscle-l.vtp",
+   "polys": 798,
+   "centroid": [
+    -0.03718,
+    0.06524,
+    1.54608
+   ],
+   "axis": [
+    -0.49581,
+    -0.32735,
+    0.80437
+   ],
+   "extent": [
+    -0.02183,
+    0.03683
+   ],
+   "flatness": 0.265,
+   "volume_l": 0.0007
+  },
+  {
+   "id": "zygomaticus-major-muscle-r",
+   "name": "Zygomaticus major muscle",
+   "side": "R",
+   "file": "muscles/zygomaticus-major-muscle-r.vtp",
+   "polys": 798,
+   "centroid": [
+    0.03718,
+    0.06524,
+    1.54608
+   ],
+   "axis": [
+    0.49581,
+    -0.32735,
+    0.80437
+   ],
+   "extent": [
+    -0.02183,
+    0.03683
+   ],
+   "flatness": 0.265,
+   "volume_l": 0.0007
+  },
+  {
+   "id": "zygomaticus-minor-muscle-l",
+   "name": "Zygomaticus minor muscle",
+   "side": "L",
+   "file": "muscles/zygomaticus-minor-muscle-l.vtp",
+   "polys": 432,
+   "centroid": [
+    -0.0285,
+    0.07517,
+    1.56159
+   ],
+   "axis": [
+    -0.7468,
+    -0.42875,
+    0.50839
+   ],
+   "extent": [
+    -0.02182,
+    0.02988
+   ],
+   "flatness": 0.211,
+   "volume_l": 0.0003
+  },
+  {
+   "id": "zygomaticus-minor-muscle-r",
+   "name": "Zygomaticus minor muscle",
+   "side": "R",
+   "file": "muscles/zygomaticus-minor-muscle-r.vtp",
+   "polys": 432,
+   "centroid": [
+    0.0285,
+    0.07517,
+    1.56159
+   ],
+   "axis": [
+    0.7468,
+    -0.42875,
+    0.50839
+   ],
+   "extent": [
+    -0.02182,
+    0.02988
+   ],
+   "flatness": 0.211,
+   "volume_l": 0.0003
+  }
+ ]
+}

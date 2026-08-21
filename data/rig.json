@@ -1,0 +1,84 @@
+{
+  "_comment": "Proporcje ciala jako ulamki wzrostu H. Uklad: +X = prawa strona osoby, +Y = przod, +Z = gora. Jednostki: metry po przemnozeniu przez H.",
+  "default_height_m": 1.72,
+
+  "levels": {
+    "sole": 0.000,
+    "ankle": 0.045,
+    "knee": 0.285,
+    "pubis": 0.485,
+    "wrist": 0.485,
+    "trochanter": 0.530,
+    "umbilicus": 0.600,
+    "iliac_crest": 0.625,
+    "elbow": 0.630,
+    "xiphoid": 0.680,
+    "nipple": 0.720,
+    "sternal_notch": 0.800,
+    "acromion": 0.815,
+    "c7": 0.830,
+    "chin": 0.868,
+    "mouth": 0.890,
+    "nose_tip": 0.906,
+    "canthus": 0.925,
+    "glabella": 0.938,
+    "hairline_ant": 0.955,
+    "vertex": 1.000,
+    "fingertip": 0.377
+  },
+
+  "widths": {
+    "head": 0.045,
+    "neck": 0.040,
+    "shoulder": 0.129,
+    "chest": 0.103,
+    "waist": 0.084,
+    "pelvis": 0.098,
+    "nipple_x": 0.055,
+    "hip_joint_x": 0.050,
+    "knee_x": 0.048,
+    "ankle_x": 0.042,
+    "shoulder_joint_x": 0.118
+  },
+
+  "depths": {
+    "head": 0.062,
+    "neck": 0.046,
+    "chest": 0.063,
+    "waist": 0.053,
+    "pelvis": 0.061
+  },
+
+  "limb_radii": {
+    "upper_arm_prox": 0.036, "upper_arm_dist": 0.027,
+    "forearm_prox": 0.028, "forearm_dist": 0.019,
+    "hand_prox": 0.024, "hand_dist": 0.013,
+    "thigh_prox": 0.058, "thigh_dist": 0.042,
+    "shank_prox": 0.045, "shank_dist": 0.026,
+    "foot_prox": 0.030, "foot_dist": 0.020
+  },
+
+  "pose": {
+    "arm_abduction_deg": 11.0,
+    "forearm_abduction_deg": 7.0,
+    "hand_length": 0.108,
+    "foot_length": 0.150
+  },
+
+  "_cun": "Dlugosci kostne wg klasycznego systemu proporcjonalnego (gu du fen cun).",
+  "cun_lengths": {
+    "upper_arm": 9,
+    "forearm": 12,
+    "hand": 7.5,
+    "thigh": 19,
+    "shank": 16,
+    "foot": 10,
+    "trunk": 27.7,
+    "neck": 4,
+    "head": 10
+  },
+  "cun_trunk_lateral_ref": {
+    "_comment": "Odleglosc miedzy sutkami = 8 cun -> 1 cun boczny tulowia = nipple_x/4",
+    "cun_per_H": 0.01375
+  }
+}
