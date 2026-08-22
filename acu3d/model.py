@@ -6,6 +6,7 @@ jako zapasowy, gdy nie ma pobranych zasobow.
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import warnings
 from pathlib import Path
@@ -13,7 +14,7 @@ from pathlib import Path
 import numpy as np
 import pyvista as pv
 
-from . import anchors
+from . import anchors, curves
 from .anatomy import Anatomy
 from .geometry import build_layers
 from .rig import Rig
@@ -49,6 +50,7 @@ class Atlas:
         self.paths = json.loads((DATA / "meridians.json").read_text(encoding="utf-8"))["paths"]
         self.markers = self._resolve_markers()
         self.by_key = {m["key"]: m for m in self.markers}
+        self._curves = None
 
     # --- rozwiazywanie punktow ------------------------------------------
     def _ref_point(self, anchor: dict, pos: np.ndarray) -> np.ndarray:
@@ -121,8 +123,59 @@ class Atlas:
         return markers
 
     # --- meridiany -------------------------------------------------------
+    PER_SEGMENT = 14        # ile probek krzywej miedzy sasiednimi punktami
+
+    def _cache_path(self):
+        h = hashlib.md5()
+        for name in ("points.json", "meridians.json", "rig_fitted.json"):
+            f = DATA / name
+            if f.exists():
+                h.update(f.read_bytes())
+        h.update(f"{self.mode}-{self.PER_SEGMENT}".encode())
+        return READY / f"meridians_{h.hexdigest()[:12]}.npz"
+
+    def _load_curves(self) -> dict:
+        """Krzywe zaleza tylko od danych, wiec liczymy je raz i trzymamy na dysku."""
+        path = self._cache_path()
+        if path.exists():
+            try:
+                with np.load(path) as z:
+                    out = {}
+                    for k in z.files:
+                        ch, side, _ = k.split("|")
+                        out.setdefault((ch, side), []).append(z[k])
+                    return out
+            except Exception:
+                pass
+        out = {}
+        for ch in self.channels:
+            for side in ("R", "L"):
+                out[(ch, side)] = self._build_meridian(ch, side)
+        try:
+            READY.mkdir(parents=True, exist_ok=True)
+            for old in READY.glob("meridians_*.npz"):
+                old.unlink()
+            np.savez_compressed(path, **{f"{ch}|{side}|{i}": arr
+                                         for (ch, side), lines in out.items()
+                                         for i, arr in enumerate(lines)})
+        except Exception:
+            pass
+        return out
+
     def meridian_lines(self, channel: str, side: str = "R") -> list:
-        """Polilinie przebiegu kanalu, oblepione na powierzchni ciala."""
+        if self._curves is None:
+            self._curves = self._load_curves()
+        return self._curves.get((channel, side), [])
+
+    def _build_meridian(self, channel: str, side: str = "R") -> list:
+        """Przebiegi kanalu jako gladkie krzywe oblepione na powierzchni ciala.
+
+        Kanal nie biegnie lamana od punktu do punktu, wiec zamiast odcinkow
+        prowadzimy splajn Catmulla-Roma (lancuch krzywych Beziera). Splajn
+        przechodzi przez wezly, a po zrzutowaniu na skore wezly sa jeszcze raz
+        przypinane dokladnie do polozen punktow - krzywa ma je laczyc, a nie
+        przesuwac.
+        """
         lines = []
         for group in self.paths.get(channel, []):
             pts, refs = [], []
@@ -134,14 +187,25 @@ class Atlas:
                 refs.append(m["ref"])
             if len(pts) < 2:
                 continue
-            dense_p, dense_r = [], []
-            for i in range(len(pts) - 1):
-                for f in np.linspace(0.0, 1.0, 7, endpoint=False):
-                    dense_p.append(pts[i] * (1 - f) + pts[i + 1] * f)
-                    dense_r.append(refs[i] * (1 - f) + refs[i + 1] * f)
-            dense_p.append(pts[-1])
-            dense_r.append(refs[-1])
-            lines.append(self._hug(np.array(dense_r), np.array(dense_p)))
+            P, R = np.array(pts), np.array(refs)
+            dense_p, dense_r = curves.sample_pair(P, R, self.PER_SEGMENT)
+            nodes = np.arange(len(P)) * self.PER_SEGMENT
+            nodes[-1] = len(dense_p) - 1
+            pinned = np.zeros(len(dense_p), dtype=bool)
+            pinned[nodes] = True
+
+            hug = self._hug(dense_r, dense_p)
+            smoothed = curves.relax(hug, pinned)     # zdejmij drgania po rzutowaniu
+            # Wygladzanie rusza wiekszosc probek o ulamek milimetra - te zostawiamy.
+            # Rzutujemy ponownie tylko tam, gdzie ruch byl duzy, czyli gdzie promien
+            # wczesniej uciekl i krzywa naprawde zeszla ze skory.
+            moved = np.linalg.norm(smoothed - hug, axis=1) > 0.001
+            if moved.any():
+                idx = np.flatnonzero(moved)
+                smoothed[idx] = self._hug(dense_r[idx], smoothed[idx])
+            hug = smoothed
+            hug[nodes] = P                           # wezly dokladnie w punktach
+            lines.append(hug)
         return lines
 
     def _hug(self, refs: np.ndarray, pts: np.ndarray) -> np.ndarray:

@@ -32,6 +32,21 @@ i stąd BL-23 ląduje 1,5 cun od linii pośrodkowej, a BL-52 3 cun, obydwa na wy
 
 Konsekwencja praktyczna: **wymiana modelu ciała nie unieważnia żadnej z 361 kotwic.**
 
+## Przebiegi kanałów
+
+Kanał nie biegnie łamaną od punktu do punktu, więc linie prowadzi splajn
+Catmulla-Roma zapisany jako łańcuch sześciennych krzywych Béziera. W odróżnieniu
+od zwykłego Béziera taki splajn **przechodzi przez węzły** — a węzłami są punkty
+akupunkturowe, więc krzywa nie może ich omijać (sprawdzane: maksymalne odchylenie
+0,000 mm). Parametryzacja dośrodkowa zamiast równomiernej ma tu znaczenie: odstępy
+między punktami wahają się od 1 cun do kilkunastu centymetrów, a przy równomiernej
+takie nierówności dają pętle i ostrza.
+
+Gotowa krzywa jest rzutowana na skórę, wygładzana z drgań rzutowania i ponownie
+rzutowana — ale tylko w tych 5% próbek, które wygładzanie ruszyło o więcej niż
+milimetr. Wyniki lądują w pamięci podręcznej, więc kolejne uruchomienia startują
+w około 3 sekundy zamiast 7.
+
 ## Warstwy
 
 ![Skóra, mięśnie, kości](docs/warstwy.png)

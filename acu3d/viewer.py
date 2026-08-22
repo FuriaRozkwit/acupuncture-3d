@@ -114,7 +114,9 @@ class Viewer:
             for side in ("R", "L"):
                 for poly in a.meridian_lines(ch, side):
                     if len(poly) > 3:
-                        lines.append(pv.Spline(poly, len(poly) * 3).tube(radius=r * 0.33))
+                        # krzywa jest juz gladka i lezy na skorze - drugi splajn
+                        # tylko odciagnalby ja od powierzchni
+                        lines.append(pv.lines_from_points(poly).tube(radius=r * 0.33))
                 if info["clock"] >= 13:              # REN / DU sa pojedyncze
                     break
             if lines:
