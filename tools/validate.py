@@ -56,6 +56,17 @@ def main() -> int:
         print(f"OK: wszystkie markery leza na skorze "
               f"(najdalszy {dist.max() * 1000:.1f} mm, sredni {dist.mean() * 1000:.1f} mm)")
 
+    # punkt prawej strony nie ma prawa wyladowac na lewej polowie ciala
+    crossed = [m for m in atlas.markers if m["side"] == "R" and m["pos"][0] < -0.005]
+    stray = [m for m in atlas.markers if m["side"] == "C" and abs(m["pos"][0]) > 0.01]
+    if crossed or stray:
+        problems += len(crossed) + len(stray)
+        print(f"BLAD: {len(crossed)} punktow przeszlo na druga strone ciala, "
+              f"{len(stray)} punktow posrodkowych zeszlo z osi: "
+              + ", ".join(m["code"] for m in (crossed + stray)[:10]))
+    else:
+        print("OK: strony sie nie mieszaja, punkty posrodkowe na osi")
+
     asym = [m["code"] for m in atlas.markers if m["side"] == "R"
             and not np.allclose(m["pos"] * [-1, 1, 1], atlas.by_key[m["code"] + "·L"]["pos"])]
     if asym:

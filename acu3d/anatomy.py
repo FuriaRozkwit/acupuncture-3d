@@ -88,11 +88,24 @@ class FittedSegment:
         return p
 
     # --- powierzchnia ----------------------------------------------------
+    def _limit(self, base: np.ndarray, d: np.ndarray) -> float:
+        """Ile promien moze przelecieć, zanim przetnie linie posrodkowa.
+
+        Bez tego punkt na przysrodkowej stronie uda potrafil przelecieć przez
+        krocze i wyladowac na przeciwnej nodze - promien startuje wtedy z osi,
+        ktora u gory uda biegnie jeszcze wewnatrz miednicy.
+        """
+        if abs(self.p0[0]) < 0.02 or abs(d[0]) < 1e-6:
+            return MAX_RAY                       # segment posrodkowy albo promien pionowy
+        if d[0] * base[0] >= 0:
+            return MAX_RAY                       # promien idzie na zewnatrz ciala
+        return float(np.clip(-base[0] / d[0], 0.01, MAX_RAY))
+
     def surface_by_azimuth(self, t: float, az_deg: float, out_cun: float = 0.0) -> np.ndarray:
         a = math.radians(az_deg)
         d = _unit(math.cos(a) * self.e_ant + math.sin(a) * self.e_lat)
         base = self.interior(t)
-        p = self.body.cast(base, d)
+        p = self.body.cast(base, d, self._limit(base, d))
         return p + d * out_cun * self.cun_lat
 
     def surface_by_lateral(self, t: float, lat_cun: float, face: str = "anterior",
@@ -105,7 +118,7 @@ class FittedSegment:
             base = self.interior(t)
         else:
             d = self.e_ant
-        p = self.body.cast(base, d)
+        p = self.body.cast(base, d, self._limit(base, d))
         return p + d * out_cun * self.cun_lat
 
 
@@ -154,9 +167,10 @@ class Anatomy:
         zs, ys = self._core
         return float(np.interp(z, zs, ys))
 
-    def cast(self, origin: np.ndarray, direction: np.ndarray) -> np.ndarray:
+    def cast(self, origin: np.ndarray, direction: np.ndarray,
+             limit: float = None) -> np.ndarray:
         """Pierwsze trafienie w skore, idac z wnetrza na zewnatrz."""
-        end = origin + direction * MAX_RAY
+        end = origin + direction * (MAX_RAY if limit is None else limit)
         pts, _ = self.skin.ray_trace(origin, end, first_point=True)
         pts = np.asarray(pts)
         if pts.size >= 3:

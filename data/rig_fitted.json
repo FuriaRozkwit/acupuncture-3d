@@ -454,6 +454,11 @@
    0.0765,
    1.4923
   ],
+  "umbilicus": [
+   0.0,
+   0.0,
+   1.0291
+  ],
   "midclavicular": [
    0.0828,
    -0.0346,
@@ -467,7 +472,7 @@
     0.0
    ],
    [
-    1.0038,
+    1.0291,
     5.0
    ],
    [
@@ -479,7 +484,7 @@
     22.0
    ]
   ],
-  "note": "pepek wyznaczony proporcjonalnie miedzy spojeniem a mieczykiem"
+  "umbilicus_source": "zmierzony na skorze, dolek 7.2 mm"
  },
  "spine_curve": [
   [

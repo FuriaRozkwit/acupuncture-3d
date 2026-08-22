@@ -53,6 +53,29 @@ def bottom_region(pts: np.ndarray, frac: float = 0.06) -> np.ndarray:
     return pts[z < z.min() + frac * (z.max() - z.min() + 1e-9) + 0.004]
 
 
+def find_navel(skin_pts: np.ndarray, z_pub: float, z_xi: float):
+    """Pepek zmierzony na skorze, a nie zalozony z proporcji.
+
+    Pepek to DOLEK: na linii posrodkowej skora jest cofnieta wzgledem sasiedztwa
+    kilka centymetrow w bok. Mierzymy wlasnie te roznice, bo jest odporna na to,
+    jak wybierzemy zakres (odchylka od wygladzonego trendu potrafila wskazac
+    zamiast pepka miejsce, gdzie brzuch sie zweza - pomylka o 2 cm).
+    """
+    fallback = z_pub + (z_xi - z_pub) * 5.0 / 13.0
+
+    def profile(z, x0, x1, tol=0.008):
+        b = skin_pts[(np.abs(skin_pts[:, 2] - z) < tol) & (np.abs(skin_pts[:, 0]) >= x0)
+                     & (np.abs(skin_pts[:, 0]) <= x1) & (skin_pts[:, 1] > 0.05)]
+        return float(np.percentile(b[:, 1], 90)) if len(b) > 4 else np.nan
+
+    zs = np.linspace(z_pub + 0.08, z_xi - 0.04, 120)
+    dent = np.array([(profile(z, 0.028, 0.048) - profile(z, 0.0, 0.010)) for z in zs])
+    if np.all(np.isnan(dent)) or np.nanmax(dent) < 0.002:
+        return fallback, "proporcja 5/13 (nie znaleziono dolka)"
+    i = int(np.nanargmax(dent))
+    return float(zs[i]), f"zmierzony na skorze, dolek {dent[i] * 1000:.1f} mm"
+
+
 def main() -> int:
     out = {"units": "m",
            "coordinate_system": "+X = prawa strona, +Y = przod, +Z = gora",
@@ -145,12 +168,12 @@ def main() -> int:
     out["landmarks"] = {k: [round(float(x), 4) for x in v] for k, v in L.items() if v is not None}
 
     # --- linijka cun tulowia: pubis 0, xiphoid 13, wciecie szyjne 22
-    #     pepek nie jest kostny - lezy 5 cun nad spojeniem wg podzialu 8/5
     z_pub, z_xi, z_notch = float(pubis[2]), float(xiphoid_top[2]), float(notch[2])
-    z_umb = z_pub + (z_xi - z_pub) * 5.0 / 13.0
+    z_umb, umb_src = find_navel(sp, z_pub, z_xi)
     out["trunk_ruler"] = {"knots": [[round(z_pub, 4), 0.0], [round(z_umb, 4), 5.0],
                                     [round(z_xi, 4), 13.0], [round(z_notch, 4), 22.0]],
-                          "note": "pepek wyznaczony proporcjonalnie miedzy spojeniem a mieczykiem"}
+                          "umbilicus_source": umb_src}
+    out["landmarks"]["umbilicus"] = [0.0, 0.0, round(z_umb, 4)]
 
     # --- krzywa kregoslupa: wysokosc -> polozenie trzonu (punkt na pewno wewnatrz tulowia)
     curve = sorted(([v["body"][2], v["body"][1]] for v in verts.values() if "body" in v))
