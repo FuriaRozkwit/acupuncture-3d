@@ -1,4 +1,13 @@
-"""Interaktywna przegladarka 3D: warstwy ciala, kanaly, punkty, miesnie."""
+"""Interaktywna przegladarka 3D: warstwy ciala, kanaly, punkty, miesnie.
+
+Wydajnosc suwakow
+-----------------
+Wybrany miesien rysowany jest JAKO OSOBNY AKTOR, a w wielkiej siatce wszystkich
+miesni jego komorki stają się przezroczyste (wpis w tablicy kolorow z alfa = 0).
+Dzieki temu ruch suwaka przelicza i wysyla na karte kilka tysiecy wierzcholkow,
+a nie pol miliona. Mapowanie punkt-miesien liczone jest raz na miesien i
+zapamietywane, bo nie zalezy od parametrow.
+"""
 from __future__ import annotations
 
 import sys
@@ -18,10 +27,17 @@ THEME = {
     "bone": "#efe9dc",
     "text": "#dfe6f0",
     "dim": "#8792a3",
+    "accent": "#7fd1c8",
     "highlight": "#ffe36a",
 }
 LAYER_LABELS = {"skin": "skora", "muscle": "miesnie", "skeleton": "kosci"}
 SIDE_PL = {"R": "prawa", "L": "lewa", "C": "linia posrodkowa"}
+PARAMS = (("napiecie", "activation", 0.0, 1.0, 0.0),
+          ("tonus spoczynkowy", "tone", 0.0, 0.6, 0.0),
+          ("przerost", "hypertrophy", 0.75, 1.35, 1.0),
+          ("sztywnosc", "stiffness", 0.2, 1.6, 1.0))
+# przezroczystosci w trybie fokusu: reszta ciala schodzi na drugi plan
+FOCUS_OPACITY = {"skin": 0.07, "muscle": 0.10, "skeleton": 0.18}
 
 
 def _safe_print(text: str) -> None:
@@ -31,11 +47,15 @@ def _safe_print(text: str) -> None:
     sys.stdout.flush()
 
 
+def _rgba(hex_color: str, alpha: int = 255) -> list:
+    h = hex_color.lstrip("#")
+    return [int(h[i:i + 2], 16) for i in (0, 2, 4)] + [alpha]
+
+
 class Viewer:
     def __init__(self, atlas: Atlas, off_screen: bool = False, window_size=(1560, 980)):
         self.atlas = atlas
         self.muscles = MuscleSet() if atlas.mode == "anatomy" else None
-        self.selected = None                       # wybrany miesien
         self.pl = pv.Plotter(off_screen=off_screen, window_size=window_size,
                              title="Atlas punktow akupunktury 3D")
         self.pl.set_background(THEME["bg"])
@@ -47,10 +67,17 @@ class Viewer:
         self.show_labels = False
         self.show_meridians = True
         self.solo: str | None = None
+        self.selected = None                 # wybrany miesien
+        self.focused_key: str | None = None  # wybrany punkt
+        self.focus_mode = False
+        self._focus_saved: dict | None = None
+        self._sel_mesh = None
+        self._sel_rest = None
         self._sliders: list = []
+        self._buttons: list = []
         self._build()
 
-    # --- scena -----------------------------------------------------------
+    # ------------------------------------------------------------------ scena
     def _build(self) -> None:
         a = self.atlas
         self.layer_actors["skin"] = self.pl.add_mesh(
@@ -59,10 +86,13 @@ class Viewer:
         if self.muscles is not None:
             m = self.muscles.mesh
             m.point_data["sel"] = np.zeros(m.n_points, dtype=np.float32)
+            # 0 = miesien widoczny, 1 = zastapiony osobnym aktorem, wiec przezroczysty
+            lut = pv.LookupTable(values=np.array([_rgba(THEME["muscle"]), [0, 0, 0, 0]],
+                                                 dtype=np.uint8))
+            lut.scalar_range = (0.0, 1.0)
             self.layer_actors["muscle"] = self.pl.add_mesh(
-                m, scalars="sel", clim=[0, 1], show_scalar_bar=False,
-                cmap=[THEME["muscle"], THEME["muscle_sel"]], smooth_shading=True,
-                specular=0.2, name="muscle")
+                m, scalars="sel", cmap=lut, clim=[0, 1], show_scalar_bar=False,
+                smooth_shading=True, specular=0.2, name="muscle")
         else:
             self.layer_actors["muscle"] = self.pl.add_mesh(
                 a.layers["muscle"], color=THEME["muscle"], smooth_shading=True, name="muscle")
@@ -98,55 +128,91 @@ class Viewer:
 
         self._add_widgets()
         self._add_help()
-        self.info("Kliknij punkt albo miesien (wlacz warstwe miesni klawiszem [j]).")
+        self.info("Kliknij punkt albo miesien.  [j] warstwa miesni   [f] fokus na wybranym")
         self.pl.enable_point_picking(callback=self._on_pick, show_message=False,
                                      left_clicking=True, show_point=False, tolerance=0.02)
         self._view("xz", 180)
+
+    # -------------------------------------------------------------- widgety
+    def _button(self, label: str, fn, position, color=None) -> None:
+        """Przycisk chwilowy - wykonuje akcje i sam sie odklika."""
+        holder = {}
+
+        def cb(state):
+            fn()
+            w = holder.get("w")
+            if w is not None:
+                w.GetRepresentation().SetState(False)
+            self.pl.render()
+
+        holder["w"] = self.pl.add_checkbox_button_widget(
+            cb, value=False, position=position, size=16, border_size=1,
+            color_on=color or THEME["accent"], color_off="#38414f")
+        self.pl.add_text(label, position=(position[0] + 21, position[1] + 1),
+                         font_size=7, color=THEME["text"], name=f"btn_{label}")
+        self._buttons.append(holder["w"])
 
     def _add_widgets(self) -> None:
         y = 12
         for name in ("skin", "muscle", "skeleton"):
             self.pl.add_checkbox_button_widget(
                 self._toggle_layer(name), value=(name == "skin"), position=(12, y),
-                size=20, border_size=1, color_on=THEME["skin"], color_off="#3a4250")
+                size=20, border_size=1, color_on=THEME["skin"], color_off="#38414f")
             self.pl.add_text(LAYER_LABELS[name], position=(38, y + 2), font_size=8,
                              color=THEME["text"], name=f"lt_{name}")
             y += 26
-        self.pl.add_slider_widget(
-            self._set_skin_opacity, [0.0, 1.0], value=1.0, title="krycie skory",
-            pointa=(0.74, 0.055), pointb=(0.96, 0.055), style="modern",
-            title_height=0.018, fmt="%.2f")
 
-        x, y = 12, 210 + 23 * (len(self.atlas.channels) - 1)
-        for ch, info in self.atlas.channels.items():
-            self.pl.add_checkbox_button_widget(
+        # kanaly, od dolu do gory
+        self._channel_widgets = {}
+        x, y0 = 12, 200
+        for i, (ch, info) in enumerate(self.atlas.channels.items()):
+            y = y0 + 23 * (len(self.atlas.channels) - 1 - i)
+            self._channel_widgets[ch] = self.pl.add_checkbox_button_widget(
                 self._toggle_channel(ch), value=True, position=(x, y),
-                size=17, border_size=1, color_on=info["color"], color_off="#3a4250")
+                size=17, border_size=1, color_on=info["color"], color_off="#38414f")
             self.pl.add_text(f"{ch}  {info['pl']}", position=(x + 22, y + 1), font_size=7,
                              color=THEME["text"], name=f"ct_{ch}")
-            y -= 23
+        top = y0 + 23 * len(self.atlas.channels)
+        self.pl.add_text("KANALY", position=(12, top + 84), font_size=8, color=THEME["dim"],
+                         name="hdr_ch")
+        self._button("wszystkie", lambda: self.set_channels(set(self.atlas.channels)),
+                     (12, top + 60))
+        self._button("zaden", lambda: self.set_channels(set()), (12, top + 38))
+        self._button("odwroc", self.invert_channels, (12, top + 16))
+
+        skin_slider = self.pl.add_slider_widget(
+            self._set_skin_opacity, [0.0, 1.0], value=1.0, title="krycie skory",
+            pointa=(0.74, 0.055), pointb=(0.96, 0.055), style="modern",
+            title_height=0.015, fmt="%.2f")
+        skin_slider.GetRepresentation().SetLabelHeight(0.013)
 
         if self.muscles is not None:
-            specs = [("napiecie", "activation", 0.0, 1.0, 0.0),
-                     ("tonus spoczynkowy", "tone", 0.0, 0.6, 0.0),
-                     ("przerost", "hypertrophy", 0.75, 1.35, 1.0),
-                     ("sztywnosc", "stiffness", 0.2, 1.6, 1.0)]
-            for i, (title, attr, lo, hi, val) in enumerate(specs):
-                yy = 0.40 - i * 0.075
-                self._sliders.append(self.pl.add_slider_widget(
+            for i, (title, attr, lo, hi, val) in enumerate(PARAMS):
+                yy = 0.44 - i * 0.098
+                sl = self.pl.add_slider_widget(
                     self._set_param(attr), [lo, hi], value=val, title=title,
                     pointa=(0.74, yy), pointb=(0.96, yy), style="modern",
-                    title_height=0.016, fmt="%.2f"))
+                    title_height=0.015, fmt="%.2f")
+                rep = sl.GetRepresentation()      # wartosc nie ma zachodzic na tytul
+                rep.SetLabelHeight(0.013)
+                self._sliders.append(sl)
+            w, h = self.pl.window_size
+            self._button("fokus [f]", self.toggle_focus,
+                         (int(w * 0.74), int(h * 0.60)), color=THEME["highlight"])
+            self._button("zeruj miesien [r]", self.reset_muscle,
+                         (int(w * 0.74), int(h * 0.565)))
 
     def _add_help(self) -> None:
-        txt = ("[a] wszystkie kanaly   [n] zaden   [c]/[v] solo kanalu   [x] bez solo\n"
-               "[m] meridiany   [l] etykiety   [k] skora   [j] miesnie   [b] kosci\n"
-               "[r] wyzeruj miesien   [1] przod  [2] tyl  [3] bok  [4] gora   [klik] opis")
+        txt = ("[f] fokus na wybranym    [a]/[n] wszystkie kanaly / zaden   [i] odwroc\n"
+               "[c]/[v] solo kanalu   [x] bez solo   [m] meridiany   [l] etykiety\n"
+               "[k] skora   [j] miesnie   [b] kosci   [r] wyzeruj miesien\n"
+               "[1] przod  [2] tyl  [3] bok  [4] gora   [0] widok domyslny   [klik] opis")
         self.pl.add_text(txt, position="upper_right", font_size=7, color=THEME["dim"],
                          name="help")
         keys = {
             "a": lambda: self.set_channels(set(self.atlas.channels)),
             "n": lambda: self.set_channels(set()),
+            "i": self.invert_channels,
             "c": lambda: self.cycle_solo(-1),
             "v": lambda: self.cycle_solo(1),
             "x": lambda: self.set_solo(None),
@@ -156,6 +222,8 @@ class Viewer:
             "j": lambda: self._flip_layer("muscle"),
             "b": lambda: self._flip_layer("skeleton"),
             "r": self.reset_muscle,
+            "f": self.toggle_focus,
+            "0": lambda: self._view("xz", 180),
             "1": lambda: self._view("xz", 180),
             "2": lambda: self._view("xz", 0),
             "3": lambda: self._view("yz", 0),
@@ -164,8 +232,10 @@ class Viewer:
         for k, fn in keys.items():
             self.pl.add_key_event(k, fn)
 
-    # --- widok i warstwy -------------------------------------------------
+    # -------------------------------------------------------- widok i warstwy
     def _view(self, cam: str, azimuth: float) -> None:
+        if self.focus_mode:
+            self._focus_leave(keep_camera=False)
         self.pl.camera_position = cam
         if azimuth:
             self.pl.camera.azimuth = azimuth
@@ -188,7 +258,7 @@ class Viewer:
         self.layer_actors["skin"].GetProperty().SetOpacity(float(value))
         self.pl.render()
 
-    # --- kanaly ----------------------------------------------------------
+    # ---------------------------------------------------------------- kanaly
     def _toggle_channel(self, ch: str):
         def cb(state: bool) -> None:
             (self.visible_channels.add if state else self.visible_channels.discard)(ch)
@@ -197,12 +267,25 @@ class Viewer:
 
     def set_channels(self, chans: set) -> None:
         self.visible_channels = set(chans)
+        self._sync_channel_buttons()
         self._apply_visibility()
+
+    def invert_channels(self) -> None:
+        self.set_channels(set(self.atlas.channels) - self.visible_channels)
+
+    def _sync_channel_buttons(self) -> None:
+        """Przyciski kanalow maja pokazywac stan, nawet gdy zmienil go klawisz."""
+        for ch, w in getattr(self, "_channel_widgets", {}).items():
+            try:
+                w.GetRepresentation().SetState(ch in self.visible_channels)
+            except AttributeError:
+                pass
 
     def set_solo(self, ch: str | None) -> None:
         self.solo = ch
         self.visible_channels = set(self.atlas.channels) if ch is None else {ch}
         self.show_labels = ch is not None
+        self._sync_channel_buttons()
         self._apply_visibility()
         info = self.atlas.channels.get(ch)
         self.info(f"Kanal {ch} - {info['pl']} ({info['en']}), zywiol: {info['element']}"
@@ -232,19 +315,28 @@ class Viewer:
             self.label_actors[ch].SetVisibility(on and self.show_labels)
         self.pl.render()
 
-    # --- miesnie ---------------------------------------------------------
+    # --------------------------------------------------------------- miesnie
     def _set_param(self, attr: str):
         def cb(value: float) -> None:
             if self.selected is None or self.muscles is None:
                 return
             setattr(self.selected, attr, float(value))
-            self.muscles.apply(self.selected)
-            self.muscles.refresh()
-            self._muscle_info(self.selected)
+            self._deform_selected()
+            self._muscle_info(self.selected, to_console=False)
             self.pl.render()
         return cb
 
-    def select_muscle(self, muscle) -> None:
+    def _deform_selected(self) -> None:
+        """Przelicza tylko wybrany miesien - kilka tysiecy wierzcholkow."""
+        if self._sel_mesh is None:
+            return
+        pts = self.muscles.deform(self.selected, self._sel_rest)
+        self._sel_mesh.points[:] = pts
+        self._sel_mesh.compute_normals(inplace=True, point_normals=True,
+                                       cell_normals=False, split_vertices=False)
+        self._sel_mesh.Modified()
+
+    def select_muscle(self, muscle, to_console: bool = True) -> None:
         if self.muscles is None or muscle is None:
             return
         sel = self.muscles.mesh.point_data["sel"]
@@ -252,37 +344,123 @@ class Viewer:
         sel[muscle.slice] = 1.0
         self.muscles.mesh.Modified()
         self.selected = muscle
-        for slider, attr in zip(self._sliders,
-                                ("activation", "tone", "hypertrophy", "stiffness")):
+        self._sel_mesh = self.muscles.submesh(muscle)
+        self._sel_rest = np.array(self._sel_mesh.points, copy=True)
+        self._deform_selected()
+        self.pl.add_mesh(self._sel_mesh, color=THEME["muscle_sel"], smooth_shading=True,
+                         specular=0.25, name="sel_muscle")
+        for slider, (_, attr, _, _, _) in zip(self._sliders, PARAMS):
             slider.GetRepresentation().SetValue(getattr(muscle, attr))
-        self._muscle_info(muscle)
+        self._muscle_info(muscle, to_console=to_console)
+        if self.focus_mode:
+            self._focus_camera()
         self.pl.render()
 
     def reset_muscle(self) -> None:
         if self.selected is None or self.muscles is None:
             return
         self.muscles.reset(self.selected)
-        self.muscles.refresh()
-        self.select_muscle(self.selected)
+        self._deform_selected()
+        for slider, (_, attr, _, _, _) in zip(self._sliders, PARAMS):
+            slider.GetRepresentation().SetValue(getattr(self.selected, attr))
+        self._muscle_info(self.selected, to_console=False)
+        self.pl.render()
 
-    def _muscle_info(self, muscle) -> None:
+    def _muscle_info(self, muscle, to_console: bool = False) -> None:
         pts = self.muscles.points_on(
-            muscle, [m for m in self.atlas.markers
-                     if m["side"] in (muscle.side, "C") and m["channel"] in self.visible_channels])
+            muscle, [m for m in self.atlas.markers if m["side"] in (muscle.side, "C")])
+        shown = [(p, d) for p, d in pts if p["channel"] in self.visible_channels][:8]
         lines = [f"MIESIEN: {muscle.label}",
-                 f"dlugosc {muscle.length_m * 100:.1f} cm   objetosc {muscle.volume_l:.3f} l   "
-                 f"trojkatow {muscle.polys}",
+                 f"dlugosc {muscle.length_m * 100:.1f} cm   objetosc {muscle.volume_l:.3f} l",
                  f"napiecie {muscle.activation:.2f}   tonus {muscle.tone:.2f}   "
                  f"przerost {muscle.hypertrophy:.2f}   sztywnosc {muscle.stiffness:.2f}",
                  f"skrocenie brzusca {muscle.shortening() * 100:.0f}%   "
                  f"sila wzgledna {muscle.force_ratio():.2f}"]
-        if pts:
+        if shown:
             lines.append("punkty nad miesniem: " + ", ".join(
-                f"{p['code']} ({d * 1000:.0f} mm)" for p, d in pts[:8]))
+                f"{p['code']} ({d * 1000:.0f} mm)" for p, d in shown))
         self.info("\n".join(lines))
-        _safe_print("\n" + "=" * 78 + f"\n{muscle.label}\n" + "\n".join(lines[1:]))
+        if to_console:
+            _safe_print("\n" + "=" * 78 + f"\n{muscle.label}\n" + "\n".join(lines[1:]))
 
-    # --- wybor klikniciem ------------------------------------------------
+    # ----------------------------------------------------------------- fokus
+    def _focus_target(self):
+        if self.focused_key:
+            m = self.atlas.by_key[self.focused_key]
+            return np.asarray(m["pos"]), f"{m['code']} ({SIDE_PL[m['side']]})"
+        if self.selected is not None:
+            return np.asarray(self.selected.centroid), self.selected.label
+        return None, None
+
+    def toggle_focus(self) -> None:
+        if self.focus_mode:
+            self._focus_leave()
+        else:
+            self._focus_enter()
+
+    def _focus_enter(self) -> None:
+        target, label = self._focus_target()
+        if target is None:
+            self.info("Fokus: najpierw kliknij punkt albo miesien.")
+            self.pl.render()
+            return
+        self._focus_saved = {
+            "opacity": {k: a.GetProperty().GetOpacity() for k, a in self.layer_actors.items()},
+            "visible": {k: bool(a.GetVisibility()) for k, a in self.layer_actors.items()},
+            "channels": set(self.visible_channels),
+            "labels": self.show_labels,
+            "camera": self.pl.camera_position,
+        }
+        for name, op in FOCUS_OPACITY.items():
+            act = self.layer_actors[name]
+            act.SetVisibility(True)
+            act.GetProperty().SetOpacity(op)
+        if self.focused_key:                       # zostaw tylko kanal wybranego punktu
+            self.visible_channels = {self.atlas.by_key[self.focused_key]["channel"]}
+            self.show_labels = True
+        self._apply_visibility()
+        self.focus_mode = True
+        self._focus_camera()
+        self.info(f"FOKUS: {label}   [f] wyjscie   "
+                  f"{'miesien pod punktem podswietlony' if self.selected else ''}")
+        self.pl.render()
+
+    def _focus_camera(self, distance: float = None) -> None:
+        """Ustawia wybrany obiekt w srodku obrotu i przybliza tak, by go objac."""
+        target, _ = self._focus_target()
+        if target is None:
+            return
+        if distance is None:
+            size = self.selected.length_m if self.selected is not None else 0.12
+            distance = float(np.clip(2.6 * size, 0.30, 1.10))
+        cam = self.pl.camera
+        d = np.array(cam.position) - np.array(cam.focal_point)
+        n = np.linalg.norm(d)
+        u = d / n if n > 1e-9 else np.array([0.0, -1.0, 0.0])
+        cam.focal_point = tuple(target)
+        cam.position = tuple(target + u * distance)
+        self.pl.render()
+
+    def _focus_leave(self, keep_camera: bool = True) -> None:
+        if not self.focus_mode or self._focus_saved is None:
+            self.focus_mode = False
+            return
+        s = self._focus_saved
+        for k, a in self.layer_actors.items():
+            a.GetProperty().SetOpacity(s["opacity"][k])
+            a.SetVisibility(s["visible"][k])
+        self.visible_channels = s["channels"]
+        self.show_labels = s["labels"]
+        self._sync_channel_buttons()
+        self._apply_visibility()
+        if keep_camera:
+            self.pl.camera_position = s["camera"]
+        self.focus_mode = False
+        self._focus_saved = None
+        self.info("Fokus wylaczony.")
+        self.pl.render()
+
+    # ---------------------------------------------------------- wybor klikiem
     def _on_pick(self, picked, *args) -> None:
         pos = np.asarray(getattr(picked, "points", picked)).reshape(-1, 3)
         if not len(pos):
@@ -299,13 +477,15 @@ class Viewer:
         if self.muscles is not None and self.layer_actors["muscle"].GetVisibility():
             m = self.muscles.at_position(pos)
             if m is not None:
+                self.focused_key = None
                 self.select_muscle(m)
 
-    # --- opis punktu -----------------------------------------------------
+    # ------------------------------------------------------------ opis punktu
     def focus(self, key: str) -> None:
         d = self.atlas.describe(key)
         meta = d["meta"]
         ch = self.atlas.channels[d["channel"]]
+        self.focused_key = key
         lines = [f"{d['code']}  {d['pinyin']}  ({meta.get('english', '')})",
                  f"kanal: {ch['pl']} / {ch['en']}   strona: {SIDE_PL[d['side']]}"
                  f"   dokladnosc: {d['accuracy']}"]
@@ -316,12 +496,17 @@ class Viewer:
             mus, dist = self.muscles.muscle_under(d["pos"])
             if mus is not None:
                 lines.append(f"miesien pod punktem: {mus.label}  ({dist * 1000:.0f} mm od skory)")
+                self.select_muscle(mus, to_console=False)
+                self.focused_key = key           # wybor miesnia nie kasuje punktu
         if meta.get("needling"):
             lines += textwrap.wrap("naklucie: " + meta["needling"], 96)[:2]
+        lines.append("[f] fokus na tym punkcie")
         self.info("\n".join(lines))
-        self.pl.add_mesh(pv.Sphere(radius=0.010, center=d["pos"], theta_resolution=20,
+        self.pl.add_mesh(pv.Sphere(radius=0.011, center=d["pos"], theta_resolution=20,
                                    phi_resolution=20),
-                         color=THEME["highlight"], name="highlight", opacity=0.85)
+                         color=THEME["highlight"], name="highlight", opacity=0.9)
+        if self.focus_mode:
+            self._focus_camera()
         self._print_full(d)
         self.pl.render()
 

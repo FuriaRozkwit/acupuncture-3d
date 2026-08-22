@@ -89,6 +89,7 @@ class MuscleSet:
         self.muscles = [Muscle(r, i, *spans[i]) for i, r in enumerate(self.records)]
         self.by_id = {m.id: m for m in self.muscles}
         self._mid_points = np.asarray(self.mesh.point_data["mid"])
+        self._on_cache: dict = {}          # miesien -> punkty nad nim (liczone raz)
 
     # --- budowa ----------------------------------------------------------
     def _build(self):
@@ -114,12 +115,15 @@ class MuscleSet:
         return mesh, spans
 
     # --- deformacja ------------------------------------------------------
-    def apply(self, muscle: Muscle) -> None:
-        """Przelicza wierzcholki jednego miesnia z parametrow."""
-        sl = muscle.slice
-        rest = self.rest[sl]
+    def deform(self, muscle: Muscle, rest: np.ndarray = None) -> np.ndarray:
+        """Nowe polozenia wierzcholkow miesnia. Czysta funkcja - nic nie zapisuje.
+
+        Liczy sie w ulamku milisekundy, wiec moze chodzic za suwakiem w czasie
+        rzeczywistym; kosztowne bylo tylko to, co bylo wokol niej.
+        """
+        rest = self.rest[muscle.slice] if rest is None else rest
         if rest.size == 0:
-            return
+            return rest
         a = muscle.axis
         c = muscle.centroid
         rel = rest - c
@@ -132,8 +136,12 @@ class MuscleSet:
         s = muscle.shortening()
         k = 1.0 - s * w
         scale = muscle.hypertrophy / np.sqrt(np.maximum(k, 0.15))
-        new = c + np.outer(u * k, a) + radial * scale[:, None]
-        self.mesh.points[sl] = new
+        return c + np.outer(u * k, a) + radial * scale[:, None]
+
+    def apply(self, muscle: Muscle) -> None:
+        """Wpisuje deformacje do wspolnej siatki (uzywane poza trybem interaktywnym)."""
+        if muscle.slice.stop > muscle.slice.start:
+            self.mesh.points[muscle.slice] = self.deform(muscle)
 
     def reset(self, muscle: Muscle) -> None:
         muscle.activation = 0.0
@@ -158,7 +166,15 @@ class MuscleSet:
         return [m for m in self.muscles if q in m.name.lower()]
 
     def points_on(self, muscle: Muscle, markers: list, radius: float = 0.022) -> list:
-        """Punkty akupunkturowe lezace nad tym miesniem."""
+        """Punkty akupunkturowe lezace nad tym miesniem.
+
+        Wynik zalezy od pozycji spoczynkowej, a nie od parametrow, wiec liczymy go
+        raz na miesien i trzymamy w pamieci - inaczej kazde drgniecie suwaka
+        kosztowaloby 36 ms.
+        """
+        cached = self._on_cache.get(muscle.index)
+        if cached is not None:
+            return cached
         sub = self.rest[muscle.slice]
         if sub.size == 0:
             return []
@@ -169,7 +185,14 @@ class MuscleSet:
             d = float(np.linalg.norm(sub[j] - m["pos"]))
             if d <= radius:
                 out.append((m, d))
-        return sorted(out, key=lambda x: x[1])
+        out = sorted(out, key=lambda x: x[1])
+        self._on_cache[muscle.index] = out
+        return out
+
+    def submesh(self, muscle: Muscle) -> pv.PolyData:
+        """Osobna siatka jednego miesnia - do rysowania i deformacji w locie."""
+        rec = self.records[muscle.index]
+        return pv.read(READY / rec["file"]).triangulate()
 
     def muscle_under(self, pos: np.ndarray, max_dist: float = 0.05):
         """Miesien lezacy pod wskazanym punktem skory (albo None)."""

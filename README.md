@@ -109,15 +109,26 @@ Bez pobranych zasobów aplikacja i tak działa — przechodzi na wbudowany model
 | | |
 |---|---|
 | lewy przycisk myszy | obrót; kółko — zoom; prawy — przesunięcie |
-| klik w punkt | opis w oknie + pełny opis na konsoli + mięsień pod punktem |
+| klik w punkt | opis w oknie + pełny opis na konsoli + **automatyczny wybór mięśnia pod punktem** |
 | klik w mięsień | zaznaczenie i panel parametrów (gdy warstwa mięśni jest włączona) |
-| `1` `2` `3` `4` | widok przód / tył / bok / góra |
+| **`f`** | **fokus**: reszta ciała staje się prawie przezroczysta, a wybrany punkt i mięsień trafiają w środek obrotu; `f` ponownie — powrót do poprzedniego widoku |
+| `1` `2` `3` `4` | widok przód / tył / bok / góra, `0` — widok domyślny |
+| `a` / `n` / `i` | wszystkie kanały / żaden / odwróć zaznaczenie |
 | `c` `v` | solo kolejnego kanału (z etykietami), `x` — wszystkie z powrotem |
-| `a` / `n` | wszystkie kanały / żaden |
 | `m` `l` | linie kanałów / etykiety kodów |
 | `k` `j` `b` | skóra / mięśnie / kości |
 | `r` | wyzeruj parametry wybranego mięśnia |
-| suwaki z prawej | napięcie, tonus, przerost, sztywność, krycie skóry |
+
+Po lewej: przełączniki warstw (dół), lista kanałów z przyciskami **wszystkie / żaden / odwróć**.
+Po prawej: suwaki parametrów mięśnia, przyciski **fokus** i **zeruj mięsień**, krycie skóry.
+
+### Wydajność
+
+Ruch suwakiem przelicza jedną klatkę w **ok. 5 ms**. Osiąga się to dwoma sztuczkami:
+wybrany mięsień jest rysowany jako osobny aktor (a w wielkiej siatce wszystkich mięśni
+jego komórki stają się przezroczyste), więc na kartę idzie kilka tysięcy wierzchołków
+zamiast pół miliona; mapowanie punkt↔mięsień liczy się raz na mięsień i zostaje w pamięci,
+bo nie zależy od parametrów.
 
 ![Kanał żołądka](docs/kanal-st.png)
 
