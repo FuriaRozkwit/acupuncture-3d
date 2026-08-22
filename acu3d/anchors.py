@@ -85,9 +85,37 @@ def scalp_arc(rig: Rig, s_cun: float, lat_cun: float = 0.0, out_cun: float = 0.0
     return p
 
 
+def struct_base(body, a: dict) -> np.ndarray:
+    """Punkt startowy kotwicy strukturalnej - lezy wewnatrz ciala, przy kosci."""
+    region = a.get("region")
+    ref = body.struct(a["struct"])
+    along = float(a.get("along", 0.5))
+    long_dir = body.frame(region)["long"] if region else None
+    base = ref.at(along, long_dir)
+    if a.get("toward"):
+        other = body.struct(a["toward"])
+        base = base + (other.at(along, long_dir) - base) * float(a.get("frac", 0.4))
+    for name, mm in (a.get("shift") or {}).items():
+        base = base + body.direction(name, region) * (float(mm) / 1000.0)
+    return base
+
+
+def resolve_struct(body, a: dict) -> np.ndarray:
+    """Kotwica przy konkretnej strukturze: paliczek, kosc srodrecza, skrawek ucha.
+
+    Zamiast zgadywac kat na uproszczonym stozku, startujemy z realnej kosci
+    i szukamy skory w anatomicznie nazwanym kierunku (grzbietowo, promieniowo...).
+    """
+    base = struct_base(body, a)
+    d = body.direction(a.get("dir", "dorsal"), a.get("region"))
+    return body.cast_side(base, d)
+
+
 def resolve(rig: Rig, anchor: dict) -> np.ndarray:
     """Zwraca wspolrzedne punktu po PRAWEJ stronie ciala (lewa = odbicie X)."""
     a = anchor
+    if "struct" in a:
+        return resolve_struct(rig, a)
     if "arc_cun" in a:
         return scalp_arc(rig, float(a["arc_cun"]), float(a.get("lat", 0.0)),
                          float(a.get("out", 0.0)))

@@ -53,6 +53,8 @@ class Atlas:
     # --- rozwiazywanie punktow ------------------------------------------
     def _ref_point(self, anchor: dict, pos: np.ndarray) -> np.ndarray:
         """Punkt wewnatrz ciala, z ktorego 'patrzymy' na punkt."""
+        if "struct" in anchor:
+            return anchors.struct_base(self.body, anchor)
         seg = self.body.seg(anchor.get("seg", "head"))
         t = 0.9 if "arc_cun" in anchor else anchors._axial_t(self.body, anchor)
         return seg.interior(t) if hasattr(seg, "interior") else seg.axis_point(t)

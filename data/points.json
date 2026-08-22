@@ -298,11 +298,12 @@
     "Ying-Spring and Fire point of the Lung channel we"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "hand",
-    "t": 0.3,
-    "az": 78
+    "struct": "First metacarpal bone",
+    "along": 0.55,
+    "dir": "palmar",
+    "region": "hand"
    },
    "note_pl": "srodek I kosci srodrecza, strona dloniowa"
   },
@@ -317,11 +318,15 @@
     "Sun Si-miao Ghost point"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "hand",
-    "t": 0.52,
-    "az": 95
+    "struct": "Distal phalanx of first finger of hand",
+    "along": 0.8,
+    "dir": "dorsal",
+    "shift": {
+     "radial": 4
+    },
+    "region": "hand"
    },
    "note_pl": "kacik paznokcia kciuka od strony promieniowej"
   },
@@ -335,13 +340,17 @@
     "Jing-Well and Metal point of the Large Intestine %"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "hand",
-    "t": 0.62,
-    "az": 100
+    "struct": "Distal phalanx of second finger of hand",
+    "along": 0.82,
+    "dir": "dorsal",
+    "shift": {
+     "radial": 4
+    },
+    "region": "hand"
    },
-   "note_pl": "kacik paznokcia palca wskazujacego"
+   "note_pl": "kacik paznokcia palca wskazujacego, strona promieniowa"
   },
   {
    "code": "LI-2",
@@ -353,13 +362,14 @@
     "Ying-Spring and Water point of the Large A"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "hand",
-    "t": 0.55,
-    "az": 105
+    "struct": "Proximal phalanx of second finger of hand",
+    "along": 0.15,
+    "dir": "radial",
+    "region": "hand"
    },
-   "note_pl": ""
+   "note_pl": "zaglebienie dystalnie od stawu srodreczno-paliczkowego II"
   },
   {
    "code": "LI-3",
@@ -371,13 +381,14 @@
     "Shu-Stream and Wood point of the Large (a)"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "hand",
-    "t": 0.45,
-    "az": 108
+    "struct": "Second metacarpal bone",
+    "along": 0.88,
+    "dir": "radial",
+    "region": "hand"
    },
-   "note_pl": ""
+   "note_pl": "proksymalnie od glowy II kosci srodrecza"
   },
   {
    "code": "LI-4",
@@ -391,13 +402,16 @@
     "Ma Dan-yang Heavenly Star point"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "hand",
-    "t": 0.3,
-    "az": 120
+    "struct": "Second metacarpal bone",
+    "along": 0.45,
+    "dir": "dorsal",
+    "toward": "First metacarpal bone",
+    "frac": 0.32,
+    "region": "hand"
    },
-   "note_pl": "grzbiet dloni, miedzy I a II koscia srodrecza"
+   "note_pl": "miedzy I a II koscia srodrecza, przy promieniowym brzegu II"
   },
   {
    "code": "LI-5",
@@ -409,13 +423,17 @@
     "Jing-River and Fire point of the VA"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "hand",
-    "t": 0.06,
-    "az": 125
+    "struct": "Scaphoid bone",
+    "along": 0.5,
+    "dir": "dorsal",
+    "shift": {
+     "radial": 4
+    },
+    "region": "hand"
    },
-   "note_pl": "tabakierka anatomiczna"
+   "note_pl": "tabakierka anatomiczna, przy kosci lodkowatej"
   },
   {
    "code": "LI-6",
@@ -660,13 +678,17 @@
    "english": "Mouth Grain Crevice",
    "categories": [],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "head",
-    "z_frac": 0.898,
-    "az": 14
+    "struct": "Nasal bone",
+    "along": 1.0,
+    "dir": "anterior",
+    "shift": {
+     "down": 17,
+     "lateral": 6
+    }
    },
-   "note_pl": ""
+   "note_pl": "ponizej skrzydelka nosa, bocznie od rowka nosowo-wargowego"
   },
   {
    "code": "LI-20",
@@ -678,11 +700,15 @@
     "Meeting point of the Large Intestine and Ay-"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "head",
-    "z_frac": 0.893,
-    "az": 18
+    "struct": "Nasal bone",
+    "along": 1.0,
+    "dir": "anterior",
+    "shift": {
+     "down": 10,
+     "lateral": 9
+    }
    },
    "note_pl": "w bruzdzie nosowo-wargowej, przy skrzydelku nosa"
   },
@@ -696,11 +722,14 @@
     "Meeting point of the Stomach channel with ne"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "head",
-    "z_frac": 0.918,
-    "az": 15
+    "struct": "Anterior segment of eyeball",
+    "along": 0.5,
+    "dir": "anterior",
+    "shift": {
+     "down": 9
+    }
    },
    "note_pl": "miedzy galka oczna a dolnym brzegiem oczodolu"
   },
@@ -712,11 +741,14 @@
    "english": "Four Whites",
    "categories": [],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "head",
-    "z_frac": 0.91,
-    "az": 15
+    "struct": "Anterior segment of eyeball",
+    "along": 0.5,
+    "dir": "anterior",
+    "shift": {
+     "down": 17
+    }
    },
    "note_pl": "otwor podoczodolowy"
   },
@@ -730,13 +762,17 @@
     "Meeting point of the Stomach channel"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "head",
-    "z_frac": 0.899,
-    "az": 17
+    "struct": "Nasal bone",
+    "along": 1.0,
+    "dir": "anterior",
+    "shift": {
+     "down": 12,
+     "lateral": 17
+    }
    },
-   "note_pl": ""
+   "note_pl": "na wysokosci dolnego brzegu skrzydelka nosa, pionowo pod zrenica"
   },
   {
    "code": "ST-4",
@@ -748,11 +784,15 @@
     "Meeting point of the Stomach and (or"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "head",
-    "z_frac": 0.889,
-    "az": 13
+    "struct": "Nasal bone",
+    "along": 1.0,
+    "dir": "anterior",
+    "shift": {
+     "down": 30,
+     "lateral": 21
+    }
    },
    "note_pl": "kacik ust"
   },
@@ -764,13 +804,16 @@
    "english": "Great Welcome",
    "categories": [],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "head",
-    "z_frac": 0.878,
-    "az": 45
+    "struct": "Mandible",
+    "along": 0.35,
+    "dir": "lateral",
+    "shift": {
+     "up": 4
+    }
    },
-   "note_pl": "przed miesniem zwaczem, na tetnicy twarzowej"
+   "note_pl": "przed miesniem zwaczem, przy brzegu zuchwy"
   },
   {
    "code": "ST-6",
@@ -782,11 +825,14 @@
     "Sun Si-miao Ghost point :"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "head",
-    "z_frac": 0.881,
-    "az": 60
+    "struct": "Mandible",
+    "along": 0.25,
+    "dir": "lateral",
+    "shift": {
+     "up": 18
+    }
    },
    "note_pl": "wypuklosc zwacza przy zacisnietych zebach"
   },
@@ -800,11 +846,14 @@
     "Meeting point of the Stomach and Gall Bladder (4"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "head",
-    "z_frac": 0.9,
-    "az": 68
+    "struct": "Zygomatic bone",
+    "along": 0.25,
+    "dir": "lateral",
+    "shift": {
+     "down": 6
+    }
    },
    "note_pl": "pod lukiem jarzmowym"
   },
@@ -818,11 +867,15 @@
     "Meeting point of the Stomach and Gall Bladder ih"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "head",
-    "z_frac": 0.957,
-    "az": 40
+    "struct": "Frontal bone",
+    "along": 0.5,
+    "dir": "anterior",
+    "shift": {
+     "lateral": 45,
+     "up": 42
+    }
    },
    "note_pl": "kacik czolowy linii wlosow"
   },
@@ -1416,13 +1469,17 @@
     "Jing-River and Fire point of the Stomach channel }"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "foot",
-    "t": 0.2,
-    "az": 0
+    "struct": "Talus",
+    "along": 0.5,
+    "dir": "dorsal",
+    "shift": {
+     "up": 6
+    },
+    "region": "foot"
    },
-   "note_pl": "srodek faldu stawu skokowego; w modelu przesuniete nieco na grzbiet stopy, bo kostka i stopa zlewaja sie w jedna brylę"
+   "note_pl": "srodek faldu stawu skokowego, miedzy sciegnami"
   },
   {
    "code": "ST-42",
@@ -1434,13 +1491,16 @@
     "Yuan-Source point of the Stomach channel %"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "foot",
-    "t": 0.35,
-    "az": 5
+    "struct": "Second metatarsal bone",
+    "along": 0.3,
+    "dir": "dorsal",
+    "toward": "Third metatarsal bone",
+    "frac": 0.45,
+    "region": "foot"
    },
-   "note_pl": ""
+   "note_pl": "grzbiet stopy, miedzy II a III koscia srodstopia"
   },
   {
    "code": "ST-43",
@@ -1452,13 +1512,16 @@
     "Shu-Stream and Wood point of the Stomach aX"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "foot",
-    "t": 0.52,
-    "az": 10
+    "struct": "Second metatarsal bone",
+    "along": 0.62,
+    "dir": "dorsal",
+    "toward": "Third metatarsal bone",
+    "frac": 0.45,
+    "region": "foot"
    },
-   "note_pl": ""
+   "note_pl": "zaglebienie miedzy II a III koscia srodstopia"
   },
   {
    "code": "ST-44",
@@ -1471,13 +1534,16 @@
     "Ma Dan-yang Heavenly Star point"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "foot",
-    "t": 0.72,
-    "az": 12
+    "struct": "Proximal phalanx of second finger of foot",
+    "along": 0.05,
+    "dir": "dorsal",
+    "toward": "Proximal phalanx of third finger of foot",
+    "frac": 0.5,
+    "region": "foot"
    },
-   "note_pl": ""
+   "note_pl": "miedzy II a III palcem, przy faldzie miedzypalcowym"
   },
   {
    "code": "ST-45",
@@ -1489,13 +1555,17 @@
     "Jing-Well and Metal point of the ¥,"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "foot",
-    "t": 0.9,
-    "az": 15
+    "struct": "Distal phalanx of second finger of foot",
+    "along": 0.8,
+    "dir": "dorsal",
+    "shift": {
+     "lateral": 3
+    },
+    "region": "foot"
    },
-   "note_pl": "kacik paznokcia II palca stopy"
+   "note_pl": "kacik paznokcia II palca stopy, strona boczna"
   },
   {
    "code": "SP-1",
@@ -1508,13 +1578,17 @@
     "Sun Si-miao Ghost point"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "foot",
-    "t": 0.9,
-    "az": -70
+    "struct": "Distal phalanx of first finger of foot",
+    "along": 0.8,
+    "dir": "dorsal",
+    "shift": {
+     "medial": 4
+    },
+    "region": "foot"
    },
-   "note_pl": "kacik paznokcia palucha od strony przysrodkowej"
+   "note_pl": "kacik paznokcia palucha, strona przysrodkowa"
   },
   {
    "code": "SP-2",
@@ -1526,13 +1600,14 @@
     "Ying-Spring and Fire point of the Rf"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "foot",
-    "t": 0.8,
-    "az": -75
+    "struct": "Proximal phalanx of first finger of foot",
+    "along": 0.2,
+    "dir": "medial",
+    "region": "foot"
    },
-   "note_pl": ""
+   "note_pl": "dystalnie od stawu srodstopno-paliczkowego palucha"
   },
   {
    "code": "SP-3",
@@ -1545,13 +1620,14 @@
     "point of the Spleen channel"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "foot",
-    "t": 0.62,
-    "az": -80
+    "struct": "First metatarsal bone",
+    "along": 0.85,
+    "dir": "medial",
+    "region": "foot"
    },
-   "note_pl": ""
+   "note_pl": "proksymalnie od glowy I kosci srodstopia"
   },
   {
    "code": "SP-4",
@@ -1564,13 +1640,14 @@
     "Confluent point of the Penetrating vessel"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "foot",
-    "t": 0.45,
-    "az": -80
+    "struct": "First metatarsal bone",
+    "along": 0.12,
+    "dir": "medial",
+    "region": "foot"
    },
-   "note_pl": ""
+   "note_pl": "przy podstawie I kosci srodstopia"
   },
   {
    "code": "SP-5",
@@ -1582,11 +1659,15 @@
     "Jing-River and Metal point of the tt."
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "foot",
-    "t": 0.12,
-    "az": -70
+    "struct": "Navicular bone",
+    "along": 0.5,
+    "dir": "medial",
+    "shift": {
+     "proximal": 6
+    },
+    "region": "foot"
    },
    "note_pl": "przednio-dolnie od kostki przysrodkowej"
   },
@@ -2023,11 +2104,14 @@
     "Ying-Spring and Fire point of the Heart channel Mt"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "hand",
-    "t": 0.35,
-    "az": -35
+    "struct": "Fourth metacarpal bone",
+    "along": 0.8,
+    "dir": "palmar",
+    "toward": "Fifth metacarpal bone",
+    "frac": 0.5,
+    "region": "hand"
    },
    "note_pl": "dlon, miedzy IV a V koscia srodrecza"
   },
@@ -2041,13 +2125,17 @@
     "Jing-Well and Wood point of the Heart channel if"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "hand",
-    "t": 0.6,
-    "az": -60
+    "struct": "Distal phalanx of fifth finger of hand",
+    "along": 0.82,
+    "dir": "dorsal",
+    "shift": {
+     "radial": 3
+    },
+    "region": "hand"
    },
-   "note_pl": "kacik paznokcia V palca"
+   "note_pl": "kacik paznokcia V palca, strona promieniowa"
   },
   {
    "code": "SI-1",
@@ -2059,13 +2147,17 @@
     "Jing-Well and Metal point of the Small \\F"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "hand",
-    "t": 0.62,
-    "az": -110
+    "struct": "Distal phalanx of fifth finger of hand",
+    "along": 0.82,
+    "dir": "dorsal",
+    "shift": {
+     "ulnar": 3
+    },
+    "region": "hand"
    },
-   "note_pl": "kacik paznokcia V palca od strony lokciowej"
+   "note_pl": "kacik paznokcia V palca, strona lokciowa"
   },
   {
    "code": "SI-2",
@@ -2077,13 +2169,14 @@
     "Ying-Spring and Water point of the Small"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "hand",
-    "t": 0.5,
-    "az": -115
+    "struct": "Proximal phalanx of fifth finger of hand",
+    "along": 0.15,
+    "dir": "ulnar",
+    "region": "hand"
    },
-   "note_pl": ""
+   "note_pl": "dystalnie od stawu srodreczno-paliczkowego V, strona lokciowa"
   },
   {
    "code": "SI-3",
@@ -2096,13 +2189,14 @@
     "Confluent point of the Governing vessel"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "hand",
-    "t": 0.35,
-    "az": -120
+    "struct": "Fifth metacarpal bone",
+    "along": 0.88,
+    "dir": "ulnar",
+    "region": "hand"
    },
-   "note_pl": "koniec faldu dloni przy zacisnietej piesci"
+   "note_pl": "proksymalnie od glowy V kosci srodrecza, koniec faldu przy zacisnietej piesci"
   },
   {
    "code": "SI-4",
@@ -2114,13 +2208,14 @@
     "Yuan-Source point of the Small Intestine"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "hand",
-    "t": 0.15,
-    "az": -125
+    "struct": "Fifth metacarpal bone",
+    "along": 0.08,
+    "dir": "ulnar",
+    "region": "hand"
    },
-   "note_pl": ""
+   "note_pl": "przy podstawie V kosci srodrecza"
   },
   {
    "code": "SI-5",
@@ -2369,13 +2464,16 @@
     "Meeting point of the Small Intestine and Sanjiao 4"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "head",
-    "z_frac": 0.912,
-    "az": 55
+    "struct": "Zygomatic bone",
+    "along": 0.5,
+    "dir": "anterior",
+    "shift": {
+     "down": 5
+    }
    },
-   "note_pl": "pod kascia jarzmowa, pionowo pod bocznym katem oka"
+   "note_pl": "pod koscia jarzmowa, pionowo pod bocznym katem oka"
   },
   {
    "code": "SI-19",
@@ -2387,13 +2485,16 @@
     "Meeting point of the Small Intestine, Sanjiao and a"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "head",
-    "z_frac": 0.918,
-    "az": 78
+    "struct": "Tragus",
+    "along": 0.5,
+    "dir": "lateral",
+    "shift": {
+     "anterior": 5
+    }
    },
-   "note_pl": "przed skrawkiem malzowiny, przy otwartych ustach"
+   "note_pl": "przed skrawkiem malzowiny"
   },
   {
    "code": "BL-1",
@@ -2405,11 +2506,14 @@
     "Meeting point of the Bladder, Small Intestine,"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "head",
-    "z_frac": 0.926,
-    "az": 12
+    "struct": "Anterior segment of eyeball",
+    "along": 0.5,
+    "dir": "anterior",
+    "shift": {
+     "medial": 7
+    }
    },
    "note_pl": "przy przysrodkowym kaciku oka"
   },
@@ -2421,11 +2525,15 @@
    "english": "Gathered Bamboo",
    "categories": [],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "head",
-    "z_frac": 0.933,
-    "az": 18
+    "struct": "Anterior segment of eyeball",
+    "along": 0.5,
+    "dir": "anterior",
+    "shift": {
+     "medial": 6,
+     "up": 14
+    }
    },
    "note_pl": "przysrodkowy koniec brwi"
   },
@@ -3515,13 +3623,17 @@
     "Meeting point of the Bladder channel with the 吊"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "foot",
-    "t": 0.08,
-    "az": 150
+    "struct": "Calcaneus",
+    "along": 0.45,
+    "dir": "lateral",
+    "shift": {
+     "plantar": 4
+    },
+    "region": "foot"
    },
-   "note_pl": ""
+   "note_pl": "na kosci pietowej, ponizej BL-62"
   },
   {
    "code": "BL-62",
@@ -3534,11 +3646,15 @@
     "Sun Si-miao Ghost point"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "foot",
-    "t": 0.1,
-    "az": 110
+    "struct": "Fibula",
+    "along": 1.0,
+    "dir": "lateral",
+    "shift": {
+     "plantar": 8
+    },
+    "region": "foot"
    },
    "note_pl": "tuz ponizej kostki bocznej"
   },
@@ -3553,13 +3669,14 @@
     "Meeting point of the Bladder channel with"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "foot",
-    "t": 0.2,
-    "az": 115
+    "struct": "Cuboid bone",
+    "along": 0.4,
+    "dir": "lateral",
+    "region": "foot"
    },
-   "note_pl": ""
+   "note_pl": "ponizej kosci szesciennej"
   },
   {
    "code": "BL-64",
@@ -3571,13 +3688,14 @@
     "Yuan-Source point of the Bladder channel |"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "foot",
-    "t": 0.35,
-    "az": 115
+    "struct": "Fifth metatarsal bone",
+    "along": 0.12,
+    "dir": "lateral",
+    "region": "foot"
    },
-   "note_pl": ""
+   "note_pl": "przy guzowatosci V kosci srodstopia"
   },
   {
    "code": "BL-65",
@@ -3589,13 +3707,14 @@
     "Shu-Stream and Wood point of the “A"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "foot",
-    "t": 0.55,
-    "az": 115
+    "struct": "Fifth metatarsal bone",
+    "along": 0.88,
+    "dir": "lateral",
+    "region": "foot"
    },
-   "note_pl": ""
+   "note_pl": "proksymalnie od glowy V kosci srodstopia"
   },
   {
    "code": "BL-66",
@@ -3607,13 +3726,14 @@
     "Ying-Spring and Water point of the Bladder ut"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "foot",
-    "t": 0.75,
-    "az": 118
+    "struct": "Proximal phalanx of fifth finger of foot",
+    "along": 0.15,
+    "dir": "lateral",
+    "region": "foot"
    },
-   "note_pl": ""
+   "note_pl": "dystalnie od stawu srodstopno-paliczkowego V"
   },
   {
    "code": "BL-67",
@@ -3625,13 +3745,17 @@
     "Jing-Well and Metal point of"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "foot",
-    "t": 0.92,
-    "az": 120
+    "struct": "Distal phalanx of fifth finger of foot",
+    "along": 0.8,
+    "dir": "dorsal",
+    "shift": {
+     "lateral": 3
+    },
+    "region": "foot"
    },
-   "note_pl": "kacik paznokcia V palca stopy"
+   "note_pl": "kacik paznokcia V palca stopy, strona boczna"
   },
   {
    "code": "KI-1",
@@ -3643,13 +3767,16 @@
     "Jing-Well and Wood point of the Kidney channel RK"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "foot",
-    "t": 0.42,
-    "az": 180
+    "struct": "Second metatarsal bone",
+    "along": 0.55,
+    "dir": "plantar",
+    "toward": "Third metatarsal bone",
+    "frac": 0.5,
+    "region": "foot"
    },
-   "note_pl": "podeszwa, na granicy 1/3 przedniej i 2/3 tylnych"
+   "note_pl": "podeszwa, miedzy II a III koscia srodstopia"
   },
   {
    "code": "KI-2",
@@ -3661,13 +3788,14 @@
     "Ying-Spring and Fire point of the Kidney channel AN"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "foot",
-    "t": 0.25,
-    "az": -140
+    "struct": "Navicular bone",
+    "along": 0.75,
+    "dir": "medial",
+    "region": "foot"
    },
-   "note_pl": ""
+   "note_pl": "ponizej guzowatosci kosci lodkowatej"
   },
   {
    "code": "KI-3",
@@ -3679,12 +3807,16 @@
     "Shu-Stream, Yuan-Source and Earth point of V¥."
    ],
    "side": "bilateral",
-   "accuracy": "anchored",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "shank",
-    "cun": 0,
-    "from": "p1",
-    "az": -140
+    "struct": "Tibia",
+    "along": 1.0,
+    "dir": "medial",
+    "shift": {
+     "distal": 4,
+     "proximal": 0
+    },
+    "region": "foot"
    },
    "note_pl": "miedzy kostka przysrodkowa a sciegnem Achillesa"
   },
@@ -3698,13 +3830,14 @@
     "Luo-Connecting point of the Kidney channel 4G"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "foot",
-    "t": 0.05,
-    "az": -160
+    "struct": "Calcaneus",
+    "along": 0.3,
+    "dir": "medial",
+    "region": "foot"
    },
-   "note_pl": ""
+   "note_pl": "przy przyczepie sciegna Achillesa, na kosci pietowej"
   },
   {
    "code": "KI-5",
@@ -3716,13 +3849,17 @@
     "Xi-Cleft point of the Kidney channel €"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "foot",
-    "t": 0.08,
-    "az": -145
+    "struct": "Tibia",
+    "along": 1.0,
+    "dir": "medial",
+    "shift": {
+     "plantar": 10
+    },
+    "region": "foot"
    },
-   "note_pl": ""
+   "note_pl": "ponizej kostki przysrodkowej"
   },
   {
    "code": "KI-6",
@@ -3734,13 +3871,17 @@
     "Confluent point of the Yin Motility vessel 4"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "foot",
-    "t": 0.03,
-    "az": -110
+    "struct": "Talus",
+    "along": 0.5,
+    "dir": "medial",
+    "shift": {
+     "plantar": 6
+    },
+    "region": "foot"
    },
-   "note_pl": "tuz ponizej kostki przysrodkowej"
+   "note_pl": "1 cun ponizej kostki przysrodkowej"
   },
   {
    "code": "KI-7",
@@ -4286,11 +4427,14 @@
     "Sun Si-miao Ghost point"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "hand",
-    "t": 0.33,
-    "az": 0
+    "struct": "Third metacarpal bone",
+    "along": 0.78,
+    "dir": "palmar",
+    "toward": "Second metacarpal bone",
+    "frac": 0.45,
+    "region": "hand"
    },
    "note_pl": "srodek dloni, miedzy II a III koscia srodrecza"
   },
@@ -4304,13 +4448,14 @@
     "Jing-Well and Wood point of the by"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "hand",
-    "t": 0.95,
-    "az": 0
+    "struct": "Distal phalanx of third finger of hand",
+    "along": 0.95,
+    "dir": "distal",
+    "region": "hand"
    },
-   "note_pl": "szczyt III palca"
+   "note_pl": "szczyt palca srodkowego"
   },
   {
    "code": "SJ-1",
@@ -4322,13 +4467,17 @@
     "Jing-Well and Metal point of the Sanjiao channel iv"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "hand",
-    "t": 0.68,
-    "az": -160
+    "struct": "Distal phalanx of fourth finger of hand",
+    "along": 0.82,
+    "dir": "dorsal",
+    "shift": {
+     "ulnar": 3
+    },
+    "region": "hand"
    },
-   "note_pl": "kacik paznokcia IV palca od strony lokciowej"
+   "note_pl": "kacik paznokcia IV palca, strona lokciowa"
   },
   {
    "code": "SJ-2",
@@ -4340,13 +4489,16 @@
     "Ying-Spring and Water point of the Sanjiao ( |"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "hand",
-    "t": 0.58,
-    "az": -170
+    "struct": "Proximal phalanx of fourth finger of hand",
+    "along": 0.05,
+    "dir": "dorsal",
+    "toward": "Proximal phalanx of fifth finger of hand",
+    "frac": 0.5,
+    "region": "hand"
    },
-   "note_pl": ""
+   "note_pl": "miedzy IV a V palcem, przy faldzie miedzypalcowym"
   },
   {
    "code": "SJ-3",
@@ -4358,13 +4510,16 @@
     "Shu-Stream and Wood point of the Sanjiao 4 i"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "hand",
-    "t": 0.42,
-    "az": 185
+    "struct": "Fourth metacarpal bone",
+    "along": 0.8,
+    "dir": "dorsal",
+    "toward": "Fifth metacarpal bone",
+    "frac": 0.5,
+    "region": "hand"
    },
-   "note_pl": ""
+   "note_pl": "miedzy IV a V koscia srodrecza"
   },
   {
    "code": "SJ-4",
@@ -4613,13 +4768,16 @@
     "Meeting point of the Sanjiao and Gall Bladder Jes"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "head",
-    "z_frac": 0.895,
-    "az": 95
+    "struct": "Lobule of auricle",
+    "along": 0.5,
+    "dir": "lateral",
+    "shift": {
+     "posterior": 22
+    }
    },
-   "note_pl": "za platkiem ucha"
+   "note_pl": "w zaglebieniu za platkiem ucha"
   },
   {
    "code": "SJ-18",
@@ -4629,13 +4787,16 @@
    "english": "Spasm Vessel PP ~",
    "categories": [],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "head",
-    "z_frac": 0.905,
-    "az": 105
+    "struct": "Helix",
+    "along": 0.25,
+    "dir": "lateral",
+    "shift": {
+     "posterior": 11
+    }
    },
-   "note_pl": ""
+   "note_pl": "za malzowina, na wysokosci dolnej czesci obraczki"
   },
   {
    "code": "SJ-19",
@@ -4645,13 +4806,16 @@
    "english": "Skull’s Rest",
    "categories": [],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "head",
-    "z_frac": 0.918,
-    "az": 110
+    "struct": "Helix",
+    "along": 0.55,
+    "dir": "lateral",
+    "shift": {
+     "posterior": 11
+    }
    },
-   "note_pl": ""
+   "note_pl": "za malzowina, na wysokosci srodka obraczki"
   },
   {
    "code": "SJ-20",
@@ -4663,13 +4827,16 @@
     "Meeting point of the Sanjiac"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "head",
-    "z_frac": 0.938,
-    "az": 100
+    "struct": "Apex of auricle",
+    "along": 0.5,
+    "dir": "lateral",
+    "shift": {
+     "up": 4
+    }
    },
-   "note_pl": "nad szczytem malzowiny"
+   "note_pl": "tuz nad szczytem malzowiny"
   },
   {
    "code": "SJ-21",
@@ -4679,13 +4846,17 @@
    "english": "Ear Gate",
    "categories": [],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "head",
-    "z_frac": 0.923,
-    "az": 82
+    "struct": "Anterior notch of auricle",
+    "along": 0.5,
+    "dir": "lateral",
+    "shift": {
+     "up": 11,
+     "anterior": 16
+    }
    },
-   "note_pl": "powyzej SI-19, przed wcięciem malzowiny"
+   "note_pl": "przy wcieciu przednim malzowiny, powyzej SI-19"
   },
   {
    "code": "SJ-22",
@@ -4697,13 +4868,16 @@
     "Meeting point of the Sanjiao, Gall Bladder and"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "head",
-    "z_frac": 0.928,
-    "az": 72
+    "struct": "Zygomatic bone",
+    "along": 0.85,
+    "dir": "lateral",
+    "shift": {
+     "up": 14
+    }
    },
-   "note_pl": ""
+   "note_pl": "przy tylnej granicy skroni, na wysokosci brwi"
   },
   {
    "code": "SJ-23",
@@ -4713,11 +4887,15 @@
    "english": "Silken Bamboo Hollow",
    "categories": [],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "head",
-    "z_frac": 0.93,
-    "az": 38
+    "struct": "Anterior segment of eyeball",
+    "along": 0.5,
+    "dir": "anterior",
+    "shift": {
+     "lateral": 10,
+     "up": 13
+    }
    },
    "note_pl": "boczny koniec brwi"
   },
@@ -4731,11 +4909,14 @@
     "Meeting point of the Gall Bladder,"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "head",
-    "z_frac": 0.925,
-    "az": 45
+    "struct": "Anterior segment of eyeball",
+    "along": 0.5,
+    "dir": "anterior",
+    "shift": {
+     "lateral": 9
+    }
    },
    "note_pl": "0,5 cun bocznie od bocznego kacika oka"
   },
@@ -4747,13 +4928,16 @@
    "english": "Meeting of Hearing Fe",
    "categories": [],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "head",
-    "z_frac": 0.908,
-    "az": 80
+    "struct": "Antitragus",
+    "along": 0.5,
+    "dir": "lateral",
+    "shift": {
+     "anterior": 4
+    }
    },
-   "note_pl": ""
+   "note_pl": "przy wcieciu miedzyskrawkowym, ponizej SI-19"
   },
   {
    "code": "GB-3",
@@ -4765,13 +4949,16 @@
     "Meeting point of the Gall Bl"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "head",
-    "z_frac": 0.918,
-    "az": 75
+    "struct": "Zygomatic bone",
+    "along": 0.75,
+    "dir": "lateral",
+    "shift": {
+     "up": 6
+    }
    },
-   "note_pl": "nad lukiem jarzmowym"
+   "note_pl": "nad lukiem jarzmowym, przed uchem"
   },
   {
    "code": "GB-4",
@@ -4783,13 +4970,17 @@
     "Meeting point of the Gall Bladder, Sanjiao and fe"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "head",
-    "z_frac": 0.942,
-    "az": 62
+    "struct": "Temporal bone",
+    "along": 0.5,
+    "dir": "lateral",
+    "shift": {
+     "up": 24,
+     "anterior": 16
+    }
    },
-   "note_pl": ""
+   "note_pl": "skron, w obrebie linii wlosow nad uchem"
   },
   {
    "code": "GB-5",
@@ -4801,13 +4992,17 @@
     "Meeting point of the Gall Bladder, Stomach, a"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "head",
-    "z_frac": 0.945,
-    "az": 70
+    "struct": "Temporal bone",
+    "along": 0.5,
+    "dir": "lateral",
+    "shift": {
+     "up": 26,
+     "anterior": 8
+    }
    },
-   "note_pl": ""
+   "note_pl": "skron, ku tylowi od GB-4"
   },
   {
    "code": "GB-6",
@@ -4819,13 +5014,17 @@
     "Meeting point of the Gall Bl"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "head",
-    "z_frac": 0.942,
-    "az": 78
+    "struct": "Temporal bone",
+    "along": 0.5,
+    "dir": "lateral",
+    "shift": {
+     "up": 24,
+     "anterior": 2
+    }
    },
-   "note_pl": ""
+   "note_pl": "skron, ku tylowi od GB-5"
   },
   {
    "code": "GB-7",
@@ -4837,13 +5036,17 @@
     "Meeting point of the Gall Bladder &"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "head",
-    "z_frac": 0.938,
-    "az": 88
+    "struct": "Temporal bone",
+    "along": 0.5,
+    "dir": "lateral",
+    "shift": {
+     "up": 22,
+     "posterior": 6
+    }
    },
-   "note_pl": ""
+   "note_pl": "skron, nad malzowina od przodu"
   },
   {
    "code": "GB-8",
@@ -4855,11 +5058,14 @@
     "Meeting point of the Gall Bladder A»"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "head",
-    "z_frac": 0.95,
-    "az": 95
+    "struct": "Apex of auricle",
+    "along": 0.5,
+    "dir": "lateral",
+    "shift": {
+     "up": 15
+    }
    },
    "note_pl": "1,5 cun powyzej szczytu malzowiny"
   },
@@ -4873,13 +5079,17 @@
     "Meeting point of the Gall Bladder ie"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "head",
-    "z_frac": 0.95,
-    "az": 108
+    "struct": "Apex of auricle",
+    "along": 0.5,
+    "dir": "lateral",
+    "shift": {
+     "up": 8,
+     "posterior": 12
+    }
    },
-   "note_pl": ""
+   "note_pl": "ku tylowi i gorze od szczytu malzowiny"
   },
   {
    "code": "GB-10",
@@ -4891,13 +5101,16 @@
     "Meeting point of the Gall Bladder re]"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "head",
-    "z_frac": 0.942,
-    "az": 118
+    "struct": "Apex of auricle",
+    "along": 0.5,
+    "dir": "lateral",
+    "shift": {
+     "posterior": 18
+    }
    },
-   "note_pl": ""
+   "note_pl": "ku tylowi od malzowiny, powyzej wyrostka sutkowatego"
   },
   {
    "code": "GB-11",
@@ -4909,13 +5122,17 @@
     "Meeting point of the Gall Bladder, Bladder,"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "head",
-    "z_frac": 0.932,
-    "az": 128
+    "struct": "Temporal bone",
+    "along": 0.5,
+    "dir": "lateral",
+    "shift": {
+     "posterior": 14,
+     "down": 6
+    }
    },
-   "note_pl": ""
+   "note_pl": "nad wyrostkiem sutkowatym"
   },
   {
    "code": "GB-12",
@@ -4927,11 +5144,15 @@
     "Meeting point of the Gall Bladder and |"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "head",
-    "z_frac": 0.902,
-    "az": 130
+    "struct": "Temporal bone",
+    "along": 0.5,
+    "dir": "lateral",
+    "shift": {
+     "posterior": 16,
+     "down": 20
+    }
    },
    "note_pl": "w zaglebieniu za wyrostkiem sutkowatym"
   },
@@ -4963,11 +5184,15 @@
     "Meeting point of the Gall Bladder with Al)"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "head",
-    "z_frac": 0.947,
-    "az": 25
+    "struct": "Frontal bone",
+    "along": 0.5,
+    "dir": "anterior",
+    "shift": {
+     "lateral": 22,
+     "up": 10
+    }
    },
    "note_pl": "1 cun powyzej srodka brwi"
   },
@@ -5446,11 +5671,16 @@
     "Yuan-Source point of the Gall Bladder channel dis"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "foot",
-    "t": 0.12,
-    "az": 95
+    "struct": "Fibula",
+    "along": 1.0,
+    "dir": "lateral",
+    "shift": {
+     "proximal": 6,
+     "dorsal": 4
+    },
+    "region": "foot"
    },
    "note_pl": "przednio-dolnie od kostki bocznej"
   },
@@ -5465,13 +5695,16 @@
     "Confluent point of the Girdling vessel"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "foot",
-    "t": 0.5,
-    "az": 60
+    "struct": "Fourth metatarsal bone",
+    "along": 0.75,
+    "dir": "dorsal",
+    "toward": "Fifth metatarsal bone",
+    "frac": 0.5,
+    "region": "foot"
    },
-   "note_pl": ""
+   "note_pl": "miedzy IV a V koscia srodstopia"
   },
   {
    "code": "GB-42",
@@ -5481,13 +5714,16 @@
    "english": "Earth Five Meetings",
    "categories": [],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "foot",
-    "t": 0.62,
-    "az": 60
+    "struct": "Fourth metatarsal bone",
+    "along": 0.9,
+    "dir": "dorsal",
+    "toward": "Fifth metatarsal bone",
+    "frac": 0.5,
+    "region": "foot"
    },
-   "note_pl": ""
+   "note_pl": "dystalnie od GB-41"
   },
   {
    "code": "GB-43",
@@ -5499,13 +5735,16 @@
     "Ying-Spring and Water point of the 化李"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "foot",
-    "t": 0.8,
-    "az": 65
+    "struct": "Proximal phalanx of fourth finger of foot",
+    "along": 0.05,
+    "dir": "dorsal",
+    "toward": "Proximal phalanx of fifth finger of foot",
+    "frac": 0.5,
+    "region": "foot"
    },
-   "note_pl": ""
+   "note_pl": "miedzy IV a V palcem stopy"
   },
   {
    "code": "GB-44",
@@ -5517,11 +5756,15 @@
     "Jing-Well and Metal point of the"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "foot",
-    "t": 0.92,
-    "az": 80
+    "struct": "Distal phalanx of fourth finger of foot",
+    "along": 0.8,
+    "dir": "dorsal",
+    "shift": {
+     "lateral": 3
+    },
+    "region": "foot"
    },
    "note_pl": "kacik paznokcia IV palca stopy"
   },
@@ -5535,13 +5778,17 @@
     "Jing-Well and Wood point of the Liver channel ig"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "foot",
-    "t": 0.9,
-    "az": -20
+    "struct": "Distal phalanx of first finger of foot",
+    "along": 0.8,
+    "dir": "dorsal",
+    "shift": {
+     "lateral": 4
+    },
+    "region": "foot"
    },
-   "note_pl": "kacik paznokcia palucha od strony bocznej"
+   "note_pl": "kacik paznokcia palucha, strona boczna"
   },
   {
    "code": "LR-2",
@@ -5553,13 +5800,16 @@
     "Ying-Spring and Fire point of the Liver channel nei"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "foot",
-    "t": 0.78,
-    "az": -40
+    "struct": "Proximal phalanx of first finger of foot",
+    "along": 0.05,
+    "dir": "dorsal",
+    "toward": "Proximal phalanx of second finger of foot",
+    "frac": 0.5,
+    "region": "foot"
    },
-   "note_pl": ""
+   "note_pl": "miedzy I a II palcem stopy, przy faldzie"
   },
   {
    "code": "LR-3",
@@ -5572,11 +5822,14 @@
     "Ma Dan-yang Heavenly Star point"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "foot",
-    "t": 0.6,
-    "az": -30
+    "struct": "First metatarsal bone",
+    "along": 0.7,
+    "dir": "dorsal",
+    "toward": "Second metatarsal bone",
+    "frac": 0.5,
+    "region": "foot"
    },
    "note_pl": "zaglebienie miedzy I a II koscia srodstopia"
   },
@@ -5590,11 +5843,16 @@
     "Jing-River and Metal point of ay"
    ],
    "side": "bilateral",
-   "accuracy": "approx",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "foot",
-    "t": 0.1,
-    "az": -55
+    "struct": "Tibia",
+    "along": 1.0,
+    "dir": "medial",
+    "shift": {
+     "distal": 10,
+     "dorsal": 6
+    },
+    "region": "foot"
    },
    "note_pl": "przed kostka przysrodkowa"
   },
@@ -6233,14 +6491,17 @@
     "Meeting point of the Conception vessel with ag",
     "Sun Si-miao Ghost point"
    ],
-   "side": "midline",
-   "accuracy": "approx",
+   "side": "bilateral",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "head",
-    "z_frac": 0.879,
-    "az": 0
+    "struct": "Mandible",
+    "along": 0.5,
+    "dir": "anterior",
+    "shift": {
+     "up": 22
+    }
    },
-   "note_pl": "bruzda bródkowo-wargowa"
+   "note_pl": "bruzda brodkowo-wargowa"
   },
   {
    "code": "DU-1",
@@ -6676,12 +6937,15 @@
    "pinyin": "Suliao",
    "english": "White Crevice a",
    "categories": [],
-   "side": "midline",
-   "accuracy": "approx",
+   "side": "bilateral",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "head",
-    "z_frac": 0.906,
-    "az": 0
+    "struct": "Nasal bone",
+    "along": 1.0,
+    "dir": "anterior",
+    "shift": {
+     "down": 8
+    }
    },
    "note_pl": "czubek nosa"
   },
@@ -6695,12 +6959,15 @@
     "Meeting point of the Governing vessel with the",
     "Sun Si-miao Ghost point"
    ],
-   "side": "midline",
-   "accuracy": "approx",
+   "side": "bilateral",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "head",
-    "z_frac": 0.897,
-    "az": 0
+    "struct": "Nasal bone",
+    "along": 1.0,
+    "dir": "anterior",
+    "shift": {
+     "down": 20
+    }
    },
    "note_pl": "gorna 1/3 rowka nosowo-wargowego"
   },
@@ -6711,14 +6978,17 @@
    "pinyin": "Duiduan",
    "english": "Extremity of the Mouth",
    "categories": [],
-   "side": "midline",
-   "accuracy": "approx",
+   "side": "bilateral",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "head",
-    "z_frac": 0.891,
-    "az": 0
+    "struct": "Nasal bone",
+    "along": 1.0,
+    "dir": "anterior",
+    "shift": {
+     "down": 28
+    }
    },
-   "note_pl": ""
+   "note_pl": "przy gornym brzegu wargi gornej"
   },
   {
    "code": "DU-28",
@@ -6729,12 +6999,15 @@
    "categories": [
     "Meeting point of the Governing vessel with sa"
    ],
-   "side": "midline",
-   "accuracy": "approx",
+   "side": "bilateral",
+   "accuracy": "structural",
    "anchor": {
-    "seg": "head",
-    "z_frac": 0.887,
-    "az": 0
+    "struct": "Nasal bone",
+    "along": 1.0,
+    "dir": "anterior",
+    "shift": {
+     "down": 33
+    }
    },
    "note_pl": "wedzidelko wargi gornej"
   }

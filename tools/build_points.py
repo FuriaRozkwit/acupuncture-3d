@@ -67,6 +67,30 @@ def SC(code: str, arc: float, lat: float = 0.0, side: str = "bilateral",
                    "accuracy": "anchored", "note": note})
 
 
+def S(code: str, struct: str, dirn: str, along: float = 0.5, toward: str = None,
+      frac: float = 0.4, shift: dict = None, region: str = None,
+      side: str = "bilateral", note: str = "") -> None:
+    """Kotwica przy nazwanej strukturze anatomicznej (kosc, paliczek, malzowina).
+
+    Uzywana tam, gdzie podrecznik nie podaje cun, tylko anatomie: "kacik paznokcia",
+    "miedzy I a II koscia srodrecza", "przed skrawkiem ucha". Przesuniecia `shift`
+    sa w MILIMETRACH, w kierunkach nazwanych anatomicznie (promieniowo, grzbietowo,
+    przysrodkowo...), liczonych z ukladu wyznaczonego przez same kosci.
+    """
+    global POINTS
+    POINTS = [p for p in POINTS if p["code"] != code]      # nadpisuje starsza kotwice
+    anchor = {"struct": struct, "along": along, "dir": dirn}
+    if toward:
+        anchor["toward"] = toward
+        anchor["frac"] = frac
+    if shift:
+        anchor["shift"] = shift
+    if region:
+        anchor["region"] = region
+    POINTS.append({"code": code, "anchor": anchor, "side": side,
+                   "accuracy": "structural", "note": note})
+
+
 # ============================================================================
 # PLUCA (LU) - taiyin reki
 # ============================================================================
@@ -441,6 +465,236 @@ A("DU-27", "head", az=0, z_frac=0.891, side="midline")
 A("DU-28", "head", az=0, z_frac=0.887, side="midline", note="wedzidelko wargi gornej")
 
 
+
+# ============================================================================
+# KOTWICE PRZY STRUKTURACH ANATOMICZNYCH
+# ============================================================================
+# Ponizsze punkty byly wczesniej kotwiczone "na oko" na uproszczonych bryłach
+# (dlon i stopa jako stozki, glowa jako walec). Model anatomiczny ma te struktury
+# z osobna, wiec kotwiczymy je tam, gdzie opisuje je podrecznik: przy paliczku,
+# kosci srodrecza, skrawku malzowiny czy galce ocznej.
+# Przesuniecia podajemy w milimetrach, a kierunki ("promieniowo", "grzbietowo")
+# liczone sa z ukladu wyznaczonego przez same kosci - patrz Anatomy.frame().
+
+HAND, FOOT = "hand", "foot"
+FING = {1: "first", 2: "second", 3: "third", 4: "fourth", 5: "fifth"}
+
+
+def dp(n, part="hand"):
+    """Paliczek dalszy palca n."""
+    return f"Distal phalanx of {FING[n]} finger of {part}"
+
+
+def pp(n, part="hand"):
+    """Paliczek blizszy palca n."""
+    return f"Proximal phalanx of {FING[n]} finger of {part}"
+
+
+def mc(n):
+    """Kosc srodrecza n."""
+    return f"{FING[n].capitalize()} metacarpal bone"
+
+
+def mt(n):
+    """Kosc srodstopia n."""
+    return f"{FING[n].capitalize()} metatarsal bone"
+
+
+# --- reka: punkty studni i okolice srodrecza --------------------------------
+S("LU-10", mc(1), "palmar", along=0.55, region=HAND,
+  note="srodek I kosci srodrecza, strona dloniowa")
+S("LU-11", dp(1), "dorsal", along=0.80, shift={"radial": 4}, region=HAND,
+  note="kacik paznokcia kciuka od strony promieniowej")
+S("LI-1", dp(2), "dorsal", along=0.82, shift={"radial": 4}, region=HAND,
+  note="kacik paznokcia palca wskazujacego, strona promieniowa")
+S("LI-2", pp(2), "radial", along=0.15, region=HAND,
+  note="zaglebienie dystalnie od stawu srodreczno-paliczkowego II")
+S("LI-3", mc(2), "radial", along=0.88, region=HAND,
+  note="proksymalnie od glowy II kosci srodrecza")
+S("LI-4", mc(2), "dorsal", along=0.45, toward=mc(1), frac=0.32, region=HAND,
+  note="miedzy I a II koscia srodrecza, przy promieniowym brzegu II")
+S("LI-5", "Scaphoid bone", "dorsal", along=0.5, shift={"radial": 4}, region=HAND,
+  note="tabakierka anatomiczna, przy kosci lodkowatej")
+S("HT-8", mc(4), "palmar", along=0.80, toward=mc(5), frac=0.5, region=HAND,
+  note="dlon, miedzy IV a V koscia srodrecza")
+S("HT-9", dp(5), "dorsal", along=0.82, shift={"radial": 3}, region=HAND,
+  note="kacik paznokcia V palca, strona promieniowa")
+S("SI-1", dp(5), "dorsal", along=0.82, shift={"ulnar": 3}, region=HAND,
+  note="kacik paznokcia V palca, strona lokciowa")
+S("SI-2", pp(5), "ulnar", along=0.15, region=HAND,
+  note="dystalnie od stawu srodreczno-paliczkowego V, strona lokciowa")
+S("SI-3", mc(5), "ulnar", along=0.88, region=HAND,
+  note="proksymalnie od glowy V kosci srodrecza, koniec faldu przy zacisnietej piesci")
+S("SI-4", mc(5), "ulnar", along=0.08, region=HAND,
+  note="przy podstawie V kosci srodrecza")
+S("PC-8", mc(3), "palmar", along=0.78, toward=mc(2), frac=0.45, region=HAND,
+  note="srodek dloni, miedzy II a III koscia srodrecza")
+S("PC-9", dp(3), "distal", along=0.95, region=HAND,
+  note="szczyt palca srodkowego")
+S("SJ-1", dp(4), "dorsal", along=0.82, shift={"ulnar": 3}, region=HAND,
+  note="kacik paznokcia IV palca, strona lokciowa")
+S("SJ-2", pp(4), "dorsal", along=0.05, toward=pp(5), frac=0.5, region=HAND,
+  note="miedzy IV a V palcem, przy faldzie miedzypalcowym")
+S("SJ-3", mc(4), "dorsal", along=0.80, toward=mc(5), frac=0.5, region=HAND,
+  note="miedzy IV a V koscia srodrecza")
+
+# --- stopa -------------------------------------------------------------------
+S("SP-1", dp(1, FOOT), "dorsal", along=0.80, shift={"medial": 4}, region=FOOT,
+  note="kacik paznokcia palucha, strona przysrodkowa")
+S("SP-2", pp(1, FOOT), "medial", along=0.20, region=FOOT,
+  note="dystalnie od stawu srodstopno-paliczkowego palucha")
+S("SP-3", mt(1), "medial", along=0.85, region=FOOT,
+  note="proksymalnie od glowy I kosci srodstopia")
+S("SP-4", mt(1), "medial", along=0.12, region=FOOT,
+  note="przy podstawie I kosci srodstopia")
+S("SP-5", "Navicular bone", "medial", along=0.5, shift={"proximal": 6}, region=FOOT,
+  note="przednio-dolnie od kostki przysrodkowej")
+S("LR-1", dp(1, FOOT), "dorsal", along=0.80, shift={"lateral": 4}, region=FOOT,
+  note="kacik paznokcia palucha, strona boczna")
+S("LR-2", pp(1, FOOT), "dorsal", along=0.05, toward=pp(2, FOOT), frac=0.5, region=FOOT,
+  note="miedzy I a II palcem stopy, przy faldzie")
+S("LR-3", mt(1), "dorsal", along=0.70, toward=mt(2), frac=0.5, region=FOOT,
+  note="zaglebienie miedzy I a II koscia srodstopia")
+S("ST-42", mt(2), "dorsal", along=0.30, toward=mt(3), frac=0.45, region=FOOT,
+  note="grzbiet stopy, miedzy II a III koscia srodstopia")
+S("ST-43", mt(2), "dorsal", along=0.62, toward=mt(3), frac=0.45, region=FOOT,
+  note="zaglebienie miedzy II a III koscia srodstopia")
+S("ST-44", pp(2, FOOT), "dorsal", along=0.05, toward=pp(3, FOOT), frac=0.5, region=FOOT,
+  note="miedzy II a III palcem, przy faldzie miedzypalcowym")
+S("ST-45", dp(2, FOOT), "dorsal", along=0.80, shift={"lateral": 3}, region=FOOT,
+  note="kacik paznokcia II palca stopy, strona boczna")
+S("GB-41", mt(4), "dorsal", along=0.75, toward=mt(5), frac=0.5, region=FOOT,
+  note="miedzy IV a V koscia srodstopia")
+S("GB-42", mt(4), "dorsal", along=0.90, toward=mt(5), frac=0.5, region=FOOT,
+  note="dystalnie od GB-41")
+S("GB-43", pp(4, FOOT), "dorsal", along=0.05, toward=pp(5, FOOT), frac=0.5, region=FOOT,
+  note="miedzy IV a V palcem stopy")
+S("GB-44", dp(4, FOOT), "dorsal", along=0.80, shift={"lateral": 3}, region=FOOT,
+  note="kacik paznokcia IV palca stopy")
+S("BL-63", "Cuboid bone", "lateral", along=0.4, region=FOOT,
+  note="ponizej kosci szesciennej")
+S("BL-64", mt(5), "lateral", along=0.12, region=FOOT,
+  note="przy guzowatosci V kosci srodstopia")
+S("BL-65", mt(5), "lateral", along=0.88, region=FOOT,
+  note="proksymalnie od glowy V kosci srodstopia")
+S("BL-66", pp(5, FOOT), "lateral", along=0.15, region=FOOT,
+  note="dystalnie od stawu srodstopno-paliczkowego V")
+S("BL-67", dp(5, FOOT), "dorsal", along=0.80, shift={"lateral": 3}, region=FOOT,
+  note="kacik paznokcia V palca stopy, strona boczna")
+S("KI-1", mt(2), "plantar", along=0.55, toward=mt(3), frac=0.5, region=FOOT,
+  note="podeszwa, miedzy II a III koscia srodstopia")
+S("KI-2", "Navicular bone", "medial", along=0.75, region=FOOT,
+  note="ponizej guzowatosci kosci lodkowatej")
+
+# --- malzowina uszna ---------------------------------------------------------
+S("SI-19", "Tragus", "lateral", along=0.5, shift={"anterior": 5},
+  note="przed skrawkiem malzowiny")
+S("SJ-21", "Anterior notch of auricle", "lateral", along=0.5, shift={"up": 11, "anterior": 16},
+  note="przy wcieciu przednim malzowiny, powyzej SI-19")
+S("GB-2", "Antitragus", "lateral", along=0.5, shift={"anterior": 4},
+  note="przy wcieciu miedzyskrawkowym, ponizej SI-19")
+S("SJ-17", "Lobule of auricle", "lateral", along=0.5, shift={"posterior": 22},
+  note="w zaglebieniu za platkiem ucha")
+S("SJ-18", "Helix", "lateral", along=0.25, shift={"posterior": 11},
+  note="za malzowina, na wysokosci dolnej czesci obraczki")
+S("SJ-19", "Helix", "lateral", along=0.55, shift={"posterior": 11},
+  note="za malzowina, na wysokosci srodka obraczki")
+S("SJ-20", "Apex of auricle", "lateral", along=0.5, shift={"up": 4},
+  note="tuz nad szczytem malzowiny")
+S("GB-8", "Apex of auricle", "lateral", along=0.5, shift={"up": 15},
+  note="1,5 cun powyzej szczytu malzowiny")
+
+# --- oczodol i twarz ---------------------------------------------------------
+EYE = "Anterior segment of eyeball"
+S("BL-1", EYE, "anterior", along=0.5, shift={"medial": 7},
+  note="przy przysrodkowym kaciku oka")
+S("BL-2", EYE, "anterior", along=0.5, shift={"medial": 6, "up": 14},
+  note="przysrodkowy koniec brwi")
+S("ST-1", EYE, "anterior", along=0.5, shift={"down": 9},
+  note="miedzy galka oczna a dolnym brzegiem oczodolu")
+S("ST-2", EYE, "anterior", along=0.5, shift={"down": 17},
+  note="otwor podoczodolowy")
+S("GB-1", EYE, "anterior", along=0.5, shift={"lateral": 9},
+  note="0,5 cun bocznie od bocznego kacika oka")
+S("SJ-23", EYE, "anterior", along=0.5, shift={"lateral": 10, "up": 13},
+  note="boczny koniec brwi")
+S("SI-18", "Zygomatic bone", "anterior", along=0.5, shift={"down": 5},
+  note="pod koscia jarzmowa, pionowo pod bocznym katem oka")
+S("ST-7", "Zygomatic bone", "lateral", along=0.25, shift={"down": 6},
+  note="pod lukiem jarzmowym")
+
+
+
+# --- okolica kostki: kotwice przy piszczeli, strzalce, skokowej i pietowej ---
+S("ST-41", "Talus", "dorsal", along=0.5, shift={"up": 6}, region=FOOT,
+  note="srodek faldu stawu skokowego, miedzy sciegnami")
+S("GB-40", "Fibula", "lateral", along=1.0, shift={"proximal": 6, "dorsal": 4}, region=FOOT,
+  note="przednio-dolnie od kostki bocznej")
+S("BL-62", "Fibula", "lateral", along=1.0, shift={"plantar": 8}, region=FOOT,
+  note="tuz ponizej kostki bocznej")
+S("BL-61", "Calcaneus", "lateral", along=0.45, shift={"plantar": 4}, region=FOOT,
+  note="na kosci pietowej, ponizej BL-62")
+S("KI-3", "Tibia", "medial", along=1.0, shift={"distal": 4, "proximal": 0}, region=FOOT,
+  note="miedzy kostka przysrodkowa a sciegnem Achillesa")
+S("KI-5", "Tibia", "medial", along=1.0, shift={"plantar": 10}, region=FOOT,
+  note="ponizej kostki przysrodkowej")
+S("KI-4", "Calcaneus", "medial", along=0.30, region=FOOT,
+  note="przy przyczepie sciegna Achillesa, na kosci pietowej")
+S("KI-6", "Talus", "medial", along=0.5, shift={"plantar": 6}, region=FOOT,
+  note="1 cun ponizej kostki przysrodkowej")
+S("LR-4", "Tibia", "medial", along=1.0, shift={"distal": 10, "dorsal": 6}, region=FOOT,
+  note="przed kostka przysrodkowa")
+
+# --- nos, usta, broda: kotwice przy kosci nosowej, szczece i zuchwie ---------
+S("DU-25", "Nasal bone", "anterior", along=1.0, shift={"down": 8},
+  note="czubek nosa")
+S("LI-20", "Nasal bone", "anterior", along=1.0, shift={"down": 10, "lateral": 9},
+  note="w bruzdzie nosowo-wargowej, przy skrzydelku nosa")
+S("LI-19", "Nasal bone", "anterior", along=1.0, shift={"down": 17, "lateral": 6},
+  note="ponizej skrzydelka nosa, bocznie od rowka nosowo-wargowego")
+S("DU-26", "Nasal bone", "anterior", along=1.0, shift={"down": 20},
+  note="gorna 1/3 rowka nosowo-wargowego")
+S("DU-27", "Nasal bone", "anterior", along=1.0, shift={"down": 28},
+  note="przy gornym brzegu wargi gornej")
+S("DU-28", "Nasal bone", "anterior", along=1.0, shift={"down": 33},
+  note="wedzidelko wargi gornej")
+S("ST-4", "Nasal bone", "anterior", along=1.0, shift={"down": 30, "lateral": 21},
+  note="kacik ust")
+S("ST-3", "Nasal bone", "anterior", along=1.0, shift={"down": 12, "lateral": 17},
+  note="na wysokosci dolnego brzegu skrzydelka nosa, pionowo pod zrenica")
+S("REN-24", "Mandible", "anterior", along=0.5, shift={"up": 22},
+  note="bruzda brodkowo-wargowa")
+S("ST-5", "Mandible", "lateral", along=0.35, shift={"up": 4},
+  note="przed miesniem zwaczem, przy brzegu zuchwy")
+S("ST-6", "Mandible", "lateral", along=0.25, shift={"up": 18},
+  note="wypuklosc zwacza przy zacisnietych zebach")
+
+# --- czolo i skron: kosc czolowa, skroniowa, jarzmowa ------------------------
+S("GB-14", "Frontal bone", "anterior", along=0.5, shift={"lateral": 22, "up": 10},
+  note="1 cun powyzej srodka brwi")
+S("ST-8", "Frontal bone", "anterior", along=0.5, shift={"lateral": 45, "up": 42},
+  note="kacik czolowy linii wlosow")
+S("GB-3", "Zygomatic bone", "lateral", along=0.75, shift={"up": 6},
+  note="nad lukiem jarzmowym, przed uchem")
+S("SJ-22", "Zygomatic bone", "lateral", along=0.85, shift={"up": 14},
+  note="przy tylnej granicy skroni, na wysokosci brwi")
+S("GB-4", "Temporal bone", "lateral", along=0.5, shift={"up": 24, "anterior": 16},
+  note="skron, w obrebie linii wlosow nad uchem")
+S("GB-5", "Temporal bone", "lateral", along=0.5, shift={"up": 26, "anterior": 8},
+  note="skron, ku tylowi od GB-4")
+S("GB-6", "Temporal bone", "lateral", along=0.5, shift={"up": 24, "anterior": 2},
+  note="skron, ku tylowi od GB-5")
+S("GB-7", "Temporal bone", "lateral", along=0.5, shift={"up": 22, "posterior": 6},
+  note="skron, nad malzowina od przodu")
+S("GB-9", "Apex of auricle", "lateral", along=0.5, shift={"up": 8, "posterior": 12},
+  note="ku tylowi i gorze od szczytu malzowiny")
+S("GB-10", "Apex of auricle", "lateral", along=0.5, shift={"posterior": 18},
+  note="ku tylowi od malzowiny, powyzej wyrostka sutkowatego")
+S("GB-11", "Temporal bone", "lateral", along=0.5, shift={"posterior": 14, "down": 6},
+  note="nad wyrostkiem sutkowatym")
+S("GB-12", "Temporal bone", "lateral", along=0.5, shift={"posterior": 16, "down": 20},
+  note="w zaglebieniu za wyrostkiem sutkowatym")
+
 # ============================================================================
 # Kanaly: nazwy, zywiol, kolor, kolejnosc w obiegu dobowym
 # ============================================================================
@@ -518,8 +772,10 @@ def build() -> None:
     (ROOT / "data" / "meridians.json").write_text(
         json.dumps({"paths": paths}, ensure_ascii=False, indent=1), encoding="utf-8")
 
-    n_appr = sum(1 for r in out if r["accuracy"] == "approx")
-    print(f"punktow: {len(out)}  (anchored: {len(out) - n_appr}, approx: {n_appr})")
+    kinds = {}
+    for r in out:
+        kinds[r["accuracy"]] = kinds.get(r["accuracy"], 0) + 1
+    print(f"punktow: {len(out)}  (" + ", ".join(f"{k}: {v}" for k, v in sorted(kinds.items())) + ")")
     if missing:
         print(f"BRAK kotwic dla {len(missing)}: {', '.join(missing)}")
     if extra:
