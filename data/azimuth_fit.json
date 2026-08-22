@@ -1,0 +1,274 @@
+{
+ "note": "azymuty dopasowane do struktur wymienionych w opisach zrodlowych",
+ "tool": "tools/fit_azimuth.py",
+ "fits": {
+  "LU-7": {
+   "az_old": 88.0,
+   "az_new": 88.0,
+   "dist_old_mm": 11.6,
+   "dist_new_mm": 11.6,
+   "structures": [
+    "abductor pollicis longus",
+    "brachioradialis muscle"
+   ],
+   "n_struct": 2
+  },
+  "LU-9": {
+   "az_old": 80.0,
+   "az_new": 80.0,
+   "dist_old_mm": 10.0,
+   "dist_new_mm": 10.0,
+   "structures": [
+    "abductor pollicis longus"
+   ],
+   "n_struct": 1
+  },
+  "LI-17": {
+   "az_old": 62.0,
+   "az_new": 20.0,
+   "dist_old_mm": 25.2,
+   "dist_new_mm": 2.5,
+   "structures": [
+    "sternocleidomastoid muscle"
+   ],
+   "n_struct": 1
+  },
+  "LI-18": {
+   "az_old": 62.0,
+   "az_new": 24.0,
+   "dist_old_mm": 17.7,
+   "dist_new_mm": 2.5,
+   "structures": [
+    "sternocleidomastoid muscle"
+   ],
+   "n_struct": 1
+  },
+  "HT-4": {
+   "az_old": -92.0,
+   "az_new": -92.0,
+   "dist_old_mm": 11.2,
+   "dist_new_mm": 11.2,
+   "structures": [
+    "humeral head of flexor carpi ulnaris",
+    "ulnar head of flexor carpi ulnaris"
+   ],
+   "n_struct": 2
+  },
+  "HT-5": {
+   "az_old": -88.0,
+   "az_new": -88.0,
+   "dist_old_mm": 8.1,
+   "dist_new_mm": 8.1,
+   "structures": [
+    "humeral head of flexor carpi ulnaris",
+    "ulnar head of flexor carpi ulnaris"
+   ],
+   "n_struct": 2
+  },
+  "HT-6": {
+   "az_old": -76.0,
+   "az_new": -76.0,
+   "dist_old_mm": 13.4,
+   "dist_new_mm": 13.4,
+   "structures": [
+    "humeral head of flexor carpi ulnaris",
+    "ulnar head of flexor carpi ulnaris"
+   ],
+   "n_struct": 2
+  },
+  "HT-7": {
+   "az_old": -80.0,
+   "az_new": -80.0,
+   "dist_old_mm": 19.4,
+   "dist_new_mm": 19.4,
+   "structures": [
+    "humeral head of flexor carpi ulnaris",
+    "ulnar head of flexor carpi ulnaris"
+   ],
+   "n_struct": 2
+  },
+  "SI-7": {
+   "az_old": -108.0,
+   "az_new": -108.0,
+   "dist_old_mm": 3.2,
+   "dist_new_mm": 3.2,
+   "structures": [
+    "humeral head of flexor carpi ulnaris",
+    "ulnar head of flexor carpi ulnaris"
+   ],
+   "n_struct": 2
+  },
+  "BL-38": {
+   "az_old": 128.0,
+   "az_new": 120.0,
+   "dist_old_mm": 13.4,
+   "dist_new_mm": 3.9,
+   "structures": [
+    "long head of biceps femoris",
+    "short head of biceps femoris"
+   ],
+   "n_struct": 2
+  },
+  "BL-39": {
+   "az_old": 116.0,
+   "az_new": 116.0,
+   "dist_old_mm": 2.2,
+   "dist_new_mm": 2.2,
+   "structures": [
+    "long head of biceps femoris",
+    "short head of biceps femoris"
+   ],
+   "n_struct": 2
+  },
+  "BL-55": {
+   "az_old": 176.0,
+   "az_new": 176.0,
+   "dist_old_mm": 7.0,
+   "dist_new_mm": 7.0,
+   "structures": [
+    "lateral head of gastrocnemius",
+    "medial head of gastrocnemius"
+   ],
+   "n_struct": 2
+  },
+  "BL-56": {
+   "az_old": -180.0,
+   "az_new": -180.0,
+   "dist_old_mm": 4.3,
+   "dist_new_mm": 4.3,
+   "structures": [
+    "lateral head of gastrocnemius",
+    "medial head of gastrocnemius"
+   ],
+   "n_struct": 2
+  },
+  "BL-57": {
+   "az_old": -172.0,
+   "az_new": -172.0,
+   "dist_old_mm": 9.1,
+   "dist_new_mm": 9.1,
+   "structures": [
+    "lateral head of gastrocnemius",
+    "medial head of gastrocnemius"
+   ],
+   "n_struct": 2
+  },
+  "KI-10": {
+   "az_old": -120.0,
+   "az_new": -112.0,
+   "dist_old_mm": 6.8,
+   "dist_new_mm": 2.8,
+   "structures": [
+    "semimembranosus muscle",
+    "semitendinosus muscle"
+   ],
+   "n_struct": 2
+  },
+  "SJ-4": {
+   "az_old": -132.0,
+   "az_new": -116.0,
+   "dist_old_mm": 14.7,
+   "dist_new_mm": 14.2,
+   "structures": [
+    "extensor digiti minimi",
+    "extensor digitorum"
+   ],
+   "n_struct": 2
+  },
+  "SJ-5": {
+   "az_old": -168.0,
+   "az_new": -168.0,
+   "dist_old_mm": 4.8,
+   "dist_new_mm": 4.8,
+   "structures": [
+    "extensor digitorum"
+   ],
+   "n_struct": 1
+  },
+  "SJ-6": {
+   "az_old": 164.0,
+   "az_new": 164.0,
+   "dist_old_mm": 7.0,
+   "dist_new_mm": 7.0,
+   "structures": [
+    "extensor digitorum"
+   ],
+   "n_struct": 1
+  },
+  "SJ-7": {
+   "az_old": 164.0,
+   "az_new": 164.0,
+   "dist_old_mm": 7.0,
+   "dist_new_mm": 7.0,
+   "structures": [
+    "extensor digitorum"
+   ],
+   "n_struct": 1
+  },
+  "SJ-8": {
+   "az_old": 148.0,
+   "az_new": 148.0,
+   "dist_old_mm": 4.3,
+   "dist_new_mm": 4.3,
+   "structures": [
+    "extensor digitorum"
+   ],
+   "n_struct": 1
+  },
+  "GB-33": {
+   "az_old": 120.0,
+   "az_new": 120.0,
+   "dist_old_mm": 2.2,
+   "dist_new_mm": 2.2,
+   "structures": [
+    "long head of biceps femoris",
+    "short head of biceps femoris"
+   ],
+   "n_struct": 2
+  },
+  "LR-8": {
+   "az_old": -96.0,
+   "az_new": -96.0,
+   "dist_old_mm": 29.1,
+   "dist_new_mm": 29.1,
+   "structures": [
+    "gracilis muscle",
+    "sartorius muscle",
+    "semimembranosus muscle",
+    "semitendinosus muscle"
+   ],
+   "n_struct": 4
+  },
+  "LR-9": {
+   "az_old": -76.0,
+   "az_new": -76.0,
+   "dist_old_mm": 21.9,
+   "dist_new_mm": 21.9,
+   "structures": [
+    "sartorius muscle",
+    "vastus medialis muscle"
+   ],
+   "n_struct": 2
+  },
+  "LR-10": {
+   "az_old": -48.0,
+   "az_new": -40.0,
+   "dist_old_mm": 5.2,
+   "dist_new_mm": 4.0,
+   "structures": [
+    "adductor longus"
+   ],
+   "n_struct": 1
+  },
+  "LR-11": {
+   "az_old": -52.0,
+   "az_new": -44.0,
+   "dist_old_mm": 9.9,
+   "dist_new_mm": 5.5,
+   "structures": [
+    "adductor longus"
+   ],
+   "n_struct": 1
+  }
+ }
+}

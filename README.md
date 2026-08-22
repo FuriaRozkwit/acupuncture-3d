@@ -154,19 +154,47 @@ tools/
   prepare_skin.py      skora BodyParts3D dopasowana do anatomii
   calibrate_rig.py     linijka cun z prawdziwych kosci
   build_points.py      tabele kotwic -> data/points.json
+  prepare_structs.py   drobne struktury (paliczki, malzowina, galka oczna)
   validate.py          kontrola spojnosci atlasu
+  verify_points.py     zgodnosc z opisami zrodlowymi
+  fit_azimuth.py       pomiar kata ulozenia punktu wzgledem miesni
 ```
 
-## Dokładność
+## Dokładność i jak jest sprawdzana
 
-`tools/validate.py` sprawdza, czy wszystkie punkty się rozwiązują, leżą na skórze,
-czy strony są symetryczne i czy odstępy między sąsiadami są prawdopodobne.
+Kotwice wpisałem ręcznie na podstawie opisów podręcznikowych — **nie ma za nimi żadnej
+bazy współrzędnych**. Dlatego są dwa niezależne narzędzia kontrolne.
 
-Każdy punkt ma znacznik `accuracy`:
+`tools/validate.py` — spójność wewnętrzna: czy punkty leżą na skórze, czy strony się nie
+mieszają (punkt prawej strony nie może mieć ujemnego x), czy pary L/R są symetryczne.
 
-- **anchored** (272) — kotwica odwzorowuje opis podręcznikowy wprost,
-- **approx** (89) — model nie ma tej struktury (palce, małżowina, oczodół),
-  więc położenie jest poglądowe i wymaga sprawdzenia wzrokiem.
+`tools/verify_points.py` — zgodność z opisami źródłowymi. Wyciąga z tekstu liczby, które
+da się zmierzyć, i porównuje je z geometrią modelu:
+
+| test | wynik | co dowodzi |
+|---|---|---|
+| odległość boczna (54 pkt) | 54/54, mediana 0,08 cun | poprawność przepisania liczb |
+| poziom kręgu (31 pkt) | 30/31 | poziom brany z realnej kości |
+| odległość wzdłuż (32 pkt) | 31/32, mediana 0,00 cun | poprawność przepisania |
+| **zgodność mięśnia (30 pkt)** | **25/30 (83%)** | **test w pełni niezależny** |
+
+Ostatni jest jedyny, który może złapać błąd: nazwa mięśnia pochodzi z podręcznika,
+geometria z Z-Anatomy, a pozycja z moich kotwic — trzy różne źródła. To on wykrył,
+że LR-10 i LR-11 lądowały na przeciwnej nodze.
+
+`tools/fit_azimuth.py` — kąt ułożenia punktu wokół kończyny był jedyną wartością wpisywaną
+na oko. Tam, gdzie opis nazywa mięsień lub ścięgno, kąt jest **mierzony**: skanujemy pełny
+obrót i wybieramy ten, przy którym punkt leży na nazwanej strukturze, a przy opisie
+„między X a Y" — pomiędzy nimi. Bramka jakości odrzuca przypadki, w których punkt nie
+dosięga struktury; to znaczy, że nazwa trafiła do tekstu mimochodem, z podpisu ryciny.
+
+### Znacznik `accuracy` przy każdym punkcie
+
+- **structural** (89) — kotwica przy nazwanej strukturze: paliczku, kości śródręcza,
+  skrawku małżowiny, gałce ocznej,
+- **anchored** (271) — kotwica proporcjonalna w cun wobec punktów kostnych,
+  z czego 25 ma kąt zmierzony względem mięśni zamiast wpisanego,
+- **approx** (1) — HT-1, bo model nie ma zachyłka pachowego.
 
 To nie jest wyrób medyczny ani pomoc do samodzielnego nakłuwania. Narzędzie do nauki
 topografii — punkt na ekranie zawsze weryfikuj z podręcznikiem i z żywym pacjentem.

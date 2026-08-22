@@ -134,7 +134,8 @@
     "lat": 6,
     "face": "anterior"
    },
-   "note_pl": "1. przestrzen miedzyzebrowa, 6 cun od linii posrodkowej"
+   "note_pl": "1. przestrzen miedzyzebrowa, 6 cun od linii posrodkowej",
+   "az_source": ""
   },
   {
    "code": "LU-2",
@@ -151,7 +152,8 @@
     "lat": 6,
     "face": "anterior"
    },
-   "note_pl": "pod obojczykiem, w zaglebieniu podobojczykowym"
+   "note_pl": "pod obojczykiem, w zaglebieniu podobojczykowym",
+   "az_source": ""
   },
   {
    "code": "LU-3",
@@ -170,7 +172,8 @@
     "from": "p0",
     "az": 35
    },
-   "note_pl": "3 cun ponizej przedniego faldu pachowego"
+   "note_pl": "3 cun ponizej przedniego faldu pachowego",
+   "az_source": ""
   },
   {
    "code": "LU-4",
@@ -187,7 +190,8 @@
     "from": "p0",
     "az": 35
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "LU-5",
@@ -206,7 +210,8 @@
     "from": "p0",
     "az": 45
    },
-   "note_pl": "fald lokciowy, promieniowo od sciegna dwuglowego"
+   "note_pl": "fald lokciowy, promieniowo od sciegna dwuglowego",
+   "az_source": ""
   },
   {
    "code": "LU-6",
@@ -225,7 +230,8 @@
     "from": "p0",
     "az": 55
    },
-   "note_pl": "7 cun powyzej faldu nadgarstka"
+   "note_pl": "7 cun powyzej faldu nadgarstka",
+   "az_source": ""
   },
   {
    "code": "LU-7",
@@ -245,9 +251,10 @@
     "seg": "forearm",
     "cun": 1.5,
     "from": "p1",
-    "az": 70
+    "az": 88.0
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": "dopasowany do: abductor pollicis longus, brachioradialis muscle"
   },
   {
    "code": "LU-8",
@@ -266,7 +273,8 @@
     "from": "p1",
     "az": 72
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "LU-9",
@@ -284,9 +292,10 @@
     "seg": "forearm",
     "cun": 0.3,
     "from": "p1",
-    "az": 68
+    "az": 80.0
    },
-   "note_pl": "fald nadgarstka, przy tetnicy promieniowej"
+   "note_pl": "fald nadgarstka, przy tetnicy promieniowej",
+   "az_source": "dopasowany do: abductor pollicis longus"
   },
   {
    "code": "LU-10",
@@ -305,7 +314,8 @@
     "dir": "palmar",
     "region": "hand"
    },
-   "note_pl": "srodek I kosci srodrecza, strona dloniowa"
+   "note_pl": "srodek I kosci srodrecza, strona dloniowa",
+   "az_source": ""
   },
   {
    "code": "LU-11",
@@ -328,7 +338,8 @@
     },
     "region": "hand"
    },
-   "note_pl": "kacik paznokcia kciuka od strony promieniowej"
+   "note_pl": "kacik paznokcia kciuka od strony promieniowej",
+   "az_source": ""
   },
   {
    "code": "LI-1",
@@ -350,7 +361,8 @@
     },
     "region": "hand"
    },
-   "note_pl": "kacik paznokcia palca wskazujacego, strona promieniowa"
+   "note_pl": "kacik paznokcia palca wskazujacego, strona promieniowa",
+   "az_source": ""
   },
   {
    "code": "LI-2",
@@ -369,7 +381,8 @@
     "dir": "radial",
     "region": "hand"
    },
-   "note_pl": "zaglebienie dystalnie od stawu srodreczno-paliczkowego II"
+   "note_pl": "zaglebienie dystalnie od stawu srodreczno-paliczkowego II",
+   "az_source": ""
   },
   {
    "code": "LI-3",
@@ -388,7 +401,8 @@
     "dir": "radial",
     "region": "hand"
    },
-   "note_pl": "proksymalnie od glowy II kosci srodrecza"
+   "note_pl": "proksymalnie od glowy II kosci srodrecza",
+   "az_source": ""
   },
   {
    "code": "LI-4",
@@ -411,7 +425,8 @@
     "frac": 0.32,
     "region": "hand"
    },
-   "note_pl": "miedzy I a II koscia srodrecza, przy promieniowym brzegu II"
+   "note_pl": "miedzy I a II koscia srodrecza, przy promieniowym brzegu II",
+   "az_source": ""
   },
   {
    "code": "LI-5",
@@ -433,7 +448,8 @@
     },
     "region": "hand"
    },
-   "note_pl": "tabakierka anatomiczna, przy kosci lodkowatej"
+   "note_pl": "tabakierka anatomiczna, przy kosci lodkowatej",
+   "az_source": ""
   },
   {
    "code": "LI-6",
@@ -452,7 +468,8 @@
     "from": "p1",
     "az": 115
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "LI-7",
@@ -471,7 +488,8 @@
     "from": "p1",
     "az": 115
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "LI-8",
@@ -488,7 +506,8 @@
     "from": "p0",
     "az": 110
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "LI-9",
@@ -505,7 +524,8 @@
     "from": "p0",
     "az": 110
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "LI-10",
@@ -522,7 +542,8 @@
     "from": "p0",
     "az": 110
    },
-   "note_pl": "2 cun ponizej LI-11"
+   "note_pl": "2 cun ponizej LI-11",
+   "az_source": ""
   },
   {
    "code": "LI-11",
@@ -543,7 +564,8 @@
     "from": "p0",
     "az": 118
    },
-   "note_pl": "boczny koniec faldu lokciowego przy zgietym lokciu"
+   "note_pl": "boczny koniec faldu lokciowego przy zgietym lokciu",
+   "az_source": ""
   },
   {
    "code": "LI-12",
@@ -560,7 +582,8 @@
     "from": "p1",
     "az": 120
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "LI-13",
@@ -577,7 +600,8 @@
     "from": "p1",
     "az": 115
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "LI-14",
@@ -596,7 +620,8 @@
     "from": "p1",
     "az": 110
    },
-   "note_pl": "przyczep miesnia naramiennego"
+   "note_pl": "przyczep miesnia naramiennego",
+   "az_source": ""
   },
   {
    "code": "LI-15",
@@ -614,7 +639,8 @@
     "t": 0.02,
     "az": 105
    },
-   "note_pl": "zaglebienie przednio-dolne wyrostka barkowego"
+   "note_pl": "zaglebienie przednio-dolne wyrostka barkowego",
+   "az_source": ""
   },
   {
    "code": "LI-16",
@@ -634,7 +660,8 @@
     "face": "anterior",
     "out": 0.2
    },
-   "note_pl": "miedzy wyrostkiem barkowym a obojczykiem"
+   "note_pl": "miedzy wyrostkiem barkowym a obojczykiem",
+   "az_source": ""
   },
   {
    "code": "LI-17",
@@ -648,9 +675,10 @@
    "anchor": {
     "seg": "neck",
     "z_frac": 0.84,
-    "az": 62
+    "az": 20.0
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": "dopasowany do: sternocleidomastoid muscle"
   },
   {
    "code": "LI-18",
@@ -666,9 +694,10 @@
    "anchor": {
     "seg": "neck",
     "z_frac": 0.845,
-    "az": 62
+    "az": 24.0
    },
-   "note_pl": "na wysokosci chrzastki tarczowatej, miedzy glowami SCM"
+   "note_pl": "na wysokosci chrzastki tarczowatej, miedzy glowami SCM",
+   "az_source": "dopasowany do: sternocleidomastoid muscle"
   },
   {
    "code": "LI-19",
@@ -688,7 +717,8 @@
      "lateral": 6
     }
    },
-   "note_pl": "ponizej skrzydelka nosa, bocznie od rowka nosowo-wargowego"
+   "note_pl": "ponizej skrzydelka nosa, bocznie od rowka nosowo-wargowego",
+   "az_source": ""
   },
   {
    "code": "LI-20",
@@ -710,7 +740,8 @@
      "lateral": 9
     }
    },
-   "note_pl": "w bruzdzie nosowo-wargowej, przy skrzydelku nosa"
+   "note_pl": "w bruzdzie nosowo-wargowej, przy skrzydelku nosa",
+   "az_source": ""
   },
   {
    "code": "ST-1",
@@ -731,7 +762,8 @@
      "down": 9
     }
    },
-   "note_pl": "miedzy galka oczna a dolnym brzegiem oczodolu"
+   "note_pl": "miedzy galka oczna a dolnym brzegiem oczodolu",
+   "az_source": ""
   },
   {
    "code": "ST-2",
@@ -750,7 +782,8 @@
      "down": 17
     }
    },
-   "note_pl": "otwor podoczodolowy"
+   "note_pl": "otwor podoczodolowy",
+   "az_source": ""
   },
   {
    "code": "ST-3",
@@ -772,7 +805,8 @@
      "lateral": 17
     }
    },
-   "note_pl": "na wysokosci dolnego brzegu skrzydelka nosa, pionowo pod zrenica"
+   "note_pl": "na wysokosci dolnego brzegu skrzydelka nosa, pionowo pod zrenica",
+   "az_source": ""
   },
   {
    "code": "ST-4",
@@ -794,7 +828,8 @@
      "lateral": 21
     }
    },
-   "note_pl": "kacik ust"
+   "note_pl": "kacik ust",
+   "az_source": ""
   },
   {
    "code": "ST-5",
@@ -813,7 +848,8 @@
      "up": 4
     }
    },
-   "note_pl": "przed miesniem zwaczem, przy brzegu zuchwy"
+   "note_pl": "przed miesniem zwaczem, przy brzegu zuchwy",
+   "az_source": ""
   },
   {
    "code": "ST-6",
@@ -834,7 +870,8 @@
      "up": 18
     }
    },
-   "note_pl": "wypuklosc zwacza przy zacisnietych zebach"
+   "note_pl": "wypuklosc zwacza przy zacisnietych zebach",
+   "az_source": ""
   },
   {
    "code": "ST-7",
@@ -855,7 +892,8 @@
      "down": 6
     }
    },
-   "note_pl": "pod lukiem jarzmowym"
+   "note_pl": "pod lukiem jarzmowym",
+   "az_source": ""
   },
   {
    "code": "ST-8",
@@ -877,7 +915,8 @@
      "up": 42
     }
    },
-   "note_pl": "kacik czolowy linii wlosow"
+   "note_pl": "kacik czolowy linii wlosow",
+   "az_source": ""
   },
   {
    "code": "ST-9",
@@ -898,7 +937,8 @@
     "lat": 1.5,
     "face": "anterior"
    },
-   "note_pl": "na wysokosci chrzastki tarczowatej, przy tetnicy szyjnej"
+   "note_pl": "na wysokosci chrzastki tarczowatej, przy tetnicy szyjnej",
+   "az_source": ""
   },
   {
    "code": "ST-10",
@@ -915,7 +955,8 @@
     "lat": 1.8,
     "face": "anterior"
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "ST-11",
@@ -932,7 +973,8 @@
     "lat": 2,
     "face": "anterior"
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "ST-12",
@@ -949,7 +991,8 @@
     "lat": 4,
     "face": "anterior"
    },
-   "note_pl": "srodek dolu nadobojczykowego"
+   "note_pl": "srodek dolu nadobojczykowego",
+   "az_source": ""
   },
   {
    "code": "ST-13",
@@ -966,7 +1009,8 @@
     "lat": 4,
     "face": "anterior"
    },
-   "note_pl": "pod obojczykiem"
+   "note_pl": "pod obojczykiem",
+   "az_source": ""
   },
   {
    "code": "ST-14",
@@ -983,7 +1027,8 @@
     "lat": 4,
     "face": "anterior"
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "ST-15",
@@ -1000,7 +1045,8 @@
     "lat": 4,
     "face": "anterior"
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "ST-16",
@@ -1017,7 +1063,8 @@
     "lat": 4,
     "face": "anterior"
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "ST-17",
@@ -1034,7 +1081,8 @@
     "lat": 4,
     "face": "anterior"
    },
-   "note_pl": "srodek brodawki sutkowej"
+   "note_pl": "srodek brodawki sutkowej",
+   "az_source": ""
   },
   {
    "code": "ST-18",
@@ -1051,7 +1099,8 @@
     "lat": 4,
     "face": "anterior"
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "ST-19",
@@ -1069,7 +1118,8 @@
     "lat": 2,
     "face": "anterior"
    },
-   "note_pl": "2 cun bocznie od linii posrodkowej, 6 cun powyzej pepka"
+   "note_pl": "2 cun bocznie od linii posrodkowej, 6 cun powyzej pepka",
+   "az_source": ""
   },
   {
    "code": "ST-20",
@@ -1087,7 +1137,8 @@
     "lat": 2,
     "face": "anterior"
    },
-   "note_pl": "2 cun bocznie od linii posrodkowej, 5 cun powyzej pepka"
+   "note_pl": "2 cun bocznie od linii posrodkowej, 5 cun powyzej pepka",
+   "az_source": ""
   },
   {
    "code": "ST-21",
@@ -1105,7 +1156,8 @@
     "lat": 2,
     "face": "anterior"
    },
-   "note_pl": "2 cun bocznie od linii posrodkowej, 4 cun powyzej pepka"
+   "note_pl": "2 cun bocznie od linii posrodkowej, 4 cun powyzej pepka",
+   "az_source": ""
   },
   {
    "code": "ST-22",
@@ -1123,7 +1175,8 @@
     "lat": 2,
     "face": "anterior"
    },
-   "note_pl": "2 cun bocznie od linii posrodkowej, 3 cun powyzej pepka"
+   "note_pl": "2 cun bocznie od linii posrodkowej, 3 cun powyzej pepka",
+   "az_source": ""
   },
   {
    "code": "ST-23",
@@ -1141,7 +1194,8 @@
     "lat": 2,
     "face": "anterior"
    },
-   "note_pl": "2 cun bocznie od linii posrodkowej, 2 cun powyzej pepka"
+   "note_pl": "2 cun bocznie od linii posrodkowej, 2 cun powyzej pepka",
+   "az_source": ""
   },
   {
    "code": "ST-24",
@@ -1159,7 +1213,8 @@
     "lat": 2,
     "face": "anterior"
    },
-   "note_pl": "2 cun bocznie od linii posrodkowej, 1 cun powyzej pepka"
+   "note_pl": "2 cun bocznie od linii posrodkowej, 1 cun powyzej pepka",
+   "az_source": ""
   },
   {
    "code": "ST-25",
@@ -1179,7 +1234,8 @@
     "lat": 2,
     "face": "anterior"
    },
-   "note_pl": "2 cun bocznie od pepka"
+   "note_pl": "2 cun bocznie od pepka",
+   "az_source": ""
   },
   {
    "code": "ST-26",
@@ -1197,7 +1253,8 @@
     "lat": 2,
     "face": "anterior"
    },
-   "note_pl": "2 cun bocznie od linii posrodkowej, 1 cun ponizej pepka"
+   "note_pl": "2 cun bocznie od linii posrodkowej, 1 cun ponizej pepka",
+   "az_source": ""
   },
   {
    "code": "ST-27",
@@ -1215,7 +1272,8 @@
     "lat": 2,
     "face": "anterior"
    },
-   "note_pl": "2 cun bocznie od linii posrodkowej, 2 cun ponizej pepka"
+   "note_pl": "2 cun bocznie od linii posrodkowej, 2 cun ponizej pepka",
+   "az_source": ""
   },
   {
    "code": "ST-28",
@@ -1233,7 +1291,8 @@
     "lat": 2,
     "face": "anterior"
    },
-   "note_pl": "2 cun bocznie od linii posrodkowej, 3 cun ponizej pepka"
+   "note_pl": "2 cun bocznie od linii posrodkowej, 3 cun ponizej pepka",
+   "az_source": ""
   },
   {
    "code": "ST-29",
@@ -1251,7 +1310,8 @@
     "lat": 2,
     "face": "anterior"
    },
-   "note_pl": "2 cun bocznie od linii posrodkowej, 4 cun ponizej pepka"
+   "note_pl": "2 cun bocznie od linii posrodkowej, 4 cun ponizej pepka",
+   "az_source": ""
   },
   {
    "code": "ST-30",
@@ -1272,7 +1332,8 @@
     "lat": 2,
     "face": "anterior"
    },
-   "note_pl": "2 cun bocznie od linii posrodkowej, 5 cun ponizej pepka"
+   "note_pl": "2 cun bocznie od linii posrodkowej, 5 cun ponizej pepka",
+   "az_source": ""
   },
   {
    "code": "ST-31",
@@ -1289,7 +1350,8 @@
     "from": "p0",
     "az": 30
    },
-   "note_pl": "na wysokosci dolnego brzegu spojenia lonowego"
+   "note_pl": "na wysokosci dolnego brzegu spojenia lonowego",
+   "az_source": ""
   },
   {
    "code": "ST-32",
@@ -1306,7 +1368,8 @@
     "from": "p1",
     "az": 20
    },
-   "note_pl": "6 cun powyzej gornego brzegu rzepki"
+   "note_pl": "6 cun powyzej gornego brzegu rzepki",
+   "az_source": ""
   },
   {
    "code": "ST-33",
@@ -1323,7 +1386,8 @@
     "from": "p1",
     "az": 25
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "ST-34",
@@ -1342,7 +1406,8 @@
     "from": "p1",
     "az": 22
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "ST-35",
@@ -1359,7 +1424,8 @@
     "from": "p0",
     "az": 25
    },
-   "note_pl": "zaglebienie bocznie od wiezadla rzepki"
+   "note_pl": "zaglebienie bocznie od wiezadla rzepki",
+   "az_source": ""
   },
   {
    "code": "ST-36",
@@ -1381,7 +1447,8 @@
     "from": "p0",
     "az": 22
    },
-   "note_pl": "3 cun ponizej ST-35, szerokosc palca bocznie od grzebienia piszczeli"
+   "note_pl": "3 cun ponizej ST-35, szerokosc palca bocznie od grzebienia piszczeli",
+   "az_source": ""
   },
   {
    "code": "ST-37",
@@ -1401,7 +1468,8 @@
     "from": "p0",
     "az": 22
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "ST-38",
@@ -1418,7 +1486,8 @@
     "from": "p0",
     "az": 22
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "ST-39",
@@ -1438,7 +1507,8 @@
     "from": "p0",
     "az": 22
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "ST-40",
@@ -1457,7 +1527,8 @@
     "from": "p0",
     "az": 38
    },
-   "note_pl": "2 szerokosci palca bocznie od ST-38"
+   "note_pl": "2 szerokosci palca bocznie od ST-38",
+   "az_source": ""
   },
   {
    "code": "ST-41",
@@ -1479,7 +1550,8 @@
     },
     "region": "foot"
    },
-   "note_pl": "srodek faldu stawu skokowego, miedzy sciegnami"
+   "note_pl": "srodek faldu stawu skokowego, miedzy sciegnami",
+   "az_source": ""
   },
   {
    "code": "ST-42",
@@ -1500,7 +1572,8 @@
     "frac": 0.45,
     "region": "foot"
    },
-   "note_pl": "grzbiet stopy, miedzy II a III koscia srodstopia"
+   "note_pl": "grzbiet stopy, miedzy II a III koscia srodstopia",
+   "az_source": ""
   },
   {
    "code": "ST-43",
@@ -1521,7 +1594,8 @@
     "frac": 0.45,
     "region": "foot"
    },
-   "note_pl": "zaglebienie miedzy II a III koscia srodstopia"
+   "note_pl": "zaglebienie miedzy II a III koscia srodstopia",
+   "az_source": ""
   },
   {
    "code": "ST-44",
@@ -1543,7 +1617,8 @@
     "frac": 0.5,
     "region": "foot"
    },
-   "note_pl": "miedzy II a III palcem, przy faldzie miedzypalcowym"
+   "note_pl": "miedzy II a III palcem, przy faldzie miedzypalcowym",
+   "az_source": ""
   },
   {
    "code": "ST-45",
@@ -1565,7 +1640,8 @@
     },
     "region": "foot"
    },
-   "note_pl": "kacik paznokcia II palca stopy, strona boczna"
+   "note_pl": "kacik paznokcia II palca stopy, strona boczna",
+   "az_source": ""
   },
   {
    "code": "SP-1",
@@ -1588,7 +1664,8 @@
     },
     "region": "foot"
    },
-   "note_pl": "kacik paznokcia palucha, strona przysrodkowa"
+   "note_pl": "kacik paznokcia palucha, strona przysrodkowa",
+   "az_source": ""
   },
   {
    "code": "SP-2",
@@ -1607,7 +1684,8 @@
     "dir": "medial",
     "region": "foot"
    },
-   "note_pl": "dystalnie od stawu srodstopno-paliczkowego palucha"
+   "note_pl": "dystalnie od stawu srodstopno-paliczkowego palucha",
+   "az_source": ""
   },
   {
    "code": "SP-3",
@@ -1627,7 +1705,8 @@
     "dir": "medial",
     "region": "foot"
    },
-   "note_pl": "proksymalnie od glowy I kosci srodstopia"
+   "note_pl": "proksymalnie od glowy I kosci srodstopia",
+   "az_source": ""
   },
   {
    "code": "SP-4",
@@ -1647,7 +1726,8 @@
     "dir": "medial",
     "region": "foot"
    },
-   "note_pl": "przy podstawie I kosci srodstopia"
+   "note_pl": "przy podstawie I kosci srodstopia",
+   "az_source": ""
   },
   {
    "code": "SP-5",
@@ -1669,7 +1749,8 @@
     },
     "region": "foot"
    },
-   "note_pl": "przednio-dolnie od kostki przysrodkowej"
+   "note_pl": "przednio-dolnie od kostki przysrodkowej",
+   "az_source": ""
   },
   {
    "code": "SP-6",
@@ -1688,7 +1769,8 @@
     "from": "p1",
     "az": -80
    },
-   "note_pl": "3 cun powyzej kostki przysrodkowej, przy brzegu piszczeli"
+   "note_pl": "3 cun powyzej kostki przysrodkowej, przy brzegu piszczeli",
+   "az_source": ""
   },
   {
    "code": "SP-7",
@@ -1705,7 +1787,8 @@
     "from": "p1",
     "az": -80
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "SP-8",
@@ -1724,7 +1807,8 @@
     "from": "p0",
     "az": -75
    },
-   "note_pl": "3 cun ponizej SP-9"
+   "note_pl": "3 cun ponizej SP-9",
+   "az_source": ""
   },
   {
    "code": "SP-9",
@@ -1743,7 +1827,8 @@
     "from": "p0",
     "az": -80
    },
-   "note_pl": "pod klykciem przysrodkowym piszczeli"
+   "note_pl": "pod klykciem przysrodkowym piszczeli",
+   "az_source": ""
   },
   {
    "code": "SP-10",
@@ -1762,7 +1847,8 @@
     "from": "p1",
     "az": -45
    },
-   "note_pl": "2 cun powyzej rzepki, wypuklosc miesnia obszernego przysrodkowego"
+   "note_pl": "2 cun powyzej rzepki, wypuklosc miesnia obszernego przysrodkowego",
+   "az_source": ""
   },
   {
    "code": "SP-11",
@@ -1779,7 +1865,8 @@
     "from": "p1",
     "az": -55
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "SP-12",
@@ -1798,7 +1885,8 @@
     "lat": 3.5,
     "face": "anterior"
    },
-   "note_pl": "fald pachwinowy, bocznie od tetnicy udowej"
+   "note_pl": "fald pachwinowy, bocznie od tetnicy udowej",
+   "az_source": ""
   },
   {
    "code": "SP-13",
@@ -1817,7 +1905,8 @@
     "lat": 4,
     "face": "anterior"
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "SP-14",
@@ -1835,7 +1924,8 @@
     "lat": 4,
     "face": "anterior"
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "SP-15",
@@ -1855,7 +1945,8 @@
     "lat": 4,
     "face": "anterior"
    },
-   "note_pl": "4 cun bocznie od pepka"
+   "note_pl": "4 cun bocznie od pepka",
+   "az_source": ""
   },
   {
    "code": "SP-16",
@@ -1875,7 +1966,8 @@
     "lat": 4,
     "face": "anterior"
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "SP-17",
@@ -1892,7 +1984,8 @@
     "lat": 6,
     "face": "anterior"
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "SP-18",
@@ -1909,7 +2002,8 @@
     "lat": 6,
     "face": "anterior"
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "SP-19",
@@ -1926,7 +2020,8 @@
     "lat": 6,
     "face": "anterior"
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "SP-20",
@@ -1943,7 +2038,8 @@
     "lat": 6,
     "face": "anterior"
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "SP-21",
@@ -1962,7 +2058,8 @@
     "lat": 6,
     "face": "lateral"
    },
-   "note_pl": "linia pachowa srodkowa, 6. przestrzen miedzyzebrowa"
+   "note_pl": "linia pachowa srodkowa, 6. przestrzen miedzyzebrowa",
+   "az_source": ""
   },
   {
    "code": "HT-1",
@@ -1979,7 +2076,8 @@
     "lat": 6,
     "face": "lateral"
    },
-   "note_pl": "srodek dolu pachowego - model nie ma zachylka pachowego, punkt pokazany na bocznej scianie klatki"
+   "note_pl": "srodek dolu pachowego - model nie ma zachylka pachowego, punkt pokazany na bocznej scianie klatki",
+   "az_source": ""
   },
   {
    "code": "HT-2",
@@ -1996,7 +2094,8 @@
     "from": "p1",
     "az": -35
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "HT-3",
@@ -2015,7 +2114,8 @@
     "from": "p0",
     "az": -55
    },
-   "note_pl": "przysrodkowy koniec faldu lokciowego"
+   "note_pl": "przysrodkowy koniec faldu lokciowego",
+   "az_source": ""
   },
   {
    "code": "HT-4",
@@ -2032,9 +2132,10 @@
     "seg": "forearm",
     "cun": 1.5,
     "from": "p1",
-    "az": -60
+    "az": -92.0
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": "dopasowany do: humeral head of flexor carpi ulnaris, ulnar head of flexor carpi ulnaris"
   },
   {
    "code": "HT-5",
@@ -2052,9 +2153,10 @@
     "seg": "forearm",
     "cun": 1,
     "from": "p1",
-    "az": -62
+    "az": -88.0
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": "dopasowany do: humeral head of flexor carpi ulnaris, ulnar head of flexor carpi ulnaris"
   },
   {
    "code": "HT-6",
@@ -2071,9 +2173,10 @@
     "seg": "forearm",
     "cun": 0.5,
     "from": "p1",
-    "az": -62
+    "az": -76.0
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": "dopasowany do: humeral head of flexor carpi ulnaris, ulnar head of flexor carpi ulnaris"
   },
   {
    "code": "HT-7",
@@ -2090,9 +2193,10 @@
     "seg": "forearm",
     "cun": 0.3,
     "from": "p1",
-    "az": -60
+    "az": -80.0
    },
-   "note_pl": "fald nadgarstka, przy kosci grochowatej"
+   "note_pl": "fald nadgarstka, przy kosci grochowatej",
+   "az_source": "dopasowany do: humeral head of flexor carpi ulnaris, ulnar head of flexor carpi ulnaris"
   },
   {
    "code": "HT-8",
@@ -2113,7 +2217,8 @@
     "frac": 0.5,
     "region": "hand"
    },
-   "note_pl": "dlon, miedzy IV a V koscia srodrecza"
+   "note_pl": "dlon, miedzy IV a V koscia srodrecza",
+   "az_source": ""
   },
   {
    "code": "HT-9",
@@ -2135,7 +2240,8 @@
     },
     "region": "hand"
    },
-   "note_pl": "kacik paznokcia V palca, strona promieniowa"
+   "note_pl": "kacik paznokcia V palca, strona promieniowa",
+   "az_source": ""
   },
   {
    "code": "SI-1",
@@ -2157,7 +2263,8 @@
     },
     "region": "hand"
    },
-   "note_pl": "kacik paznokcia V palca, strona lokciowa"
+   "note_pl": "kacik paznokcia V palca, strona lokciowa",
+   "az_source": ""
   },
   {
    "code": "SI-2",
@@ -2176,7 +2283,8 @@
     "dir": "ulnar",
     "region": "hand"
    },
-   "note_pl": "dystalnie od stawu srodreczno-paliczkowego V, strona lokciowa"
+   "note_pl": "dystalnie od stawu srodreczno-paliczkowego V, strona lokciowa",
+   "az_source": ""
   },
   {
    "code": "SI-3",
@@ -2196,7 +2304,8 @@
     "dir": "ulnar",
     "region": "hand"
    },
-   "note_pl": "proksymalnie od glowy V kosci srodrecza, koniec faldu przy zacisnietej piesci"
+   "note_pl": "proksymalnie od glowy V kosci srodrecza, koniec faldu przy zacisnietej piesci",
+   "az_source": ""
   },
   {
    "code": "SI-4",
@@ -2215,7 +2324,8 @@
     "dir": "ulnar",
     "region": "hand"
    },
-   "note_pl": "przy podstawie V kosci srodrecza"
+   "note_pl": "przy podstawie V kosci srodrecza",
+   "az_source": ""
   },
   {
    "code": "SI-5",
@@ -2234,7 +2344,8 @@
     "from": "p1",
     "az": -125
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "SI-6",
@@ -2253,7 +2364,8 @@
     "from": "p1",
     "az": -130
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "SI-7",
@@ -2270,9 +2382,10 @@
     "seg": "forearm",
     "cun": 5,
     "from": "p1",
-    "az": -140
+    "az": -108.0
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": "dopasowany do: humeral head of flexor carpi ulnaris, ulnar head of flexor carpi ulnaris"
   },
   {
    "code": "SI-8",
@@ -2291,7 +2404,8 @@
     "from": "p0",
     "az": -150
    },
-   "note_pl": "miedzy wyrostkiem lokciowym a nadklykciem przysrodkowym"
+   "note_pl": "miedzy wyrostkiem lokciowym a nadklykciem przysrodkowym",
+   "az_source": ""
   },
   {
    "code": "SI-9",
@@ -2308,7 +2422,8 @@
     "lat": 5.5,
     "face": "posterior"
    },
-   "note_pl": "1 cun powyzej tylnego faldu pachowego"
+   "note_pl": "1 cun powyzej tylnego faldu pachowego",
+   "az_source": ""
   },
   {
    "code": "SI-10",
@@ -2327,7 +2442,8 @@
     "lat": 5,
     "face": "posterior"
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "SI-11",
@@ -2344,7 +2460,8 @@
     "lat": 4,
     "face": "posterior"
    },
-   "note_pl": "srodek lopatki"
+   "note_pl": "srodek lopatki",
+   "az_source": ""
   },
   {
    "code": "SI-12",
@@ -2363,7 +2480,8 @@
     "lat": 4,
     "face": "posterior"
    },
-   "note_pl": "srodek dolu nadgrzebieniowego"
+   "note_pl": "srodek dolu nadgrzebieniowego",
+   "az_source": ""
   },
   {
    "code": "SI-13",
@@ -2380,7 +2498,8 @@
     "lat": 3,
     "face": "posterior"
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "SI-14",
@@ -2398,7 +2517,8 @@
     "lat": 3,
     "face": "posterior"
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "SI-15",
@@ -2416,7 +2536,8 @@
     "lat": 2,
     "face": "posterior"
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "SI-16",
@@ -2434,7 +2555,8 @@
     "z_frac": 0.845,
     "az": 115
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "SI-17",
@@ -2452,7 +2574,8 @@
     "z_frac": 0.862,
     "az": 135
    },
-   "note_pl": "za katem zuchwy, przy przednim brzegu SCM"
+   "note_pl": "za katem zuchwy, przy przednim brzegu SCM",
+   "az_source": ""
   },
   {
    "code": "SI-18",
@@ -2473,7 +2596,8 @@
      "down": 5
     }
    },
-   "note_pl": "pod koscia jarzmowa, pionowo pod bocznym katem oka"
+   "note_pl": "pod koscia jarzmowa, pionowo pod bocznym katem oka",
+   "az_source": ""
   },
   {
    "code": "SI-19",
@@ -2494,7 +2618,8 @@
      "anterior": 5
     }
    },
-   "note_pl": "przed skrawkiem malzowiny"
+   "note_pl": "przed skrawkiem malzowiny",
+   "az_source": ""
   },
   {
    "code": "BL-1",
@@ -2515,7 +2640,8 @@
      "medial": 7
     }
    },
-   "note_pl": "przy przysrodkowym kaciku oka"
+   "note_pl": "przy przysrodkowym kaciku oka",
+   "az_source": ""
   },
   {
    "code": "BL-2",
@@ -2535,7 +2661,8 @@
      "up": 14
     }
    },
-   "note_pl": "przysrodkowy koniec brwi"
+   "note_pl": "przysrodkowy koniec brwi",
+   "az_source": ""
   },
   {
    "code": "BL-3",
@@ -2551,7 +2678,8 @@
     "arc_cun": 0.5,
     "lat": 0.75
    },
-   "note_pl": "0,5 cun w obrebie linii wlosow, ok. 0,6 cun bocznie"
+   "note_pl": "0,5 cun w obrebie linii wlosow, ok. 0,6 cun bocznie",
+   "az_source": ""
   },
   {
    "code": "BL-4",
@@ -2567,7 +2695,8 @@
     "arc_cun": 0.5,
     "lat": 1.5
    },
-   "note_pl": "0,5 cun powyzej linii wlosow, 1,5 cun bocznie"
+   "note_pl": "0,5 cun powyzej linii wlosow, 1,5 cun bocznie",
+   "az_source": ""
   },
   {
    "code": "BL-5",
@@ -2583,7 +2712,8 @@
     "arc_cun": 1.0,
     "lat": 1.5
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "BL-6",
@@ -2599,7 +2729,8 @@
     "arc_cun": 2.5,
     "lat": 1.5
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "BL-7",
@@ -2615,7 +2746,8 @@
     "arc_cun": 4.0,
     "lat": 1.5
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "BL-8",
@@ -2631,7 +2763,8 @@
     "arc_cun": 5.5,
     "lat": 1.5
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "BL-9",
@@ -2647,7 +2780,8 @@
     "arc_cun": 9.5,
     "lat": 1.3
    },
-   "note_pl": "2,5 cun powyzej tylnej linii wlosow"
+   "note_pl": "2,5 cun powyzej tylnej linii wlosow",
+   "az_source": ""
   },
   {
    "code": "BL-10",
@@ -2665,7 +2799,8 @@
     "z_frac": 0.862,
     "az": 165
    },
-   "note_pl": "1,3 cun bocznie od DU-15, na miesniu czworobocznym"
+   "note_pl": "1,3 cun bocznie od DU-15, na miesniu czworobocznym",
+   "az_source": ""
   },
   {
    "code": "BL-11",
@@ -2687,7 +2822,8 @@
     "lat": 1.5,
     "face": "posterior"
    },
-   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego T1"
+   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego T1",
+   "az_source": ""
   },
   {
    "code": "BL-12",
@@ -2707,7 +2843,8 @@
     "lat": 1.5,
     "face": "posterior"
    },
-   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego T2"
+   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego T2",
+   "az_source": ""
   },
   {
    "code": "BL-13",
@@ -2727,7 +2864,8 @@
     "lat": 1.5,
     "face": "posterior"
    },
-   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego T3"
+   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego T3",
+   "az_source": ""
   },
   {
    "code": "BL-14",
@@ -2745,7 +2883,8 @@
     "lat": 1.5,
     "face": "posterior"
    },
-   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego T4"
+   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego T4",
+   "az_source": ""
   },
   {
    "code": "BL-15",
@@ -2765,7 +2904,8 @@
     "lat": 1.5,
     "face": "posterior"
    },
-   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego T5"
+   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego T5",
+   "az_source": ""
   },
   {
    "code": "BL-16",
@@ -2783,7 +2923,8 @@
     "lat": 1.5,
     "face": "posterior"
    },
-   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego T6"
+   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego T6",
+   "az_source": ""
   },
   {
    "code": "BL-17",
@@ -2803,7 +2944,8 @@
     "lat": 1.5,
     "face": "posterior"
    },
-   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego T7"
+   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego T7",
+   "az_source": ""
   },
   {
    "code": "BL-18",
@@ -2823,7 +2965,8 @@
     "lat": 1.5,
     "face": "posterior"
    },
-   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego T9"
+   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego T9",
+   "az_source": ""
   },
   {
    "code": "BL-19",
@@ -2843,7 +2986,8 @@
     "lat": 1.5,
     "face": "posterior"
    },
-   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego T10"
+   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego T10",
+   "az_source": ""
   },
   {
    "code": "BL-20",
@@ -2863,7 +3007,8 @@
     "lat": 1.5,
     "face": "posterior"
    },
-   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego T11"
+   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego T11",
+   "az_source": ""
   },
   {
    "code": "BL-21",
@@ -2883,7 +3028,8 @@
     "lat": 1.5,
     "face": "posterior"
    },
-   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego T12"
+   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego T12",
+   "az_source": ""
   },
   {
    "code": "BL-22",
@@ -2903,7 +3049,8 @@
     "lat": 1.5,
     "face": "posterior"
    },
-   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego L1"
+   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego L1",
+   "az_source": ""
   },
   {
    "code": "BL-23",
@@ -2923,7 +3070,8 @@
     "lat": 1.5,
     "face": "posterior"
    },
-   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego L2"
+   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego L2",
+   "az_source": ""
   },
   {
    "code": "BL-24",
@@ -2943,7 +3091,8 @@
     "lat": 1.5,
     "face": "posterior"
    },
-   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego L3"
+   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego L3",
+   "az_source": ""
   },
   {
    "code": "BL-25",
@@ -2963,7 +3112,8 @@
     "lat": 1.5,
     "face": "posterior"
    },
-   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego L4"
+   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego L4",
+   "az_source": ""
   },
   {
    "code": "BL-26",
@@ -2981,7 +3131,8 @@
     "lat": 1.5,
     "face": "posterior"
    },
-   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego L5"
+   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego L5",
+   "az_source": ""
   },
   {
    "code": "BL-27",
@@ -3001,7 +3152,8 @@
     "lat": 1.5,
     "face": "posterior"
    },
-   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego S1"
+   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego S1",
+   "az_source": ""
   },
   {
    "code": "BL-28",
@@ -3021,7 +3173,8 @@
     "lat": 1.5,
     "face": "posterior"
    },
-   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego S2"
+   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego S2",
+   "az_source": ""
   },
   {
    "code": "BL-29",
@@ -3039,7 +3192,8 @@
     "lat": 1.5,
     "face": "posterior"
    },
-   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego S3"
+   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego S3",
+   "az_source": ""
   },
   {
    "code": "BL-30",
@@ -3057,7 +3211,8 @@
     "lat": 1.5,
     "face": "posterior"
    },
-   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego S4"
+   "note_pl": "1,5 cun bocznie od dolnego brzegu wyrostka kolczystego S4",
+   "az_source": ""
   },
   {
    "code": "BL-31",
@@ -3077,7 +3232,8 @@
     "lat": 0.8,
     "face": "posterior"
    },
-   "note_pl": "otwor krzyzowy 1"
+   "note_pl": "otwor krzyzowy 1",
+   "az_source": ""
   },
   {
    "code": "BL-32",
@@ -3097,7 +3253,8 @@
     "lat": 0.8,
     "face": "posterior"
    },
-   "note_pl": "otwor krzyzowy 2"
+   "note_pl": "otwor krzyzowy 2",
+   "az_source": ""
   },
   {
    "code": "BL-33",
@@ -3117,7 +3274,8 @@
     "lat": 0.8,
     "face": "posterior"
    },
-   "note_pl": "otwor krzyzowy 3"
+   "note_pl": "otwor krzyzowy 3",
+   "az_source": ""
   },
   {
    "code": "BL-34",
@@ -3137,7 +3295,8 @@
     "lat": 0.8,
     "face": "posterior"
    },
-   "note_pl": "otwor krzyzowy 4"
+   "note_pl": "otwor krzyzowy 4",
+   "az_source": ""
   },
   {
    "code": "BL-35",
@@ -3155,7 +3314,8 @@
     "lat": 0.5,
     "face": "posterior"
    },
-   "note_pl": "0,5 cun bocznie od szczytu kosci guzicznej"
+   "note_pl": "0,5 cun bocznie od szczytu kosci guzicznej",
+   "az_source": ""
   },
   {
    "code": "BL-36",
@@ -3172,7 +3332,8 @@
     "from": "p0",
     "az": 180
    },
-   "note_pl": "srodek faldu posladkowego"
+   "note_pl": "srodek faldu posladkowego",
+   "az_source": ""
   },
   {
    "code": "BL-37",
@@ -3189,7 +3350,8 @@
     "from": "p0",
     "az": 180
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "BL-38",
@@ -3204,9 +3366,10 @@
     "seg": "thigh",
     "cun": 1,
     "from": "p1",
-    "az": 175
+    "az": 120.0
    },
-   "note_pl": "1 cun powyzej faldu podkolanowego"
+   "note_pl": "1 cun powyzej faldu podkolanowego",
+   "az_source": "dopasowany do: long head of biceps femoris, short head of biceps femoris"
   },
   {
    "code": "BL-39",
@@ -3223,9 +3386,10 @@
     "seg": "shank",
     "cun": 0,
     "from": "p0",
-    "az": 160
+    "az": 116.0
    },
-   "note_pl": "boczny koniec faldu podkolanowego"
+   "note_pl": "boczny koniec faldu podkolanowego",
+   "az_source": "dopasowany do: long head of biceps femoris, short head of biceps femoris"
   },
   {
    "code": "BL-40",
@@ -3246,7 +3410,8 @@
     "from": "p0",
     "az": 180
    },
-   "note_pl": "srodek faldu podkolanowego"
+   "note_pl": "srodek faldu podkolanowego",
+   "az_source": ""
   },
   {
    "code": "BL-41",
@@ -3266,7 +3431,8 @@
     "lat": 3,
     "face": "posterior"
    },
-   "note_pl": "3 cun bocznie od wyrostka kolczystego T2"
+   "note_pl": "3 cun bocznie od wyrostka kolczystego T2",
+   "az_source": ""
   },
   {
    "code": "BL-42",
@@ -3284,7 +3450,8 @@
     "lat": 3,
     "face": "posterior"
    },
-   "note_pl": "3 cun bocznie od wyrostka kolczystego T3"
+   "note_pl": "3 cun bocznie od wyrostka kolczystego T3",
+   "az_source": ""
   },
   {
    "code": "BL-43",
@@ -3302,7 +3469,8 @@
     "lat": 3,
     "face": "posterior"
    },
-   "note_pl": "3 cun bocznie od wyrostka kolczystego T4"
+   "note_pl": "3 cun bocznie od wyrostka kolczystego T4",
+   "az_source": ""
   },
   {
    "code": "BL-44",
@@ -3320,7 +3488,8 @@
     "lat": 3,
     "face": "posterior"
    },
-   "note_pl": "3 cun bocznie od wyrostka kolczystego T5"
+   "note_pl": "3 cun bocznie od wyrostka kolczystego T5",
+   "az_source": ""
   },
   {
    "code": "BL-45",
@@ -3338,7 +3507,8 @@
     "lat": 3,
     "face": "posterior"
    },
-   "note_pl": "3 cun bocznie od wyrostka kolczystego T6"
+   "note_pl": "3 cun bocznie od wyrostka kolczystego T6",
+   "az_source": ""
   },
   {
    "code": "BL-46",
@@ -3356,7 +3526,8 @@
     "lat": 3,
     "face": "posterior"
    },
-   "note_pl": "3 cun bocznie od wyrostka kolczystego T7"
+   "note_pl": "3 cun bocznie od wyrostka kolczystego T7",
+   "az_source": ""
   },
   {
    "code": "BL-47",
@@ -3374,7 +3545,8 @@
     "lat": 3,
     "face": "posterior"
    },
-   "note_pl": "3 cun bocznie od wyrostka kolczystego T9"
+   "note_pl": "3 cun bocznie od wyrostka kolczystego T9",
+   "az_source": ""
   },
   {
    "code": "BL-48",
@@ -3392,7 +3564,8 @@
     "lat": 3,
     "face": "posterior"
    },
-   "note_pl": "3 cun bocznie od wyrostka kolczystego T10"
+   "note_pl": "3 cun bocznie od wyrostka kolczystego T10",
+   "az_source": ""
   },
   {
    "code": "BL-49",
@@ -3410,7 +3583,8 @@
     "lat": 3,
     "face": "posterior"
    },
-   "note_pl": "3 cun bocznie od wyrostka kolczystego T11"
+   "note_pl": "3 cun bocznie od wyrostka kolczystego T11",
+   "az_source": ""
   },
   {
    "code": "BL-50",
@@ -3428,7 +3602,8 @@
     "lat": 3,
     "face": "posterior"
    },
-   "note_pl": "3 cun bocznie od wyrostka kolczystego T12"
+   "note_pl": "3 cun bocznie od wyrostka kolczystego T12",
+   "az_source": ""
   },
   {
    "code": "BL-51",
@@ -3446,7 +3621,8 @@
     "lat": 3,
     "face": "posterior"
    },
-   "note_pl": "3 cun bocznie od wyrostka kolczystego L1"
+   "note_pl": "3 cun bocznie od wyrostka kolczystego L1",
+   "az_source": ""
   },
   {
    "code": "BL-52",
@@ -3464,7 +3640,8 @@
     "lat": 3,
     "face": "posterior"
    },
-   "note_pl": "3 cun bocznie od wyrostka kolczystego L2"
+   "note_pl": "3 cun bocznie od wyrostka kolczystego L2",
+   "az_source": ""
   },
   {
    "code": "BL-53",
@@ -3482,7 +3659,8 @@
     "lat": 3,
     "face": "posterior"
    },
-   "note_pl": "3 cun bocznie od wyrostka kolczystego S2"
+   "note_pl": "3 cun bocznie od wyrostka kolczystego S2",
+   "az_source": ""
   },
   {
    "code": "BL-54",
@@ -3500,7 +3678,8 @@
     "lat": 3,
     "face": "posterior"
    },
-   "note_pl": "3 cun bocznie od wyrostka kolczystego S4"
+   "note_pl": "3 cun bocznie od wyrostka kolczystego S4",
+   "az_source": ""
   },
   {
    "code": "BL-55",
@@ -3515,9 +3694,10 @@
     "seg": "shank",
     "cun": 2,
     "from": "p0",
-    "az": 180
+    "az": 176.0
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": "dopasowany do: lateral head of gastrocnemius, medial head of gastrocnemius"
   },
   {
    "code": "BL-56",
@@ -3532,9 +3712,10 @@
     "seg": "shank",
     "cun": 5,
     "from": "p0",
-    "az": 180
+    "az": -180.0
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": "dopasowany do: lateral head of gastrocnemius, medial head of gastrocnemius"
   },
   {
    "code": "BL-57",
@@ -3551,9 +3732,10 @@
     "seg": "shank",
     "cun": 8,
     "from": "p0",
-    "az": 180
+    "az": -172.0
    },
-   "note_pl": "szczyt brzuscow miesnia brzuchatego lydki"
+   "note_pl": "szczyt brzuscow miesnia brzuchatego lydki",
+   "az_source": "dopasowany do: lateral head of gastrocnemius, medial head of gastrocnemius"
   },
   {
    "code": "BL-58",
@@ -3572,7 +3754,8 @@
     "from": "p1",
     "az": 168
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "BL-59",
@@ -3591,7 +3774,8 @@
     "from": "p1",
     "az": 170
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "BL-60",
@@ -3611,7 +3795,8 @@
     "from": "p1",
     "az": 150
    },
-   "note_pl": "miedzy kostka boczna a sciegnem Achillesa"
+   "note_pl": "miedzy kostka boczna a sciegnem Achillesa",
+   "az_source": ""
   },
   {
    "code": "BL-61",
@@ -3633,7 +3818,8 @@
     },
     "region": "foot"
    },
-   "note_pl": "na kosci pietowej, ponizej BL-62"
+   "note_pl": "na kosci pietowej, ponizej BL-62",
+   "az_source": ""
   },
   {
    "code": "BL-62",
@@ -3656,7 +3842,8 @@
     },
     "region": "foot"
    },
-   "note_pl": "tuz ponizej kostki bocznej"
+   "note_pl": "tuz ponizej kostki bocznej",
+   "az_source": ""
   },
   {
    "code": "BL-63",
@@ -3676,7 +3863,8 @@
     "dir": "lateral",
     "region": "foot"
    },
-   "note_pl": "ponizej kosci szesciennej"
+   "note_pl": "ponizej kosci szesciennej",
+   "az_source": ""
   },
   {
    "code": "BL-64",
@@ -3695,7 +3883,8 @@
     "dir": "lateral",
     "region": "foot"
    },
-   "note_pl": "przy guzowatosci V kosci srodstopia"
+   "note_pl": "przy guzowatosci V kosci srodstopia",
+   "az_source": ""
   },
   {
    "code": "BL-65",
@@ -3714,7 +3903,8 @@
     "dir": "lateral",
     "region": "foot"
    },
-   "note_pl": "proksymalnie od glowy V kosci srodstopia"
+   "note_pl": "proksymalnie od glowy V kosci srodstopia",
+   "az_source": ""
   },
   {
    "code": "BL-66",
@@ -3733,7 +3923,8 @@
     "dir": "lateral",
     "region": "foot"
    },
-   "note_pl": "dystalnie od stawu srodstopno-paliczkowego V"
+   "note_pl": "dystalnie od stawu srodstopno-paliczkowego V",
+   "az_source": ""
   },
   {
    "code": "BL-67",
@@ -3755,7 +3946,8 @@
     },
     "region": "foot"
    },
-   "note_pl": "kacik paznokcia V palca stopy, strona boczna"
+   "note_pl": "kacik paznokcia V palca stopy, strona boczna",
+   "az_source": ""
   },
   {
    "code": "KI-1",
@@ -3776,7 +3968,8 @@
     "frac": 0.5,
     "region": "foot"
    },
-   "note_pl": "podeszwa, miedzy II a III koscia srodstopia"
+   "note_pl": "podeszwa, miedzy II a III koscia srodstopia",
+   "az_source": ""
   },
   {
    "code": "KI-2",
@@ -3795,7 +3988,8 @@
     "dir": "medial",
     "region": "foot"
    },
-   "note_pl": "ponizej guzowatosci kosci lodkowatej"
+   "note_pl": "ponizej guzowatosci kosci lodkowatej",
+   "az_source": ""
   },
   {
    "code": "KI-3",
@@ -3818,7 +4012,8 @@
     },
     "region": "foot"
    },
-   "note_pl": "miedzy kostka przysrodkowa a sciegnem Achillesa"
+   "note_pl": "miedzy kostka przysrodkowa a sciegnem Achillesa",
+   "az_source": ""
   },
   {
    "code": "KI-4",
@@ -3837,7 +4032,8 @@
     "dir": "medial",
     "region": "foot"
    },
-   "note_pl": "przy przyczepie sciegna Achillesa, na kosci pietowej"
+   "note_pl": "przy przyczepie sciegna Achillesa, na kosci pietowej",
+   "az_source": ""
   },
   {
    "code": "KI-5",
@@ -3859,7 +4055,8 @@
     },
     "region": "foot"
    },
-   "note_pl": "ponizej kostki przysrodkowej"
+   "note_pl": "ponizej kostki przysrodkowej",
+   "az_source": ""
   },
   {
    "code": "KI-6",
@@ -3881,7 +4078,8 @@
     },
     "region": "foot"
    },
-   "note_pl": "1 cun ponizej kostki przysrodkowej"
+   "note_pl": "1 cun ponizej kostki przysrodkowej",
+   "az_source": ""
   },
   {
    "code": "KI-7",
@@ -3900,7 +4098,8 @@
     "from": "p1",
     "az": -160
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "KI-8",
@@ -3919,7 +4118,8 @@
     "from": "p1",
     "az": -130
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "KI-9",
@@ -3938,7 +4138,8 @@
     "from": "p1",
     "az": -150
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "KI-10",
@@ -3955,9 +4156,10 @@
     "seg": "shank",
     "cun": 0,
     "from": "p0",
-    "az": -170
+    "az": -112.0
    },
-   "note_pl": "przysrodkowy koniec faldu podkolanowego"
+   "note_pl": "przysrodkowy koniec faldu podkolanowego",
+   "az_source": "dopasowany do: semimembranosus muscle, semitendinosus muscle"
   },
   {
    "code": "KI-11",
@@ -3977,7 +4179,8 @@
     "lat": 0.5,
     "face": "anterior"
    },
-   "note_pl": "0,5 cun bocznie od linii posrodkowej brzucha"
+   "note_pl": "0,5 cun bocznie od linii posrodkowej brzucha",
+   "az_source": ""
   },
   {
    "code": "KI-12",
@@ -3997,7 +4200,8 @@
     "lat": 0.5,
     "face": "anterior"
    },
-   "note_pl": "0,5 cun bocznie od linii posrodkowej brzucha"
+   "note_pl": "0,5 cun bocznie od linii posrodkowej brzucha",
+   "az_source": ""
   },
   {
    "code": "KI-13",
@@ -4017,7 +4221,8 @@
     "lat": 0.5,
     "face": "anterior"
    },
-   "note_pl": "0,5 cun bocznie od linii posrodkowej brzucha"
+   "note_pl": "0,5 cun bocznie od linii posrodkowej brzucha",
+   "az_source": ""
   },
   {
    "code": "KI-14",
@@ -4037,7 +4242,8 @@
     "lat": 0.5,
     "face": "anterior"
    },
-   "note_pl": "0,5 cun bocznie od linii posrodkowej brzucha"
+   "note_pl": "0,5 cun bocznie od linii posrodkowej brzucha",
+   "az_source": ""
   },
   {
    "code": "KI-15",
@@ -4057,7 +4263,8 @@
     "lat": 0.5,
     "face": "anterior"
    },
-   "note_pl": "0,5 cun bocznie od linii posrodkowej brzucha"
+   "note_pl": "0,5 cun bocznie od linii posrodkowej brzucha",
+   "az_source": ""
   },
   {
    "code": "KI-16",
@@ -4077,7 +4284,8 @@
     "lat": 0.5,
     "face": "anterior"
    },
-   "note_pl": "0,5 cun bocznie od linii posrodkowej brzucha"
+   "note_pl": "0,5 cun bocznie od linii posrodkowej brzucha",
+   "az_source": ""
   },
   {
    "code": "KI-17",
@@ -4097,7 +4305,8 @@
     "lat": 0.5,
     "face": "anterior"
    },
-   "note_pl": "0,5 cun bocznie od linii posrodkowej brzucha"
+   "note_pl": "0,5 cun bocznie od linii posrodkowej brzucha",
+   "az_source": ""
   },
   {
    "code": "KI-18",
@@ -4117,7 +4326,8 @@
     "lat": 0.5,
     "face": "anterior"
    },
-   "note_pl": "0,5 cun bocznie od linii posrodkowej brzucha"
+   "note_pl": "0,5 cun bocznie od linii posrodkowej brzucha",
+   "az_source": ""
   },
   {
    "code": "KI-19",
@@ -4137,7 +4347,8 @@
     "lat": 0.5,
     "face": "anterior"
    },
-   "note_pl": "0,5 cun bocznie od linii posrodkowej brzucha"
+   "note_pl": "0,5 cun bocznie od linii posrodkowej brzucha",
+   "az_source": ""
   },
   {
    "code": "KI-20",
@@ -4157,7 +4368,8 @@
     "lat": 0.5,
     "face": "anterior"
    },
-   "note_pl": "0,5 cun bocznie od linii posrodkowej brzucha"
+   "note_pl": "0,5 cun bocznie od linii posrodkowej brzucha",
+   "az_source": ""
   },
   {
    "code": "KI-21",
@@ -4177,7 +4389,8 @@
     "lat": 0.5,
     "face": "anterior"
    },
-   "note_pl": "0,5 cun bocznie od linii posrodkowej brzucha"
+   "note_pl": "0,5 cun bocznie od linii posrodkowej brzucha",
+   "az_source": ""
   },
   {
    "code": "KI-22",
@@ -4194,7 +4407,8 @@
     "lat": 2,
     "face": "anterior"
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "KI-23",
@@ -4211,7 +4425,8 @@
     "lat": 2,
     "face": "anterior"
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "KI-24",
@@ -4228,7 +4443,8 @@
     "lat": 2,
     "face": "anterior"
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "KI-25",
@@ -4245,7 +4461,8 @@
     "lat": 2,
     "face": "anterior"
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "KI-26",
@@ -4262,7 +4479,8 @@
     "lat": 2,
     "face": "anterior"
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "KI-27",
@@ -4279,7 +4497,8 @@
     "lat": 2,
     "face": "anterior"
    },
-   "note_pl": "pod obojczykiem, 2 cun bocznie"
+   "note_pl": "pod obojczykiem, 2 cun bocznie",
+   "az_source": ""
   },
   {
    "code": "PC-1",
@@ -4299,7 +4518,8 @@
     "lat": 5,
     "face": "lateral"
    },
-   "note_pl": "1 cun bocznie od brodawki sutkowej"
+   "note_pl": "1 cun bocznie od brodawki sutkowej",
+   "az_source": ""
   },
   {
    "code": "PC-2",
@@ -4316,7 +4536,8 @@
     "from": "p0",
     "az": -10
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "PC-3",
@@ -4335,7 +4556,8 @@
     "from": "p0",
     "az": -8
    },
-   "note_pl": "fald lokciowy, lokciowo od sciegna dwuglowego"
+   "note_pl": "fald lokciowy, lokciowo od sciegna dwuglowego",
+   "az_source": ""
   },
   {
    "code": "PC-4",
@@ -4355,7 +4577,8 @@
     "from": "p1",
     "az": 0
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "PC-5",
@@ -4374,7 +4597,8 @@
     "from": "p1",
     "az": 0
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "PC-6",
@@ -4394,7 +4618,8 @@
     "from": "p1",
     "az": 0
    },
-   "note_pl": "2 cun powyzej faldu nadgarstka, miedzy sciegnami"
+   "note_pl": "2 cun powyzej faldu nadgarstka, miedzy sciegnami",
+   "az_source": ""
   },
   {
    "code": "PC-7",
@@ -4414,7 +4639,8 @@
     "from": "p1",
     "az": 0
    },
-   "note_pl": "srodek faldu nadgarstka"
+   "note_pl": "srodek faldu nadgarstka",
+   "az_source": ""
   },
   {
    "code": "PC-8",
@@ -4436,7 +4662,8 @@
     "frac": 0.45,
     "region": "hand"
    },
-   "note_pl": "srodek dloni, miedzy II a III koscia srodrecza"
+   "note_pl": "srodek dloni, miedzy II a III koscia srodrecza",
+   "az_source": ""
   },
   {
    "code": "PC-9",
@@ -4455,7 +4682,8 @@
     "dir": "distal",
     "region": "hand"
    },
-   "note_pl": "szczyt palca srodkowego"
+   "note_pl": "szczyt palca srodkowego",
+   "az_source": ""
   },
   {
    "code": "SJ-1",
@@ -4477,7 +4705,8 @@
     },
     "region": "hand"
    },
-   "note_pl": "kacik paznokcia IV palca, strona lokciowa"
+   "note_pl": "kacik paznokcia IV palca, strona lokciowa",
+   "az_source": ""
   },
   {
    "code": "SJ-2",
@@ -4498,7 +4727,8 @@
     "frac": 0.5,
     "region": "hand"
    },
-   "note_pl": "miedzy IV a V palcem, przy faldzie miedzypalcowym"
+   "note_pl": "miedzy IV a V palcem, przy faldzie miedzypalcowym",
+   "az_source": ""
   },
   {
    "code": "SJ-3",
@@ -4519,7 +4749,8 @@
     "frac": 0.5,
     "region": "hand"
    },
-   "note_pl": "miedzy IV a V koscia srodrecza"
+   "note_pl": "miedzy IV a V koscia srodrecza",
+   "az_source": ""
   },
   {
    "code": "SJ-4",
@@ -4536,9 +4767,10 @@
     "seg": "forearm",
     "cun": 0.3,
     "from": "p1",
-    "az": 180
+    "az": -116.0
    },
-   "note_pl": "srodek faldu nadgarstka od strony grzbietowej"
+   "note_pl": "srodek faldu nadgarstka od strony grzbietowej",
+   "az_source": "dopasowany do: extensor digiti minimi, extensor digitorum"
   },
   {
    "code": "SJ-5",
@@ -4556,9 +4788,10 @@
     "seg": "forearm",
     "cun": 2,
     "from": "p1",
-    "az": 180
+    "az": -168.0
    },
-   "note_pl": "2 cun powyzej SJ-4, miedzy koscia promieniowa a lokciowa"
+   "note_pl": "2 cun powyzej SJ-4, miedzy koscia promieniowa a lokciowa",
+   "az_source": "dopasowany do: extensor digitorum"
   },
   {
    "code": "SJ-6",
@@ -4575,9 +4808,10 @@
     "seg": "forearm",
     "cun": 3,
     "from": "p1",
-    "az": 180
+    "az": 164.0
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": "dopasowany do: extensor digitorum"
   },
   {
    "code": "SJ-7",
@@ -4594,9 +4828,10 @@
     "seg": "forearm",
     "cun": 3,
     "from": "p1",
-    "az": 195
+    "az": 164.0
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": "dopasowany do: extensor digitorum"
   },
   {
    "code": "SJ-8",
@@ -4611,9 +4846,10 @@
     "seg": "forearm",
     "cun": 4,
     "from": "p1",
-    "az": 180
+    "az": 148.0
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": "dopasowany do: extensor digitorum"
   },
   {
    "code": "SJ-9",
@@ -4630,7 +4866,8 @@
     "from": "p0",
     "az": 180
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "SJ-10",
@@ -4649,7 +4886,8 @@
     "from": "p1",
     "az": 180
    },
-   "note_pl": "1 cun powyzej wyrostka lokciowego"
+   "note_pl": "1 cun powyzej wyrostka lokciowego",
+   "az_source": ""
   },
   {
    "code": "SJ-11",
@@ -4666,7 +4904,8 @@
     "from": "p1",
     "az": 180
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "SJ-12",
@@ -4683,7 +4922,8 @@
     "from": "p1",
     "az": 180
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "SJ-13",
@@ -4702,7 +4942,8 @@
     "from": "p1",
     "az": 170
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "SJ-14",
@@ -4718,7 +4959,8 @@
     "t": 0.02,
     "az": 150
    },
-   "note_pl": "tylno-dolnie od wyrostka barkowego"
+   "note_pl": "tylno-dolnie od wyrostka barkowego",
+   "az_source": ""
   },
   {
    "code": "SJ-15",
@@ -4737,7 +4979,8 @@
     "lat": 3.2,
     "face": "posterior"
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "SJ-16",
@@ -4756,7 +4999,8 @@
     "z_frac": 0.855,
     "az": 150
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "SJ-17",
@@ -4777,7 +5021,8 @@
      "posterior": 22
     }
    },
-   "note_pl": "w zaglebieniu za platkiem ucha"
+   "note_pl": "w zaglebieniu za platkiem ucha",
+   "az_source": ""
   },
   {
    "code": "SJ-18",
@@ -4796,7 +5041,8 @@
      "posterior": 11
     }
    },
-   "note_pl": "za malzowina, na wysokosci dolnej czesci obraczki"
+   "note_pl": "za malzowina, na wysokosci dolnej czesci obraczki",
+   "az_source": ""
   },
   {
    "code": "SJ-19",
@@ -4815,7 +5061,8 @@
      "posterior": 11
     }
    },
-   "note_pl": "za malzowina, na wysokosci srodka obraczki"
+   "note_pl": "za malzowina, na wysokosci srodka obraczki",
+   "az_source": ""
   },
   {
    "code": "SJ-20",
@@ -4836,7 +5083,8 @@
      "up": 4
     }
    },
-   "note_pl": "tuz nad szczytem malzowiny"
+   "note_pl": "tuz nad szczytem malzowiny",
+   "az_source": ""
   },
   {
    "code": "SJ-21",
@@ -4856,7 +5104,8 @@
      "anterior": 16
     }
    },
-   "note_pl": "przy wcieciu przednim malzowiny, powyzej SI-19"
+   "note_pl": "przy wcieciu przednim malzowiny, powyzej SI-19",
+   "az_source": ""
   },
   {
    "code": "SJ-22",
@@ -4877,7 +5126,8 @@
      "up": 14
     }
    },
-   "note_pl": "przy tylnej granicy skroni, na wysokosci brwi"
+   "note_pl": "przy tylnej granicy skroni, na wysokosci brwi",
+   "az_source": ""
   },
   {
    "code": "SJ-23",
@@ -4897,7 +5147,8 @@
      "up": 13
     }
    },
-   "note_pl": "boczny koniec brwi"
+   "note_pl": "boczny koniec brwi",
+   "az_source": ""
   },
   {
    "code": "GB-1",
@@ -4918,7 +5169,8 @@
      "lateral": 9
     }
    },
-   "note_pl": "0,5 cun bocznie od bocznego kacika oka"
+   "note_pl": "0,5 cun bocznie od bocznego kacika oka",
+   "az_source": ""
   },
   {
    "code": "GB-2",
@@ -4937,7 +5189,8 @@
      "anterior": 4
     }
    },
-   "note_pl": "przy wcieciu miedzyskrawkowym, ponizej SI-19"
+   "note_pl": "przy wcieciu miedzyskrawkowym, ponizej SI-19",
+   "az_source": ""
   },
   {
    "code": "GB-3",
@@ -4958,7 +5211,8 @@
      "up": 6
     }
    },
-   "note_pl": "nad lukiem jarzmowym, przed uchem"
+   "note_pl": "nad lukiem jarzmowym, przed uchem",
+   "az_source": ""
   },
   {
    "code": "GB-4",
@@ -4980,7 +5234,8 @@
      "anterior": 16
     }
    },
-   "note_pl": "skron, w obrebie linii wlosow nad uchem"
+   "note_pl": "skron, w obrebie linii wlosow nad uchem",
+   "az_source": ""
   },
   {
    "code": "GB-5",
@@ -5002,7 +5257,8 @@
      "anterior": 8
     }
    },
-   "note_pl": "skron, ku tylowi od GB-4"
+   "note_pl": "skron, ku tylowi od GB-4",
+   "az_source": ""
   },
   {
    "code": "GB-6",
@@ -5024,7 +5280,8 @@
      "anterior": 2
     }
    },
-   "note_pl": "skron, ku tylowi od GB-5"
+   "note_pl": "skron, ku tylowi od GB-5",
+   "az_source": ""
   },
   {
    "code": "GB-7",
@@ -5046,7 +5303,8 @@
      "posterior": 6
     }
    },
-   "note_pl": "skron, nad malzowina od przodu"
+   "note_pl": "skron, nad malzowina od przodu",
+   "az_source": ""
   },
   {
    "code": "GB-8",
@@ -5067,7 +5325,8 @@
      "up": 15
     }
    },
-   "note_pl": "1,5 cun powyzej szczytu malzowiny"
+   "note_pl": "1,5 cun powyzej szczytu malzowiny",
+   "az_source": ""
   },
   {
    "code": "GB-9",
@@ -5089,7 +5348,8 @@
      "posterior": 12
     }
    },
-   "note_pl": "ku tylowi i gorze od szczytu malzowiny"
+   "note_pl": "ku tylowi i gorze od szczytu malzowiny",
+   "az_source": ""
   },
   {
    "code": "GB-10",
@@ -5110,7 +5370,8 @@
      "posterior": 18
     }
    },
-   "note_pl": "ku tylowi od malzowiny, powyzej wyrostka sutkowatego"
+   "note_pl": "ku tylowi od malzowiny, powyzej wyrostka sutkowatego",
+   "az_source": ""
   },
   {
    "code": "GB-11",
@@ -5132,7 +5393,8 @@
      "down": 6
     }
    },
-   "note_pl": "nad wyrostkiem sutkowatym"
+   "note_pl": "nad wyrostkiem sutkowatym",
+   "az_source": ""
   },
   {
    "code": "GB-12",
@@ -5154,7 +5416,8 @@
      "down": 20
     }
    },
-   "note_pl": "w zaglebieniu za wyrostkiem sutkowatym"
+   "note_pl": "w zaglebieniu za wyrostkiem sutkowatym",
+   "az_source": ""
   },
   {
    "code": "GB-13",
@@ -5172,7 +5435,8 @@
     "arc_cun": 0.5,
     "lat": 3.0
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "GB-14",
@@ -5194,7 +5458,8 @@
      "up": 10
     }
    },
-   "note_pl": "1 cun powyzej srodka brwi"
+   "note_pl": "1 cun powyzej srodka brwi",
+   "az_source": ""
   },
   {
    "code": "GB-15",
@@ -5212,7 +5477,8 @@
     "arc_cun": 0.5,
     "lat": 2.25
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "GB-16",
@@ -5231,7 +5497,8 @@
     "arc_cun": 1.5,
     "lat": 2.25
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "GB-17",
@@ -5249,7 +5516,8 @@
     "arc_cun": 2.5,
     "lat": 2.25
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "GB-18",
@@ -5267,7 +5535,8 @@
     "arc_cun": 4.0,
     "lat": 2.25
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "GB-19",
@@ -5285,7 +5554,8 @@
     "arc_cun": 8.5,
     "lat": 2.25
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "GB-20",
@@ -5301,7 +5571,8 @@
     "z_frac": 0.868,
     "az": 145
    },
-   "note_pl": "pod potylica, miedzy SCM a czworobocznym"
+   "note_pl": "pod potylica, miedzy SCM a czworobocznym",
+   "az_source": ""
   },
   {
    "code": "GB-21",
@@ -5321,7 +5592,8 @@
     "face": "posterior",
     "out": 0.3
    },
-   "note_pl": "szczyt barku, w polowie miedzy DU-14 a wyrostkiem barkowym"
+   "note_pl": "szczyt barku, w polowie miedzy DU-14 a wyrostkiem barkowym",
+   "az_source": ""
   },
   {
    "code": "GB-22",
@@ -5338,7 +5610,8 @@
     "lat": 6.5,
     "face": "lateral"
    },
-   "note_pl": "3 cun ponizej dolu pachowego"
+   "note_pl": "3 cun ponizej dolu pachowego",
+   "az_source": ""
   },
   {
    "code": "GB-23",
@@ -5357,7 +5630,8 @@
     "lat": 6.0,
     "face": "lateral"
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "GB-24",
@@ -5377,7 +5651,8 @@
     "lat": 4,
     "face": "anterior"
    },
-   "note_pl": "7. przestrzen miedzyzebrowa"
+   "note_pl": "7. przestrzen miedzyzebrowa",
+   "az_source": ""
   },
   {
    "code": "GB-25",
@@ -5396,7 +5671,8 @@
     "lat": 5.5,
     "face": "lateral"
    },
-   "note_pl": "wolny koniec XII zebra"
+   "note_pl": "wolny koniec XII zebra",
+   "az_source": ""
   },
   {
    "code": "GB-26",
@@ -5416,7 +5692,8 @@
     "lat": 6,
     "face": "lateral"
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "GB-27",
@@ -5435,7 +5712,8 @@
     "lat": 5,
     "face": "anterior"
    },
-   "note_pl": "przy kolcu biodrowym przednim gornym"
+   "note_pl": "przy kolcu biodrowym przednim gornym",
+   "az_source": ""
   },
   {
    "code": "GB-28",
@@ -5454,7 +5732,8 @@
     "lat": 5.5,
     "face": "anterior"
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "GB-29",
@@ -5473,7 +5752,8 @@
     "lat": 6.5,
     "face": "lateral"
    },
-   "note_pl": "miedzy kolcem biodrowym przednim gornym a krętarzem wiekszym"
+   "note_pl": "miedzy kolcem biodrowym przednim gornym a krętarzem wiekszym",
+   "az_source": ""
   },
   {
    "code": "GB-30",
@@ -5492,7 +5772,8 @@
     "t": 0.02,
     "az": 160
    },
-   "note_pl": "posladek, 1/3 odleglosci od krętarza do rozworu krzyzowego"
+   "note_pl": "posladek, 1/3 odleglosci od krętarza do rozworu krzyzowego",
+   "az_source": ""
   },
   {
    "code": "GB-31",
@@ -5509,7 +5790,8 @@
     "from": "p1",
     "az": 90
    },
-   "note_pl": "tam, gdzie siega czubek srodkowego palca zwisajacej reki"
+   "note_pl": "tam, gdzie siega czubek srodkowego palca zwisajacej reki",
+   "az_source": ""
   },
   {
    "code": "GB-32",
@@ -5526,7 +5808,8 @@
     "from": "p1",
     "az": 90
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "GB-33",
@@ -5541,9 +5824,10 @@
     "seg": "thigh",
     "cun": 0.5,
     "from": "p1",
-    "az": 95
+    "az": 120.0
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": "dopasowany do: long head of biceps femoris, short head of biceps femoris"
   },
   {
    "code": "GB-34",
@@ -5564,7 +5848,8 @@
     "from": "p0",
     "az": 80
    },
-   "note_pl": "w zaglebieniu przednio-dolnie od glowy strzalki"
+   "note_pl": "w zaglebieniu przednio-dolnie od glowy strzalki",
+   "az_source": ""
   },
   {
    "code": "GB-35",
@@ -5583,7 +5868,8 @@
     "from": "p1",
     "az": 100
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "GB-36",
@@ -5602,7 +5888,8 @@
     "from": "p1",
     "az": 85
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "GB-37",
@@ -5621,7 +5908,8 @@
     "from": "p1",
     "az": 88
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "GB-38",
@@ -5640,7 +5928,8 @@
     "from": "p1",
     "az": 88
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "GB-39",
@@ -5659,7 +5948,8 @@
     "from": "p1",
     "az": 90
    },
-   "note_pl": "3 cun powyzej kostki bocznej"
+   "note_pl": "3 cun powyzej kostki bocznej",
+   "az_source": ""
   },
   {
    "code": "GB-40",
@@ -5682,7 +5972,8 @@
     },
     "region": "foot"
    },
-   "note_pl": "przednio-dolnie od kostki bocznej"
+   "note_pl": "przednio-dolnie od kostki bocznej",
+   "az_source": ""
   },
   {
    "code": "GB-41",
@@ -5704,7 +5995,8 @@
     "frac": 0.5,
     "region": "foot"
    },
-   "note_pl": "miedzy IV a V koscia srodstopia"
+   "note_pl": "miedzy IV a V koscia srodstopia",
+   "az_source": ""
   },
   {
    "code": "GB-42",
@@ -5723,7 +6015,8 @@
     "frac": 0.5,
     "region": "foot"
    },
-   "note_pl": "dystalnie od GB-41"
+   "note_pl": "dystalnie od GB-41",
+   "az_source": ""
   },
   {
    "code": "GB-43",
@@ -5744,7 +6037,8 @@
     "frac": 0.5,
     "region": "foot"
    },
-   "note_pl": "miedzy IV a V palcem stopy"
+   "note_pl": "miedzy IV a V palcem stopy",
+   "az_source": ""
   },
   {
    "code": "GB-44",
@@ -5766,7 +6060,8 @@
     },
     "region": "foot"
    },
-   "note_pl": "kacik paznokcia IV palca stopy"
+   "note_pl": "kacik paznokcia IV palca stopy",
+   "az_source": ""
   },
   {
    "code": "LR-1",
@@ -5788,7 +6083,8 @@
     },
     "region": "foot"
    },
-   "note_pl": "kacik paznokcia palucha, strona boczna"
+   "note_pl": "kacik paznokcia palucha, strona boczna",
+   "az_source": ""
   },
   {
    "code": "LR-2",
@@ -5809,7 +6105,8 @@
     "frac": 0.5,
     "region": "foot"
    },
-   "note_pl": "miedzy I a II palcem stopy, przy faldzie"
+   "note_pl": "miedzy I a II palcem stopy, przy faldzie",
+   "az_source": ""
   },
   {
    "code": "LR-3",
@@ -5831,7 +6128,8 @@
     "frac": 0.5,
     "region": "foot"
    },
-   "note_pl": "zaglebienie miedzy I a II koscia srodstopia"
+   "note_pl": "zaglebienie miedzy I a II koscia srodstopia",
+   "az_source": ""
   },
   {
    "code": "LR-4",
@@ -5854,7 +6152,8 @@
     },
     "region": "foot"
    },
-   "note_pl": "przed kostka przysrodkowa"
+   "note_pl": "przed kostka przysrodkowa",
+   "az_source": ""
   },
   {
    "code": "LR-5",
@@ -5873,7 +6172,8 @@
     "from": "p1",
     "az": -95
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "LR-6",
@@ -5892,7 +6192,8 @@
     "from": "p1",
     "az": -95
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "LR-7",
@@ -5909,7 +6210,8 @@
     "from": "p0",
     "az": -85
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "LR-8",
@@ -5926,9 +6228,10 @@
     "seg": "shank",
     "cun": 0,
     "from": "p0",
-    "az": -140
+    "az": -96.0
    },
-   "note_pl": "przysrodkowy koniec faldu podkolanowego przy zgietym kolanie"
+   "note_pl": "przysrodkowy koniec faldu podkolanowego przy zgietym kolanie",
+   "az_source": "dopasowany do: gracilis muscle, sartorius muscle"
   },
   {
    "code": "LR-9",
@@ -5943,9 +6246,10 @@
     "seg": "thigh",
     "cun": 4,
     "from": "p1",
-    "az": -110
+    "az": -76.0
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": "dopasowany do: sartorius muscle, vastus medialis muscle"
   },
   {
    "code": "LR-10",
@@ -5960,9 +6264,10 @@
     "seg": "thigh",
     "cun": 3,
     "from": "p0",
-    "az": -95
+    "az": -40.0
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": "dopasowany do: adductor longus"
   },
   {
    "code": "LR-11",
@@ -5977,9 +6282,10 @@
     "seg": "thigh",
     "cun": 3.5,
     "from": "p0",
-    "az": -100
+    "az": -44.0
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": "dopasowany do: adductor longus"
   },
   {
    "code": "LR-12",
@@ -5996,7 +6302,8 @@
     "lat": 2.5,
     "face": "anterior"
    },
-   "note_pl": "fald pachwinowy"
+   "note_pl": "fald pachwinowy",
+   "az_source": ""
   },
   {
    "code": "LR-13",
@@ -6017,7 +6324,8 @@
     "lat": 5.5,
     "face": "lateral"
    },
-   "note_pl": "wolny koniec XI zebra"
+   "note_pl": "wolny koniec XI zebra",
+   "az_source": ""
   },
   {
    "code": "LR-14",
@@ -6037,7 +6345,8 @@
     "lat": 4,
     "face": "anterior"
    },
-   "note_pl": "6. przestrzen miedzyzebrowa, pionowo pod brodawka"
+   "note_pl": "6. przestrzen miedzyzebrowa, pionowo pod brodawka",
+   "az_source": ""
   },
   {
    "code": "REN-1",
@@ -6056,7 +6365,8 @@
     "z_frac": 0.452,
     "az": 0
    },
-   "note_pl": "krocze"
+   "note_pl": "krocze",
+   "az_source": ""
   },
   {
    "code": "REN-2",
@@ -6076,7 +6386,8 @@
     "lat": 0,
     "face": "anterior"
    },
-   "note_pl": "gorny brzeg spojenia lonowego"
+   "note_pl": "gorny brzeg spojenia lonowego",
+   "az_source": ""
   },
   {
    "code": "REN-3",
@@ -6097,7 +6408,8 @@
     "lat": 0,
     "face": "anterior"
    },
-   "note_pl": "1 cun powyzej spojenia lonowego"
+   "note_pl": "1 cun powyzej spojenia lonowego",
+   "az_source": ""
   },
   {
    "code": "REN-4",
@@ -6118,7 +6430,8 @@
     "lat": 0,
     "face": "anterior"
    },
-   "note_pl": "2 cun powyzej spojenia lonowego"
+   "note_pl": "2 cun powyzej spojenia lonowego",
+   "az_source": ""
   },
   {
    "code": "REN-5",
@@ -6138,7 +6451,8 @@
     "lat": 0,
     "face": "anterior"
    },
-   "note_pl": "3 cun powyzej spojenia lonowego"
+   "note_pl": "3 cun powyzej spojenia lonowego",
+   "az_source": ""
   },
   {
    "code": "REN-6",
@@ -6158,7 +6472,8 @@
     "lat": 0,
     "face": "anterior"
    },
-   "note_pl": "1.5 cun ponizej pepka"
+   "note_pl": "1.5 cun ponizej pepka",
+   "az_source": ""
   },
   {
    "code": "REN-7",
@@ -6178,7 +6493,8 @@
     "lat": 0,
     "face": "anterior"
    },
-   "note_pl": "1 cun ponizej pepka"
+   "note_pl": "1 cun ponizej pepka",
+   "az_source": ""
   },
   {
    "code": "REN-8",
@@ -6196,7 +6512,8 @@
     "lat": 0,
     "face": "anterior"
    },
-   "note_pl": "srodek pepka"
+   "note_pl": "srodek pepka",
+   "az_source": ""
   },
   {
    "code": "REN-9",
@@ -6214,7 +6531,8 @@
     "lat": 0,
     "face": "anterior"
    },
-   "note_pl": "1 cun powyzej pepka"
+   "note_pl": "1 cun powyzej pepka",
+   "az_source": ""
   },
   {
    "code": "REN-10",
@@ -6234,7 +6552,8 @@
     "lat": 0,
     "face": "anterior"
    },
-   "note_pl": "2 cun powyzej pepka"
+   "note_pl": "2 cun powyzej pepka",
+   "az_source": ""
   },
   {
    "code": "REN-11",
@@ -6252,7 +6571,8 @@
     "lat": 0,
     "face": "anterior"
    },
-   "note_pl": "3 cun powyzej pepka"
+   "note_pl": "3 cun powyzej pepka",
+   "az_source": ""
   },
   {
    "code": "REN-12",
@@ -6274,7 +6594,8 @@
     "lat": 0,
     "face": "anterior"
    },
-   "note_pl": "4 cun powyzej pepka"
+   "note_pl": "4 cun powyzej pepka",
+   "az_source": ""
   },
   {
    "code": "REN-13",
@@ -6294,7 +6615,8 @@
     "lat": 0,
     "face": "anterior"
    },
-   "note_pl": "5 cun powyzej pepka"
+   "note_pl": "5 cun powyzej pepka",
+   "az_source": ""
   },
   {
    "code": "REN-14",
@@ -6314,7 +6636,8 @@
     "lat": 0,
     "face": "anterior"
    },
-   "note_pl": "6 cun powyzej pepka"
+   "note_pl": "6 cun powyzej pepka",
+   "az_source": ""
   },
   {
    "code": "REN-15",
@@ -6334,7 +6657,8 @@
     "lat": 0,
     "face": "anterior"
    },
-   "note_pl": "7 cun powyzej pepka"
+   "note_pl": "7 cun powyzej pepka",
+   "az_source": ""
   },
   {
    "code": "REN-16",
@@ -6351,7 +6675,8 @@
     "lat": 0,
     "face": "anterior"
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "REN-17",
@@ -6373,7 +6698,8 @@
     "lat": 0,
     "face": "anterior"
    },
-   "note_pl": "na mostku, na wysokosci brodawek"
+   "note_pl": "na mostku, na wysokosci brodawek",
+   "az_source": ""
   },
   {
    "code": "REN-18",
@@ -6390,7 +6716,8 @@
     "lat": 0,
     "face": "anterior"
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "REN-19",
@@ -6407,7 +6734,8 @@
     "lat": 0,
     "face": "anterior"
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "REN-20",
@@ -6424,7 +6752,8 @@
     "lat": 0,
     "face": "anterior"
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "REN-21",
@@ -6441,7 +6770,8 @@
     "lat": 0,
     "face": "anterior"
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "REN-22",
@@ -6461,7 +6791,8 @@
     "lat": 0,
     "face": "anterior"
    },
-   "note_pl": "wciecie szyjne mostka"
+   "note_pl": "wciecie szyjne mostka",
+   "az_source": ""
   },
   {
    "code": "REN-23",
@@ -6479,7 +6810,8 @@
     "z_frac": 0.85,
     "az": 0
    },
-   "note_pl": "powyzej kosci gnykowej"
+   "note_pl": "powyzej kosci gnykowej",
+   "az_source": ""
   },
   {
    "code": "REN-24",
@@ -6501,7 +6833,8 @@
      "up": 22
     }
    },
-   "note_pl": "bruzda brodkowo-wargowa"
+   "note_pl": "bruzda brodkowo-wargowa",
+   "az_source": ""
   },
   {
    "code": "DU-1",
@@ -6521,7 +6854,8 @@
     "lat": 0,
     "face": "posterior"
    },
-   "note_pl": "miedzy szczytem kosci guzicznej a odbytem"
+   "note_pl": "miedzy szczytem kosci guzicznej a odbytem",
+   "az_source": ""
   },
   {
    "code": "DU-2",
@@ -6538,7 +6872,8 @@
     "lat": 0,
     "face": "posterior"
    },
-   "note_pl": "rozwor krzyzowy"
+   "note_pl": "rozwor krzyzowy",
+   "az_source": ""
   },
   {
    "code": "DU-3",
@@ -6556,7 +6891,8 @@
     "lat": 0,
     "face": "posterior"
    },
-   "note_pl": "ponizej wyrostka kolczystego L4"
+   "note_pl": "ponizej wyrostka kolczystego L4",
+   "az_source": ""
   },
   {
    "code": "DU-4",
@@ -6574,7 +6910,8 @@
     "lat": 0,
     "face": "posterior"
    },
-   "note_pl": "ponizej wyrostka kolczystego L2"
+   "note_pl": "ponizej wyrostka kolczystego L2",
+   "az_source": ""
   },
   {
    "code": "DU-5",
@@ -6592,7 +6929,8 @@
     "lat": 0,
     "face": "posterior"
    },
-   "note_pl": "ponizej wyrostka kolczystego L1"
+   "note_pl": "ponizej wyrostka kolczystego L1",
+   "az_source": ""
   },
   {
    "code": "DU-6",
@@ -6610,7 +6948,8 @@
     "lat": 0,
     "face": "posterior"
    },
-   "note_pl": "ponizej wyrostka kolczystego T11"
+   "note_pl": "ponizej wyrostka kolczystego T11",
+   "az_source": ""
   },
   {
    "code": "DU-7",
@@ -6628,7 +6967,8 @@
     "lat": 0,
     "face": "posterior"
    },
-   "note_pl": "ponizej wyrostka kolczystego T10"
+   "note_pl": "ponizej wyrostka kolczystego T10",
+   "az_source": ""
   },
   {
    "code": "DU-8",
@@ -6646,7 +6986,8 @@
     "lat": 0,
     "face": "posterior"
    },
-   "note_pl": "ponizej wyrostka kolczystego T9"
+   "note_pl": "ponizej wyrostka kolczystego T9",
+   "az_source": ""
   },
   {
    "code": "DU-9",
@@ -6664,7 +7005,8 @@
     "lat": 0,
     "face": "posterior"
    },
-   "note_pl": "ponizej wyrostka kolczystego T7"
+   "note_pl": "ponizej wyrostka kolczystego T7",
+   "az_source": ""
   },
   {
    "code": "DU-10",
@@ -6682,7 +7024,8 @@
     "lat": 0,
     "face": "posterior"
    },
-   "note_pl": "ponizej wyrostka kolczystego T6"
+   "note_pl": "ponizej wyrostka kolczystego T6",
+   "az_source": ""
   },
   {
    "code": "DU-11",
@@ -6700,7 +7043,8 @@
     "lat": 0,
     "face": "posterior"
    },
-   "note_pl": "ponizej wyrostka kolczystego T5"
+   "note_pl": "ponizej wyrostka kolczystego T5",
+   "az_source": ""
   },
   {
    "code": "DU-12",
@@ -6718,7 +7062,8 @@
     "lat": 0,
     "face": "posterior"
    },
-   "note_pl": "ponizej wyrostka kolczystego T3"
+   "note_pl": "ponizej wyrostka kolczystego T3",
+   "az_source": ""
   },
   {
    "code": "DU-13",
@@ -6738,7 +7083,8 @@
     "lat": 0,
     "face": "posterior"
    },
-   "note_pl": "ponizej wyrostka kolczystego T1"
+   "note_pl": "ponizej wyrostka kolczystego T1",
+   "az_source": ""
   },
   {
    "code": "DU-14",
@@ -6759,7 +7105,8 @@
     "lat": 0,
     "face": "posterior"
    },
-   "note_pl": "ponizej wyrostka kolczystego C7"
+   "note_pl": "ponizej wyrostka kolczystego C7",
+   "az_source": ""
   },
   {
    "code": "DU-15",
@@ -6778,7 +7125,8 @@
     "z_frac": 0.858,
     "az": 180
    },
-   "note_pl": "0,5 cun powyzej tylnej linii wlosow"
+   "note_pl": "0,5 cun powyzej tylnej linii wlosow",
+   "az_source": ""
   },
   {
    "code": "DU-16",
@@ -6799,7 +7147,8 @@
     "z_frac": 0.87,
     "az": 180
    },
-   "note_pl": "pod guzowatoscia potyliczna zewnetrzna"
+   "note_pl": "pod guzowatoscia potyliczna zewnetrzna",
+   "az_source": ""
   },
   {
    "code": "DU-17",
@@ -6816,7 +7165,8 @@
     "seg": "head",
     "arc_cun": 9.5
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "DU-18",
@@ -6831,7 +7181,8 @@
     "seg": "head",
     "arc_cun": 8.0
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "DU-19",
@@ -6846,7 +7197,8 @@
     "seg": "head",
     "arc_cun": 6.5
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "DU-20",
@@ -6864,7 +7216,8 @@
     "seg": "head",
     "arc_cun": 5.0
    },
-   "note_pl": "5 cun za przednia linia wlosow, na szczycie glowy"
+   "note_pl": "5 cun za przednia linia wlosow, na szczycie glowy",
+   "az_source": ""
   },
   {
    "code": "DU-21",
@@ -6879,7 +7232,8 @@
     "seg": "head",
     "arc_cun": 3.5
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "DU-22",
@@ -6894,7 +7248,8 @@
     "seg": "head",
     "arc_cun": 2.0
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "DU-23",
@@ -6911,7 +7266,8 @@
     "seg": "head",
     "arc_cun": 1.0
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "DU-24",
@@ -6928,7 +7284,8 @@
     "seg": "head",
     "arc_cun": 0.5
    },
-   "note_pl": ""
+   "note_pl": "",
+   "az_source": ""
   },
   {
    "code": "DU-25",
@@ -6947,7 +7304,8 @@
      "down": 8
     }
    },
-   "note_pl": "czubek nosa"
+   "note_pl": "czubek nosa",
+   "az_source": ""
   },
   {
    "code": "DU-26",
@@ -6969,7 +7327,8 @@
      "down": 20
     }
    },
-   "note_pl": "gorna 1/3 rowka nosowo-wargowego"
+   "note_pl": "gorna 1/3 rowka nosowo-wargowego",
+   "az_source": ""
   },
   {
    "code": "DU-27",
@@ -6988,7 +7347,8 @@
      "down": 28
     }
    },
-   "note_pl": "przy gornym brzegu wargi gornej"
+   "note_pl": "przy gornym brzegu wargi gornej",
+   "az_source": ""
   },
   {
    "code": "DU-28",
@@ -7009,7 +7369,8 @@
      "down": 33
     }
    },
-   "note_pl": "wedzidelko wargi gornej"
+   "note_pl": "wedzidelko wargi gornej",
+   "az_source": ""
   }
  ]
 }

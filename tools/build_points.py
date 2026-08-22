@@ -725,7 +725,30 @@ PATH_OVERRIDES = {
 }
 
 
+def apply_azimuth_fit(points: list) -> int:
+    """Nadpisuje azymuty tymi zmierzonymi wzgledem struktur (tools/fit_azimuth.py).
+
+    Kat wokol konczyny byl jedyna wartoscia wpisywana na oko. Tam, gdzie opis
+    zrodlowy nazywa miesien albo sciegno, kat jest wyliczany, a nie zgadywany -
+    plik z dopasowaniem powstaje osobnym narzedziem i jest czescia danych.
+    """
+    fp = ROOT / "data" / "azimuth_fit.json"
+    if not fp.exists():
+        return 0
+    fits = json.loads(fp.read_text(encoding="utf-8"))["fits"]
+    n = 0
+    for p in points:
+        f = fits.get(p["code"])
+        if not f or "az" not in p["anchor"]:
+            continue
+        p["anchor"]["az"] = f["az_new"]
+        p["az_source"] = "dopasowany do: " + ", ".join(f["structures"][:2])
+        n += 1
+    return n
+
+
 def build() -> None:
+    n_fit = apply_azimuth_fit(POINTS)
     meta = json.loads((ROOT / "data" / "point_meta.json").read_text(encoding="utf-8"))
     by_code = {}
     out = []
@@ -746,6 +769,7 @@ def build() -> None:
             "accuracy": p["accuracy"],
             "anchor": p["anchor"],
             "note_pl": p["note"],
+            "az_source": p.get("az_source", ""),
         }
         by_code[code] = rec
         out.append(rec)
@@ -776,6 +800,7 @@ def build() -> None:
     for r in out:
         kinds[r["accuracy"]] = kinds.get(r["accuracy"], 0) + 1
     print(f"punktow: {len(out)}  (" + ", ".join(f"{k}: {v}" for k, v in sorted(kinds.items())) + ")")
+    print(f"azymutow zmierzonych wzgledem struktur: {n_fit}")
     if missing:
         print(f"BRAK kotwic dla {len(missing)}: {', '.join(missing)}")
     if extra:
