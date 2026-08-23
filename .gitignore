@@ -13,3 +13,6 @@ data/point_meta.json
 
 # zrzuty robocze
 *.tmp
+
+# pusty plik npm, ktory pojawil sie w katalogu - projekt jest pythonowy
+package-lock.json
