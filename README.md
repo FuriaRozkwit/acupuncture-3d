@@ -78,6 +78,16 @@ r'   = r / √(1 − s·w)                             w poprzek — objętość
 Pogrubienie brzuśca nie jest osobnym suwakiem: wynika z zachowania objętości.
 Przerost i zanik to druga, niezależna gałka, bo to inne zjawisko.
 
+### Linie pracy
+
+Mięsień ma kierunek działania, nie tylko objętość. Klawisz `w` rysuje oś ciągu:
+rurka biegnie środkiem brzuśca, a groty na obu końcach pokazują, że **oba przyczepy
+ciągną do brzuśca**, bo to on się skraca. Linia nie jest prostą między przyczepami —
+powstaje ze środków ciężkości kolejnych plastrów mięśnia wzdłuż jego osi, więc idzie
+środkiem także przy mięśniach wygiętych, zamiast przecinać je na skros.
+
+Włączenie linii przymgla warstwę mięśni, bo inaczej byłyby schowane w środku brył.
+
 Powiązanie działa w obie strony:
 
 - wybierz mięsień → dostajesz punkty leżące nad nim wraz z odległością
@@ -133,6 +143,7 @@ Bez pobranych zasobów aplikacja i tak działa — przechodzi na wbudowany model
 | `m` `l` | linie kanałów / etykiety kodów |
 | `k` `j` `b` | skóra / mięśnie / kości |
 | `r` | wyzeruj parametry wybranego mięśnia |
+| `w` | linie pracy mięśni — oś ciągu z grotami skierowanymi ku brzuścowi |
 
 Po lewej: przełączniki warstw (dół), lista kanałów z przyciskami **wszystkie / żaden / odwróć**.
 Po prawej: suwaki parametrów mięśnia, przyciski **fokus** i **zeruj mięsień**, krycie skóry.

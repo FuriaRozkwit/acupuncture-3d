@@ -16,6 +16,7 @@ import textwrap
 import numpy as np
 import pyvista as pv
 
+from . import action_lines
 from .model import Atlas
 from .muscles import MuscleSet
 
@@ -73,8 +74,12 @@ class Viewer:
         self._focus_saved: dict | None = None
         self._sel_mesh = None
         self._sel_rest = None
+        self._sel_actor = None
         self._sliders: list = []
         self._buttons: list = []
+        self.show_action = False          # linie pracy miesni
+        self._action_actor = None
+        self._muscle_opacity = 1.0        # krycie warstwy miesni sprzed wlaczenia linii
         self._build()
 
     # ------------------------------------------------------------------ scena
@@ -203,6 +208,8 @@ class Viewer:
                          (int(w * 0.74), int(h * 0.60)), color=THEME["highlight"])
             self._button("zeruj miesien [r]", self.reset_muscle,
                          (int(w * 0.74), int(h * 0.565)))
+            self._button("linie pracy [w]", self.toggle_action_lines,
+                         (int(w * 0.74), int(h * 0.53)))
 
     def _add_help(self) -> None:
         txt = ("[f] fokus na wybranym    [a]/[n] wszystkie kanaly / zaden   [i] odwroc\n"
@@ -224,6 +231,7 @@ class Viewer:
             "j": lambda: self._flip_layer("muscle"),
             "b": lambda: self._flip_layer("skeleton"),
             "r": self.reset_muscle,
+            "w": self.toggle_action_lines,
             "f": self.toggle_focus,
             "0": lambda: self._view("xz", 180),
             "1": lambda: self._view("xz", 180),
@@ -349,11 +357,13 @@ class Viewer:
         self._sel_mesh = self.muscles.submesh(muscle)
         self._sel_rest = np.array(self._sel_mesh.points, copy=True)
         self._deform_selected()
-        self.pl.add_mesh(self._sel_mesh, color=THEME["muscle_sel"], smooth_shading=True,
-                         specular=0.25, name="sel_muscle")
+        self._sel_actor = self.pl.add_mesh(
+            self._sel_mesh, color=THEME["muscle_sel"], smooth_shading=True,
+            specular=0.25, name="sel_muscle")
         for slider, (_, attr, _, _, _) in zip(self._sliders, PARAMS):
             slider.GetRepresentation().SetValue(getattr(muscle, attr))
         self._muscle_info(muscle, to_console=to_console)
+        self._selected_action_line()
         if self.focus_mode:
             self._focus_camera()
         self.pl.render()
@@ -367,6 +377,49 @@ class Viewer:
             slider.GetRepresentation().SetValue(getattr(self.selected, attr))
         self._muscle_info(self.selected, to_console=False)
         self.pl.render()
+
+    def toggle_action_lines(self) -> None:
+        """Pokazuje kierunki ciagu miesni - os pracy z grotami ku brzuscowi."""
+        if self.muscles is None:
+            return
+        self.show_action = not self.show_action
+        # Linie biegna SRODKIEM miesni, wiec przy pelnym kryciu byly niewidoczne -
+        # na czas ich pokazywania warstwa miesni schodzi do polprzezroczystej.
+        mus = self.layer_actors["muscle"]
+        if self.show_action:
+            self._muscle_opacity = mus.GetProperty().GetOpacity()
+            mus.SetVisibility(True)
+            mus.GetProperty().SetOpacity(0.28)
+        else:
+            mus.GetProperty().SetOpacity(self._muscle_opacity)
+        if self.show_action and self._action_actor is None:
+            mesh = action_lines.build_all(self.muscles)
+            if mesh.n_points:
+                self._action_actor = self.pl.add_mesh(
+                    mesh, color=THEME["accent"], name="action_lines")
+        if self._action_actor is not None:
+            self._action_actor.SetVisibility(self.show_action)
+        self._selected_action_line()
+        self.info("Linie pracy miesni: wlaczone" if self.show_action
+                  else "Linie pracy miesni: wylaczone")
+        self.pl.render()
+
+    def _selected_action_line(self) -> None:
+        """Linia pracy wybranego miesnia - grubsza i w kolorze zaznaczenia."""
+        if self.muscles is None:
+            return
+        if self.selected is None or not self.show_action:
+            self.pl.remove_actor("action_sel", render=False)
+            return
+        pts = self.muscles.rest[self.selected.slice]
+        if len(pts) < 40:
+            return
+        mesh = action_lines.build(pts, self.selected.axis, arrow_len=0.030)
+        if mesh.n_points:
+            self.pl.add_mesh(mesh, color=THEME["muscle_sel"], name="action_sel")
+        # wybrany miesien tez musi przepuscic swoja linie
+        if self._sel_actor is not None:
+            self._sel_actor.GetProperty().SetOpacity(0.35 if self.show_action else 1.0)
 
     def _muscle_info(self, muscle, to_console: bool = False) -> None:
         pts = self.muscles.points_on(
