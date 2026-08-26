@@ -39,6 +39,10 @@ def main(argv=None) -> int:
     ap.add_argument("--skin-opacity", type=float, default=None, help="krycie skory 0..1")
     ap.add_argument("--no-meridians", action="store_true", help="ukryj linie kanalow")
     ap.add_argument("--labels", action="store_true", help="pokaz kody punktow")
+    ap.add_argument("--tension", default=None,
+                    help="wczytaj zapisana mape napiec (data/tension/*.json)")
+    ap.add_argument("--tension-report", action="store_true",
+                    help="wypisz zestawienie wczytanej mapy i zakoncz")
     ap.add_argument("--view", default=None, choices=["front", "back", "side", "top"])
     ap.add_argument("--screenshot", default=None, help="zapisz zrzut i zakoncz")
     args = ap.parse_args(argv)
@@ -90,6 +94,19 @@ def main(argv=None) -> int:
         v.muscles.refresh()
         v.select_muscle(m)
         v.layer_actors["muscle"].SetVisibility(True)
+    if args.tension:
+        from pathlib import Path as _P
+        v._ensure_tension()
+        n = v.tension.load(_P(args.tension))
+        v.tension_mode = True
+        v._refresh_tension()
+        print(f"wczytano {n} oznaczen z {args.tension}")
+    if args.tension_report:
+        if v.tension is None or not v.tension.marks:
+            print("brak oznaczen - podaj --tension <plik>", file=sys.stderr)
+            return 2
+        print(v.tension.report())
+        return 0
     if args.point:
         key = args.point.upper().replace(":", "·")
         if key not in atlas.by_key:

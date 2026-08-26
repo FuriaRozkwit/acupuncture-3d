@@ -18,6 +18,7 @@ import pyvista as pv
 
 from . import action_lines
 from .model import Atlas
+from .tension import LEVEL_COLORS, LEVELS, TensionMap
 from .muscles import MuscleSet
 
 THEME = {
@@ -77,6 +78,10 @@ class Viewer:
         self._sel_actor = None
         self._sliders: list = []
         self._buttons: list = []
+        self.tension = None               # mapa napiec (tworzona przy pierwszym uzyciu)
+        self.tension_mode = False
+        self.tension_level = 2            # poziom nadawany kolejnym oznaczeniom
+        self._await_direction = False
         self.show_action = False          # linie pracy miesni
         self._action_actor = None
         self._muscle_opacity = 1.0        # krycie warstwy miesni sprzed wlaczenia linii
@@ -232,6 +237,13 @@ class Viewer:
             "b": lambda: self._flip_layer("skeleton"),
             "r": self.reset_muscle,
             "w": self.toggle_action_lines,
+            "t": self.toggle_tension_mode,
+            "z": self.tension_undo,
+            "g": self.tension_direction_next,
+            "period": lambda: self.set_tension_level(self.tension_level + 1),
+            "comma": lambda: self.set_tension_level(self.tension_level - 1),
+            "p": self.tension_report,
+            "s": self.tension_save,
             "f": self.toggle_focus,
             "0": lambda: self._view("xz", 180),
             "1": lambda: self._view("xz", 180),
@@ -438,6 +450,128 @@ class Viewer:
         if to_console:
             _safe_print("\n" + "=" * 78 + f"\n{muscle.label}\n" + "\n".join(lines[1:]))
 
+
+    # ------------------------------------------------------------ mapa napiec
+    def _ensure_tension(self):
+        if self.tension is None:
+            self.tension = TensionMap(self.atlas, self.muscles)
+        return self.tension
+
+    def toggle_tension_mode(self) -> None:
+        """Tryb mapowania napiec: klikniecie w ciało stawia oznaczenie."""
+        self._ensure_tension()
+        self.tension_mode = not self.tension_mode
+        self._await_direction = False
+        self._refresh_tension()
+        if self.tension_mode:
+            self.info(f"MAPA NAPIEC — klikaj w cialo, poziom {self.tension_level} "
+                      f"({LEVELS[self.tension_level]}).  [,]/[.] poziom   [g] kierunek\n"
+                      f"[z] cofnij   [s] zapisz   [p] raport   [t] wyjscie")
+        else:
+            self.info("Mapa napiec wylaczona (oznaczenia zostaja).")
+        self.pl.render()
+
+    def set_tension_level(self, level: int) -> None:
+        self.tension_level = int(np.clip(level, 0, 3))
+        if self.tension_mode:
+            self.info(f"Poziom oznaczenia: {self.tension_level} "
+                      f"({LEVELS[self.tension_level]})")
+            self.pl.render()
+
+    def tension_direction_next(self) -> None:
+        """Po wcisnieciu [g] kolejne klikniecie nadaje kierunek ostatniemu oznaczeniu."""
+        if not self.tension_mode or not (self.tension and self.tension.marks):
+            return
+        self._await_direction = True
+        self.info("Kliknij tam, DOKAD ciagnie napiecie - to nada kierunek "
+                  "ostatniemu oznaczeniu.")
+        self.pl.render()
+
+    def tension_undo(self) -> None:
+        if self.tension and self.tension.marks:
+            m = self.tension.remove_last()
+            self._refresh_tension()
+            self.info(f"Cofnieto oznaczenie [{m.id}]. Zostalo: {len(self.tension.marks)}")
+            self.pl.render()
+
+    def tension_save(self) -> None:
+        if not (self.tension and self.tension.marks):
+            return
+        path = self.tension.save()
+        self.info(f"Zapisano {len(self.tension.marks)} oznaczen: {path.name}")
+        _safe_print(f"\nmapa napiec zapisana: {path}")
+        self.pl.render()
+
+    def tension_report(self) -> None:
+        if not (self.tension and self.tension.marks):
+            self.info("Mapa napiec jest pusta - nie ma czego podsumowac.")
+            self.pl.render()
+            return
+        _safe_print("\n" + self.tension.report())
+        self.info(f"Raport z {len(self.tension.marks)} oznaczen wypisany na konsoli.")
+        self.pl.render()
+
+    def _add_tension_mark(self, pos) -> None:
+        t = self._ensure_tension()
+        if self._await_direction and t.marks:
+            last = t.marks[-1]
+            d = np.asarray(pos) - last.pos
+            if np.linalg.norm(d) > 1e-4:
+                last.direction = d / np.linalg.norm(d)
+            self._await_direction = False
+            self._refresh_tension()
+            self.info(f"Nadano kierunek oznaczeniu [{last.id}].")
+            self.pl.render()
+            return
+        mark = t.add(pos, level=self.tension_level)
+        self._refresh_tension()
+        a = t.analyse(mark)
+        txt = [f"Oznaczenie [{mark.id}] poziom {mark.level} ({LEVELS[mark.level]})"]
+        if a["muscle"] is not None:
+            txt.append(f"miesien pod spodem: {a['muscle'].label} ({a['muscle_dist_mm']} mm)")
+        if a["points"]:
+            txt.append("punkty w zasiegu: " + ", ".join(
+                f"{p['code']} ({p['dist_mm']:.0f} mm)" for p in a["points"][:5]))
+        self.info("\n".join(txt))
+        self.pl.render()
+
+    def _refresh_tension(self) -> None:
+        """Rysuje oznaczenia, ich kierunki i rozmyte pole napiecia na skorze."""
+        for name in ("tension_marks", "tension_dirs"):
+            self.pl.remove_actor(name, render=False)
+        t = self.tension
+        skin = self.atlas.layers["skin"]
+        if not (self.tension_mode and t and t.marks):
+            if "napiecie" in skin.point_data:
+                del skin.point_data["napiecie"]
+                self.layer_actors["skin"] = self.pl.add_mesh(
+                    skin, color=THEME["skin"], smooth_shading=True, specular=0.12,
+                    name="skin", opacity=self.layer_actors["skin"].GetProperty().GetOpacity())
+            return
+
+        # pole napiecia na skorze: oznaczenia rozmywaja sie i sumuja
+        field = t.field(np.asarray(skin.points))
+        skin.point_data["napiecie"] = field
+        op = self.layer_actors["skin"].GetProperty().GetOpacity()
+        self.layer_actors["skin"] = self.pl.add_mesh(
+            skin, scalars="napiecie", clim=[0.0, 3.0], show_scalar_bar=False,
+            cmap=[THEME["skin"], LEVEL_COLORS[1], LEVEL_COLORS[2], LEVEL_COLORS[3]],
+            smooth_shading=True, specular=0.12, name="skin", opacity=op)
+
+        pts = np.array([m.pos for m in t.marks])
+        lev = np.array([float(m.level) for m in t.marks])
+        cloud = pv.PolyData(pts)
+        cloud["poziom"] = lev
+        glyph = cloud.glyph(geom=pv.Sphere(radius=0.008), scale=False, orient=False)
+        self.pl.add_mesh(glyph, scalars="poziom", clim=[0, 3], show_scalar_bar=False,
+                         cmap=[LEVEL_COLORS[0], LEVEL_COLORS[1], LEVEL_COLORS[2],
+                               LEVEL_COLORS[3]], name="tension_marks")
+        arrows = [pv.Arrow(start=m.pos, direction=m.direction, scale=0.06)
+                  for m in t.marks if m.direction is not None]
+        if arrows:
+            merged = arrows[0].merge(arrows[1:]) if len(arrows) > 1 else arrows[0]
+            self.pl.add_mesh(merged, color=THEME["text"], name="tension_dirs")
+
     # ----------------------------------------------------------------- fokus
     def _focus_target(self):
         if self.focused_key:
@@ -521,6 +655,9 @@ class Viewer:
         if not len(pos):
             return
         pos = pos[0]
+        if self.tension_mode:
+            self._add_tension_mark(pos)
+            return
         cands = [m for m in self.atlas.markers if m["channel"] in self.visible_channels
                  and self.point_actors[m["channel"]].GetVisibility()]
         if cands:

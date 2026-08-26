@@ -16,3 +16,6 @@ data/point_meta.json
 
 # pusty plik npm, ktory pojawil sie w katalogu - projekt jest pythonowy
 package-lock.json
+
+# zapisy sesji z mapami napiec - obserwacje kliniczne, zostaja lokalnie
+data/tension/

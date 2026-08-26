@@ -94,6 +94,37 @@ Powiązanie działa w obie strony:
   (mięsień brzuchaty łydki wskazuje BL-57 Chengshan w 4 mm, naramienny — LI-15 w 6 mm),
 - kliknij punkt → dostajesz mięsień pod nim i głębokość, na jakiej się zaczyna.
 
+## Mapa napięć
+
+Tryb pracy z pacjentem: klawisz `t`, potem klikasz w ciało i zostawiasz oznaczenie
+napięcia. Klawisze `,` i `.` zmieniają poziom (0–3), `g` nadaje ostatniemu oznaczeniu
+**kierunek** — klikasz tam, dokąd ciągnie napięcie. `z` cofa, `s` zapisuje sesję,
+`p` wypisuje zestawienie.
+
+Trzy rzeczy zostały zaprojektowane celowo:
+
+**Oznaczenie jest kotwiczone anatomicznie**, a nie we współrzędnych. Zapisujemy mięsień
+i położenie względem jego osi, więc ten sam zapis da się nałożyć na inną sylwetkę —
+dokładnie tak jak punkty w tym projekcie.
+
+**Napięcie ma zwrot.** Kierunek jest porównywany z osią włókien mięśnia pod spodem
+(„kierunek vs włókna: 88,7°" oznacza napięcie prawie prostopadłe do przebiegu włókien).
+
+**Zestawienie jest sprawdzalne.** Nie zgaduje przyczyn — wypisuje, co leży pod
+oznaczeniem i w jego zasięgu: mięsień z odległością w milimetrach, punkty w promieniu
+z odległością, ich kanały i **cytowane z podręcznika działanie**. Każdą pozycję da się
+sprawdzić na modelu. To jest spis faktów geometrycznych, nie rozpoznanie.
+
+```bash
+python -m acu3d --tension data/tension/sesja-2026-08-26-2356.json --tension-report
+```
+
+Analiza jest regułowa, liczona z danych — nie jest modelem językowym i nie wnioskuje
+poza tym, co da się zmierzyć. Podsumowanie językowe można dołożyć później, ale wtedy
+dane opuszczają komputer i to jest osobna decyzja.
+
+Zapisy sesji (`data/tension/`) są wyłączone z repozytorium — to obserwacje kliniczne.
+
 ## Instalacja
 
 ```bash
@@ -114,6 +145,29 @@ do naszego układu, decymuje i kalibruje rig. Trwa to kilkanaście minut, raz.
 
 Bez pobranych zasobów aplikacja i tak działa — przechodzi na wbudowany model proceduralny
 (`python -m acu3d --procedural`), z tymi samymi punktami na uproszczonym manekinie.
+
+
+### Gdy Windows blokuje VTK
+
+Windows ze **Smart App Control** w trybie wymuszania blokuje niepodpisane biblioteki
+VTK (dziennik CodeIntegrity, Id 3077: *did not meet the Enterprise signing level
+requirements*). Aplikacja przestaje wtedy startować, mimo że kod jest w porządku.
+
+Obejście bez osłabiania zabezpieczeń systemu: uruchamianie w WSL2, bo binaria
+linuksowe tej polityce nie podlegają, a WSLg daje okno graficzne.
+
+```bash
+wsl --install -d Ubuntu-24.04 --no-launch
+wsl -d Ubuntu-24.04 -u root bash tools/setup_wsl.sh
+```
+
+Potem wystarczy `uruchom-wsl.cmd` albo:
+
+```bash
+wsl -d Ubuntu-24.04 -u root bash tools/run_wsl.sh
+```
+
+Zasoby anatomiczne są widoczne przez `/mnt/c`, więc nie trzeba ich generować od nowa.
 
 ## Uruchomienie
 
@@ -144,6 +198,8 @@ Bez pobranych zasobów aplikacja i tak działa — przechodzi na wbudowany model
 | `k` `j` `b` | skóra / mięśnie / kości |
 | `r` | wyzeruj parametry wybranego mięśnia |
 | `w` | linie pracy mięśni — oś ciągu z grotami skierowanymi ku brzuścowi |
+| `t` | mapa napięć: klik stawia oznaczenie, `,`/`.` poziom, `g` kierunek, `z` cofnij |
+| `s` `p` | zapisz sesję mapy napięć / wypisz zestawienie |
 
 Po lewej: przełączniki warstw (dół), lista kanałów z przyciskami **wszystkie / żaden / odwróć**.
 Po prawej: suwaki parametrów mięśnia, przyciski **fokus** i **zeruj mięsień**, krycie skóry.
@@ -173,6 +229,7 @@ data/
   muscles.json     katalog miesni: os dzialania, objetosc, strona
   rig_fitted.json  punkty kostne i linijka cun zmierzone na modelu
   meridians.json   przebiegi kanalow
+  tension/         zapisy sesji z mapami napiec (poza repozytorium)
 tools/
   fetch_assets.py      pobranie i przygotowanie calej anatomii (jeden skrypt)
   blender_export.py    eksport siatek z pliku .blend
@@ -181,6 +238,8 @@ tools/
   calibrate_rig.py     linijka cun z prawdziwych kosci
   build_points.py      tabele kotwic -> data/points.json
   prepare_structs.py   drobne struktury (paliczki, malzowina, galka oczna)
+  setup_wsl.sh         srodowisko w WSL2 (obejscie blokady Smart App Control)
+  run_wsl.sh           uruchomienie atlasu w WSL2
   validate.py          kontrola spojnosci atlasu
   verify_points.py     zgodnosc z opisami zrodlowymi
   fit_azimuth.py       pomiar kata ulozenia punktu wzgledem miesni
