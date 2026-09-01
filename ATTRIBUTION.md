@@ -25,7 +25,7 @@ Wymagana atrybucja przy każdym rozpowszechnianiu tych siatek lub ich przeróbek
 > Z-Anatomy, © Gauthier Kervyn, licensed under CC Attribution-Share Alike 4.0 International.
 
 **Share-alike działa dalej:** jeżeli udostępnisz przerobione siatki albo dane z nich
-wyliczone, muszą iść na tej samej licencji. Dotyczy to również sześciu plików, które
+wyliczone, muszą iść na tej samej licencji. Dotyczy to również ośmiu plików, które
 **są** w repozytorium, bo powstały z pomiarów tych siatek:
 
 - `data/muscles.json` — katalog 477 mięśni: nazwa, strona, oś działania, objętość, środek
@@ -39,8 +39,11 @@ wyliczone, muszą iść na tej samej licencji. Dotyczy to również sześciu pli
   normalna płata, grubość, rozpiętość
 - `data/septa_analysis.json` — wynik pomiaru odległości punktów i kanałów do śladu
   przegród międzymięśniowych na skórze (`tools/analyze_septa.py`)
+- `data/wire.npz` — siatka cunowa: 9144 wierzchołki zmierzone na skórze, z grubością
+  tkanki miękkiej, głębokością mięśnia i odległością do powięzi (`tools/bake_wire.py`)
+- `data/wire.json` — opis tej siatki wraz z osiami działania mięśni
 
-Wszystkie sześć jest objętych **CC BY-SA 4.0**, nie licencją MIT.
+Wszystkie osiem jest objętych **CC BY-SA 4.0**, nie licencją MIT.
 
 ## 3. Opisy punktów — materiał chroniony, **nie ma go w repozytorium**
 
