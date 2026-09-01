@@ -181,6 +181,92 @@ Przy takiej próbie mediana percentyli 0,346 daje p = 0,33, czyli **nie da się 
 przypadku**. To jest hipoteza dobrze postawiona i warta sprawdzenia na większym materiale,
 a nie wynik.
 
+## Silnik napięć: siatka cunowa bez warstw
+
+![Silnik napięć](docs/silnik.png)
+
+```bash
+python -m acu3d --wire
+```
+
+Warstwy służyły do tego, żeby **model wiedział**, co gdzie leży. Do pracy z napięciami
+ta wiedza jest potrzebna, ale same siatki już nie — wystarczy ich wynik. `tools/bake_wire.py`
+przenosi wiedzę z geometrii do skalarów na rzadkiej siatce:
+
+| | pełna przeglądarka | silnik `--wire` |
+|---|---|---|
+| geometria ciała | 1,4 mln trójkątów | 9144 wierzchołki, 15 tys. linii |
+| na dysku | ~700 MB w `assets/` | **211 kB** (`data/wire.npz`) |
+| start okna | 2,5 s | 1,5 s |
+| siatki anatomiczne wczytywane w czasie pracy | wszystkie | **żadna** |
+
+A mimo to po każdym kliknięciu model dalej mówi, ile w tym miejscu jest tkanki miękkiej,
+który mięsień leży pod spodem i jak głęboko — bo to jest wypieczone w wierzchołkach:
+
+```
+[3] poziom 2 (wyrazne)   R·shank  8.0 cun  az 195
+tkanka miekka 37 mm   miesien: Medial head of gastrocnemius.r (4 mm)
+```
+
+Siatka nie jest rysunkiem ciała. To **widoczny układ współrzędnych atlasu**: pierścienie
+to poziomy w *cun*, linie podłużne to azymuty — dokładnie ten układ, w którym opisane są
+punkty. Barwa linii to grubość tkanki miękkiej: białe tam, gdzie kość leży tuż pod skórą
+(piszczel, łokciowa, kostki), ciemne tam, gdzie jest gruby brzusiec.
+
+Kliknięcie **przyciąga się do siatki**, więc oznaczenie nigdy nie ląduje pomiędzy —
+zawsze ma swoje *cun* i azymut, tak samo jak punkt akupunkturowy.
+
+### Linie sił
+
+Oznaczenia stawiane po kolei tworzą **łańcuch**, rysowany jako wektor ze strzałką.
+`spacja` zamyka łańcuch, następne kliknięcie zaczyna nowy. Zestawienie (`p`) podaje dla
+każdego odcinka trzy mierzalne rzeczy: długość, **punkty akupunkturowe w korytarzu wzdłuż
+linii** i **mięśnie, których oś pracy jest z tą linią zgodna**:
+
+```
+[1] -> [2]  438 mm
+   punkty na linii: GB-21 (9 mm od osi), BL-47 (23 mm), BL-48 (12 mm), BL-49 (8 mm)…
+   wzdluz linii: Descending part of trapezius (prawy)  os pod 3.9 st., glebokosc 13 mm
+   wzdluz linii: Latissimus dorsi (prawy)              os pod 12.4 st., glebokosc 17 mm
+[2] -> [3]  562 mm
+   punkty na linii: DU-3 (26 mm), BL-25 (6 mm), BL-26 (11 mm), BL-40 (4 mm)…
+   wzdluz linii: Long head of biceps femoris (prawy)   os pod 2.6 st., glebokosc 23 mm
+```
+
+Kąt mówi tylko tyle, że mięsień **może** ciągnąć wzdłuż tej linii: 0° = oś równoległa,
+90° = w poprzek. To geometria, nie rozpoznanie — i tak jest opisane w samym zestawieniu.
+
+`f` włącza **filtr wiedzy**: z 722 markerów zostają te, które linie sił rzeczywiście
+mijają. To ten sam korytarz, którego używa zestawienie, więc to, co widać na ekranie,
+i to, co wypisane na konsoli, jest jednym zbiorem.
+
+| klawisz | działanie |
+|---|---|
+| `klik` | oznaczenie napięcia — od razu, bez wchodzenia w tryb |
+| `,` `.` | poziom 0–3 |
+| `spacja` | zamknij linię siły, następna zaczyna się od nowa |
+| `z` | cofnij ostatnie oznaczenie |
+| `q` `l` | punkty / etykiety kodów |
+| `f` | filtr: tylko punkty leżące na liniach sił |
+| `p` `s` | zestawienie linii / zapis sesji |
+| `1`–`4`, `0` | widoki |
+
+Zapisy sesji są wymienne z pełną przeglądarką — to ten sam format, z dodanym polem
+`chains` (łańcuchy) i kotwicą `anchor` w układzie *cun*. Nadal zostają lokalnie.
+
+### Przebudowa siatki
+
+```bash
+python tools/bake_wire.py --step 0.5 --rays 24
+```
+
+Dwa odsiewy są tu istotne. Promień, który uciekł przez otwór w siatce skóry (oczodół,
+szpara między palcami), nie opisuje powierzchni — jego wierzchołek zostaje w danych,
+bo ma poprawne *cun* i azymut, ale nie łączymy go z sąsiadami i oznaczenie nie może na
+nim usiąść. Promień z tułowia, który trafił w przylegające ramię, poznajemy po tym, że
+kończy bliżej osi kończyny niż osi własnego odcinka — przy domyślnych ustawieniach
+odsiewa to 474 wierzchołki i usuwa „gwiazdy" w środku sylwetki.
+
 ## Mapa napięć
 
 Tryb pracy z pacjentem: klawisz `t`, potem klikasz w ciało i zostawiasz oznaczenie
@@ -284,6 +370,8 @@ Zasoby anatomiczne są widoczne przez `/mnt/c`, więc nie trzeba ich generować 
 | `m` `l` | linie kanałów / etykiety kodów |
 | `k` `j` `b` | skóra / mięśnie / kości |
 | `h` | tkanka łączna — kolejne wciśnięcia dokładają klasy, od przegród do kaletek |
+
+Dwa tryby uproszczone: `--bare` (sam silnik ruchu i zaznaczania punktów, bez mięśni) oraz `--wire` (siatka cunowa i linie sił, bez żadnych siatek anatomicznych).
 | `r` | wyzeruj parametry wybranego mięśnia |
 | `w` | linie pracy mięśni — oś ciągu z grotami skierowanymi ku brzuścowi |
 | `t` | mapa napięć: klik stawia oznaczenie, `,`/`.` poziom, `g` kierunek, `z` cofnij |
@@ -311,6 +399,8 @@ acu3d/
   anchors.py    kotwica -> wspolrzedne 3D
   muscles.py    477 miesni w jednej siatce, deformacja aktywacyjna
   fascia.py     198 platow lacznotkankowych; plat opisuje normalna, nie os
+  wire.py       siatka cunowa z wypieczona wiedza o tkankach (bez siatek 3D)
+  wire_viewer.py  silnik napiec: oznaczenia, lancuchy sil, filtr wiedzy
   model.py      spina cialo, punkty i meridiany
   viewer.py     okno, warstwy, wybor punktu i miesnia
 data/
@@ -319,6 +409,8 @@ data/
   rig_fitted.json  punkty kostne i linijka cun zmierzone na modelu
   meridians.json   przebiegi kanalow
   fascia.json      katalog tkanki lacznej: klasa, normalna platu, rozpietosc
+  wire.npz         siatka cunowa: 9144 wierzcholki + skalary tkanek (211 kB)
+  wire.json        opis siatki i osie miesni do analizy linii sil
   septa_analysis.json  pomiar: kanaly a przegrody miedzymiesniowe
   tension/         zapisy sesji z mapami napiec (poza repozytorium)
 tools/
@@ -326,6 +418,7 @@ tools/
   blender_export.py    eksport siatek z pliku .blend
   prepare_meshes.py    obrot, decymacja, os glowna miesnia
   prepare_fascia.py    warstwa lacznotkankowa (powiezi, przegrody, troczki)
+  bake_wire.py         wypiek siatki cunowej: wiedza z siatek -> skalary
   prepare_skin.py      skora BodyParts3D dopasowana do anatomii
   calibrate_rig.py     linijka cun z prawdziwych kosci
   build_points.py      tabele kotwic -> data/points.json

@@ -18,6 +18,10 @@ def main(argv=None) -> int:
     ap = argparse.ArgumentParser(
         prog="acu3d",
         description="Przegladarka 3D punktow akupunkturowych, meridianow i miesni")
+    ap.add_argument("--wire", action="store_true",
+                    help="silnik napiec: sama siatka cunowa, punkty i linie sil")
+    ap.add_argument("--bare", action="store_true",
+                    help="sam silnik: ruch, kanaly i zaznaczanie punktow, bez miesni")
     ap.add_argument("--procedural", action="store_true",
                     help="model proceduralny zamiast siatek anatomicznych")
     ap.add_argument("--height", type=float, default=None,
@@ -54,7 +58,30 @@ def main(argv=None) -> int:
         return 0
 
     atlas = Atlas(args.height, procedural=args.procedural)
-    v = Viewer(atlas, off_screen=bool(args.screenshot))
+    if args.wire:
+        from .wire_viewer import WireViewer
+        w = WireViewer(atlas, off_screen=bool(args.screenshot))
+        if args.tension:
+            from pathlib import Path as _P
+            print(f"wczytano {w.tension.load(_P(args.tension))} oznaczen")
+            w._refresh()
+        if args.tension_report:
+            print(w.tension.line_report())
+            return 0
+        if args.view:
+            cam, az = {"front": ("xz", 180), "back": ("xz", 0),
+                       "side": ("yz", 0), "top": ("xy", 0)}[args.view]
+            w._view(cam, az)
+        if args.labels:
+            w.toggle_labels()
+        if args.screenshot:
+            w.screenshot(args.screenshot)
+            print(f"zapisano {args.screenshot}")
+            return 0
+        w.show()
+        return 0
+
+    v = Viewer(atlas, off_screen=bool(args.screenshot), bare=args.bare)
 
     if args.channel:
         chans = {c.upper() for c in args.channel}
@@ -67,6 +94,9 @@ def main(argv=None) -> int:
     if args.layer:
         for name, actor in v.layer_actors.items():
             actor.SetVisibility(name in args.layer)
+    if args.bare and (args.muscle or args.tension or args.tension_report):
+        print("--bare wyklucza miesnie i mape napiec", file=sys.stderr)
+        return 2
     if args.skin_opacity is not None:
         v._set_skin_opacity(args.skin_opacity)
     if args.no_meridians:

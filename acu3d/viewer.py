@@ -57,9 +57,15 @@ def _rgba(hex_color: str, alpha: int = 255) -> list:
 
 
 class Viewer:
-    def __init__(self, atlas: Atlas, off_screen: bool = False, window_size=(1560, 980)):
+    def __init__(self, atlas: Atlas, off_screen: bool = False, window_size=(1560, 980),
+                 bare: bool = False):
         self.atlas = atlas
-        self.muscles = MuscleSet() if atlas.mode == "anatomy" else None
+        # tryb goly: sam silnik ruchu i zaznaczania. Miesnie sa najciezsza czescia
+        # sceny (1,08 mln trojkatow), wiec tu ich nawet nie wczytujemy - okno
+        # wstaje od razu i nic nie konkuruje z punktami o klikniecie.
+        self.bare = bool(bare)
+        self.muscles = (MuscleSet() if atlas.mode == "anatomy" and not self.bare
+                        else None)
         self.pl = pv.Plotter(off_screen=off_screen, window_size=window_size,
                              title="Atlas punktow akupunktury 3D")
         self.pl.set_background(THEME["bg"])
@@ -97,7 +103,9 @@ class Viewer:
         self.layer_actors["skin"] = self.pl.add_mesh(
             a.layers["skin"], color=THEME["skin"], opacity=1.0, smooth_shading=True,
             specular=0.12, name="skin")
-        if self.muscles is not None:
+        if self.bare:
+            pass
+        elif self.muscles is not None:
             m = self.muscles.mesh
             m.point_data["sel"] = np.zeros(m.n_points, dtype=np.float32)
             # 0 = miesien widoczny, 1 = zastapiony osobnym aktorem, wiec przezroczysty
@@ -112,12 +120,13 @@ class Viewer:
                 a.layers["muscle"], color=THEME["muscle"], smooth_shading=True, name="muscle")
         self.layer_actors["skeleton"] = self.pl.add_mesh(
             a.layers["skeleton"], color=THEME["bone"], smooth_shading=True, name="skeleton")
-        self.layer_actors["fascia"] = self.pl.add_mesh(
-            pv.PolyData(), color=CLASS_COLOR["septum"], smooth_shading=True,
-            opacity=0.55, name="fascia")
-        self.layer_actors["muscle"].SetVisibility(False)
+        if not self.bare:
+            self.layer_actors["fascia"] = self.pl.add_mesh(
+                pv.PolyData(), color=CLASS_COLOR["septum"], smooth_shading=True,
+                opacity=0.55, name="fascia")
+            self.layer_actors["fascia"].SetVisibility(False)
+            self.layer_actors["muscle"].SetVisibility(False)
         self.layer_actors["skeleton"].SetVisibility(False)
-        self.layer_actors["fascia"].SetVisibility(False)
 
         r = 0.0058
         for ch, info in a.channels.items():
@@ -148,7 +157,9 @@ class Viewer:
 
         self._add_widgets()
         self._add_help()
-        self.info("Kliknij punkt albo miesien.  [j] warstwa miesni   [f] fokus na wybranym")
+        self.info("Kliknij punkt.  [f] fokus na wybranym   [1-4] widoki"
+                  if self.bare else
+                  "Kliknij punkt albo miesien.  [j] warstwa miesni   [f] fokus na wybranym")
         self.pl.enable_point_picking(callback=self._on_pick, show_message=False,
                                      left_clicking=True, show_point=False, tolerance=0.02)
         self._view("xz", 180)
@@ -175,6 +186,8 @@ class Viewer:
     def _add_widgets(self) -> None:
         y = 12
         for name in ("skin", "muscle", "skeleton"):
+            if name not in self.layer_actors:
+                continue
             self.pl.add_checkbox_button_widget(
                 self._toggle_layer(name), value=(name == "skin"), position=(12, y),
                 size=20, border_size=1, color_on=THEME["skin"], color_off="#38414f")
@@ -225,6 +238,14 @@ class Viewer:
                          (int(w * 0.74), int(h * 0.53)))
 
     def _add_help(self) -> None:
+        if self.bare:
+            self.pl.add_text(
+                "SILNIK: ruch i zaznaczanie\n"
+                "[klik] punkt   [f] fokus   [1-4] widoki   [0] domyslny\n"
+                "[a]/[n]/[i] kanaly   [c]/[v] solo   [x] bez solo\n"
+                "[m] linie kanalow   [l] etykiety   [k] skora   [b] kosci",
+                position="upper_right", font_size=7, color=THEME["dim"], name="help")
+            return
         txt = ("[f] fokus na wybranym    [a]/[n] wszystkie kanaly / zaden   [i] odwroc\n"
                "[c]/[v] solo kanalu   [x] bez solo   [m] meridiany   [l] etykiety\n"
                "[k] skora   [j] miesnie   [b] kosci   [h] powiezi   [r] wyzeruj miesien\n"
@@ -260,6 +281,10 @@ class Viewer:
             "3": lambda: self._view("yz", 0),
             "4": lambda: self._view("xy", 0),
         }
+        if self.bare:                      # zostaje ruch, kanaly, warstwy i fokus
+            keep = {"a", "n", "i", "c", "v", "x", "m", "l", "k", "b", "f",
+                    "0", "1", "2", "3", "4"}
+            keys = {k: fn for k, fn in keys.items() if k in keep}
         for k, fn in keys.items():
             self.pl.add_key_event(k, fn)
 
@@ -653,7 +678,9 @@ class Viewer:
             "camera": self.pl.camera_position,
         }
         for name, op in FOCUS_OPACITY.items():
-            act = self.layer_actors[name]
+            act = self.layer_actors.get(name)
+            if act is None:
+                continue
             # powiezi wchodza w fokus tylko wtedy, gdy uzytkownik je wlaczyl -
             # inaczej [f] wskrzeszalby pusta warstwe
             if name == "fascia" and self.fascia_step == 0:
