@@ -17,6 +17,7 @@ import numpy as np
 import pyvista as pv
 
 from . import action_lines
+from .fascia import CLASS_COLOR, CLASS_PL, FasciaSet
 from .model import Atlas
 from .tension import LEVEL_COLORS, LEVELS, TensionMap
 from .muscles import MuscleSet
@@ -32,14 +33,15 @@ THEME = {
     "accent": "#7fd1c8",
     "highlight": "#ffe36a",
 }
-LAYER_LABELS = {"skin": "skora", "muscle": "miesnie", "skeleton": "kosci"}
+LAYER_LABELS = {"skin": "skora", "muscle": "miesnie", "skeleton": "kosci",
+                "fascia": "powiezi"}
 SIDE_PL = {"R": "prawa", "L": "lewa", "C": "linia posrodkowa"}
 PARAMS = (("napiecie", "activation", 0.0, 1.0, 0.0),
           ("tonus spoczynkowy", "tone", 0.0, 0.6, 0.0),
           ("przerost", "hypertrophy", 0.75, 1.35, 1.0),
           ("sztywnosc", "stiffness", 0.2, 1.6, 1.0))
 # przezroczystosci w trybie fokusu: reszta ciala schodzi na drugi plan
-FOCUS_OPACITY = {"skin": 0.07, "muscle": 0.10, "skeleton": 0.18}
+FOCUS_OPACITY = {"skin": 0.07, "muscle": 0.10, "skeleton": 0.18, "fascia": 0.22}
 
 
 def _safe_print(text: str) -> None:
@@ -84,6 +86,8 @@ class Viewer:
         self._await_direction = False
         self.show_action = False          # linie pracy miesni
         self._action_actor = None
+        self.fascia = None
+        self.fascia_step = 0            # 0 = wylaczona, potem kolejne klasy
         self._muscle_opacity = 1.0        # krycie warstwy miesni sprzed wlaczenia linii
         self._build()
 
@@ -108,8 +112,12 @@ class Viewer:
                 a.layers["muscle"], color=THEME["muscle"], smooth_shading=True, name="muscle")
         self.layer_actors["skeleton"] = self.pl.add_mesh(
             a.layers["skeleton"], color=THEME["bone"], smooth_shading=True, name="skeleton")
+        self.layer_actors["fascia"] = self.pl.add_mesh(
+            pv.PolyData(), color=CLASS_COLOR["septum"], smooth_shading=True,
+            opacity=0.55, name="fascia")
         self.layer_actors["muscle"].SetVisibility(False)
         self.layer_actors["skeleton"].SetVisibility(False)
+        self.layer_actors["fascia"].SetVisibility(False)
 
         r = 0.0058
         for ch, info in a.channels.items():
@@ -219,7 +227,7 @@ class Viewer:
     def _add_help(self) -> None:
         txt = ("[f] fokus na wybranym    [a]/[n] wszystkie kanaly / zaden   [i] odwroc\n"
                "[c]/[v] solo kanalu   [x] bez solo   [m] meridiany   [l] etykiety\n"
-               "[k] skora   [j] miesnie   [b] kosci   [r] wyzeruj miesien\n"
+               "[k] skora   [j] miesnie   [b] kosci   [h] powiezi   [r] wyzeruj miesien\n"
                "[1] przod  [2] tyl  [3] bok  [4] gora   [0] widok domyslny   [klik] opis")
         self.pl.add_text(txt, position="upper_right", font_size=7, color=THEME["dim"],
                          name="help")
@@ -235,6 +243,7 @@ class Viewer:
             "k": lambda: self._flip_layer("skin"),
             "j": lambda: self._flip_layer("muscle"),
             "b": lambda: self._flip_layer("skeleton"),
+            "h": self.cycle_fascia,
             "r": self.reset_muscle,
             "w": self.toggle_action_lines,
             "t": self.toggle_tension_mode,
@@ -263,6 +272,42 @@ class Viewer:
             self.pl.camera.azimuth = azimuth
         self.pl.reset_camera()
         self.pl.camera.zoom(1.35)
+        self.pl.render()
+
+    # --------------------------------------------------- warstwa lacznotkankowa
+    def cycle_fascia(self) -> None:
+        """[h] przelacza kolejne klasy tkanki lacznej.
+
+        Ladujemy je dopiero przy pierwszym uzyciu - to 237 tysiecy trojkatow,
+        ktore w atlasie punktow nie sa potrzebne, dopoki ktos o nie nie poprosi.
+        Klasy dochodza kumulacyjnie: przegrody, potem powiezi, potem reszta,
+        bo tak ubywa czytelnosci i tak rosnie szczegol palpacyjny.
+        """
+        if self.fascia is None:
+            try:
+                self.fascia = FasciaSet()
+            except (FileNotFoundError, OSError):
+                self.info("Brak warstwy powieziowej - uruchom tools/prepare_fascia.py")
+                self.pl.render()
+                return
+        order = self.fascia.classes
+        self.fascia_step = (self.fascia_step + 1) % (len(order) + 1)
+        act = self.layer_actors["fascia"]
+        if self.fascia_step == 0:
+            act.SetVisibility(False)
+            self.info("Warstwa lacznotkankowa wylaczona.")
+            self.pl.render()
+            return
+        shown = order[:self.fascia_step]
+        mesh = self.fascia.submesh(shown)
+        self.pl.add_mesh(mesh, color=CLASS_COLOR[shown[-1]], smooth_shading=True,
+                         opacity=0.55, name="fascia")
+        self.layer_actors["fascia"] = self.pl.renderer.actors["fascia"]
+        self.layer_actors["fascia"].SetVisibility(True)
+        counts = self.fascia.counts()
+        txt = ", ".join(f"{CLASS_PL[c]} ({counts[c]})" for c in shown)
+        self.info(f"Warstwa lacznotkankowa: {txt}"
+                  f"\n{mesh.n_cells} trojkatow.  [h] dalej")
         self.pl.render()
 
     def _toggle_layer(self, name: str):
@@ -454,7 +499,12 @@ class Viewer:
     # ------------------------------------------------------------ mapa napiec
     def _ensure_tension(self):
         if self.tension is None:
-            self.tension = TensionMap(self.atlas, self.muscles)
+            if self.fascia is None:          # do palpacji powiez jest istotniejsza
+                try:                         # niz brzusiec, wiec ladujemy ja tutaj
+                    self.fascia = FasciaSet()
+                except (FileNotFoundError, OSError):
+                    self.fascia = None
+            self.tension = TensionMap(self.atlas, self.muscles, fascia=self.fascia)
         return self.tension
 
     def toggle_tension_mode(self) -> None:
@@ -529,6 +579,8 @@ class Viewer:
         txt = [f"Oznaczenie [{mark.id}] poziom {mark.level} ({LEVELS[mark.level]})"]
         if a["muscle"] is not None:
             txt.append(f"miesien pod spodem: {a['muscle'].label} ({a['muscle_dist_mm']} mm)")
+        if a["fascia"] is not None:
+            txt.append(f"tkanka laczna: {a['fascia'].label} ({a['fascia_dist_mm']} mm)")
         if a["points"]:
             txt.append("punkty w zasiegu: " + ", ".join(
                 f"{p['code']} ({p['dist_mm']:.0f} mm)" for p in a["points"][:5]))
@@ -602,6 +654,10 @@ class Viewer:
         }
         for name, op in FOCUS_OPACITY.items():
             act = self.layer_actors[name]
+            # powiezi wchodza w fokus tylko wtedy, gdy uzytkownik je wlaczyl -
+            # inaczej [f] wskrzeszalby pusta warstwe
+            if name == "fascia" and self.fascia_step == 0:
+                continue
             act.SetVisibility(True)
             act.GetProperty().SetOpacity(op)
         if self.focused_key:                       # zostaw tylko kanal wybranego punktu

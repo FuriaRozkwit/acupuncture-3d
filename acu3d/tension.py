@@ -65,9 +65,12 @@ class Mark:
 class TensionMap:
     """Zbior oznaczen jednej sesji + pole napiecia rozlozone na skorze."""
 
-    def __init__(self, atlas, muscles=None, name: str = None):
+    def __init__(self, atlas, muscles=None, name: str = None, fascia=None):
         self.atlas = atlas
         self.muscles = muscles
+        # warstwa lacznotkankowa jest opcjonalna, ale to wlasnie ona jest tym,
+        # co palec wyczuwa jako "napiecie" - brzusiec miesnia lezy glebiej
+        self.fascia = fascia
         self.name = name or datetime.now().strftime("sesja-%Y-%m-%d-%H%M")
         self.marks: list = []
         self._next_id = 1
@@ -134,7 +137,7 @@ class TensionMap:
     def analyse(self, mark: Mark, max_points: int = 6) -> dict:
         """Co lezy pod oznaczeniem i w jego zasiegu. Same fakty z modelu i zrodla."""
         out = {"mark": mark, "muscle": None, "muscle_dist_mm": None, "points": [],
-               "channels": {}}
+               "channels": {}, "fascia": None, "fascia_dist_mm": None}
         if self.muscles is not None:
             m, dist = self.muscles.muscle_under(mark.pos, max_dist=0.06)
             if m is not None:
@@ -144,6 +147,17 @@ class TensionMap:
                     cos = float(np.dot(_unit(mark.direction), m.axis))
                     out["dir_vs_fiber_deg"] = round(float(np.degrees(np.arccos(
                         np.clip(abs(cos), -1, 1)))), 1)
+        if self.fascia is not None:
+            sheet, fdist = self.fascia.at_position(mark.pos, max_dist=0.035)
+            if sheet is not None:
+                out["fascia"] = sheet
+                out["fascia_dist_mm"] = round(fdist * 1000, 1)
+                if mark.direction is not None:
+                    # kat do NORMALNEJ platu: 90 st. = ciagniecie wzdluz powiezi,
+                    # 0 st. = w poprzek, czyli napiecie ja rozciaga na przestrzal
+                    cosn = float(np.dot(_unit(mark.direction), _unit(sheet.normal)))
+                    out["dir_vs_sheet_deg"] = round(float(np.degrees(np.arccos(
+                        np.clip(abs(cosn), -1, 1)))), 1)
         near = []
         for k in self.atlas.markers:
             d = float(np.linalg.norm(k["pos"] - mark.pos))
@@ -179,8 +193,13 @@ class TensionMap:
                 head += f"   miesien: {a['muscle'].label} ({a['muscle_dist_mm']} mm)"
                 by_muscle[a["muscle"].label] = by_muscle.get(a["muscle"].label, 0) + mark.level
             if "dir_vs_fiber_deg" in a:
-                head += f"   kierunek vs wlokna: {a['dir_vs_fiber_deg']} st."
+                head += f"   kierunek vs os miesnia: {a['dir_vs_fiber_deg']} st."
             lines.append(head)
+            if a["fascia"] is not None:
+                f = f"     tkanka laczna: {a['fascia'].label} ({a['fascia_dist_mm']} mm)"
+                if "dir_vs_sheet_deg" in a:
+                    f += f"   kierunek vs plat: {a['dir_vs_sheet_deg']} st."
+                lines.append(f)
             if mark.note:
                 lines.append(f"     notatka: {mark.note}")
             for p in a["points"]:

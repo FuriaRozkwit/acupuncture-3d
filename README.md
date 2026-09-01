@@ -32,6 +32,13 @@ i stąd BL-23 ląduje 1,5 cun od linii pośrodkowej, a BL-52 3 cun, obydwa na wy
 
 Konsekwencja praktyczna: **wymiana modelu ciała nie unieważnia żadnej z 361 kotwic.**
 
+![Wektory użyte przy stawianiu punktu](docs/wektory.png)
+
+Na PC-6 widać wszystkie rodziny wektorów naraz: biała oś odcinka biegnie od łokcia do
+nadgarstka, zielona i niebieska strzałka to ramka poprzeczna (przód / bok) wyliczona
+z tej osi, złoty promień jest tym, co **stawia punkt na skórze**, turkusowa linia to oś
+pracy mięśnia pod spodem, różowa — styczna kanału.
+
 ## Przebiegi kanałów
 
 Kanał nie biegnie łamaną od punktu do punktu, więc linie prowadzi splajn
@@ -56,6 +63,7 @@ w około 3 sekundy zamiast 7.
 | skóra | BodyParts3D (`FMA7163`) | 90 tys. trójkątów |
 | mięśnie | Z-Anatomy, 477 osobnych obiektów | 1,08 mln trójkątów |
 | kości | Z-Anatomy, 1244 obiekty scalone | 220 tys. trójkątów |
+| tkanka łączna | Z-Anatomy, 198 obiektów (klawisz `h`) | 237 tys. trójkątów |
 
 Oba zbiory są w innych układach odniesienia. Przesunięcia nie zgadujemy — liczymy je,
 porównując położenie **tej samej kości** (krzyżowej i żuchwy) w obu zbiorach.
@@ -93,6 +101,85 @@ Powiązanie działa w obie strony:
 - wybierz mięsień → dostajesz punkty leżące nad nim wraz z odległością
   (mięsień brzuchaty łydki wskazuje BL-57 Chengshan w 4 mm, naramienny — LI-15 w 6 mm),
 - kliknij punkt → dostajesz mięsień pod nim i głębokość, na jakiej się zaczyna.
+
+## Tkanka łączna: powięzie i przegrody
+
+![Przegrody międzymięśniowe podudzia a kanały](docs/przegrody.png)
+
+Przez pierwsze wersje ta warstwa była **świadomie wyrzucana**. `prepare_meshes.py` miał
+listę odsiewającą wszystko, co nie jest brzuścem mięśnia, i wycinała ona 206 struktur:
+78 kaletek, 40 powięzi, 40 pochewek ścięgnistych, 18 troczków, 14 przegród
+międzymięśniowych, 6 rozcięgien, 6 więzadeł. Dla atlasu punktów była to decyzja słuszna —
+te płaty otaczają mięśnie, więc przechwytywałyby każde kliknięcie.
+
+Przestała być słuszna, kiedy doszła mapa napięć. To, co palec wyczuwa jako napięcie, to
+w dużej mierze powięź i ślizg między warstwami, a nie brzusiec leżący głębiej. Dlatego
+tkanka łączna wróciła — jako **osobna warstwa**, nie domieszka do mięśni:
+
+```bash
+python tools/prepare_fascia.py
+```
+
+Powięź opisuje się inaczej niż mięsień. Mięsień jest walcem i ma **oś**; powięź jest
+płatem i ma **normalną** — kierunek w poprzek płata, liczony jako oś najmniejszej
+wariancji chmury punktów. W zestawieniu mapy napięć widać oba kąty: kierunek napięcia
+względem osi mięśnia i względem płata (90° = ciągnie wzdłuż powięzi, 0° = rozciąga ją
+na przestrzał).
+
+Klawisz `h` dokłada kolejne klasy: przegrody, powięzi, troczki, rozcięgna, pochewki,
+kaletki. Warstwa ładuje się dopiero przy pierwszym użyciu.
+
+### Czy kanały biegną bruzdami?
+
+Przegrody międzymięśniowe wyznaczają granice między grupami mięśni, a te granice widać
+na skórze jako bruzdy. To pozwala postawić hipotezę z poprzedniej rozmowy w wersji
+**mierzalnej**: czy punkty i przebiegi kanałów leżą bliżej śladu przegrody niż przeciętne
+miejsce w tej samej okolicy?
+
+```bash
+python tools/analyze_septa.py
+```
+
+Metoda: bierzemy najpłytszą ćwiartkę każdej przegrody, rzutujemy ją na skórę (żółte
+kropki na rysunku), liczymy odległość badanego miejsca do tego śladu, a potem **to samo
+dla losowych miejsc skóry w promieniu 9 cm**. Bez tego tła liczba w milimetrach nic nie
+znaczy — na cienkim podudziu wszystko jest blisko wszystkiego. Wynikiem jest percentyl:
+0.50 oznaczałoby brak jakiegokolwiek związku.
+
+Z-Anatomy ma nazwane przegrody tylko dla ramienia, uda i podudzia, więc pomiar dotyczy
+122 punktów kotwiczonych na tych odcinkach.
+
+| co | mediana odległości | percentyl względem tła |
+|---|---|---|
+| punkty (n=122) | 46,1 mm | **0,426** (p = 0,10) |
+| próbki linii kanałów (n=464) | 53,7 mm | 0,404 |
+
+Czyli: w wersji mocnej — „kanały biegną bruzdami" — **hipoteza się nie broni**. Przewaga
+nad tłem jest, ale niewielka i nieistotna statystycznie.
+
+Rozbicie na kanały pokazuje jednak, że pytanie było źle postawione:
+
+| kanał | n | mediana | percentyl |
+|---|---|---|---|
+| KI | 8 | **5,7 mm** | 0,13 |
+| LI | 8 | 24,7 mm | 0,20 |
+| GB | 20 | **8,0 mm** | 0,21 |
+| LR | 14 | 45,0 mm | 0,32 |
+| SP | 12 | 34,7 mm | 0,35 |
+| BL | 22 | 55,7 mm | 0,52 |
+| ST | 20 | 83,8 mm | 0,55 |
+| SJ | 10 | 53,0 mm | 0,65 |
+
+Trzy kanały siedzą na przegrodach z dokładnością do kilku milimetrów, reszta nie ma z nimi
+nic wspólnego. GB-35 do GB-39 leżą na przegrodzie **przedniej** podudzia (od 3,5 do 8,3 mm),
+KI-7, KI-8, KI-9 oraz BL-58 i BL-59 na przegrodzie **poprzecznej** (od 1,1 do 9,6 mm).
+To zgadza się z podręcznikowym opisem tych punktów, a nie zostało w model wpisane — model
+nie zna słowa „przegroda", zna tylko geometrię.
+
+Uczciwa granica tego wyniku: kanał jest tu jednostką obserwacji, a jest ich dziewięć.
+Przy takiej próbie mediana percentyli 0,346 daje p = 0,33, czyli **nie da się odrzucić
+przypadku**. To jest hipoteza dobrze postawiona i warta sprawdzenia na większym materiale,
+a nie wynik.
 
 ## Mapa napięć
 
@@ -196,6 +283,7 @@ Zasoby anatomiczne są widoczne przez `/mnt/c`, więc nie trzeba ich generować 
 | `c` `v` | solo kolejnego kanału (z etykietami), `x` — wszystkie z powrotem |
 | `m` `l` | linie kanałów / etykiety kodów |
 | `k` `j` `b` | skóra / mięśnie / kości |
+| `h` | tkanka łączna — kolejne wciśnięcia dokładają klasy, od przegród do kaletek |
 | `r` | wyzeruj parametry wybranego mięśnia |
 | `w` | linie pracy mięśni — oś ciągu z grotami skierowanymi ku brzuścowi |
 | `t` | mapa napięć: klik stawia oznaczenie, `,`/`.` poziom, `g` kierunek, `z` cofnij |
@@ -222,6 +310,7 @@ acu3d/
   rig.py        model proceduralny (zapasowy) - proporcje z tabeli
   anchors.py    kotwica -> wspolrzedne 3D
   muscles.py    477 miesni w jednej siatce, deformacja aktywacyjna
+  fascia.py     198 platow lacznotkankowych; plat opisuje normalna, nie os
   model.py      spina cialo, punkty i meridiany
   viewer.py     okno, warstwy, wybor punktu i miesnia
 data/
@@ -229,11 +318,14 @@ data/
   muscles.json     katalog miesni: os dzialania, objetosc, strona
   rig_fitted.json  punkty kostne i linijka cun zmierzone na modelu
   meridians.json   przebiegi kanalow
+  fascia.json      katalog tkanki lacznej: klasa, normalna platu, rozpietosc
+  septa_analysis.json  pomiar: kanaly a przegrody miedzymiesniowe
   tension/         zapisy sesji z mapami napiec (poza repozytorium)
 tools/
   fetch_assets.py      pobranie i przygotowanie calej anatomii (jeden skrypt)
   blender_export.py    eksport siatek z pliku .blend
   prepare_meshes.py    obrot, decymacja, os glowna miesnia
+  prepare_fascia.py    warstwa lacznotkankowa (powiezi, przegrody, troczki)
   prepare_skin.py      skora BodyParts3D dopasowana do anatomii
   calibrate_rig.py     linijka cun z prawdziwych kosci
   build_points.py      tabele kotwic -> data/points.json
@@ -243,6 +335,7 @@ tools/
   validate.py          kontrola spojnosci atlasu
   verify_points.py     zgodnosc z opisami zrodlowymi
   fit_azimuth.py       pomiar kata ulozenia punktu wzgledem miesni
+  analyze_septa.py     czy kanaly biegna bruzdami miedzy grupami miesni
 ```
 
 ## Dokładność i jak jest sprawdzana

@@ -1,0 +1,4185 @@
+{
+ "source": "Z-Anatomy (CC BY-SA 4.0), eksport: tools/blender_export.py + prepare_fascia.py",
+ "coordinate_system": "+X = prawa strona, +Y = przod, +Z = gora, metry",
+ "note": "normal = kierunek najmniejszej wariancji, czyli w poprzek platu",
+ "classes": {
+  "aponeurosis": "rozciegno",
+  "bursa": "kaletka",
+  "fascia": "powiez",
+  "retinaculum": "troczek",
+  "septum": "przegroda miedzymiesniowa",
+  "sheath": "pochewka sciegnista"
+ },
+ "counts": {
+  "aponeurosis": 8,
+  "bursa": 78,
+  "fascia": 40,
+  "retinaculum": 18,
+  "septum": 14,
+  "sheath": 40
+ },
+ "merged": {
+  "file": "fascia_merged.vtp",
+  "polys": 237246
+ },
+ "items": [
+  {
+   "id": "epicranial-aponeurosis-l",
+   "name": "Epicranial aponeurosis",
+   "class": "aponeurosis",
+   "side": "L",
+   "file": "fascia/epicranial-aponeurosis-l.vtp",
+   "polys": 2500,
+   "centroid": [
+    -0.03504,
+    -0.03405,
+    1.65123
+   ],
+   "normal": [
+    0.92652,
+    0.08581,
+    -0.36632
+   ],
+   "thickness": 0.08332,
+   "span": 0.06834,
+   "index": 0
+  },
+  {
+   "id": "epicranial-aponeurosis-r",
+   "name": "Epicranial aponeurosis",
+   "class": "aponeurosis",
+   "side": "R",
+   "file": "fascia/epicranial-aponeurosis-r.vtp",
+   "polys": 2500,
+   "centroid": [
+    0.03504,
+    -0.03405,
+    1.65123
+   ],
+   "normal": [
+    0.92652,
+    -0.08581,
+    0.36632
+   ],
+   "thickness": 0.08332,
+   "span": 0.06834,
+   "index": 1
+  },
+  {
+   "id": "palmar-aponeurosis-l",
+   "name": "Palmar aponeurosis",
+   "class": "aponeurosis",
+   "side": "L",
+   "file": "fascia/palmar-aponeurosis-l.vtp",
+   "polys": 1284,
+   "centroid": [
+    -0.27915,
+    0.05731,
+    0.77231
+   ],
+   "normal": [
+    0.0407,
+    0.95638,
+    0.28928
+   ],
+   "thickness": 0.04494,
+   "span": 0.04312,
+   "index": 2
+  },
+  {
+   "id": "palmar-aponeurosis-r",
+   "name": "Palmar aponeurosis",
+   "class": "aponeurosis",
+   "side": "R",
+   "file": "fascia/palmar-aponeurosis-r.vtp",
+   "polys": 1284,
+   "centroid": [
+    0.27915,
+    0.05731,
+    0.77231
+   ],
+   "normal": [
+    0.0407,
+    -0.95638,
+    -0.28928
+   ],
+   "thickness": 0.04494,
+   "span": 0.04312,
+   "index": 3
+  },
+  {
+   "id": "plantar-aponeurosis-l",
+   "name": "Plantar aponeurosis",
+   "class": "aponeurosis",
+   "side": "L",
+   "file": "fascia/plantar-aponeurosis-l.vtp",
+   "polys": 406,
+   "centroid": [
+    -0.08351,
+    0.00514,
+    0.01489
+   ],
+   "normal": [
+    0.21061,
+    0.00464,
+    -0.97756
+   ],
+   "thickness": 0.01596,
+   "span": 0.03887,
+   "index": 4
+  },
+  {
+   "id": "plantar-aponeurosis-r",
+   "name": "Plantar aponeurosis",
+   "class": "aponeurosis",
+   "side": "R",
+   "file": "fascia/plantar-aponeurosis-r.vtp",
+   "polys": 406,
+   "centroid": [
+    0.08351,
+    0.00514,
+    0.01489
+   ],
+   "normal": [
+    0.21061,
+    -0.00464,
+    0.97756
+   ],
+   "thickness": 0.01596,
+   "span": 0.03887,
+   "index": 5
+  },
+  {
+   "id": "tendinous-arch-of-levator-ani-l",
+   "name": "Tendinous arch of levator ani",
+   "class": "aponeurosis",
+   "side": "L",
+   "file": "fascia/tendinous-arch-of-levator-ani-l.vtp",
+   "polys": 750,
+   "centroid": [
+    -0.03598,
+    -0.01422,
+    0.84686
+   ],
+   "normal": [
+    0.78046,
+    -0.46652,
+    -0.41623
+   ],
+   "thickness": 0.0059,
+   "span": 0.02334,
+   "index": 6
+  },
+  {
+   "id": "tendinous-arch-of-levator-ani-r",
+   "name": "Tendinous arch of levator ani",
+   "class": "aponeurosis",
+   "side": "R",
+   "file": "fascia/tendinous-arch-of-levator-ani-r.vtp",
+   "polys": 750,
+   "centroid": [
+    0.03598,
+    -0.01422,
+    0.84686
+   ],
+   "normal": [
+    0.78046,
+    0.46652,
+    0.41623
+   ],
+   "thickness": 0.0059,
+   "span": 0.02334,
+   "index": 7
+  },
+  {
+   "id": "iliopectineal-bursa-l",
+   "name": "(Iliopectineal bursa)",
+   "class": "bursa",
+   "side": "L",
+   "file": "fascia/iliopectineal-bursa-l.vtp",
+   "polys": 1472,
+   "centroid": [
+    -0.08204,
+    0.02033,
+    0.86197
+   ],
+   "normal": [
+    0.24796,
+    -0.95984,
+    0.13122
+   ],
+   "thickness": 0.006,
+   "span": 0.01112,
+   "index": 8
+  },
+  {
+   "id": "iliopectineal-bursa-r",
+   "name": "(Iliopectineal bursa)",
+   "class": "bursa",
+   "side": "R",
+   "file": "fascia/iliopectineal-bursa-r.vtp",
+   "polys": 1472,
+   "centroid": [
+    0.08204,
+    0.02033,
+    0.86197
+   ],
+   "normal": [
+    0.24796,
+    0.95984,
+    -0.13122
+   ],
+   "thickness": 0.006,
+   "span": 0.01112,
+   "index": 9
+  },
+  {
+   "id": "anserine-bursa-l",
+   "name": "Anserine bursa",
+   "class": "bursa",
+   "side": "L",
+   "file": "fascia/anserine-bursa-l.vtp",
+   "polys": 1216,
+   "centroid": [
+    -0.05442,
+    -0.02333,
+    0.3804
+   ],
+   "normal": [
+    0.861,
+    0.4593,
+    -0.21847
+   ],
+   "thickness": 0.00283,
+   "span": 0.0096,
+   "index": 10
+  },
+  {
+   "id": "anserine-bursa-r",
+   "name": "Anserine bursa",
+   "class": "bursa",
+   "side": "R",
+   "file": "fascia/anserine-bursa-r.vtp",
+   "polys": 1216,
+   "centroid": [
+    0.05442,
+    -0.02333,
+    0.3804
+   ],
+   "normal": [
+    0.861,
+    -0.4593,
+    0.21847
+   ],
+   "thickness": 0.00283,
+   "span": 0.0096,
+   "index": 11
+  },
+  {
+   "id": "bicipitoradial-bursa-l",
+   "name": "Bicipitoradial bursa",
+   "class": "bursa",
+   "side": "L",
+   "file": "fascia/bicipitoradial-bursa-l.vtp",
+   "polys": 1472,
+   "centroid": [
+    -0.23874,
+    -0.01291,
+    1.06026
+   ],
+   "normal": [
+    0.63335,
+    0.75445,
+    0.17226
+   ],
+   "thickness": 0.00371,
+   "span": 0.00534,
+   "index": 12
+  },
+  {
+   "id": "bicipitoradial-bursa-r",
+   "name": "Bicipitoradial bursa",
+   "class": "bursa",
+   "side": "R",
+   "file": "fascia/bicipitoradial-bursa-r.vtp",
+   "polys": 1472,
+   "centroid": [
+    0.23874,
+    -0.01291,
+    1.06026
+   ],
+   "normal": [
+    0.63335,
+    -0.75445,
+    -0.17226
+   ],
+   "thickness": 0.00371,
+   "span": 0.00534,
+   "index": 13
+  },
+  {
+   "id": "bursa-of-piriformis-muscle-l",
+   "name": "Bursa of piriformis muscle",
+   "class": "bursa",
+   "side": "L",
+   "file": "fascia/bursa-of-piriformis-muscle-l.vtp",
+   "polys": 1472,
+   "centroid": [
+    -0.12351,
+    -0.01688,
+    0.85742
+   ],
+   "normal": [
+    0.61959,
+    0.76596,
+    -0.1715
+   ],
+   "thickness": 0.00403,
+   "span": 0.00309,
+   "index": 14
+  },
+  {
+   "id": "bursa-of-piriformis-muscle-r",
+   "name": "Bursa of piriformis muscle",
+   "class": "bursa",
+   "side": "R",
+   "file": "fascia/bursa-of-piriformis-muscle-r.vtp",
+   "polys": 1472,
+   "centroid": [
+    0.12351,
+    -0.01688,
+    0.85742
+   ],
+   "normal": [
+    0.61959,
+    -0.76596,
+    0.1715
+   ],
+   "thickness": 0.00403,
+   "span": 0.00309,
+   "index": 15
+  },
+  {
+   "id": "coracobrachial-bursa-l",
+   "name": "Coracobrachial bursa",
+   "class": "bursa",
+   "side": "L",
+   "file": "fascia/coracobrachial-bursa-l.vtp",
+   "polys": 1472,
+   "centroid": [
+    -0.14803,
+    -0.0111,
+    1.37651
+   ],
+   "normal": [
+    0.46479,
+    0.80175,
+    -0.37573
+   ],
+   "thickness": 0.00439,
+   "span": 0.00818,
+   "index": 16
+  },
+  {
+   "id": "coracobrachial-bursa-r",
+   "name": "Coracobrachial bursa",
+   "class": "bursa",
+   "side": "R",
+   "file": "fascia/coracobrachial-bursa-r.vtp",
+   "polys": 1472,
+   "centroid": [
+    0.14803,
+    -0.0111,
+    1.37651
+   ],
+   "normal": [
+    0.46479,
+    -0.80175,
+    0.37573
+   ],
+   "thickness": 0.00439,
+   "span": 0.00818,
+   "index": 17
+  },
+  {
+   "id": "deep-infrapatellar-bursa-l",
+   "name": "Deep infrapatellar bursa",
+   "class": "bursa",
+   "side": "L",
+   "file": "fascia/deep-infrapatellar-bursa-l.vtp",
+   "polys": 992,
+   "centroid": [
+    -0.08638,
+    0.00391,
+    0.41632
+   ],
+   "normal": [
+    0.02256,
+    -0.98752,
+    -0.15589
+   ],
+   "thickness": 0.00285,
+   "span": 0.00527,
+   "index": 18
+  },
+  {
+   "id": "deep-infrapatellar-bursa-r",
+   "name": "Deep infrapatellar bursa",
+   "class": "bursa",
+   "side": "R",
+   "file": "fascia/deep-infrapatellar-bursa-r.vtp",
+   "polys": 992,
+   "centroid": [
+    0.08638,
+    0.00391,
+    0.41632
+   ],
+   "normal": [
+    0.02256,
+    0.98752,
+    0.15589
+   ],
+   "thickness": 0.00285,
+   "span": 0.00527,
+   "index": 19
+  },
+  {
+   "id": "inferior-subtendinous-bursa-of-biceps-femoris-muscle-l",
+   "name": "Inferior subtendinous bursa of biceps femoris muscle",
+   "class": "bursa",
+   "side": "L",
+   "file": "fascia/inferior-subtendinous-bursa-of-biceps-femoris-muscle-l.vtp",
+   "polys": 992,
+   "centroid": [
+    -0.12002,
+    -0.0478,
+    0.40652
+   ],
+   "normal": [
+    0.82324,
+    0.5575,
+    -0.10708
+   ],
+   "thickness": 0.00438,
+   "span": 0.00509,
+   "index": 20
+  },
+  {
+   "id": "inferior-subtendinous-bursa-of-biceps-femoris-muscle-r",
+   "name": "Inferior subtendinous bursa of biceps femoris muscle",
+   "class": "bursa",
+   "side": "R",
+   "file": "fascia/inferior-subtendinous-bursa-of-biceps-femoris-muscle-r.vtp",
+   "polys": 992,
+   "centroid": [
+    0.12002,
+    -0.0478,
+    0.40652
+   ],
+   "normal": [
+    0.82324,
+    -0.5575,
+    0.10708
+   ],
+   "thickness": 0.00438,
+   "span": 0.00509,
+   "index": 21
+  },
+  {
+   "id": "intermuscular-gluteal-bursae-l",
+   "name": "Intermuscular gluteal bursae",
+   "class": "bursa",
+   "side": "L",
+   "file": "fascia/intermuscular-gluteal-bursae-l.vtp",
+   "polys": 1240,
+   "centroid": [
+    -0.10406,
+    -0.0337,
+    0.76506
+   ],
+   "normal": [
+    0.81649,
+    0.57648,
+    0.03191
+   ],
+   "thickness": 0.00452,
+   "span": 0.01095,
+   "index": 22
+  },
+  {
+   "id": "intermuscular-gluteal-bursae-r",
+   "name": "Intermuscular gluteal bursae",
+   "class": "bursa",
+   "side": "R",
+   "file": "fascia/intermuscular-gluteal-bursae-r.vtp",
+   "polys": 2500,
+   "centroid": [
+    0.10425,
+    -0.03379,
+    0.76526
+   ],
+   "normal": [
+    0.81522,
+    -0.57835,
+    -0.03045
+   ],
+   "thickness": 0.00452,
+   "span": 0.0097,
+   "index": 23
+  },
+  {
+   "id": "lateral-subtendinous-bursa-of-gastrocnemius-muscle-l",
+   "name": "Lateral subtendinous bursa of gastrocnemius muscle",
+   "class": "bursa",
+   "side": "L",
+   "file": "fascia/lateral-subtendinous-bursa-of-gastrocnemius-muscle-l.vtp",
+   "polys": 992,
+   "centroid": [
+    -0.10594,
+    -0.03927,
+    0.47562
+   ],
+   "normal": [
+    0.50639,
+    0.54897,
+    -0.66498
+   ],
+   "thickness": 0.00399,
+   "span": 0.00626,
+   "index": 24
+  },
+  {
+   "id": "lateral-subtendinous-bursa-of-gastrocnemius-muscle-r",
+   "name": "Lateral subtendinous bursa of gastrocnemius muscle",
+   "class": "bursa",
+   "side": "R",
+   "file": "fascia/lateral-subtendinous-bursa-of-gastrocnemius-muscle-r.vtp",
+   "polys": 992,
+   "centroid": [
+    0.10594,
+    -0.03927,
+    0.47562
+   ],
+   "normal": [
+    0.50639,
+    -0.54897,
+    0.66498
+   ],
+   "thickness": 0.00399,
+   "span": 0.00626,
+   "index": 25
+  },
+  {
+   "id": "medial-subtendinous-bursa-of-gastrocnemius-muscle-l",
+   "name": "Medial subtendinous bursa of gastrocnemius muscle",
+   "class": "bursa",
+   "side": "L",
+   "file": "fascia/medial-subtendinous-bursa-of-gastrocnemius-muscle-l.vtp",
+   "polys": 864,
+   "centroid": [
+    -0.06114,
+    -0.03096,
+    0.48754
+   ],
+   "normal": [
+    0.13901,
+    0.95796,
+    -0.25096
+   ],
+   "thickness": 0.00313,
+   "span": 0.0072,
+   "index": 26
+  },
+  {
+   "id": "medial-subtendinous-bursa-of-gastrocnemius-muscle-r",
+   "name": "Medial subtendinous bursa of gastrocnemius muscle",
+   "class": "bursa",
+   "side": "R",
+   "file": "fascia/medial-subtendinous-bursa-of-gastrocnemius-muscle-r.vtp",
+   "polys": 864,
+   "centroid": [
+    0.06114,
+    -0.03096,
+    0.48754
+   ],
+   "normal": [
+    0.13901,
+    -0.95796,
+    0.25096
+   ],
+   "thickness": 0.00313,
+   "span": 0.0072,
+   "index": 27
+  },
+  {
+   "id": "sciatic-bursa-of-gluteus-maximus-muscle-l",
+   "name": "Sciatic bursa of gluteus maximus muscle",
+   "class": "bursa",
+   "side": "L",
+   "file": "fascia/sciatic-bursa-of-gluteus-maximus-muscle-l.vtp",
+   "polys": 1472,
+   "centroid": [
+    -0.05977,
+    -0.04974,
+    0.81302
+   ],
+   "normal": [
+    0.40245,
+    0.71492,
+    0.57177
+   ],
+   "thickness": 0.01157,
+   "span": 0.01085,
+   "index": 28
+  },
+  {
+   "id": "sciatic-bursa-of-gluteus-maximus-muscle-r",
+   "name": "Sciatic bursa of gluteus maximus muscle",
+   "class": "bursa",
+   "side": "R",
+   "file": "fascia/sciatic-bursa-of-gluteus-maximus-muscle-r.vtp",
+   "polys": 1472,
+   "centroid": [
+    0.05977,
+    -0.04974,
+    0.81302
+   ],
+   "normal": [
+    0.40245,
+    -0.71492,
+    -0.57177
+   ],
+   "thickness": 0.01157,
+   "span": 0.01085,
+   "index": 29
+  },
+  {
+   "id": "sciatic-bursa-of-obturator-internus-l",
+   "name": "Sciatic bursa of obturator internus",
+   "class": "bursa",
+   "side": "L",
+   "file": "fascia/sciatic-bursa-of-obturator-internus-l.vtp",
+   "polys": 1472,
+   "centroid": [
+    -0.05362,
+    -0.04955,
+    0.84951
+   ],
+   "normal": [
+    0.60805,
+    -0.79259,
+    0.04568
+   ],
+   "thickness": 0.00568,
+   "span": 0.00733,
+   "index": 30
+  },
+  {
+   "id": "sciatic-bursa-of-obturator-internus-r",
+   "name": "Sciatic bursa of obturator internus",
+   "class": "bursa",
+   "side": "R",
+   "file": "fascia/sciatic-bursa-of-obturator-internus-r.vtp",
+   "polys": 1472,
+   "centroid": [
+    0.05362,
+    -0.04955,
+    0.84951
+   ],
+   "normal": [
+    0.60805,
+    0.79259,
+    -0.04568
+   ],
+   "thickness": 0.00568,
+   "span": 0.00733,
+   "index": 31
+  },
+  {
+   "id": "semimembranosus-bursa-l",
+   "name": "Semimembranosus bursa",
+   "class": "bursa",
+   "side": "L",
+   "file": "fascia/semimembranosus-bursa-l.vtp",
+   "polys": 992,
+   "centroid": [
+    -0.0429,
+    -0.02958,
+    0.40895
+   ],
+   "normal": [
+    0.85777,
+    0.34954,
+    -0.3769
+   ],
+   "thickness": 0.00284,
+   "span": 0.00693,
+   "index": 32
+  },
+  {
+   "id": "semimembranosus-bursa-r",
+   "name": "Semimembranosus bursa",
+   "class": "bursa",
+   "side": "R",
+   "file": "fascia/semimembranosus-bursa-r.vtp",
+   "polys": 992,
+   "centroid": [
+    0.0429,
+    -0.02958,
+    0.40895
+   ],
+   "normal": [
+    0.85777,
+    -0.34954,
+    0.3769
+   ],
+   "thickness": 0.00284,
+   "span": 0.00693,
+   "index": 33
+  },
+  {
+   "id": "subacromial-bursa-l",
+   "name": "Subacromial bursa",
+   "class": "bursa",
+   "side": "L",
+   "file": "fascia/subacromial-bursa-l.vtp",
+   "polys": 1472,
+   "centroid": [
+    -0.16067,
+    -0.03324,
+    1.40564
+   ],
+   "normal": [
+    0.06171,
+    -0.22336,
+    0.97278
+   ],
+   "thickness": 0.00609,
+   "span": 0.00823,
+   "index": 34
+  },
+  {
+   "id": "subacromial-bursa-r",
+   "name": "Subacromial bursa",
+   "class": "bursa",
+   "side": "R",
+   "file": "fascia/subacromial-bursa-r.vtp",
+   "polys": 1472,
+   "centroid": [
+    0.16067,
+    -0.03324,
+    1.40564
+   ],
+   "normal": [
+    0.06171,
+    0.22336,
+    -0.97278
+   ],
+   "thickness": 0.00609,
+   "span": 0.00823,
+   "index": 35
+  },
+  {
+   "id": "subcutaneous-acromial-bursa-l",
+   "name": "Subcutaneous acromial bursa",
+   "class": "bursa",
+   "side": "L",
+   "file": "fascia/subcutaneous-acromial-bursa-l.vtp",
+   "polys": 1472,
+   "centroid": [
+    -0.16071,
+    -0.04566,
+    1.41541
+   ],
+   "normal": [
+    0.25726,
+    0.21434,
+    -0.94227
+   ],
+   "thickness": 0.0086,
+   "span": 0.01586,
+   "index": 36
+  },
+  {
+   "id": "subcutaneous-acromial-bursa-r",
+   "name": "Subcutaneous acromial bursa",
+   "class": "bursa",
+   "side": "R",
+   "file": "fascia/subcutaneous-acromial-bursa-r.vtp",
+   "polys": 1472,
+   "centroid": [
+    0.16071,
+    -0.04566,
+    1.41541
+   ],
+   "normal": [
+    0.25726,
+    -0.21434,
+    0.94227
+   ],
+   "thickness": 0.0086,
+   "span": 0.01586,
+   "index": 37
+  },
+  {
+   "id": "subcutaneous-bursa-of-lateral-malleolus-l",
+   "name": "Subcutaneous bursa of lateral malleolus",
+   "class": "bursa",
+   "side": "L",
+   "file": "fascia/subcutaneous-bursa-of-lateral-malleolus-l.vtp",
+   "polys": 656,
+   "centroid": [
+    -0.10785,
+    -0.05074,
+    0.07001
+   ],
+   "normal": [
+    0.99985,
+    -0.00374,
+    0.01712
+   ],
+   "thickness": 0.00431,
+   "span": 0.0065,
+   "index": 38
+  },
+  {
+   "id": "subcutaneous-bursa-of-lateral-malleolus-r",
+   "name": "Subcutaneous bursa of lateral malleolus",
+   "class": "bursa",
+   "side": "R",
+   "file": "fascia/subcutaneous-bursa-of-lateral-malleolus-r.vtp",
+   "polys": 656,
+   "centroid": [
+    0.10785,
+    -0.05074,
+    0.07001
+   ],
+   "normal": [
+    0.99985,
+    0.00374,
+    -0.01712
+   ],
+   "thickness": 0.00431,
+   "span": 0.0065,
+   "index": 39
+  },
+  {
+   "id": "subcutaneous-bursa-of-medial-malleolus-l",
+   "name": "Subcutaneous bursa of medial malleolus",
+   "class": "bursa",
+   "side": "L",
+   "file": "fascia/subcutaneous-bursa-of-medial-malleolus-l.vtp",
+   "polys": 656,
+   "centroid": [
+    -0.04903,
+    -0.03547,
+    0.08958
+   ],
+   "normal": [
+    0.97994,
+    0.11658,
+    0.16165
+   ],
+   "thickness": 0.00525,
+   "span": 0.00781,
+   "index": 40
+  },
+  {
+   "id": "subcutaneous-bursa-of-medial-malleolus-r",
+   "name": "Subcutaneous bursa of medial malleolus",
+   "class": "bursa",
+   "side": "R",
+   "file": "fascia/subcutaneous-bursa-of-medial-malleolus-r.vtp",
+   "polys": 656,
+   "centroid": [
+    0.04903,
+    -0.03547,
+    0.08958
+   ],
+   "normal": [
+    0.97994,
+    -0.11658,
+    -0.16165
+   ],
+   "thickness": 0.00525,
+   "span": 0.00781,
+   "index": 41
+  },
+  {
+   "id": "subcutaneous-bursa-of-tuberosity-of-tibia-l",
+   "name": "Subcutaneous bursa of tuberosity of tibia",
+   "class": "bursa",
+   "side": "L",
+   "file": "fascia/subcutaneous-bursa-of-tuberosity-of-tibia-l.vtp",
+   "polys": 1472,
+   "centroid": [
+    -0.08237,
+    0.0079,
+    0.38572
+   ],
+   "normal": [
+    0.06407,
+    -0.976,
+    0.20813
+   ],
+   "thickness": 0.00607,
+   "span": 0.00825,
+   "index": 42
+  },
+  {
+   "id": "subcutaneous-bursa-of-tuberosity-of-tibia-r",
+   "name": "Subcutaneous bursa of tuberosity of tibia",
+   "class": "bursa",
+   "side": "R",
+   "file": "fascia/subcutaneous-bursa-of-tuberosity-of-tibia-r.vtp",
+   "polys": 1472,
+   "centroid": [
+    0.08237,
+    0.0079,
+    0.38572
+   ],
+   "normal": [
+    0.06407,
+    0.976,
+    -0.20813
+   ],
+   "thickness": 0.00607,
+   "span": 0.00825,
+   "index": 43
+  },
+  {
+   "id": "subcutaneous-calcaneal-bursa-l",
+   "name": "Subcutaneous calcaneal bursa",
+   "class": "bursa",
+   "side": "L",
+   "file": "fascia/subcutaneous-calcaneal-bursa-l.vtp",
+   "polys": 544,
+   "centroid": [
+    -0.0687,
+    -0.08986,
+    0.04333
+   ],
+   "normal": [
+    0.33467,
+    -0.94128,
+    0.04468
+   ],
+   "thickness": 0.00469,
+   "span": 0.00882,
+   "index": 44
+  },
+  {
+   "id": "subcutaneous-calcaneal-bursa-r",
+   "name": "Subcutaneous calcaneal bursa",
+   "class": "bursa",
+   "side": "R",
+   "file": "fascia/subcutaneous-calcaneal-bursa-r.vtp",
+   "polys": 544,
+   "centroid": [
+    0.0687,
+    -0.08986,
+    0.04333
+   ],
+   "normal": [
+    0.33467,
+    0.94128,
+    -0.04468
+   ],
+   "thickness": 0.00469,
+   "span": 0.00882,
+   "index": 45
+  },
+  {
+   "id": "subcutaneous-infrapatellar-bursa-l",
+   "name": "Subcutaneous infrapatellar bursa",
+   "class": "bursa",
+   "side": "L",
+   "file": "fascia/subcutaneous-infrapatellar-bursa-l.vtp",
+   "polys": 1472,
+   "centroid": [
+    -0.08527,
+    0.0097,
+    0.40971
+   ],
+   "normal": [
+    0.02573,
+    -0.99965,
+    0.00662
+   ],
+   "thickness": 0.00629,
+   "span": 0.00821,
+   "index": 46
+  },
+  {
+   "id": "subcutaneous-infrapatellar-bursa-r",
+   "name": "Subcutaneous infrapatellar bursa",
+   "class": "bursa",
+   "side": "R",
+   "file": "fascia/subcutaneous-infrapatellar-bursa-r.vtp",
+   "polys": 1472,
+   "centroid": [
+    0.08527,
+    0.0097,
+    0.40971
+   ],
+   "normal": [
+    0.02573,
+    0.99965,
+    -0.00662
+   ],
+   "thickness": 0.00629,
+   "span": 0.00821,
+   "index": 47
+  },
+  {
+   "id": "subcutaneous-prepatellar-bursa-l",
+   "name": "Subcutaneous prepatellar bursa",
+   "class": "bursa",
+   "side": "L",
+   "file": "fascia/subcutaneous-prepatellar-bursa-l.vtp",
+   "polys": 992,
+   "centroid": [
+    -0.08506,
+    0.01745,
+    0.44143
+   ],
+   "normal": [
+    0.00409,
+    0.97003,
+    -0.24295
+   ],
+   "thickness": 0.00292,
+   "span": 0.00581,
+   "index": 48
+  },
+  {
+   "id": "subcutaneous-prepatellar-bursa-r",
+   "name": "Subcutaneous prepatellar bursa",
+   "class": "bursa",
+   "side": "R",
+   "file": "fascia/subcutaneous-prepatellar-bursa-r.vtp",
+   "polys": 992,
+   "centroid": [
+    0.08506,
+    0.01745,
+    0.44143
+   ],
+   "normal": [
+    0.00409,
+    -0.97003,
+    0.24295
+   ],
+   "thickness": 0.00292,
+   "span": 0.00581,
+   "index": 49
+  },
+  {
+   "id": "subcutaneous-trochanteric-bursa-l",
+   "name": "Subcutaneous trochanteric bursa",
+   "class": "bursa",
+   "side": "L",
+   "file": "fascia/subcutaneous-trochanteric-bursa-l.vtp",
+   "polys": 1472,
+   "centroid": [
+    -0.14526,
+    -0.01479,
+    0.83067
+   ],
+   "normal": [
+    0.96384,
+    -0.05565,
+    0.26062
+   ],
+   "thickness": 0.00901,
+   "span": 0.01069,
+   "index": 50
+  },
+  {
+   "id": "subcutaneous-trochanteric-bursa-r",
+   "name": "Subcutaneous trochanteric bursa",
+   "class": "bursa",
+   "side": "R",
+   "file": "fascia/subcutaneous-trochanteric-bursa-r.vtp",
+   "polys": 1472,
+   "centroid": [
+    0.14526,
+    -0.01479,
+    0.83067
+   ],
+   "normal": [
+    0.96384,
+    0.05565,
+    -0.26062
+   ],
+   "thickness": 0.00901,
+   "span": 0.01069,
+   "index": 51
+  },
+  {
+   "id": "subdeltoid-bursa-l",
+   "name": "Subdeltoid bursa",
+   "class": "bursa",
+   "side": "L",
+   "file": "fascia/subdeltoid-bursa-l.vtp",
+   "polys": 1472,
+   "centroid": [
+    -0.19119,
+    -0.02015,
+    1.39271
+   ],
+   "normal": [
+    0.90364,
+    -0.27477,
+    -0.32853
+   ],
+   "thickness": 0.00802,
+   "span": 0.01057,
+   "index": 52
+  },
+  {
+   "id": "subdeltoid-bursa-r",
+   "name": "Subdeltoid bursa",
+   "class": "bursa",
+   "side": "R",
+   "file": "fascia/subdeltoid-bursa-r.vtp",
+   "polys": 1472,
+   "centroid": [
+    0.19119,
+    -0.02015,
+    1.39271
+   ],
+   "normal": [
+    0.90364,
+    0.27477,
+    0.32853
+   ],
+   "thickness": 0.00802,
+   "span": 0.01057,
+   "index": 53
+  },
+  {
+   "id": "subfacial-prepatellar-bursa-l",
+   "name": "Subfacial prepatellar bursa",
+   "class": "bursa",
+   "side": "L",
+   "file": "fascia/subfacial-prepatellar-bursa-l.vtp",
+   "polys": 992,
+   "centroid": [
+    -0.08506,
+    0.01573,
+    0.44172
+   ],
+   "normal": [
+    0.0032,
+    0.93604,
+    -0.35188
+   ],
+   "thickness": 0.00174,
+   "span": 0.00672,
+   "index": 54
+  },
+  {
+   "id": "subfacial-prepatellar-bursa-r",
+   "name": "Subfacial prepatellar bursa",
+   "class": "bursa",
+   "side": "R",
+   "file": "fascia/subfacial-prepatellar-bursa-r.vtp",
+   "polys": 992,
+   "centroid": [
+    0.08506,
+    0.01573,
+    0.44172
+   ],
+   "normal": [
+    0.0032,
+    -0.93604,
+    0.35188
+   ],
+   "thickness": 0.00174,
+   "span": 0.00672,
+   "index": 55
+  },
+  {
+   "id": "subtendinous-bursa-of-iliacus-muscle-l",
+   "name": "Subtendinous bursa of iliacus muscle",
+   "class": "bursa",
+   "side": "L",
+   "file": "fascia/subtendinous-bursa-of-iliacus-muscle-l.vtp",
+   "polys": 352,
+   "centroid": [
+    -0.09238,
+    -0.01457,
+    0.79177
+   ],
+   "normal": [
+    0.85168,
+    0.51163,
+    -0.11347
+   ],
+   "thickness": 0.00482,
+   "span": 0.00691,
+   "index": 56
+  },
+  {
+   "id": "subtendinous-bursa-of-iliacus-muscle-r",
+   "name": "Subtendinous bursa of iliacus muscle",
+   "class": "bursa",
+   "side": "R",
+   "file": "fascia/subtendinous-bursa-of-iliacus-muscle-r.vtp",
+   "polys": 352,
+   "centroid": [
+    0.09238,
+    -0.01457,
+    0.79177
+   ],
+   "normal": [
+    0.85168,
+    -0.51163,
+    0.11347
+   ],
+   "thickness": 0.00482,
+   "span": 0.00691,
+   "index": 57
+  },
+  {
+   "id": "subtendinous-bursa-of-infraspinatus-muscle-l",
+   "name": "Subtendinous bursa of infraspinatus muscle",
+   "class": "bursa",
+   "side": "L",
+   "file": "fascia/subtendinous-bursa-of-infraspinatus-muscle-l.vtp",
+   "polys": 1472,
+   "centroid": [
+    -0.18138,
+    -0.04278,
+    1.38976
+   ],
+   "normal": [
+    0.41596,
+    0.82705,
+    -0.37811
+   ],
+   "thickness": 0.00601,
+   "span": 0.00668,
+   "index": 58
+  },
+  {
+   "id": "subtendinous-bursa-of-infraspinatus-muscle-r",
+   "name": "Subtendinous bursa of infraspinatus muscle",
+   "class": "bursa",
+   "side": "R",
+   "file": "fascia/subtendinous-bursa-of-infraspinatus-muscle-r.vtp",
+   "polys": 1472,
+   "centroid": [
+    0.18138,
+    -0.04278,
+    1.38976
+   ],
+   "normal": [
+    0.41596,
+    -0.82705,
+    0.37811
+   ],
+   "thickness": 0.00601,
+   "span": 0.00668,
+   "index": 59
+  },
+  {
+   "id": "subtendinous-bursa-of-obturator-internus-l",
+   "name": "Subtendinous bursa of obturator internus",
+   "class": "bursa",
+   "side": "L",
+   "file": "fascia/subtendinous-bursa-of-obturator-internus-l.vtp",
+   "polys": 1472,
+   "centroid": [
+    -0.10649,
+    -0.02113,
+    0.84626
+   ],
+   "normal": [
+    0.43964,
+    0.81842,
+    -0.37002
+   ],
+   "thickness": 0.00311,
+   "span": 0.0036,
+   "index": 60
+  },
+  {
+   "id": "subtendinous-bursa-of-obturator-internus-r",
+   "name": "Subtendinous bursa of obturator internus",
+   "class": "bursa",
+   "side": "R",
+   "file": "fascia/subtendinous-bursa-of-obturator-internus-r.vtp",
+   "polys": 1472,
+   "centroid": [
+    0.10649,
+    -0.02113,
+    0.84626
+   ],
+   "normal": [
+    0.43964,
+    -0.81842,
+    0.37002
+   ],
+   "thickness": 0.00311,
+   "span": 0.0036,
+   "index": 61
+  },
+  {
+   "id": "subtendinous-bursa-of-sartorius-muscle-l",
+   "name": "Subtendinous bursa of sartorius muscle",
+   "class": "bursa",
+   "side": "L",
+   "file": "fascia/subtendinous-bursa-of-sartorius-muscle-l.vtp",
+   "polys": 1296,
+   "centroid": [
+    -0.06517,
+    -0.01007,
+    0.37948
+   ],
+   "normal": [
+    0.75749,
+    0.64533,
+    -0.0988
+   ],
+   "thickness": 0.00198,
+   "span": 0.01253,
+   "index": 62
+  },
+  {
+   "id": "subtendinous-bursa-of-sartorius-muscle-r",
+   "name": "Subtendinous bursa of sartorius muscle",
+   "class": "bursa",
+   "side": "R",
+   "file": "fascia/subtendinous-bursa-of-sartorius-muscle-r.vtp",
+   "polys": 1296,
+   "centroid": [
+    0.06517,
+    -0.01007,
+    0.37948
+   ],
+   "normal": [
+    0.75749,
+    -0.64533,
+    0.0988
+   ],
+   "thickness": 0.00198,
+   "span": 0.01253,
+   "index": 63
+  },
+  {
+   "id": "subtendinous-bursa-of-teres-major-muscle-l",
+   "name": "Subtendinous bursa of teres major muscle",
+   "class": "bursa",
+   "side": "L",
+   "file": "fascia/subtendinous-bursa-of-teres-major-muscle-l.vtp",
+   "polys": 1472,
+   "centroid": [
+    -0.18288,
+    -0.02268,
+    1.32453
+   ],
+   "normal": [
+    0.8475,
+    0.39256,
+    -0.35727
+   ],
+   "thickness": 0.00635,
+   "span": 0.00986,
+   "index": 64
+  },
+  {
+   "id": "subtendinous-bursa-of-teres-major-muscle-r",
+   "name": "Subtendinous bursa of teres major muscle",
+   "class": "bursa",
+   "side": "R",
+   "file": "fascia/subtendinous-bursa-of-teres-major-muscle-r.vtp",
+   "polys": 1472,
+   "centroid": [
+    0.18288,
+    -0.02268,
+    1.32453
+   ],
+   "normal": [
+    0.8475,
+    -0.39256,
+    0.35727
+   ],
+   "thickness": 0.00635,
+   "span": 0.00986,
+   "index": 65
+  },
+  {
+   "id": "subtendinous-bursa-of-tibialis-anterior-l",
+   "name": "Subtendinous bursa of tibialis anterior",
+   "class": "bursa",
+   "side": "L",
+   "file": "fascia/subtendinous-bursa-of-tibialis-anterior-l.vtp",
+   "polys": 704,
+   "centroid": [
+    -0.06186,
+    0.01881,
+    0.05382
+   ],
+   "normal": [
+    0.86742,
+    0.27932,
+    0.41179
+   ],
+   "thickness": 0.00215,
+   "span": 0.00452,
+   "index": 66
+  },
+  {
+   "id": "subtendinous-bursa-of-tibialis-anterior-r",
+   "name": "Subtendinous bursa of tibialis anterior",
+   "class": "bursa",
+   "side": "R",
+   "file": "fascia/subtendinous-bursa-of-tibialis-anterior-r.vtp",
+   "polys": 704,
+   "centroid": [
+    0.06186,
+    0.01881,
+    0.05382
+   ],
+   "normal": [
+    0.86742,
+    -0.27932,
+    -0.41179
+   ],
+   "thickness": 0.00215,
+   "span": 0.00452,
+   "index": 67
+  },
+  {
+   "id": "subtendinous-bursa-of-trapezius-muscle-l",
+   "name": "Subtendinous bursa of trapezius muscle",
+   "class": "bursa",
+   "side": "L",
+   "file": "fascia/subtendinous-bursa-of-trapezius-muscle-l.vtp",
+   "polys": 2500,
+   "centroid": [
+    -0.10247,
+    -0.09201,
+    1.39045
+   ],
+   "normal": [
+    0.11743,
+    0.79885,
+    -0.58995
+   ],
+   "thickness": 0.0053,
+   "span": 0.01249,
+   "index": 68
+  },
+  {
+   "id": "subtendinous-bursa-of-trapezius-muscle-r",
+   "name": "Subtendinous bursa of trapezius muscle",
+   "class": "bursa",
+   "side": "R",
+   "file": "fascia/subtendinous-bursa-of-trapezius-muscle-r.vtp",
+   "polys": 1472,
+   "centroid": [
+    0.10242,
+    -0.0919,
+    1.39031
+   ],
+   "normal": [
+    0.11406,
+    -0.80384,
+    0.5838
+   ],
+   "thickness": 0.00542,
+   "span": 0.01215,
+   "index": 69
+  },
+  {
+   "id": "subtendinous-bursa-of-triceps-brachii-muscle-l",
+   "name": "Subtendinous bursa of triceps brachii muscle",
+   "class": "bursa",
+   "side": "L",
+   "file": "fascia/subtendinous-bursa-of-triceps-brachii-muscle-l.vtp",
+   "polys": 1472,
+   "centroid": [
+    -0.21538,
+    -0.05512,
+    1.10852
+   ],
+   "normal": [
+    0.22485,
+    -0.89058,
+    0.39536
+   ],
+   "thickness": 0.00674,
+   "span": 0.01131,
+   "index": 70
+  },
+  {
+   "id": "subtendinous-bursa-of-triceps-brachii-muscle-r",
+   "name": "Subtendinous bursa of triceps brachii muscle",
+   "class": "bursa",
+   "side": "R",
+   "file": "fascia/subtendinous-bursa-of-triceps-brachii-muscle-r.vtp",
+   "polys": 1472,
+   "centroid": [
+    0.21538,
+    -0.05512,
+    1.10852
+   ],
+   "normal": [
+    0.22485,
+    0.89058,
+    -0.39536
+   ],
+   "thickness": 0.00674,
+   "span": 0.01131,
+   "index": 71
+  },
+  {
+   "id": "subtendinous-calcaneal-bursa-l",
+   "name": "Subtendinous calcaneal bursa",
+   "class": "bursa",
+   "side": "L",
+   "file": "fascia/subtendinous-calcaneal-bursa-l.vtp",
+   "polys": 544,
+   "centroid": [
+    -0.07419,
+    -0.0756,
+    0.06614
+   ],
+   "normal": [
+    0.11054,
+    -0.99384,
+    0.00763
+   ],
+   "thickness": 0.00856,
+   "span": 0.00879,
+   "index": 72
+  },
+  {
+   "id": "subtendinous-calcaneal-bursa-r",
+   "name": "Subtendinous calcaneal bursa",
+   "class": "bursa",
+   "side": "R",
+   "file": "fascia/subtendinous-calcaneal-bursa-r.vtp",
+   "polys": 544,
+   "centroid": [
+    0.07419,
+    -0.0756,
+    0.06614
+   ],
+   "normal": [
+    0.11054,
+    0.99384,
+    -0.00763
+   ],
+   "thickness": 0.00856,
+   "span": 0.00879,
+   "index": 73
+  },
+  {
+   "id": "subtendinous-prepatellar-bursa-l",
+   "name": "Subtendinous prepatellar bursa",
+   "class": "bursa",
+   "side": "L",
+   "file": "fascia/subtendinous-prepatellar-bursa-l.vtp",
+   "polys": 992,
+   "centroid": [
+    -0.08506,
+    0.01505,
+    0.44173
+   ],
+   "normal": [
+    0.0032,
+    0.93604,
+    -0.35187
+   ],
+   "thickness": 0.00197,
+   "span": 0.00789,
+   "index": 74
+  },
+  {
+   "id": "subtendinous-prepatellar-bursa-r",
+   "name": "Subtendinous prepatellar bursa",
+   "class": "bursa",
+   "side": "R",
+   "file": "fascia/subtendinous-prepatellar-bursa-r.vtp",
+   "polys": 992,
+   "centroid": [
+    0.08506,
+    0.01505,
+    0.44173
+   ],
+   "normal": [
+    0.0032,
+    -0.93604,
+    0.35187
+   ],
+   "thickness": 0.00197,
+   "span": 0.00789,
+   "index": 75
+  },
+  {
+   "id": "superior-bursa-of-biceps-femoris-muscle-l",
+   "name": "Superior bursa of biceps femoris muscle",
+   "class": "bursa",
+   "side": "L",
+   "file": "fascia/superior-bursa-of-biceps-femoris-muscle-l.vtp",
+   "polys": 1472,
+   "centroid": [
+    -0.06418,
+    -0.04733,
+    0.79871
+   ],
+   "normal": [
+    0.28294,
+    0.95428,
+    0.09643
+   ],
+   "thickness": 0.00757,
+   "span": 0.00615,
+   "index": 76
+  },
+  {
+   "id": "superior-bursa-of-biceps-femoris-muscle-r",
+   "name": "Superior bursa of biceps femoris muscle",
+   "class": "bursa",
+   "side": "R",
+   "file": "fascia/superior-bursa-of-biceps-femoris-muscle-r.vtp",
+   "polys": 1472,
+   "centroid": [
+    0.06418,
+    -0.04733,
+    0.79871
+   ],
+   "normal": [
+    0.28294,
+    -0.95428,
+    -0.09643
+   ],
+   "thickness": 0.00757,
+   "span": 0.00615,
+   "index": 77
+  },
+  {
+   "id": "suprapatellar-bursa-l",
+   "name": "Suprapatellar bursa",
+   "class": "bursa",
+   "side": "L",
+   "file": "fascia/suprapatellar-bursa-l.vtp",
+   "polys": 1296,
+   "centroid": [
+    -0.08583,
+    0.00599,
+    0.52412
+   ],
+   "normal": [
+    0.03451,
+    0.99713,
+    -0.06737
+   ],
+   "thickness": 0.00449,
+   "span": 0.0237,
+   "index": 78
+  },
+  {
+   "id": "suprapatellar-bursa-r",
+   "name": "Suprapatellar bursa",
+   "class": "bursa",
+   "side": "R",
+   "file": "fascia/suprapatellar-bursa-r.vtp",
+   "polys": 1296,
+   "centroid": [
+    0.08583,
+    0.00599,
+    0.52412
+   ],
+   "normal": [
+    0.03451,
+    -0.99713,
+    0.06737
+   ],
+   "thickness": 0.00449,
+   "span": 0.0237,
+   "index": 79
+  },
+  {
+   "id": "trochanteric-bursa-of-gluteus-maximus-muscle-l",
+   "name": "Trochanteric bursa of gluteus maximus muscle",
+   "class": "bursa",
+   "side": "L",
+   "file": "fascia/trochanteric-bursa-of-gluteus-maximus-muscle-l.vtp",
+   "polys": 1472,
+   "centroid": [
+    -0.13178,
+    -0.04303,
+    0.83322
+   ],
+   "normal": [
+    0.62171,
+    0.75995,
+    0.1896
+   ],
+   "thickness": 0.00435,
+   "span": 0.01063,
+   "index": 80
+  },
+  {
+   "id": "trochanteric-bursa-of-gluteus-maximus-muscle-r",
+   "name": "Trochanteric bursa of gluteus maximus muscle",
+   "class": "bursa",
+   "side": "R",
+   "file": "fascia/trochanteric-bursa-of-gluteus-maximus-muscle-r.vtp",
+   "polys": 1472,
+   "centroid": [
+    0.13178,
+    -0.04303,
+    0.83322
+   ],
+   "normal": [
+    0.62171,
+    -0.75995,
+    -0.1896
+   ],
+   "thickness": 0.00435,
+   "span": 0.01063,
+   "index": 81
+  },
+  {
+   "id": "trochanteric-bursa-of-gluteus-medius-muscle-l",
+   "name": "Trochanteric bursa of gluteus medius muscle",
+   "class": "bursa",
+   "side": "L",
+   "file": "fascia/trochanteric-bursa-of-gluteus-medius-muscle-l.vtp",
+   "polys": 1472,
+   "centroid": [
+    -0.13912,
+    -0.02777,
+    0.84739
+   ],
+   "normal": [
+    0.57422,
+    0.80917,
+    -0.12459
+   ],
+   "thickness": 0.00594,
+   "span": 0.00791,
+   "index": 82
+  },
+  {
+   "id": "trochanteric-bursa-of-gluteus-medius-muscle-r",
+   "name": "Trochanteric bursa of gluteus medius muscle",
+   "class": "bursa",
+   "side": "R",
+   "file": "fascia/trochanteric-bursa-of-gluteus-medius-muscle-r.vtp",
+   "polys": 1472,
+   "centroid": [
+    0.13912,
+    -0.02777,
+    0.84739
+   ],
+   "normal": [
+    0.57422,
+    -0.80917,
+    0.12459
+   ],
+   "thickness": 0.00594,
+   "span": 0.00791,
+   "index": 83
+  },
+  {
+   "id": "trochanteric-bursa-of-gluteus-minimus-muscle-l",
+   "name": "Trochanteric bursa of gluteus minimus muscle",
+   "class": "bursa",
+   "side": "L",
+   "file": "fascia/trochanteric-bursa-of-gluteus-minimus-muscle-l.vtp",
+   "polys": 1472,
+   "centroid": [
+    -0.1427,
+    -0.01651,
+    0.84763
+   ],
+   "normal": [
+    0.88998,
+    0.0075,
+    -0.45593
+   ],
+   "thickness": 0.00717,
+   "span": 0.00804,
+   "index": 84
+  },
+  {
+   "id": "trochanteric-bursa-of-gluteus-minimus-muscle-r",
+   "name": "Trochanteric bursa of gluteus minimus muscle",
+   "class": "bursa",
+   "side": "R",
+   "file": "fascia/trochanteric-bursa-of-gluteus-minimus-muscle-r.vtp",
+   "polys": 1472,
+   "centroid": [
+    0.1427,
+    -0.01651,
+    0.84763
+   ],
+   "normal": [
+    0.88998,
+    -0.0075,
+    0.45593
+   ],
+   "thickness": 0.00717,
+   "span": 0.00804,
+   "index": 85
+  },
+  {
+   "id": "antebrachial-fascia-l",
+   "name": "Antebrachial fascia",
+   "class": "fascia",
+   "side": "L",
+   "file": "fascia/antebrachial-fascia-l.vtp",
+   "polys": 2498,
+   "centroid": [
+    -0.23883,
+    -0.0151,
+    1.00928
+   ],
+   "normal": [
+    0.02068,
+    0.98412,
+    0.17627
+   ],
+   "thickness": 0.06846,
+   "span": 0.07737,
+   "index": 86
+  },
+  {
+   "id": "antebrachial-fascia-r",
+   "name": "Antebrachial fascia",
+   "class": "fascia",
+   "side": "R",
+   "file": "fascia/antebrachial-fascia-r.vtp",
+   "polys": 2498,
+   "centroid": [
+    0.23882,
+    -0.0151,
+    1.00928
+   ],
+   "normal": [
+    0.02068,
+    -0.98412,
+    -0.17627
+   ],
+   "thickness": 0.06846,
+   "span": 0.07737,
+   "index": 87
+  },
+  {
+   "id": "anterior-layer-of-thoracolumbar-fascia-l",
+   "name": "Anterior layer of thoracolumbar fascia",
+   "class": "fascia",
+   "side": "L",
+   "file": "fascia/anterior-layer-of-thoracolumbar-fascia-l.vtp",
+   "polys": 176,
+   "centroid": [
+    -0.04714,
+    -0.0467,
+    1.03731
+   ],
+   "normal": [
+    0.12228,
+    -0.99228,
+    -0.02077
+   ],
+   "thickness": 0.02213,
+   "span": 0.03956,
+   "index": 88
+  },
+  {
+   "id": "anterior-layer-of-thoracolumbar-fascia-r",
+   "name": "Anterior layer of thoracolumbar fascia",
+   "class": "fascia",
+   "side": "R",
+   "file": "fascia/anterior-layer-of-thoracolumbar-fascia-r.vtp",
+   "polys": 176,
+   "centroid": [
+    0.04714,
+    -0.0467,
+    1.03731
+   ],
+   "normal": [
+    0.12228,
+    0.99228,
+    0.02077
+   ],
+   "thickness": 0.02213,
+   "span": 0.03956,
+   "index": 89
+  },
+  {
+   "id": "brachial-fascia-l",
+   "name": "Brachial fascia",
+   "class": "fascia",
+   "side": "L",
+   "file": "fascia/brachial-fascia-l.vtp",
+   "polys": 2500,
+   "centroid": [
+    -0.20013,
+    -0.04004,
+    1.2101
+   ],
+   "normal": [
+    0.97467,
+    0.16325,
+    -0.15284
+   ],
+   "thickness": 0.07008,
+   "span": 0.05034,
+   "index": 90
+  },
+  {
+   "id": "brachial-fascia-r",
+   "name": "Brachial fascia",
+   "class": "fascia",
+   "side": "R",
+   "file": "fascia/brachial-fascia-r.vtp",
+   "polys": 2500,
+   "centroid": [
+    0.20013,
+    -0.04004,
+    1.2101
+   ],
+   "normal": [
+    0.97467,
+    -0.16325,
+    0.15284
+   ],
+   "thickness": 0.07008,
+   "span": 0.05034,
+   "index": 91
+  },
+  {
+   "id": "clavipectoral-fascia-l",
+   "name": "Clavipectoral fascia",
+   "class": "fascia",
+   "side": "L",
+   "file": "fascia/clavipectoral-fascia-l.vtp",
+   "polys": 1280,
+   "centroid": [
+    -0.11947,
+    0.01288,
+    1.33925
+   ],
+   "normal": [
+    0.68956,
+    -0.61664,
+    -0.37982
+   ],
+   "thickness": 0.03967,
+   "span": 0.06254,
+   "index": 92
+  },
+  {
+   "id": "clavipectoral-fascia-r",
+   "name": "Clavipectoral fascia",
+   "class": "fascia",
+   "side": "R",
+   "file": "fascia/clavipectoral-fascia-r.vtp",
+   "polys": 1280,
+   "centroid": [
+    0.11947,
+    0.01288,
+    1.33925
+   ],
+   "normal": [
+    0.68956,
+    0.61664,
+    0.37982
+   ],
+   "thickness": 0.03967,
+   "span": 0.06254,
+   "index": 93
+  },
+  {
+   "id": "crural-fascia-l",
+   "name": "Crural fascia",
+   "class": "fascia",
+   "side": "L",
+   "file": "fascia/crural-fascia-l.vtp",
+   "polys": 2498,
+   "centroid": [
+    -0.08472,
+    -0.02474,
+    0.19802
+   ],
+   "normal": [
+    0.9923,
+    0.1238,
+    -0.00388
+   ],
+   "thickness": 0.11197,
+   "span": 0.14894,
+   "index": 94
+  },
+  {
+   "id": "crural-fascia-r",
+   "name": "Crural fascia",
+   "class": "fascia",
+   "side": "R",
+   "file": "fascia/crural-fascia-r.vtp",
+   "polys": 2498,
+   "centroid": [
+    0.08472,
+    -0.02474,
+    0.19802
+   ],
+   "normal": [
+    0.9923,
+    -0.1238,
+    0.00388
+   ],
+   "thickness": 0.11197,
+   "span": 0.14894,
+   "index": 95
+  },
+  {
+   "id": "deltoid-fascia-l",
+   "name": "Deltoid fascia",
+   "class": "fascia",
+   "side": "L",
+   "file": "fascia/deltoid-fascia-l.vtp",
+   "polys": 2499,
+   "centroid": [
+    -0.19057,
+    -0.03845,
+    1.35748
+   ],
+   "normal": [
+    0.82378,
+    0.11938,
+    -0.55419
+   ],
+   "thickness": 0.09681,
+   "span": 0.04452,
+   "index": 96
+  },
+  {
+   "id": "deltoid-fascia-r",
+   "name": "Deltoid fascia",
+   "class": "fascia",
+   "side": "R",
+   "file": "fascia/deltoid-fascia-r.vtp",
+   "polys": 2499,
+   "centroid": [
+    0.19057,
+    -0.03845,
+    1.35748
+   ],
+   "normal": [
+    0.82378,
+    -0.11938,
+    0.55419
+   ],
+   "thickness": 0.09681,
+   "span": 0.04452,
+   "index": 97
+  },
+  {
+   "id": "diaphragmatic-fascia",
+   "name": "Diaphragmatic fascia",
+   "class": "fascia",
+   "side": "C",
+   "file": "fascia/diaphragmatic-fascia.vtp",
+   "polys": 2500,
+   "centroid": [
+    0.00141,
+    0.0068,
+    1.18106
+   ],
+   "normal": [
+    0.04348,
+    0.83219,
+    -0.55278
+   ],
+   "thickness": 0.16637,
+   "span": 0.07765,
+   "index": 98
+  },
+  {
+   "id": "dorsal-fascia-of-hand-l",
+   "name": "Dorsal fascia of hand",
+   "class": "fascia",
+   "side": "L",
+   "file": "fascia/dorsal-fascia-of-hand-l.vtp",
+   "polys": 1445,
+   "centroid": [
+    -0.27664,
+    0.04326,
+    0.7733
+   ],
+   "normal": [
+    0.11491,
+    0.89568,
+    0.42959
+   ],
+   "thickness": 0.0439,
+   "span": 0.04472,
+   "index": 99
+  },
+  {
+   "id": "dorsal-fascia-of-hand-r",
+   "name": "Dorsal fascia of hand",
+   "class": "fascia",
+   "side": "R",
+   "file": "fascia/dorsal-fascia-of-hand-r.vtp",
+   "polys": 1445,
+   "centroid": [
+    0.27664,
+    0.04326,
+    0.7733
+   ],
+   "normal": [
+    0.11491,
+    -0.89568,
+    -0.42959
+   ],
+   "thickness": 0.0439,
+   "span": 0.04472,
+   "index": 100
+  },
+  {
+   "id": "fascia-lata-l",
+   "name": "Fascia lata",
+   "class": "fascia",
+   "side": "L",
+   "file": "fascia/fascia-lata-l.vtp",
+   "polys": 2499,
+   "centroid": [
+    -0.07674,
+    -0.01971,
+    0.70521
+   ],
+   "normal": [
+    0.77868,
+    0.62673,
+    0.02946
+   ],
+   "thickness": 0.17767,
+   "span": 0.15782,
+   "index": 101
+  },
+  {
+   "id": "fascia-lata-r",
+   "name": "Fascia lata",
+   "class": "fascia",
+   "side": "R",
+   "file": "fascia/fascia-lata-r.vtp",
+   "polys": 2499,
+   "centroid": [
+    0.07672,
+    -0.0191,
+    0.70619
+   ],
+   "normal": [
+    0.78235,
+    -0.62228,
+    -0.02632
+   ],
+   "thickness": 0.17628,
+   "span": 0.15697,
+   "index": 102
+  },
+  {
+   "id": "iliopsoas-fascia-l",
+   "name": "Iliopsoas fascia",
+   "class": "fascia",
+   "side": "L",
+   "file": "fascia/iliopsoas-fascia-l.vtp",
+   "polys": 1602,
+   "centroid": [
+    -0.06012,
+    0.00503,
+    0.95557
+   ],
+   "normal": [
+    0.77743,
+    -0.6277,
+    -0.04009
+   ],
+   "thickness": 0.0775,
+   "span": 0.08919,
+   "index": 103
+  },
+  {
+   "id": "iliopsoas-fascia-r",
+   "name": "Iliopsoas fascia",
+   "class": "fascia",
+   "side": "R",
+   "file": "fascia/iliopsoas-fascia-r.vtp",
+   "polys": 1602,
+   "centroid": [
+    0.05997,
+    0.00503,
+    0.95611
+   ],
+   "normal": [
+    0.77743,
+    -0.6277,
+    0.04009
+   ],
+   "thickness": 0.0775,
+   "span": 0.08919,
+   "index": 104
+  },
+  {
+   "id": "investing-abdominal-fascia-l",
+   "name": "Investing abdominal fascia",
+   "class": "fascia",
+   "side": "L",
+   "file": "fascia/investing-abdominal-fascia-l.vtp",
+   "polys": 2500,
+   "centroid": [
+    -0.08533,
+    0.00291,
+    1.12751
+   ],
+   "normal": [
+    0.99166,
+    -0.00834,
+    0.12857
+   ],
+   "thickness": 0.18682,
+   "span": 0.13798,
+   "index": 105
+  },
+  {
+   "id": "investing-abdominal-fascia-r",
+   "name": "Investing abdominal fascia",
+   "class": "fascia",
+   "side": "R",
+   "file": "fascia/investing-abdominal-fascia-r.vtp",
+   "polys": 2499,
+   "centroid": [
+    0.08549,
+    0.00298,
+    1.12766
+   ],
+   "normal": [
+    0.99162,
+    0.01074,
+    -0.12871
+   ],
+   "thickness": 0.18718,
+   "span": 0.13815,
+   "index": 106
+  },
+  {
+   "id": "masseteric-fascia-l",
+   "name": "Masseteric fascia",
+   "class": "fascia",
+   "side": "L",
+   "file": "fascia/masseteric-fascia-l.vtp",
+   "polys": 398,
+   "centroid": [
+    -0.05051,
+    0.03347,
+    1.54606
+   ],
+   "normal": [
+    0.93536,
+    -0.01397,
+    0.35342
+   ],
+   "thickness": 0.01124,
+   "span": 0.02036,
+   "index": 107
+  },
+  {
+   "id": "masseteric-fascia-r",
+   "name": "Masseteric fascia",
+   "class": "fascia",
+   "side": "R",
+   "file": "fascia/masseteric-fascia-r.vtp",
+   "polys": 398,
+   "centroid": [
+    0.05051,
+    0.03347,
+    1.54606
+   ],
+   "normal": [
+    0.93536,
+    0.01397,
+    -0.35342
+   ],
+   "thickness": 0.01124,
+   "span": 0.02036,
+   "index": 108
+  },
+  {
+   "id": "middle-layer-of-thoracolumbar-fascia-l",
+   "name": "Middle layer of thoracolumbar fascia",
+   "class": "fascia",
+   "side": "L",
+   "file": "fascia/middle-layer-of-thoracolumbar-fascia-l.vtp",
+   "polys": 160,
+   "centroid": [
+    -0.04825,
+    -0.06114,
+    1.03743
+   ],
+   "normal": [
+    0.29865,
+    0.95425,
+    -0.01487
+   ],
+   "thickness": 0.02074,
+   "span": 0.04256,
+   "index": 109
+  },
+  {
+   "id": "middle-layer-of-thoracolumbar-fascia-r",
+   "name": "Middle layer of thoracolumbar fascia",
+   "class": "fascia",
+   "side": "R",
+   "file": "fascia/middle-layer-of-thoracolumbar-fascia-r.vtp",
+   "polys": 160,
+   "centroid": [
+    0.04825,
+    -0.06114,
+    1.03743
+   ],
+   "normal": [
+    0.29865,
+    -0.95425,
+    0.01487
+   ],
+   "thickness": 0.02074,
+   "span": 0.04256,
+   "index": 110
+  },
+  {
+   "id": "pectoral-fascia-l",
+   "name": "Pectoral fascia",
+   "class": "fascia",
+   "side": "L",
+   "file": "fascia/pectoral-fascia-l.vtp",
+   "polys": 2499,
+   "centroid": [
+    -0.08087,
+    0.08114,
+    1.31957
+   ],
+   "normal": [
+    0.33508,
+    -0.83892,
+    -0.42888
+   ],
+   "thickness": 0.0559,
+   "span": 0.05789,
+   "index": 111
+  },
+  {
+   "id": "pectoral-fascia-r",
+   "name": "Pectoral fascia",
+   "class": "fascia",
+   "side": "R",
+   "file": "fascia/pectoral-fascia-r.vtp",
+   "polys": 2499,
+   "centroid": [
+    0.08087,
+    0.08114,
+    1.31957
+   ],
+   "normal": [
+    0.33508,
+    0.83892,
+    0.42888
+   ],
+   "thickness": 0.0559,
+   "span": 0.05789,
+   "index": 112
+  },
+  {
+   "id": "piriformis-fascia-l",
+   "name": "Piriformis fascia",
+   "class": "fascia",
+   "side": "L",
+   "file": "fascia/piriformis-fascia-l.vtp",
+   "polys": 926,
+   "centroid": [
+    -0.07117,
+    -0.04382,
+    0.88704
+   ],
+   "normal": [
+    0.46653,
+    0.84154,
+    -0.27231
+   ],
+   "thickness": 0.01985,
+   "span": 0.03579,
+   "index": 113
+  },
+  {
+   "id": "piriformis-fascia-r",
+   "name": "Piriformis fascia",
+   "class": "fascia",
+   "side": "R",
+   "file": "fascia/piriformis-fascia-r.vtp",
+   "polys": 926,
+   "centroid": [
+    0.07117,
+    -0.04382,
+    0.88704
+   ],
+   "normal": [
+    0.46653,
+    -0.84154,
+    0.27231
+   ],
+   "thickness": 0.01985,
+   "span": 0.03579,
+   "index": 114
+  },
+  {
+   "id": "popliteal-fascia-l",
+   "name": "Popliteal fascia",
+   "class": "fascia",
+   "side": "L",
+   "file": "fascia/popliteal-fascia-l.vtp",
+   "polys": 488,
+   "centroid": [
+    -0.07429,
+    -0.06894,
+    0.4904
+   ],
+   "normal": [
+    0.11338,
+    0.99232,
+    -0.04944
+   ],
+   "thickness": 0.01929,
+   "span": 0.02918,
+   "index": 115
+  },
+  {
+   "id": "popliteal-fascia-r",
+   "name": "Popliteal fascia",
+   "class": "fascia",
+   "side": "R",
+   "file": "fascia/popliteal-fascia-r.vtp",
+   "polys": 488,
+   "centroid": [
+    0.07429,
+    -0.06894,
+    0.4904
+   ],
+   "normal": [
+    0.11338,
+    -0.99232,
+    0.04944
+   ],
+   "thickness": 0.01929,
+   "span": 0.02918,
+   "index": 116
+  },
+  {
+   "id": "posterior-layer-of-thoracolumbar-fascia-l",
+   "name": "Posterior layer of thoracolumbar fascia",
+   "class": "fascia",
+   "side": "L",
+   "file": "fascia/posterior-layer-of-thoracolumbar-fascia-l.vtp",
+   "polys": 313,
+   "centroid": [
+    -0.04491,
+    -0.06898,
+    1.04407
+   ],
+   "normal": [
+    0.30002,
+    0.95261,
+    0.05017
+   ],
+   "thickness": 0.03198,
+   "span": 0.05195,
+   "index": 117
+  },
+  {
+   "id": "posterior-layer-of-thoracolumbar-fascia-r",
+   "name": "Posterior layer of thoracolumbar fascia",
+   "class": "fascia",
+   "side": "R",
+   "file": "fascia/posterior-layer-of-thoracolumbar-fascia-r.vtp",
+   "polys": 313,
+   "centroid": [
+    0.04491,
+    -0.06898,
+    1.04407
+   ],
+   "normal": [
+    0.30002,
+    -0.95261,
+    -0.05017
+   ],
+   "thickness": 0.03198,
+   "span": 0.05195,
+   "index": 118
+  },
+  {
+   "id": "superficial-investing-cervical-fascia-l",
+   "name": "Superficial investing cervical fascia",
+   "class": "fascia",
+   "side": "L",
+   "file": "fascia/superficial-investing-cervical-fascia-l.vtp",
+   "polys": 2499,
+   "centroid": [
+    -0.04925,
+    -0.02892,
+    1.46846
+   ],
+   "normal": [
+    0.95056,
+    -0.12917,
+    -0.28239
+   ],
+   "thickness": 0.18698,
+   "span": 0.05979,
+   "index": 119
+  },
+  {
+   "id": "superficial-investing-cervical-fascia-r",
+   "name": "Superficial investing cervical fascia",
+   "class": "fascia",
+   "side": "R",
+   "file": "fascia/superficial-investing-cervical-fascia-r.vtp",
+   "polys": 2499,
+   "centroid": [
+    0.04925,
+    -0.02892,
+    1.46846
+   ],
+   "normal": [
+    0.95056,
+    0.12917,
+    0.28239
+   ],
+   "thickness": 0.18698,
+   "span": 0.05979,
+   "index": 120
+  },
+  {
+   "id": "superficial-layer-of-temporal-fascia-l",
+   "name": "Superficial layer of temporal fascia",
+   "class": "fascia",
+   "side": "L",
+   "file": "fascia/superficial-layer-of-temporal-fascia-l.vtp",
+   "polys": 685,
+   "centroid": [
+    -0.06605,
+    0.0054,
+    1.62436
+   ],
+   "normal": [
+    0.98325,
+    -0.17066,
+    0.06398
+   ],
+   "thickness": 0.01605,
+   "span": 0.03165,
+   "index": 121
+  },
+  {
+   "id": "superficial-layer-of-temporal-fascia-r",
+   "name": "Superficial layer of temporal fascia",
+   "class": "fascia",
+   "side": "R",
+   "file": "fascia/superficial-layer-of-temporal-fascia-r.vtp",
+   "polys": 685,
+   "centroid": [
+    0.06605,
+    0.0054,
+    1.62436
+   ],
+   "normal": [
+    0.98325,
+    0.17066,
+    -0.06398
+   ],
+   "thickness": 0.01605,
+   "span": 0.03165,
+   "index": 122
+  },
+  {
+   "id": "tensor-fasciae-latae-l",
+   "name": "Tensor fasciae latae",
+   "class": "fascia",
+   "side": "L",
+   "file": "fascia/tensor-fasciae-latae-l.vtp",
+   "polys": 1862,
+   "centroid": [
+    -0.13282,
+    0.02874,
+    0.88576
+   ],
+   "normal": [
+    0.62978,
+    -0.77604,
+    -0.03372
+   ],
+   "thickness": 0.02367,
+   "span": 0.04431,
+   "index": 123
+  },
+  {
+   "id": "tensor-fasciae-latae-r",
+   "name": "Tensor fasciae latae",
+   "class": "fascia",
+   "side": "R",
+   "file": "fascia/tensor-fasciae-latae-r.vtp",
+   "polys": 1862,
+   "centroid": [
+    0.13282,
+    0.02874,
+    0.88576
+   ],
+   "normal": [
+    0.62978,
+    0.77604,
+    0.03372
+   ],
+   "thickness": 0.02367,
+   "span": 0.04431,
+   "index": 124
+  },
+  {
+   "id": "transversalis-fascia",
+   "name": "Transversalis fascia",
+   "class": "fascia",
+   "side": "C",
+   "file": "fascia/transversalis-fascia.vtp",
+   "polys": 2498,
+   "centroid": [
+    -0.00083,
+    0.03963,
+    1.02798
+   ],
+   "normal": [
+    0.01468,
+    0.99752,
+    -0.06882
+   ],
+   "thickness": 0.14616,
+   "span": 0.0801,
+   "index": 125
+  },
+  {
+   "id": "extensor-retinaculum-of-wrist-l",
+   "name": "Extensor retinaculum of wrist",
+   "class": "retinaculum",
+   "side": "L",
+   "file": "fascia/extensor-retinaculum-of-wrist-l.vtp",
+   "polys": 368,
+   "centroid": [
+    -0.2632,
+    0.00563,
+    0.85709
+   ],
+   "normal": [
+    0.0629,
+    0.93487,
+    0.34937
+   ],
+   "thickness": 0.01569,
+   "span": 0.019,
+   "index": 126
+  },
+  {
+   "id": "extensor-retinaculum-of-wrist-r",
+   "name": "Extensor retinaculum of wrist",
+   "class": "retinaculum",
+   "side": "R",
+   "file": "fascia/extensor-retinaculum-of-wrist-r.vtp",
+   "polys": 368,
+   "centroid": [
+    0.2632,
+    0.00563,
+    0.85709
+   ],
+   "normal": [
+    0.0629,
+    -0.93487,
+    -0.34937
+   ],
+   "thickness": 0.01569,
+   "span": 0.019,
+   "index": 127
+  },
+  {
+   "id": "flexor-retinaculum-of-ankle-l",
+   "name": "Flexor retinaculum of ankle",
+   "class": "retinaculum",
+   "side": "L",
+   "file": "fascia/flexor-retinaculum-of-ankle-l.vtp",
+   "polys": 696,
+   "centroid": [
+    -0.05407,
+    -0.06714,
+    0.04691
+   ],
+   "normal": [
+    0.98323,
+    -0.1625,
+    -0.08274
+   ],
+   "thickness": 0.01082,
+   "span": 0.0206,
+   "index": 128
+  },
+  {
+   "id": "flexor-retinaculum-of-ankle-r",
+   "name": "Flexor retinaculum of ankle",
+   "class": "retinaculum",
+   "side": "R",
+   "file": "fascia/flexor-retinaculum-of-ankle-r.vtp",
+   "polys": 696,
+   "centroid": [
+    0.05407,
+    -0.06714,
+    0.04691
+   ],
+   "normal": [
+    0.98323,
+    0.1625,
+    0.08274
+   ],
+   "thickness": 0.01082,
+   "span": 0.0206,
+   "index": 129
+  },
+  {
+   "id": "flexor-retinaculum-of-wrist-l",
+   "name": "Flexor retinaculum of wrist",
+   "class": "retinaculum",
+   "side": "L",
+   "file": "fascia/flexor-retinaculum-of-wrist-l.vtp",
+   "polys": 524,
+   "centroid": [
+    -0.2614,
+    0.02687,
+    0.86222
+   ],
+   "normal": [
+    0.10915,
+    0.77227,
+    0.62584
+   ],
+   "thickness": 0.0355,
+   "span": 0.02099,
+   "index": 130
+  },
+  {
+   "id": "flexor-retinaculum-of-wrist-r",
+   "name": "Flexor retinaculum of wrist",
+   "class": "retinaculum",
+   "side": "R",
+   "file": "fascia/flexor-retinaculum-of-wrist-r.vtp",
+   "polys": 524,
+   "centroid": [
+    0.2614,
+    0.02687,
+    0.86222
+   ],
+   "normal": [
+    0.10915,
+    -0.77227,
+    -0.62584
+   ],
+   "thickness": 0.0355,
+   "span": 0.02099,
+   "index": 131
+  },
+  {
+   "id": "inferior-extensor-retinaculum-of-ankle-l",
+   "name": "Inferior extensor retinaculum of ankle",
+   "class": "retinaculum",
+   "side": "L",
+   "file": "fascia/inferior-extensor-retinaculum-of-ankle-l.vtp",
+   "polys": 316,
+   "centroid": [
+    -0.08843,
+    -0.02025,
+    0.09452
+   ],
+   "normal": [
+    0.23356,
+    0.10166,
+    -0.96701
+   ],
+   "thickness": 0.01967,
+   "span": 0.0167,
+   "index": 132
+  },
+  {
+   "id": "inferior-extensor-retinaculum-of-ankle-r",
+   "name": "Inferior extensor retinaculum of ankle",
+   "class": "retinaculum",
+   "side": "R",
+   "file": "fascia/inferior-extensor-retinaculum-of-ankle-r.vtp",
+   "polys": 316,
+   "centroid": [
+    0.08843,
+    -0.02025,
+    0.09452
+   ],
+   "normal": [
+    0.23356,
+    -0.10166,
+    0.96701
+   ],
+   "thickness": 0.01967,
+   "span": 0.0167,
+   "index": 133
+  },
+  {
+   "id": "inferior-fibular-retinaculum-l",
+   "name": "Inferior fibular retinaculum",
+   "class": "retinaculum",
+   "side": "L",
+   "file": "fascia/inferior-fibular-retinaculum-l.vtp",
+   "polys": 35,
+   "centroid": [
+    -0.11105,
+    0.00252,
+    0.05125
+   ],
+   "normal": [
+    0.93571,
+    -0.11362,
+    -0.33398
+   ],
+   "thickness": 0.01163,
+   "span": 0.01846,
+   "index": 134
+  },
+  {
+   "id": "inferior-fibular-retinaculum-r",
+   "name": "Inferior fibular retinaculum",
+   "class": "retinaculum",
+   "side": "R",
+   "file": "fascia/inferior-fibular-retinaculum-r.vtp",
+   "polys": 35,
+   "centroid": [
+    0.11105,
+    0.00252,
+    0.05125
+   ],
+   "normal": [
+    0.93571,
+    0.11362,
+    0.33398
+   ],
+   "thickness": 0.01163,
+   "span": 0.01846,
+   "index": 135
+  },
+  {
+   "id": "lateral-patellar-retinaculum-l",
+   "name": "Lateral patellar retinaculum",
+   "class": "retinaculum",
+   "side": "L",
+   "file": "fascia/lateral-patellar-retinaculum-l.vtp",
+   "polys": 148,
+   "centroid": [
+    -0.11057,
+    -0.01727,
+    0.44881
+   ],
+   "normal": [
+    0.96529,
+    -0.15916,
+    0.20708
+   ],
+   "thickness": 0.0044,
+   "span": 0.02029,
+   "index": 136
+  },
+  {
+   "id": "lateral-patellar-retinaculum-r",
+   "name": "Lateral patellar retinaculum",
+   "class": "retinaculum",
+   "side": "R",
+   "file": "fascia/lateral-patellar-retinaculum-r.vtp",
+   "polys": 148,
+   "centroid": [
+    0.11057,
+    -0.01727,
+    0.44881
+   ],
+   "normal": [
+    0.96529,
+    0.15916,
+    -0.20708
+   ],
+   "thickness": 0.0044,
+   "span": 0.02028,
+   "index": 137
+  },
+  {
+   "id": "medial-patellar-retinaculum-l",
+   "name": "Medial patellar retinaculum",
+   "class": "retinaculum",
+   "side": "L",
+   "file": "fascia/medial-patellar-retinaculum-l.vtp",
+   "polys": 184,
+   "centroid": [
+    -0.0415,
+    -0.01803,
+    0.4498
+   ],
+   "normal": [
+    0.80041,
+    0.58605,
+    0.12605
+   ],
+   "thickness": 0.00739,
+   "span": 0.01873,
+   "index": 138
+  },
+  {
+   "id": "medial-patellar-retinaculum-r",
+   "name": "Medial patellar retinaculum",
+   "class": "retinaculum",
+   "side": "R",
+   "file": "fascia/medial-patellar-retinaculum-r.vtp",
+   "polys": 184,
+   "centroid": [
+    0.0415,
+    -0.01803,
+    0.4498
+   ],
+   "normal": [
+    0.80041,
+    -0.58605,
+    -0.12605
+   ],
+   "thickness": 0.00739,
+   "span": 0.01873,
+   "index": 139
+  },
+  {
+   "id": "superior-extensor-retinaculum-of-ankle-l",
+   "name": "Superior extensor retinaculum of ankle",
+   "class": "retinaculum",
+   "side": "L",
+   "file": "fascia/superior-extensor-retinaculum-of-ankle-l.vtp",
+   "polys": 260,
+   "centroid": [
+    -0.09104,
+    -0.02589,
+    0.12372
+   ],
+   "normal": [
+    0.63226,
+    -0.77475,
+    -0.0001
+   ],
+   "thickness": 0.01427,
+   "span": 0.01342,
+   "index": 140
+  },
+  {
+   "id": "superior-extensor-retinaculum-of-ankle-r",
+   "name": "Superior extensor retinaculum of ankle",
+   "class": "retinaculum",
+   "side": "R",
+   "file": "fascia/superior-extensor-retinaculum-of-ankle-r.vtp",
+   "polys": 260,
+   "centroid": [
+    0.09104,
+    -0.02589,
+    0.12372
+   ],
+   "normal": [
+    0.63226,
+    0.77475,
+    0.0001
+   ],
+   "thickness": 0.01427,
+   "span": 0.01342,
+   "index": 141
+  },
+  {
+   "id": "superior-fibular-retinaculum-l",
+   "name": "Superior fibular retinaculum",
+   "class": "retinaculum",
+   "side": "L",
+   "file": "fascia/superior-fibular-retinaculum-l.vtp",
+   "polys": 652,
+   "centroid": [
+    -0.0845,
+    -0.01113,
+    0.07245
+   ],
+   "normal": [
+    0.1192,
+    0.52501,
+    -0.84271
+   ],
+   "thickness": 0.05099,
+   "span": 0.02584,
+   "index": 142
+  },
+  {
+   "id": "superior-fibular-retinaculum-r",
+   "name": "Superior fibular retinaculum",
+   "class": "retinaculum",
+   "side": "R",
+   "file": "fascia/superior-fibular-retinaculum-r.vtp",
+   "polys": 652,
+   "centroid": [
+    0.0845,
+    -0.01113,
+    0.07245
+   ],
+   "normal": [
+    0.1192,
+    -0.52501,
+    0.84271
+   ],
+   "thickness": 0.05099,
+   "span": 0.02584,
+   "index": 143
+  },
+  {
+   "id": "anterior-intermuscular-septum-of-leg-l",
+   "name": "Anterior intermuscular septum of leg",
+   "class": "septum",
+   "side": "L",
+   "file": "fascia/anterior-intermuscular-septum-of-leg-l.vtp",
+   "polys": 208,
+   "centroid": [
+    -0.11371,
+    -0.03771,
+    0.26243
+   ],
+   "normal": [
+    0.74655,
+    0.66484,
+    0.02544
+   ],
+   "thickness": 0.01833,
+   "span": 0.08686,
+   "index": 144
+  },
+  {
+   "id": "anterior-intermuscular-septum-of-leg-r",
+   "name": "Anterior intermuscular septum of leg",
+   "class": "septum",
+   "side": "R",
+   "file": "fascia/anterior-intermuscular-septum-of-leg-r.vtp",
+   "polys": 208,
+   "centroid": [
+    0.11371,
+    -0.03771,
+    0.26243
+   ],
+   "normal": [
+    0.74655,
+    -0.66485,
+    -0.02544
+   ],
+   "thickness": 0.01833,
+   "span": 0.08686,
+   "index": 145
+  },
+  {
+   "id": "lateral-femoral-intermuscular-septum-l",
+   "name": "Lateral femoral intermuscular septum",
+   "class": "septum",
+   "side": "L",
+   "file": "fascia/lateral-femoral-intermuscular-septum-l.vtp",
+   "polys": 588,
+   "centroid": [
+    -0.10995,
+    -0.02839,
+    0.61514
+   ],
+   "normal": [
+    0.4869,
+    -0.87321,
+    -0.02075
+   ],
+   "thickness": 0.0174,
+   "span": 0.07818,
+   "index": 146
+  },
+  {
+   "id": "lateral-femoral-intermuscular-septum-r",
+   "name": "Lateral femoral intermuscular septum",
+   "class": "septum",
+   "side": "R",
+   "file": "fascia/lateral-femoral-intermuscular-septum-r.vtp",
+   "polys": 588,
+   "centroid": [
+    0.10995,
+    -0.02839,
+    0.61514
+   ],
+   "normal": [
+    0.4869,
+    0.87321,
+    0.02075
+   ],
+   "thickness": 0.0174,
+   "span": 0.07818,
+   "index": 147
+  },
+  {
+   "id": "lateral-intermuscular-septum-of-arm-l",
+   "name": "Lateral intermuscular septum of arm",
+   "class": "septum",
+   "side": "L",
+   "file": "fascia/lateral-intermuscular-septum-of-arm-l.vtp",
+   "polys": 160,
+   "centroid": [
+    -0.22697,
+    -0.03873,
+    1.20682
+   ],
+   "normal": [
+    0.38578,
+    0.92152,
+    -0.04437
+   ],
+   "thickness": 0.01411,
+   "span": 0.03103,
+   "index": 148
+  },
+  {
+   "id": "lateral-intermuscular-septum-of-arm-r",
+   "name": "Lateral intermuscular septum of arm",
+   "class": "septum",
+   "side": "R",
+   "file": "fascia/lateral-intermuscular-septum-of-arm-r.vtp",
+   "polys": 160,
+   "centroid": [
+    0.22697,
+    -0.03873,
+    1.20682
+   ],
+   "normal": [
+    0.38578,
+    -0.92152,
+    0.04437
+   ],
+   "thickness": 0.01411,
+   "span": 0.03103,
+   "index": 149
+  },
+  {
+   "id": "medial-femoral-intermuscular-septum-l",
+   "name": "Medial femoral intermuscular septum",
+   "class": "septum",
+   "side": "L",
+   "file": "fascia/medial-femoral-intermuscular-septum-l.vtp",
+   "polys": 2499,
+   "centroid": [
+    -0.05981,
+    0.01533,
+    0.67886
+   ],
+   "normal": [
+    0.57282,
+    -0.78206,
+    0.24546
+   ],
+   "thickness": 0.0485,
+   "span": 0.11211,
+   "index": 150
+  },
+  {
+   "id": "medial-femoral-intermuscular-septum-r",
+   "name": "Medial femoral intermuscular septum",
+   "class": "septum",
+   "side": "R",
+   "file": "fascia/medial-femoral-intermuscular-septum-r.vtp",
+   "polys": 2499,
+   "centroid": [
+    0.05981,
+    0.01533,
+    0.67886
+   ],
+   "normal": [
+    0.57282,
+    0.78206,
+    -0.24546
+   ],
+   "thickness": 0.0485,
+   "span": 0.11211,
+   "index": 151
+  },
+  {
+   "id": "medial-intermuscular-septum-of-arm-l",
+   "name": "Medial intermuscular septum of arm",
+   "class": "septum",
+   "side": "L",
+   "file": "fascia/medial-intermuscular-septum-of-arm-l.vtp",
+   "polys": 312,
+   "centroid": [
+    -0.18677,
+    -0.03452,
+    1.19508
+   ],
+   "normal": [
+    0.22546,
+    -0.97425,
+    -0.00158
+   ],
+   "thickness": 0.02223,
+   "span": 0.04228,
+   "index": 152
+  },
+  {
+   "id": "medial-intermuscular-septum-of-arm-r",
+   "name": "Medial intermuscular septum of arm",
+   "class": "septum",
+   "side": "R",
+   "file": "fascia/medial-intermuscular-septum-of-arm-r.vtp",
+   "polys": 312,
+   "centroid": [
+    0.18677,
+    -0.03452,
+    1.19508
+   ],
+   "normal": [
+    0.22546,
+    0.97425,
+    0.00158
+   ],
+   "thickness": 0.02223,
+   "span": 0.04228,
+   "index": 153
+  },
+  {
+   "id": "posterior-intermuscular-septum-of-leg-l",
+   "name": "Posterior intermuscular septum of leg",
+   "class": "septum",
+   "side": "L",
+   "file": "fascia/posterior-intermuscular-septum-of-leg-l.vtp",
+   "polys": 265,
+   "centroid": [
+    -0.11151,
+    -0.05964,
+    0.24035
+   ],
+   "normal": [
+    0.47057,
+    -0.87797,
+    0.08791
+   ],
+   "thickness": 0.01247,
+   "span": 0.0884,
+   "index": 154
+  },
+  {
+   "id": "posterior-intermuscular-septum-of-leg-r",
+   "name": "Posterior intermuscular septum of leg",
+   "class": "septum",
+   "side": "R",
+   "file": "fascia/posterior-intermuscular-septum-of-leg-r.vtp",
+   "polys": 265,
+   "centroid": [
+    0.11151,
+    -0.05964,
+    0.24035
+   ],
+   "normal": [
+    0.47057,
+    0.87797,
+    -0.08791
+   ],
+   "thickness": 0.01247,
+   "span": 0.0884,
+   "index": 155
+  },
+  {
+   "id": "transverse-intermuscular-septum-of-leg-l",
+   "name": "Transverse intermuscular septum of leg",
+   "class": "septum",
+   "side": "L",
+   "file": "fascia/transverse-intermuscular-septum-of-leg-l.vtp",
+   "polys": 495,
+   "centroid": [
+    -0.07949,
+    -0.05069,
+    0.27301
+   ],
+   "normal": [
+    0.2844,
+    -0.95708,
+    0.05576
+   ],
+   "thickness": 0.02885,
+   "span": 0.09135,
+   "index": 156
+  },
+  {
+   "id": "transverse-intermuscular-septum-of-leg-r",
+   "name": "Transverse intermuscular septum of leg",
+   "class": "septum",
+   "side": "R",
+   "file": "fascia/transverse-intermuscular-septum-of-leg-r.vtp",
+   "polys": 495,
+   "centroid": [
+    0.07949,
+    -0.05069,
+    0.27301
+   ],
+   "normal": [
+    0.2844,
+    0.95708,
+    -0.05576
+   ],
+   "thickness": 0.02885,
+   "span": 0.09135,
+   "index": 157
+  },
+  {
+   "id": "common-flexor-tendon-sheath-l",
+   "name": "Common flexor tendon sheath",
+   "class": "sheath",
+   "side": "L",
+   "file": "fascia/common-flexor-tendon-sheath-l.vtp",
+   "polys": 864,
+   "centroid": [
+    -0.25945,
+    0.03958,
+    0.8163
+   ],
+   "normal": [
+    0.09873,
+    -0.9774,
+    -0.18695
+   ],
+   "thickness": 0.02057,
+   "span": 0.03505,
+   "index": 158
+  },
+  {
+   "id": "common-flexor-tendon-sheath-r",
+   "name": "Common flexor tendon sheath",
+   "class": "sheath",
+   "side": "R",
+   "file": "fascia/common-flexor-tendon-sheath-r.vtp",
+   "polys": 2499,
+   "centroid": [
+    0.25802,
+    0.04179,
+    0.80541
+   ],
+   "normal": [
+    0.09809,
+    0.97511,
+    0.19887
+   ],
+   "thickness": 0.02012,
+   "span": 0.03266,
+   "index": 159
+  },
+  {
+   "id": "common-tendon-sheath-of-fibularis-muscles-l",
+   "name": "Common tendon sheath of fibularis muscles",
+   "class": "sheath",
+   "side": "L",
+   "file": "fascia/common-tendon-sheath-of-fibularis-muscles-l.vtp",
+   "polys": 1536,
+   "centroid": [
+    -0.09728,
+    -0.0541,
+    0.06029
+   ],
+   "normal": [
+    0.91622,
+    0.39709,
+    0.05344
+   ],
+   "thickness": 0.00941,
+   "span": 0.01492,
+   "index": 160
+  },
+  {
+   "id": "common-tendon-sheath-of-fibularis-muscles-r",
+   "name": "Common tendon sheath of fibularis muscles",
+   "class": "sheath",
+   "side": "R",
+   "file": "fascia/common-tendon-sheath-of-fibularis-muscles-r.vtp",
+   "polys": 1536,
+   "centroid": [
+    0.09728,
+    -0.0541,
+    0.06029
+   ],
+   "normal": [
+    0.91622,
+    -0.39709,
+    -0.05344
+   ],
+   "thickness": 0.00941,
+   "span": 0.01492,
+   "index": 161
+  },
+  {
+   "id": "cruciform-part-of-fibrous-sheath-of-digit-of-hand-l",
+   "name": "Cruciform part of fibrous sheath of digit of hand",
+   "class": "sheath",
+   "side": "L",
+   "file": "fascia/cruciform-part-of-fibrous-sheath-of-digit-of-hand-l.vtp",
+   "polys": 2500,
+   "centroid": [
+    -0.27626,
+    0.05798,
+    0.74804
+   ],
+   "normal": [
+    0.10408,
+    -0.88916,
+    -0.44561
+   ],
+   "thickness": 0.01013,
+   "span": 0.0243,
+   "index": 162
+  },
+  {
+   "id": "cruciform-part-of-fibrous-sheath-of-digit-of-hand-r",
+   "name": "Cruciform part of fibrous sheath of digit of hand",
+   "class": "sheath",
+   "side": "R",
+   "file": "fascia/cruciform-part-of-fibrous-sheath-of-digit-of-hand-r.vtp",
+   "polys": 2500,
+   "centroid": [
+    0.27626,
+    0.05798,
+    0.74804
+   ],
+   "normal": [
+    0.10408,
+    0.88916,
+    0.44561
+   ],
+   "thickness": 0.01013,
+   "span": 0.0243,
+   "index": 163
+  },
+  {
+   "id": "intertubercular-tendon-sheath-l",
+   "name": "Intertubercular tendon sheath",
+   "class": "sheath",
+   "side": "L",
+   "file": "fascia/intertubercular-tendon-sheath-l.vtp",
+   "polys": 832,
+   "centroid": [
+    -0.17932,
+    -0.00977,
+    1.38941
+   ],
+   "normal": [
+    0.41013,
+    0.90013,
+    -0.14684
+   ],
+   "thickness": 0.00779,
+   "span": 0.01067,
+   "index": 164
+  },
+  {
+   "id": "intertubercular-tendon-sheath-r",
+   "name": "Intertubercular tendon sheath",
+   "class": "sheath",
+   "side": "R",
+   "file": "fascia/intertubercular-tendon-sheath-r.vtp",
+   "polys": 832,
+   "centroid": [
+    0.17932,
+    -0.00977,
+    1.38941
+   ],
+   "normal": [
+    0.41013,
+    -0.90013,
+    0.14684
+   ],
+   "thickness": 0.00779,
+   "span": 0.01067,
+   "index": 165
+  },
+  {
+   "id": "plantar-tendon-sheath-of-fibularis-longus-muscle-l",
+   "name": "Plantar tendon sheath of fibularis longus muscle",
+   "class": "sheath",
+   "side": "L",
+   "file": "fascia/plantar-tendon-sheath-of-fibularis-longus-muscle-l.vtp",
+   "polys": 640,
+   "centroid": [
+    -0.09975,
+    -0.01051,
+    0.03235
+   ],
+   "normal": [
+    0.4928,
+    -0.16055,
+    -0.8552
+   ],
+   "thickness": 0.00538,
+   "span": 0.00947,
+   "index": 166
+  },
+  {
+   "id": "plantar-tendon-sheath-of-fibularis-longus-muscle-r",
+   "name": "Plantar tendon sheath of fibularis longus muscle",
+   "class": "sheath",
+   "side": "R",
+   "file": "fascia/plantar-tendon-sheath-of-fibularis-longus-muscle-r.vtp",
+   "polys": 640,
+   "centroid": [
+    0.09975,
+    -0.01051,
+    0.03235
+   ],
+   "normal": [
+    0.4928,
+    0.16055,
+    0.8552
+   ],
+   "thickness": 0.00538,
+   "span": 0.00947,
+   "index": 167
+  },
+  {
+   "id": "synovial-sheaths-of-digits-of-hand-l",
+   "name": "Synovial sheaths of digits of hand",
+   "class": "sheath",
+   "side": "L",
+   "file": "fascia/synovial-sheaths-of-digits-of-hand-l.vtp",
+   "polys": 2500,
+   "centroid": [
+    -0.28029,
+    0.05755,
+    0.74834
+   ],
+   "normal": [
+    0.1039,
+    -0.86691,
+    -0.48751
+   ],
+   "thickness": 0.0087,
+   "span": 0.01881,
+   "index": 168
+  },
+  {
+   "id": "synovial-sheaths-of-digits-of-hand-r",
+   "name": "Synovial sheaths of digits of hand",
+   "class": "sheath",
+   "side": "R",
+   "file": "fascia/synovial-sheaths-of-digits-of-hand-r.vtp",
+   "polys": 2500,
+   "centroid": [
+    0.28029,
+    0.05755,
+    0.74834
+   ],
+   "normal": [
+    0.1039,
+    0.86691,
+    0.48751
+   ],
+   "thickness": 0.0087,
+   "span": 0.01881,
+   "index": 169
+  },
+  {
+   "id": "tendon-sheath-abd-pollicis-longus-ext-pollicis-brevis-l",
+   "name": "Tendon sheath - abd. pollicis longus - ext. pollicis brevis",
+   "class": "sheath",
+   "side": "L",
+   "file": "fascia/tendon-sheath-abd-pollicis-longus-ext-pollicis-brevis-l.vtp",
+   "polys": 680,
+   "centroid": [
+    -0.2879,
+    0.01211,
+    0.86102
+   ],
+   "normal": [
+    0.81472,
+    0.57779,
+    -0.04876
+   ],
+   "thickness": 0.00648,
+   "span": 0.01719,
+   "index": 170
+  },
+  {
+   "id": "tendon-sheath-abd-pollicis-longus-ext-pollicis-brevis-r",
+   "name": "Tendon sheath - abd. pollicis longus - ext. pollicis brevis",
+   "class": "sheath",
+   "side": "R",
+   "file": "fascia/tendon-sheath-abd-pollicis-longus-ext-pollicis-brevis-r.vtp",
+   "polys": 680,
+   "centroid": [
+    0.2879,
+    0.01211,
+    0.86102
+   ],
+   "normal": [
+    0.81472,
+    -0.57779,
+    0.04876
+   ],
+   "thickness": 0.00648,
+   "span": 0.01719,
+   "index": 171
+  },
+  {
+   "id": "tendon-sheath-of-extensor-carpi-ulnaris-l",
+   "name": "Tendon sheath of extensor carpi ulnaris",
+   "class": "sheath",
+   "side": "L",
+   "file": "fascia/tendon-sheath-of-extensor-carpi-ulnaris-l.vtp",
+   "polys": 960,
+   "centroid": [
+    -0.24265,
+    0.00699,
+    0.85895
+   ],
+   "normal": [
+    0.3775,
+    -0.75867,
+    -0.53096
+   ],
+   "thickness": 0.00546,
+   "span": 0.00883,
+   "index": 172
+  },
+  {
+   "id": "tendon-sheath-of-extensor-carpi-ulnaris-r",
+   "name": "Tendon sheath of extensor carpi ulnaris",
+   "class": "sheath",
+   "side": "R",
+   "file": "fascia/tendon-sheath-of-extensor-carpi-ulnaris-r.vtp",
+   "polys": 960,
+   "centroid": [
+    0.24265,
+    0.00699,
+    0.85895
+   ],
+   "normal": [
+    0.3775,
+    0.75867,
+    0.53096
+   ],
+   "thickness": 0.00546,
+   "span": 0.00883,
+   "index": 173
+  },
+  {
+   "id": "tendon-sheath-of-extensor-digiti-minimi-manus-l",
+   "name": "Tendon sheath of extensor digiti minimi manus",
+   "class": "sheath",
+   "side": "L",
+   "file": "fascia/tendon-sheath-of-extensor-digiti-minimi-manus-l.vtp",
+   "polys": 592,
+   "centroid": [
+    -0.24619,
+    0.01358,
+    0.83729
+   ],
+   "normal": [
+    0.97155,
+    0.16703,
+    0.16792
+   ],
+   "thickness": 0.00629,
+   "span": 0.02355,
+   "index": 174
+  },
+  {
+   "id": "tendon-sheath-of-extensor-digiti-minimi-manus-r",
+   "name": "Tendon sheath of extensor digiti minimi manus",
+   "class": "sheath",
+   "side": "R",
+   "file": "fascia/tendon-sheath-of-extensor-digiti-minimi-manus-r.vtp",
+   "polys": 592,
+   "centroid": [
+    0.24619,
+    0.01358,
+    0.83729
+   ],
+   "normal": [
+    0.97155,
+    -0.16703,
+    -0.16792
+   ],
+   "thickness": 0.00629,
+   "span": 0.02355,
+   "index": 175
+  },
+  {
+   "id": "tendon-sheath-of-extensor-digitorum-and-extensor-indicis-l",
+   "name": "Tendon sheath of extensor digitorum and extensor indicis",
+   "class": "sheath",
+   "side": "L",
+   "file": "fascia/tendon-sheath-of-extensor-digitorum-and-extensor-indicis-l.vtp",
+   "polys": 2368,
+   "centroid": [
+    -0.26269,
+    0.00426,
+    0.85399
+   ],
+   "normal": [
+    0.11884,
+    -0.94395,
+    -0.30796
+   ],
+   "thickness": 0.00606,
+   "span": 0.01589,
+   "index": 176
+  },
+  {
+   "id": "tendon-sheath-of-extensor-digitorum-and-extensor-indicis-r",
+   "name": "Tendon sheath of extensor digitorum and extensor indicis",
+   "class": "sheath",
+   "side": "R",
+   "file": "fascia/tendon-sheath-of-extensor-digitorum-and-extensor-indicis-r.vtp",
+   "polys": 2368,
+   "centroid": [
+    0.26269,
+    0.00426,
+    0.85399
+   ],
+   "normal": [
+    0.11884,
+    0.94395,
+    0.30796
+   ],
+   "thickness": 0.00606,
+   "span": 0.01589,
+   "index": 177
+  },
+  {
+   "id": "tendon-sheath-of-extensor-digitorum-longus-l",
+   "name": "Tendon sheath of extensor digitorum longus",
+   "class": "sheath",
+   "side": "L",
+   "file": "fascia/tendon-sheath-of-extensor-digitorum-longus-l.vtp",
+   "polys": 2064,
+   "centroid": [
+    -0.0936,
+    -0.01579,
+    0.09956
+   ],
+   "normal": [
+    0.57821,
+    0.68126,
+    0.44895
+   ],
+   "thickness": 0.01659,
+   "span": 0.02542,
+   "index": 178
+  },
+  {
+   "id": "tendon-sheath-of-extensor-digitorum-longus-r",
+   "name": "Tendon sheath of extensor digitorum longus",
+   "class": "sheath",
+   "side": "R",
+   "file": "fascia/tendon-sheath-of-extensor-digitorum-longus-r.vtp",
+   "polys": 2064,
+   "centroid": [
+    0.0936,
+    -0.01579,
+    0.09956
+   ],
+   "normal": [
+    0.57821,
+    -0.68126,
+    -0.44895
+   ],
+   "thickness": 0.01659,
+   "span": 0.02542,
+   "index": 179
+  },
+  {
+   "id": "tendon-sheath-of-extensor-hallucis-longus-l",
+   "name": "Tendon sheath of extensor hallucis longus",
+   "class": "sheath",
+   "side": "L",
+   "file": "fascia/tendon-sheath-of-extensor-hallucis-longus-l.vtp",
+   "polys": 592,
+   "centroid": [
+    -0.08004,
+    -0.00573,
+    0.09472
+   ],
+   "normal": [
+    0.96105,
+    0.01811,
+    0.27579
+   ],
+   "thickness": 0.00813,
+   "span": 0.02899,
+   "index": 180
+  },
+  {
+   "id": "tendon-sheath-of-extensor-hallucis-longus-r",
+   "name": "Tendon sheath of extensor hallucis longus",
+   "class": "sheath",
+   "side": "R",
+   "file": "fascia/tendon-sheath-of-extensor-hallucis-longus-r.vtp",
+   "polys": 592,
+   "centroid": [
+    0.08004,
+    -0.00573,
+    0.09472
+   ],
+   "normal": [
+    0.96105,
+    -0.01811,
+    -0.27579
+   ],
+   "thickness": 0.00813,
+   "span": 0.02899,
+   "index": 181
+  },
+  {
+   "id": "tendon-sheath-of-extensor-pollicis-longus-l",
+   "name": "Tendon sheath of extensor pollicis longus",
+   "class": "sheath",
+   "side": "L",
+   "file": "fascia/tendon-sheath-of-extensor-pollicis-longus-l.vtp",
+   "polys": 432,
+   "centroid": [
+    -0.28178,
+    0.01055,
+    0.85168
+   ],
+   "normal": [
+    0.80942,
+    0.50007,
+    -0.30784
+   ],
+   "thickness": 0.00559,
+   "span": 0.01771,
+   "index": 182
+  },
+  {
+   "id": "tendon-sheath-of-extensor-pollicis-longus-r",
+   "name": "Tendon sheath of extensor pollicis longus",
+   "class": "sheath",
+   "side": "R",
+   "file": "fascia/tendon-sheath-of-extensor-pollicis-longus-r.vtp",
+   "polys": 432,
+   "centroid": [
+    0.28178,
+    0.01055,
+    0.85168
+   ],
+   "normal": [
+    0.80942,
+    -0.50007,
+    0.30784
+   ],
+   "thickness": 0.00559,
+   "span": 0.01771,
+   "index": 183
+  },
+  {
+   "id": "tendon-sheath-of-extensors-carpi-radialis-l",
+   "name": "Tendon sheath of extensors carpi radialis",
+   "class": "sheath",
+   "side": "L",
+   "file": "fascia/tendon-sheath-of-extensors-carpi-radialis-l.vtp",
+   "polys": 2304,
+   "centroid": [
+    -0.28062,
+    0.00755,
+    0.86549
+   ],
+   "normal": [
+    0.47987,
+    0.85885,
+    0.17917
+   ],
+   "thickness": 0.00619,
+   "span": 0.00994,
+   "index": 184
+  },
+  {
+   "id": "tendon-sheath-of-extensors-carpi-radialis-r",
+   "name": "Tendon sheath of extensors carpi radialis",
+   "class": "sheath",
+   "side": "R",
+   "file": "fascia/tendon-sheath-of-extensors-carpi-radialis-r.vtp",
+   "polys": 2304,
+   "centroid": [
+    0.28062,
+    0.00755,
+    0.86549
+   ],
+   "normal": [
+    0.47987,
+    -0.85885,
+    -0.17917
+   ],
+   "thickness": 0.00619,
+   "span": 0.00994,
+   "index": 185
+  },
+  {
+   "id": "tendon-sheath-of-flexor-carpi-radialis-l",
+   "name": "Tendon sheath of flexor carpi radialis",
+   "class": "sheath",
+   "side": "L",
+   "file": "fascia/tendon-sheath-of-flexor-carpi-radialis-l.vtp",
+   "polys": 1088,
+   "centroid": [
+    -0.26591,
+    0.03199,
+    0.86329
+   ],
+   "normal": [
+    0.96036,
+    0.0358,
+    -0.27646
+   ],
+   "thickness": 0.0068,
+   "span": 0.01107,
+   "index": 186
+  },
+  {
+   "id": "tendon-sheath-of-flexor-carpi-radialis-r",
+   "name": "Tendon sheath of flexor carpi radialis",
+   "class": "sheath",
+   "side": "R",
+   "file": "fascia/tendon-sheath-of-flexor-carpi-radialis-r.vtp",
+   "polys": 1088,
+   "centroid": [
+    0.26591,
+    0.03199,
+    0.86329
+   ],
+   "normal": [
+    0.96036,
+    -0.0358,
+    0.27646
+   ],
+   "thickness": 0.0068,
+   "span": 0.01107,
+   "index": 187
+  },
+  {
+   "id": "tendon-sheath-of-flexor-digitorum-longus-l",
+   "name": "Tendon sheath of flexor digitorum longus",
+   "class": "sheath",
+   "side": "L",
+   "file": "fascia/tendon-sheath-of-flexor-digitorum-longus-l.vtp",
+   "polys": 256,
+   "centroid": [
+    -0.0568,
+    -0.05305,
+    0.06052
+   ],
+   "normal": [
+    0.82897,
+    0.55154,
+    0.09284
+   ],
+   "thickness": 0.01,
+   "span": 0.02268,
+   "index": 188
+  },
+  {
+   "id": "tendon-sheath-of-flexor-digitorum-longus-r",
+   "name": "Tendon sheath of flexor digitorum longus",
+   "class": "sheath",
+   "side": "R",
+   "file": "fascia/tendon-sheath-of-flexor-digitorum-longus-r.vtp",
+   "polys": 256,
+   "centroid": [
+    0.0568,
+    -0.05305,
+    0.06052
+   ],
+   "normal": [
+    0.82897,
+    -0.55154,
+    -0.09284
+   ],
+   "thickness": 0.01,
+   "span": 0.02268,
+   "index": 189
+  },
+  {
+   "id": "tendon-sheath-of-flexor-hallucis-longus-l",
+   "name": "Tendon sheath of flexor hallucis longus",
+   "class": "sheath",
+   "side": "L",
+   "file": "fascia/tendon-sheath-of-flexor-hallucis-longus-l.vtp",
+   "polys": 1728,
+   "centroid": [
+    -0.06573,
+    -0.05658,
+    0.0642
+   ],
+   "normal": [
+    0.90979,
+    0.23796,
+    0.34009
+   ],
+   "thickness": 0.00935,
+   "span": 0.0168,
+   "index": 190
+  },
+  {
+   "id": "tendon-sheath-of-flexor-hallucis-longus-r",
+   "name": "Tendon sheath of flexor hallucis longus",
+   "class": "sheath",
+   "side": "R",
+   "file": "fascia/tendon-sheath-of-flexor-hallucis-longus-r.vtp",
+   "polys": 1728,
+   "centroid": [
+    0.06573,
+    -0.05658,
+    0.0642
+   ],
+   "normal": [
+    0.90979,
+    -0.23796,
+    -0.34009
+   ],
+   "thickness": 0.00935,
+   "span": 0.0168,
+   "index": 191
+  },
+  {
+   "id": "tendon-sheath-of-flexor-pollicis-longus-l",
+   "name": "Tendon sheath of flexor pollicis longus",
+   "class": "sheath",
+   "side": "L",
+   "file": "fascia/tendon-sheath-of-flexor-pollicis-longus-l.vtp",
+   "polys": 2500,
+   "centroid": [
+    -0.2881,
+    0.03707,
+    0.8391
+   ],
+   "normal": [
+    0.40945,
+    0.90768,
+    0.09203
+   ],
+   "thickness": 0.00995,
+   "span": 0.03201,
+   "index": 192
+  },
+  {
+   "id": "tendon-sheath-of-flexor-pollicis-longus-r",
+   "name": "Tendon sheath of flexor pollicis longus",
+   "class": "sheath",
+   "side": "R",
+   "file": "fascia/tendon-sheath-of-flexor-pollicis-longus-r.vtp",
+   "polys": 2500,
+   "centroid": [
+    0.2881,
+    0.03707,
+    0.8391
+   ],
+   "normal": [
+    0.40945,
+    -0.90768,
+    -0.09203
+   ],
+   "thickness": 0.00995,
+   "span": 0.03201,
+   "index": 193
+  },
+  {
+   "id": "tendon-sheath-of-tibialis-anterior-l",
+   "name": "Tendon sheath of tibialis anterior",
+   "class": "sheath",
+   "side": "L",
+   "file": "fascia/tendon-sheath-of-tibialis-anterior-l.vtp",
+   "polys": 240,
+   "centroid": [
+    -0.07524,
+    -0.0142,
+    0.10663
+   ],
+   "normal": [
+    0.95206,
+    -0.06358,
+    0.29924
+   ],
+   "thickness": 0.01038,
+   "span": 0.02602,
+   "index": 194
+  },
+  {
+   "id": "tendon-sheath-of-tibialis-anterior-r",
+   "name": "Tendon sheath of tibialis anterior",
+   "class": "sheath",
+   "side": "R",
+   "file": "fascia/tendon-sheath-of-tibialis-anterior-r.vtp",
+   "polys": 240,
+   "centroid": [
+    0.07524,
+    -0.0142,
+    0.10663
+   ],
+   "normal": [
+    0.95206,
+    0.06358,
+    -0.29924
+   ],
+   "thickness": 0.01038,
+   "span": 0.02602,
+   "index": 195
+  },
+  {
+   "id": "tendon-sheath-of-tibialis-posterior-muscle-l",
+   "name": "Tendon sheath of tibialis posterior muscle",
+   "class": "sheath",
+   "side": "L",
+   "file": "fascia/tendon-sheath-of-tibialis-posterior-muscle-l.vtp",
+   "polys": 286,
+   "centroid": [
+    -0.0552,
+    -0.04639,
+    0.07555
+   ],
+   "normal": [
+    0.78133,
+    0.39342,
+    0.48451
+   ],
+   "thickness": 0.00931,
+   "span": 0.01466,
+   "index": 196
+  },
+  {
+   "id": "tendon-sheath-of-tibialis-posterior-muscle-r",
+   "name": "Tendon sheath of tibialis posterior muscle",
+   "class": "sheath",
+   "side": "R",
+   "file": "fascia/tendon-sheath-of-tibialis-posterior-muscle-r.vtp",
+   "polys": 286,
+   "centroid": [
+    0.0552,
+    -0.04639,
+    0.07555
+   ],
+   "normal": [
+    0.78133,
+    -0.39342,
+    -0.48451
+   ],
+   "thickness": 0.00931,
+   "span": 0.01466,
+   "index": 197
+  }
+ ]
+}

@@ -1,0 +1,264 @@
+{
+ "points": {
+  "n": 122,
+  "median_mm": 46.14630363370624,
+  "median_pct": 0.42625,
+  "p": 0.09785
+ },
+ "lines": {
+  "n": 464,
+  "median_mm": 53.701126286557255,
+  "median_pct": 0.4041666666666667,
+  "p": 0.0
+ },
+ "channels": [
+  {
+   "channel": "KI",
+   "n": 8,
+   "median_mm": 5.7,
+   "median_pct": 0.128
+  },
+  {
+   "channel": "LI",
+   "n": 8,
+   "median_mm": 24.7,
+   "median_pct": 0.199
+  },
+  {
+   "channel": "GB",
+   "n": 20,
+   "median_mm": 8.0,
+   "median_pct": 0.211
+  },
+  {
+   "channel": "LR",
+   "n": 14,
+   "median_mm": 45.0,
+   "median_pct": 0.325
+  },
+  {
+   "channel": "SP",
+   "n": 12,
+   "median_mm": 34.7,
+   "median_pct": 0.346
+  },
+  {
+   "channel": "LU",
+   "n": 4,
+   "median_mm": 58.4,
+   "median_pct": 0.485
+  },
+  {
+   "channel": "BL",
+   "n": 22,
+   "median_mm": 55.7,
+   "median_pct": 0.524
+  },
+  {
+   "channel": "ST",
+   "n": 20,
+   "median_mm": 83.8,
+   "median_pct": 0.548
+  },
+  {
+   "channel": "SJ",
+   "n": 10,
+   "median_mm": 53.0,
+   "median_pct": 0.649
+  }
+ ],
+ "pairs": [
+  {
+   "dist_mm": 1.1,
+   "code": "BL-59",
+   "septum": "Transverse intermuscular septum of leg",
+   "side": "L"
+  },
+  {
+   "dist_mm": 1.5,
+   "code": "KI-7",
+   "septum": "Transverse intermuscular septum of leg",
+   "side": "L"
+  },
+  {
+   "dist_mm": 1.5,
+   "code": "KI-8",
+   "septum": "Transverse intermuscular septum of leg",
+   "side": "L"
+  },
+  {
+   "dist_mm": 1.5,
+   "code": "KI-9",
+   "septum": "Transverse intermuscular septum of leg",
+   "side": "L"
+  },
+  {
+   "dist_mm": 3.5,
+   "code": "GB-38",
+   "septum": "Anterior intermuscular septum of leg",
+   "side": "L"
+  },
+  {
+   "dist_mm": 3.8,
+   "code": "GB-39",
+   "septum": "Anterior intermuscular septum of leg",
+   "side": "L"
+  },
+  {
+   "dist_mm": 4.0,
+   "code": "GB-39",
+   "septum": "Anterior intermuscular septum of leg",
+   "side": "R"
+  },
+  {
+   "dist_mm": 4.0,
+   "code": "BL-59",
+   "septum": "Transverse intermuscular septum of leg",
+   "side": "R"
+  },
+  {
+   "dist_mm": 4.3,
+   "code": "BL-58",
+   "septum": "Transverse intermuscular septum of leg",
+   "side": "L"
+  },
+  {
+   "dist_mm": 5.0,
+   "code": "BL-58",
+   "septum": "Transverse intermuscular septum of leg",
+   "side": "R"
+  },
+  {
+   "dist_mm": 5.2,
+   "code": "GB-32",
+   "septum": "Lateral femoral intermuscular septum",
+   "side": "R"
+  },
+  {
+   "dist_mm": 5.7,
+   "code": "KI-7",
+   "septum": "Transverse intermuscular septum of leg",
+   "side": "R"
+  },
+  {
+   "dist_mm": 5.7,
+   "code": "KI-8",
+   "septum": "Transverse intermuscular septum of leg",
+   "side": "R"
+  },
+  {
+   "dist_mm": 5.8,
+   "code": "GB-35",
+   "septum": "Posterior intermuscular septum of leg",
+   "side": "R"
+  },
+  {
+   "dist_mm": 5.8,
+   "code": "GB-36",
+   "septum": "Anterior intermuscular septum of leg",
+   "side": "L"
+  },
+  {
+   "dist_mm": 6.2,
+   "code": "GB-38",
+   "septum": "Anterior intermuscular septum of leg",
+   "side": "R"
+  },
+  {
+   "dist_mm": 6.6,
+   "code": "LR-5",
+   "septum": "Transverse intermuscular septum of leg",
+   "side": "R"
+  },
+  {
+   "dist_mm": 7.2,
+   "code": "LR-9",
+   "septum": "Medial femoral intermuscular septum",
+   "side": "R"
+  },
+  {
+   "dist_mm": 7.2,
+   "code": "GB-37",
+   "septum": "Anterior intermuscular septum of leg",
+   "side": "R"
+  },
+  {
+   "dist_mm": 7.5,
+   "code": "GB-35",
+   "septum": "Posterior intermuscular septum of leg",
+   "side": "L"
+  },
+  {
+   "dist_mm": 7.6,
+   "code": "LR-9",
+   "septum": "Medial femoral intermuscular septum",
+   "side": "L"
+  },
+  {
+   "dist_mm": 7.7,
+   "code": "GB-36",
+   "septum": "Anterior intermuscular septum of leg",
+   "side": "R"
+  },
+  {
+   "dist_mm": 8.3,
+   "code": "GB-37",
+   "septum": "Anterior intermuscular septum of leg",
+   "side": "L"
+  },
+  {
+   "dist_mm": 9.6,
+   "code": "KI-9",
+   "septum": "Transverse intermuscular septum of leg",
+   "side": "R"
+  },
+  {
+   "dist_mm": 9.9,
+   "code": "GB-32",
+   "septum": "Lateral femoral intermuscular septum",
+   "side": "L"
+  },
+  {
+   "dist_mm": 10.5,
+   "code": "SP-6",
+   "septum": "Anterior intermuscular septum of leg",
+   "side": "L"
+  },
+  {
+   "dist_mm": 10.8,
+   "code": "LI-13",
+   "septum": "Lateral intermuscular septum of arm",
+   "side": "R"
+  },
+  {
+   "dist_mm": 12.5,
+   "code": "GB-31",
+   "septum": "Lateral femoral intermuscular septum",
+   "side": "L"
+  },
+  {
+   "dist_mm": 12.7,
+   "code": "LR-5",
+   "septum": "Transverse intermuscular septum of leg",
+   "side": "L"
+  },
+  {
+   "dist_mm": 12.9,
+   "code": "SP-6",
+   "septum": "Posterior intermuscular septum of leg",
+   "side": "R"
+  },
+  {
+   "dist_mm": 13.0,
+   "code": "GB-31",
+   "septum": "Lateral femoral intermuscular septum",
+   "side": "R"
+  },
+  {
+   "dist_mm": 14.1,
+   "code": "LI-13",
+   "septum": "Lateral intermuscular septum of arm",
+   "side": "L"
+  }
+ ]
+}

@@ -25,7 +25,7 @@ Wymagana atrybucja przy każdym rozpowszechnianiu tych siatek lub ich przeróbek
 > Z-Anatomy, © Gauthier Kervyn, licensed under CC Attribution-Share Alike 4.0 International.
 
 **Share-alike działa dalej:** jeżeli udostępnisz przerobione siatki albo dane z nich
-wyliczone, muszą iść na tej samej licencji. Dotyczy to również czterech plików, które
+wyliczone, muszą iść na tej samej licencji. Dotyczy to również sześciu plików, które
 **są** w repozytorium, bo powstały z pomiarów tych siatek:
 
 - `data/muscles.json` — katalog 477 mięśni: nazwa, strona, oś działania, objętość, środek
@@ -34,8 +34,13 @@ wyliczone, muszą iść na tej samej licencji. Dotyczy to również czterech pli
   gałka oczna): środek, oś, zakres, obrys
 - `data/azimuth_fit.json` — kąty dopasowane przez pomiar odległości do mięśni; zawiera
   ich nazwy i wyniki pomiarów na siatkach Z-Anatomy
+- `data/fascia.json` — katalog 198 struktur łącznotkankowych (powięzie, przegrody
+  międzymięśniowe, troczki, rozcięgna, pochewki, kaletki): nazwa, klasa, strona,
+  normalna płata, grubość, rozpiętość
+- `data/septa_analysis.json` — wynik pomiaru odległości punktów i kanałów do śladu
+  przegród międzymięśniowych na skórze (`tools/analyze_septa.py`)
 
-Wszystkie cztery są objęte **CC BY-SA 4.0**, nie licencją MIT.
+Wszystkie sześć jest objętych **CC BY-SA 4.0**, nie licencją MIT.
 
 ## 3. Opisy punktów — materiał chroniony, **nie ma go w repozytorium**
 
