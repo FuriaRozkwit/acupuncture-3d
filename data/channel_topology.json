@@ -1,0 +1,1238 @@
+{
+ "source": "wydobyte z pol categories w data/points.json (tools/build_topology.py); same fakty strukturalne - kody, role, listy kanalow",
+ "interior_exterior": [
+  [
+   "LU",
+   "LI"
+  ],
+  [
+   "ST",
+   "SP"
+  ],
+  [
+   "HT",
+   "SI"
+  ],
+  [
+   "BL",
+   "KI"
+  ],
+  [
+   "PC",
+   "SJ"
+  ],
+  [
+   "GB",
+   "LR"
+  ]
+ ],
+ "same_name": {
+  "taiyin": [
+   "LU",
+   "SP"
+  ],
+  "yangming": [
+   "LI",
+   "ST"
+  ],
+  "shaoyin": [
+   "HT",
+   "KI"
+  ],
+  "taiyang": [
+   "SI",
+   "BL"
+  ],
+  "jueyin": [
+   "PC",
+   "LR"
+  ],
+  "shaoyang": [
+   "SJ",
+   "GB"
+  ]
+ },
+ "roles": {
+  "BL-10": [
+   {
+    "role": "window",
+    "of": "BL"
+   }
+  ],
+  "BL-11": [
+   {
+    "role": "hui",
+    "of": "BL"
+   },
+   {
+    "role": "sea",
+    "of": "BL"
+   }
+  ],
+  "BL-13": [
+   {
+    "role": "back_shu",
+    "of": "LU"
+   }
+  ],
+  "BL-15": [
+   {
+    "role": "back_shu",
+    "of": "HT"
+   }
+  ],
+  "BL-17": [
+   {
+    "role": "hui",
+    "of": "BL"
+   }
+  ],
+  "BL-18": [
+   {
+    "role": "back_shu",
+    "of": "LR"
+   }
+  ],
+  "BL-19": [
+   {
+    "role": "back_shu",
+    "of": "GB"
+   }
+  ],
+  "BL-20": [
+   {
+    "role": "back_shu",
+    "of": "SP"
+   }
+  ],
+  "BL-21": [
+   {
+    "role": "back_shu",
+    "of": "ST"
+   }
+  ],
+  "BL-22": [
+   {
+    "role": "back_shu",
+    "of": "SJ"
+   }
+  ],
+  "BL-23": [
+   {
+    "role": "back_shu",
+    "of": "KI"
+   }
+  ],
+  "BL-24": [
+   {
+    "role": "sea",
+    "of": "BL"
+   }
+  ],
+  "BL-25": [
+   {
+    "role": "back_shu",
+    "of": "LI"
+   }
+  ],
+  "BL-27": [
+   {
+    "role": "back_shu",
+    "of": "SI"
+   }
+  ],
+  "BL-28": [
+   {
+    "role": "back_shu",
+    "of": "BL"
+   }
+  ],
+  "BL-39": [
+   {
+    "role": "lower_he_sea",
+    "of": "BL"
+   }
+  ],
+  "BL-40": [
+   {
+    "role": "he_sea",
+    "of": "BL"
+   },
+   {
+    "role": "command",
+    "of": "BL"
+   }
+  ],
+  "BL-58": [
+   {
+    "role": "luo",
+    "of": "BL"
+   }
+  ],
+  "BL-59": [
+   {
+    "role": "xi",
+    "of": "YANGQIAO"
+   }
+  ],
+  "BL-60": [
+   {
+    "role": "jing_river",
+    "of": "BL"
+   }
+  ],
+  "BL-62": [
+   {
+    "role": "confluent",
+    "of": "YANGQIAO"
+   }
+  ],
+  "BL-63": [
+   {
+    "role": "xi",
+    "of": "BL"
+   }
+  ],
+  "BL-64": [
+   {
+    "role": "yuan",
+    "of": "BL"
+   }
+  ],
+  "BL-65": [
+   {
+    "role": "shu_stream",
+    "of": "BL"
+   }
+  ],
+  "BL-66": [
+   {
+    "role": "ying_spring",
+    "of": "BL"
+   }
+  ],
+  "BL-67": [
+   {
+    "role": "jing_well",
+    "of": "BL"
+   }
+  ],
+  "DU-1": [
+   {
+    "role": "luo",
+    "of": "DU"
+   }
+  ],
+  "DU-14": [
+   {
+    "role": "sea",
+    "of": "DU"
+   }
+  ],
+  "DU-15": [
+   {
+    "role": "sea",
+    "of": "DU"
+   }
+  ],
+  "DU-16": [
+   {
+    "role": "sea",
+    "of": "DU"
+   }
+  ],
+  "DU-20": [
+   {
+    "role": "sea",
+    "of": "DU"
+   }
+  ],
+  "GB-24": [
+   {
+    "role": "front_mu",
+    "of": "GB"
+   }
+  ],
+  "GB-25": [
+   {
+    "role": "front_mu",
+    "of": "KI"
+   }
+  ],
+  "GB-34": [
+   {
+    "role": "he_sea",
+    "of": "GB"
+   },
+   {
+    "role": "hui",
+    "of": "GB"
+   }
+  ],
+  "GB-35": [
+   {
+    "role": "xi",
+    "of": "YANGWEI"
+   }
+  ],
+  "GB-36": [
+   {
+    "role": "xi",
+    "of": "GB"
+   }
+  ],
+  "GB-37": [
+   {
+    "role": "luo",
+    "of": "GB"
+   }
+  ],
+  "GB-38": [
+   {
+    "role": "jing_river",
+    "of": "GB"
+   }
+  ],
+  "GB-39": [
+   {
+    "role": "hui",
+    "of": "GB"
+   }
+  ],
+  "GB-40": [
+   {
+    "role": "yuan",
+    "of": "GB"
+   }
+  ],
+  "GB-41": [
+   {
+    "role": "shu_stream",
+    "of": "GB"
+   },
+   {
+    "role": "confluent",
+    "of": "DAI"
+   }
+  ],
+  "GB-43": [
+   {
+    "role": "ying_spring",
+    "of": "GB"
+   }
+  ],
+  "GB-44": [
+   {
+    "role": "jing_well",
+    "of": "GB"
+   }
+  ],
+  "HT-3": [
+   {
+    "role": "he_sea",
+    "of": "HT"
+   }
+  ],
+  "HT-4": [
+   {
+    "role": "jing_river",
+    "of": "HT"
+   }
+  ],
+  "HT-5": [
+   {
+    "role": "luo",
+    "of": "HT"
+   }
+  ],
+  "HT-6": [
+   {
+    "role": "xi",
+    "of": "HT"
+   }
+  ],
+  "HT-7": [
+   {
+    "role": "yuan",
+    "of": "HT"
+   },
+   {
+    "role": "shu_stream",
+    "of": "HT"
+   }
+  ],
+  "HT-8": [
+   {
+    "role": "ying_spring",
+    "of": "HT"
+   }
+  ],
+  "HT-9": [
+   {
+    "role": "jing_well",
+    "of": "HT"
+   }
+  ],
+  "KI-1": [
+   {
+    "role": "jing_well",
+    "of": "KI"
+   }
+  ],
+  "KI-10": [
+   {
+    "role": "he_sea",
+    "of": "KI"
+   }
+  ],
+  "KI-2": [
+   {
+    "role": "ying_spring",
+    "of": "KI"
+   }
+  ],
+  "KI-3": [
+   {
+    "role": "yuan",
+    "of": "KI"
+   },
+   {
+    "role": "shu_stream",
+    "of": "KI"
+   }
+  ],
+  "KI-4": [
+   {
+    "role": "luo",
+    "of": "KI"
+   }
+  ],
+  "KI-5": [
+   {
+    "role": "xi",
+    "of": "KI"
+   }
+  ],
+  "KI-6": [
+   {
+    "role": "confluent",
+    "of": "YINQIAO"
+   }
+  ],
+  "KI-7": [
+   {
+    "role": "jing_river",
+    "of": "KI"
+   }
+  ],
+  "KI-8": [
+   {
+    "role": "xi",
+    "of": "YINQIAO"
+   }
+  ],
+  "KI-9": [
+   {
+    "role": "xi",
+    "of": "YINWEI"
+   }
+  ],
+  "LI-1": [
+   {
+    "role": "jing_well",
+    "of": "LI"
+   }
+  ],
+  "LI-11": [
+   {
+    "role": "he_sea",
+    "of": "LI"
+   }
+  ],
+  "LI-18": [
+   {
+    "role": "window",
+    "of": "LI"
+   }
+  ],
+  "LI-2": [
+   {
+    "role": "ying_spring",
+    "of": "LI"
+   }
+  ],
+  "LI-3": [
+   {
+    "role": "shu_stream",
+    "of": "LI"
+   }
+  ],
+  "LI-4": [
+   {
+    "role": "yuan",
+    "of": "LI"
+   },
+   {
+    "role": "command",
+    "of": "LI"
+   }
+  ],
+  "LI-5": [
+   {
+    "role": "jing_river",
+    "of": "LI"
+   }
+  ],
+  "LI-6": [
+   {
+    "role": "luo",
+    "of": "LI"
+   }
+  ],
+  "LI-7": [
+   {
+    "role": "xi",
+    "of": "LI"
+   }
+  ],
+  "LR-1": [
+   {
+    "role": "jing_well",
+    "of": "LR"
+   }
+  ],
+  "LR-13": [
+   {
+    "role": "front_mu",
+    "of": "SP"
+   },
+   {
+    "role": "hui",
+    "of": "LR"
+   }
+  ],
+  "LR-14": [
+   {
+    "role": "front_mu",
+    "of": "LR"
+   }
+  ],
+  "LR-2": [
+   {
+    "role": "ying_spring",
+    "of": "LR"
+   }
+  ],
+  "LR-3": [
+   {
+    "role": "yuan",
+    "of": "LR"
+   },
+   {
+    "role": "shu_stream",
+    "of": "LR"
+   }
+  ],
+  "LR-4": [
+   {
+    "role": "jing_river",
+    "of": "LR"
+   }
+  ],
+  "LR-5": [
+   {
+    "role": "luo",
+    "of": "LR"
+   }
+  ],
+  "LR-6": [
+   {
+    "role": "xi",
+    "of": "LR"
+   }
+  ],
+  "LR-8": [
+   {
+    "role": "he_sea",
+    "of": "LR"
+   }
+  ],
+  "LU-1": [
+   {
+    "role": "front_mu",
+    "of": "LU"
+   }
+  ],
+  "LU-10": [
+   {
+    "role": "ying_spring",
+    "of": "LU"
+   }
+  ],
+  "LU-11": [
+   {
+    "role": "jing_well",
+    "of": "LU"
+   }
+  ],
+  "LU-3": [
+   {
+    "role": "window",
+    "of": "LU"
+   }
+  ],
+  "LU-5": [
+   {
+    "role": "he_sea",
+    "of": "LU"
+   }
+  ],
+  "LU-6": [
+   {
+    "role": "xi",
+    "of": "LU"
+   }
+  ],
+  "LU-7": [
+   {
+    "role": "luo",
+    "of": "LU"
+   },
+   {
+    "role": "confluent",
+    "of": "REN"
+   },
+   {
+    "role": "command",
+    "of": "LU"
+   }
+  ],
+  "LU-8": [
+   {
+    "role": "jing_river",
+    "of": "LU"
+   }
+  ],
+  "LU-9": [
+   {
+    "role": "yuan",
+    "of": "LU"
+   },
+   {
+    "role": "shu_stream",
+    "of": "LU"
+   },
+   {
+    "role": "hui",
+    "of": "LU"
+   }
+  ],
+  "PC-1": [
+   {
+    "role": "window",
+    "of": "PC"
+   }
+  ],
+  "PC-3": [
+   {
+    "role": "he_sea",
+    "of": "PC"
+   }
+  ],
+  "PC-4": [
+   {
+    "role": "xi",
+    "of": "PC"
+   }
+  ],
+  "PC-5": [
+   {
+    "role": "jing_river",
+    "of": "PC"
+   }
+  ],
+  "PC-6": [
+   {
+    "role": "luo",
+    "of": "PC"
+   },
+   {
+    "role": "confluent",
+    "of": "YINWEI"
+   }
+  ],
+  "PC-7": [
+   {
+    "role": "yuan",
+    "of": "PC"
+   },
+   {
+    "role": "shu_stream",
+    "of": "PC"
+   }
+  ],
+  "PC-8": [
+   {
+    "role": "ying_spring",
+    "of": "PC"
+   }
+  ],
+  "PC-9": [
+   {
+    "role": "jing_well",
+    "of": "PC"
+   }
+  ],
+  "REN-12": [
+   {
+    "role": "front_mu",
+    "of": "ST"
+   },
+   {
+    "role": "hui",
+    "of": "REN"
+   }
+  ],
+  "REN-14": [
+   {
+    "role": "front_mu",
+    "of": "HT"
+   }
+  ],
+  "REN-15": [
+   {
+    "role": "luo",
+    "of": "REN"
+   }
+  ],
+  "REN-17": [
+   {
+    "role": "front_mu",
+    "of": "PC"
+   },
+   {
+    "role": "hui",
+    "of": "REN"
+   },
+   {
+    "role": "sea",
+    "of": "REN"
+   }
+  ],
+  "REN-22": [
+   {
+    "role": "window",
+    "of": "REN"
+   }
+  ],
+  "REN-3": [
+   {
+    "role": "front_mu",
+    "of": "BL"
+   }
+  ],
+  "REN-4": [
+   {
+    "role": "front_mu",
+    "of": "SI"
+   }
+  ],
+  "REN-5": [
+   {
+    "role": "front_mu",
+    "of": "SJ"
+   }
+  ],
+  "REN-6": [
+   {
+    "role": "sea",
+    "of": "REN"
+   }
+  ],
+  "SI-1": [
+   {
+    "role": "jing_well",
+    "of": "SI"
+   }
+  ],
+  "SI-16": [
+   {
+    "role": "window",
+    "of": "SI"
+   }
+  ],
+  "SI-17": [
+   {
+    "role": "window",
+    "of": "SI"
+   }
+  ],
+  "SI-2": [
+   {
+    "role": "ying_spring",
+    "of": "SI"
+   }
+  ],
+  "SI-3": [
+   {
+    "role": "shu_stream",
+    "of": "SI"
+   },
+   {
+    "role": "confluent",
+    "of": "DU"
+   }
+  ],
+  "SI-4": [
+   {
+    "role": "yuan",
+    "of": "SI"
+   }
+  ],
+  "SI-5": [
+   {
+    "role": "jing_river",
+    "of": "SI"
+   }
+  ],
+  "SI-6": [
+   {
+    "role": "xi",
+    "of": "SI"
+   }
+  ],
+  "SI-7": [
+   {
+    "role": "luo",
+    "of": "SI"
+   }
+  ],
+  "SI-8": [
+   {
+    "role": "he_sea",
+    "of": "SI"
+   }
+  ],
+  "SJ-1": [
+   {
+    "role": "jing_well",
+    "of": "SJ"
+   }
+  ],
+  "SJ-10": [
+   {
+    "role": "he_sea",
+    "of": "SJ"
+   }
+  ],
+  "SJ-16": [
+   {
+    "role": "window",
+    "of": "SJ"
+   }
+  ],
+  "SJ-2": [
+   {
+    "role": "ying_spring",
+    "of": "SJ"
+   }
+  ],
+  "SJ-3": [
+   {
+    "role": "shu_stream",
+    "of": "SJ"
+   }
+  ],
+  "SJ-4": [
+   {
+    "role": "yuan",
+    "of": "SJ"
+   }
+  ],
+  "SJ-5": [
+   {
+    "role": "luo",
+    "of": "SJ"
+   },
+   {
+    "role": "confluent",
+    "of": "YANGWEI"
+   }
+  ],
+  "SJ-6": [
+   {
+    "role": "jing_river",
+    "of": "SJ"
+   }
+  ],
+  "SJ-7": [
+   {
+    "role": "xi",
+    "of": "SJ"
+   }
+  ],
+  "SP-1": [
+   {
+    "role": "jing_well",
+    "of": "SP"
+   }
+  ],
+  "SP-10": [
+   {
+    "role": "sea",
+    "of": "SP"
+   }
+  ],
+  "SP-2": [
+   {
+    "role": "ying_spring",
+    "of": "SP"
+   }
+  ],
+  "SP-21": [
+   {
+    "role": "great_luo",
+    "of": "SP"
+   }
+  ],
+  "SP-3": [
+   {
+    "role": "yuan",
+    "of": "SP"
+   },
+   {
+    "role": "shu_stream",
+    "of": "SP"
+   }
+  ],
+  "SP-4": [
+   {
+    "role": "luo",
+    "of": "SP"
+   },
+   {
+    "role": "confluent",
+    "of": "CHONG"
+   }
+  ],
+  "SP-5": [
+   {
+    "role": "jing_river",
+    "of": "SP"
+   }
+  ],
+  "SP-8": [
+   {
+    "role": "xi",
+    "of": "SP"
+   }
+  ],
+  "SP-9": [
+   {
+    "role": "he_sea",
+    "of": "SP"
+   }
+  ],
+  "ST-25": [
+   {
+    "role": "front_mu",
+    "of": "LI"
+   }
+  ],
+  "ST-30": [
+   {
+    "role": "sea",
+    "of": "ST"
+   }
+  ],
+  "ST-34": [
+   {
+    "role": "xi",
+    "of": "ST"
+   }
+  ],
+  "ST-36": [
+   {
+    "role": "command",
+    "of": "ST"
+   },
+   {
+    "role": "sea",
+    "of": "ST"
+   },
+   {
+    "role": "he_sea",
+    "of": "ST"
+   }
+  ],
+  "ST-37": [
+   {
+    "role": "lower_he_sea",
+    "of": "LI"
+   },
+   {
+    "role": "sea",
+    "of": "ST"
+   }
+  ],
+  "ST-39": [
+   {
+    "role": "lower_he_sea",
+    "of": "SI"
+   },
+   {
+    "role": "sea",
+    "of": "ST"
+   }
+  ],
+  "ST-40": [
+   {
+    "role": "luo",
+    "of": "ST"
+   }
+  ],
+  "ST-41": [
+   {
+    "role": "jing_river",
+    "of": "ST"
+   }
+  ],
+  "ST-42": [
+   {
+    "role": "yuan",
+    "of": "ST"
+   }
+  ],
+  "ST-43": [
+   {
+    "role": "shu_stream",
+    "of": "ST"
+   }
+  ],
+  "ST-44": [
+   {
+    "role": "ying_spring",
+    "of": "ST"
+   }
+  ],
+  "ST-45": [
+   {
+    "role": "jing_well",
+    "of": "ST"
+   }
+  ],
+  "ST-9": [
+   {
+    "role": "window",
+    "of": "ST"
+   },
+   {
+    "role": "sea",
+    "of": "ST"
+   }
+  ]
+ },
+ "crossings": {
+  "BL-1": [
+   "SI"
+  ],
+  "BL-11": [
+   "SI"
+  ],
+  "BL-31": [
+   "GB"
+  ],
+  "BL-32": [
+   "GB"
+  ],
+  "BL-33": [
+   "GB"
+  ],
+  "BL-34": [
+   "GB"
+  ],
+  "BL-41": [
+   "SI"
+  ],
+  "GB-1": [
+   "BL"
+  ],
+  "GB-10": [
+   "BL"
+  ],
+  "GB-11": [
+   "BL"
+  ],
+  "GB-12": [
+   "BL"
+  ],
+  "GB-13": [
+   "BL"
+  ],
+  "GB-14": [
+   "BL"
+  ],
+  "GB-15": [
+   "BL"
+  ],
+  "GB-16": [
+   "BL"
+  ],
+  "GB-17": [
+   "BL"
+  ],
+  "GB-18": [
+   "BL"
+  ],
+  "GB-19": [
+   "BL"
+  ],
+  "GB-21": [
+   "BL"
+  ],
+  "GB-23": [
+   "BL"
+  ],
+  "GB-24": [
+   "BL",
+   "SP"
+  ],
+  "GB-26": [
+   "BL"
+  ],
+  "GB-27": [
+   "BL"
+  ],
+  "GB-28": [
+   "BL"
+  ],
+  "GB-29": [
+   "BL"
+  ],
+  "GB-30": [
+   "BL"
+  ],
+  "GB-4": [
+   "BL",
+   "SJ"
+  ],
+  "GB-5": [
+   "BL",
+   "ST"
+  ],
+  "GB-7": [
+   "BL"
+  ],
+  "GB-8": [
+   "BL"
+  ],
+  "GB-9": [
+   "BL"
+  ],
+  "LR-13": [
+   "BL",
+   "GB"
+  ],
+  "LR-14": [
+   "SP"
+  ],
+  "LU-1": [
+   "SP"
+  ],
+  "PC-1": [
+   "BL",
+   "GB"
+  ],
+  "SI-18": [
+   "SJ"
+  ],
+  "SI-19": [
+   "SJ"
+  ],
+  "SJ-15": [
+   "BL",
+   "GB"
+  ],
+  "SJ-17": [
+   "BL",
+   "GB"
+  ],
+  "SJ-22": [
+   "BL",
+   "GB"
+  ],
+  "SP-12": [
+   "LR"
+  ],
+  "SP-13": [
+   "LR"
+  ],
+  "SP-6": [
+   "LR"
+  ],
+  "ST-7": [
+   "BL",
+   "GB"
+  ],
+  "ST-8": [
+   "BL",
+   "GB"
+  ]
+ },
+ "opening_points": {
+  "BL-62": [
+   "YANGQIAO"
+  ],
+  "GB-41": [
+   "DAI"
+  ],
+  "KI-6": [
+   "YINQIAO"
+  ],
+  "LU-7": [
+   "REN"
+  ],
+  "PC-6": [
+   "YINWEI"
+  ],
+  "SI-3": [
+   "DU"
+  ],
+  "SJ-5": [
+   "YANGWEI"
+  ],
+  "SP-4": [
+   "CHONG"
+  ]
+ },
+ "luo_of": {
+  "BL": "BL-58",
+  "DU": "DU-1",
+  "GB": "GB-37",
+  "HT": "HT-5",
+  "KI": "KI-4",
+  "LI": "LI-6",
+  "LR": "LR-5",
+  "LU": "LU-7",
+  "PC": "PC-6",
+  "REN": "REN-15",
+  "SI": "SI-7",
+  "SJ": "SJ-5",
+  "SP": "SP-4",
+  "ST": "ST-40"
+ },
+ "yuan_of": {
+  "BL": "BL-64",
+  "GB": "GB-40",
+  "HT": "HT-7",
+  "KI": "KI-3",
+  "LI": "LI-4",
+  "LR": "LR-3",
+  "LU": "LU-9",
+  "PC": "PC-7",
+  "SI": "SI-4",
+  "SJ": "SJ-4",
+  "SP": "SP-3",
+  "ST": "ST-42"
+ }
+}

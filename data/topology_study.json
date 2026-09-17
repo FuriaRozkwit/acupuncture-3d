@@ -1,0 +1,176 @@
+{
+ "hubs": [
+  {
+   "channel": "BL",
+   "degree": 7
+  },
+  {
+   "channel": "GB",
+   "degree": 6
+  },
+  {
+   "channel": "SP",
+   "degree": 4
+  },
+  {
+   "channel": "SJ",
+   "degree": 3
+  },
+  {
+   "channel": "LR",
+   "degree": 3
+  },
+  {
+   "channel": "ST",
+   "degree": 2
+  },
+  {
+   "channel": "SI",
+   "degree": 2
+  },
+  {
+   "channel": "PC",
+   "degree": 2
+  },
+  {
+   "channel": "LU",
+   "degree": 1
+  }
+ ],
+ "clock": {
+  "median_mm": 36.1,
+  "random_mm": 639.0,
+  "p": 0.0001,
+  "pairs": [
+   {
+    "from": "HT",
+    "to": "SI",
+    "mm": 6.5
+   },
+   {
+    "from": "ST",
+    "to": "SP",
+    "mm": 7.2
+   },
+   {
+    "from": "SJ",
+    "to": "GB",
+    "mm": 10.8
+   },
+   {
+    "from": "LI",
+    "to": "ST",
+    "mm": 33.7
+   },
+   {
+    "from": "PC",
+    "to": "SJ",
+    "mm": 35.4
+   },
+   {
+    "from": "GB",
+    "to": "LR",
+    "mm": 35.7
+   },
+   {
+    "from": "LU",
+    "to": "LI",
+    "mm": 36.4
+   },
+   {
+    "from": "BL",
+    "to": "KI",
+    "mm": 90.1
+   },
+   {
+    "from": "SP",
+    "to": "HT",
+    "mm": 96.2
+   },
+   {
+    "from": "SI",
+    "to": "BL",
+    "mm": 99.0
+   },
+   {
+    "from": "LR",
+    "to": "LU",
+    "mm": 135.5
+   },
+   {
+    "from": "KI",
+    "to": "PC",
+    "mm": 220.8
+   }
+  ]
+ },
+ "five_shu": {
+  "channels": [
+   "BL",
+   "GB",
+   "HT",
+   "KI",
+   "LI",
+   "LR",
+   "LU",
+   "PC",
+   "SI",
+   "SJ",
+   "SP",
+   "ST"
+  ],
+  "mean": [
+   0.0,
+   0.16,
+   0.231,
+   0.421,
+   1.0
+  ],
+  "sd": [
+   0.0,
+   0.051,
+   0.095,
+   0.08,
+   0.0
+  ]
+ },
+ "crossing_geography": {
+  "trunk": {
+   "cross": 20,
+   "all": 147
+  },
+  "upper_arm": {
+   "cross": 0,
+   "all": 13
+  },
+  "forearm": {
+   "cross": 0,
+   "all": 31
+  },
+  "struct": {
+   "cross": 17,
+   "all": 89
+  },
+  "neck": {
+   "cross": 0,
+   "all": 12
+  },
+  "thigh": {
+   "cross": 1,
+   "all": 16
+  },
+  "shank": {
+   "cross": 1,
+   "all": 32
+  },
+  "head": {
+   "cross": 6,
+   "all": 21
+  }
+ },
+ "topology_vs_geometry": {
+  "linked_mm": 219.8,
+  "unlinked_mm": 252.8,
+  "p": 0.5122
+ }
+}
