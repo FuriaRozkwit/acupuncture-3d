@@ -19,3 +19,12 @@ package-lock.json
 
 # zapisy sesji z mapami napiec - obserwacje kliniczne, zostaja lokalnie
 data/tension/
+
+# wlasny dzienniczek kombinacji punktow - notatki kliniczne, zostaja lokalnie
+data/combos.json
+
+# raporty weryfikacji (tools/verify_meridians.py) - zawieraja liczby z lokalnych opisow
+data/verify/
+
+# paczki eksportu - generowane (tools/export_terrapka.py) i przenosza opisy punktow
+dist/

@@ -98,6 +98,11 @@ def main() -> int:
         a = p["anchor"]
         if a.get("seg") not in LIMB_SEGS or "az" not in a:
             continue
+        # "po stronie promieniowej sciegna X" - minimum odleglosci kladzie punkt NA X,
+        # wiec takie azymuty ustala sie pomiarem brzegu struktury i tu sie ich nie rusza
+        if p.get("az_source", "").startswith("pomiar:"):
+            skipped.append(p["code"])
+            continue
         text = atlas.meta.get(p["code"], {}).get("location", "")
         named = named_structures(text, catalog)
         if not named:

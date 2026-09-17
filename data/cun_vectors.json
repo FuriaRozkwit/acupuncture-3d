@@ -1,0 +1,183 @@
+{
+ "about": "Wektory weryfikacyjne linijki cun: odcinki miedzy strukturami kostnymi o znanej liczbie cun (proporcje kostne B-cun, gu du fen cun). Kazdy wektor to niezalezny pomiar tej samej linijki - jesli model mierzy inna liczbe cun, linijka w tym rejonie jest przesunieta albo zle przeskalowana.",
+ "source": "WHO Standard Acupuncture Point Locations (2008) / GB/T 12346 - tabela proporcji kostnych. Wpisane jako liczby (fakty), bez tekstu i ilustracji normy. DO POTWIERDZENIA z egzemplarzem normy - status 'confirmed' ustawia czlowiek.",
+ "units": "cun",
+ "fitted_note": "fitted=true: rig byl na tym odcinku KALIBROWANY, wiec zgodnosc jest z konstrukcji (kontrola, ze nic sie nie rozjechalo). Rozstrzygaja wektory fitted=false.",
+ "vectors": [
+  {
+   "id": "trunk.notch-xiphoid",
+   "region": "trunk_vertical",
+   "from": "sternal_notch",
+   "to": "xiphoid",
+   "cun": 9,
+   "fitted": true,
+   "confirmed": false
+  },
+  {
+   "id": "trunk.xiphoid-umbilicus",
+   "region": "trunk_vertical",
+   "from": "xiphoid",
+   "to": "umbilicus",
+   "cun": 8,
+   "fitted": true,
+   "confirmed": false
+  },
+  {
+   "id": "trunk.umbilicus-pubis",
+   "region": "trunk_vertical",
+   "from": "umbilicus",
+   "to": "pubis",
+   "cun": 5,
+   "fitted": true,
+   "confirmed": false
+  },
+  {
+   "id": "trunk.midline-midclavicular",
+   "region": "trunk_lateral",
+   "from": "midline",
+   "to": "midclavicular",
+   "cun": 4,
+   "fitted": true,
+   "confirmed": false
+  },
+  {
+   "id": "back.midline-scapula_medial",
+   "region": "trunk_lateral",
+   "from": "midline",
+   "to": "scapula_medial_border",
+   "cun": 3,
+   "fitted": false,
+   "confirmed": false
+  },
+  {
+   "id": "back.midline-acromion",
+   "region": "trunk_lateral",
+   "from": "midline",
+   "to": "acromion",
+   "cun": 8,
+   "fitted": false,
+   "confirmed": false
+  },
+  {
+   "id": "forearm.elbow-wrist",
+   "region": "forearm",
+   "from": "elbow",
+   "to": "wrist",
+   "cun": 12,
+   "fitted": true,
+   "confirmed": false
+  },
+  {
+   "id": "thigh.trochanter-knee",
+   "region": "thigh",
+   "from": "trochanter",
+   "to": "knee",
+   "cun": 19,
+   "fitted": true,
+   "confirmed": false
+  },
+  {
+   "id": "thigh.pubis-femur_medial_epicondyle",
+   "region": "thigh",
+   "from": "pubis",
+   "to": "femur_medial_epicondyle",
+   "cun": 18,
+   "fitted": false,
+   "confirmed": false
+  },
+  {
+   "id": "shank.knee-lateral_malleolus",
+   "region": "shank",
+   "from": "knee",
+   "to": "lateral_malleolus",
+   "cun": 16,
+   "fitted": true,
+   "confirmed": false
+  },
+  {
+   "id": "shank.tibia_medial_condyle-medial_malleolus",
+   "region": "shank_medial",
+   "from": "tibia_medial_condyle_lower",
+   "to": "medial_malleolus",
+   "cun": 13,
+   "fitted": true,
+   "confirmed": false
+  },
+  {
+   "id": "foot.lateral_malleolus-sole",
+   "region": "shank",
+   "from": "lateral_malleolus",
+   "to": "sole",
+   "cun": 3,
+   "fitted": false,
+   "confirmed": false
+  },
+  {
+   "id": "head.glabella-C7",
+   "region": "head_sagittal",
+   "from": "glabella",
+   "to": "C7",
+   "cun": 18,
+   "fitted": true,
+   "confirmed": false
+  },
+  {
+   "id": "head.glabella-ear_apex_line",
+   "region": "head_sagittal",
+   "from": "glabella",
+   "to": "ear_apex_line",
+   "cun": 8,
+   "fitted": true,
+   "confirmed": false,
+   "note": "DU-20: 5 cun za przednia linia wlosow, na linii laczacej szczyty malzowin"
+  },
+  {
+   "id": "head.glabella-occipital_protuberance",
+   "region": "head_sagittal",
+   "from": "glabella",
+   "to": "occipital_protuberance",
+   "cun": 13.25,
+   "tol": 0.75,
+   "fail": 1.25,
+   "fitted": false,
+   "confirmed": false,
+   "note": "guzowatosc lezy miedzy DU-17 (nad nia, 12.5) a DU-16 (pod nia, 14); mierzony najbardziej tylny punkt kosci potylicznej"
+  },
+  {
+   "id": "head.glabella-hairline_ant",
+   "region": "head_sagittal",
+   "from": "glabella",
+   "to": "hairline_ant",
+   "cun": 3,
+   "fitted": true,
+   "confirmed": false
+  },
+  {
+   "id": "head.hairline_post-C7",
+   "region": "head_sagittal",
+   "from": "hairline_post",
+   "to": "C7",
+   "cun": 3,
+   "fitted": true,
+   "confirmed": false
+  },
+  {
+   "id": "head.mastoid-mastoid",
+   "region": "head_lateral",
+   "from": "mastoid_R",
+   "to": "mastoid_L",
+   "cun": 9,
+   "fitted": false,
+   "confirmed": false
+  }
+ ],
+ "no_norm": {
+  "hand": "brak proporcji kostnej w normie - dlon mierzy sie cunem palcowym (F-cun); model uzywa 7.5 cun nadgarstek-koniuszek jako konwencji",
+  "foot": "brak proporcji kostnej w normie dla dlugosci stopy; model uzywa 10 cun jako konwencji",
+  "upper_arm": "9 cun od faldu pachowego do zgiecia lokcia - fald pachowy to struktura skorna; model zaklada poczatek na 18% dlugosci kosci ramiennej (cun_t0), niezmierzony"
+ },
+ "history": [
+  "2026-09-17: pierwszy pomiar - udo -1.17 cun (os liczona od glowy kosci udowej), przysrodkowe podudzie +1.50 cun (jedna linijka 16 cun dla obu stron), gladzizna-linia wlosow -1.38 cun i tylna linia wlosow-C7 +3.85 cun (linie wlosow zgadywane). Poprawki: udo 20.24 cun na osi (19 od kretarza), linijka shank_medial 13 cun, linijka strzalkowa glowy gladzizna-C7 18 cun (regula normy przy niewidocznych liniach wlosow).",
+  "2026-09-17: jednolite 18 cun po luku kladlo linie szczytow uszu na 6.2 cun (norma 8) i guzowatosc potyliczna na 11.5 (norma 12.5-14) - linijka glowy odcinkowa: gladzizna 0, linia uszu 8, C7 18."
+ ]
+}

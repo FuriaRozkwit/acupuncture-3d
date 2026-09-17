@@ -25,6 +25,7 @@ DATA = ROOT / "data"
 READY = ROOT / "assets" / "ready"
 
 MAX_RAY = 0.45          # metry - dalej niz to nie ma juz ciala
+DOUBLE_SKIN = 0.010     # podwojny plat skory (faldy dloni) nie jest grubszy niz tyle
 
 
 def _unit(v: np.ndarray) -> np.ndarray:
@@ -86,7 +87,9 @@ class FittedSegment:
         if self.core:
             p = p.copy()
             p[1] = self.body.core_y(float(p[2]))
-        return p
+            return p
+        shift = getattr(self.body, "section_shift", None)
+        return p + shift(self.name, t) if shift else p
 
     # --- powierzchnia ----------------------------------------------------
     def _limit(self, base: np.ndarray, d: np.ndarray) -> float:
@@ -182,8 +185,10 @@ class Anatomy:
         self._ruler_c = [k[1] for k in self.fit["trunk_ruler"]["knots"]]
         self.vertebra_z = {k: v["z"] for k, v in self.fit["vertebra"].items()}
         self.landmarks = {k: np.array(v) for k, v in self.fit["landmarks"].items()}
+        self.sagittal = self._build_sagittal()
         self.levels = self._levels()
         self.segments = self._build_segments()
+        self._soft = self._soft_fit()
         self.landmark_cun = {
             "pubis": 0.0, "umbilicus": 5.0, "xiphoid": 13.0, "sternal_notch": 22.0,
             "nipple": self.cun_of_z(self.levels["nipple"]),
@@ -242,21 +247,291 @@ class Anatomy:
         return float(np.interp(z, zs, ys))
 
     def cast(self, origin: np.ndarray, direction: np.ndarray,
-             limit: float = None) -> np.ndarray:
+             limit: float = None, probe: float = 0.03) -> np.ndarray:
         """Pierwsze trafienie w skore, idac z wnetrza na zewnatrz."""
         end = origin + direction * (MAX_RAY if limit is None else limit)
-        pts, _ = self.skin_cast.ray_trace(origin, end, first_point=True)
-        pts = np.asarray(pts)
-        if pts.size >= 3:
-            return pts.reshape(-1)[:3]
+        pts, _ = self.skin_cast.ray_trace(origin, end, first_point=False)
+        pts = np.asarray(pts).reshape(-1, 3)
+        if len(pts):
+            # Siatka skory w dloni jest miejscami podwojna (faldy palcow wchodza w dlon).
+            # Pierwsze przeciecie bywa wtedy wewnetrznym platem, a prawdziwa skora lezy
+            # kilka mm dalej - bierzemy pierwsze trafienie, za ktorym jest powietrze.
+            # Tylko w obrebie kilku milimetrow: tam, gdzie reka przylega do tulowia,
+            # siatki sie przenikaja i za skora ramienia tez jest "wnetrze" - skok do
+            # dalszego trafienia przerzucalby punkt z reki na tulow.
+            pts = pts[np.argsort(np.linalg.norm(pts - origin, axis=1))]
+            near = pts[np.linalg.norm(pts - pts[0], axis=1) <= DOUBLE_SKIN]
+            for hit in near:
+                if not self.is_inside(hit + direction * 0.002):
+                    return hit
+            return pts[0]
         # Promien uciekl - albo przez otwor w siatce (oczodol, usta), albo w szczeline
         # miedzy palcami. Zamiast zostawiac punkt w powietrzu, siadamy na najblizszym
         # kawalku skory w tym kierunku.
-        probe = origin + direction * 0.03
-        j = self.skin_cast.find_closest_point(probe)
+        j = self.skin_cast.find_closest_point(origin + direction * probe)
         return np.asarray(self.skin_cast.points)[j]
 
     # --- linijki ---------------------------------------------------------
+    # --- dopasowanie tkanek Z-Anatomy do skory BodyParts3D na konczynach -----
+    # Tylko reka. Na nogach przesuniecie tez jest (12-23 mm), ale przekroj przy kostce
+    # lapie juz stope, a przy biodrze miednice - tam srodek przekroju klamie.
+    LIMBS = ("upper_arm", "forearm")
+    SECTION_T = np.linspace(0.0, 1.0, 41)
+
+    def _soft_fit(self) -> dict:
+        """Poprawki na to, ze kosci i miesnie (Z-Anatomy) nie siedza w skorze (BodyParts3D).
+
+        Oba zbiory dopasowano na tulowiu (kosc krzyzowa, zuchwa), a konczyny maja
+        w nich troche inna poze. Zmierzone: tkanki przedramienia i podudzia leza
+        12-23 mm za srodkiem przekroju skory, kosci srodrecza wystaja 8-10 mm poza
+        skore grzbietu dloni. Promien z osi kosci o azymucie 60-90 st. trafial
+        przez to w grzbiet przedramienia (LU), a punkty liczone od kosci dloni
+        ladowaly poza reka.
+
+        Dwie poprawki: (1) na konczynach promienie wychodza ze srodka przekroju
+        SKORY - azymut znaczy wtedy to, co w podreczniku; (2) punkty liczone od
+        kosci dloni i stopy przesuwamy tak, zeby grzbiet kosci lezal 4 mm pod
+        skora grzbietu. Wynik liczy sie raz i siedzi w assets/ready.
+        """
+        import hashlib
+        h = hashlib.md5((DATA / "rig_fitted.json").read_bytes())
+        h.update(str((READY / "skin.vtp").stat().st_size).encode())
+        h.update(b"soft-fit-2")
+        path = READY / f"soft_fit_{h.hexdigest()[:12]}.npz"
+        if path.exists():
+            with np.load(path) as z:
+                return {k: z[k] for k in z.files}
+        out = {}
+        for name in self.LIMBS:
+            out[name] = self._section_offsets(self.segments[name])
+        out["hand"] = self._bone_shift("hand")
+        try:
+            for old in READY.glob("soft_fit_*.npz"):
+                old.unlink()
+            np.savez(path, **out)
+        except Exception:
+            pass
+        return out
+
+    def _skin_loop(self, center: np.ndarray, normal: np.ndarray):
+        """Obrys skory w plaszczyznie przekroju - ten kawalek, ktory otacza `center`."""
+        sl = self.skin_cast.slice(normal=normal, origin=center)
+        if sl.n_points == 0:
+            return None
+        conn = sl.connectivity()
+        best, bd = None, 1e9
+        for rid in np.unique(conn["RegionId"]):
+            P = np.asarray(conn.extract_points(conn["RegionId"] == rid).points)
+            if len(P) < 10:
+                continue
+            d = np.linalg.norm(P.mean(axis=0) - center)
+            if d < bd:
+                best, bd = P, d
+        return best
+
+    def _section_offsets(self, seg) -> np.ndarray:
+        """Wektor od osi kosci do srodka przekroju skory, dla kazdego t."""
+        off = np.full((len(self.SECTION_T), 3), np.nan)
+        for i, t in enumerate(self.SECTION_T):
+            c = seg.axis_point(float(t))
+            loop = self._skin_loop(c, seg.e_ax)
+            if loop is None:
+                continue
+            sc = loop.mean(axis=0)
+            radius = np.max(np.linalg.norm(loop - sc, axis=1))
+            d = sc - c
+            d -= seg.e_ax * float(np.dot(d, seg.e_ax))
+            # przekroj zlany z tulowiem (pacha, pachwina) nie jest przekrojem konczyny
+            if radius < 0.085 and np.linalg.norm(d) < 0.045:
+                off[i] = d
+        ok = ~np.isnan(off[:, 0])
+        if not ok.any():
+            return np.zeros_like(off)
+        idx = np.arange(len(off))
+        for k in range(3):
+            off[:, k] = np.interp(idx, idx[ok], off[ok, k])
+        kernel = np.ones(5) / 5.0
+        pad = np.pad(off, ((2, 2), (0, 0)), mode="edge")
+        return np.column_stack([np.convolve(pad[:, k], kernel, mode="valid") for k in range(3)])
+
+    def section_shift(self, name: str, t: float) -> np.ndarray:
+        soft = getattr(self, "_soft", None)
+        if not soft or name not in soft:
+            return np.zeros(3)
+        off = soft[name]
+        return np.array([np.interp(t, self.SECTION_T, off[:, k]) for k in range(3)])
+
+    def _bone_shift(self, region: str) -> np.ndarray:
+        """Przesuniecie kosci dloni/stopy: grzbiet kosci 4 mm pod skora grzbietu."""
+        f = self.frame(region)
+        bone = "metacarpal" if region == "hand" else "metatarsal"
+        refs = [self.struct(f"{o} {bone} bone") for o in ("Second", "Third", "Fourth")]
+        pts = np.vstack([r.points for r in refs])
+        shifts = []
+        for along in (0.3, 0.5, 0.7):
+            base = np.mean([r.at(along, f["long"]) for r in refs], axis=0)
+            loop = self._skin_loop(base, f["long"])
+            if loop is None:
+                continue
+            s = pts[np.abs((pts - base) @ f["long"]) < 0.006]
+            if len(s) < 5:
+                continue
+            skin_dorsal = float(np.max(loop @ f["dorsal"]))
+            bone_dorsal = float(np.max(s @ f["dorsal"]))
+            shifts.append(skin_dorsal - 0.004 - bone_dorsal)
+        if not shifts:
+            return np.zeros(3)
+        # poprawiamy tylko kosci, ktore WYSTAJA poza skore; glebiej lezace zostaja
+        return f["dorsal"] * min(0.0, float(np.median(shifts)))
+
+    def soft_shift(self, region: str) -> np.ndarray:
+        soft = getattr(self, "_soft", None)
+        if not soft or region not in soft:
+            return np.zeros(3)
+        return np.asarray(soft[region])
+
+    SAGITTAL_CUN = 18.0          # gladzizna -> C7: 3 + 12 + 3
+
+    def _build_sagittal(self):
+        """Linijka glowy po skorze w linii posrodkowej: od gladzizny do wyrostka C7.
+
+        Model nie ma wlosow, wiec linii wlosow nie widac. Norma ma na to regule:
+        gdy linie wlosow sa niewyrazne, od gladzizny do wyrostka kolczystego C7
+        liczy sie 18 cun (3 do przedniej linii wlosow, 12 miedzy liniami, 3 od
+        tylnej do C7). Oba konce to kosci, wiec linijka nie zgaduje niczego.
+        Wczesniej przednia linia wlosow byla proporcja wysokosci glowy, a tylna
+        wypadala na wysokosci guzowatosci potylicznej - o 9 cm za wysoko.
+        """
+        if "glabella" not in self.landmarks:
+            return None
+        g = self.landmarks["glabella"]
+        c7 = np.array(self.fit["vertebra"]["C7"]["spinous"], dtype=float)
+        center = np.array([0.0, (g[1] + c7[1]) / 2.0, g[2]])
+        a0 = math.atan2(g[2] - center[2], g[1] - center[1])
+        a1 = math.atan2(c7[2] - center[2], c7[1] - center[1])
+        if a1 <= a0:
+            a1 += 2.0 * math.pi                  # przez czubek glowy, nie przez twarz
+        tree = self._obb(self.skin_cast)
+        # koniec linijki to skora TUZ ZA wyrostkiem C7. Promien ze srodka glowy w strone
+        # C7 idzie stromo w dol i trafia w skore dopiero na plecach, 5 cm nizej
+        c7_skin = self._first_hit(tree, c7, c7 + np.array([0.0, -MAX_RAY, 0.0]))
+        if c7_skin is None:
+            c7_skin = c7
+        pts = []
+        for a in np.linspace(a0, a1 + 0.2, 480):
+            d = np.array([0.0, math.cos(a), math.sin(a)])
+            hit = self._first_hit(tree, center, center + d * MAX_RAY)
+            if hit is None:
+                continue
+            if a > a0 + math.pi and hit[2] <= c7_skin[2]:
+                break                                # doszlismy do poziomu C7 na karku
+            pts.append(hit)
+        pts = np.array(pts + [c7_skin])
+        s = np.concatenate([[0.0], np.cumsum(np.linalg.norm(np.diff(pts, axis=0), axis=1))])
+        # Cun po luku NIE jest rowny: jednolite 18 cun kladlo czubek (linia szczytow
+        # malzowin, DU-20) na 6.2 cun zamiast 8. Linijka jest wiec odcinkowa jak na
+        # tulowiu: gladzizna 0, linia szczytow uszu 8 (3 + 5), C7 18.
+        knots_s, knots_c = [0.0, s[-1]], [0.0, self.SAGITTAL_CUN]
+        apex = self._auricle_apex()
+        if apex is not None:
+            over = np.flatnonzero(pts[:, 2] > np.percentile(pts[:, 2], 70))
+            k = int(over[np.argmin(np.abs(pts[over, 1] - apex[1]))])
+            knots_s, knots_c = [0.0, s[k], s[-1]], [0.0, 8.0, self.SAGITTAL_CUN]
+        cun = np.interp(s, knots_s, knots_c)
+        return {"points": pts, "cun": cun, "knots_m": knots_s, "knots_cun": knots_c,
+                "cun_m": s[-1] / self.SAGITTAL_CUN}
+
+    def _auricle_apex(self):
+        meta = self._structs_meta.get(self.slug("Apex of auricle.r"))
+        if meta is None:
+            return None
+        pts = np.asarray(pv.read(READY / meta["file"]).points)
+        return pts[np.argmax(pts[:, 2])]
+
+    @staticmethod
+    def _obb(mesh):
+        import vtk
+        tree = vtk.vtkOBBTree()
+        tree.SetDataSet(mesh)
+        tree.BuildLocator()
+        return tree
+
+    @staticmethod
+    def _first_hit(tree, a, b):
+        import vtk
+        hits = vtk.vtkPoints()
+        tree.IntersectWithLine(list(map(float, a)), list(map(float, b)), hits, None)
+        if hits.GetNumberOfPoints() == 0:
+            return None
+        return np.array(hits.GetPoint(0))
+
+    def _raw_normal(self, p: np.ndarray):
+        """Normalna trojkata skory (zwrot dowolny) i najblizszy punkt powierzchni."""
+        cell, foot = self.skin_cast.find_closest_cell(np.atleast_2d(p), return_closest_point=True)
+        f = np.asarray(self.skin_cast.faces).reshape(-1, 4)[int(np.atleast_1d(cell)[0]), 1:]
+        v = np.asarray(self.skin_cast.points)[f]
+        n = np.cross(v[1] - v[0], v[2] - v[0])
+        return n / max(float(np.linalg.norm(n)), 1e-12), np.asarray(foot).reshape(3)
+
+    def surface_normal(self, p: np.ndarray) -> np.ndarray:
+        """Normalna skory w najblizszym punkcie powierzchni, zwrocona na zewnatrz."""
+        n, foot = self._raw_normal(p)
+        return -n if self.is_inside(foot + n * 0.003) else n
+
+    def walk_on_skin(self, p: np.ndarray, direction: np.ndarray, distance: float,
+                     step: float = 0.002) -> np.ndarray:
+        """Przejscie po powierzchni skory `distance` metrow w zadanym kierunku.
+
+        Odstep boczny na sklepieniu czaszki (BL 1.5 cun, GB 2.25) norma mierzy PO
+        GLOWIE od linii posrodkowej, a nie w poprzek przekroju - przy czubku glowy
+        przekroj jest maly i przeliczenie przez niego rozrzucalo punkty.
+        """
+        if abs(distance) < 1e-9:
+            return np.asarray(p, dtype=float)
+        pos = np.asarray(p, dtype=float)
+        d = np.asarray(direction, dtype=float) * np.sign(distance)
+        left = abs(distance)
+        while left > 1e-6:
+            h = min(step, left)
+            n, _ = self._raw_normal(pos)             # do rzutu stycznego zwrot nie ma znaczenia
+            d = d - n * float(np.dot(d, n))
+            d /= max(float(np.linalg.norm(d)), 1e-12)
+            nxt = pos + d * h
+            _, foot = self.skin_cast.find_closest_cell(np.atleast_2d(nxt),
+                                                       return_closest_point=True)
+            foot = np.asarray(foot).reshape(3)
+            d = foot - pos
+            d /= max(float(np.linalg.norm(d)), 1e-12)
+            pos = foot
+            left -= h
+        return pos
+
+    def scalp_side(self, p: np.ndarray, forward: np.ndarray) -> np.ndarray:
+        """Kierunek w bok od linii posrodkowej czaszki (w strone prawej strony)."""
+        n, _ = self._raw_normal(p)
+        side = np.cross(forward, n)
+        side -= n * float(np.dot(side, n))
+        side /= max(float(np.linalg.norm(side)), 1e-12)
+        return side if side[0] > 0 else -side
+
+    def sagittal_point(self, cun_from_glabella: float) -> np.ndarray:
+        sg = self.sagittal
+        c = float(np.clip(cun_from_glabella, 0.0, self.SAGITTAL_CUN))
+        return np.array([np.interp(c, sg["cun"], sg["points"][:, i]) for i in range(3)])
+
+    def ruler_t(self, name: str, cun: float, frm: str = "p0") -> float:
+        """Polozenie na osi segmentu wg osobnej linijki (np. przysrodkowa podudzia).
+
+        Linijka ma wlasne konce kostne, ale korzysta z osi i azymutow segmentu -
+        zmienia sie tylko to, gdzie wzdluz osi wypada dana liczba cun.
+        """
+        r = self.fit["rulers"][name]
+        seg = self.seg(r["seg"])
+        t0 = float(np.dot(np.asarray(r["p0"]) - seg.p0, seg.e_ax)) / seg.length
+        t1 = float(np.dot(np.asarray(r["p1"]) - seg.p0, seg.e_ax)) / seg.length
+        f = cun / float(r["cun_length"])
+        return t1 + (t0 - t1) * f if frm == "p1" else t0 + (t1 - t0) * f
+
     def z_of_cun(self, cun: float) -> float:
         return float(np.interp(cun, self._ruler_c, self._ruler_z))
 
@@ -278,7 +553,11 @@ class Anatomy:
         lv["nipple"] = self.z_of_cun(18.0) if False else float(
             lv["xiphoid"] + (lv["sternal_notch"] - lv["xiphoid"]) * 0.42)
         lv["iliac_crest"] = float(self.vertebra_z.get("L4", lv["pubis"] + 0.16))
-        lv["hairline_ant"] = lv["chin"] + 0.66 * (lv["vertex"] - lv["chin"])
+        if self.sagittal is not None:
+            lv["hairline_ant"] = float(self.sagittal_point(3.0)[2])
+            lv["hairline_post"] = float(self.sagittal_point(15.0)[2])
+        else:                                   # stary rig bez gladzizny - proporcja
+            lv["hairline_ant"] = lv["chin"] + 0.66 * (lv["vertex"] - lv["chin"])
         return lv
 
     def _build_segments(self) -> dict:
@@ -302,11 +581,37 @@ class Anatomy:
             10.0, self, cun_lat_m=0.0125 * self.H, core=True)
         return segs
 
-    def cast_side(self, base: np.ndarray, d: np.ndarray) -> np.ndarray:
+    # Na dloni i stopie skora lezy kilka milimetrow od kosci. Kosci (Z-Anatomy)
+    # i skora (BodyParts3D) sa z roznych zrodel i miejscami kosc wystaje poza
+    # skore - promien startuje wtedy juz NA ZEWNATRZ reki i pierwsza skora, jaka
+    # trafia, jest udo (SI-2 i SI-3 lezaly 8 cm od malego palca). Krotki zasieg
+    # i proba zastepcza tuz przy kosci trzymaja punkt na wlasnej czesci ciala.
+    SHORT_RAY = {"hand": (0.045, 0.006), "foot": (0.065, 0.008)}
+
+    def is_inside(self, p: np.ndarray) -> bool:
+        """Czy punkt lezy w ciele: parzystosc przeciec ze skora, glosowanie 7 promieni
+        (siatka ma otwory - oczy, usta - wiec jeden promien moze sie pomylic)."""
+        import vtk
+        if getattr(self, "_parity", None) is None:
+            self._parity = self._obb(self.skin_cast)
+            d = np.random.default_rng(7).normal(size=(7, 3))
+            self._parity_rays = d / np.linalg.norm(d, axis=1, keepdims=True)
+        hits = vtk.vtkPoints()
+        v = 0
+        for d in self._parity_rays:
+            self._parity.IntersectWithLine(list(map(float, p)), list(map(float, p + d * 2.5)),
+                                           hits, None)
+            v += hits.GetNumberOfPoints() % 2
+        return v >= 4
+
+    def cast_side(self, base: np.ndarray, d: np.ndarray, region: str = None) -> np.ndarray:
         """Promien z punktu bocznego - nie moze przejsc przez linie posrodkowa."""
         limit = MAX_RAY
         if abs(base[0]) > 0.02 and abs(d[0]) > 1e-6 and d[0] * base[0] < 0:
             limit = float(np.clip(-base[0] / d[0], 0.01, MAX_RAY))
+        if region in self.SHORT_RAY:
+            reach, probe = self.SHORT_RAY[region]
+            return self.cast(base, d, min(limit, reach), probe)
         return self.cast(base, d, limit)
 
     # --- drobne struktury -------------------------------------------------

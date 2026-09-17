@@ -170,13 +170,29 @@ class Verifier:
         p = self.pos(code)
         if p is None:
             return
-        near = self.nearest_muscles(p, k=3)
+        near = self.nearest_muscles(self.in_muscle_frame(p, code), k=3)
         hit = any(any(n in m.name.lower() for n in named) for m, _ in near)
         self.claims.append({
             "code": code, "kind": "miesien", "claimed": 1.0,
             "measured": 1.0 if hit else 0.0, "err": 0.0 if hit else 1.0,
             "detail": f"opis: {sorted(named)[0][:22]} | model: {near[0][0].name[:26]}"
             f" ({near[0][1] * 1000:.0f} mm)"})
+
+    def in_muscle_frame(self, p: np.ndarray, code: str) -> np.ndarray:
+        """Punkt przeniesiony do ukladu siatek Z-Anatomy.
+
+        Punkty na ramieniu i przedramieniu liczymy od srodka przekroju SKORY
+        (BodyParts3D), a miesnie sa z Z-Anatomy - oba zbiory dzieli na konczynach
+        12-17 mm. Bez tej poprawki test "czy pod punktem jest miesien z opisu"
+        mierzylby blad dopasowania siatek, a nie polozenie punktu.
+        """
+        seg_name = self.anchors.get(code, {}).get("seg")
+        shift = getattr(self.an, "section_shift", None)
+        if shift is None or seg_name not in getattr(self.an, "LIMBS", ()):
+            return p
+        seg = self.an.seg(seg_name)
+        t = float(np.dot(p - seg.p0, seg.e_ax)) / seg.length
+        return p - shift(seg_name, float(np.clip(t, 0.0, 1.0)))
 
     def nearest_muscles(self, p: np.ndarray, k: int = 3) -> list:
         d = np.linalg.norm(self.ms.rest - p, axis=1)

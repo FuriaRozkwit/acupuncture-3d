@@ -76,6 +76,14 @@ def find_navel(skin_pts: np.ndarray, z_pub: float, z_xi: float):
     return float(zs[i]), f"zmierzony na skorze, dolek {dent[i] * 1000:.1f} mm"
 
 
+def thigh_cun_length(head: np.ndarray, knee: np.ndarray, trochanter: np.ndarray) -> float:
+    """Dlugosc osi uda w cun, gdy 19 cun przypada na odcinek kretarz - kolano."""
+    axis = (knee - head) / np.linalg.norm(knee - head)
+    full = float(np.dot(knee - head, axis))
+    from_troch = float(np.dot(knee - trochanter, axis))
+    return round(19.0 * full / from_troch, 2)
+
+
 def main() -> int:
     out = {"units": "m",
            "coordinate_system": "+X = prawa strona, +Y = przod, +Z = gora",
@@ -130,6 +138,13 @@ def main() -> int:
     tib = load("Tibia.r")
     knee = top_region(tib, 0.03).mean(axis=0)        # plateau piszczeli = szpara stawu
     med_mall = tib[np.argmin(tib[:, 2])]
+    # dolny brzeg klykcia przysrodkowego: najbardziej przysrodkowy pas gornej czesci
+    # piszczeli i jego najnizszy punkt (tu lezy SP-9)
+    tib_top = top_region(tib, 0.12)
+    rim = tib_top[tib_top[:, 0] < tib_top[:, 0].min() + 0.003]
+    med_condyle = rim[np.argmin(rim[:, 2])]
+    fem_low = bottom_region(fem, 0.12)
+    med_epicondyle = fem_low[np.argmin(fem_low[:, 0])]
     fib = load("Fibula.r")
     lat_mall = fib[np.argmin(fib[:, 2])]
     tal = load("Talus.r")
@@ -155,6 +170,14 @@ def main() -> int:
     foot_zone = sp[(sp[:, 2] < 0.12) & (sp[:, 0] > 0.0)]
     toetip = foot_zone[np.argmax(foot_zone[:, 1])] if len(foot_zone) else ankle
 
+    # gladzizna: najbardziej wysunieta ku przodowi czesc kosci czolowej w linii
+    # posrodkowej, w dolnej cwiartce jej wysokosci (kosc juz w ukladzie acu3d)
+    fr = np.asarray(pv.read(READY / "struct" / "frontal-bone.vtp").points)
+    fr_mid = fr[(np.abs(fr[:, 0]) < 0.006) & (fr[:, 2] < np.percentile(fr[:, 2], 25))]
+    glabella = fr_mid[np.argmax(fr_mid[:, 1])]
+
+    L.update({"glabella": glabella, "tibia_medial_condyle": med_condyle,
+              "femur_medial_epicondyle": med_epicondyle})
     L.update({"trochanter": trochanter, "femoral_head": head, "knee": knee,
               "medial_malleolus": med_mall, "lateral_malleolus": lat_mall, "ankle": ankle,
               "acromion": acromion, "humeral_head": hum_head, "elbow": elbow, "wrist": wrist,
@@ -190,10 +213,19 @@ def main() -> int:
         "upper_arm": seg(hum_head, elbow, 9, cun_t0=0.18),
         "forearm": seg(elbow, wrist, 12),
         "hand": seg(wrist, fingertip, 7.5),
-        "thigh": seg(head, knee, 19),   # os anatomiczna idzie przez glowe kosci udowej,
-        #                              linijka 19 cun liczona jest od krętarza
+        # os anatomiczna idzie przez glowe kosci udowej, ale norma liczy 19 cun od
+        # KRETARZA do szpary kolana. Glowa lezy wyzej, wiec cala os ma wiecej niz 19 cun
+        # - ile, wynika z rzutu obu punktow na os (wektor weryfikacyjny thigh.*)
+        "thigh": seg(head, knee, thigh_cun_length(head, knee, trochanter)),
         "shank": seg(knee, lat_mall, 16),
         "foot": seg(ankle, toetip, 10),
+    }
+    # osobne linijki na tej samej osi: przysrodkowa strona podudzia ma w normie
+    # 13 cun od dolnego brzegu klykcia przysrodkowego do szczytu kostki przysrodkowej
+    # (kanaly yin nogi), a boczna 16 cun od kolana do kostki bocznej
+    out["rulers"] = {
+        "shank_medial": {"seg": "shank", "p0": [round(float(x), 4) for x in med_condyle],
+                         "p1": [round(float(x), 4) for x in med_mall], "cun_length": 13},
     }
     out["cun"] = {
         "trunk_vertical_m": round((z_notch - z_pub) / 22.0, 5),

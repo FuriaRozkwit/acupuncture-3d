@@ -15,7 +15,11 @@ Pola kotwicy (`anchor`):
                "sternal_notch", "nipple") + `z_cun` = ile cun powyzej (ujemne = ponizej)
     vertebra   "C7", "T1".."T12", "L1".."L5", "S1".."S4", "coccyx" (+ `dz_cun`)
     arc_cun    dla skalpu: odleglosc w cun po luku strzalkowym od przedniej linii
-               wlosow (0) przez czubek glowy do tylnej linii wlosow (12)
+               wlosow (0) przez czubek glowy do tylnej linii wlosow (12); luk jest
+               czescia linijki kostnej gladzizna -> C7 = 18 cun
+    ruler      osobna linijka na osi segmentu, np. "shank_medial" (13 cun od klykcia
+               przysrodkowego piszczeli do kostki przysrodkowej) - wtedy `cun`
+               i `from` licza sie od jej koncow
   polozenie na obwodzie (jedno z):
     az         azymut w stopniach: 0 = przod, +90 = bok, 180 = tyl, -90 = przysrodkowo
     lat        odleglosc w cun od linii posrodkowej + `face`: anterior|posterior|lateral
@@ -43,6 +47,8 @@ def _axial_t(rig: Rig, a: dict) -> float:
     seg = rig.seg(a["seg"])
     if "t" in a:
         return float(a["t"])
+    if "ruler" in a and hasattr(rig, "ruler_t"):
+        return rig.ruler_t(a["ruler"], float(a.get("cun", 0.0)), a.get("from", "p0"))
     if "cun" in a:
         return seg.t_from_cun(float(a["cun"]), a.get("from", "p0"))
     if "z_frac" in a:
@@ -60,17 +66,28 @@ def _axial_t(rig: Rig, a: dict) -> float:
 def scalp_arc(rig: Rig, s_cun: float, lat_cun: float = 0.0, out_cun: float = 0.0) -> np.ndarray:
     """Punkt na sklepieniu czaszki wg luku strzalkowego (0 = przednia linia wlosow)."""
     head = rig.seg("head")
-    z_front = rig.levels["hairline_ant"]
-    t_front = _t_for_z(rig, "head", z_front)
-    # luk: od przedniej linii wlosow (az 0) przez czubek (t=1) do tylu (az 180)
-    ts_f = np.linspace(t_front, 1.0, 40)
-    front = np.array([head.surface_by_azimuth(float(t), 0.0) for t in ts_f])
-    ts_b = np.linspace(1.0, t_front - 0.10, 40)
-    back = np.array([head.surface_by_azimuth(float(t), 180.0) for t in ts_b])
-    arc = np.vstack([front, back[1:]])
-    d = np.concatenate([[0.0], np.cumsum(np.linalg.norm(np.diff(arc, axis=0), axis=1))])
-    s = float(np.clip(s_cun / SCALP_ARC_CUN, 0.0, 1.0)) * d[-1]
-    p = np.array([np.interp(s, d, arc[:, i]) for i in range(3)])
+    if getattr(rig, "sagittal", None) is not None:
+        # linijka kostna gladzizna -> C7 (18 cun); przednia linia wlosow = 3 cun
+        p = rig.sagittal_point(3.0 + s_cun)
+        if lat_cun:
+            fwd = rig.sagittal_point(3.0 + s_cun + 0.05) - rig.sagittal_point(3.0 + s_cun - 0.05)
+            side = rig.scalp_side(p, fwd)
+            p = rig.walk_on_skin(p, side, lat_cun * head.cun_lat)
+        if out_cun:
+            p = p + rig.surface_normal(p) * out_cun * head.cun_lat
+        return p
+    else:
+        z_front = rig.levels["hairline_ant"]
+        t_front = _t_for_z(rig, "head", z_front)
+        # luk: od przedniej linii wlosow (az 0) przez czubek (t=1) do tylu (az 180)
+        ts_f = np.linspace(t_front, 1.0, 40)
+        front = np.array([head.surface_by_azimuth(float(t), 0.0) for t in ts_f])
+        ts_b = np.linspace(1.0, t_front - 0.10, 40)
+        back = np.array([head.surface_by_azimuth(float(t), 180.0) for t in ts_b])
+        arc = np.vstack([front, back[1:]])
+        d = np.concatenate([[0.0], np.cumsum(np.linalg.norm(np.diff(arc, axis=0), axis=1))])
+        s = float(np.clip(s_cun / SCALP_ARC_CUN, 0.0, 1.0)) * d[-1]
+        p = np.array([np.interp(s, d, arc[:, i]) for i in range(3)])
     if lat_cun:
         t_here = _t_for_z(rig, "head", p[2])
         face = "anterior" if p[1] >= head.axis_point(t_here)[1] else "posterior"
@@ -97,6 +114,8 @@ def struct_base(body, a: dict) -> np.ndarray:
         base = base + (other.at(along, long_dir) - base) * float(a.get("frac", 0.4))
     for name, mm in (a.get("shift") or {}).items():
         base = base + body.direction(name, region) * (float(mm) / 1000.0)
+    if region and hasattr(body, "soft_shift"):
+        base = base + body.soft_shift(region)      # kosci dloni/stopy wzgledem skory
     return base
 
 
@@ -108,7 +127,7 @@ def resolve_struct(body, a: dict) -> np.ndarray:
     """
     base = struct_base(body, a)
     d = body.direction(a.get("dir", "dorsal"), a.get("region"))
-    return body.cast_side(base, d)
+    return body.cast_side(base, d, a.get("region"))
 
 
 def resolve(rig: Rig, anchor: dict) -> np.ndarray:
