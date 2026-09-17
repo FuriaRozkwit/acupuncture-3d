@@ -34,6 +34,7 @@ def bezier_segments(points: np.ndarray, alpha: float = ALPHA,
     # konce przedluzamy odbiciem, zeby pierwszy i ostatni odcinek tez mial styczna
     ext = np.vstack([2 * P[0] - P[1], P, 2 * P[-1] - P[-2]])
     t = _knots(ext, alpha)
+    turn = _turn_scale(ext)
     out = []
     for i in range(1, len(ext) - 2):
         p0, p1, p2, p3 = ext[i - 1], ext[i], ext[i + 1], ext[i + 2]
@@ -41,10 +42,27 @@ def bezier_segments(points: np.ndarray, alpha: float = ALPHA,
         dt = t2 - t1
         m1 = (p2 - p0) / max(t2 - t0, 1e-9)      # styczna w p1
         m2 = (p3 - p1) / max(t3 - t1, 1e-9)      # styczna w p2
-        c1 = p1 + m1 * dt / 3.0 * tension
-        c2 = p2 - m2 * dt / 3.0 * tension
+        c1 = p1 + m1 * dt / 3.0 * tension * turn[i]
+        c2 = p2 - m2 * dt / 3.0 * tension * turn[i + 1]
         out.append((p1, c1, c2, p2))
     return out
+
+
+def _turn_scale(points: np.ndarray) -> np.ndarray:
+    """O ile skrocic styczna w wezle, w ktorym kanal ostro zawraca.
+
+    Przy zakosie (kanal pecherzyka zolciowego na skroni, biodro, zebra) pelna
+    styczna Catmulla-Roma wyrzuca krzywa poza zakret - splajn wybrzusza sie
+    kilka do kilkunastu milimetrow obok najkrotszej drogi po skorze. Im ostrzejszy
+    zakret, tym krotsza styczna; przy linii prostej nic sie nie zmienia.
+    """
+    v = np.diff(points, axis=0)
+    n = np.linalg.norm(v, axis=1, keepdims=True)
+    u = v / np.maximum(n, 1e-12)
+    scale = np.ones(len(points))
+    cos = (u[:-1] * u[1:]).sum(axis=1)
+    scale[1:-1] = np.clip(np.sqrt(np.clip((1.0 + cos) / 2.0, 0.0, 1.0)), 0.25, 1.0)
+    return scale
 
 
 def sample(points: np.ndarray, per_segment: int = 14, alpha: float = ALPHA,
@@ -61,6 +79,28 @@ def sample(points: np.ndarray, per_segment: int = 14, alpha: float = ALPHA,
         out.append(b)
     out.append(np.asarray(segs[-1][3])[None, :])
     return np.vstack(out)
+
+
+def sample_varied(points: np.ndarray, counts, alpha: float = ALPHA,
+                  tension: float = TENSION):
+    """Krzywa, w ktorej kazdy odcinek ma wlasna liczbe probek (dluzszy - gestsza).
+
+    Splajn liczony raz dla calej lamanej (styczne zaleza od sasiadow), probkowany
+    osobno odcinek po odcinku. Zwraca (probki, indeksy wezlow).
+    """
+    segs = bezier_segments(points, alpha, tension)
+    if not segs:
+        P = np.asarray(points, dtype=float)
+        return P, np.arange(len(P))
+    out, nodes, start = [], [0], 0
+    for (p0, c1, c2, p3), n in zip(segs, counts):
+        u = np.linspace(0.0, 1.0, int(n), endpoint=False)[:, None]
+        out.append((1 - u) ** 3 * p0 + 3 * (1 - u) ** 2 * u * c1
+                   + 3 * (1 - u) * u ** 2 * c2 + u ** 3 * p3)
+        start += int(n)
+        nodes.append(start)
+    out.append(np.asarray(segs[-1][3])[None, :])
+    return np.vstack(out), np.array(nodes)
 
 
 def sample_pair(points: np.ndarray, refs: np.ndarray, per_segment: int = 14,

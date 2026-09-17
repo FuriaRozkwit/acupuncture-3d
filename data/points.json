@@ -226,7 +226,7 @@
    "accuracy": "anchored",
    "anchor": {
     "seg": "forearm",
-    "cun": 5,
+    "cun": 4.7,
     "from": "p0",
     "az": 55
    },
@@ -269,12 +269,12 @@
    "accuracy": "anchored",
    "anchor": {
     "seg": "forearm",
-    "cun": 1,
+    "cun": 1.3,
     "from": "p1",
-    "az": 72
+    "az": 62.0
    },
    "note_pl": "",
-   "az_source": ""
+   "az_source": "pomiar: srodek miedzy flexor carpi radialis (1..21) a abductor pollicis longus (104..120) - miedzy tetnica promieniowa a sciegnem APL (bylo 72)"
   },
   {
    "code": "LU-9",
@@ -292,10 +292,10 @@
     "seg": "forearm",
     "cun": 0.3,
     "from": "p1",
-    "az": 80.0
+    "az": 60.0
    },
    "note_pl": "fald nadgarstka, przy tetnicy promieniowej",
-   "az_source": "dopasowany do: abductor pollicis longus"
+   "az_source": "pomiar: srodek miedzy flexor carpi radialis (6..23) a abductor pollicis longus (96..110) - miedzy tetnica promieniowa a sciegnem APL (bylo 80.0)"
   },
   {
    "code": "LU-10",
@@ -675,10 +675,10 @@
    "anchor": {
     "seg": "neck",
     "z_frac": 0.84,
-    "az": 20.0
+    "az": 53.0
    },
    "note_pl": "",
-   "az_source": "dopasowany do: sternocleidomastoid muscle"
+   "az_source": "pomiar: brzeg sternocleidomastoid (14..47) od strony 180 + 6 st. (bylo 20.0)"
   },
   {
    "code": "LI-18",
@@ -1543,8 +1543,8 @@
    "accuracy": "structural",
    "anchor": {
     "struct": "Talus",
-    "along": 0.5,
-    "dir": "dorsal",
+    "along": 1.0,
+    "dir": "anterior",
     "shift": {
      "up": 6
     },
@@ -1765,6 +1765,7 @@
    "accuracy": "anchored",
    "anchor": {
     "seg": "shank",
+    "ruler": "shank_medial",
     "cun": 3,
     "from": "p1",
     "az": -80
@@ -1783,6 +1784,7 @@
    "accuracy": "anchored",
    "anchor": {
     "seg": "shank",
+    "ruler": "shank_medial",
     "cun": 6,
     "from": "p1",
     "az": -80
@@ -1803,6 +1805,7 @@
    "accuracy": "anchored",
    "anchor": {
     "seg": "shank",
+    "ruler": "shank_medial",
     "cun": 3,
     "from": "p0",
     "az": -75
@@ -1823,7 +1826,8 @@
    "accuracy": "anchored",
    "anchor": {
     "seg": "shank",
-    "cun": 0.5,
+    "ruler": "shank_medial",
+    "cun": 0,
     "from": "p0",
     "az": -80
    },
@@ -2130,12 +2134,12 @@
    "accuracy": "anchored",
    "anchor": {
     "seg": "forearm",
-    "cun": 1.5,
+    "cun": 1.8,
     "from": "p1",
-    "az": -92.0
+    "az": -60.0
    },
    "note_pl": "",
-   "az_source": "dopasowany do: humeral head of flexor carpi ulnaris, ulnar head of flexor carpi ulnaris"
+   "az_source": "pomiar: promieniowy brzeg sciegna FCU na 1.5 cun = -66 st., punkt 6 st. od niego (bylo -92.0 - dopasowanie kladlo punkt NA miesien)"
   },
   {
    "code": "HT-5",
@@ -2151,12 +2155,12 @@
    "accuracy": "anchored",
    "anchor": {
     "seg": "forearm",
-    "cun": 1,
+    "cun": 1.3,
     "from": "p1",
-    "az": -88.0
+    "az": -57.0
    },
    "note_pl": "",
-   "az_source": "dopasowany do: humeral head of flexor carpi ulnaris, ulnar head of flexor carpi ulnaris"
+   "az_source": "pomiar: promieniowy brzeg sciegna FCU na 1.0 cun = -63 st., punkt 6 st. od niego (bylo -88.0 - dopasowanie kladlo punkt NA miesien)"
   },
   {
    "code": "HT-6",
@@ -2171,12 +2175,12 @@
    "accuracy": "anchored",
    "anchor": {
     "seg": "forearm",
-    "cun": 0.5,
+    "cun": 0.8,
     "from": "p1",
-    "az": -76.0
+    "az": -50.0
    },
    "note_pl": "",
-   "az_source": "dopasowany do: humeral head of flexor carpi ulnaris, ulnar head of flexor carpi ulnaris"
+   "az_source": "pomiar: promieniowy brzeg sciegna FCU na 0.5 cun = -56 st., punkt 6 st. od niego (bylo -76.0 - dopasowanie kladlo punkt NA miesien)"
   },
   {
    "code": "HT-7",
@@ -2193,10 +2197,10 @@
     "seg": "forearm",
     "cun": 0.3,
     "from": "p1",
-    "az": -80.0
+    "az": -47.0
    },
    "note_pl": "fald nadgarstka, przy kosci grochowatej",
-   "az_source": "dopasowany do: humeral head of flexor carpi ulnaris, ulnar head of flexor carpi ulnaris"
+   "az_source": "pomiar: promieniowy brzeg sciegna FCU na 0.3 cun = -53 st., punkt 6 st. od niego (bylo -80.0 - dopasowanie kladlo punkt NA miesien)"
   },
   {
    "code": "HT-8",
@@ -2382,10 +2386,10 @@
     "seg": "forearm",
     "cun": 5,
     "from": "p1",
-    "az": -108.0
+    "az": -135.0
    },
    "note_pl": "",
-   "az_source": "dopasowany do: humeral head of flexor carpi ulnaris, ulnar head of flexor carpi ulnaris"
+   "az_source": "pomiar: tylny brzeg flexor carpi ulnaris (-129) - bruzda przy przednim brzegu kosci lokciowej (bylo -108.0)"
   },
   {
    "code": "SI-8",
@@ -3366,10 +3370,10 @@
     "seg": "thigh",
     "cun": 1,
     "from": "p1",
-    "az": 120.0
+    "az": 127.0
    },
    "note_pl": "1 cun powyzej faldu podkolanowego",
-   "az_source": "dopasowany do: long head of biceps femoris, short head of biceps femoris"
+   "az_source": "pomiar: brzeg biceps femoris (95..121) od strony -90 + 6 st. (bylo 120.0)"
   },
   {
    "code": "BL-39",
@@ -3386,10 +3390,10 @@
     "seg": "shank",
     "cun": 0,
     "from": "p0",
-    "az": 116.0
+    "az": 125.0
    },
    "note_pl": "boczny koniec faldu podkolanowego",
-   "az_source": "dopasowany do: long head of biceps femoris, short head of biceps femoris"
+   "az_source": "pomiar: brzeg biceps femoris (93..119) od strony -90 + 6 st. (bylo 116.0)"
   },
   {
    "code": "BL-40",
@@ -4094,6 +4098,7 @@
    "accuracy": "anchored",
    "anchor": {
     "seg": "shank",
+    "ruler": "shank_medial",
     "cun": 2,
     "from": "p1",
     "az": -160
@@ -4114,6 +4119,7 @@
    "accuracy": "anchored",
    "anchor": {
     "seg": "shank",
+    "ruler": "shank_medial",
     "cun": 2,
     "from": "p1",
     "az": -130
@@ -4134,6 +4140,7 @@
    "accuracy": "anchored",
    "anchor": {
     "seg": "shank",
+    "ruler": "shank_medial",
     "cun": 5,
     "from": "p1",
     "az": -150
@@ -4573,7 +4580,7 @@
    "accuracy": "anchored",
    "anchor": {
     "seg": "forearm",
-    "cun": 5,
+    "cun": 5.3,
     "from": "p1",
     "az": 0
    },
@@ -4593,7 +4600,7 @@
    "accuracy": "anchored",
    "anchor": {
     "seg": "forearm",
-    "cun": 3,
+    "cun": 3.3,
     "from": "p1",
     "az": 0
    },
@@ -4614,7 +4621,7 @@
    "accuracy": "anchored",
    "anchor": {
     "seg": "forearm",
-    "cun": 2,
+    "cun": 2.3,
     "from": "p1",
     "az": 0
    },
@@ -4786,12 +4793,12 @@
    "accuracy": "anchored",
    "anchor": {
     "seg": "forearm",
-    "cun": 2,
+    "cun": 2.3,
     "from": "p1",
-    "az": -168.0
+    "az": 142.0
    },
    "note_pl": "2 cun powyzej SJ-4, miedzy koscia promieniowa a lokciowa",
-   "az_source": "dopasowany do: extensor digitorum"
+   "az_source": "pomiar: brzeg extensor digitorum (148..-172) od strony 90 + 6 st. (bylo -168.0)"
   },
   {
    "code": "SJ-6",
@@ -4806,12 +4813,12 @@
    "accuracy": "anchored",
    "anchor": {
     "seg": "forearm",
-    "cun": 3,
+    "cun": 3.3,
     "from": "p1",
-    "az": 164.0
+    "az": 135.0
    },
    "note_pl": "",
-   "az_source": "dopasowany do: extensor digitorum"
+   "az_source": "pomiar: brzeg extensor digitorum (141..178) od strony 90 + 6 st. (bylo 164.0)"
   },
   {
    "code": "SJ-7",
@@ -4826,12 +4833,12 @@
    "accuracy": "anchored",
    "anchor": {
     "seg": "forearm",
-    "cun": 3,
+    "cun": 3.3,
     "from": "p1",
-    "az": 164.0
+    "az": -155.0
    },
    "note_pl": "",
-   "az_source": "dopasowany do: extensor digitorum"
+   "az_source": "pomiar: srodek szczeliny extensor digitorum (141..178) / Ulna (-128..-73) (bylo 164.0)"
   },
   {
    "code": "SJ-8",
@@ -4844,12 +4851,12 @@
    "accuracy": "anchored",
    "anchor": {
     "seg": "forearm",
-    "cun": 4,
+    "cun": 4.3,
     "from": "p1",
-    "az": 148.0
+    "az": 130.0
    },
    "note_pl": "",
-   "az_source": "dopasowany do: extensor digitorum"
+   "az_source": "pomiar: brzeg extensor digitorum (136..172) od strony 90 + 6 st. (bylo 148.0)"
   },
   {
    "code": "SJ-9",
@@ -4862,7 +4869,7 @@
    "accuracy": "anchored",
    "anchor": {
     "seg": "forearm",
-    "cun": 5,
+    "cun": 4.7,
     "from": "p0",
     "az": 180
    },
@@ -4918,7 +4925,7 @@
    "accuracy": "anchored",
    "anchor": {
     "seg": "upper_arm",
-    "cun": 4,
+    "cun": 5,
     "from": "p1",
     "az": 180
    },
@@ -5551,7 +5558,7 @@
    "accuracy": "anchored",
    "anchor": {
     "seg": "head",
-    "arc_cun": 8.5,
+    "arc_cun": 9.5,
     "lat": 2.25
    },
    "note_pl": "",
@@ -5824,10 +5831,10 @@
     "seg": "thigh",
     "cun": 0.5,
     "from": "p1",
-    "az": 120.0
+    "az": 88.0
    },
    "note_pl": "",
-   "az_source": "dopasowany do: long head of biceps femoris, short head of biceps femoris"
+   "az_source": "pomiar: przedni brzeg sciegna biceps femoris (94) - miedzy nim a kosc udowa (bylo 120.0)"
   },
   {
    "code": "GB-34",
@@ -6168,6 +6175,7 @@
    "accuracy": "anchored",
    "anchor": {
     "seg": "shank",
+    "ruler": "shank_medial",
     "cun": 5,
     "from": "p1",
     "az": -95
@@ -6188,6 +6196,7 @@
    "accuracy": "anchored",
    "anchor": {
     "seg": "shank",
+    "ruler": "shank_medial",
     "cun": 7,
     "from": "p1",
     "az": -95
@@ -6206,9 +6215,10 @@
    "accuracy": "anchored",
    "anchor": {
     "seg": "shank",
-    "cun": 5,
+    "ruler": "shank_medial",
+    "cun": 0,
     "from": "p0",
-    "az": -85
+    "az": -102
    },
    "note_pl": "",
    "az_source": ""
@@ -6228,10 +6238,10 @@
     "seg": "shank",
     "cun": 0,
     "from": "p0",
-    "az": -96.0
+    "az": -68.0
    },
    "note_pl": "przysrodkowy koniec faldu podkolanowego przy zgietym kolanie",
-   "az_source": "dopasowany do: gracilis muscle, sartorius muscle"
+   "az_source": "pomiar: brzeg semitendinosus (-125..-74) od strony 0 + 6 st. (bylo -96.0)"
   },
   {
    "code": "LR-9",
@@ -6264,10 +6274,10 @@
     "seg": "thigh",
     "cun": 3,
     "from": "p0",
-    "az": -40.0
+    "az": -16.0
    },
    "note_pl": "",
-   "az_source": "dopasowany do: adductor longus"
+   "az_source": "pomiar: brzeg adductor longus (-47..-22) od strony 0 + 6 st. (bylo -40.0)"
   },
   {
    "code": "LR-11",
@@ -6280,12 +6290,12 @@
    "accuracy": "anchored",
    "anchor": {
     "seg": "thigh",
-    "cun": 3.5,
+    "cun": 2.0,
     "from": "p0",
-    "az": -44.0
+    "az": -26.0
    },
    "note_pl": "",
-   "az_source": "dopasowany do: adductor longus"
+   "az_source": "pomiar: brzeg adductor longus (-48..-32) od strony 0 + 6 st. (bylo -44.0, cun 3.5 -> 2.0 (opis: 2 cun ponizej ST-30))"
   },
   {
    "code": "LR-12",
