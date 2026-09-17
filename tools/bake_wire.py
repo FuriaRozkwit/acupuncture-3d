@@ -45,6 +45,25 @@ DATA = ROOT / "data"
 LIMB = ("upper_arm", "forearm", "hand", "thigh", "shank", "foot")
 CORE = ("trunk", "neck", "head")
 
+# Odcinki sasiadujace w ciele. Bez tych polaczen siatka jest pietnastoma osobnymi
+# wyspami i zadna trasa "wzdluz ciala" nie przejdzie z dloni na stope. Prog to
+# maksymalna dlugosc szwu: przy barku i biodrze odcinki stykaja sie luzniej niz
+# w lokciu czy nadgarstku.
+SEAMS = (
+    ("trunk", "neck", 0.10), ("neck", "head", 0.10),
+    ("trunk", "{s}upper_arm", 0.16), ("{s}upper_arm", "{s}forearm", 0.09),
+    ("{s}forearm", "{s}hand", 0.07),
+    ("trunk", "{s}thigh", 0.16), ("{s}thigh", "{s}shank", 0.10),
+    ("{s}shank", "{s}foot", 0.09),
+)
+SEAM_LINKS = 18            # ile najkrotszych polaczen na szew
+
+# Dlon i stopa maja duzo punktow na malej powierzchni, a przy tym palce, ktorych
+# pierscienie wokol jednej osi nie obejmuja. Zageszczamy je osobno - inaczej
+# punkty koncowe kanalow ladowaly 40 mm od najblizszego wezla i trasa w dloni
+# robila objazd.
+DENSE = {"hand": (0.25, 2), "foot": (0.25, 2)}   # (mnoznik kroku, mnoznik promieni)
+
 
 def main() -> int:
     ap = argparse.ArgumentParser()
@@ -84,7 +103,10 @@ def main() -> int:
     def add_segment(name: str, seg, mirror: bool) -> None:
         """Pierscienie jednego odcinka; `mirror` odbija gotowe wierzcholki na lewa strone."""
         n_cun = seg.cun_length
-        levels = np.arange(0.0, n_cun + 1e-6, args.step)
+        k_step, k_rays = DENSE.get(name, (1.0, 1))
+        step = args.step * k_step
+        az_local = np.arange(args.rays * k_rays) * (360.0 / (args.rays * k_rays))
+        levels = np.arange(0.0, n_cun + 1e-6, step)
         sid = len(seg_names)
         seg_names.append(("L·" if mirror else "R·" if seg.name in LIMB else "") + name)
         for c in levels:
@@ -94,7 +116,7 @@ def main() -> int:
             ring = []
             tc = float(np.clip(t, 0.0, 1.0))
             base = np.asarray(seg.interior(tc), dtype=float)
-            for a in az:
+            for a in az_local:
                 p = np.asarray(seg.surface_by_azimuth(tc, float(a)), dtype=float)
                 # cast() przy nietrafieniu siada na najblizszej skorze, wiec punkt
                 # schodzi z wlasnego promienia - po tym poznajemy ucieczke
@@ -172,7 +194,7 @@ def main() -> int:
             edges.append((ring[k], ring[(k + 1) % len(ring)]))
     for a, b in zip(rings, rings[1:]):
         if len(a) == len(b) and seg_id[a[0]] == seg_id[b[0]]:
-            edges += list(zip(a, b))
+            edges += list(zip(a, b))     # rowne pierscienie = ten sam azymut
     E = np.array(edges, dtype=np.int32)
 
     # Dwa odsiewy. Promien, ktory uciekl przez otwor w siatce (oczodol, szpara
@@ -191,6 +213,47 @@ def main() -> int:
           f"(odsiane: {int((~H).sum())} ucieczek promienia, "
           f"{int((elen > args.max_edge).sum())} przeskokow)")
     E = E[keep]
+
+    # --- szwy: polaczenia miedzy sasiadujacymi odcinkami --------------------
+    name_to_id = {n: i for i, n in enumerate(seg_names)}
+    seam_edges = []
+    for a_tpl, b_tpl, thresh in SEAMS:
+        sides = ("",) if "{s}" not in a_tpl + b_tpl else ("R\u00b7", "L\u00b7")
+        for sd in sides:
+            an_, bn_ = a_tpl.format(s=sd), b_tpl.format(s=sd)
+            if an_ not in name_to_id or bn_ not in name_to_id:
+                continue
+            ia = np.flatnonzero((sid_arr == name_to_id[an_]) & hit)
+            ib = np.flatnonzero((sid_arr == name_to_id[bn_]) & hit)
+            if not len(ia) or not len(ib):
+                continue
+            tree_b = cKDTree(P[ib].astype(float))
+            dd, jj = tree_b.query(P[ia].astype(float))
+            ok2 = dd <= thresh
+            if not ok2.any():
+                print(f"  szew {an_} - {bn_}: brak polaczen ponizej {thresh} m")
+                continue
+            order = np.argsort(dd[ok2])[:SEAM_LINKS]
+            src = ia[ok2][order]
+            dst = ib[jj[ok2][order]]
+            seam_edges += list(zip(src.tolist(), dst.tolist()))
+    if seam_edges:
+        E = np.vstack([E, np.array(seam_edges, dtype=np.int32)])
+        print(f"szwow miedzy odcinkami: {len(seam_edges)}")
+
+    # kontrola: czy siatka jest teraz jedna calascia
+    try:
+        from scipy.sparse import coo_matrix
+        from scipy.sparse.csgraph import connected_components
+        n = len(P)
+        w = np.ones(len(E))
+        g = coo_matrix((w, (E[:, 0], E[:, 1])), shape=(n, n))
+        ncomp, lab = connected_components(g, directed=False)
+        big = np.bincount(lab[hit]).max() if hit.any() else 0
+        print(f"spojnosc: {ncomp} skladowych, najwieksza obejmuje {big}/{int(hit.sum())} "
+              f"uzywalnych wierzcholkow")
+    except ImportError:
+        pass
 
     np.savez_compressed(
         args.out, points=P, edges=E,

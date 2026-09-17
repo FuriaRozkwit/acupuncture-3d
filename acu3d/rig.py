@@ -147,6 +147,9 @@ class Rig:
         self.R = {k: v * self.H for k, v in self.spec["limb_radii"].items()}
         self.cun_trunk_lat = self.spec["cun_trunk_lateral_ref"]["cun_per_H"] * self.H
         self.segments = {}
+        self._structs = {}
+        self._frames = {}
+        self._skin_mesh = None
         self._build()
 
     # --- budowa ----------------------------------------------------------
@@ -277,3 +280,77 @@ class Rig:
 
     def seg(self, name: str) -> Segment:
         return self.segments[name]
+
+    # --- drobne struktury i kierunki -------------------------------------
+    # anchors.resolve_struct wola struct(), frame(), direction() i cast_side()
+    # nie wiedzac, czy pod spodem jest siatka anatomiczna, czy wzor. Ponizsze
+    # cztery metody odtwarzaja ten sam interfejs co Anatomy, tylko z rigu.
+
+    MAX_RAY = 0.6
+
+    def use_skin(self, mesh) -> None:
+        """Podstawia gotowa siatke skory, zeby nie budowac jej drugi raz."""
+        self._skin_mesh = mesh
+
+    @property
+    def skin(self):
+        if self._skin_mesh is None:
+            from .geometry import soft_layer          # import lokalny: geometry uzywa rigu
+            self._skin_mesh = soft_layer(self, 1.0).triangulate()
+        return self._skin_mesh
+
+    def struct(self, name: str):
+        from . import structures_proc
+        if name not in self._structs:
+            self._structs[name] = structures_proc.build(self, name)
+        return self._structs[name]
+
+    def frame(self, region: str) -> dict:
+        """Ramka kierunkow dloni albo stopy, wprost z wektorow segmentu.
+
+        Anatomia wylicza ja z kosci, bo tam zwrot osi nie jest z gory znany.
+        Tutaj segment ma juz swoje e_ax / e_lat / e_ant, wiec ramka jest ich
+        przemianowaniem: w postawie anatomicznej kciuk jest bocznie (promieniowo),
+        dlon zwrocona do przodu, a grzbiet stopy do gory.
+        """
+        if region in self._frames:
+            return self._frames[region]
+        seg = self.seg("hand" if region == "hand" else "foot")
+        long, lat, ant = seg.e_ax, seg.e_lat, seg.e_ant
+        if region == "hand":
+            f = {"long": long, "radial": lat, "ulnar": -lat,
+                 "palmar": ant, "dorsal": -ant}
+        else:
+            f = {"long": long, "lateral": lat, "medial": -lat,
+                 "dorsal": ant, "plantar": -ant}
+        f["proximal"], f["distal"] = -long, long
+        self._frames[region] = f
+        return f
+
+    def direction(self, name: str, region: str = None) -> np.ndarray:
+        if region and name in self.frame(region):
+            return self.frame(region)[name]
+        base = {"up": [0, 0, 1], "down": [0, 0, -1], "anterior": [0, 1, 0],
+                "posterior": [0, -1, 0], "lateral": [1, 0, 0], "medial": [-1, 0, 0],
+                "dorsal": [0, -1, 0], "palmar": [0, 1, 0]}
+        if name not in base:
+            raise KeyError("nie znam kierunku: " + name)
+        return np.array(base[name], dtype=float)
+
+    def cast(self, origin: np.ndarray, direction: np.ndarray,
+             limit: float = None) -> np.ndarray:
+        """Pierwsze trafienie w skore, idac z wnetrza na zewnatrz."""
+        end = origin + direction * (self.MAX_RAY if limit is None else limit)
+        pts, _ = self.skin.ray_trace(origin, end, first_point=True)
+        pts = np.asarray(pts)
+        if pts.size >= 3:
+            return pts.reshape(-1)[:3]
+        probe = origin + direction * 0.03           # promien uciekl - siadamy najblizej
+        return np.asarray(self.skin.points)[self.skin.find_closest_point(probe)]
+
+    def cast_side(self, base: np.ndarray, d: np.ndarray, region: str = None) -> np.ndarray:
+        """Promien z punktu bocznego - nie moze przejsc przez linie posrodkowa."""
+        limit = self.MAX_RAY
+        if abs(base[0]) > 0.02 and abs(d[0]) > 1e-6 and d[0] * base[0] < 0:
+            limit = float(np.clip(-base[0] / d[0], 0.01, self.MAX_RAY))
+        return self.cast(base, d, limit)

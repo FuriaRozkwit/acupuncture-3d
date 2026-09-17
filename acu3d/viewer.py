@@ -811,6 +811,15 @@ class Viewer:
                          name="info")
 
     def show(self) -> None:
+        # WSLg potrafi zaparkowac nowe okno na -25600,-25600 jako kikut wielkosci
+        # paska tytulu - jawna pozycja i rozmiar sa podpowiedzia, ktora respektuje.
+        # Ta sama poprawka co w WireViewer.show().
+        try:
+            rw = self.pl.ren_win
+            rw.SetPosition(60, 60)
+            rw.SetSize(*self.pl.window_size)
+        except Exception:
+            pass
         self.pl.show()
 
     def screenshot(self, path: str) -> None:

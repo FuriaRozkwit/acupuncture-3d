@@ -83,6 +83,10 @@ class TensionMap:
         # linia sily to lancuch oznaczen w kolejnosci stawiania - tak, jak palec
         # prowadzi po ciele: od miejsca, ktore ciagnie, do miejsca, ktore boli
         self.chains: list = []
+        # Pozycje markerow jako jedna tablica. Bez tego kazde klikniecie
+        # przechodzilo petla Pythona przez 675 punktow - dwa razy, bo raz
+        # dla oznaczenia i raz dla linii sily.
+        self._mpos = np.array([m["pos"] for m in atlas.markers], dtype=float)
 
     # --- zbieranie oznaczen ---------------------------------------------
     def add(self, pos, level: int = 2, direction=None, radius: float = DEFAULT_RADIUS,
@@ -219,13 +223,11 @@ class TensionMap:
                     cosn = float(np.dot(_unit(mark.direction), _unit(sheet.normal)))
                     out["dir_vs_sheet_deg"] = round(float(np.degrees(np.arccos(
                         np.clip(abs(cosn), -1, 1)))), 1)
-        near = []
-        for k in self.atlas.markers:
-            d = float(np.linalg.norm(k["pos"] - mark.pos))
-            if d <= mark.radius * 1.6:
-                near.append((d, k))
-        near.sort(key=lambda x: x[0])
-        for d, k in near[:max_points]:
+        dist = np.linalg.norm(self._mpos - mark.pos, axis=1)
+        idx = np.flatnonzero(dist <= mark.radius * 1.6)
+        idx = idx[np.argsort(dist[idx])][:max_points]
+        for j in idx:
+            d, k = float(dist[j]), self.atlas.markers[j]
             meta = self.atlas.meta.get(k["code"], {})
             actions = meta.get("actions") or []
             if isinstance(actions, list):
@@ -242,48 +244,72 @@ class TensionMap:
 
     # --- linia sily -------------------------------------------------------
     def analyse_line(self, a: "Mark", b: "Mark", corridor: float = 0.03) -> dict:
-        """Co lezy na odcinku miedzy dwoma oznaczeniami.
+        out = self.analyse_span(a.pos, b.pos, corridor)
+        out["a"], out["b"] = a, b
+        return out
 
-        Nie zgaduje mechanizmu. Podaje trzy mierzalne rzeczy: dlugosc i zwrot
-        odcinka, punkty akupunkturowe w korytarzu wzdluz niego, oraz miesnie,
-        ktorych OS PRACY jest z tym odcinkiem zgodna - bo to one moga ciagnac
-        wzdluz tej linii, a nie te, ktore leza w poprzek.
+    def analyse_span(self, pos_a, pos_b, corridor: float = 0.03,
+                     follow_body: bool = True, path=None) -> dict:
+        """Co lezy miedzy dwoma miejscami - IDAC PO CIELE, nie na skrot.
+
+        Prosta miedzy dlonia a stopa biegnie w 79% przez powietrze, wiec wszystko,
+        co "lezy wzdluz" takiej cieciwy, to przypadkowi sasiedzi koncow. Trasa
+        liczona jest po grafie siatki cunowej, czyli po powierzchni ciala.
+
+        Kat miesnia porownujemy z LOKALNA styczna trasy, a nie z jednym kierunkiem
+        od poczatku do konca - trasa skreca przez bark i biodro, wiec jeden wektor
+        nie opisuje jej nigdzie poza koncami.
         """
-        v = b.pos - a.pos
-        length = float(np.linalg.norm(v))
-        u = _unit(v)
-        out = {"a": a, "b": b, "length_mm": round(length * 1000, 1),
-               "dir": u, "points": [], "muscles": []}
+        a_pos, b_pos = np.asarray(pos_a, float), np.asarray(pos_b, float)
+        chord = float(np.linalg.norm(b_pos - a_pos))
+        poly, glen = None, None
+        if path is not None and len(path) >= 2:      # trasa narzucona z zewnatrz,
+            poly = np.asarray(path, float)           # np. przebieg kanalu
+            glen = float(np.linalg.norm(np.diff(poly, axis=0), axis=1).sum())
+        elif self.wire is not None and follow_body:
+            poly, glen = self.wire.route(a_pos, b_pos)
+        if poly is None or not np.isfinite(glen) or len(poly) < 2:
+            poly = np.array([a_pos, b_pos])
+            glen = chord
+        out = {"path": poly, "length_mm": round(glen * 1000, 1),
+               "chord_mm": round(chord * 1000, 1),
+               "detour": round(glen / max(chord, 1e-9), 2),
+               "points": [], "muscles": [], "off_body": None}
+        if self.wire is not None:
+            out["off_body"] = round(self.wire.off_body(a_pos, b_pos), 2)
 
-        for k in self.atlas.markers:                 # punkty w korytarzu
-            w = k["pos"] - a.pos
-            t = float(np.dot(w, u))
-            if not (-0.01 <= t <= length + 0.01):
-                continue
-            d = float(np.linalg.norm(w - u * t))
-            if d <= corridor:
-                out["points"].append({"code": k["code"], "side": k["side"],
-                                      "channel": k["channel"], "off_mm": round(d * 1000, 1),
-                                      "at_mm": round(t * 1000, 1),
-                                      "pinyin": k.get("pinyin", "")})
-        out["points"].sort(key=lambda q: q["at_mm"])
+        from .wire import point_to_path
+        d, at, _ = point_to_path(self._mpos, poly)     # punkty w korytarzu trasy
+        sel = np.flatnonzero(d <= corridor)
+        for j in sel[np.argsort(at[sel])]:
+            k = self.atlas.markers[j]
+            out["points"].append({"code": k["code"], "side": k["side"],
+                                  "channel": k["channel"],
+                                  "off_mm": round(float(d[j]) * 1000, 1),
+                                  "at_mm": round(float(at[j]) * 1000, 1),
+                                  "pinyin": k.get("pinyin", "")})
 
-        if self.wire is not None:                    # miesnie zgodne z osia odcinka
-            idx = self.wire.along(a.pos, b.pos, radius=corridor)
-            seen = {}
-            for i in idx:
-                mid = int(self.wire.muscle_id[i])
-                if mid < 0 or mid >= len(self.wire.muscles):
-                    continue
-                cos = abs(float(np.dot(u, self.wire.muscle_axis[mid])))
-                deg = float(np.degrees(np.arccos(np.clip(cos, -1, 1))))
-                prev = seen.get(mid)
-                if prev is None or deg < prev[0]:
-                    seen[mid] = (deg, float(self.wire.muscle_mm[i]))
-            for mid, (deg, mm) in sorted(seen.items(), key=lambda kv: kv[1][0]):
-                m = self.wire.muscles[mid]
-                out["muscles"].append({"name": m["name"], "side": m["side"],
-                                       "angle_deg": round(deg, 1), "depth_mm": round(mm, 1)})
+        if self.wire is not None:                      # miesnie zgodne z trasa
+            wv = self.wire
+            idx, kv = wv.near_path(poly, corridor)
+            mids = wv.muscle_id[idx].astype(int)
+            ok = (mids >= 0) & (mids < len(wv.muscles))
+            mids, idx, kv = mids[ok], idx[ok], kv[ok]
+            if len(mids):
+                tang = wv.tangents(poly)[kv]
+                cos = np.abs((wv.muscle_axis[mids] * tang).sum(axis=1))
+                deg = np.degrees(np.arccos(np.clip(cos, -1, 1)))
+                depth = wv.muscle_mm[idx]
+                uniq = np.unique(mids)
+                rows = []
+                for m in uniq:
+                    sub = mids == m
+                    rows.append((float(deg[sub].min()), float(depth[sub].min()), int(m)))
+                for dg, mm, m in sorted(rows):
+                    mus = wv.muscles[m]
+                    out["muscles"].append({"name": mus["name"], "side": mus["side"],
+                                           "angle_deg": round(dg, 1),
+                                           "depth_mm": round(mm, 1)})
         return out
 
     def line_report(self, corridor: float = 0.03) -> str:

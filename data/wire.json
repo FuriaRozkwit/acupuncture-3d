@@ -19,8 +19,8 @@
   "L·shank",
   "L·foot"
  ],
- "vertices": 9144,
- "edges": 15142,
+ "vertices": 21000,
+ "edges": 33064,
  "scalars": {
   "flesh_mm": "odleglosc od skory do najblizszej kosci - grubosc tkanki miekkiej",
   "muscle_mm": "odleglosc do najblizszej powierzchni miesnia",
