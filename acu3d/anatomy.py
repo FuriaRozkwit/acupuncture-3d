@@ -273,9 +273,13 @@ class Anatomy:
 
     # --- linijki ---------------------------------------------------------
     # --- dopasowanie tkanek Z-Anatomy do skory BodyParts3D na konczynach -----
-    # Tylko reka. Na nogach przesuniecie tez jest (12-23 mm), ale przekroj przy kostce
-    # lapie juz stope, a przy biodrze miednice - tam srodek przekroju klamie.
-    LIMBS = ("upper_arm", "forearm")
+    LIMBS = ("upper_arm", "forearm", "thigh", "shank")
+    # Przekroj przy biodrze lapie miednice i druga noge (promien 17-19 cm), a przy
+    # kostce stope - takie przekroje odrzucamy po promieniu i po odlegloscii srodka
+    # od osi. Tam, gdzie nie ma pomiaru: przy KONCU BLIZSZYM poprawka wygasa do zera
+    # (nie zgadujemy przy pachwinie i pasze), przy DALSZYM trzyma ostatnia zmierzona.
+    SECTION_MAX_R = {"upper_arm": 0.085, "forearm": 0.085, "thigh": 0.115, "shank": 0.080}
+    SECTION_MAX_OFF = 0.035
     SECTION_T = np.linspace(0.0, 1.0, 41)
 
     def _soft_fit(self) -> dict:
@@ -296,7 +300,7 @@ class Anatomy:
         import hashlib
         h = hashlib.md5((DATA / "rig_fitted.json").read_bytes())
         h.update(str((READY / "skin.vtp").stat().st_size).encode())
-        h.update(b"soft-fit-2")
+        h.update(b"soft-fit-3")
         path = READY / f"soft_fit_{h.hexdigest()[:12]}.npz"
         if path.exists():
             with np.load(path) as z:
@@ -341,18 +345,23 @@ class Anatomy:
             radius = np.max(np.linalg.norm(loop - sc, axis=1))
             d = sc - c
             d -= seg.e_ax * float(np.dot(d, seg.e_ax))
-            # przekroj zlany z tulowiem (pacha, pachwina) nie jest przekrojem konczyny
-            if radius < 0.085 and np.linalg.norm(d) < 0.045:
+            if radius < self.SECTION_MAX_R.get(seg.name, 0.085) \
+                    and np.linalg.norm(d) < self.SECTION_MAX_OFF:
                 off[i] = d
         ok = ~np.isnan(off[:, 0])
         if not ok.any():
             return np.zeros_like(off)
         idx = np.arange(len(off))
+        first, last = int(idx[ok][0]), int(idx[ok][-1])
         for k in range(3):
             off[:, k] = np.interp(idx, idx[ok], off[ok, k])
+        off[first:] = off[first:]
+        off[:first] *= np.linspace(0.0, 1.0, first + 1)[:-1, None] if first else 1.0
         kernel = np.ones(5) / 5.0
         pad = np.pad(off, ((2, 2), (0, 0)), mode="edge")
-        return np.column_stack([np.convolve(pad[:, k], kernel, mode="valid") for k in range(3)])
+        out = np.column_stack([np.convolve(pad[:, k], kernel, mode="valid") for k in range(3)])
+        out[last:] = out[last]
+        return out
 
     def section_shift(self, name: str, t: float) -> np.ndarray:
         soft = getattr(self, "_soft", None)
