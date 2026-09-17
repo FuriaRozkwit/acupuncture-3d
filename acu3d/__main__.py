@@ -18,6 +18,8 @@ def main(argv=None) -> int:
     ap = argparse.ArgumentParser(
         prog="acu3d",
         description="Przegladarka 3D punktow akupunkturowych, meridianow i miesni")
+    ap.add_argument("--surface", action="store_true",
+                    help="sama powloka ciala do ogladania: bez warstw i bez oznaczen")
     ap.add_argument("--wire", action="store_true",
                     help="silnik napiec: sama siatka cunowa, punkty i linie sil")
     ap.add_argument("--bare", action="store_true",
@@ -58,6 +60,19 @@ def main(argv=None) -> int:
         return 0
 
     atlas = Atlas(args.height, procedural=args.procedural)
+    if args.surface:
+        from .surface_viewer import SurfaceViewer
+        sv = SurfaceViewer(atlas, off_screen=bool(args.screenshot))
+        for ch in [c.upper() for c in (args.channel or [])]:
+            if ch in sv.channel_actors:
+                sv.set_channel(ch, True, False)
+        sv._sync_legend()
+        if args.screenshot:
+            sv.screenshot(args.screenshot)
+            print(f"zapisano {args.screenshot}")
+            return 0
+        sv.show()
+        return 0
     if args.wire:
         from .wire_viewer import WireViewer
         w = WireViewer(atlas, off_screen=bool(args.screenshot))
