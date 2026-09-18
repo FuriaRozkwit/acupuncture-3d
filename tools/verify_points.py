@@ -44,8 +44,9 @@ def norm_code(ch: str, num: str) -> str:
 
 
 # "na poziomie wyrostka kolczystego X" znaczy przy jego DOLNYM brzegu - o tyle
-# cun nizej niz punkt odniesienia kregu w `rig_fitted`. To konwencja atlasu,
-# spisana raz tutaj, zeby test mial z czym porownywac.
+# cun nizej niz czubek wyrostka (tym jest punkt `spinous` w `rig_fitted`).
+# To KONWENCJA atlasu, niezmierzona: proba pomiaru z siatek kregow dala wynik
+# niespojny z anatomia (patrz spinous_low), wiec nie ma czym jej zastapic.
 VERT_DZ_CUN = -0.4
 REF = Path(__file__).resolve().parent.parent / "assets" / "mesh" / "ref"
 
@@ -194,7 +195,7 @@ class Verifier:
         # czyli test nie mogl wykryc zadnej pomylki.
         # UWAGA: oczekiwanie bierzemy ze stalej konwencji, a NIE z kotwicy punktu -
         # inaczej test porownywalby kotwice sama ze soba i zawsze przechodzil.
-        dz_cun = self.spinous_low(key)
+        dz_cun = VERT_DZ_CUN
         want_cm = dz_cun * self.cun_scale(code, "vert") * 100
         got_cm = (p[2] - z_ref) * 100
         self.claims.append({"code": code, "kind": "krag", "claimed": round(want_cm, 2),
@@ -202,12 +203,16 @@ class Verifier:
                             "detail": f"poziom {key} ({dz_cun:+.1f} cun od wyrostka)"})
 
     def spinous_low(self, key: str) -> float:
-        """Zmierzony dolny brzeg wyrostka kolczystego, w cun pod jego czubkiem.
+        """DIAGNOSTYKA, nie oczekiwanie testu: najnizszy punkt tylnej czesci kregu.
 
-        `rig_fitted` trzyma czubek (sprawdzone: 0.00 cun od niego). Opis mowi
-        "na poziomie DOLNEGO brzegu", a to nie jest jedna liczba dla calego
-        kregoslupa: mediana -0.30 cun, ale T1 -0.08 a L1 -0.56 (odchylenie 0.14).
-        Stala VERT_DZ_CUN zostaje tylko jako awaryjna, gdy brak siatki kregu.
+        Proba zmierzenia "dolnego brzegu wyrostka" z siatki pojedynczego kregu.
+        Wynik NIE nadaje sie na wzorzec: sasiednie kregi roznia sie o 0.25 cun
+        (T6 -0.19, T7 -0.43; T10 -0.24, T11 -0.49), a trend jest odwrotny do
+        anatomii - T1-T3 wychodza ok. 0 (jakby wyrostek schodzil stromo), T7-T9
+        ok. -0.4 (jakby byl poziomy), podczas gdy stromo w dol ida wlasnie
+        wyrostki srodkowego odcinka piersiowego. Wyciecie "tylne 15% przy linii
+        posrodkowej" lapie wiec cos innego niz brzeg wyrostka. Dlatego test
+        porownuje z konwencja VERT_DZ_CUN, a ta funkcja zostaje do dalszej pracy.
         """
         cache = getattr(self, "_low", None)
         if cache is None:
