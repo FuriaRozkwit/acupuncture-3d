@@ -300,7 +300,7 @@ class Anatomy:
         import hashlib
         h = hashlib.md5((DATA / "rig_fitted.json").read_bytes())
         h.update(str((READY / "skin.vtp").stat().st_size).encode())
-        h.update(b"soft-fit-3")
+        h.update(b"soft-fit-4")
         path = READY / f"soft_fit_{h.hexdigest()[:12]}.npz"
         if path.exists():
             with np.load(path) as z:
@@ -534,6 +534,80 @@ class Anatomy:
     }
     EDGE_LEVELS = np.linspace(0.02, 0.98, 60)
 
+    # Ile tkanki ma nad soba dana krawedz u zywego czlowieka (mm) - na tym opiera
+    # sie wpasowanie kosci w skore. Krawedzie podskorne maja kilka milimetrow.
+    BONE_FIT_PROBES = {
+        "shank": [("Tibia", "anterior", 4.0), ("Tibia", "medial", 4.0),
+                  ("Fibula", "lateral", 7.0), ("Tibia", "posterior", 25.0)],
+        "forearm": [("Ulna", "posterior", 5.0), ("Radius", "lateral", 4.0)],
+    }
+
+    def bone_shift(self, seg_name: str) -> np.ndarray:
+        """Przesuniecie, ktore wsadza kosci tego segmentu z powrotem w skore.
+
+        Skora jest z BodyParts3D, kosci z Z-Anatomy - to dwie rozne osoby, a
+        dopasowanie liczono na tulowiu. Na podudziu nad grzebieniem piszczeli
+        wychodzilo 24 mm "skory" zamiast 3-5, a nad powierzchnia przysrodkowa
+        28 mm. Jedno przesuniecie (30 mm do przodu) godzi wszystkie cztery sondy
+        z bledem ok. 3 mm - czyli kosci sa przesuniete, a nie inaczej zbudowane.
+        """
+        cache = getattr(self, "_bone_shift_cache", None)
+        if cache is None:
+            cache = self._bone_shift_cache = {}
+        if seg_name in cache:
+            return cache[seg_name]
+        probes = self.BONE_FIT_PROBES.get(seg_name)
+        if not probes:
+            cache[seg_name] = np.zeros(3)
+            return cache[seg_name]
+        seg = self.seg(seg_name)
+        pts, want = [], []
+        for struct, side, expect in probes:
+            d = {"anterior": seg.e_ant, "posterior": -seg.e_ant,
+                 "medial": -seg.e_lat, "lateral": seg.e_lat}[side]
+            P = self._edge_points(seg, self.struct(struct).mesh, d)
+            if len(P):
+                pts.append(P)
+                want.append(expect)
+        if not pts:
+            cache[seg_name] = np.zeros(3)
+            return cache[seg_name]
+
+        def err(shift):
+            total = 0.0
+            for P, expect in zip(pts, want):
+                _, foot = self.skin_cast.find_closest_cell(P + shift, return_closest_point=True)
+                got = float(np.median(np.linalg.norm(np.atleast_2d(foot) - (P + shift), axis=1)))
+                total += (got * 1000 - expect) ** 2
+            return total
+
+        grid = np.arange(-0.030, 0.0301, 0.003)
+        zero = err(np.zeros(3))
+        if (zero / max(len(pts), 1)) ** 0.5 <= 5.0:
+            cache[seg_name] = np.zeros(3)      # kosci i tak siedza w skorze
+            return cache[seg_name]
+        best, best_err = np.zeros(3), zero
+        for da in grid:
+            for dl in grid:
+                shift = seg.e_ant * da + seg.e_lat * dl
+                e = err(shift)
+                if e < best_err:
+                    best, best_err = shift, e
+        cache[seg_name] = best
+        return best
+
+    def _edge_points(self, seg, mesh, direction, ts=None) -> np.ndarray:
+        out = []
+        for t in (np.linspace(0.25, 0.8, 10) if ts is None else ts):
+            c = seg.interior(float(t))
+            sl = mesh.slice(normal=seg.e_ax, origin=c)
+            if sl.n_points < 8:
+                continue
+            v = np.asarray(sl.points) - c
+            v -= np.outer(v @ seg.e_ax, seg.e_ax)
+            out.append(np.asarray(sl.points)[int(np.argmax(v @ direction))])
+        return np.array(out)
+
     def bone_edge_azimuth(self, ref: str, t: float) -> float:
         """Azymut krawedzi kosci na danej wysokosci segmentu.
 
@@ -548,22 +622,52 @@ class Anatomy:
             table[ref] = self._edge_line(ref)
         return float(np.interp(float(np.clip(t, 0.0, 1.0)), self.EDGE_LEVELS, table[ref]))
 
+    PALPABLE_MM = 8.0        # dopad tkanki, przy ktorym kosc przestaje byc wyczuwalna
+
+    def _palpable_border(self, seg, mesh, start_az: float, direction: int,
+                         t: float, shift: np.ndarray) -> float:
+        """Azymut, na ktorym kosc chowa sie pod miesnie - tak samo szuka jej palec.
+
+        Brzeg przysrodkowy piszczeli to nie "najbardziej przysrodkowy punkt kosci"
+        (ten obraca sie razem z trojkatnym przekrojem), tylko miejsce, gdzie plaska
+        powierzchnia podskorna sie konczy.
+        """
+        prev = start_az
+        for step in range(1, 60):
+            az = start_az + direction * step * 3.0
+            p = seg.surface_by_azimuth(t, az)
+            sl = mesh.slice(normal=seg.e_ax, origin=seg.interior(t) - shift)
+            if sl.n_points < 4:
+                return prev
+            d = np.min(np.linalg.norm(np.asarray(sl.points) + shift - p, axis=1)) * 1000
+            if d > self.PALPABLE_MM:
+                return prev
+            prev = az
+        return prev
+
     def _edge_line(self, ref: str) -> np.ndarray:
         seg_name, struct, side = self.BONE_EDGES[ref]
         seg = self.seg(seg_name)
         mesh = self.struct(struct).mesh
         pick = {"anterior": seg.e_ant, "posterior": -seg.e_ant,
                 "medial": -seg.e_lat, "lateral": seg.e_lat}[side]
+        shift = self.bone_shift(seg_name)          # kosci wpasowane w skore
         out = np.full(len(self.EDGE_LEVELS), np.nan)
         for i, t in enumerate(self.EDGE_LEVELS):
             c = seg.interior(float(t))
-            sl = mesh.slice(normal=seg.e_ax, origin=c)
+            sl = mesh.slice(normal=seg.e_ax, origin=c - shift)
             if sl.n_points < 8:
                 continue
-            v = np.asarray(sl.points) - c
+            v = np.asarray(sl.points) + shift - c
             v -= np.outer(v @ seg.e_ax, seg.e_ax)
             k = int(np.argmax(v @ pick))
-            out[i] = np.degrees(np.arctan2(float(v[k] @ seg.e_lat), float(v[k] @ seg.e_ant)))
+            az = np.degrees(np.arctan2(float(v[k] @ seg.e_lat), float(v[k] @ seg.e_ant)))
+            if side in ("medial", "lateral"):
+                # brzeg boczny/przysrodkowy szukamy palpacyjnie, idac od strony,
+                # po ktorej kosc jest podskorna
+                az = self._palpable_border(seg, mesh, az, -1 if side == "medial" else 1,
+                                           float(t), shift)
+            out[i] = az
         ok = ~np.isnan(out)
         if not ok.any():
             return np.zeros_like(out)
