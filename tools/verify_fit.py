@@ -66,6 +66,48 @@ def skin_gap(atlas, pts: np.ndarray) -> np.ndarray:
     return np.linalg.norm(np.atleast_2d(foot) - np.atleast_2d(pts), axis=1) * 1000
 
 
+# Sondy miednicy i uda skierowane w ROZNE strony. Przesuniecie kosci topi jedna
+# krawedz i wynurza przeciwlegla; jednostajny nadmiar na wszystkich oznacza, ze
+# kosciec jest po prostu wezszy od skory - i zadne przesuniecie tego nie naprawi.
+PELVIS = [
+    ("krzyzowa z tylu",    "Sacrum",     [0.0, -1.0,  0.0], 12.0),
+    ("spojenie lonowe",    "Hip bone.r", [0.0,  1.0, -0.3], 12.0),
+    ("talerz biodrowy",    "Hip bone.r", [0.6,  0.0,  1.0], 12.0),
+    ("kolec biodr. przedni", "Hip bone.r", [0.4, 1.0,  0.3], 10.0),
+    ("guz kulszowy",       "Hip bone.r", [0.2, -0.5, -1.0], 25.0),
+    ("kretarz wiekszy",    "Femur.r",    [1.0,  0.0,  0.0], 15.0),
+    ("rzepka",             "Patella.r",  [0.0,  1.0,  0.0],  5.0),
+    ("nadklykiec przysr.", "Femur.r",    [-1.0, 0.0,  0.0],  6.0),
+]
+
+
+def shift_or_size(atlas) -> None:
+    """Czy miednice da sie wpasowac przesunieciem (jak podudzie), czy nie."""
+    an = atlas.anatomy
+    rows = []
+    for name, struct, d, want in PELVIS:
+        P = bone_points(an, struct)
+        if P is None:
+            continue
+        d = np.asarray(d, float); d /= np.linalg.norm(d)
+        sel = P[P @ d > np.percentile(P @ d, 98)]
+        rows.append((name, d, want, float(np.median(skin_gap(atlas, sel)))))
+    if len(rows) < 4:
+        return
+    D = np.array([r[1] for r in rows])
+    r = np.array([r[3] - r[2] for r in rows])          # nadmiar tkanki (mm)
+    resid = r - (-D @ np.linalg.lstsq(-D, r, rcond=None)[0])
+    print("\nmiednica i udo - przesuniecie czy rozmiar?")
+    for (name, _, want, got), e in zip(rows, r):
+        print(f"   {name:24s} {got:6.1f} mm   (oczekiwane {want:5.1f})   nadmiar {e:+6.1f}")
+    print(f"   nadmiar na wszystkich sondach: srednio {np.mean(r):+.1f} mm "
+          f"(odchylenie {np.std(r):.1f})")
+    print(f"   po najlepszym przesunieciu zostaje {np.sqrt(np.mean(resid**2)):.1f} mm "
+          f"z {np.sqrt(np.mean(r**2)):.1f} mm  ->  "
+          + ("przesuniecie pomaga" if np.sqrt(np.mean(resid**2)) < 0.5 * np.sqrt(np.mean(r**2))
+             else "przesuniecie NIE pomaga: kosciec jest wezszy od skory, nie przesuniety"))
+
+
 def main() -> int:
     atlas = Atlas()
     an = atlas.anatomy
@@ -87,6 +129,8 @@ def main() -> int:
         bad += 0 if ok else 1
         print(f"{name:26s} {gap:15.1f} mm   {expect:>9s}   "
               f"{'ok' if ok else 'ZLE WPASOWANA'}")
+
+    shift_or_size(atlas)
 
     # wyrostki kolczyste: zmierzone w rig_fitted, sa podskorne na calej dlugosci
     sp = np.array([v["spinous"] for k, v in an.fit["vertebra"].items()

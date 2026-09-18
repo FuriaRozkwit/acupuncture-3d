@@ -251,10 +251,10 @@
     "seg": "forearm",
     "cun": 1.5,
     "from": "p1",
-    "az": 88.0
+    "az": 104.0
    },
    "note_pl": "",
-   "az_source": "dopasowany do: abductor pollicis longus, brachioradialis muscle"
+   "az_source": "pomiar: 'w szczelinie miedzy sciegnami brachioradialis a abductor pollicis longus' - na az 104 st. punkt jest 3 mm od obu; przy 88 st. lezal 5 mm od brachioradialis i 12 mm od APL, czyli na jednym z nich"
   },
   {
    "code": "LU-8",
@@ -2503,12 +2503,13 @@
    "accuracy": "anchored",
    "anchor": {
     "seg": "trunk",
-    "z_frac": 0.8,
+    "vertebra": "T2",
+    "dz_cun": -0.58,
     "lat": 3,
     "face": "posterior"
    },
    "note_pl": "",
-   "az_source": ""
+   "az_source": "pomiar: opis mowi 'w polowie miedzy SI-10 a wyrostkiem T2'; polowa wypada 0.58 cun pod T2, a punkt lezal na rownej wysokosci z SI-10 (1.4 cm za nisko). Koniec przysrodkowy grzebienia lopatki jest 2.10 cun pod T2, wiec punkt zostaje nad nim, zgodnie z opisem"
   },
   {
    "code": "SI-14",
@@ -2562,10 +2563,10 @@
    "anchor": {
     "seg": "neck",
     "z_frac": 0.845,
-    "az": 115
+    "az": 55.0
    },
    "note_pl": "",
-   "az_source": ""
+   "az_source": "pomiar: tylny brzeg mostkowo-obojczykowo-sutkowego na tej wysokosci konczy sie na 55 st. (miesien 18.7-55.4); bylo 115 st., czyli 61 st. za daleko do tylu - model sadzal punkt najblizej czworobocznego"
   },
   {
    "code": "SI-17",
@@ -2581,10 +2582,10 @@
    "anchor": {
     "seg": "neck",
     "z_frac": 0.862,
-    "az": 135
+    "az": 45.0
    },
    "note_pl": "za katem zuchwy, przy przednim brzegu SCM",
-   "az_source": ""
+   "az_source": "pomiar: przedni brzeg MOS na tej wysokosci to 51 st. (miesien 51.2-100.7), a punkt ma lezec PRZED nim, w dolku przy kacie zuchwy; bylo 135 st."
   },
   {
    "code": "SI-18",
@@ -4587,10 +4588,10 @@
     "seg": "forearm",
     "cun": 5.3,
     "from": "p1",
-    "az": 0
+    "az": -24.0
    },
    "note_pl": "",
-   "az_source": ""
+   "az_source": "pomiar: 'miedzy sciegnami palmaris longus a flexor carpi radialis' - na az -24 st. punkt jest 7 i 8 mm od nich; przy 0 st. lezal 7 mm od FCR i az 18 mm od palmaris (PL biegnie lokciowo od FCR)"
   },
   {
    "code": "PC-5",
@@ -4607,10 +4608,10 @@
     "seg": "forearm",
     "cun": 3.3,
     "from": "p1",
-    "az": 0
+    "az": -16.0
    },
    "note_pl": "",
-   "az_source": ""
+   "az_source": "pomiar: to samo co PC-4 - na az -16 st. po 5 mm od obu sciegien; przy 0 st. bylo 9 i 13 mm"
   },
   {
    "code": "PC-6",
@@ -4628,10 +4629,10 @@
     "seg": "forearm",
     "cun": 2.3,
     "from": "p1",
-    "az": 0
+    "az": -12.0
    },
    "note_pl": "2 cun powyzej faldu nadgarstka, miedzy sciegnami",
-   "az_source": ""
+   "az_source": "pomiar: 'miedzy sciegnami palmaris longus a flexor carpi radialis' - na az -12 st. punkt jest 6 i 5 mm od nich; przy 0 st. bylo 10 i 12 mm. Domyka drabinke PC-7 0, PC-6 -12, PC-5 -16, PC-4 -24 - te punkty leza na jednej linii, wiec azymut ma sie zmieniac gladko"
   },
   {
    "code": "PC-7",
@@ -4779,10 +4780,10 @@
     "seg": "forearm",
     "cun": 0.3,
     "from": "p1",
-    "az": -116.0
+    "az": -160.0
    },
    "note_pl": "srodek faldu nadgarstka od strony grzbietowej",
-   "az_source": "dopasowany do: extensor digiti minimi, extensor digitorum"
+   "az_source": "pomiar: 'w dolku miedzy sciegnami extensor digitorum a extensor digiti minimi' - na az -160 st. punkt jest 12 mm od obu; przy -116 st. bylo 25 i 19 mm"
   },
   {
    "code": "SJ-5",
@@ -5009,10 +5010,10 @@
    "anchor": {
     "seg": "neck",
     "z_frac": 0.855,
-    "az": 150
+    "az": 80.0
    },
    "note_pl": "",
-   "az_source": ""
+   "az_source": "pomiar: tylny brzeg MOS na tej wysokosci to 80 st. (miesien 31.9-79.9); bylo 150 st."
   },
   {
    "code": "SJ-17",
@@ -5720,12 +5721,12 @@
    "accuracy": "anchored",
    "anchor": {
     "seg": "trunk",
-    "z_frac": 0.56,
+    "z_frac": 0.554,
     "lat": 5,
     "face": "anterior"
    },
    "note_pl": "przy kolcu biodrowym przednim gornym",
-   "az_source": ""
+   "az_source": "pomiar: kolec biodrowy przedni gorny wypada na z_frac 0.554 (3.06 cun pod pepkiem - zgadza sie z 'mniej wiecej na poziomie REN-4'); punkt stal 1 cm nad kolcem, a ma byc tuz przed nim"
   },
   {
    "code": "GB-28",
@@ -6266,10 +6267,10 @@
     "seg": "thigh",
     "cun": 4,
     "from": "p1",
-    "az": -76.0
+    "az": -60.0
    },
    "note_pl": "",
-   "az_source": "dopasowany do: sartorius muscle, vastus medialis muscle"
+   "az_source": "pomiar: 'w szczelinie miedzy vastus medialis a sartorius' - na az -60 st. punkt jest 2 mm od obu; przy -76 st. lezal 2 mm od sartorius i 16 mm od vastus medialis"
   },
   {
    "code": "LR-10",

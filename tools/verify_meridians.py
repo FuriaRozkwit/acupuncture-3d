@@ -48,9 +48,15 @@ TOL_CUN, WARN_CUN = 0.5, 0.3
 TOL_MM, WARN_MM = 5.0, 3.0                 # glowa i szyja
 RULER_FAIL = 1.0                           # linijka: >1 cun FAIL, >0.5 cun WARN
 AIR_MM = 10.0                              # krzywa ma lezec 4 mm nad skora
-BONE_MM = 1.0                              # blizej kosci = krzywa w kosci
+BONE_NEAR_MM = 12.0                        # od tylu sprawdzamy, czy probka nie jest W kosci
+BONE_MM = 1.0                              # tyle kosci pod skora to norma (srodrecze, kostka)
 ANGLE_WARN, ANGLE_FAIL = 30.0, 60.0        # kat miedzy kolejnymi probkami
 KINK_WARN_MM, KINK_FAIL_MM = 1.0, 2.0      # zalamanie liczy sie, gdy probka odstaje od cieciwy
+# ... i gdy odstaje TAKZE wzgledem odstepu probek. Prog WARN stoi na 99. centylu
+# szumu samych geodezyjnych (tools/measure_noise.py: mediana 0.08, p90 0.33,
+# p99 0.57, max 0.60), czyli ok. 1% poprawnych odcinkow i tak dostanie ostrzezenie.
+# Wyzej przesuwac nie warto, bo zaczyna przepuszczac prawdziwe haczyki.
+KINK_WARN_REL, KINK_FAIL_REL = 0.55, 1.0
 HANDOFF_ADJ = 1.5                          # przekazanie "sasiednie": konce blizej niz tyle cun
 
 ARM_YIN, ARM_YANG = ("LU", "HT", "PC"), ("LI", "SI", "SJ")
@@ -263,6 +269,50 @@ class Paths:
             dist[k] = float(d2) ** 0.5
         return dist, foot
 
+    def in_bone(self, pts: np.ndarray) -> np.ndarray:
+        """Czy probka lezy WEWNATRZ kosci - parzystosc przeciec, jak przy skorze.
+
+        Sama odleglosc od kosci nic nie mowi: na srodreczu, kostce bocznej czy
+        wyrostkach kolczystych kosc lezy tuz pod skora i kanal MA tamtedy biec.
+        Bledem jest dopiero cieciwa przez kosc - a to rozstrzyga parzystosc.
+        """
+        import vtk
+        tree = getattr(self, "_bone_obb", None)
+        if tree is None:
+            tree = vtk.vtkOBBTree()
+            tree.SetDataSet(self.a.layers["skeleton"])
+            tree.BuildLocator()
+            self._bone_obb = tree
+            d = np.random.default_rng(11).normal(size=(5, 3))
+            self._bone_rays = d / np.linalg.norm(d, axis=1, keepdims=True)
+        out = np.zeros(len(pts), bool)
+        hits = vtk.vtkPoints()
+        for i, p in enumerate(pts):
+            v = 0
+            for d in self._bone_rays:
+                tree.IntersectWithLine(list(map(float, p)), list(map(float, p + d * 2.5)),
+                                       hits, None)
+                v += hits.GetNumberOfPoints() % 2
+            out[i] = v >= 3
+        return out
+
+    def bone_out_of_skin(self, p: np.ndarray, r: float = 0.025, n: int = 40) -> float:
+        """Jaka czesc kosci w okolicy lezy POZA skora (0-1).
+
+        Kosciec jest z Z-Anatomy, skora z BodyParts3D - na dloni i stopie kosci
+        wystaja przez skore nawet o 17 mm. Kanal rysowany po skorze jest wtedy
+        "w kosci" z koniecznosci i nie da sie tego naprawic torem. Kontrola na
+        dobrze wpasowanym tulowiu (DU-14): 0%.
+        """
+        pts = getattr(self, "_skel_pts", None)
+        if pts is None:
+            pts = self._skel_pts = np.asarray(self.a.layers["skeleton"].points)
+        near = pts[np.linalg.norm(pts - p, axis=1) < r]
+        if len(near) < 8:
+            return 0.0
+        idx = np.random.default_rng(3).choice(len(near), min(n, len(near)), replace=False)
+        return float(np.mean([not self.an.is_inside(q) for q in near[idx]]))
+
     def pos(self, code: str) -> np.ndarray:
         m = self.a.by_key.get(code) or self.a.by_key.get(f"{code}·R")
         return np.asarray(m["pos"], float)
@@ -332,7 +382,7 @@ class Paths:
         skin_d, foot = self._closest(self.skin_loc, piece)
         skin_d = np.concatenate([skin_d, mid_d])
         bone_d, _ = self._closest(self.bone_loc, piece)
-        ang, kink = kinks(piece)
+        ang, kink, krel = kinks(piece)
         air = float(skin_d.max() * 1000)
         hole = False
         if air > AIR_MM:
@@ -341,29 +391,42 @@ class Paths:
             # powietrze. Prawdziwa cieciwa biegnie na zewnatrz.
             far = mids[int(np.argmax(mid_d))]
             hole = self.a.anatomy.is_inside(far)
+        # w kosci czy tylko nad kescia? sprawdzamy tylko probki dostatecznie blisko
+        near = np.where(bone_d * 1000 < BONE_NEAR_MM)[0]
+        inside = self.in_bone(piece[near]) if len(near) else np.zeros(0, bool)
+        n_in = int(inside.sum())
+        protr = self.bone_out_of_skin(piece[near[int(np.argmax(inside))]]) if n_in else 0.0
         worst = int(np.argmax(kink)) if len(kink) else 0
         a_w = float(ang[worst]) if len(ang) else 0.0
         k_w = float(kink[worst]) if len(kink) else 0.0
+        r_w = float(krel[worst]) if len(krel) else 0.0
         row = {"segment": f"{a}-{b}", "air_max_mm": round(air, 1), "hole": hole,
                "air_status": ("WARN" if hole else "FAIL") if air > AIR_MM else "PASS",
-               # kosc i skora sa z roznych zrodel (Z-Anatomy, BodyParts3D) i miejscami
-               # na siebie nachodza - bez odleglosci ze znakiem nie da sie rozstrzygnac,
-               # czy krzywa jest W kosci, wiec to tylko ostrzezenie
                "bone_min_mm": round(float(bone_d.min() * 1000), 1),
-               "bone_status": "WARN" if bone_d.min() * 1000 < BONE_MM else "PASS",
+               "bone_in": n_in, "bone_protrudes": round(protr, 2),
+               # kosc wystajaca przez skore to wada WPASOWANIA siatek, nie toru -
+               # kanal nie ma tam jak biec inaczej
+               "bone_status": ("WARN" if protr > 0.15 else
+                               "FAIL" if n_in > 1 else "WARN" if n_in else "PASS"),
                "angle_max_deg": round(a_w, 0), "kink_mm": round(k_w, 1),
-               "angle_status": ("FAIL" if a_w > ANGLE_FAIL and k_w > KINK_FAIL_MM else
-                                "WARN" if a_w > ANGLE_WARN and k_w > KINK_WARN_MM else "PASS")}
+               "kink_rel": round(r_w, 2),
+               "angle_status": ("FAIL" if a_w > ANGLE_FAIL and k_w > KINK_FAIL_MM
+                                and r_w > KINK_FAIL_REL else
+                                "WARN" if a_w > ANGLE_WARN and k_w > KINK_WARN_MM
+                                and r_w > KINK_WARN_REL else "PASS")}
         if self.frechet:
             row.update(self.against_geodesic(a, b, foot))
-            if row["angle_status"] == "FAIL":
-                # czy w tym samym miejscu zagina sie takze najkrotsza droga po skorze?
-                # jesli tak, to fald ciala (pacha, pachwina), a nie usterka rysowania
+            if row["angle_status"] in ("FAIL", "WARN"):
+                # Czy w tym samym miejscu zagina sie takze najkrotsza droga po skorze?
+                # Jesli tak, to fald ciala (pacha, pachwina) albo szorstkosc siatki,
+                # a nie usterka rysowania. Zmierzone na 60 odcinkach: sama geodezyjna
+                # ma zalamanie 1.17 mm w 90. centylu, czyli POWYZEJ progu WARN - prog
+                # bezwzgledny mierzylby tu rozdzielczosc siatki, nie blad.
                 geo = self.geodesic(self.pos(a), self.pos(b))
                 if geo is not None:
-                    g_ang, g_kink = kinks(resample(geo, len(piece)))
+                    g_ang, g_kink, _ = kinks(resample(geo, len(piece)))
                     if g_kink.size and g_kink.max() > 0.6 * row["kink_mm"]:
-                        row["angle_status"] = "WARN"
+                        row["angle_status"] = "WARN" if row["angle_status"] == "FAIL" else "PASS"
                         row["fold"] = round(float(g_kink.max()), 1)
         return row
 
@@ -471,6 +534,38 @@ def resample(poly: np.ndarray, n: int) -> np.ndarray:
     return np.column_stack([np.interp(s, d, poly[:, i]) for i in range(3)])
 
 
+def by_cause(channels: list) -> list:
+    """Zgloszenia pogrupowane wedlug PRZYCZYNY, nie kanalu.
+
+    Bez tego lista 40 ostrzezen niczego nie mowi: trzy czwarte to jedna i ta sama
+    wada wpasowania siatek, powtorzona na kazdym odcinku dloni i stopy.
+    """
+    buckets = {
+        "wpasowanie siatek (kosc wystaje ze skory)": [],
+        "dziura w siatce skory": [],
+        "odniesienie: geodezyjna nie jest torem kanalu (twarz, czaszka)": [],
+        "rozjazd z odniesieniem": [],
+        "zalamanie krzywej": [],
+    }
+    for c in channels:
+        for x in c["path_checks"]:
+            seg = x["segment"]
+            if x["bone_status"] != "PASS":
+                key = ("wpasowanie siatek (kosc wystaje ze skory)"
+                       if x.get("bone_protrudes", 0) > 0.15 else "zalamanie krzywej")
+                buckets[key].append(seg)
+            if x["air_status"] != "PASS" and x.get("hole"):
+                buckets["dziura w siatce skory"].append(seg)
+            if x.get("frechet_status") in ("WARN", "FAIL"):
+                key = ("odniesienie: geodezyjna nie jest torem kanalu (twarz, czaszka)"
+                       if x.get("unit") == "mm" and "linijki" not in x.get("ref", "")
+                       else "rozjazd z odniesieniem")
+                buckets[key].append(seg)
+            if x["angle_status"] in ("WARN", "FAIL"):
+                buckets["zalamanie krzywej"].append(seg)
+    return [(k, v) for k, v in buckets.items() if v]
+
+
 def kinks(poly: np.ndarray):
     """Kat skretu i wychylenie (mm) kazdej wewnetrznej probki od cieciwy sasiadow.
 
@@ -491,7 +586,11 @@ def kinks(poly: np.ndarray):
     L2 = np.maximum((ab * ab).sum(axis=1), 1e-12)
     t = np.clip(((m - a) * ab).sum(axis=1) / L2, 0, 1)
     dev = np.linalg.norm(m - (a + t[:, None] * ab), axis=1) * 1000
-    return ang, dev
+    # wychylenie wzgledem odstepu probek: 1 mm przy probkach co 2 mm to zakret,
+    # a przy probkach co 20 mm nic.
+    step = np.maximum((nu + nw) * 500.0, 1e-6)      # sredni odstep w mm
+    # zmierzone na 60 geodezyjnych: mediana 0.08, p90 0.33, p99 0.57 odstepu
+    return ang, dev, dev / step
 
 
 def discrete_frechet(P: np.ndarray, Q: np.ndarray) -> float:
@@ -559,6 +658,7 @@ def main() -> int:
     for ch in wanted:
         channels.append(paths.channel(ch))
     handoffs = paths.handoffs()
+    causes = by_cause(channels)
     points = point_summary(atlas)
 
     by_pt = {}
@@ -582,11 +682,16 @@ def main() -> int:
                               else s.get(key) == "FAIL" for s in rep["path_checks"])
         fr = [s["frechet"] for s in rep["path_checks"] if s.get("frechet") is not None]
         print(f"   {rep['channel_id']:4s} {worst:4s}  odcinkow {n:3d}  powietrze {cnt('air_status'):2d}  "
-              f"kosc(W) {cnt('bone_status'):2d}  zalamania {cnt('angle_status'):2d}  "
+              f"kosc {cnt('bone_status'):2d}  zalamania {cnt('angle_status'):2d}  "
               f"Frechet FAIL {cnt('frechet_status'):2d}"
               + (f" (mediana {np.median(fr):.2f})" if fr else "")
               + f"  kolejnosc {len(rep['order_errors'])}  przeplyw "
               + (rep["flow"]["status"] if rep["flow"] else "-"))
+    print("\n   zgloszenia wedlug przyczyny:")
+    for name, segs in causes:
+        print(f"     {len(segs):3d}  {name}")
+        print(f"          {', '.join(segs[:6])}{' ...' if len(segs) > 6 else ''}")
+
     print("\n   przekazania w cyklu:")
     for h in handoffs:
         extra = f"{h['points']} {h['dist_cun']:.1f} cun" if "points" in h else "wewnetrzne"
@@ -598,6 +703,13 @@ def main() -> int:
         "confidence": {"points": "L1 (opis lokalny); L0 niedostepne",
                        "paths": "samozgodnosc geometryczna; toru nie definiuje zadna norma",
                        "ruler": "wektory B-cun z normy, do potwierdzenia z egzemplarzem"},
+        "causes": [{"cause": k, "segments": v} for k, v in causes],
+        # Szum samych siatek, zmierzony przez tools/measure_noise.py na 60 geodezyjnych
+        # (krzywa z definicji gladka, wiec wszystko, co na niej widac, to szum).
+        # Prog bezwzgledny 1.0 mm lezy PONIZEJ p90 - dlatego liczy sie warunek wzgledny.
+        "noise_floor": {"narzedzie": "tools/measure_noise.py", "n": 60,
+                        "geodesic_kink_mm_p90": 1.17, "geodesic_kink_rel_p99": 0.57,
+                        "geodesic_repeat_cun_p90": 0.03, "geodesic_repeat_mm_p90": 0.57},
         "thresholds": {"cun": TOL_CUN, "mm_head": TOL_MM, "air_mm": AIR_MM, "bone_mm": BONE_MM,
                        "angle_warn": ANGLE_WARN, "angle_fail": ANGLE_FAIL,
                        "skin_offset_mm": SKIN_OFFSET * 1000},
@@ -620,7 +732,7 @@ def main() -> int:
             for s in rep["path_checks"]:
                 w.writerow([ch, "air", s["segment"], "max_mm", "", s["air_max_mm"], AIR_MM,
                             s["air_status"], "samozgodnosc", ""])
-                w.writerow([ch, "bone", s["segment"], "min_mm", "", s["bone_min_mm"], BONE_MM,
+                w.writerow([ch, "bone", s["segment"], "probek w kosci", "", s.get("bone_in", 0), 0,
                             s["bone_status"], "samozgodnosc", ""])
                 w.writerow([ch, "kink", s["segment"], "kink_mm", "", s["kink_mm"], KINK_FAIL_MM,
                             s["angle_status"], "samozgodnosc", f"{s['angle_max_deg']} deg"])

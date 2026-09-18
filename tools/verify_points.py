@@ -43,6 +43,28 @@ def norm_code(ch: str, num: str) -> str:
     return f"{ALIAS.get(ch.upper(), ch.upper())}-{int(num)}"
 
 
+# "na poziomie wyrostka kolczystego X" znaczy przy jego DOLNYM brzegu - o tyle
+# cun nizej niz punkt odniesienia kregu w `rig_fitted`. To konwencja atlasu,
+# spisana raz tutaj, zeby test mial z czym porownywac.
+VERT_DZ_CUN = -0.4
+REF = Path(__file__).resolve().parent.parent / "assets" / "mesh" / "ref"
+
+
+def in_gloss(text: str, at: int) -> bool:
+    """Czy trafienie siedzi w nawiasie objasniajacym INNY punkt.
+
+    "mniej wiecej na poziomie REN-4 (3 cun ponizej pepka)" nie mowi, gdzie lezy
+    opisywany punkt - mowi, gdzie lezy REN-4. Bez tego GB-27 wychodzil o 0.8 cun
+    obok, choc siedzi 2 mm od kolca biodrowego, czyli tam, gdzie ma siedziec.
+    """
+    o = text.rfind("(", 0, at)
+    if o < 0 or 0 <= text.rfind(")", 0, at) > o:
+        return False
+    if text.find(")", at) < 0:
+        return False
+    return re.search(CODE_RE + r"\s*$", text[:o].strip(), re.I) is not None
+
+
 class Verifier:
     def __init__(self, atlas: Atlas):
         self.a = atlas
@@ -51,8 +73,15 @@ class Verifier:
         self.claims = []
         try:
             self.ms = MuscleSet()
-            self.muscle_names = {m.name.lower() for m in self.ms.muscles
-                                 if len(m.name) > 7}
+            # Ksiazka pisze "brachioradialis", katalog "Brachioradialis muscle" -
+            # bez odciecia koncowki test gubil polowe wzmianek (LU-7 widzial tylko
+            # jeden z dwoch sciegien z opisu i nie mogl sprawdzic "w szczelinie miedzy").
+            self.muscle_names = set()
+            for m in self.ms.muscles:
+                n = m.name.lower()
+                for form in (n, re.sub(r"\s+muscle$", "", n)):
+                    if len(form) > 7:
+                        self.muscle_names.add(form)
         except Exception:
             self.ms, self.muscle_names = None, set()
 
@@ -121,6 +150,8 @@ class Verifier:
                       r"(?: to| from)? (?:the )?([A-Za-z .‑-]{2,28})", text, re.I)
         if not m:
             return
+        if in_gloss(text, m.start()):
+            return
         claimed, ref_txt = float(m.group(1)), m.group(3)
         p = self.pos(code)
         if p is None:
@@ -141,6 +172,11 @@ class Verifier:
                  f"{claimed} cun od {ref_txt.strip()[:20]}")
 
     def check_vertebra(self, code: str, text: str) -> None:
+        # "w polowie miedzy SI-10 a wyrostkiem T2" nie jest twierdzeniem o poziomie
+        # tego wyrostka - punkt ma lezec WYZEJ. Bez tego SI-13 wychodzil o 1.9 cm
+        # za nisko, choc opis mowi co innego.
+        if re.search(r"(midway|halfway)\s+between", text, re.I):
+            return
         m = re.search(r"spinous process of the .*?\((T|L|C)(\d{1,2})\)", text, re.I)
         if not m:
             m = re.search(r"(?:^|\s)(T|L|C)(\d{1,2})(?:\s|\)|\.)", text)
@@ -151,11 +187,48 @@ class Verifier:
         p = self.pos(code)
         if z_ref is None or p is None:
             return
-        # punkt ma lezec przy DOLNYM brzegu wyrostka, czyli ciut nizej
-        err_cm = (p[2] - z_ref) * 100
-        self.claims.append({"code": code, "kind": "krag", "claimed": 0.0,
-                            "measured": err_cm, "err": err_cm,
-                            "detail": f"poziom {key}"})
+        # "na poziomie wyrostka kolczystego T5" znaczy przy jego DOLNYM brzegu,
+        # a nie na jego srodku - kotwice maja na to `dz_cun` (domyslnie -0.4 cun).
+        # Porownywanie z samym `z_ref` mierzylo wiec wlasna konwencje atlasu:
+        # 31 punktow na 31 wychodzilo "za nisko" o -0.90 cm przy odchyleniu 0.37,
+        # czyli test nie mogl wykryc zadnej pomylki.
+        # UWAGA: oczekiwanie bierzemy ze stalej konwencji, a NIE z kotwicy punktu -
+        # inaczej test porownywalby kotwice sama ze soba i zawsze przechodzil.
+        dz_cun = self.spinous_low(key)
+        want_cm = dz_cun * self.cun_scale(code, "vert") * 100
+        got_cm = (p[2] - z_ref) * 100
+        self.claims.append({"code": code, "kind": "krag", "claimed": round(want_cm, 2),
+                            "measured": round(got_cm, 2), "err": got_cm - want_cm,
+                            "detail": f"poziom {key} ({dz_cun:+.1f} cun od wyrostka)"})
+
+    def spinous_low(self, key: str) -> float:
+        """Zmierzony dolny brzeg wyrostka kolczystego, w cun pod jego czubkiem.
+
+        `rig_fitted` trzyma czubek (sprawdzone: 0.00 cun od niego). Opis mowi
+        "na poziomie DOLNEGO brzegu", a to nie jest jedna liczba dla calego
+        kregoslupa: mediana -0.30 cun, ale T1 -0.08 a L1 -0.56 (odchylenie 0.14).
+        Stala VERT_DZ_CUN zostaje tylko jako awaryjna, gdy brak siatki kregu.
+        """
+        cache = getattr(self, "_low", None)
+        if cache is None:
+            cache = self._low = {}
+        if key in cache:
+            return cache[key]
+        f = REF / f"vertebra-{key.lower()}.ply"
+        v = self.an.fit["vertebra"].get(key)
+        out = VERT_DZ_CUN
+        if f.exists() and v is not None:
+            import pyvista as pv
+            Q = np.asarray(pv.read(f).points).copy()
+            Q[:, 0] *= -1.0
+            Q[:, 1] *= -1.0
+            sp = np.asarray(v["spinous"])
+            tail = Q[(Q[:, 1] < np.percentile(Q[:, 1], 15))
+                     & (np.abs(Q[:, 0] - sp[0]) < 0.010)]
+            if len(tail) >= 20:
+                out = float((tail[:, 2].min() - sp[2]) / self.an.cun_trunk_vert)
+        cache[key] = out
+        return out
 
     def check_muscle(self, code: str, text: str) -> None:
         """Test NIEZALEZNY: czy miesien wymieniony w opisie jest tym, ktory model
@@ -170,13 +243,67 @@ class Verifier:
         p = self.pos(code)
         if p is None:
             return
-        near = self.nearest_muscles(self.in_muscle_frame(p, code), k=3)
+        q = self.in_muscle_frame(p, code)
+
+        # "w szczelinie MIEDZY sciegnami A i B" to inne twierdzenie niz "nad A":
+        # punkt ma lezec POSRODKU, a najblizszy moze byc trzeci miesien, ktory
+        # opis pomija. Tak jest z LU-9: 22.8 mm do APL i 22.7 do FCR, czyli
+        # dokladnie tam, gdzie ma byc - a regula "nazwany ma byc najblizszy"
+        # zglaszala blad, bo najblizej jest ramienno-promieniowy.
+        pair = self.between_pair(text, named)
+        if pair:
+            (na, da), (nb, db) = [(n, self.muscle_gap(q, n)) for n in pair]
+            if da is not None and db is not None:
+                # Mierzymy odleglosc od DALSZEJ z dwoch struktur. Sama symetria
+                # nie wystarcza: punkt po drugiej stronie przedramienia lezy
+                # 48 mm od obu sciegien, czyli "idealnie posrodku" i zupelnie
+                # nie tam, gdzie trzeba.
+                u = self.cun_scale(code, "ax")
+                got = max(da, db) / u
+                self.claims.append({
+                    "code": code, "kind": "miesien", "claimed": 0.0,
+                    "measured": round(got, 2), "err": got,
+                    "detail": f"miedzy {na[:12]} ({da*1000:.0f} mm) a {nb[:12]}"
+                              f" ({db*1000:.0f} mm)"})
+                return
+
+        near = self.nearest_muscles(q, k=3)
         hit = any(any(n in m.name.lower() for n in named) for m, _ in near)
         self.claims.append({
             "code": code, "kind": "miesien", "claimed": 1.0,
             "measured": 1.0 if hit else 0.0, "err": 0.0 if hit else 1.0,
             "detail": f"opis: {sorted(named)[0][:22]} | model: {near[0][0].name[:26]}"
             f" ({near[0][1] * 1000:.0f} mm)"})
+
+    def between_pair(self, text: str, named: set):
+        """Dwa miesnie z opisu 'between A and B', jesli oba znamy z siatki."""
+        low = " " + re.sub(r"[^a-z ]", " ", text.lower()) + " "
+        if " between " not in low:
+            return None
+        tail = low.split(" between ", 1)[1]
+        hits = [n for n in named if f" {n} " in f" {tail} "]
+        # "miedzy glowa mostkowa a obojczykowa MOS" to jeden miesien w dwoch
+        # slowach - obie nazwy trafiaja w te sama siatke i pomiar nic nie znaczy.
+        seen, out = [], []
+        for n in sorted(hits):
+            idx = frozenset(self.muscle_idx(n))
+            if idx and not any(idx & s for s in seen):
+                seen.append(idx)
+                out.append(n)
+        return tuple(out[:2]) if len(out) >= 2 else None
+
+    def muscle_idx(self, name: str) -> list:
+        idx = [m.index for m in self.ms.muscles
+               if name in m.name.lower() and m.side in ("R", "r")]
+        return idx or [m.index for m in self.ms.muscles if name in m.name.lower()]
+
+    def muscle_gap(self, q: np.ndarray, name: str):
+        """Najmniejsza odleglosc punktu od siatki miesnia o tej nazwie."""
+        idx = self.muscle_idx(name)
+        if not idx:
+            return None
+        sel = self.ms.rest[np.isin(self.ms._mid_points, idx)]
+        return None if not len(sel) else float(np.linalg.norm(sel - q, axis=1).min())
 
     def in_muscle_frame(self, p: np.ndarray, code: str) -> np.ndarray:
         """Punkt przeniesiony do ukladu siatek Z-Anatomy.
