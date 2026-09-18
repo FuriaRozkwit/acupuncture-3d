@@ -523,6 +523,86 @@ class Anatomy:
         side /= max(float(np.linalg.norm(side)), 1e-12)
         return side if side[0] > 0 else -side
 
+    # krawedzie kosci, do ktorych odwoluja sie opisy punktow: (segment, struktura, strona)
+    BONE_EDGES = {
+        "tibial_crest": ("shank", "Tibia", "anterior"),
+        "tibia_medial": ("shank", "Tibia", "medial"),
+        "fibula_anterior": ("shank", "Fibula", "anterior"),
+        "fibula_posterior": ("shank", "Fibula", "posterior"),
+        "fibula_posterior": ("shank", "Fibula", "posterior"),
+        "ulna_posterior": ("forearm", "Ulna", "posterior"),
+    }
+    EDGE_LEVELS = np.linspace(0.02, 0.98, 60)
+
+    def bone_edge_azimuth(self, ref: str, t: float) -> float:
+        """Azymut krawedzi kosci na danej wysokosci segmentu.
+
+        Pojedynczy przekroj rzadkiej siatki daje kilkanascie stopni losu, wiec
+        krawedz liczymy na 60 poziomach i wygladzamy: szum sie usrednia, a skret
+        kosci (na goleni ok. 20 st. na dlugosci) zostaje.
+        """
+        table = getattr(self, "_edges", None)
+        if table is None:
+            table = self._edges = {}
+        if ref not in table:
+            table[ref] = self._edge_line(ref)
+        return float(np.interp(float(np.clip(t, 0.0, 1.0)), self.EDGE_LEVELS, table[ref]))
+
+    def _edge_line(self, ref: str) -> np.ndarray:
+        seg_name, struct, side = self.BONE_EDGES[ref]
+        seg = self.seg(seg_name)
+        mesh = self.struct(struct).mesh
+        pick = {"anterior": seg.e_ant, "posterior": -seg.e_ant,
+                "medial": -seg.e_lat, "lateral": seg.e_lat}[side]
+        out = np.full(len(self.EDGE_LEVELS), np.nan)
+        for i, t in enumerate(self.EDGE_LEVELS):
+            c = seg.interior(float(t))
+            sl = mesh.slice(normal=seg.e_ax, origin=c)
+            if sl.n_points < 8:
+                continue
+            v = np.asarray(sl.points) - c
+            v -= np.outer(v @ seg.e_ax, seg.e_ax)
+            k = int(np.argmax(v @ pick))
+            out[i] = np.degrees(np.arctan2(float(v[k] @ seg.e_lat), float(v[k] @ seg.e_ant)))
+        ok = ~np.isnan(out)
+        if not ok.any():
+            return np.zeros_like(out)
+        out = np.interp(np.arange(len(out)), np.flatnonzero(ok), out[ok])
+        pad = np.pad(out, 4, mode="edge")
+        return np.convolve(pad, np.ones(9) / 9.0, mode="valid")
+
+    def azimuth_at_surface_cun(self, seg_name: str, t: float, az0: float,
+                               cun: float, tol: float = 0.02) -> float:
+        """Azymut oddalony o `cun` PO SKORZE od azymutu `az0` na tej samej wysokosci.
+
+        Tak mierzy podrecznik: "jeden palec bocznie od grzebienia piszczeli" to
+        odleglosc po ciele, a nie kat. Przy owalnym przekroju ten sam kat znaczy
+        raz 8, raz 14 mm - dlatego szukamy kata, ktory daje zadana odleglosc.
+        """
+        seg = self.seg(seg_name)
+        target = abs(cun) * seg.cun_m
+        step = 1.0 if cun >= 0 else -1.0
+        lo, hi = 0.0, 5.0
+        for _ in range(40):                       # zakres: ile stopni starcza
+            if self._arc_len(seg, t, az0, az0 + step * hi) >= target or hi > 180.0:
+                break
+            hi *= 1.6
+        for _ in range(30):
+            mid = 0.5 * (lo + hi)
+            if self._arc_len(seg, t, az0, az0 + step * mid) < target:
+                lo = mid
+            else:
+                hi = mid
+            if hi - lo < tol:
+                break
+        return az0 + step * 0.5 * (lo + hi)
+
+    @staticmethod
+    def _arc_len(seg, t: float, az_a: float, az_b: float, n: int = 16) -> float:
+        pts = np.array([seg.surface_by_azimuth(t, float(x))
+                        for x in np.linspace(az_a, az_b, n)])
+        return float(np.linalg.norm(np.diff(pts, axis=0), axis=1).sum())
+
     def sagittal_point(self, cun_from_glabella: float) -> np.ndarray:
         sg = self.sagittal
         c = float(np.clip(cun_from_glabella, 0.0, self.SAGITTAL_CUN))

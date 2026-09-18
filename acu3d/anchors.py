@@ -17,6 +17,9 @@ Pola kotwicy (`anchor`):
     arc_cun    dla skalpu: odleglosc w cun po luku strzalkowym od przedniej linii
                wlosow (0) przez czubek glowy do tylnej linii wlosow (12); luk jest
                czescia linijki kostnej gladzizna -> C7 = 18 cun
+    edge       krawedz kosci, od ktorej mierzy sie w bok PO SKORZE: "tibial_crest",
+               "tibia_medial", "fibula_posterior", "ulna_posterior" + `edge_cun`
+               (dodatnie = bocznie/do przodu wzdluz obrysu, ujemne = w druga strone)
     ruler      osobna linijka na osi segmentu, np. "shank_medial" (13 cun od klykcia
                przysrodkowego piszczeli do kostki przysrodkowej) - wtedy `cun`
                i `from` licza sie od jej koncow
@@ -141,6 +144,12 @@ def resolve(rig: Rig, anchor: dict) -> np.ndarray:
     seg = rig.seg(a["seg"])
     t = _axial_t(rig, a)
     out = float(a.get("out", 0.0))
+    if "edge" in a and hasattr(rig, "bone_edge_azimuth"):
+        # "jeden palec bocznie od grzebienia piszczeli" - odleglosc po skorze od
+        # krawedzi kosci, nie kat. Krawedz skreca sie wzdluz kosci, a punkt z nia.
+        az0 = rig.bone_edge_azimuth(a["edge"], t)
+        az = rig.azimuth_at_surface_cun(a["seg"], t, az0, float(a.get("edge_cun", 0.0)))
+        return seg.surface_by_azimuth(t, az, out)
     if "az" in a:
         return seg.surface_by_azimuth(t, float(a["az"]), out)
     if "lat" in a:

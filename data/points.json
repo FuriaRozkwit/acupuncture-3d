@@ -1445,10 +1445,11 @@
     "seg": "shank",
     "cun": 3,
     "from": "p0",
-    "az": 22
+    "edge": "tibial_crest",
+    "edge_cun": 1.0
    },
    "note_pl": "3 cun ponizej ST-35, szerokosc palca bocznie od grzebienia piszczeli",
-   "az_source": ""
+   "az_source": "pomiar: 1.0 cun PO SKORZE bocznie od grzebienia piszczeli (opis: jeden palec bocznie; bylo az 22)"
   },
   {
    "code": "ST-37",
@@ -1466,10 +1467,11 @@
     "seg": "shank",
     "cun": 6,
     "from": "p0",
-    "az": 22
+    "edge": "tibial_crest",
+    "edge_cun": 1.0
    },
    "note_pl": "",
-   "az_source": ""
+   "az_source": "pomiar: 1.0 cun PO SKORZE bocznie od grzebienia piszczeli (opis: jeden palec bocznie; bylo az 22)"
   },
   {
    "code": "ST-38",
@@ -1484,10 +1486,11 @@
     "seg": "shank",
     "cun": 8,
     "from": "p0",
-    "az": 22
+    "edge": "tibial_crest",
+    "edge_cun": 1.0
    },
    "note_pl": "",
-   "az_source": ""
+   "az_source": "pomiar: 1.0 cun PO SKORZE bocznie od grzebienia piszczeli (opis: jeden palec bocznie; bylo az 22)"
   },
   {
    "code": "ST-39",
@@ -1505,10 +1508,11 @@
     "seg": "shank",
     "cun": 9,
     "from": "p0",
-    "az": 22
+    "edge": "tibial_crest",
+    "edge_cun": 1.0
    },
    "note_pl": "",
-   "az_source": ""
+   "az_source": "pomiar: 1.0 cun PO SKORZE bocznie od grzebienia piszczeli (opis: jeden palec bocznie; bylo az 22)"
   },
   {
    "code": "ST-40",
@@ -1525,10 +1529,11 @@
     "seg": "shank",
     "cun": 8,
     "from": "p0",
-    "az": 38
+    "edge": "tibial_crest",
+    "edge_cun": 1.5
    },
    "note_pl": "2 szerokosci palca bocznie od ST-38",
-   "az_source": ""
+   "az_source": "pomiar: 1.5 cun PO SKORZE bocznie od grzebienia piszczeli (opis: dwa palce bocznie; bylo az 38)"
   },
   {
    "code": "ST-41",
@@ -5873,10 +5878,11 @@
     "seg": "shank",
     "cun": 7,
     "from": "p1",
-    "az": 100
+    "edge": "fibula_posterior",
+    "edge_cun": -0.2
    },
    "note_pl": "",
-   "az_source": ""
+   "az_source": "pomiar: -0.2 cun po skorze od krawedzi fibula_posterior (opis: zaglebienie przy tylnym brzegu strzalki; bylo az 100 - punkt lezal 0.7-1.0 cun za daleko do tylu). Strzalka jest dobrze wpasowana w skore (6 mm tkanki), piszczel nie."
   },
   {
    "code": "GB-36",
@@ -5893,10 +5899,11 @@
     "seg": "shank",
     "cun": 7,
     "from": "p1",
-    "az": 85
+    "edge": "fibula_anterior",
+    "edge_cun": 0.2
    },
    "note_pl": "",
-   "az_source": ""
+   "az_source": "pomiar: +0.2 cun po skorze od krawedzi fibula_anterior (opis: przy przednim brzegu strzalki; bylo az 85 - punkt lezal 0.7-1.0 cun za daleko do tylu). Strzalka jest dobrze wpasowana w skore (6 mm tkanki), piszczel nie."
   },
   {
    "code": "GB-37",
@@ -5913,10 +5920,11 @@
     "seg": "shank",
     "cun": 5,
     "from": "p1",
-    "az": 88
+    "edge": "fibula_anterior",
+    "edge_cun": 0.2
    },
    "note_pl": "",
-   "az_source": ""
+   "az_source": "pomiar: +0.2 cun po skorze od krawedzi fibula_anterior (opis: przy przednim brzegu strzalki; bylo az 88 - punkt lezal 0.7-1.0 cun za daleko do tylu). Strzalka jest dobrze wpasowana w skore (6 mm tkanki), piszczel nie."
   },
   {
    "code": "GB-38",
@@ -5933,10 +5941,11 @@
     "seg": "shank",
     "cun": 4,
     "from": "p1",
-    "az": 88
+    "edge": "fibula_anterior",
+    "edge_cun": 0.2
    },
    "note_pl": "",
-   "az_source": ""
+   "az_source": "pomiar: +0.2 cun po skorze od krawedzi fibula_anterior (opis: przy przednim brzegu strzalki; bylo az 88 - punkt lezal 0.7-1.0 cun za daleko do tylu). Strzalka jest dobrze wpasowana w skore (6 mm tkanki), piszczel nie."
   },
   {
    "code": "GB-39",
@@ -5953,10 +5962,11 @@
     "seg": "shank",
     "cun": 3,
     "from": "p1",
-    "az": 90
+    "edge": "fibula_posterior",
+    "edge_cun": -0.3
    },
    "note_pl": "3 cun powyzej kostki bocznej",
-   "az_source": ""
+   "az_source": "pomiar: -0.3 cun po skorze od krawedzi fibula_posterior (opis: miedzy tylnym brzegiem strzalki a sciegnami strzalkowymi; bylo az 90 - punkt lezal 0.7-1.0 cun za daleko do tylu). Strzalka jest dobrze wpasowana w skore (6 mm tkanki), piszczel nie."
   },
   {
    "code": "GB-40",
