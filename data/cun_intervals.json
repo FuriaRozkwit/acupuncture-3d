@@ -1,0 +1,2443 @@
+{
+ "version": 1,
+ "confirmed": false,
+ "zrodlo": "powszechna wiedza o systemie cun - fakty tradycji, nie tekst z podrecznika; do potwierdzenia z norma WHO 2008 / GB/T 12346",
+ "jednostka": "cun, mierzone WZDLUZ kanalu",
+ "basis": {
+  "cun": "kanoniczny odstep w cun",
+  "vertebra": "odstep wyznacza kolejny krag, nie stala liczba cun",
+  "anatomiczna": "punkt zdefiniowany cecha anatomiczna - odstep nie jest kanoniczny"
+ },
+ "channels": {
+  "LU": [
+   {
+    "from": "LU-5",
+    "to": "LU-6",
+    "cun": 5.0,
+    "basis": "cun",
+    "note": "LU-5 dol lokciowy -> LU-9 zgiecie nadgarstka = 12 cun"
+   },
+   {
+    "from": "LU-6",
+    "to": "LU-7",
+    "cun": 5.5,
+    "basis": "cun",
+    "note": "LU-6 7 cun, LU-7 1.5 cun nad zgieciem nadgarstka",
+    "poprawione": "po tescie odstepow - pierwsza wersja byla z pamieci i byla bledna"
+   },
+   {
+    "from": "LU-7",
+    "to": "LU-8",
+    "cun": 0.5,
+    "basis": "cun",
+    "note": "LU-5 dol lokciowy -> LU-9 zgiecie nadgarstka = 12 cun"
+   },
+   {
+    "from": "LU-8",
+    "to": "LU-9",
+    "cun": 1.0,
+    "basis": "cun",
+    "note": "LU-5 dol lokciowy -> LU-9 zgiecie nadgarstka = 12 cun"
+   },
+   {
+    "from": "LU-1",
+    "to": "LU-2",
+    "cun": 1.0,
+    "basis": "anatomiczna",
+    "note": "LU-1 1 cun ponizej LU-2"
+   },
+   {
+    "from": "LU-9",
+    "to": "LU-10",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "dlon i kciuk"
+   },
+   {
+    "from": "LU-10",
+    "to": "LU-11",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "dlon i kciuk"
+   }
+  ],
+  "PC": [
+   {
+    "from": "PC-3",
+    "to": "PC-4",
+    "cun": 7.0,
+    "basis": "cun",
+    "note": "PC-4 5 cun, PC-5 3 cun, PC-6 2 cun nad zgieciem nadgarstka"
+   },
+   {
+    "from": "PC-4",
+    "to": "PC-5",
+    "cun": 2.0,
+    "basis": "cun",
+    "note": "PC-4 5 cun, PC-5 3 cun, PC-6 2 cun nad zgieciem nadgarstka"
+   },
+   {
+    "from": "PC-5",
+    "to": "PC-6",
+    "cun": 1.0,
+    "basis": "cun",
+    "note": "PC-4 5 cun, PC-5 3 cun, PC-6 2 cun nad zgieciem nadgarstka"
+   },
+   {
+    "from": "PC-6",
+    "to": "PC-7",
+    "cun": 2.0,
+    "basis": "cun",
+    "note": "PC-4 5 cun, PC-5 3 cun, PC-6 2 cun nad zgieciem nadgarstka"
+   },
+   {
+    "from": "PC-7",
+    "to": "PC-8",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "dlon i palec"
+   },
+   {
+    "from": "PC-8",
+    "to": "PC-9",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "dlon i palec"
+   }
+  ],
+  "HT": [
+   {
+    "from": "HT-3",
+    "to": "HT-4",
+    "cun": 10.5,
+    "basis": "cun",
+    "note": "HT-4 1.5, HT-5 1.0, HT-6 0.5 cun nad zgieciem nadgarstka"
+   },
+   {
+    "from": "HT-4",
+    "to": "HT-5",
+    "cun": 0.5,
+    "basis": "cun",
+    "note": "HT-4 1.5, HT-5 1.0, HT-6 0.5 cun nad zgieciem nadgarstka"
+   },
+   {
+    "from": "HT-5",
+    "to": "HT-6",
+    "cun": 0.5,
+    "basis": "cun",
+    "note": "HT-4 1.5, HT-5 1.0, HT-6 0.5 cun nad zgieciem nadgarstka"
+   },
+   {
+    "from": "HT-6",
+    "to": "HT-7",
+    "cun": 0.5,
+    "basis": "cun",
+    "note": "HT-4 1.5, HT-5 1.0, HT-6 0.5 cun nad zgieciem nadgarstka"
+   },
+   {
+    "from": "HT-7",
+    "to": "HT-8",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "dlon i palec"
+   },
+   {
+    "from": "HT-8",
+    "to": "HT-9",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "dlon i palec"
+   }
+  ],
+  "LI": [
+   {
+    "from": "LI-5",
+    "to": "LI-6",
+    "cun": 3.0,
+    "basis": "cun",
+    "note": "LI-6 3, LI-7 5, LI-10 2 cun; LI-11 w dole lokciowym"
+   },
+   {
+    "from": "LI-6",
+    "to": "LI-7",
+    "cun": 2.0,
+    "basis": "cun",
+    "note": "LI-6 3, LI-7 5, LI-10 2 cun; LI-11 w dole lokciowym"
+   },
+   {
+    "from": "LI-7",
+    "to": "LI-8",
+    "cun": 3.0,
+    "basis": "cun",
+    "note": "LI-7 5 cun, LI-8 8 cun nad zgieciem nadgarstka",
+    "poprawione": "po tescie odstepow - pierwsza wersja byla z pamieci i byla bledna"
+   },
+   {
+    "from": "LI-8",
+    "to": "LI-9",
+    "cun": 1.0,
+    "basis": "cun",
+    "note": "LI-6 3, LI-7 5, LI-10 2 cun; LI-11 w dole lokciowym"
+   },
+   {
+    "from": "LI-9",
+    "to": "LI-10",
+    "cun": 1.0,
+    "basis": "cun",
+    "note": "LI-6 3, LI-7 5, LI-10 2 cun; LI-11 w dole lokciowym"
+   },
+   {
+    "from": "LI-10",
+    "to": "LI-11",
+    "cun": 2.0,
+    "basis": "cun",
+    "note": "LI-6 3, LI-7 5, LI-10 2 cun; LI-11 w dole lokciowym"
+   },
+   {
+    "from": "LI-1",
+    "to": "LI-2",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "dlon: punkty przy stawach palcow i sciegnach"
+   },
+   {
+    "from": "LI-2",
+    "to": "LI-3",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "dlon: punkty przy stawach palcow i sciegnach"
+   },
+   {
+    "from": "LI-3",
+    "to": "LI-4",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "dlon: punkty przy stawach palcow i sciegnach"
+   },
+   {
+    "from": "LI-4",
+    "to": "LI-5",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "dlon: punkty przy stawach palcow i sciegnach"
+   },
+   {
+    "from": "LI-11",
+    "to": "LI-12",
+    "cun": 1.0,
+    "basis": "cun",
+    "note": "LI-13 3 cun nad dolem lokciowym"
+   },
+   {
+    "from": "LI-12",
+    "to": "LI-13",
+    "cun": 2.0,
+    "basis": "cun",
+    "note": "LI-13 3 cun nad dolem lokciowym"
+   },
+   {
+    "from": "LI-13",
+    "to": "LI-14",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "LI-14 przy przyczepie naramiennego - odleglosc od LI-13 niepewna",
+    "poprawione": "po tescie odstepow - pierwsza wersja byla z pamieci i byla bledna"
+   },
+   {
+    "from": "LI-14",
+    "to": "LI-15",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "bark, szyja, twarz"
+   },
+   {
+    "from": "LI-15",
+    "to": "LI-16",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "bark, szyja, twarz"
+   },
+   {
+    "from": "LI-16",
+    "to": "LI-17",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "bark, szyja, twarz"
+   },
+   {
+    "from": "LI-17",
+    "to": "LI-18",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "bark, szyja, twarz"
+   },
+   {
+    "from": "LI-18",
+    "to": "LI-19",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "bark, szyja, twarz"
+   },
+   {
+    "from": "LI-19",
+    "to": "LI-20",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "bark, szyja, twarz"
+   }
+  ],
+  "SJ": [
+   {
+    "from": "SJ-4",
+    "to": "SJ-5",
+    "cun": 2.0,
+    "basis": "cun",
+    "note": "SJ-5 2, SJ-6 3, SJ-8 4 cun nad zgieciem nadgarstka"
+   },
+   {
+    "from": "SJ-5",
+    "to": "SJ-6",
+    "cun": 1.0,
+    "basis": "cun",
+    "note": "SJ-5 2, SJ-6 3, SJ-8 4 cun nad zgieciem nadgarstka"
+   },
+   {
+    "from": "SJ-6",
+    "to": "SJ-8",
+    "cun": 1.0,
+    "basis": "cun",
+    "note": "SJ-5 2, SJ-6 3, SJ-8 4 cun nad zgieciem nadgarstka"
+   },
+   {
+    "from": "SJ-8",
+    "to": "SJ-9",
+    "cun": 3.0,
+    "basis": "cun",
+    "note": "SJ-8 4 cun, SJ-9 7 cun nad zgieciem nadgarstka",
+    "poprawione": "po tescie odstepow - pierwsza wersja byla z pamieci i byla bledna"
+   },
+   {
+    "from": "SJ-9",
+    "to": "SJ-10",
+    "cun": 5.0,
+    "basis": "cun",
+    "note": "SJ-5 2, SJ-6 3, SJ-8 4 cun nad zgieciem nadgarstka"
+   },
+   {
+    "from": "SJ-6",
+    "to": "SJ-7",
+    "cun": 0.0,
+    "basis": "anatomiczna",
+    "note": "SJ-7 galaz boczna na poziomie SJ-6"
+   },
+   {
+    "from": "SJ-1",
+    "to": "SJ-2",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "reka"
+   },
+   {
+    "from": "SJ-2",
+    "to": "SJ-3",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "reka"
+   },
+   {
+    "from": "SJ-3",
+    "to": "SJ-4",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "reka"
+   },
+   {
+    "from": "SJ-10",
+    "to": "SJ-11",
+    "cun": 1.0,
+    "basis": "cun",
+    "note": "SJ-11 1 cun nad SJ-10",
+    "poprawione": "po tescie odstepow - pierwsza wersja byla z pamieci i byla bledna"
+   },
+   {
+    "from": "SJ-11",
+    "to": "SJ-12",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "odleglosc SJ-11 -> SJ-12 niepewna",
+    "poprawione": "po tescie odstepow - pierwsza wersja byla z pamieci i byla bledna"
+   },
+   {
+    "from": "SJ-12",
+    "to": "SJ-13",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "bark, szyja, okolica ucha"
+   },
+   {
+    "from": "SJ-13",
+    "to": "SJ-14",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "bark, szyja, okolica ucha"
+   },
+   {
+    "from": "SJ-14",
+    "to": "SJ-15",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "bark, szyja, okolica ucha"
+   },
+   {
+    "from": "SJ-15",
+    "to": "SJ-16",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "bark, szyja, okolica ucha"
+   },
+   {
+    "from": "SJ-16",
+    "to": "SJ-17",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "bark, szyja, okolica ucha"
+   },
+   {
+    "from": "SJ-17",
+    "to": "SJ-18",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "bark, szyja, okolica ucha"
+   },
+   {
+    "from": "SJ-18",
+    "to": "SJ-19",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "bark, szyja, okolica ucha"
+   },
+   {
+    "from": "SJ-19",
+    "to": "SJ-20",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "bark, szyja, okolica ucha"
+   },
+   {
+    "from": "SJ-20",
+    "to": "SJ-21",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "bark, szyja, okolica ucha"
+   },
+   {
+    "from": "SJ-21",
+    "to": "SJ-22",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "bark, szyja, okolica ucha"
+   },
+   {
+    "from": "SJ-22",
+    "to": "SJ-23",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "bark, szyja, okolica ucha"
+   }
+  ],
+  "SI": [
+   {
+    "from": "SI-1",
+    "to": "SI-2",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "reka i nadgarstek"
+   },
+   {
+    "from": "SI-2",
+    "to": "SI-3",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "reka i nadgarstek"
+   },
+   {
+    "from": "SI-3",
+    "to": "SI-4",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "reka i nadgarstek"
+   },
+   {
+    "from": "SI-4",
+    "to": "SI-5",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "reka i nadgarstek"
+   },
+   {
+    "from": "SI-5",
+    "to": "SI-6",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "reka i nadgarstek"
+   },
+   {
+    "from": "SI-6",
+    "to": "SI-7",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "reka i nadgarstek"
+   },
+   {
+    "from": "SI-7",
+    "to": "SI-8",
+    "cun": 7.0,
+    "basis": "cun",
+    "note": "SI-7 5 cun nad nadgarstkiem, SI-8 przy lokciu (12 cun)",
+    "poprawione": "po tescie odstepow - pierwsza wersja byla z pamieci i byla bledna"
+   },
+   {
+    "from": "SI-8",
+    "to": "SI-9",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "lopatka, szyja, twarz"
+   },
+   {
+    "from": "SI-9",
+    "to": "SI-10",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "lopatka, szyja, twarz"
+   },
+   {
+    "from": "SI-10",
+    "to": "SI-11",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "lopatka, szyja, twarz"
+   },
+   {
+    "from": "SI-11",
+    "to": "SI-12",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "lopatka, szyja, twarz"
+   },
+   {
+    "from": "SI-12",
+    "to": "SI-13",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "lopatka, szyja, twarz"
+   },
+   {
+    "from": "SI-13",
+    "to": "SI-14",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "lopatka, szyja, twarz"
+   },
+   {
+    "from": "SI-14",
+    "to": "SI-15",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "lopatka, szyja, twarz"
+   },
+   {
+    "from": "SI-15",
+    "to": "SI-16",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "lopatka, szyja, twarz"
+   },
+   {
+    "from": "SI-16",
+    "to": "SI-17",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "lopatka, szyja, twarz"
+   },
+   {
+    "from": "SI-17",
+    "to": "SI-18",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "lopatka, szyja, twarz"
+   },
+   {
+    "from": "SI-18",
+    "to": "SI-19",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "lopatka, szyja, twarz"
+   }
+  ],
+  "ST": [
+   {
+    "from": "ST-32",
+    "to": "ST-33",
+    "cun": 3.0,
+    "basis": "cun",
+    "note": "ST-32 6, ST-33 3, ST-34 2 cun nad rzepka"
+   },
+   {
+    "from": "ST-33",
+    "to": "ST-34",
+    "cun": 1.0,
+    "basis": "cun",
+    "note": "ST-32 6, ST-33 3, ST-34 2 cun nad rzepka"
+   },
+   {
+    "from": "ST-34",
+    "to": "ST-35",
+    "cun": 2.0,
+    "basis": "anatomiczna",
+    "note": "ST-35 w dolku pod rzepka"
+   },
+   {
+    "from": "ST-35",
+    "to": "ST-36",
+    "cun": 3.0,
+    "basis": "cun",
+    "note": "pod ST-35: ST-36 3, ST-37 6, ST-38 8, ST-39 9 cun"
+   },
+   {
+    "from": "ST-36",
+    "to": "ST-37",
+    "cun": 3.0,
+    "basis": "cun",
+    "note": "pod ST-35: ST-36 3, ST-37 6, ST-38 8, ST-39 9 cun"
+   },
+   {
+    "from": "ST-37",
+    "to": "ST-38",
+    "cun": 2.0,
+    "basis": "cun",
+    "note": "pod ST-35: ST-36 3, ST-37 6, ST-38 8, ST-39 9 cun"
+   },
+   {
+    "from": "ST-38",
+    "to": "ST-39",
+    "cun": 1.0,
+    "basis": "cun",
+    "note": "pod ST-35: ST-36 3, ST-37 6, ST-38 8, ST-39 9 cun"
+   },
+   {
+    "from": "ST-39",
+    "to": "ST-40",
+    "cun": 1.0,
+    "basis": "anatomiczna",
+    "note": "ST-40 8 cun pod ST-35, 1 cun bocznie od ST-38"
+   },
+   {
+    "from": "ST-40",
+    "to": "ST-41",
+    "cun": 8.0,
+    "basis": "cun",
+    "note": "ST-41 na zgieciu stawu skokowego, 16 cun pod ST-35"
+   },
+   {
+    "from": "ST-41",
+    "to": "ST-42",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "stopa"
+   },
+   {
+    "from": "ST-42",
+    "to": "ST-43",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "stopa"
+   },
+   {
+    "from": "ST-43",
+    "to": "ST-44",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "stopa"
+   },
+   {
+    "from": "ST-44",
+    "to": "ST-45",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "stopa"
+   },
+   {
+    "from": "ST-30",
+    "to": "ST-31",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "pachwina i udo"
+   },
+   {
+    "from": "ST-31",
+    "to": "ST-32",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "pachwina i udo"
+   },
+   {
+    "from": "ST-1",
+    "to": "ST-2",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "twarz, szyja i tulow - odstepy wyznaczaja zebra i linia sutkowa, nie stala liczba cun"
+   },
+   {
+    "from": "ST-2",
+    "to": "ST-3",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "twarz, szyja i tulow - odstepy wyznaczaja zebra i linia sutkowa, nie stala liczba cun"
+   },
+   {
+    "from": "ST-3",
+    "to": "ST-4",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "twarz, szyja i tulow - odstepy wyznaczaja zebra i linia sutkowa, nie stala liczba cun"
+   },
+   {
+    "from": "ST-4",
+    "to": "ST-5",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "twarz, szyja i tulow - odstepy wyznaczaja zebra i linia sutkowa, nie stala liczba cun"
+   },
+   {
+    "from": "ST-5",
+    "to": "ST-6",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "twarz, szyja i tulow - odstepy wyznaczaja zebra i linia sutkowa, nie stala liczba cun"
+   },
+   {
+    "from": "ST-6",
+    "to": "ST-7",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "twarz, szyja i tulow - odstepy wyznaczaja zebra i linia sutkowa, nie stala liczba cun"
+   },
+   {
+    "from": "ST-7",
+    "to": "ST-8",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "twarz, szyja i tulow - odstepy wyznaczaja zebra i linia sutkowa, nie stala liczba cun"
+   },
+   {
+    "from": "ST-8",
+    "to": "ST-9",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "twarz, szyja i tulow - odstepy wyznaczaja zebra i linia sutkowa, nie stala liczba cun"
+   },
+   {
+    "from": "ST-9",
+    "to": "ST-10",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "twarz, szyja i tulow - odstepy wyznaczaja zebra i linia sutkowa, nie stala liczba cun"
+   },
+   {
+    "from": "ST-10",
+    "to": "ST-11",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "twarz, szyja i tulow - odstepy wyznaczaja zebra i linia sutkowa, nie stala liczba cun"
+   },
+   {
+    "from": "ST-11",
+    "to": "ST-12",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "twarz, szyja i tulow - odstepy wyznaczaja zebra i linia sutkowa, nie stala liczba cun"
+   },
+   {
+    "from": "ST-12",
+    "to": "ST-13",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "twarz, szyja i tulow - odstepy wyznaczaja zebra i linia sutkowa, nie stala liczba cun"
+   },
+   {
+    "from": "ST-13",
+    "to": "ST-14",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "twarz, szyja i tulow - odstepy wyznaczaja zebra i linia sutkowa, nie stala liczba cun"
+   },
+   {
+    "from": "ST-14",
+    "to": "ST-15",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "twarz, szyja i tulow - odstepy wyznaczaja zebra i linia sutkowa, nie stala liczba cun"
+   },
+   {
+    "from": "ST-15",
+    "to": "ST-16",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "twarz, szyja i tulow - odstepy wyznaczaja zebra i linia sutkowa, nie stala liczba cun"
+   },
+   {
+    "from": "ST-16",
+    "to": "ST-17",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "twarz, szyja i tulow - odstepy wyznaczaja zebra i linia sutkowa, nie stala liczba cun"
+   },
+   {
+    "from": "ST-17",
+    "to": "ST-18",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "twarz, szyja i tulow - odstepy wyznaczaja zebra i linia sutkowa, nie stala liczba cun"
+   },
+   {
+    "from": "ST-18",
+    "to": "ST-19",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "twarz, szyja i tulow - odstepy wyznaczaja zebra i linia sutkowa, nie stala liczba cun"
+   },
+   {
+    "from": "ST-19",
+    "to": "ST-20",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "twarz, szyja i tulow - odstepy wyznaczaja zebra i linia sutkowa, nie stala liczba cun"
+   },
+   {
+    "from": "ST-20",
+    "to": "ST-21",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "twarz, szyja i tulow - odstepy wyznaczaja zebra i linia sutkowa, nie stala liczba cun"
+   },
+   {
+    "from": "ST-21",
+    "to": "ST-22",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "twarz, szyja i tulow - odstepy wyznaczaja zebra i linia sutkowa, nie stala liczba cun"
+   },
+   {
+    "from": "ST-22",
+    "to": "ST-23",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "twarz, szyja i tulow - odstepy wyznaczaja zebra i linia sutkowa, nie stala liczba cun"
+   },
+   {
+    "from": "ST-23",
+    "to": "ST-24",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "twarz, szyja i tulow - odstepy wyznaczaja zebra i linia sutkowa, nie stala liczba cun"
+   },
+   {
+    "from": "ST-24",
+    "to": "ST-25",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "twarz, szyja i tulow - odstepy wyznaczaja zebra i linia sutkowa, nie stala liczba cun"
+   },
+   {
+    "from": "ST-25",
+    "to": "ST-26",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "twarz, szyja i tulow - odstepy wyznaczaja zebra i linia sutkowa, nie stala liczba cun"
+   },
+   {
+    "from": "ST-26",
+    "to": "ST-27",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "twarz, szyja i tulow - odstepy wyznaczaja zebra i linia sutkowa, nie stala liczba cun"
+   },
+   {
+    "from": "ST-27",
+    "to": "ST-28",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "twarz, szyja i tulow - odstepy wyznaczaja zebra i linia sutkowa, nie stala liczba cun"
+   },
+   {
+    "from": "ST-28",
+    "to": "ST-29",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "twarz, szyja i tulow - odstepy wyznaczaja zebra i linia sutkowa, nie stala liczba cun"
+   },
+   {
+    "from": "ST-29",
+    "to": "ST-30",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "twarz, szyja i tulow - odstepy wyznaczaja zebra i linia sutkowa, nie stala liczba cun"
+   }
+  ],
+  "SP": [
+   {
+    "from": "SP-5",
+    "to": "SP-6",
+    "cun": 3.0,
+    "basis": "cun",
+    "note": "SP-6 3, SP-7 6 cun nad kostka przysrodkowa"
+   },
+   {
+    "from": "SP-6",
+    "to": "SP-7",
+    "cun": 3.0,
+    "basis": "cun",
+    "note": "SP-6 3, SP-7 6 cun nad kostka przysrodkowa"
+   },
+   {
+    "from": "SP-7",
+    "to": "SP-8",
+    "cun": 4.0,
+    "basis": "cun",
+    "note": "SP-8 3 cun pod SP-9; SP-9 przy klykciu"
+   },
+   {
+    "from": "SP-8",
+    "to": "SP-9",
+    "cun": 3.0,
+    "basis": "cun",
+    "note": "SP-8 3 cun pod SP-9; SP-9 przy klykciu"
+   },
+   {
+    "from": "SP-9",
+    "to": "SP-10",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "SP-10 2 cun nad rzepka"
+   },
+   {
+    "from": "SP-1",
+    "to": "SP-2",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "stopa"
+   },
+   {
+    "from": "SP-2",
+    "to": "SP-3",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "stopa"
+   },
+   {
+    "from": "SP-3",
+    "to": "SP-4",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "stopa"
+   },
+   {
+    "from": "SP-4",
+    "to": "SP-5",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "stopa"
+   },
+   {
+    "from": "SP-10",
+    "to": "SP-11",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "udo, brzuch, klatka"
+   },
+   {
+    "from": "SP-11",
+    "to": "SP-12",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "udo, brzuch, klatka"
+   },
+   {
+    "from": "SP-12",
+    "to": "SP-13",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "udo, brzuch, klatka"
+   },
+   {
+    "from": "SP-13",
+    "to": "SP-14",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "udo, brzuch, klatka"
+   },
+   {
+    "from": "SP-14",
+    "to": "SP-15",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "udo, brzuch, klatka"
+   },
+   {
+    "from": "SP-15",
+    "to": "SP-16",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "udo, brzuch, klatka"
+   },
+   {
+    "from": "SP-16",
+    "to": "SP-17",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "udo, brzuch, klatka"
+   },
+   {
+    "from": "SP-17",
+    "to": "SP-18",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "udo, brzuch, klatka"
+   },
+   {
+    "from": "SP-18",
+    "to": "SP-19",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "udo, brzuch, klatka"
+   },
+   {
+    "from": "SP-19",
+    "to": "SP-20",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "udo, brzuch, klatka"
+   },
+   {
+    "from": "SP-20",
+    "to": "SP-21",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "udo, brzuch, klatka"
+   }
+  ],
+  "BL": [
+   {
+    "from": "BL-40",
+    "to": "BL-55",
+    "cun": 2.0,
+    "basis": "cun",
+    "note": "BL-55 2 cun pod BL-40",
+    "poprawione": "po tescie odstepow - pierwsza wersja byla z pamieci i byla bledna"
+   },
+   {
+    "from": "BL-55",
+    "to": "BL-56",
+    "cun": 3.0,
+    "basis": "cun",
+    "note": "BL-56 5 cun pod BL-40",
+    "poprawione": "po tescie odstepow - pierwsza wersja byla z pamieci i byla bledna"
+   },
+   {
+    "from": "BL-56",
+    "to": "BL-57",
+    "cun": 3.0,
+    "basis": "cun",
+    "note": "pod BL-40: BL-55 3, BL-56 5, BL-57 8 cun"
+   },
+   {
+    "from": "BL-57",
+    "to": "BL-58",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "BL-58 1 cun bocznie i nizej od BL-57"
+   },
+   {
+    "from": "BL-58",
+    "to": "BL-59",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "BL-59 3 cun nad BL-60"
+   },
+   {
+    "from": "BL-59",
+    "to": "BL-60",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "BL-59 3 cun nad BL-60"
+   },
+   {
+    "from": "BL-60",
+    "to": "BL-61",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "stopa"
+   },
+   {
+    "from": "BL-61",
+    "to": "BL-62",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "stopa"
+   },
+   {
+    "from": "BL-62",
+    "to": "BL-63",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "stopa"
+   },
+   {
+    "from": "BL-63",
+    "to": "BL-64",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "stopa"
+   },
+   {
+    "from": "BL-64",
+    "to": "BL-65",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "stopa"
+   },
+   {
+    "from": "BL-65",
+    "to": "BL-66",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "stopa"
+   },
+   {
+    "from": "BL-66",
+    "to": "BL-67",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "stopa"
+   },
+   {
+    "from": "BL-11",
+    "to": "BL-12",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "linie grzbietu 1.5 i 3 cun - poziom wyznacza kolejny krag"
+   },
+   {
+    "from": "BL-12",
+    "to": "BL-13",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "linie grzbietu 1.5 i 3 cun - poziom wyznacza kolejny krag"
+   },
+   {
+    "from": "BL-13",
+    "to": "BL-14",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "linie grzbietu 1.5 i 3 cun - poziom wyznacza kolejny krag"
+   },
+   {
+    "from": "BL-14",
+    "to": "BL-15",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "linie grzbietu 1.5 i 3 cun - poziom wyznacza kolejny krag"
+   },
+   {
+    "from": "BL-15",
+    "to": "BL-16",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "linie grzbietu 1.5 i 3 cun - poziom wyznacza kolejny krag"
+   },
+   {
+    "from": "BL-16",
+    "to": "BL-17",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "linie grzbietu 1.5 i 3 cun - poziom wyznacza kolejny krag"
+   },
+   {
+    "from": "BL-17",
+    "to": "BL-18",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "linie grzbietu 1.5 i 3 cun - poziom wyznacza kolejny krag"
+   },
+   {
+    "from": "BL-18",
+    "to": "BL-19",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "linie grzbietu 1.5 i 3 cun - poziom wyznacza kolejny krag"
+   },
+   {
+    "from": "BL-19",
+    "to": "BL-20",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "linie grzbietu 1.5 i 3 cun - poziom wyznacza kolejny krag"
+   },
+   {
+    "from": "BL-20",
+    "to": "BL-21",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "linie grzbietu 1.5 i 3 cun - poziom wyznacza kolejny krag"
+   },
+   {
+    "from": "BL-21",
+    "to": "BL-22",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "linie grzbietu 1.5 i 3 cun - poziom wyznacza kolejny krag"
+   },
+   {
+    "from": "BL-22",
+    "to": "BL-23",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "linie grzbietu 1.5 i 3 cun - poziom wyznacza kolejny krag"
+   },
+   {
+    "from": "BL-23",
+    "to": "BL-24",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "linie grzbietu 1.5 i 3 cun - poziom wyznacza kolejny krag"
+   },
+   {
+    "from": "BL-24",
+    "to": "BL-25",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "linie grzbietu 1.5 i 3 cun - poziom wyznacza kolejny krag"
+   },
+   {
+    "from": "BL-25",
+    "to": "BL-26",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "linie grzbietu 1.5 i 3 cun - poziom wyznacza kolejny krag"
+   },
+   {
+    "from": "BL-26",
+    "to": "BL-27",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "linie grzbietu 1.5 i 3 cun - poziom wyznacza kolejny krag"
+   },
+   {
+    "from": "BL-27",
+    "to": "BL-28",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "linie grzbietu 1.5 i 3 cun - poziom wyznacza kolejny krag"
+   },
+   {
+    "from": "BL-28",
+    "to": "BL-29",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "linie grzbietu 1.5 i 3 cun - poziom wyznacza kolejny krag"
+   },
+   {
+    "from": "BL-29",
+    "to": "BL-30",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "linie grzbietu 1.5 i 3 cun - poziom wyznacza kolejny krag"
+   },
+   {
+    "from": "BL-30",
+    "to": "BL-31",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "linie grzbietu 1.5 i 3 cun - poziom wyznacza kolejny krag"
+   },
+   {
+    "from": "BL-41",
+    "to": "BL-42",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "linie grzbietu 1.5 i 3 cun - poziom wyznacza kolejny krag"
+   },
+   {
+    "from": "BL-42",
+    "to": "BL-43",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "linie grzbietu 1.5 i 3 cun - poziom wyznacza kolejny krag"
+   },
+   {
+    "from": "BL-43",
+    "to": "BL-44",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "linie grzbietu 1.5 i 3 cun - poziom wyznacza kolejny krag"
+   },
+   {
+    "from": "BL-44",
+    "to": "BL-45",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "linie grzbietu 1.5 i 3 cun - poziom wyznacza kolejny krag"
+   },
+   {
+    "from": "BL-45",
+    "to": "BL-46",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "linie grzbietu 1.5 i 3 cun - poziom wyznacza kolejny krag"
+   },
+   {
+    "from": "BL-46",
+    "to": "BL-47",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "linie grzbietu 1.5 i 3 cun - poziom wyznacza kolejny krag"
+   },
+   {
+    "from": "BL-47",
+    "to": "BL-48",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "linie grzbietu 1.5 i 3 cun - poziom wyznacza kolejny krag"
+   },
+   {
+    "from": "BL-48",
+    "to": "BL-49",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "linie grzbietu 1.5 i 3 cun - poziom wyznacza kolejny krag"
+   },
+   {
+    "from": "BL-49",
+    "to": "BL-50",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "linie grzbietu 1.5 i 3 cun - poziom wyznacza kolejny krag"
+   },
+   {
+    "from": "BL-50",
+    "to": "BL-51",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "linie grzbietu 1.5 i 3 cun - poziom wyznacza kolejny krag"
+   },
+   {
+    "from": "BL-51",
+    "to": "BL-52",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "linie grzbietu 1.5 i 3 cun - poziom wyznacza kolejny krag"
+   },
+   {
+    "from": "BL-52",
+    "to": "BL-53",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "linie grzbietu 1.5 i 3 cun - poziom wyznacza kolejny krag"
+   },
+   {
+    "from": "BL-53",
+    "to": "BL-54",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "linie grzbietu 1.5 i 3 cun - poziom wyznacza kolejny krag"
+   },
+   {
+    "from": "BL-54",
+    "to": "BL-55",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "linie grzbietu 1.5 i 3 cun - poziom wyznacza kolejny krag"
+   },
+   {
+    "from": "BL-1",
+    "to": "BL-2",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, kosc krzyzowa"
+   },
+   {
+    "from": "BL-2",
+    "to": "BL-3",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, kosc krzyzowa"
+   },
+   {
+    "from": "BL-3",
+    "to": "BL-4",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, kosc krzyzowa"
+   },
+   {
+    "from": "BL-4",
+    "to": "BL-5",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, kosc krzyzowa"
+   },
+   {
+    "from": "BL-5",
+    "to": "BL-6",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, kosc krzyzowa"
+   },
+   {
+    "from": "BL-6",
+    "to": "BL-7",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, kosc krzyzowa"
+   },
+   {
+    "from": "BL-7",
+    "to": "BL-8",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, kosc krzyzowa"
+   },
+   {
+    "from": "BL-8",
+    "to": "BL-9",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, kosc krzyzowa"
+   },
+   {
+    "from": "BL-9",
+    "to": "BL-10",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, kosc krzyzowa"
+   },
+   {
+    "from": "BL-10",
+    "to": "BL-11",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, kosc krzyzowa"
+   },
+   {
+    "from": "BL-31",
+    "to": "BL-32",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, kosc krzyzowa"
+   },
+   {
+    "from": "BL-32",
+    "to": "BL-33",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, kosc krzyzowa"
+   },
+   {
+    "from": "BL-33",
+    "to": "BL-34",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, kosc krzyzowa"
+   },
+   {
+    "from": "BL-34",
+    "to": "BL-35",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, kosc krzyzowa"
+   },
+   {
+    "from": "BL-35",
+    "to": "BL-36",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, kosc krzyzowa"
+   },
+   {
+    "from": "BL-36",
+    "to": "BL-37",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, kosc krzyzowa"
+   },
+   {
+    "from": "BL-37",
+    "to": "BL-38",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, kosc krzyzowa"
+   },
+   {
+    "from": "BL-38",
+    "to": "BL-39",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, kosc krzyzowa"
+   },
+   {
+    "from": "BL-39",
+    "to": "BL-40",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, kosc krzyzowa"
+   },
+   {
+    "from": "BL-39",
+    "to": "BL-40",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "BL-39 na wysokosci BL-40, bocznie"
+   }
+  ],
+  "GB": [
+   {
+    "from": "GB-34",
+    "to": "GB-35",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "GB-34 pod glowa strzalki - nie wiem, ile to cun na linijce 16, wiec bez liczby",
+    "poprawione": "po tescie odstepow - pierwsza wersja byla z pamieci i byla bledna"
+   },
+   {
+    "from": "GB-35",
+    "to": "GB-36",
+    "cun": 0.0,
+    "basis": "cun",
+    "note": "GB-35 i GB-36 oba 7 cun nad kostka boczna, roznia sie strona strzalki",
+    "poprawione": "po tescie odstepow - pierwsza wersja byla z pamieci i byla bledna"
+   },
+   {
+    "from": "GB-36",
+    "to": "GB-37",
+    "cun": 2.0,
+    "basis": "cun",
+    "note": "GB-37 5 cun, GB-36 7 cun nad kostka boczna",
+    "poprawione": "po tescie odstepow - pierwsza wersja byla z pamieci i byla bledna"
+   },
+   {
+    "from": "GB-37",
+    "to": "GB-38",
+    "cun": 1.0,
+    "basis": "cun",
+    "note": "nad kostka boczna: GB-39 3, GB-38 4, GB-37 5, GB-36 7 cun"
+   },
+   {
+    "from": "GB-38",
+    "to": "GB-39",
+    "cun": 1.0,
+    "basis": "cun",
+    "note": "nad kostka boczna: GB-39 3, GB-38 4, GB-37 5, GB-36 7 cun"
+   },
+   {
+    "from": "GB-39",
+    "to": "GB-40",
+    "cun": 3.0,
+    "basis": "cun",
+    "note": "GB-40 przed kostka boczna"
+   },
+   {
+    "from": "GB-40",
+    "to": "GB-41",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "stopa"
+   },
+   {
+    "from": "GB-41",
+    "to": "GB-42",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "stopa"
+   },
+   {
+    "from": "GB-42",
+    "to": "GB-43",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "stopa"
+   },
+   {
+    "from": "GB-43",
+    "to": "GB-44",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "stopa"
+   },
+   {
+    "from": "GB-30",
+    "to": "GB-31",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "udo: GB-31 7 cun nad faldem podkolanowym, GB-32 5 cun"
+   },
+   {
+    "from": "GB-31",
+    "to": "GB-32",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "udo: GB-31 7 cun nad faldem podkolanowym, GB-32 5 cun"
+   },
+   {
+    "from": "GB-32",
+    "to": "GB-33",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "udo: GB-31 7 cun nad faldem podkolanowym, GB-32 5 cun"
+   },
+   {
+    "from": "GB-33",
+    "to": "GB-34",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "udo: GB-31 7 cun nad faldem podkolanowym, GB-32 5 cun"
+   },
+   {
+    "from": "GB-1",
+    "to": "GB-2",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, bok tulowia"
+   },
+   {
+    "from": "GB-2",
+    "to": "GB-3",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, bok tulowia"
+   },
+   {
+    "from": "GB-3",
+    "to": "GB-4",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, bok tulowia"
+   },
+   {
+    "from": "GB-4",
+    "to": "GB-5",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, bok tulowia"
+   },
+   {
+    "from": "GB-5",
+    "to": "GB-6",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, bok tulowia"
+   },
+   {
+    "from": "GB-6",
+    "to": "GB-7",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, bok tulowia"
+   },
+   {
+    "from": "GB-7",
+    "to": "GB-8",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, bok tulowia"
+   },
+   {
+    "from": "GB-8",
+    "to": "GB-9",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, bok tulowia"
+   },
+   {
+    "from": "GB-9",
+    "to": "GB-10",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, bok tulowia"
+   },
+   {
+    "from": "GB-10",
+    "to": "GB-11",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, bok tulowia"
+   },
+   {
+    "from": "GB-11",
+    "to": "GB-12",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, bok tulowia"
+   },
+   {
+    "from": "GB-12",
+    "to": "GB-13",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, bok tulowia"
+   },
+   {
+    "from": "GB-13",
+    "to": "GB-14",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, bok tulowia"
+   },
+   {
+    "from": "GB-14",
+    "to": "GB-15",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, bok tulowia"
+   },
+   {
+    "from": "GB-15",
+    "to": "GB-16",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, bok tulowia"
+   },
+   {
+    "from": "GB-16",
+    "to": "GB-17",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, bok tulowia"
+   },
+   {
+    "from": "GB-17",
+    "to": "GB-18",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, bok tulowia"
+   },
+   {
+    "from": "GB-18",
+    "to": "GB-19",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, bok tulowia"
+   },
+   {
+    "from": "GB-19",
+    "to": "GB-20",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, bok tulowia"
+   },
+   {
+    "from": "GB-20",
+    "to": "GB-21",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, bok tulowia"
+   },
+   {
+    "from": "GB-21",
+    "to": "GB-22",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, bok tulowia"
+   },
+   {
+    "from": "GB-22",
+    "to": "GB-23",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, bok tulowia"
+   },
+   {
+    "from": "GB-23",
+    "to": "GB-24",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, bok tulowia"
+   },
+   {
+    "from": "GB-24",
+    "to": "GB-25",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, bok tulowia"
+   },
+   {
+    "from": "GB-25",
+    "to": "GB-26",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, bok tulowia"
+   },
+   {
+    "from": "GB-26",
+    "to": "GB-27",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, bok tulowia"
+   },
+   {
+    "from": "GB-27",
+    "to": "GB-28",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, bok tulowia"
+   },
+   {
+    "from": "GB-28",
+    "to": "GB-29",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, bok tulowia"
+   },
+   {
+    "from": "GB-29",
+    "to": "GB-30",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "glowa, kark, bok tulowia"
+   }
+  ],
+  "KI": [
+   {
+    "from": "KI-3",
+    "to": "KI-4",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "KI-4 przy piecie"
+   },
+   {
+    "from": "KI-4",
+    "to": "KI-5",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "okolica kostki"
+   },
+   {
+    "from": "KI-5",
+    "to": "KI-6",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "okolica kostki"
+   },
+   {
+    "from": "KI-6",
+    "to": "KI-7",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "KI-7 2 cun nad KI-3"
+   },
+   {
+    "from": "KI-7",
+    "to": "KI-8",
+    "cun": 0.0,
+    "basis": "cun",
+    "note": "KI-8 na wysokosci KI-7 (2 cun), KI-9 5 cun, KI-10 przy klykciu (13 cun)"
+   },
+   {
+    "from": "KI-8",
+    "to": "KI-9",
+    "cun": 3.0,
+    "basis": "cun",
+    "note": "KI-8 na wysokosci KI-7 (2 cun), KI-9 5 cun, KI-10 przy klykciu (13 cun)"
+   },
+   {
+    "from": "KI-9",
+    "to": "KI-10",
+    "cun": 8.0,
+    "basis": "cun",
+    "note": "KI-8 na wysokosci KI-7 (2 cun), KI-9 5 cun, KI-10 przy klykciu (13 cun)"
+   },
+   {
+    "from": "KI-1",
+    "to": "KI-2",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "podeszwa i lodka stopy"
+   },
+   {
+    "from": "KI-2",
+    "to": "KI-3",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "podeszwa i lodka stopy"
+   },
+   {
+    "from": "KI-10",
+    "to": "KI-11",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "brzuch i klatka"
+   },
+   {
+    "from": "KI-11",
+    "to": "KI-12",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "brzuch i klatka"
+   },
+   {
+    "from": "KI-12",
+    "to": "KI-13",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "brzuch i klatka"
+   },
+   {
+    "from": "KI-13",
+    "to": "KI-14",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "brzuch i klatka"
+   },
+   {
+    "from": "KI-14",
+    "to": "KI-15",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "brzuch i klatka"
+   },
+   {
+    "from": "KI-15",
+    "to": "KI-16",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "brzuch i klatka"
+   },
+   {
+    "from": "KI-16",
+    "to": "KI-17",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "brzuch i klatka"
+   },
+   {
+    "from": "KI-17",
+    "to": "KI-18",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "brzuch i klatka"
+   },
+   {
+    "from": "KI-18",
+    "to": "KI-19",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "brzuch i klatka"
+   },
+   {
+    "from": "KI-19",
+    "to": "KI-20",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "brzuch i klatka"
+   },
+   {
+    "from": "KI-20",
+    "to": "KI-21",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "brzuch i klatka"
+   },
+   {
+    "from": "KI-21",
+    "to": "KI-22",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "brzuch i klatka"
+   },
+   {
+    "from": "KI-22",
+    "to": "KI-23",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "brzuch i klatka"
+   },
+   {
+    "from": "KI-23",
+    "to": "KI-24",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "brzuch i klatka"
+   },
+   {
+    "from": "KI-24",
+    "to": "KI-25",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "brzuch i klatka"
+   },
+   {
+    "from": "KI-25",
+    "to": "KI-26",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "brzuch i klatka"
+   },
+   {
+    "from": "KI-26",
+    "to": "KI-27",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "brzuch i klatka"
+   }
+  ],
+  "LR": [
+   {
+    "from": "LR-4",
+    "to": "LR-5",
+    "cun": 5.0,
+    "basis": "cun",
+    "note": "nad kostka przysrodkowa: LR-5 5, LR-6 7, LR-7 8 cun"
+   },
+   {
+    "from": "LR-5",
+    "to": "LR-6",
+    "cun": 2.0,
+    "basis": "cun",
+    "note": "nad kostka przysrodkowa: LR-5 5, LR-6 7, LR-7 8 cun"
+   },
+   {
+    "from": "LR-6",
+    "to": "LR-7",
+    "cun": 6.0,
+    "basis": "cun",
+    "note": "LR-7 lezy przy klykciu (nie 8 cun nad kostka - to byl moj blad); LR-6 7 cun nad kostka, linijka 13",
+    "poprawione": "po tescie odstepow - pierwsza wersja byla z pamieci i byla bledna"
+   },
+   {
+    "from": "LR-7",
+    "to": "LR-8",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "oba przy kolanie: LR-7 1 cun ku tylowi od SP-9, LR-8 na koncu faldu",
+    "poprawione": "po tescie odstepow - pierwsza wersja byla z pamieci i byla bledna"
+   },
+   {
+    "from": "LR-1",
+    "to": "LR-2",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "stopa"
+   },
+   {
+    "from": "LR-2",
+    "to": "LR-3",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "stopa"
+   },
+   {
+    "from": "LR-3",
+    "to": "LR-4",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "stopa"
+   },
+   {
+    "from": "LR-8",
+    "to": "LR-9",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "udo, brzuch, klatka"
+   },
+   {
+    "from": "LR-9",
+    "to": "LR-10",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "udo, brzuch, klatka"
+   },
+   {
+    "from": "LR-10",
+    "to": "LR-11",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "udo, brzuch, klatka"
+   },
+   {
+    "from": "LR-11",
+    "to": "LR-12",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "udo, brzuch, klatka"
+   },
+   {
+    "from": "LR-12",
+    "to": "LR-13",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "udo, brzuch, klatka"
+   },
+   {
+    "from": "LR-13",
+    "to": "LR-14",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "udo, brzuch, klatka"
+   }
+  ],
+  "REN": [
+   {
+    "from": "REN-2",
+    "to": "REN-3",
+    "cun": 1.0,
+    "basis": "cun",
+    "note": "pepek 0; spojenie lonowe -5, wyrostek mieczykowaty +8 cun"
+   },
+   {
+    "from": "REN-3",
+    "to": "REN-4",
+    "cun": 1.0,
+    "basis": "cun",
+    "note": "pepek 0; spojenie lonowe -5, wyrostek mieczykowaty +8 cun"
+   },
+   {
+    "from": "REN-4",
+    "to": "REN-5",
+    "cun": 1.0,
+    "basis": "cun",
+    "note": "pepek 0; spojenie lonowe -5, wyrostek mieczykowaty +8 cun"
+   },
+   {
+    "from": "REN-5",
+    "to": "REN-6",
+    "cun": 0.5,
+    "basis": "cun",
+    "note": "pepek 0; spojenie lonowe -5, wyrostek mieczykowaty +8 cun"
+   },
+   {
+    "from": "REN-6",
+    "to": "REN-7",
+    "cun": 0.5,
+    "basis": "cun",
+    "note": "pepek 0; spojenie lonowe -5, wyrostek mieczykowaty +8 cun"
+   },
+   {
+    "from": "REN-7",
+    "to": "REN-8",
+    "cun": 1.0,
+    "basis": "cun",
+    "note": "pepek 0; spojenie lonowe -5, wyrostek mieczykowaty +8 cun"
+   },
+   {
+    "from": "REN-8",
+    "to": "REN-9",
+    "cun": 1.0,
+    "basis": "cun",
+    "note": "pepek 0; spojenie lonowe -5, wyrostek mieczykowaty +8 cun"
+   },
+   {
+    "from": "REN-9",
+    "to": "REN-10",
+    "cun": 1.0,
+    "basis": "cun",
+    "note": "pepek 0; spojenie lonowe -5, wyrostek mieczykowaty +8 cun"
+   },
+   {
+    "from": "REN-10",
+    "to": "REN-11",
+    "cun": 1.0,
+    "basis": "cun",
+    "note": "pepek 0; spojenie lonowe -5, wyrostek mieczykowaty +8 cun"
+   },
+   {
+    "from": "REN-11",
+    "to": "REN-12",
+    "cun": 1.0,
+    "basis": "cun",
+    "note": "pepek 0; spojenie lonowe -5, wyrostek mieczykowaty +8 cun"
+   },
+   {
+    "from": "REN-12",
+    "to": "REN-13",
+    "cun": 1.0,
+    "basis": "cun",
+    "note": "pepek 0; spojenie lonowe -5, wyrostek mieczykowaty +8 cun"
+   },
+   {
+    "from": "REN-13",
+    "to": "REN-14",
+    "cun": 1.0,
+    "basis": "cun",
+    "note": "pepek 0; spojenie lonowe -5, wyrostek mieczykowaty +8 cun"
+   },
+   {
+    "from": "REN-14",
+    "to": "REN-15",
+    "cun": 1.0,
+    "basis": "cun",
+    "note": "pepek 0; spojenie lonowe -5, wyrostek mieczykowaty +8 cun"
+   },
+   {
+    "from": "REN-15",
+    "to": "REN-16",
+    "cun": 1.0,
+    "basis": "cun",
+    "note": "pepek 0; spojenie lonowe -5, wyrostek mieczykowaty +8 cun"
+   },
+   {
+    "from": "REN-1",
+    "to": "REN-2",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "REN-1 krocze"
+   },
+   {
+    "from": "REN-16",
+    "to": "REN-17",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "mostek, szyja, broda"
+   },
+   {
+    "from": "REN-17",
+    "to": "REN-18",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "mostek, szyja, broda"
+   },
+   {
+    "from": "REN-18",
+    "to": "REN-19",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "mostek, szyja, broda"
+   },
+   {
+    "from": "REN-19",
+    "to": "REN-20",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "mostek, szyja, broda"
+   },
+   {
+    "from": "REN-20",
+    "to": "REN-21",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "mostek, szyja, broda"
+   },
+   {
+    "from": "REN-21",
+    "to": "REN-22",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "mostek, szyja, broda"
+   },
+   {
+    "from": "REN-22",
+    "to": "REN-23",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "mostek, szyja, broda"
+   },
+   {
+    "from": "REN-23",
+    "to": "REN-24",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "mostek, szyja, broda"
+   }
+  ],
+  "DU": [
+   {
+    "from": "DU-1",
+    "to": "DU-2",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "poziom wyznacza kolejny krag, nie stala liczba cun"
+   },
+   {
+    "from": "DU-2",
+    "to": "DU-3",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "poziom wyznacza kolejny krag, nie stala liczba cun"
+   },
+   {
+    "from": "DU-3",
+    "to": "DU-4",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "poziom wyznacza kolejny krag, nie stala liczba cun"
+   },
+   {
+    "from": "DU-4",
+    "to": "DU-5",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "poziom wyznacza kolejny krag, nie stala liczba cun"
+   },
+   {
+    "from": "DU-5",
+    "to": "DU-6",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "poziom wyznacza kolejny krag, nie stala liczba cun"
+   },
+   {
+    "from": "DU-6",
+    "to": "DU-7",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "poziom wyznacza kolejny krag, nie stala liczba cun"
+   },
+   {
+    "from": "DU-7",
+    "to": "DU-8",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "poziom wyznacza kolejny krag, nie stala liczba cun"
+   },
+   {
+    "from": "DU-8",
+    "to": "DU-9",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "poziom wyznacza kolejny krag, nie stala liczba cun"
+   },
+   {
+    "from": "DU-9",
+    "to": "DU-10",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "poziom wyznacza kolejny krag, nie stala liczba cun"
+   },
+   {
+    "from": "DU-10",
+    "to": "DU-11",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "poziom wyznacza kolejny krag, nie stala liczba cun"
+   },
+   {
+    "from": "DU-11",
+    "to": "DU-12",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "poziom wyznacza kolejny krag, nie stala liczba cun"
+   },
+   {
+    "from": "DU-12",
+    "to": "DU-13",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "poziom wyznacza kolejny krag, nie stala liczba cun"
+   },
+   {
+    "from": "DU-13",
+    "to": "DU-14",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "poziom wyznacza kolejny krag, nie stala liczba cun"
+   },
+   {
+    "from": "DU-14",
+    "to": "DU-15",
+    "cun": null,
+    "basis": "vertebra",
+    "note": "poziom wyznacza kolejny krag, nie stala liczba cun"
+   },
+   {
+    "from": "DU-15",
+    "to": "DU-16",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "kark, sklepienie czaszki, twarz - linijka czaszkowa, nie odstepy"
+   },
+   {
+    "from": "DU-16",
+    "to": "DU-17",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "kark, sklepienie czaszki, twarz - linijka czaszkowa, nie odstepy"
+   },
+   {
+    "from": "DU-17",
+    "to": "DU-18",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "kark, sklepienie czaszki, twarz - linijka czaszkowa, nie odstepy"
+   },
+   {
+    "from": "DU-18",
+    "to": "DU-19",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "kark, sklepienie czaszki, twarz - linijka czaszkowa, nie odstepy"
+   },
+   {
+    "from": "DU-19",
+    "to": "DU-20",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "kark, sklepienie czaszki, twarz - linijka czaszkowa, nie odstepy"
+   },
+   {
+    "from": "DU-20",
+    "to": "DU-21",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "kark, sklepienie czaszki, twarz - linijka czaszkowa, nie odstepy"
+   },
+   {
+    "from": "DU-21",
+    "to": "DU-22",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "kark, sklepienie czaszki, twarz - linijka czaszkowa, nie odstepy"
+   },
+   {
+    "from": "DU-22",
+    "to": "DU-23",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "kark, sklepienie czaszki, twarz - linijka czaszkowa, nie odstepy"
+   },
+   {
+    "from": "DU-23",
+    "to": "DU-24",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "kark, sklepienie czaszki, twarz - linijka czaszkowa, nie odstepy"
+   },
+   {
+    "from": "DU-24",
+    "to": "DU-25",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "kark, sklepienie czaszki, twarz - linijka czaszkowa, nie odstepy"
+   },
+   {
+    "from": "DU-25",
+    "to": "DU-26",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "kark, sklepienie czaszki, twarz - linijka czaszkowa, nie odstepy"
+   },
+   {
+    "from": "DU-26",
+    "to": "DU-27",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "kark, sklepienie czaszki, twarz - linijka czaszkowa, nie odstepy"
+   },
+   {
+    "from": "DU-27",
+    "to": "DU-28",
+    "cun": null,
+    "basis": "anatomiczna",
+    "note": "kark, sklepienie czaszki, twarz - linijka czaszkowa, nie odstepy"
+   }
+  ]
+ },
+ "uwaga": "14 wpisow poprawiono po pierwszym uruchomieniu testu: narzedzie pokazalo rozbieznosci 4-6 cun, ktore okazaly sie bledami TEJ tabeli, nie atlasu. Poprawiono je z ponownego przemyslenia, a tam, gdzie pewnosci nie bylo, wpisano null zamiast liczby."
+}

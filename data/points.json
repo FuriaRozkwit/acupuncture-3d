@@ -130,12 +130,12 @@
    "accuracy": "anchored",
    "anchor": {
     "seg": "trunk",
-    "z_frac": 0.772,
+    "z_frac": 0.7861,
     "lat": 6,
     "face": "anterior"
    },
    "note_pl": "1. przestrzen miedzyzebrowa, 6 cun od linii posrodkowej",
-   "az_source": ""
+   "az_source": "pomiar: opis mowi '1 cun ponizej LU-2', a w modelu odstep wynosil 2.30 cun na odcinkowej linijce tulowia; z_frac 0.772 -> 0.7861 daje dokladnie 1.00"
   },
   {
    "code": "LU-2",
@@ -4167,12 +4167,13 @@
    "accuracy": "anchored",
    "anchor": {
     "seg": "shank",
+    "ruler": "shank_medial",
     "cun": 0,
     "from": "p0",
     "az": -112.0
    },
    "note_pl": "przysrodkowy koniec faldu podkolanowego",
-   "az_source": "dopasowany do: semimembranosus muscle, semitendinosus muscle"
+   "az_source": "pomiar: KI-10 jako jedyny z KI-7/8/9 nie mial linijki shank_medial, wiec jego 'cun 0 od p0' liczylo sie inna miara (13 vs 16 cun na tej samej dlugosci). Odstep KI-9 -> KI-10 wychodzil 9.39 zamiast 8. SP-9, jego sasiad na tym samym poziomie kolana, uzywa tej samej linijki"
   },
   {
    "code": "KI-11",
