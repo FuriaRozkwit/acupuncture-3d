@@ -62,10 +62,12 @@ def main(argv=None) -> int:
     atlas = Atlas(args.height, procedural=args.procedural)
     if args.surface:
         from .surface_viewer import SurfaceViewer
-        sv = SurfaceViewer(atlas, off_screen=bool(args.screenshot))
-        for ch in [c.upper() for c in (args.channel or [])]:
-            if ch in sv.channel_actors:
-                sv.set_channel(ch, True, False)
+        channels = [c.upper() for c in args.channel] if args.channel else None
+        sv = SurfaceViewer(atlas, off_screen=bool(args.screenshot), channels=channels)
+        if args.labels:
+            sv.toggle_labels()
+        if args.point:
+            sv.select_point(args.point)
         sv._sync_legend()
         if args.screenshot:
             sv.screenshot(args.screenshot)

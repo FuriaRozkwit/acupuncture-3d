@@ -10,9 +10,14 @@ assets/
 # opisy punktow z "A Manual of Acupuncture" (Deadman) - material chroniony
 # prawem autorskim, generowane lokalnie: python tools/import_meta.py <sciezka>
 data/point_meta.json
+# tlumaczenie tego samego OCR na polski - utwor zalezny, ten sam zakaz.
+# scan_leak.py go NIE wykryje: porownuje fragmenty angielskie, a tlumaczenie
+# nie ma z nimi ani jednego wspolnego
+data/point_meta_pl.json
 
 # zrzuty robocze
 *.tmp
+test_*.png
 
 # pusty plik npm, ktory pojawil sie w katalogu - projekt jest pythonowy
 package-lock.json
@@ -28,3 +33,7 @@ data/verify/
 
 # paczki eksportu - generowane (tools/export_terrapka.py) i przenosza opisy punktow
 dist/
+
+# wybor domyslnego profilu jest ustawieniem tego komputera, nie danymi -
+# kto sklonuje repo, ma startowac z fabrycznej
+data/profiles/aktywny.txt

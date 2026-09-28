@@ -31,7 +31,10 @@ class Wire:
     """Siatka cunowa z wypieczona wiedza o tkankach."""
 
     def __init__(self, path: Path | None = None):
-        npz = np.load(path or DATA / "wire.npz")
+        if path is None:
+            surface_path = DATA / "wire_surface.npz"
+            path = surface_path if surface_path.exists() else DATA / "wire.npz"
+        npz = np.load(path)
         self.points = npz["points"].astype(float)
         self.edges = npz["edges"]
         self.seg_id = npz["seg_id"]
@@ -63,8 +66,11 @@ class Wire:
         self._ptree = None          # drzewo do szybkiego korytarza
 
     def _build(self) -> pv.PolyData:
-        lines = np.hstack([np.full((len(self.edges), 1), 2, dtype=np.int32),
-                           self.edges]).ravel()
+        # Odrzucamy krawedzie przeskakujace przez powietrze miedzy rozlacznymi czesciami ciala (np. dlon - udo)
+        d = np.linalg.norm(self.points[self.edges[:, 0]] - self.points[self.edges[:, 1]], axis=1)
+        valid_edges = self.edges[d <= 0.065]
+        lines = np.hstack([np.full((len(valid_edges), 1), 2, dtype=np.int32),
+                           valid_edges]).ravel()
         m = pv.PolyData(self.points)
         m.lines = lines
         m.point_data["tkanka_mm"] = self.flesh_mm

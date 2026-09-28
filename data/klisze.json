@@ -1,0 +1,222 @@
+[
+  {
+    "id": "klisza_20260921_224042",
+    "name": "Klisza 224042: KI-19 -> ST-22 (13 pkt)",
+    "timestamp": "2026-09-21T22:40:42+00:00",
+    "file": "klisze/klisza_20260921_224042.json",
+    "total_strokes": 1,
+    "total_length_m": 0.1301,
+    "total_length_cun": 5.92,
+    "points_count": 13,
+    "points_summary": [
+      "KI-19",
+      "KI-19",
+      "REN-12",
+      "KI-18",
+      "REN-11",
+      "KI-18",
+      "KI-17",
+      "REN-10"
+    ]
+  },
+  {
+    "id": "klisza_20260921_214733",
+    "name": "Klisza 214733: LU-1 -> LU-11 (16 pkt)",
+    "timestamp": "2026-09-21T21:47:33+00:00",
+    "file": "klisze/klisza_20260921_214733.json",
+    "total_strokes": 1,
+    "total_length_m": 0.6464,
+    "total_length_cun": 29.38,
+    "points_count": 16,
+    "points_summary": [
+      "LU-1",
+      "LU-2",
+      "PC-2",
+      "LU-5",
+      "LU-6",
+      "LI-7",
+      "SJ-8",
+      "SJ-6"
+    ]
+  },
+  {
+    "id": "klisza_20260921_145842",
+    "name": "Klisza 145842: LU-1 -> LU-11 (16 pkt)",
+    "timestamp": "2026-09-21T14:58:42+00:00",
+    "file": "klisze/klisza_20260921_145842.json",
+    "total_strokes": 1,
+    "total_length_m": 0.6464,
+    "total_length_cun": 29.38,
+    "points_count": 16,
+    "points_summary": [
+      "LU-1",
+      "LU-2",
+      "PC-2",
+      "LU-5",
+      "LU-6",
+      "LI-7",
+      "SJ-8",
+      "SJ-6"
+    ]
+  },
+  {
+    "id": "klisza_20260921_145803",
+    "name": "Testowa Klisza Taiyin Reki (LU)",
+    "timestamp": "2026-09-21T14:58:03+00:00",
+    "file": "klisze/klisza_20260921_145803.json",
+    "total_strokes": 1,
+    "total_length_m": 0.6464,
+    "total_length_cun": 29.38,
+    "points_count": 16,
+    "points_summary": [
+      "LU-1",
+      "LU-2",
+      "PC-2",
+      "LU-5",
+      "LU-6",
+      "LI-7",
+      "SJ-8",
+      "SJ-6"
+    ]
+  },
+  {
+    "id": "klisza_20260921_143604",
+    "name": "Klisza 143604: LU-1 -> LU-11 (16 pkt)",
+    "timestamp": "2026-09-21T14:36:04+00:00",
+    "file": "klisze/klisza_20260921_143604.json",
+    "total_strokes": 1,
+    "total_length_m": 0.6464,
+    "total_length_cun": 29.38,
+    "points_count": 16,
+    "points_summary": [
+      "LU-1",
+      "LU-2",
+      "PC-2",
+      "LU-5",
+      "LU-6",
+      "LI-7",
+      "SJ-8",
+      "SJ-6"
+    ]
+  },
+  {
+    "id": "klisza_20260921_142618",
+    "name": "Klisza 142618: LU-1 -> LU-11 (16 pkt)",
+    "timestamp": "2026-09-21T14:26:18+00:00",
+    "file": "klisze/klisza_20260921_142618.json",
+    "total_strokes": 1,
+    "total_length_m": 0.6464,
+    "total_length_cun": 29.38,
+    "points_count": 16,
+    "points_summary": [
+      "LU-1",
+      "LU-2",
+      "PC-2",
+      "LU-5",
+      "LU-6",
+      "LI-7",
+      "SJ-8",
+      "SJ-6"
+    ]
+  },
+  {
+    "id": "klisza_20260921_135201",
+    "name": "Klisza 135201: LU-1 -> LU-11 (16 pkt)",
+    "timestamp": "2026-09-21T13:52:01+00:00",
+    "file": "klisze/klisza_20260921_135201.json",
+    "total_strokes": 1,
+    "total_length_m": 0.6464,
+    "total_length_cun": 29.38,
+    "points_count": 16,
+    "points_summary": [
+      "LU-1",
+      "LU-2",
+      "PC-2",
+      "LU-5",
+      "LU-6",
+      "LI-7",
+      "SJ-8",
+      "SJ-6"
+    ]
+  },
+  {
+    "id": "klisza_20260921_135100",
+    "name": "Klisza 135100: LU-1 -> LU-11 (16 pkt)",
+    "timestamp": "2026-09-21T13:51:00+00:00",
+    "file": "klisze/klisza_20260921_135100.json",
+    "total_strokes": 1,
+    "total_length_m": 0.6464,
+    "total_length_cun": 29.38,
+    "points_count": 16,
+    "points_summary": [
+      "LU-1",
+      "LU-2",
+      "PC-2",
+      "LU-5",
+      "LU-6",
+      "LI-7",
+      "SJ-8",
+      "SJ-6"
+    ]
+  },
+  {
+    "id": "klisza_20260921_134944",
+    "name": "Klisza 134944: LU-1 -> LU-11 (16 pkt)",
+    "timestamp": "2026-09-21T13:49:44+00:00",
+    "file": "klisze/klisza_20260921_134944.json",
+    "total_strokes": 1,
+    "total_length_m": 0.6464,
+    "total_length_cun": 29.38,
+    "points_count": 16,
+    "points_summary": [
+      "LU-1",
+      "LU-2",
+      "PC-2",
+      "LU-5",
+      "LU-6",
+      "LI-7",
+      "SJ-8",
+      "SJ-6"
+    ]
+  },
+  {
+    "id": "klisza_20260921_134810",
+    "name": "Klisza 134810: LU-1 -> LU-11 (16 pkt)",
+    "timestamp": "2026-09-21T13:48:10+00:00",
+    "file": "klisze/klisza_20260921_134810.json",
+    "total_strokes": 1,
+    "total_length_m": 0.6464,
+    "total_length_cun": 29.38,
+    "points_count": 16,
+    "points_summary": [
+      "LU-1",
+      "LU-2",
+      "PC-2",
+      "LU-5",
+      "LU-6",
+      "LI-7",
+      "SJ-8",
+      "SJ-6"
+    ]
+  },
+  {
+    "id": "klisza_20260921_134401",
+    "name": "Testowa Klisza Taiyin Reki (LU)",
+    "timestamp": "2026-09-21T13:44:01+00:00",
+    "file": "klisze/klisza_20260921_134401.json",
+    "total_strokes": 1,
+    "total_length_m": 0.6464,
+    "total_length_cun": 29.38,
+    "points_count": 16,
+    "points_summary": [
+      "LU-1",
+      "LU-2",
+      "PC-2",
+      "LU-5",
+      "LU-6",
+      "LI-7",
+      "SJ-8",
+      "SJ-6"
+    ]
+  }
+]

@@ -19,6 +19,7 @@ import pyvista as pv
 from . import action_lines
 from .fascia import CLASS_COLOR, CLASS_PL, FasciaSet
 from .model import Atlas
+from .translate_pl import get_point_pl
 from .tension import LEVEL_COLORS, LEVELS, TensionMap
 from .muscles import MuscleSet
 
@@ -786,21 +787,44 @@ class Viewer:
         self.pl.render()
 
     def _print_full(self, d: dict) -> None:
-        """Pelny opis na konsole; nie moze wywrocic obslugi klikniecia."""
+        """Pelny opis na konsole w jezyku polskim; nie moze wywrocic obslugi klikniecia."""
         try:
-            meta = d["meta"]
+            code = d.get("code", "")
+            pl_rec = get_point_pl(code)
+            meta = d.get("meta", {})
+            pinyin = (pl_rec.get("pinyin") if pl_rec else None) or d.get("pinyin", "")
+            nazwa_pl = (pl_rec.get("nazwa_pl") if pl_rec else None) or meta.get("english", "")
+            ch_pl = (pl_rec.get("kanal_pl") if pl_rec else None) or d.get("channel", "")
+
             out = ["\n" + "=" * 78,
-                   f"{d['code']}  {d['pinyin']}  {meta.get('english', '')}   [{d['accuracy']}]",
+                   f"{code}  {pinyin} ({nazwa_pl}) - {ch_pl}   [{d.get('accuracy', '')}]",
                    "-" * 78]
-            for label, key in (("LOKALIZACJA (Deadman)", "location"), ("NAKLUCIE", "needling"),
-                               ("DZIALANIE", "actions"), ("WSKAZANIA", "indications")):
-                v = meta.get(key)
-                if not v:
-                    continue
-                if isinstance(v, list):
-                    v = " ".join(str(x) for x in v if x)
-                out.append(f"{label}: " + textwrap.fill(str(v), 76, subsequent_indent="  ")[:900])
-            if d["note_pl"]:
+
+            loc = (pl_rec.get("lokalizacja_pl") if pl_rec else None) or meta.get("location") or d.get("note_pl", "")
+            if loc:
+                out.append("LOKALIZACJA ANATOMICZNA (Deadman): " + textwrap.fill(str(loc), 76, subsequent_indent="  ")[:900])
+
+            palp = (pl_rec.get("palpacja_pl") if pl_rec else None) or meta.get("locationNote", "")
+            if palp:
+                out.append("WSKAZÓWKA PALPACYJNA: " + textwrap.fill(str(palp), 76, subsequent_indent="  ")[:900])
+
+            need = (pl_rec.get("naklucie_pl") if pl_rec else None) or meta.get("needling", "")
+            if need:
+                out.append("NAKŁUCIE I BEZPIECZEŃSTWO: " + textwrap.fill(str(need), 76, subsequent_indent="  ")[:900])
+
+            acts = (pl_rec.get("dzialania_pl") if pl_rec else None) or meta.get("actions", [])
+            if acts:
+                if isinstance(acts, list):
+                    acts_str = "; ".join(str(x) for x in acts if x)
+                else:
+                    acts_str = str(acts)
+                out.append("DZIAŁANIE TCM: " + textwrap.fill(acts_str, 76, subsequent_indent="  ")[:900])
+
+            inds = (pl_rec.get("wskazania_pl") if pl_rec else None) or meta.get("indications", "")
+            if inds:
+                out.append("WSKAZANIA KLINICZNE: " + textwrap.fill(str(inds), 76, subsequent_indent="  ")[:900])
+
+            if d.get("note_pl"):
                 out.append("NOTATKA: " + d["note_pl"])
             _safe_print("\n".join(out))
         except Exception as exc:                      # opis to dodatek, nie powod do awarii

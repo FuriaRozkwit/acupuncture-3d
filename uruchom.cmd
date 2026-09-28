@@ -1,2 +1,3 @@
 @echo off
-"%~dp0.venv\Scripts\python.exe" -m acu3d %*
+rem Przekierowanie do pelnego uruchomienia przez WSL2/WSLg
+call "%~dp0uruchom.bat" %*

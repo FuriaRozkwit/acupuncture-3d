@@ -14,7 +14,7 @@ from pathlib import Path
 import numpy as np
 import pyvista as pv
 
-from . import anchors, curves
+from . import anchors, profiles, curves
 from .anatomy import Anatomy
 from .geometry import build_layers
 from .rig import Rig
@@ -25,7 +25,10 @@ SKIN_OFFSET = 0.004          # metry - o tyle marker odstaje od skory
 
 
 class Atlas:
-    def __init__(self, height_m: float | None = None, procedural: bool = False):
+    def __init__(self, height_m: float | None = None, procedural: bool = False,
+                 profile: str | None = "auto"):
+        """`profile`: "auto" = profil ustawiony jako domyslny (data/profiles/aktywny.txt),
+        None albo "fabryczna" = sama konfiguracja fabryczna, inna nazwa = ten profil."""
         self.anatomy = None
         if not procedural and (READY / "skin.vtp").exists():
             self.anatomy = Anatomy()
@@ -45,6 +48,16 @@ class Atlas:
         doc = json.loads((DATA / "points.json").read_text(encoding="utf-8"))
         self.channels = doc["channels"]
         self.points = doc["points"]
+        # nakladka z edycjami uzytkownika - fabryczny plik zostaje nietkniety
+        name = profiles.active_name() if profile == "auto" else (profile or profiles.FACTORY)
+        if not profiles.exists(name):
+            raise KeyError(f"nie ma profilu '{name}' (sa: {', '.join(profiles.names()) or 'brak'})")
+        self.profile = profiles.apply(self.points, name)
+        if name != profiles.FACTORY:
+            msg = f"[konfiguracja] profil '{name}': {len(self.profile['changed'])} punktow "                   f"zmienionych wzgledem fabrycznej"
+            if self.profile["stale"]:
+                msg += f"; fabryczna zmienila sie od edycji: {', '.join(self.profile['stale'])}"
+            print(msg)
         meta_path = DATA / "point_meta.json"        # opisy z podrecznika - lokalne,
         self.meta = (json.loads(meta_path.read_text(encoding="utf-8"))   # nie w repozytorium
                      if meta_path.exists() else {})
@@ -162,53 +175,87 @@ class Atlas:
     KINK_DEG, KINK_MM = 60.0, 2.0
     DETOUR = 1.25           # odcinek dluzszy od geodezyjnej o tyle (i o 1 cm) = objazd
 
-    def _cache_path(self):
+    CURVE_KEEP = 6          # ile wersji jednego kanalu trzymamy (fabryczna, profile...)
+
+    def _code_hash(self) -> bytes:
+        """Kod, ktory rozwiazuje kotwice - zmiana linijki musi uniewaznic krzywe."""
         h = hashlib.md5()
-        for name in ("points.json", "meridians.json", "rig_fitted.json"):
+        for name in ("rig_fitted.json",):
             f = DATA / name
             if f.exists():
                 h.update(f.read_bytes())
-        # krzywe zaleza tez od kodu, ktory rozwiazuje kotwice - zmiana linijki
-        # w samym kodzie musi uniewaznic stare krzywe
         for mod in ("anchors.py", "anatomy.py", "curves.py", "model.py"):
             h.update((Path(__file__).resolve().parent / mod).read_bytes())
         h.update(f"{self.mode}-{self.PER_SEGMENT}".encode())
-        return READY / f"meridians_{h.hexdigest()[:12]}.npz"
+        return h.digest()
+
+    def _cache_path(self) -> Path:
+        """Katalog cache przebiegow (dawniej jeden plik) - zostawione dla starych skryptow."""
+        return READY / "meridians"
+
+    def _channel_cache(self, ch: str, code_hash: bytes) -> Path:
+        """Plik z przebiegami JEDNEGO kanalu.
+
+        Klucz to kotwice punktow tego kanalu (juz po nalozeniu profilu), jego
+        sciezki i kod. Sciezki nie mieszaja kanalow, wiec po edycji LU-7 liczy sie
+        od nowa tylko LU, a fabryczna i profil maja swoje krzywe obok siebie -
+        wczesniej jeden wspolny plik kasowal poprzedni i kazde przelaczenie
+        oznaczalo kilka minut liczenia wszystkiego.
+        """
+        by = {p["code"]: p["anchor"] for p in self.points}
+        codes = sorted({c for g in self.paths.get(ch, []) for c in g})
+        h = hashlib.md5(code_hash)
+        h.update(json.dumps({"paths": self.paths.get(ch, []),
+                             "anchors": {c: by.get(c) for c in codes}},
+                            sort_keys=True).encode())
+        return READY / "meridians" / f"{ch}_{h.hexdigest()[:12]}.npz"
 
     def _load_curves(self) -> dict:
         """Krzywe zaleza tylko od danych, wiec liczymy je raz i trzymamy na dysku."""
-        path = self._cache_path()
-        if path.exists():
+        code_hash = self._code_hash()
+        out, missing = {}, []
+        for ch in self.channels:
+            f = self._channel_cache(ch, code_hash)
             try:
-                with np.load(path) as z:
-                    out = {}
+                with np.load(f) as z:
                     for k in sorted(z.files):
-                        ch, side, i, kind = k.split("|")
+                        side, i, kind = k.split("|")
                         if kind == "nodes":
                             self.curve_nodes.setdefault((ch, side), []).append(z[k])
                         else:
                             out.setdefault((ch, side), []).append(z[k])
-                    return out
             except Exception:
-                pass
-        keys = [(ch, side) for ch in self.channels for side in ("R", "L")]
+                missing.append(ch)
+        if not missing:
+            return out
+        print(f"[przebiegi] licze od nowa: {', '.join(missing)}")
+        keys = [(ch, side) for ch in missing for side in ("R", "L")]
         if self.mode == "procedural":
-            out = {k: self._build_meridian(*k) for k in keys}
+            built = {k: self._build_meridian(*k) for k in keys}
         else:
-            out = self._build_on_skin(keys)
+            built = self._build_on_skin(keys)
+        out.update(built)
+        for ch in missing:
+            self._save_channel(ch, code_hash, built)
+        return out
+
+    def _save_channel(self, ch: str, code_hash: bytes, built: dict) -> None:
+        f = self._channel_cache(ch, code_hash)
         try:
-            READY.mkdir(parents=True, exist_ok=True)
-            for old in READY.glob("meridians_*.npz"):
-                old.unlink()
-            data = {f"{ch}|{side}|{i:02d}|line": arr
-                    for (ch, side), lines in out.items() for i, arr in enumerate(lines)}
-            data.update({f"{ch}|{side}|{i:02d}|nodes": arr
-                         for (ch, side), ns in self.curve_nodes.items()
-                         for i, arr in enumerate(ns)})
-            np.savez_compressed(path, **data)
+            f.parent.mkdir(parents=True, exist_ok=True)
+            data = {}
+            for side in ("R", "L"):
+                for i, arr in enumerate(built.get((ch, side), [])):
+                    data[f"{side}|{i:02d}|line"] = arr
+                for i, arr in enumerate(self.curve_nodes.get((ch, side), [])):
+                    data[f"{side}|{i:02d}|nodes"] = arr
+            np.savez_compressed(f, **data)
+            # sprzatanie: kilka ostatnich wersji kanalu wystarczy do przelaczania profili
+            old = sorted(f.parent.glob(f"{ch}_*.npz"), key=lambda q: q.stat().st_mtime)
+            for q in old[:-self.CURVE_KEEP]:
+                q.unlink()
         except Exception:
             pass
-        return out
 
     def meridian_lines(self, channel: str, side: str = "R") -> list:
         if self._curves is None:

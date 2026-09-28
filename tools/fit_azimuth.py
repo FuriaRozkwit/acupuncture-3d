@@ -100,7 +100,8 @@ def main() -> int:
             continue
         # "po stronie promieniowej sciegna X" - minimum odleglosci kladzie punkt NA X,
         # wiec takie azymuty ustala sie pomiarem brzegu struktury i tu sie ich nie rusza
-        if p.get("az_source", "").startswith("pomiar:"):
+        # ... a "edycja:" to kotwica przesunieta recznie w przegladarce (acu3d.edit)
+        if p.get("az_source", "").startswith(("pomiar:", "edycja:")):
             skipped.append(p["code"])
             continue
         text = atlas.meta.get(p["code"], {}).get("location", "")
