@@ -23,6 +23,7 @@ from __future__ import annotations
 
 import json
 import textwrap
+import time
 from pathlib import Path
 
 import numpy as np
@@ -33,13 +34,11 @@ from .anchor_edit import AnchorEditor, get
 
 ROOT = Path(__file__).resolve().parent.parent
 
-HANDLE_M = 0.030                  # dlugosc uchwytu w kazda strone (m)
-GRAB_PX = 12                      # jak blisko uchwytu trzeba kliknac (piksele)
-CENTER_PX = 9                     # srodek gizma (tam uchwyty sie krzyzuja) nie lapie
-# Gizmo wyzej niz linie kanalow (te leza ok. 4 mm nad skora): na tej samej
-# wysokosci bursztynowy uchwyt "wzdluz" znikal w pomaranczowej linii ST na goleni.
-LIFT_M = 0.009
-OUTLINE = "#0b0f14"               # ciemny obrys - uchwyt odcina sie od kazdego koloru kanalu
+HANDLE_M = 0.038                  # dlugosc uchwytu w kazda strone (m) - wyrazniejszy i latwy do chwycenia
+GRAB_PX = 18                      # jak blisko uchwytu trzeba kliknac (piksele) - pewny chwyt bez przypadkowego obrotu
+CENTER_PX = 6                     # srodek gizma (tam uchwyty sie krzyzuja) nie lapie
+PIXELS_PER_STEP = 12.0            # czulosc przeciagania: 12 px myszy wzdluz osi = 1 krok pola
+LIFT_M = 0.009                    # uniesienie nad skore (m)
 PRIORITY = 10.0                   # wyzej niz obserwatory przegladarki (0.0)
 COLORS = ("#ffb020", "#22d3ee", "#e879f9")
 C_POINT, C_GHOST, C_LINK = "#ffffff", "#8b95a5", "#64748b"
@@ -62,11 +61,11 @@ class EditMode:
         self.buttons = []                  # (aktor, akcja)
         self.intervals = []
         self._names = set()
-        self._silhouettes = {}             # sylwetki nie maja nazw w PyVista - trzymamy aktory
         self.prof_on = False               # panel profili [v]
         self.pbuttons = []
         self._pnames = set()
         self._panel_bottom = None
+        self._last_drag_render = 0.0
         self._neighbours = self._load_neighbours()
 
     # --- wpiecie -----------------------------------------------------------
@@ -136,6 +135,9 @@ class EditMode:
         code, side = self._split(key)
         if self.ed is not None and self.ed.dirty and self.ed.code != code:
             self._say(f"niezapisana zmiana {self.ed.code} odrzucona")
+            self.ed.reset()
+            self.pos = self.ed.position()
+            self._sync_point_position()
         try:
             self.ed = AnchorEditor(self.v.atlas, code, side)
         except StopIteration:
@@ -144,14 +146,50 @@ class EditMode:
 
     def close(self) -> None:
         self.ed, self.drag, self.handles = None, None, []
-        for act in self._silhouettes.values():
-            self.pl.remove_actor(act)
-        self._silhouettes.clear()
         for n in list(self._names):
             self.pl.remove_actor(n)
         self._names.clear()
         self.buttons.clear()
         self.pl.render()
+
+    # --- synchronizacja punktu w widoku -------------------------------------
+    def _sync_point_position(self) -> None:
+        """Natychmiast synchronizuje zmienione polozenie punktu z przegladarka."""
+        if self.pos is None or self.ed is None:
+            return
+
+        # 1. Zolta kula zaznaczonego punktu w SurfaceViewer
+        if hasattr(self.v, "highlight_actor") and self.v.highlight_actor is not None:
+            self.v.highlight_actor.SetPosition(self.pos)
+            self.v.highlight_actor.SetVisibility(True)
+
+        # 2. Obiekt punktu w atlasie (by_key) oraz tablica _mpos
+        code = self.ed.code
+        side = self.ed.side
+        keys_to_update = {f"{code}·{side}", code}
+        for k in keys_to_update:
+            m = self.v.atlas.by_key.get(k)
+            if m is not None:
+                m["pos"] = self.pos.copy()
+
+        # Odbicie lustrzane dla symetrycznej strony
+        other_side = "L" if side == "R" else ("R" if side == "L" else None)
+        if other_side:
+            other_pos = self.pos * np.array([-1.0, 1.0, 1.0])
+            m_other = self.v.atlas.by_key.get(f"{code}·{other_side}")
+            if m_other is not None:
+                m_other["pos"] = other_pos.copy()
+
+        # 3. Aktualizacja pozycji w tablicy _mpos przegladarki
+        if hasattr(self.v, "_mpos") and self.v._mpos is not None:
+            for idx, mk in enumerate(self.v.atlas.markers):
+                mk_code = mk.get("code")
+                mk_side = mk.get("side")
+                if mk_code == code:
+                    if mk_side == side or side == "C" or mk.get("key") in keys_to_update:
+                        self.v._mpos[idx] = self.pos
+                    elif other_side and mk_side == other_side:
+                        self.v._mpos[idx] = self.pos * np.array([-1.0, 1.0, 1.0])
 
     # --- geometria gizma ---------------------------------------------------
     def _rebuild(self) -> None:
@@ -165,6 +203,7 @@ class EditMode:
         except Exception:
             self._normal = np.zeros(3)
         self.intervals = ed.neighbour_intervals()
+        self._sync_point_position()
         self._draw()
         self._panel()
         self.pl.render()
@@ -177,21 +216,25 @@ class EditMode:
         p = self.pos + self._normal * LIFT_M
         for i, (d, vec, mm, color) in enumerate(self.handles):
             a, b = p - vec * HANDLE_M, p + vec * HANDLE_M
-            shaft = pv.Line(a, b).tube(radius=0.0014, n_sides=16)
-            tip = pv.Cone(center=b, direction=vec, height=0.009, radius=0.0042, resolution=18)
-            self._add(f"edit_shaft_{i}", shaft, color=color)
-            self._add(f"edit_tip_{i}", tip, color=color)
-            # Obrys jako SYLWETKA liczona z kamery, nie druga, grubsza bryla: grubsza
-            # rurka otaczala kolorowa i uchwyty wychodzily czarne.
-            for part, mesh in (("s", shaft), ("t", tip)):
-                self._outline(f"edit_line_{part}{i}", mesh)
-            self._add(f"edit_tail_{i}", pv.Sphere(radius=0.0022, center=a), color=color)
-        self._add("edit_point", pv.Sphere(radius=0.0048, center=p), color=C_POINT)
+            shaft = pv.Line(a, b).tube(radius=0.0016, n_sides=14)
+            tip = pv.Cone(center=b, direction=vec, height=0.010, radius=0.0044, resolution=16)
+            tail = pv.Sphere(radius=0.0026, center=a, theta_resolution=12, phi_resolution=12)
+            self._add(f"edit_shaft_{i}", shaft, color=color, lighting=False)
+            self._add(f"edit_tip_{i}", tip, color=color, lighting=False)
+            self._add(f"edit_tail_{i}", tail, color=color, lighting=False)
+        for i in range(len(self.handles), 4):
+            self._drop(f"edit_shaft_{i}")
+            self._drop(f"edit_tip_{i}")
+            self._drop(f"edit_tail_{i}")
+
+        self._add("edit_point", pv.Sphere(radius=0.0048, center=p, theta_resolution=16, phi_resolution=16),
+                  color=C_POINT, lighting=False)
         # gdzie punkt byl przed edycja - zeby bylo widac, o ile sie ruszyl
         orig = self.ed.position(self.ed.original)
         if np.linalg.norm(orig - self.pos) > 1e-4:
-            self._add("edit_ghost", pv.Sphere(radius=0.0035, center=orig + self._normal * LIFT_M),
-                      color=C_GHOST, opacity=0.6)
+            self._add("edit_ghost", pv.Sphere(radius=0.0035, center=orig + self._normal * LIFT_M,
+                                              theta_resolution=14, phi_resolution=14),
+                      color=C_GHOST, opacity=0.6, lighting=False)
         else:
             self._drop("edit_ghost")
         # proste linie do sasiadow w kanale: przebieg przeliczy sie dopiero po zapisie
@@ -203,22 +246,7 @@ class EditMode:
             self._add(f"edit_link_{j}", pv.Line(p, q), color=C_LINK, line_width=2,
                       opacity=0.8)
 
-    def _outline(self, name: str, mesh) -> None:
-        """Ciemny kontur uchwytu - odcina go od kanalu w tym samym kolorze."""
-        self._drop(name)
-        try:
-            act = self.pl.add_silhouette(mesh, color=OUTLINE, line_width=3)
-        except Exception:
-            return
-        self._silhouettes[name] = act
-        self._names.add(name)
-
     def _drop(self, name: str) -> None:
-        act = self._silhouettes.pop(name, None)
-        if act is not None:
-            self.pl.remove_actor(act)
-            self._names.discard(name)
-            return
         if name in self._names:
             self.pl.remove_actor(name)
             self._names.discard(name)
@@ -594,14 +622,24 @@ class EditMode:
             return                      # nie nasz klik - przegladarka robi swoje
         self._take_press()
         d, vec, mm, color = self.handles[i]
-        p = self.pos
-        # ile pikseli ekranu to jeden krok pola, i w ktora strone
         s0 = self._to_screen(p)
-        s1 = self._to_screen(p + vec * (mm / 1000.0))
-        step_px = s1 - s0
-        self.drag = {"i": i, "dof": d, "start": np.array([x, y], float),
-                     "value": get(self.ed.anchor, d), "step_px": step_px,
-                     "steps": 0, "vec": vec, "mm": mm, "p0": p.copy()}
+        s1 = self._to_screen(p + vec * HANDLE_M)
+        axis_px = s1 - s0
+        h_len = float(np.linalg.norm(axis_px))
+        if h_len < 1.0:
+            return
+        u_px = axis_px / h_len
+        self.drag = {
+            "i": i,
+            "dof": d,
+            "start": np.array([x, y], float),
+            "value": get(self.ed.anchor, d),
+            "u_px": u_px,
+            "steps": 0,
+            "vec": vec,
+            "mm": mm,
+            "p0": self.pos.copy(),
+        }
 
     def _move(self, obj, _ev) -> None:
         if self.drag is None:
@@ -609,17 +647,18 @@ class EditMode:
         self._consume("MouseMoveEvent")
         g = self.drag
         m = np.array(self._mouse(), float)
-        L = float(np.dot(g["step_px"], g["step_px"]))
-        if L < 1e-6:
-            return
-        steps = int(round(float(np.dot(m - g["start"], g["step_px"])) / L))
+        proj_px = float(np.dot(m - g["start"], g["u_px"]))
+        steps = int(round(proj_px / PIXELS_PER_STEP))
         if steps == g["steps"]:
             return
+        now = time.monotonic()
+        if now - self._last_drag_render < 0.016:
+            return
+        self._last_drag_render = now
         g["steps"] = steps
         self.ed.set_value(g["dof"], g["value"] + steps * g["dof"].step)
-        # w trakcie ciagniecia tylko przesuwamy punkt; kierunki uchwytow
-        # przeliczamy dopiero po puszczeniu, bo to kilka rzutow promieni
         self.pos = self.ed.position()
+        self._sync_point_position()
         self._draw()
         self._panel_value_only()
         self.pl.render()
@@ -630,15 +669,26 @@ class EditMode:
             self._consume("LeftButtonReleaseEvent")
         if self.drag is None:
             return
+        g = self.drag
         self.drag = None
+        m = np.array(self._mouse(), float)
+        proj_px = float(np.dot(m - g["start"], g["u_px"]))
+        steps = int(round(proj_px / PIXELS_PER_STEP))
+        self.ed.set_value(g["dof"], g["value"] + steps * g["dof"].step)
         self._rebuild()
 
     def _panel_value_only(self) -> None:
         """Podczas przeciagania odswiezamy tylko liczbe - pelny panel po puszczeniu."""
+        if self.ed is None or self.drag is None:
+            return
         d = self.drag["dof"]
-        name = f"edit_ui_dof_{self.ed.dofs.index(d)}"
-        act = self.pl.renderer.actors.get(name) if hasattr(self.pl.renderer, "actors") else None
-        if act is not None:
+        try:
+            idx = self.ed.dofs.index(d)
+        except ValueError:
+            return
+        name = f"edit_ui_dof_{idx}"
+        act = self.pl.actors.get(name)
+        if act is not None and hasattr(act, "SetInput"):
             act.SetInput(self._dof_row(d))
 
     # --- pomocnicze ---------------------------------------------------------

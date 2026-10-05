@@ -34,6 +34,8 @@ data/verify/
 # paczki eksportu - generowane (tools/export_terrapka.py) i przenosza opisy punktow
 dist/
 
-# wybor domyslnego profilu jest ustawieniem tego komputera, nie danymi -
-# kto sklonuje repo, ma startowac z fabrycznej
+# profile uzytkownika - wlasne konfiguracje i edycje punktow, zostaja lokalnie
+data/profiles/*.json
 data/profiles/aktywny.txt
+!data/profiles/.gitkeep
+
