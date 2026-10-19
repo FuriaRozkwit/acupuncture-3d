@@ -39,3 +39,7 @@ data/profiles/*.json
 data/profiles/aktywny.txt
 !data/profiles/.gitkeep
 
+
+# wycieki z podrecznika - zostaja lokalnie (zob. scan_leak.py)
+tools/build_polish_meta.py
+data/klisze/
