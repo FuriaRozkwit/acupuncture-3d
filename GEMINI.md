@@ -46,7 +46,7 @@ Z tego wynika sposób pracy:
 5. **Nie uruchamiaj `wsl --shutdown`** i nie wyłączaj Smart App Control.
 6. Po każdej zmianie geometrii: `python tools/validate.py` musi dawać `WYNIK: OK`.
 7. `data/points.json` to źródło prawdy o kotwicach, `tools/build_points.py` jest od niego
-   starszy. Generator odmawia, gdy przebudowa cofnęłaby pomiary; `--force` tylko za zgodą Pawła.
+   starszy. Generator zachowuje punkty z danych, a tabele rozstrzygają tylko o punktach nowych.
 
 ## 4. Jak uruchamiać
 
@@ -131,3 +131,7 @@ Dwa autentyczne przykłady z budowy testu odstępów:
 
 Dopiero po obu poprawkach wyszły dwie prawdziwe usterki (KI-10 bez własnej linijki,
 LU-1 o 1,3 cun za nisko) — i te warto było zgłaszać.
+
+## CL-AN
+
+To repozytorium jest wezlem metasystemu CL-AN (`C:\repos\cl-an`). Obowiazuja zasady z `C:\repos\cl-an\CL-AN-CORE.md`: tandem CL-AN, kryterium rotacji, regula dowodu i brama Pawla (`bang`).

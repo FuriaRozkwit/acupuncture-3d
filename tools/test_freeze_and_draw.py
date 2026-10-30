@@ -1,6 +1,6 @@
 import sys
 import os
-sys.path.insert(0, "/mnt/c/Users/Paweł/repos/acupuncture-3d")
+sys.path.insert(0, "/mnt/c/repos/acupuncture-3d")
 
 import numpy as np
 import pyvista as pv

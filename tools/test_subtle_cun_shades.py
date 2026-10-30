@@ -1,6 +1,6 @@
 import sys
 from pathlib import Path
-REPO = Path("/mnt/c/Users/Paweł/repos/acupuncture-3d")
+REPO = Path("/mnt/c/repos/acupuncture-3d")
 sys.path.insert(0, str(REPO))
 
 import pyvista as pv
