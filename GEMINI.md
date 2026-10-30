@@ -53,7 +53,7 @@ Z tego wynika sposób pracy:
 VTK jest blokowany na Windowsie przez Smart App Control, więc wszystko idzie przez WSL2:
 
 ```bash
-wsl -d Ubuntu-24.04 -u root bash -c 'cd /mnt/c/Users/Paweł/repos/acupuncture-3d && /opt/acu3d-venv/bin/python tools/validate.py'
+wsl -d Ubuntu-24.04 -u root bash -c 'cd /mnt/c/repos/acupuncture-3d && /opt/acu3d-venv/bin/python tools/validate.py'
 ```
 
 Narzędzia weryfikujące, od najszybszego:
