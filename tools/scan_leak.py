@@ -4,6 +4,10 @@ Sprawdza ZAWARTOSC, nie nazwy plikow: bierze wszystkie ciagi 8 kolejnych slow z
 point_meta i szuka ich w plikach, ktore ida do repozytorium. Tak wlasnie wyszedl
 na jaw wyciek w polu `categories` - kontrola nazw plikow go nie widziala.
 
+Pilnuje tez struktury danych, ktore wychodza na zewnatrz (SPRAWA-006, SPRAWA-007):
+pole `categories` nie wraca do data/points.json, a `english` zawiera sama nazwe,
+bez ogonkow OCR i bez cudzych zdan - takze w paczce dist/ dla Terrapki.
+
     python tools/scan_leak.py              # pliki sledzone + nowe (bez .gitignore)
     python tools/scan_leak.py --history    # dodatkowo wszystkie bloby z historii
 """
@@ -49,6 +53,24 @@ def repo_files() -> list:
     return [ROOT / n for n in names if n and Path(n).suffix.lower() in TEXT_SUFFIX]
 
 
+def bad_fields() -> list:
+    """Naruszenia struktury w danych publicznych i w paczce dla Terrapki."""
+    out = []
+    english = re.compile(r"[A-Za-z][A-Za-z\u2019' -]*")
+    doc = json.loads((ROOT / "data" / "points.json").read_text(encoding="utf-8"))
+    out += [f"data/points.json {p['code']}: pole categories" for p in doc["points"]
+            if "categories" in p]
+    sources = [("data/points.json", doc["points"])]
+    bundle = ROOT / "dist" / "meridian-bundle.json"
+    if bundle.exists():
+        sources.append(("dist/meridian-bundle.json",
+                        json.loads(bundle.read_text(encoding="utf-8"))["points"]))
+    for name, points in sources:
+        out += [f"{name} {p['code']}: english = {p.get('english')!r}" for p in points
+                if not english.fullmatch(p.get("english") or "")]
+    return sorted(set(out))
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--history", action="store_true", help="przeszukaj tez bloby z historii git")
@@ -72,6 +94,12 @@ def main() -> int:
             bad += 1
             print(f"WYCIEK: {f.relative_to(ROOT)} - {len(hit)} fragmentow, np. \"{sorted(hit)[0]}\"")
     print(f"plikow sprawdzonych: {len(repo_files())}, z tekstem z podrecznika: {bad}")
+
+    fields = bad_fields()
+    bad += len(fields)
+    for line in fields:
+        print(f"STRUKTURA: {line}")
+    print(f"naruszen struktury (categories, english): {len(fields)}")
 
     if args.history:
         blobs = subprocess.run(["git", "-C", str(ROOT), "rev-list", "--objects", "--all"],

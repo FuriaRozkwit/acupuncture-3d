@@ -17,6 +17,7 @@ import numpy as np
 import pyvista as pv
 
 from . import action_lines
+from .channels import role_text
 from .fascia import CLASS_COLOR, CLASS_PL, FasciaSet
 from .model import Atlas
 from .translate_pl import get_point_pl
@@ -765,8 +766,9 @@ class Viewer:
         lines = [f"{d['code']}  {d['pinyin']}  ({meta.get('english', '')})",
                  f"kanal: {ch['pl']} / {ch['en']}   strona: {SIDE_PL[d['side']]}"
                  f"   dokladnosc: {d['accuracy']}"]
-        if meta.get("categories"):
-            lines.append("typ: " + ", ".join(meta["categories"])[:110])
+        typ = ", ".join(meta.get("categories") or []) or role_text(d["code"])
+        if typ:
+            lines.append("typ: " + typ[:110])
         lines += textwrap.wrap("lokalizacja: " + (d["note_pl"] or meta.get("location", "")), 96)[:3]
         if self.muscles is not None:
             mus, dist = self.muscles.muscle_under(d["pos"])

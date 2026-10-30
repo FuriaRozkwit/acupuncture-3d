@@ -14,6 +14,7 @@ Uruchomienie:  python tools/build_points.py
 from __future__ import annotations
 
 import json
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -747,9 +748,27 @@ def apply_azimuth_fit(points: list) -> int:
     return n
 
 
-def build() -> None:
+def published() -> dict:
+    """Aktualny data/points.json: zrodlo kotwic zmierzonych i oczyszczonych nazw."""
+    path = ROOT / "data" / "points.json"
+    if not path.exists():
+        return {}
+    return {p["code"]: p for p in json.loads(path.read_text(encoding="utf-8"))["points"]}
+
+
+def build(force: bool = False) -> None:
     n_fit = apply_azimuth_fit(POINTS)
     meta = json.loads((ROOT / "data" / "point_meta.json").read_text(encoding="utf-8"))
+    current = published()
+    # Tabele w tym pliku sa starsze niz data/points.json: kotwice poprawiane pomiarem
+    # (verify_*, fit_azimuth) ida wprost do danych. Bez tej blokady przebudowa cicho
+    # cofnelaby je do stanu z tabel.
+    stale = [p["code"] for p in POINTS
+             if p["code"] in current and current[p["code"]]["anchor"] != p["anchor"]]
+    if stale and not force:
+        raise SystemExit(f"BLOKADA: {len(stale)} kotwic w data/points.json rozni sie od tabel "
+                         f"(np. {', '.join(stale[:6])}). Przebudowa cofnelaby pomiary; "
+                         "--force tylko swiadomie.")
     by_code = {}
     out = []
     for p in POINTS:
@@ -763,8 +782,10 @@ def build() -> None:
             "channel": ch,
             "index": int(idx),
             "pinyin": m.get("pinyin", ""),
-            "english": m.get("english", ""),
-            "categories": m.get("categories", []),
+            # OCR ma tu ogonki i cudze zdania; nazwy czyszczone sa w data/points.json.
+            # Pola categories nie ma: to brzmienie podrecznika (SPRAWA-006), a role
+            # punktow sa w data/channel_topology.json.
+            "english": current.get(code, {}).get("english") or m.get("english", ""),
             "side": p["side"],
             "accuracy": p["accuracy"],
             "anchor": p["anchor"],
@@ -808,4 +829,4 @@ def build() -> None:
 
 
 if __name__ == "__main__":
-    build()
+    build(force="--force" in sys.argv)

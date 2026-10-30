@@ -4,8 +4,10 @@ Po co
 -----
 Zeby polaczenie dwoch punktow bieglo tak, jak biegnie w ciele, a nie na skrot,
 trzeba wiedziec nie tylko GDZIE punkty leza, ale JAK kanaly sie ze soba lacza.
-Ten skrypt wyciaga te wiedze z opisow kategorii w `data/points.json` i zapisuje
-ja jako czysta strukture: kody, role, listy kanalow. Zadnej prozy.
+Ten skrypt wyciaga te wiedze z kategorii w lokalnym `data/point_meta.json` (poza
+repozytorium) i zapisuje ja jako czysta strukture: kody, role, listy kanalow.
+Zadnej prozy. Plik wynikowy jest jedynym publicznym zrodlem rol punktow: pola
+`categories` nie ma juz w `data/points.json` (SPRAWA-006).
 
 To ma dwa skutki. Model zyskuje topologie kanalow - wie, ze LU-7 jest punktem
 luo Pluc, a GB-20 miejscem spotkania kilku kanalow. A dane traca smieci OCR,
@@ -79,12 +81,16 @@ def extras_in(text: str) -> list:
 
 def main() -> int:
     doc = json.loads((DATA / "points.json").read_text(encoding="utf-8"))
+    meta_path = DATA / "point_meta.json"
+    if not meta_path.exists():
+        raise SystemExit("brak data/point_meta.json - topologia zostaje bez zmian")
+    meta = json.loads(meta_path.read_text(encoding="utf-8"))
     roles: dict = {}
     crossings: dict = {}
     opens: dict = {}
     for p in doc["points"]:
         code, own = p["code"], p["channel"]
-        for cat in (p.get("categories") or []):
+        for cat in (meta.get(code, {}).get("categories") or []):
             low = cat.lower()
             ch = channels_in(cat)
             ex = extras_in(cat)
@@ -134,7 +140,7 @@ def main() -> int:
     yuan = {r["of"]: c for c, rs in roles.items() for r in rs if r["role"] == "yuan"}
 
     out = {
-        "source": "wydobyte z pol categories w data/points.json (tools/build_topology.py); "
+        "source": "wydobyte z lokalnych kategorii punktow (tools/build_topology.py); "
                   "same fakty strukturalne - kody, role, listy kanalow",
         "interior_exterior": [list(x) for x in INTERIOR_EXTERIOR],
         "same_name": {k: list(v) for k, v in SAME_NAME.items()},

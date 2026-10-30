@@ -121,11 +121,7 @@
    "channel": "LU",
    "index": 1,
    "pinyin": "Zhongfu",
-   "english": "Middle Palace vo",
-   "categories": [
-    "Front-Mu point of the Lung Is",
-    "Meeting point of the Lung and Spleen channels"
-   ],
+   "english": "Middle Palace",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -143,7 +139,6 @@
    "index": 2,
    "pinyin": "Yunmen",
    "english": "Cloud Gate",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -160,10 +155,7 @@
    "channel": "LU",
    "index": 3,
    "pinyin": "Tianfu",
-   "english": "Palace of Heaven A",
-   "categories": [
-    "Point of the Window of Heaven Kea"
-   ],
+   "english": "Palace of Heaven",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -181,7 +173,6 @@
    "index": 4,
    "pinyin": "Xiabai",
    "english": "Clasping the White",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -199,9 +190,6 @@
    "index": 5,
    "pinyin": "Chize",
    "english": "Cubit Marsh",
-   "categories": [
-    "He-Sea and Water point of the Lung channel 4"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -219,9 +207,6 @@
    "index": 6,
    "pinyin": "Kongzui",
    "english": "Maximum Opening",
-   "categories": [
-    "Xi-Cleft point of the Lung channel Kz"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -238,13 +223,7 @@
    "channel": "LU",
    "index": 7,
    "pinyin": "Lieque",
-   "english": "Broken Sequence ′",
-   "categories": [
-    "Luo-Connecting point of the Lung channel \"Eb.",
-    "Confluent point of the Conception vessel",
-    "Gao Wu Command point",
-    "Ma Dan-yang Heavenly Star point"
-   ],
+   "english": "Broken Sequence",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -261,10 +240,7 @@
    "channel": "LU",
    "index": 8,
    "pinyin": "Jingqu",
-   "english": "Channel Gutter $%",
-   "categories": [
-    "Jing-River and Metal point of the Lung channel *&"
-   ],
+   "english": "Channel Gutter",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -282,10 +258,6 @@
    "index": 9,
    "pinyin": "Taiyuan",
    "english": "Supreme Abyss",
-   "categories": [
-    "Shu-Stream, Yuan-Source and Earth point ia",
-    "Hui-Meeting point of the Vessels"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -302,10 +274,7 @@
    "channel": "LU",
    "index": 10,
    "pinyin": "Yuji",
-   "english": "Fish Border yw",
-   "categories": [
-    "Ying-Spring and Fire point of the Lung channel we"
-   ],
+   "english": "Fish Border",
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -323,10 +292,6 @@
    "index": 11,
    "pinyin": "Shaoshang",
    "english": "Lesser Shang",
-   "categories": [
-    "Jing-Well and Wood point of the Lung channel al",
-    "Sun Si-miao Ghost point"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -346,10 +311,7 @@
    "channel": "LI",
    "index": 1,
    "pinyin": "Shangyang",
-   "english": "Shang Yang |",
-   "categories": [
-    "Jing-Well and Metal point of the Large Intestine %"
-   ],
+   "english": "Shang Yang",
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -370,9 +332,6 @@
    "index": 2,
    "pinyin": "Erjian",
    "english": "Second Space",
-   "categories": [
-    "Ying-Spring and Water point of the Large A"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -389,10 +348,7 @@
    "channel": "LI",
    "index": 3,
    "pinyin": "Sanjian",
-   "english": "Third Space —",
-   "categories": [
-    "Shu-Stream and Wood point of the Large (a)"
-   ],
+   "english": "Third Space",
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -410,11 +366,6 @@
    "index": 4,
    "pinyin": "Hegu",
    "english": "Joining Valley",
-   "categories": [
-    "Yuan-Source point of the Large Intestine channel An",
-    "Gao Wu Command point",
-    "Ma Dan-yang Heavenly Star point"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -434,9 +385,6 @@
    "index": 5,
    "pinyin": "Yangxi",
    "english": "Yang Stream",
-   "categories": [
-    "Jing-River and Fire point of the VA"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -457,9 +405,6 @@
    "index": 6,
    "pinyin": "Pianli",
    "english": "Veering Passage",
-   "categories": [
-    "Luo-Connecting point of the Large ie"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -477,9 +422,6 @@
    "index": 7,
    "pinyin": "Wenliu",
    "english": "Warm Flow",
-   "categories": [
-    "Xi-Cleft point of the Large Intestine channel \\ vs"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -497,7 +439,6 @@
    "index": 8,
    "pinyin": "Xialian",
    "english": "Lower Angle",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -515,7 +456,6 @@
    "index": 9,
    "pinyin": "Shanglian",
    "english": "Upper Angle",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -533,7 +473,6 @@
    "index": 10,
    "pinyin": "Shousanli",
    "english": "Arm Three Miles",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -550,12 +489,7 @@
    "channel": "LI",
    "index": 11,
    "pinyin": "Quchi",
-   "english": "He-Sea and Earth point of the Large Intestine Y",
-   "categories": [
-    "He-Sea and Earth point of the Large Intestine Y",
-    "Sun Si-miao Ghost point",
-    "Ma Dan-yang Heavenly Star point"
-   ],
+   "english": "Pool at the Crook",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -573,7 +507,6 @@
    "index": 12,
    "pinyin": "Zhouliao",
    "english": "Elbow Crevice",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -591,7 +524,6 @@
    "index": 13,
    "pinyin": "Shouwuli",
    "english": "Arm Five Miles",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -609,9 +541,6 @@
    "index": 14,
    "pinyin": "Binao",
    "english": "Upper Arm",
-   "categories": [
-    "Meeting point of the Large Intestine A%"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -629,9 +558,6 @@
    "index": 15,
    "pinyin": "Jianyu",
    "english": "Shoulder Bone",
-   "categories": [
-    "Meeting point of the Large Intestine channel a"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -648,9 +574,6 @@
    "index": 16,
    "pinyin": "Jugu",
    "english": "Great Bone",
-   "categories": [
-    "Meeting point of the Large Intestine channel 4"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -669,7 +592,6 @@
    "index": 17,
    "pinyin": "Tianding",
    "english": "Heaven’s Tripod",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -686,9 +608,6 @@
    "index": 18,
    "pinyin": "Futu",
    "english": "Support the Prominence",
-   "categories": [
-    "Point of the Window of Heaven ra"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -705,7 +624,6 @@
    "index": 19,
    "pinyin": "Kouheliao",
    "english": "Mouth Grain Crevice",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -726,9 +644,6 @@
    "index": 20,
    "pinyin": "Yingxiang",
    "english": "Welcome Fragrance",
-   "categories": [
-    "Meeting point of the Large Intestine and Ay-"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -749,9 +664,6 @@
    "index": 1,
    "pinyin": "Chengqi",
    "english": "Container of Tears",
-   "categories": [
-    "Meeting point of the Stomach channel with ne"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -771,7 +683,6 @@
    "index": 2,
    "pinyin": "Sibai",
    "english": "Four Whites",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -791,9 +702,6 @@
    "index": 3,
    "pinyin": "Juliao",
    "english": "Great Crevice",
-   "categories": [
-    "Meeting point of the Stomach channel"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -813,10 +721,7 @@
    "channel": "ST",
    "index": 4,
    "pinyin": "Dicang",
-   "english": "Earth Granary '丶",
-   "categories": [
-    "Meeting point of the Stomach and (or"
-   ],
+   "english": "Earth Granary",
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -837,7 +742,6 @@
    "index": 5,
    "pinyin": "Daying",
    "english": "Great Welcome",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -857,9 +761,6 @@
    "index": 6,
    "pinyin": "Jiache",
    "english": "Jaw Bone",
-   "categories": [
-    "Sun Si-miao Ghost point :"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -879,9 +780,6 @@
    "index": 7,
    "pinyin": "Xiaguan",
    "english": "Below the Joint",
-   "categories": [
-    "Meeting point of the Stomach and Gall Bladder (4"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -900,10 +798,7 @@
    "channel": "ST",
    "index": 8,
    "pinyin": "Touwei",
-   "english": "Head's Binding 目",
-   "categories": [
-    "Meeting point of the Stomach and Gall Bladder ih"
-   ],
+   "english": "Head’s Binding",
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -923,12 +818,7 @@
    "channel": "ST",
    "index": 9,
    "pinyin": "Renying",
-   "english": "Man「s Welcome",
-   "categories": [
-    "Meeting point of the Stomach and",
-    "Point of the Window of Heaven",
-    "Point of the Sea of Qi"
-   ],
+   "english": "Man’s Welcome",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -946,7 +836,6 @@
    "index": 10,
    "pinyin": "Shuitu",
    "english": "Water Prominence",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -963,8 +852,7 @@
    "channel": "ST",
    "index": 11,
    "pinyin": "Qishe",
-   "english": "Abode of Qi 白",
-   "categories": [],
+   "english": "Abode of Qi",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -981,8 +869,7 @@
    "channel": "ST",
    "index": 12,
    "pinyin": "Quepen",
-   "english": "Empty Basin Gp",
-   "categories": [],
+   "english": "Empty Basin",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -999,8 +886,7 @@
    "channel": "ST",
    "index": 13,
    "pinyin": "Qihu",
-   "english": "Qi Door 心",
-   "categories": [],
+   "english": "Qi Door",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -1017,8 +903,7 @@
    "channel": "ST",
    "index": 14,
    "pinyin": "Kufang",
-   "english": "Kufang ST-14",
-   "categories": [],
+   "english": "Storehouse",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -1036,7 +921,6 @@
    "index": 15,
    "pinyin": "Wuyi",
    "english": "Room Screen",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -1054,7 +938,6 @@
    "index": 16,
    "pinyin": "Yingchuang",
    "english": "Breast Window",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -1071,8 +954,7 @@
    "channel": "ST",
    "index": 17,
    "pinyin": "Ruzhong",
-   "english": "Middle of the Breast ou",
-   "categories": [],
+   "english": "Middle of the Breast",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -1089,8 +971,7 @@
    "channel": "ST",
    "index": 18,
    "pinyin": "Rugen",
-   "english": "Root of the Breast 芽L)",
-   "categories": [],
+   "english": "Root of the Breast",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -1108,7 +989,6 @@
    "index": 19,
    "pinyin": "Burong",
    "english": "Not Contained",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -1127,7 +1007,6 @@
    "index": 20,
    "pinyin": "Chengman",
    "english": "Supporting Fullness",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -1145,8 +1024,7 @@
    "channel": "ST",
    "index": 21,
    "pinyin": "Liangmen",
-   "english": "Beam Gate bed",
-   "categories": [],
+   "english": "Beam Gate",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -1165,7 +1043,6 @@
    "index": 22,
    "pinyin": "Guanmen",
    "english": "Pass Gate",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -1183,8 +1060,7 @@
    "channel": "ST",
    "index": 23,
    "pinyin": "Taiyi",
-   "english": "Supreme Unity 目咒",
-   "categories": [],
+   "english": "Supreme Unity",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -1202,8 +1078,7 @@
    "channel": "ST",
    "index": 24,
    "pinyin": "Huaroumen",
-   "english": "Slippery Flesh Gate Y 丨",
-   "categories": [],
+   "english": "Slippery Flesh Gate",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -1221,10 +1096,7 @@
    "channel": "ST",
    "index": 25,
    "pinyin": "Tianshu",
-   "english": "Heavens Pivot",
-   "categories": [
-    "Front-Mu point of the Large Intestine"
-   ],
+   "english": "Heaven’s Pivot",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -1242,8 +1114,7 @@
    "channel": "ST",
    "index": 26,
    "pinyin": "Wailing",
-   "english": "Outer Mound i] ve",
-   "categories": [],
+   "english": "Outer Mound",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -1262,7 +1133,6 @@
    "index": 27,
    "pinyin": "Daju",
    "english": "The Great",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -1281,7 +1151,6 @@
    "index": 28,
    "pinyin": "Shuidao",
    "english": "Water Passage",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -1300,7 +1169,6 @@
    "index": 29,
    "pinyin": "Guilai",
    "english": "Return",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -1319,10 +1187,6 @@
    "index": 30,
    "pinyin": "Qichong",
    "english": "Rushing Qi",
-   "categories": [
-    "Meeting point of the Stomach channel with \"f",
-    "Point of the Sea of Water and Grain"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -1341,7 +1205,6 @@
    "index": 31,
    "pinyin": "Biguan",
    "english": "Thigh Gate",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -1358,8 +1221,7 @@
    "channel": "ST",
    "index": 32,
    "pinyin": "Futu",
-   "english": "Crouching Rabbit Kk",
-   "categories": [],
+   "english": "Crouching Rabbit",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -1376,8 +1238,7 @@
    "channel": "ST",
    "index": 33,
    "pinyin": "Yinshi",
-   "english": "Yin Market Z",
-   "categories": [],
+   "english": "Yin Market",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -1395,9 +1256,6 @@
    "index": 34,
    "pinyin": "Liangqiu",
    "english": "Ridge Mound",
-   "categories": [
-    "Xi-Cleft point of the Stomac"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -1414,8 +1272,7 @@
    "channel": "ST",
    "index": 35,
    "pinyin": "Dubi",
-   "english": "Calf’s Nose 4s",
-   "categories": [],
+   "english": "Calf’s Nose",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -1433,12 +1290,6 @@
    "index": 36,
    "pinyin": "Zusanli",
    "english": "Leg Three Miles",
-   "categories": [
-    "Gao Wu Command point",
-    "Ma Dan-yang Heavenly Star point",
-    "Point of the Sea of Water and Grain 9",
-    "He-Sea and Earth point of the Stomach channel x"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -1457,10 +1308,6 @@
    "index": 37,
    "pinyin": "Shangjuxu",
    "english": "Upper Great Void",
-   "categories": [
-    "Lower He-Sea point of the Large Intestine",
-    "Point of the Sea of Blood"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -1479,7 +1326,6 @@
    "index": 38,
    "pinyin": "Tiaokou",
    "english": "Lines Opening",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -1497,11 +1343,7 @@
    "channel": "ST",
    "index": 39,
    "pinyin": "Xiajuxu",
-   "english": "M",
-   "categories": [
-    "Lower He-Sea point of the Small Intestine",
-    "Point of the Sea of Blood &"
-   ],
+   "english": "Lower Great Void",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -1520,9 +1362,6 @@
    "index": 40,
    "pinyin": "Fenglong",
    "english": "Abundant Bulge",
-   "categories": [
-    "Luo-Connecting point of the Stomach channel se"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -1541,9 +1380,6 @@
    "index": 41,
    "pinyin": "Jiexi",
    "english": "Stream Divide",
-   "categories": [
-    "Jing-River and Fire point of the Stomach channel }"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -1564,9 +1400,6 @@
    "index": 42,
    "pinyin": "Chongyang",
    "english": "Rushing Yang",
-   "categories": [
-    "Yuan-Source point of the Stomach channel %"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -1586,9 +1419,6 @@
    "index": 43,
    "pinyin": "Xiangu",
    "english": "Sunken Valley",
-   "categories": [
-    "Shu-Stream and Wood point of the Stomach aX"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -1608,10 +1438,6 @@
    "index": 44,
    "pinyin": "Neiting",
    "english": "Inner Courtyard",
-   "categories": [
-    "Ying-Spring and Water point of the Stomach ke",
-    "Ma Dan-yang Heavenly Star point"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -1631,9 +1457,6 @@
    "index": 45,
    "pinyin": "Lidui",
    "english": "Strict Exchange",
-   "categories": [
-    "Jing-Well and Metal point of the ¥,"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -1653,11 +1476,7 @@
    "channel": "SP",
    "index": 1,
    "pinyin": "Yinbai",
-   "english": "Hidden White r%.",
-   "categories": [
-    "Jing-Well and Wood point of the re)",
-    "Sun Si-miao Ghost point"
-   ],
+   "english": "Hidden White",
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -1677,10 +1496,7 @@
    "channel": "SP",
    "index": 2,
    "pinyin": "Dadu",
-   "english": "Great Metropolis x",
-   "categories": [
-    "Ying-Spring and Fire point of the Rf"
-   ],
+   "english": "Great Metropolis",
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -1698,10 +1514,6 @@
    "index": 3,
    "pinyin": "Taibai",
    "english": "Supreme White",
-   "categories": [
-    "Shu-Stream, Yuan-Source and Earth (4",
-    "point of the Spleen channel"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -1719,10 +1531,6 @@
    "index": 4,
    "pinyin": "Gongsun",
    "english": "Grandfather Grandson",
-   "categories": [
-    "Luo-Connecting point of the Spleen channel i.",
-    "Confluent point of the Penetrating vessel"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -1740,9 +1548,6 @@
    "index": 5,
    "pinyin": "Shangqiu",
    "english": "Shang Mound",
-   "categories": [
-    "Jing-River and Metal point of the tt."
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -1762,10 +1567,7 @@
    "channel": "SP",
    "index": 6,
    "pinyin": "Sanyinjiao",
-   "english": "Three Yin Intersection ~",
-   "categories": [
-    "Meeting point of the Spleen, Liver and ¢&"
-   ],
+   "english": "Three Yin Intersection",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -1783,8 +1585,7 @@
    "channel": "SP",
    "index": 7,
    "pinyin": "Lougu",
-   "english": "Dripping Valley ka",
-   "categories": [],
+   "english": "Dripping Valley",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -1803,9 +1604,6 @@
    "index": 8,
    "pinyin": "Diji",
    "english": "Earth Pivot",
-   "categories": [
-    "Xi-Cleft point of the Spleen channel"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -1824,9 +1622,6 @@
    "index": 9,
    "pinyin": "Yinlingquan",
    "english": "Yin Mound Spring",
-   "categories": [
-    "He-Sea and Water point of the Spleen channel"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -1844,10 +1639,7 @@
    "channel": "SP",
    "index": 10,
    "pinyin": "Xuehai",
-   "english": "Sea of Blood w.",
-   "categories": [
-    "Sea of Blood w."
-   ],
+   "english": "Sea of Blood",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -1864,8 +1656,7 @@
    "channel": "SP",
    "index": 11,
    "pinyin": "Jimen",
-   "english": "Winnowing Gate 与",
-   "categories": [],
+   "english": "Winnowing Gate",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -1883,9 +1674,6 @@
    "index": 12,
    "pinyin": "Chongmen",
    "english": "Rushing Gate",
-   "categories": [
-    "Meeting point of the Spleen and Liver 4 ]"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -1902,10 +1690,7 @@
    "channel": "SP",
    "index": 13,
    "pinyin": "Fushe",
-   "english": "Abode of the Fu {",
-   "categories": [
-    "Meeting point of the Spleen and Liver 4"
-   ],
+   "english": "Abode of the Fu",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -1923,7 +1708,6 @@
    "index": 14,
    "pinyin": "Fujie",
    "english": "Abdomen Knot",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -1942,9 +1726,6 @@
    "index": 15,
    "pinyin": "Daheng",
    "english": "Great Horizontal",
-   "categories": [
-    "Meeting point of the Spleen cl"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -1962,10 +1743,7 @@
    "channel": "SP",
    "index": 16,
    "pinyin": "Fuai",
-   "english": "Abdomen Sorrow Ad",
-   "categories": [
-    "Meeting point of the Spleen channel with"
-   ],
+   "english": "Abdomen Sorrow",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -1984,7 +1762,6 @@
    "index": 17,
    "pinyin": "Shidou",
    "english": "Food Cavity",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -2002,7 +1779,6 @@
    "index": 18,
    "pinyin": "Tianxi",
    "english": "Heavenly Stream",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -2020,7 +1796,6 @@
    "index": 19,
    "pinyin": "Xiongxiang",
    "english": "Chest Village",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -2038,7 +1813,6 @@
    "index": 20,
    "pinyin": "Zhourong",
    "english": "Encircling Glory",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -2056,9 +1830,6 @@
    "index": 21,
    "pinyin": "Dabao",
    "english": "Great Wrapping",
-   "categories": [
-    "Great Luo-Connecting point of the Spleen ‘an"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -2076,7 +1847,6 @@
    "index": 1,
    "pinyin": "Jiquan",
    "english": "Summit Spring",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "approx",
    "anchor": {
@@ -2094,7 +1864,6 @@
    "index": 2,
    "pinyin": "Qingling",
    "english": "Green Spirit",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -2111,10 +1880,7 @@
    "channel": "HT",
    "index": 3,
    "pinyin": "Shaohai",
-   "english": "He-Sea and Water point of the Heart channel",
-   "categories": [
-    "He-Sea and Water point of the Heart channel"
-   ],
+   "english": "Lesser Sea",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -2131,10 +1897,7 @@
    "channel": "HT",
    "index": 4,
    "pinyin": "Lingdao",
-   "english": "Spirit Path be iS",
-   "categories": [
-    "Jing-River and Metal point of the Heart ‘aA"
-   ],
+   "english": "Spirit Path",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -2152,10 +1915,6 @@
    "index": 5,
    "pinyin": "Tongli",
    "english": "Penetrating the Interior",
-   "categories": [
-    "Luo-Connecting point of the Heart channel \\",
-    "Ma Dan-yang Heavenly Star point"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -2173,9 +1932,6 @@
    "index": 6,
    "pinyin": "Yinxi",
    "english": "Yin Cleft",
-   "categories": [
-    "Xi-Cleft point of the Heart channel 仁"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -2193,9 +1949,6 @@
    "index": 7,
    "pinyin": "Shenmen",
    "english": "Spirit Gate",
-   "categories": [
-    "Shu-Stream, Yuan-Source and Earth point (4"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -2212,10 +1965,7 @@
    "channel": "HT",
    "index": 8,
    "pinyin": "Shaofu",
-   "english": "Lesser Palace yr 4",
-   "categories": [
-    "Ying-Spring and Fire point of the Heart channel Mt"
-   ],
+   "english": "Lesser Palace",
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -2235,9 +1985,6 @@
    "index": 9,
    "pinyin": "Shaochong",
    "english": "Lesser Rushing",
-   "categories": [
-    "Jing-Well and Wood point of the Heart channel if"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -2258,9 +2005,6 @@
    "index": 1,
    "pinyin": "Shaoze",
    "english": "Lesser Marsh",
-   "categories": [
-    "Jing-Well and Metal point of the Small \\F"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -2280,10 +2024,7 @@
    "channel": "SI",
    "index": 2,
    "pinyin": "Qiangu",
-   "english": "aol",
-   "categories": [
-    "Ying-Spring and Water point of the Small"
-   ],
+   "english": "Front Valley",
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -2301,10 +2042,6 @@
    "index": 3,
    "pinyin": "Houxi",
    "english": "Back Stream",
-   "categories": [
-    "Shu-Stream and Wood point of the Small ) [",
-    "Confluent point of the Governing vessel"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -2322,9 +2059,6 @@
    "index": 4,
    "pinyin": "Wangu",
    "english": "Wrist Bone",
-   "categories": [
-    "Yuan-Source point of the Small Intestine"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -2342,9 +2076,6 @@
    "index": 5,
    "pinyin": "Yanggu",
    "english": "Yang Valley",
-   "categories": [
-    "Jing-River and Fire point of the Small"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -2362,9 +2093,6 @@
    "index": 6,
    "pinyin": "Yanglao",
    "english": "Support the Aged",
-   "categories": [
-    "Xi-Cleft point of the Small Intestine channel &"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -2382,9 +2110,6 @@
    "index": 7,
    "pinyin": "Zhizheng",
    "english": "Branch of the Upright",
-   "categories": [
-    "Luo-Connecting point of the Small Intestine na"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -2402,9 +2127,6 @@
    "index": 8,
    "pinyin": "Xiaohai",
    "english": "Small Sea",
-   "categories": [
-    "He-Sea and Earth point of the Small Intestine }&"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -2422,7 +2144,6 @@
    "index": 9,
    "pinyin": "Jianzhen",
    "english": "True Shoulder",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -2439,10 +2160,7 @@
    "channel": "SI",
    "index": 10,
    "pinyin": "Naoshu",
-   "english": "Upper Arm Shu At",
-   "categories": [
-    "Meeting point of the Small Intestine and"
-   ],
+   "english": "Upper Arm Shu",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -2459,8 +2177,7 @@
    "channel": "SI",
    "index": 11,
    "pinyin": "Tianzong",
-   "english": "Heavenly Gathering K",
-   "categories": [],
+   "english": "Heavenly Gathering",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -2477,10 +2194,7 @@
    "channel": "SI",
    "index": 12,
    "pinyin": "Bingfeng",
-   "english": "Grasping the Wind i",
-   "categories": [
-    "Meeting point of the Small Intestine, Large AR"
-   ],
+   "english": "Grasping the Wind",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -2497,8 +2211,7 @@
    "channel": "SI",
    "index": 13,
    "pinyin": "Quyuan",
-   "english": "Crooked Wall % 3)",
-   "categories": [],
+   "english": "Crooked Wall",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -2516,8 +2229,7 @@
    "channel": "SI",
    "index": 14,
    "pinyin": "Jianwaishu",
-   "english": "Outer Shoulder Shu She",
-   "categories": [],
+   "english": "Outer Shoulder Shu",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -2536,7 +2248,6 @@
    "index": 15,
    "pinyin": "Jianzhongshu",
    "english": "Middle Shoulder Shu",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -2555,9 +2266,6 @@
    "index": 16,
    "pinyin": "Tianchuang",
    "english": "Heavenly Window",
-   "categories": [
-    "Point of the Window of Heaven *"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -2574,9 +2282,6 @@
    "index": 17,
    "pinyin": "Tianrong",
    "english": "Heavenly Appearance",
-   "categories": [
-    "Point of the Window of Heaven"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -2593,9 +2298,6 @@
    "index": 18,
    "pinyin": "Quanliao",
    "english": "Cheek Bone Crevice",
-   "categories": [
-    "Meeting point of the Small Intestine and Sanjiao 4"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -2615,9 +2317,6 @@
    "index": 19,
    "pinyin": "Tinggong",
    "english": "Palace of Hearing",
-   "categories": [
-    "Meeting point of the Small Intestine, Sanjiao and a"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -2637,9 +2336,6 @@
    "index": 1,
    "pinyin": "Jingming",
    "english": "Bright Eyes",
-   "categories": [
-    "Meeting point of the Bladder, Small Intestine,"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -2659,7 +2355,6 @@
    "index": 2,
    "pinyin": "Zanzhu",
    "english": "Gathered Bamboo",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -2680,7 +2375,6 @@
    "index": 3,
    "pinyin": "Meichong",
    "english": "Eyebrows’ Pouring",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -2697,7 +2391,6 @@
    "index": 4,
    "pinyin": "Quchai",
    "english": "Crooked Curve",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -2713,8 +2406,7 @@
    "channel": "BL",
    "index": 5,
    "pinyin": "Wuchu",
-   "english": "Fifth Place ps",
-   "categories": [],
+   "english": "Fifth Place",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -2731,7 +2423,6 @@
    "index": 6,
    "pinyin": "Chengguang",
    "english": "Receiving Light",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -2748,7 +2439,6 @@
    "index": 7,
    "pinyin": "Tongtian",
    "english": "Heavenly Connection",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -2765,7 +2455,6 @@
    "index": 8,
    "pinyin": "Luoque",
    "english": "Declining Connection",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -2782,7 +2471,6 @@
    "index": 9,
    "pinyin": "Yuzhen",
    "english": "Jade Pillow",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -2798,10 +2486,7 @@
    "channel": "BL",
    "index": 10,
    "pinyin": "Tianzhu",
-   "english": "Celestial Pillar KR",
-   "categories": [
-    "Point of the Window of Heaven 4 4"
-   ],
+   "english": "Celestial Pillar",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -2818,11 +2503,6 @@
    "index": 11,
    "pinyin": "Dazhu",
    "english": "Great Shuttle",
-   "categories": [
-    "Meeting point of the Bladder, Small Intestine, AP",
-    "Hui-Meeting point of Bones",
-    "Point of the Sea of Blood"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -2841,9 +2521,6 @@
    "index": 12,
    "pinyin": "Fengmen",
    "english": "Wind Gate",
-   "categories": [
-    "Meeting point of the Bladder channel with l J"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -2861,10 +2538,7 @@
    "channel": "BL",
    "index": 13,
    "pinyin": "Feishu",
-   "english": "Lung Shu Af",
-   "categories": [
-    "Back-Shu point of the Lung At"
-   ],
+   "english": "Lung Shu",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -2883,7 +2557,6 @@
    "index": 14,
    "pinyin": "Jueyinshu",
    "english": "Jueyin Shu",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -2902,9 +2575,6 @@
    "index": 15,
    "pinyin": "Xinshu",
    "english": "Heart Shu",
-   "categories": [
-    "Back-Shu point of the Heart ;"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -2923,7 +2593,6 @@
    "index": 16,
    "pinyin": "Dushu",
    "english": "Governor Shu",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -2941,10 +2610,7 @@
    "channel": "BL",
    "index": 17,
    "pinyin": "Geshu",
-   "english": "Diaphragm Shu Kh",
-   "categories": [
-    "Hui-Meeting point of Blood 4)"
-   ],
+   "english": "Diaphragm Shu",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -2962,10 +2628,7 @@
    "channel": "BL",
    "index": 18,
    "pinyin": "Ganshu",
-   "english": "Liver Shu At",
-   "categories": [
-    "Back-Shu point of the Liver 4"
-   ],
+   "english": "Liver Shu",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -2983,10 +2646,7 @@
    "channel": "BL",
    "index": 19,
    "pinyin": "Danshu",
-   "english": "Gall bladder Shu y",
-   "categories": [
-    "Back-Shu point of the Gall Bladder"
-   ],
+   "english": "Gall bladder Shu",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -3005,9 +2665,6 @@
    "index": 20,
    "pinyin": "Pishu",
    "english": "Spleen Shu",
-   "categories": [
-    "Back-Shu point of the Spleen wr)"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -3025,10 +2682,7 @@
    "channel": "BL",
    "index": 21,
    "pinyin": "Weishu",
-   "english": "Stomach Shu `",
-   "categories": [
-    "Back-Shu point of the Stomach Ay"
-   ],
+   "english": "Stomach Shu",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -3047,9 +2701,6 @@
    "index": 22,
    "pinyin": "Sanjiaoshu",
    "english": "Sanjiao Shu",
-   "categories": [
-    "Back-Shu point of the Sanjiao"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -3067,10 +2718,7 @@
    "channel": "BL",
    "index": 23,
    "pinyin": "Shenshu",
-   "english": "Kidney Shu 付",
-   "categories": [
-    "Back-Shu point of the Kidneys iy"
-   ],
+   "english": "Kidney Shu",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -3088,10 +2736,7 @@
    "channel": "BL",
    "index": 24,
    "pinyin": "Qihaishu",
-   "english": "Sea of Qi Shu i",
-   "categories": [
-    "Sea of Qi Shu i"
-   ],
+   "english": "Sea of Qi Shu",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -3110,9 +2755,6 @@
    "index": 25,
    "pinyin": "Dachangshu",
    "english": "Large Intestine Shu",
-   "categories": [
-    "Back-Shu point of the Large Intestine i"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -3131,7 +2773,6 @@
    "index": 26,
    "pinyin": "Guanyuanshu",
    "english": "Gate of Origin Shu",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -3149,10 +2790,7 @@
    "channel": "BL",
    "index": 27,
    "pinyin": "Xiaochangshu",
-   "english": "Small Intestine Shu ~) 弛",
-   "categories": [
-    "Back-Shu point of the Small Intestine MM"
-   ],
+   "english": "Small Intestine Shu",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -3170,10 +2808,7 @@
    "channel": "BL",
    "index": 28,
    "pinyin": "Pangguangshu",
-   "english": "Bladder Shu At",
-   "categories": [
-    "Back-Shu point of the Bladder Ax,"
-   ],
+   "english": "Bladder Shu",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -3191,8 +2826,7 @@
    "channel": "BL",
    "index": 29,
    "pinyin": "Zhonglushu",
-   "english": "Mid-Spine Shu a",
-   "categories": [],
+   "english": "Mid-Spine Shu",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -3210,8 +2844,7 @@
    "channel": "BL",
    "index": 30,
    "pinyin": "Baihuanshu",
-   "english": "White Ring Shu z)",
-   "categories": [],
+   "english": "White Ring Shu",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -3230,9 +2863,6 @@
    "index": 31,
    "pinyin": "Shangliao",
    "english": "Upper Crevice",
-   "categories": [
-    "Meeting point of the Bladder and Gall Bladder 7"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -3250,10 +2880,7 @@
    "channel": "BL",
    "index": 32,
    "pinyin": "Ciliao",
-   "english": "Second Crevice 4",
-   "categories": [
-    "Meeting point of the Bladder and Gall Bladder 4"
-   ],
+   "english": "Second Crevice",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -3272,9 +2899,6 @@
    "index": 33,
    "pinyin": "Zhongliao",
    "english": "Middle Crevice",
-   "categories": [
-    "Meeting point of the Bladder and Gall Bladder"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -3293,9 +2917,6 @@
    "index": 34,
    "pinyin": "Xialiao",
    "english": "Lower Crevice",
-   "categories": [
-    "Meeting point of the Bladder, and Gall Bladder 48"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -3314,7 +2935,6 @@
    "index": 35,
    "pinyin": "Huiyang",
    "english": "Meeting of Yang",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -3333,7 +2953,6 @@
    "index": 36,
    "pinyin": "Chengfu",
    "english": "Hold and Support",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -3351,7 +2970,6 @@
    "index": 37,
    "pinyin": "Yinmen",
    "english": "Gate of Abundance",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -3369,7 +2987,6 @@
    "index": 38,
    "pinyin": "Fuxi",
    "english": "Floating Cleft",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -3387,9 +3004,6 @@
    "index": 39,
    "pinyin": "Weiyang",
    "english": "Outside of the Crook",
-   "categories": [
-    "Lower He-Sea point of the 5"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -3407,11 +3021,6 @@
    "index": 40,
    "pinyin": "Weizhong",
    "english": "Middle of the Crook",
-   "categories": [
-    "He-Sea and Earth point of the Bladder channel",
-    "Gao Wu Command point",
-    "Ma Dan-yang Heavenly Star point"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -3429,9 +3038,6 @@
    "index": 41,
    "pinyin": "Fufen",
    "english": "Attached Branch",
-   "categories": [
-    "Meeting point of the Bladder and Small Intestine J)"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -3450,7 +3056,6 @@
    "index": 42,
    "pinyin": "Pohu",
    "english": "Door of the Corporeal Soul",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -3469,7 +3074,6 @@
    "index": 43,
    "pinyin": "Gaohuangshu",
    "english": "Vital Region Shu",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -3488,7 +3092,6 @@
    "index": 44,
    "pinyin": "Shentang",
    "english": "Hall of the Spirit",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -3506,8 +3109,7 @@
    "channel": "BL",
    "index": 45,
    "pinyin": "Yixi",
-   "english": "Yi Xi &",
-   "categories": [],
+   "english": "Yi Xi",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -3525,8 +3127,7 @@
    "channel": "BL",
    "index": 46,
    "pinyin": "Geguan",
-   "english": "Diaphragm Gate ha",
-   "categories": [],
+   "english": "Diaphragm Gate",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -3545,7 +3146,6 @@
    "index": 47,
    "pinyin": "Hunmen",
    "english": "Gate of the Ethereal Soul",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -3563,8 +3163,7 @@
    "channel": "BL",
    "index": 48,
    "pinyin": "Yanggang",
-   "english": "Yang’s’ Key Link",
-   "categories": [],
+   "english": "Yangs’ Key Link",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -3582,8 +3181,7 @@
    "channel": "BL",
    "index": 49,
    "pinyin": "Yishe",
-   "english": "Abode of Thought J",
-   "categories": [],
+   "english": "Abode of Thought",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -3602,7 +3200,6 @@
    "index": 50,
    "pinyin": "Weicang",
    "english": "Stomach Granary",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -3621,7 +3218,6 @@
    "index": 51,
    "pinyin": "Huangmen",
    "english": "Vitals Gate",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -3640,7 +3236,6 @@
    "index": 52,
    "pinyin": "Zhishi",
    "english": "Residence of the Will",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -3658,8 +3253,7 @@
    "channel": "BL",
    "index": 53,
    "pinyin": "Baohuang",
-   "english": "Bladder’s Vitals Le",
-   "categories": [],
+   "english": "Bladder’s Vitals",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -3678,7 +3272,6 @@
    "index": 54,
    "pinyin": "Zhibian",
    "english": "Order’s Limit",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -3696,8 +3289,7 @@
    "channel": "BL",
    "index": 55,
    "pinyin": "Heyang",
-   "english": "Confluence of Yang 口",
-   "categories": [],
+   "english": "Confluence of Yang",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -3714,8 +3306,7 @@
    "channel": "BL",
    "index": 56,
    "pinyin": "Chengjin",
-   "english": "",
-   "categories": [],
+   "english": "Support the Sinews",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -3733,9 +3324,6 @@
    "index": 57,
    "pinyin": "Chengshan",
    "english": "Support the Mountain",
-   "categories": [
-    "Ma Dan-yang Heavenly Star point"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -3753,9 +3341,6 @@
    "index": 58,
    "pinyin": "Feiyang",
    "english": "Soaring Upwards",
-   "categories": [
-    "Luo-Connecting point of the Bladder channel 3"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -3772,10 +3357,7 @@
    "channel": "BL",
    "index": 59,
    "pinyin": "Fuyang",
-   "english": "Instep Yang Ma",
-   "categories": [
-    "Xi-Cleft point of the Yang Motility vessel 1%"
-   ],
+   "english": "Instep Yang",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -3793,10 +3375,6 @@
    "index": 60,
    "pinyin": "Kunlun",
    "english": "Kunlun Mountains",
-   "categories": [
-    "Jing-River and Fire point of the Bladder channel Gr",
-    "Ma Dan-yang Heavenly Star point"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -3814,9 +3392,6 @@
    "index": 61,
    "pinyin": "Pucan",
    "english": "Servant’s Respect",
-   "categories": [
-    "Meeting point of the Bladder channel with the 吊"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -3837,10 +3412,6 @@
    "index": 62,
    "pinyin": "Shenmai",
    "english": "Extending Vessel",
-   "categories": [
-    "Confluent point of the Yang Motility vessel Ak",
-    "Sun Si-miao Ghost point"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -3860,11 +3431,7 @@
    "channel": "BL",
    "index": 63,
    "pinyin": "Jinmen",
-   "english": "Xi-Cleft point of the Bladder channel",
-   "categories": [
-    "Xi-Cleft point of the Bladder channel",
-    "Meeting point of the Bladder channel with"
-   ],
+   "english": "Golden Gate",
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -3881,10 +3448,7 @@
    "channel": "BL",
    "index": 64,
    "pinyin": "Jinggu",
-   "english": "Capital Bone 7",
-   "categories": [
-    "Yuan-Source point of the Bladder channel |"
-   ],
+   "english": "Capital Bone",
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -3902,9 +3466,6 @@
    "index": 65,
    "pinyin": "Shugu",
    "english": "Restraining Bone",
-   "categories": [
-    "Shu-Stream and Wood point of the “A"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -3922,9 +3483,6 @@
    "index": 66,
    "pinyin": "Zutonggu",
    "english": "Foot Connecting Valley",
-   "categories": [
-    "Ying-Spring and Water point of the Bladder ut"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -3941,10 +3499,7 @@
    "channel": "BL",
    "index": 67,
    "pinyin": "Zhiyin",
-   "english": "Reaching Yin a",
-   "categories": [
-    "Jing-Well and Metal point of"
-   ],
+   "english": "Reaching Yin",
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -3965,9 +3520,6 @@
    "index": 1,
    "pinyin": "Yongquan",
    "english": "Gushing Spring",
-   "categories": [
-    "Jing-Well and Wood point of the Kidney channel RK"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -3986,10 +3538,7 @@
    "channel": "KI",
    "index": 2,
    "pinyin": "Rangu",
-   "english": "Blazing Valley >",
-   "categories": [
-    "Ying-Spring and Fire point of the Kidney channel AN"
-   ],
+   "english": "Blazing Valley",
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -4007,9 +3556,6 @@
    "index": 3,
    "pinyin": "Taixi",
    "english": "Supreme Stream",
-   "categories": [
-    "Shu-Stream, Yuan-Source and Earth point of V¥."
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -4030,10 +3576,7 @@
    "channel": "KI",
    "index": 4,
    "pinyin": "Dazhong",
-   "english": "Great Bell xn",
-   "categories": [
-    "Luo-Connecting point of the Kidney channel 4G"
-   ],
+   "english": "Great Bell",
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -4051,9 +3594,6 @@
    "index": 5,
    "pinyin": "Shuiquan",
    "english": "Water Spring",
-   "categories": [
-    "Xi-Cleft point of the Kidney channel €"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -4073,10 +3613,7 @@
    "channel": "KI",
    "index": 6,
    "pinyin": "Zhaohai",
-   "english": "Shining Sea owe",
-   "categories": [
-    "Confluent point of the Yin Motility vessel 4"
-   ],
+   "english": "Shining Sea",
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -4097,9 +3634,6 @@
    "index": 7,
    "pinyin": "Fuliu",
    "english": "Returning Current",
-   "categories": [
-    "Jing-River and Metal point of the Kidney channel 1g"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -4118,9 +3652,6 @@
    "index": 8,
    "pinyin": "Jiaoxin",
    "english": "Exchange Belief",
-   "categories": [
-    "Xi-Cleft point of the Yin Motility vessel Ax"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -4138,10 +3669,7 @@
    "channel": "KI",
    "index": 9,
    "pinyin": "Zhubin",
-   "english": "Guest House ˇ",
-   "categories": [
-    "Xi-Cleft point of the Yin Linking vessel 4"
-   ],
+   "english": "Guest House",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -4160,9 +3688,6 @@
    "index": 10,
    "pinyin": "Yingu",
    "english": "Yin Valley",
-   "categories": [
-    "He-Sea and water point of the Kidney channel 72s"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -4180,10 +3705,7 @@
    "channel": "KI",
    "index": 11,
    "pinyin": "Henggu",
-   "english": "Pubic Bone 匹",
-   "categories": [
-    "Meeting point of the Kidney channel with i"
-   ],
+   "english": "Pubic Bone",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -4202,9 +3724,6 @@
    "index": 12,
    "pinyin": "Dahe",
    "english": "Great Luminance",
-   "categories": [
-    "Meeting point of the Kidney channel with Af"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -4222,10 +3741,7 @@
    "channel": "KI",
    "index": 13,
    "pinyin": "Qixue",
-   "english": "Qi Cave &",
-   "categories": [
-    "Meeting point of the Kidney channel with J X"
-   ],
+   "english": "Qi Cave",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -4244,9 +3760,6 @@
    "index": 14,
    "pinyin": "Siman",
    "english": "Four Fullnesses",
-   "categories": [
-    "Meeting point of the Kidney channel with | (@)"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -4265,9 +3778,6 @@
    "index": 15,
    "pinyin": "Zhongzhu",
    "english": "Middle Flow",
-   "categories": [
-    "Meeting point of the Kidney channel with yy"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -4286,9 +3796,6 @@
    "index": 16,
    "pinyin": "Huangshu",
    "english": "Vitals Shu",
-   "categories": [
-    "Meeting point of the Kidney channel with AY"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -4307,9 +3814,6 @@
    "index": 17,
    "pinyin": "Shangqu",
    "english": "Shang Bend",
-   "categories": [
-    "Meeting point of the Kidney"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -4328,9 +3832,6 @@
    "index": 18,
    "pinyin": "Shiguan",
    "english": "Stone Pass",
-   "categories": [
-    "Meeting point of the Kidney channel with Wee"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -4349,9 +3850,6 @@
    "index": 19,
    "pinyin": "Yindu",
    "english": "Yin Metropolis",
-   "categories": [
-    "Meeting point of the Kidney channel with p"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -4369,10 +3867,7 @@
    "channel": "KI",
    "index": 20,
    "pinyin": "Futonggu",
-   "english": "Abdomen Connecting Va",
-   "categories": [
-    "Meeting point of the Kidney"
-   ],
+   "english": "Abdomen Connecting Valley",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -4390,10 +3885,7 @@
    "channel": "KI",
    "index": 21,
    "pinyin": "Youmen",
-   "english": "Hidden Gate uw)",
-   "categories": [
-    "Meeting point of the Kidney channel with f4"
-   ],
+   "english": "Hidden Gate",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -4411,8 +3903,7 @@
    "channel": "KI",
    "index": 22,
    "pinyin": "Bulang",
-   "english": "Walking Corridor ¥",
-   "categories": [],
+   "english": "Walking Corridor",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -4429,8 +3920,7 @@
    "channel": "KI",
    "index": 23,
    "pinyin": "Shenfeng",
-   "english": "Spirit Seal ap",
-   "categories": [],
+   "english": "Spirit Seal",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -4447,8 +3937,7 @@
    "channel": "KI",
    "index": 24,
    "pinyin": "Lingxu",
-   "english": "Spirit Ruin &",
-   "categories": [],
+   "english": "Spirit Ruin",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -4465,8 +3954,7 @@
    "channel": "KI",
    "index": 25,
    "pinyin": "Shencang",
-   "english": "Spirit Storehouse Ap",
-   "categories": [],
+   "english": "Spirit Storehouse",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -4484,7 +3972,6 @@
    "index": 26,
    "pinyin": "Yuzhong",
    "english": "Comfortable Chest",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -4501,8 +3988,7 @@
    "channel": "KI",
    "index": 27,
    "pinyin": "Shufu",
-   "english": "Yunmen LU-2 (Supplementing Life).",
-   "categories": [],
+   "english": "Shu Mansion",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -4520,10 +4006,6 @@
    "index": 1,
    "pinyin": "Tianchi",
    "english": "Heavenly Pool",
-   "categories": [
-    "Meeting point of the Pericardium, Gall Bladder, ( &",
-    "Point of the Window of Heaven"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -4540,8 +4022,7 @@
    "channel": "PC",
    "index": 2,
    "pinyin": "Tianquan",
-   "english": "Heavenly Spring A",
-   "categories": [],
+   "english": "Heavenly Spring",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -4559,9 +4040,6 @@
    "index": 3,
    "pinyin": "Quze",
    "english": "Marsh at the Crook",
-   "categories": [
-    "He-Sea and Water point of the \\¥"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -4578,11 +4056,7 @@
    "channel": "PC",
    "index": 4,
    "pinyin": "Ximen",
-   "english": "Xi-Cleft point of the Pericardium channel [ ‘I",
-   "categories": [
-    "Xi-Cleft Gate",
-    "Xi-Cleft point of the Pericardium channel [ ‘I"
-   ],
+   "english": "Xi-Cleft Gate",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -4599,10 +4073,7 @@
    "channel": "PC",
    "index": 5,
    "pinyin": "Jianshi",
-   "english": "Intermediate Messenger Aa",
-   "categories": [
-    "Jing-River and Metal point of the"
-   ],
+   "english": "Intermediate Messenger",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -4620,10 +4091,6 @@
    "index": 6,
    "pinyin": "Neiguan",
    "english": "Inner Pass",
-   "categories": [
-    "Luo-Connecting point of the Pericardium channel aA",
-    "Confluent point of the Yin Linking vessel"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -4641,10 +4108,6 @@
    "index": 7,
    "pinyin": "Daling",
    "english": "Great Mound",
-   "categories": [
-    "Shu-Stream, Yuan-Source and Earth point of te",
-    "Sun Si-miao Ghost point"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -4662,10 +4125,6 @@
    "index": 8,
    "pinyin": "Laogong",
    "english": "Palace of Toil",
-   "categories": [
-    "Ying-Spring and Fire point of the » 4",
-    "Sun Si-miao Ghost point"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -4685,9 +4144,6 @@
    "index": 9,
    "pinyin": "Zhongchong",
    "english": "Middle Rushing",
-   "categories": [
-    "Jing-Well and Wood point of the by"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -4704,10 +4160,7 @@
    "channel": "SJ",
    "index": 1,
    "pinyin": "Guanchong",
-   "english": "Rushing Pass 人",
-   "categories": [
-    "Jing-Well and Metal point of the Sanjiao channel iv"
-   ],
+   "english": "Rushing Pass",
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -4728,9 +4181,6 @@
    "index": 2,
    "pinyin": "Yemen",
    "english": "Fluid Gate",
-   "categories": [
-    "Ying-Spring and Water point of the Sanjiao ( |"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -4750,9 +4200,6 @@
    "index": 3,
    "pinyin": "Zhongzhu",
    "english": "Central Islet",
-   "categories": [
-    "Shu-Stream and Wood point of the Sanjiao 4 i"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -4772,9 +4219,6 @@
    "index": 4,
    "pinyin": "Yangchi",
    "english": "Yang Pool",
-   "categories": [
-    "Yuan-Source point of the Sanjiao channel Pe,"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -4792,10 +4236,6 @@
    "index": 5,
    "pinyin": "Waiguan",
    "english": "Outer Pass",
-   "categories": [
-    "Luo-Connecting point of the Sanjiao channel a4",
-    "Confluent point of the Yang Linking vessel"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -4813,9 +4253,6 @@
    "index": 6,
    "pinyin": "Zhigou",
    "english": "Branch Ditch",
-   "categories": [
-    "Jing-River and Fire point of the Sanjiao channel"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -4833,9 +4270,6 @@
    "index": 7,
    "pinyin": "Huizong",
    "english": "Ancestral Meeting",
-   "categories": [
-    "Xi-Cleft point of the Sanjiao channel 4x"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -4853,7 +4287,6 @@
    "index": 8,
    "pinyin": "Sanyangluo",
    "english": "Three Yang Luo",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -4870,8 +4303,7 @@
    "channel": "SJ",
    "index": 9,
    "pinyin": "Sidu",
-   "english": "",
-   "categories": [],
+   "english": "Four Rivers",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -4889,9 +4321,6 @@
    "index": 10,
    "pinyin": "Tianjing",
    "english": "Heavenly Well",
-   "categories": [
-    "He-Sea and Earth point of t]"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -4909,7 +4338,6 @@
    "index": 11,
    "pinyin": "Qinglengyuan",
    "english": "Clear Cold Abyss",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -4927,7 +4355,6 @@
    "index": 12,
    "pinyin": "Xiaoluo",
    "english": "Dispersing Luo River",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -4944,10 +4371,7 @@
    "channel": "SJ",
    "index": 13,
    "pinyin": "Naohui",
-   "english": "Upper Arm Meeting N%",
-   "categories": [
-    "Meeting point of the Sanjiao channel and p"
-   ],
+   "english": "Upper Arm Meeting",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -4965,7 +4389,6 @@
    "index": 14,
    "pinyin": "Jianliao",
    "english": "Shoulder Crevice",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -4981,10 +4404,7 @@
    "channel": "SJ",
    "index": 15,
    "pinyin": "Tianliao",
-   "english": "Heavenly Crevice K",
-   "categories": [
-    "Meeting point of the Sanjiao and Gall Bladder"
-   ],
+   "english": "Heavenly Crevice",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -5002,10 +4422,6 @@
    "index": 16,
    "pinyin": "Tianyou",
    "english": "Window of Heaven",
-   "categories": [
-    "Window of Heaven",
-    "Point of the Window of Heaven Ki"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -5021,10 +4437,7 @@
    "channel": "SJ",
    "index": 17,
    "pinyin": "Yifeng",
-   "english": "Wind Screen a",
-   "categories": [
-    "Meeting point of the Sanjiao and Gall Bladder Jes"
-   ],
+   "english": "Wind Screen",
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -5043,8 +4456,7 @@
    "channel": "SJ",
    "index": 18,
    "pinyin": "Qimai",
-   "english": "Spasm Vessel PP ~",
-   "categories": [],
+   "english": "Spasm Vessel",
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -5064,7 +4476,6 @@
    "index": 19,
    "pinyin": "Luxi",
    "english": "Skull’s Rest",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -5084,9 +4495,6 @@
    "index": 20,
    "pinyin": "Jiaosun",
    "english": "Minute Angle",
-   "categories": [
-    "Meeting point of the Sanjiac"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -5106,7 +4514,6 @@
    "index": 21,
    "pinyin": "Ermen",
    "english": "Ear Gate",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -5126,10 +4533,7 @@
    "channel": "SJ",
    "index": 22,
    "pinyin": "Erheliao",
-   "english": "Ear Harmony Crevice f",
-   "categories": [
-    "Meeting point of the Sanjiao, Gall Bladder and"
-   ],
+   "english": "Ear Harmony Crevice",
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -5149,7 +4553,6 @@
    "index": 23,
    "pinyin": "Sizhukong",
    "english": "Silken Bamboo Hollow",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -5170,9 +4573,6 @@
    "index": 1,
    "pinyin": "Tongziliao",
    "english": "Pupil Crevice",
-   "categories": [
-    "Meeting point of the Gall Bladder,"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -5191,8 +4591,7 @@
    "channel": "GB",
    "index": 2,
    "pinyin": "Tinghui",
-   "english": "Meeting of Hearing Fe",
-   "categories": [],
+   "english": "Meeting of Hearing",
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -5212,9 +4611,6 @@
    "index": 3,
    "pinyin": "Shangguan",
    "english": "Above the Joint",
-   "categories": [
-    "Meeting point of the Gall Bl"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -5234,9 +4630,6 @@
    "index": 4,
    "pinyin": "Hanyan",
    "english": "Jaw Serenity",
-   "categories": [
-    "Meeting point of the Gall Bladder, Sanjiao and fe"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -5256,10 +4649,7 @@
    "channel": "GB",
    "index": 5,
    "pinyin": "Xuanlu",
-   "english": "Suspended Skull —",
-   "categories": [
-    "Meeting point of the Gall Bladder, Stomach, a"
-   ],
+   "english": "Suspended Skull",
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -5280,9 +4670,6 @@
    "index": 6,
    "pinyin": "Xuanli",
    "english": "Suspended Hair",
-   "categories": [
-    "Meeting point of the Gall Bl"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -5303,9 +4690,6 @@
    "index": 7,
    "pinyin": "Qubin",
    "english": "Crook of the Temple",
-   "categories": [
-    "Meeting point of the Gall Bladder &"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -5326,9 +4710,6 @@
    "index": 8,
    "pinyin": "Shuaigu",
    "english": "Leading Valley",
-   "categories": [
-    "Meeting point of the Gall Bladder A»"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -5348,9 +4729,6 @@
    "index": 9,
    "pinyin": "Tianchong",
    "english": "Heavenly Rushing",
-   "categories": [
-    "Meeting point of the Gall Bladder ie"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -5371,9 +4749,6 @@
    "index": 10,
    "pinyin": "Fubai",
    "english": "Floating White",
-   "categories": [
-    "Meeting point of the Gall Bladder re]"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -5393,9 +4768,6 @@
    "index": 11,
    "pinyin": "Touqiaoyin",
    "english": "Yin Portals of the Head",
-   "categories": [
-    "Meeting point of the Gall Bladder, Bladder,"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -5416,9 +4788,6 @@
    "index": 12,
    "pinyin": "Wangu",
    "english": "Mastoid Process",
-   "categories": [
-    "Meeting point of the Gall Bladder and |"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -5439,9 +4808,6 @@
    "index": 13,
    "pinyin": "Benshen",
    "english": "Root of the Spirit",
-   "categories": [
-    "Meeting point of the Gall Bladder channel Ae"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -5458,9 +4824,6 @@
    "index": 14,
    "pinyin": "Yangbai",
    "english": "Yang White",
-   "categories": [
-    "Meeting point of the Gall Bladder with Al)"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -5480,10 +4843,7 @@
    "channel": "GB",
    "index": 15,
    "pinyin": "Toulinqi",
-   "english": "Head Governor of Tears 口",
-   "categories": [
-    "Meeting point of the Gall Bladder as"
-   ],
+   "english": "Head Governor of Tears",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -5500,10 +4860,6 @@
    "index": 16,
    "pinyin": "Muchuang",
    "english": "Window of the Eye",
-   "categories": [
-    "Window of the Eye",
-    "Meeting point of the Gall Bladder channel ea]"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -5520,9 +4876,6 @@
    "index": 17,
    "pinyin": "Zhengying",
    "english": "Upright Nutrition",
-   "categories": [
-    "Meeting point of the Gall Bladder channel -"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -5538,10 +4891,7 @@
    "channel": "GB",
    "index": 18,
    "pinyin": "Chengling",
-   "english": "Support Spirit AN",
-   "categories": [
-    "Meeting point of the Gall Bladder channel ecg"
-   ],
+   "english": "Support Spirit",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -5558,9 +4908,6 @@
    "index": 19,
    "pinyin": "Naokong",
    "english": "Brain Hollow",
-   "categories": [
-    "Meeting point of the Gall Bladder channel"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -5577,7 +4924,6 @@
    "index": 20,
    "pinyin": "Fengchi",
    "english": "Wind Pool",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -5594,9 +4940,6 @@
    "index": 21,
    "pinyin": "Jianjing",
    "english": "Shoulder Well",
-   "categories": [
-    "Meeting point of the Gall Bladder, +"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -5614,8 +4957,7 @@
    "channel": "GB",
    "index": 22,
    "pinyin": "Yuanye",
-   "english": "Armpit Abyss i",
-   "categories": [],
+   "english": "Armpit Abyss",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -5633,9 +4975,6 @@
    "index": 23,
    "pinyin": "Zhejin",
    "english": "Flank Sinews",
-   "categories": [
-    "Meeting point of the Gall Bladder An"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -5653,10 +4992,6 @@
    "index": 24,
    "pinyin": "Riyue",
    "english": "Sun and Moon",
-   "categories": [
-    "Meeting point of the Gall Bladder and Spleen A",
-    "Front-Mu point of the Gall Bladder"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -5673,10 +5008,7 @@
    "channel": "GB",
    "index": 25,
    "pinyin": "Jingmen",
-   "english": "Capital Gate <{~",
-   "categories": [
-    "Front-Mu point of the Kidneys 目"
-   ],
+   "english": "Capital Gate",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -5694,9 +5026,6 @@
    "index": 26,
    "pinyin": "Daimai",
    "english": "Girdling Vessel",
-   "categories": [
-    "Meeting point of the Gall Bladder channel fk"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -5715,9 +5044,6 @@
    "index": 27,
    "pinyin": "Wushu",
    "english": "Five Pivots",
-   "categories": [
-    "Meeting point of the Gall Bladder channel yA"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -5734,10 +5060,7 @@
    "channel": "GB",
    "index": 28,
    "pinyin": "Weidao",
-   "english": "Linking Path 乡t′暮_",
-   "categories": [
-    "Meeting point of the Gall Bladder channel rc"
-   ],
+   "english": "Linking Path",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -5755,9 +5078,6 @@
    "index": 29,
    "pinyin": "Juliao",
    "english": "Stationary Crevice",
-   "categories": [
-    "Meeting point of the Gall Bladder channel"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -5774,11 +5094,7 @@
    "channel": "GB",
    "index": 30,
    "pinyin": "Huantiao",
-   "english": "Jumping Circle 3",
-   "categories": [
-    "Meeting point of the Gall Bladder and Yi,",
-    "Ma Dan-yang Heavenly Star point"
-   ],
+   "english": "Jumping Circle",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -5795,7 +5111,6 @@
    "index": 31,
    "pinyin": "Fengshi",
    "english": "Wind Market",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -5813,7 +5128,6 @@
    "index": 32,
    "pinyin": "Zhongdu",
    "english": "Middle Ditch",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -5830,8 +5144,7 @@
    "channel": "GB",
    "index": 33,
    "pinyin": "Xiyangguan",
-   "english": "Knee Yang Gate >",
-   "categories": [],
+   "english": "Knee Yang Gate",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -5849,11 +5162,6 @@
    "index": 34,
    "pinyin": "Yanglingquan",
    "english": "Yang Mound Spring",
-   "categories": [
-    "He-Sea and Earth point of the Gall Bladder channel fk",
-    "Hui-meeting point of Sinecws",
-    "Ma Dan-yang Heavenly Star point"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -5871,9 +5179,6 @@
    "index": 35,
    "pinyin": "Yangjiao",
    "english": "Yang Intersection",
-   "categories": [
-    "Xi-Cleft point of the Yang Linking vessel"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -5892,9 +5197,6 @@
    "index": 36,
    "pinyin": "Waiqiu",
    "english": "Outer Hill",
-   "categories": [
-    "Xi-Cleft point of the Gall Bladder channel ft"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -5913,9 +5215,6 @@
    "index": 37,
    "pinyin": "Guangming",
    "english": "Bright Light",
-   "categories": [
-    "Luo-Connecting point of the"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -5934,9 +5233,6 @@
    "index": 38,
    "pinyin": "Yangfu",
    "english": "Yang Assistance",
-   "categories": [
-    "Jing-River and Fire point of the Ph"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -5954,10 +5250,7 @@
    "channel": "GB",
    "index": 39,
    "pinyin": "Xuanzhong",
-   "english": "Suspended Bell v",
-   "categories": [
-    "Hui-Meeting point for Marrow AG"
-   ],
+   "english": "Suspended Bell",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -5976,9 +5269,6 @@
    "index": 40,
    "pinyin": "Qiuxu",
    "english": "Mound of Ruins",
-   "categories": [
-    "Yuan-Source point of the Gall Bladder channel dis"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -6000,10 +5290,6 @@
    "index": 41,
    "pinyin": "Zulinqi",
    "english": "Foot Governor of Tears",
-   "categories": [
-    "Shu-Stream and Wood point of the Gall",
-    "Confluent point of the Girdling vessel"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -6023,7 +5309,6 @@
    "index": 42,
    "pinyin": "Diwuhui",
    "english": "Earth Five Meetings",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -6043,9 +5328,6 @@
    "index": 43,
    "pinyin": "Xiaxi",
    "english": "Clamped Stream",
-   "categories": [
-    "Ying-Spring and Water point of the 化李"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -6065,9 +5347,6 @@
    "index": 44,
    "pinyin": "Zuqiaoyin",
    "english": "Yin Portals of the Foot",
-   "categories": [
-    "Jing-Well and Metal point of the"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -6088,9 +5367,6 @@
    "index": 1,
    "pinyin": "Dadun",
    "english": "Big Mound",
-   "categories": [
-    "Jing-Well and Wood point of the Liver channel ig"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -6111,9 +5387,6 @@
    "index": 2,
    "pinyin": "Xingjian",
    "english": "Moving Between",
-   "categories": [
-    "Ying-Spring and Fire point of the Liver channel nei"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -6133,10 +5406,6 @@
    "index": 3,
    "pinyin": "Taichong",
    "english": "Great Rushing",
-   "categories": [
-    "Shu-Stream, Yuan-Source and Earth point of",
-    "Ma Dan-yang Heavenly Star point"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -6156,9 +5425,6 @@
    "index": 4,
    "pinyin": "Zhongfeng",
    "english": "Middle Seal",
-   "categories": [
-    "Jing-River and Metal point of ay"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -6179,10 +5445,7 @@
    "channel": "LR",
    "index": 5,
    "pinyin": "Ligou",
-   "english": "Woodworm Canal \\",
-   "categories": [
-    "Luo-Connecting point of the Liver channel. i"
-   ],
+   "english": "Woodworm Canal",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -6201,9 +5464,6 @@
    "index": 6,
    "pinyin": "Zhongdu",
    "english": "Central Capital",
-   "categories": [
-    "Xi-Cleft point of the Liver channel a"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -6222,7 +5482,6 @@
    "index": 7,
    "pinyin": "Xiguan",
    "english": "Knee Joint",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -6241,9 +5500,6 @@
    "index": 8,
    "pinyin": "Ququan",
    "english": "Spring at the Crook",
-   "categories": [
-    "He-Sea and Water point of the Liver channel x"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -6260,8 +5516,7 @@
    "channel": "LR",
    "index": 9,
    "pinyin": "Yinbao",
-   "english": "Yin Wrapping ee",
-   "categories": [],
+   "english": "Yin Wrapping",
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -6279,7 +5534,6 @@
    "index": 10,
    "pinyin": "Zuwuli",
    "english": "Leg Five Miles",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -6297,7 +5551,6 @@
    "index": 11,
    "pinyin": "Yinlian",
    "english": "Yin Corner",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -6315,7 +5568,6 @@
    "index": 12,
    "pinyin": "Jimai",
    "english": "Urgent Pulse",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -6333,11 +5585,6 @@
    "index": 13,
    "pinyin": "Zhangmen",
    "english": "Completion Gate",
-   "categories": [
-    "Front-Mu point of the Spleen | ]",
-    "Hui-Meeting point of the zang",
-    "Meeting point of the Liver and Gall Bladder"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -6355,10 +5602,6 @@
    "index": 14,
    "pinyin": "Qimen",
    "english": "Cycle Gate",
-   "categories": [
-    "Front-Mu point of the Liver }",
-    "Meeting point of the Liver and Spleen"
-   ],
    "side": "bilateral",
    "accuracy": "anchored",
    "anchor": {
@@ -6376,10 +5619,6 @@
    "index": 1,
    "pinyin": "Huiyin",
    "english": "Meeting of Yin",
-   "categories": [
-    "Meeting point of the Conception, Penetrating (‘>",
-    "Sun Si-miao Ghost point"
-   ],
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -6396,9 +5635,6 @@
    "index": 2,
    "pinyin": "Qugu",
    "english": "Curved Bone",
-   "categories": [
-    "Meeting point of the Conception vessel “a"
-   ],
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -6417,10 +5653,6 @@
    "index": 3,
    "pinyin": "Zhongji",
    "english": "Middle Pole",
-   "categories": [
-    "Front-Mu point of the Bladder",
-    "Meeting point of the Conception vessel with"
-   ],
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -6439,10 +5671,6 @@
    "index": 4,
    "pinyin": "Guanyuan",
    "english": "Gate of Origin",
-   "categories": [
-    "Front-Mu point of the Small Intestine 7a",
-    "Meeting point of the Conception vessel with"
-   ],
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -6461,9 +5689,6 @@
    "index": 5,
    "pinyin": "Shimen",
    "english": "Stone Gate",
-   "categories": [
-    "Front-Mu point of the Sanjiao } |"
-   ],
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -6482,9 +5707,6 @@
    "index": 6,
    "pinyin": "Qihai",
    "english": "Sea of Qi",
-   "categories": [
-    "Sea of Qi"
-   ],
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -6503,9 +5725,6 @@
    "index": 7,
    "pinyin": "Yinjiao",
    "english": "Yin Intersection",
-   "categories": [
-    "Meeting point of the Conception and Penetrating Re"
-   ],
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -6524,7 +5743,6 @@
    "index": 8,
    "pinyin": "Shenque",
    "english": "Spirit Gateway",
-   "categories": [],
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -6543,7 +5761,6 @@
    "index": 9,
    "pinyin": "Shuifen",
    "english": "Water Separation",
-   "categories": [],
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -6562,9 +5779,6 @@
    "index": 10,
    "pinyin": "Xiawan",
    "english": "Lower Cavity",
-   "categories": [
-    "Meeting point of the Conception vessel KK"
-   ],
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -6583,7 +5797,6 @@
    "index": 11,
    "pinyin": "Jianli",
    "english": "Strengthen the Interior",
-   "categories": [],
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -6602,11 +5815,6 @@
    "index": 12,
    "pinyin": "Zhongwan",
    "english": "Middle Cavity",
-   "categories": [
-    "Front-Mu point of the Stomach Ri,",
-    "Hui-Meeting point of the Fu",
-    "Meeting point of the Conception vessel with"
-   ],
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -6625,9 +5833,6 @@
    "index": 13,
    "pinyin": "Shangwan",
    "english": "Upper Cavity",
-   "categories": [
-    "Meeting point of the Conception vessel with Ke"
-   ],
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -6646,9 +5851,6 @@
    "index": 14,
    "pinyin": "Juque",
    "english": "Great Gateway",
-   "categories": [
-    "Front-Mu point of the Heart af"
-   ],
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -6666,10 +5868,7 @@
    "channel": "REN",
    "index": 15,
    "pinyin": "Jiuwei",
-   "english": "Turtledove Tail -",
-   "categories": [
-    "Luo-Connecting point of the Conception vessel Vea"
-   ],
+   "english": "Turtledove Tail",
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -6688,7 +5887,6 @@
    "index": 16,
    "pinyin": "Zhongting",
    "english": "Central Courtyard",
-   "categories": [],
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -6705,13 +5903,7 @@
    "channel": "REN",
    "index": 17,
    "pinyin": "Shanzhong",
-   "english": "Chest Centre AG",
-   "categories": [
-    "Front-Mu point of the Pericardium",
-    "Hui-Meeting point of the Qi ie",
-    "Point of the Sea of Qi",
-    "Meeting point of the Conception vessel with the"
-   ],
+   "english": "Chest Centre",
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -6728,8 +5920,7 @@
    "channel": "REN",
    "index": 18,
    "pinyin": "Yutang",
-   "english": "Jade Hall i",
-   "categories": [],
+   "english": "Jade Hall",
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -6747,7 +5938,6 @@
    "index": 19,
    "pinyin": "Zigong",
    "english": "Purple Palace",
-   "categories": [],
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -6765,7 +5955,6 @@
    "index": 20,
    "pinyin": "Huagai",
    "english": "Magnificent Canopy",
-   "categories": [],
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -6782,8 +5971,7 @@
    "channel": "REN",
    "index": 21,
    "pinyin": "Xuanji",
-   "english": "Jade Pivot re",
-   "categories": [],
+   "english": "Jade Pivot",
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -6800,11 +5988,7 @@
    "channel": "REN",
    "index": 22,
    "pinyin": "Tiantu",
-   "english": "Heavenly Prominence k",
-   "categories": [
-    "Meeting point of the Conception ~~",
-    "Point of the Window of Heaven"
-   ],
+   "english": "Heavenly Prominence",
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -6822,9 +6006,6 @@
    "index": 23,
    "pinyin": "Lianquan",
    "english": "Corner Spring",
-   "categories": [
-    "Meeting point of the Conception R"
-   ],
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -6840,11 +6021,7 @@
    "channel": "REN",
    "index": 24,
    "pinyin": "Chengjiang",
-   "english": "Container of Fluids ee",
-   "categories": [
-    "Meeting point of the Conception vessel with ag",
-    "Sun Si-miao Ghost point"
-   ],
+   "english": "Container of Fluids",
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -6864,10 +6041,6 @@
    "index": 1,
    "pinyin": "Changqiang",
    "english": "Long Strong",
-   "categories": [
-    "Luo-Connecting point of the Governing vessel %",
-    "Meeting point of the Governing vessel with"
-   ],
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -6885,7 +6058,6 @@
    "index": 2,
    "pinyin": "Yaoshu",
    "english": "Lumbar Shu",
-   "categories": [],
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -6902,8 +6074,7 @@
    "channel": "DU",
    "index": 3,
    "pinyin": "Yaoyangguan",
-   "english": "Lumbar Yang Gate Ak",
-   "categories": [],
+   "english": "Lumbar Yang Gate",
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -6922,7 +6093,6 @@
    "index": 4,
    "pinyin": "Mingmen",
    "english": "Gate of Life",
-   "categories": [],
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -6940,8 +6110,7 @@
    "channel": "DU",
    "index": 5,
    "pinyin": "Xuanshu",
-   "english": "Suspended Pivot l",
-   "categories": [],
+   "english": "Suspended Pivot",
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -6960,7 +6129,6 @@
    "index": 6,
    "pinyin": "Jizhong",
    "english": "Centre of the Spine",
-   "categories": [],
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -6979,7 +6147,6 @@
    "index": 7,
    "pinyin": "Zhongshu",
    "english": "Central Pivot",
-   "categories": [],
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -6998,7 +6165,6 @@
    "index": 8,
    "pinyin": "Jinsuo",
    "english": "Sinew Contraction",
-   "categories": [],
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -7017,7 +6183,6 @@
    "index": 9,
    "pinyin": "Zhiyang",
    "english": "Reaching Yang",
-   "categories": [],
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -7036,7 +6201,6 @@
    "index": 10,
    "pinyin": "Lingtai",
    "english": "Spirit Tower",
-   "categories": [],
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -7054,8 +6218,7 @@
    "channel": "DU",
    "index": 11,
    "pinyin": "Shendao",
-   "english": "Spirit Pathway 1",
-   "categories": [],
+   "english": "Spirit Pathway",
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -7074,7 +6237,6 @@
    "index": 12,
    "pinyin": "Shenzhu",
    "english": "Body Pillar",
-   "categories": [],
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -7093,9 +6255,6 @@
    "index": 13,
    "pinyin": "Taodao",
    "english": "Way of Happiness",
-   "categories": [
-    "Meeting point of the Governing vessel with a"
-   ],
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -7114,10 +6273,6 @@
    "index": 14,
    "pinyin": "Dazhui",
    "english": "Great Vertebra",
-   "categories": [
-    "Meeting point of the Governing vessel with Ai",
-    "Point of the Sea of Qi"
-   ],
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -7136,10 +6291,6 @@
    "index": 15,
    "pinyin": "Yamen",
    "english": "Gate of Muteness",
-   "categories": [
-    "Meeting point of the Governing and f x",
-    "Point of the Sea of Qi"
-   ],
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -7155,13 +6306,7 @@
    "channel": "DU",
    "index": 16,
    "pinyin": "Fengfu",
-   "english": "Palace of Wind Ja",
-   "categories": [
-    "Meeting point of the Governing and ht",
-    "Point of the Sea of Marrow",
-    "Point of the Window of Heavei",
-    "Sun Si-miao Ghost point"
-   ],
+   "english": "Palace of Wind",
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -7178,9 +6323,6 @@
    "index": 17,
    "pinyin": "Naohu",
    "english": "Brain’s Door",
-   "categories": [
-    "Meeting point of the Governing vessel with F i"
-   ],
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -7196,7 +6338,6 @@
    "index": 18,
    "pinyin": "Qiangjian",
    "english": "Unyielding Space",
-   "categories": [],
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -7212,7 +6353,6 @@
    "index": 19,
    "pinyin": "Houding",
    "english": "Behind the Crown",
-   "categories": [],
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -7227,11 +6367,7 @@
    "channel": "DU",
    "index": 20,
    "pinyin": "Baihui",
-   "english": "Hundred Meetings G",
-   "categories": [
-    "Meeting point of the Governing vessel with the",
-    "Point of the Sea of Marrow"
-   ],
+   "english": "Hundred Meetings",
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -7246,8 +6382,7 @@
    "channel": "DU",
    "index": 21,
    "pinyin": "Qianding",
-   "english": "Baihui DU-20",
-   "categories": [],
+   "english": "In Front of the Crown",
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -7262,8 +6397,7 @@
    "channel": "DU",
    "index": 22,
    "pinyin": "Xinhui",
-   "english": "Fontanelle Meeting 4a",
-   "categories": [],
+   "english": "Fontanelle Meeting",
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -7279,9 +6413,6 @@
    "index": 23,
    "pinyin": "Shangxing",
    "english": "Upper Star",
-   "categories": [
-    "Sun Si-miao Ghost point ye"
-   ],
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -7297,9 +6428,6 @@
    "index": 24,
    "pinyin": "Shenting",
    "english": "Courtyard of the Spirit",
-   "categories": [
-    "Meeting point of the Governing vessel with ji"
-   ],
    "side": "midline",
    "accuracy": "anchored",
    "anchor": {
@@ -7314,8 +6442,7 @@
    "channel": "DU",
    "index": 25,
    "pinyin": "Suliao",
-   "english": "White Crevice a",
-   "categories": [],
+   "english": "White Crevice",
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -7334,11 +6461,7 @@
    "channel": "DU",
    "index": 26,
    "pinyin": "Renzhong",
-   "english": "Man「s Middle",
-   "categories": [
-    "Meeting point of the Governing vessel with the",
-    "Sun Si-miao Ghost point"
-   ],
+   "english": "Man’s Middle",
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -7358,7 +6481,6 @@
    "index": 27,
    "pinyin": "Duiduan",
    "english": "Extremity of the Mouth",
-   "categories": [],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {
@@ -7378,9 +6500,6 @@
    "index": 28,
    "pinyin": "Yinjiao",
    "english": "Gum Intersection",
-   "categories": [
-    "Meeting point of the Governing vessel with sa"
-   ],
    "side": "bilateral",
    "accuracy": "structural",
    "anchor": {

@@ -19,6 +19,7 @@ zewnetrzny - ten, ktory da sie pokazac na skorze.
 from __future__ import annotations
 
 import json
+from functools import lru_cache
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -27,17 +28,33 @@ DATA = ROOT / "data"
 PL_ROLE = {"luo": "punkt luo", "yuan": "punkt yuan", "xi": "punkt xi",
            "front_mu": "punkt mu", "back_shu": "punkt shu grzbietu",
            "confluent": "punkt otwierajacy", "hui": "punkt hui",
-           "great_luo": "wielki luo"}
+           "great_luo": "wielki luo", "lower_he_sea": "dolny punkt he",
+           "jing_well": "punkt jing-studnia", "ying_spring": "punkt ying-zrodlo",
+           "shu_stream": "punkt shu-strumien", "jing_river": "punkt jing-rzeka",
+           "he_sea": "punkt he-morze", "window": "okno nieba", "command": "punkt dowodzenia"}
 PL_VESSEL = {"CHONG": "Naczynie Przenikajace", "DAI": "Naczynie Opasujace",
              "YINWEI": "Naczynie Yin Wei", "YANGWEI": "Naczynie Yang Wei",
              "YINQIAO": "Naczynie Yin Qiao", "YANGQIAO": "Naczynie Yang Qiao",
              "REN": "Naczynie Poczecia", "DU": "Naczynie Gubernatora"}
 
 
+@lru_cache(maxsize=1)
+def _topology() -> dict:
+    return json.loads((DATA / "channel_topology.json").read_text(encoding="utf-8"))
+
+
+def role_text(code: str) -> str:
+    """Role punktu po polsku, z topologii. Rola `sea` pominieta: wzorzec lapal tez
+    nazwy punktow (BL-24, REN-6, SP-10), wiec nie odroznia czterech morz od nazwy."""
+    rs = _topology()["roles"].get(code, [])
+    names = [PL_ROLE[r["role"]] for r in rs if r["role"] in PL_ROLE]
+    return ", ".join(dict.fromkeys(names))
+
+
 class ChannelMap:
     def __init__(self, atlas):
         self.atlas = atlas
-        t = json.loads((DATA / "channel_topology.json").read_text(encoding="utf-8"))
+        t = _topology()
         self.luo_of = t["luo_of"]
         self.yuan_of = t["yuan_of"]
         self.crossings = t["crossings"]
@@ -69,9 +86,7 @@ class ChannelMap:
         return seq[i:j + 1] if i <= j else seq[j:i + 1][::-1]
 
     def role_of(self, code: str) -> str:
-        rs = self.roles.get(code, [])
-        names = [PL_ROLE.get(r["role"], r["role"]) for r in rs if r["role"] in PL_ROLE]
-        return ", ".join(dict.fromkeys(names))
+        return role_text(code)
 
     # --- polaczenie dwoch punktow ----------------------------------------
     def connect(self, code_a: str, code_b: str) -> dict:

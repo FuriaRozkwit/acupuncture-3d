@@ -1,5 +1,5 @@
 {
- "source": "wydobyte z pol categories w data/points.json (tools/build_topology.py); same fakty strukturalne - kody, role, listy kanalow",
+ "source": "wydobyte z lokalnych kategorii punktow (tools/build_topology.py); same fakty strukturalne - kody, role, listy kanalow",
  "interior_exterior": [
   [
    "LU",

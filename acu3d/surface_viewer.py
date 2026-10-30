@@ -28,6 +28,7 @@ import numpy as np
 import pyvista as pv
 import vtk
 
+from .channels import role_text
 from .model import Atlas
 from .translate_pl import (
     get_point_pl,
@@ -1480,6 +1481,8 @@ class SurfaceViewer:
         elif meta.get("categories"):
             cats_raw = ", ".join(meta["categories"]) if isinstance(meta["categories"], list) else str(meta["categories"])
             out.append(f"║  Kategorie: {cats_raw}".ljust(77) + "║")
+        elif role_text(clean_code):
+            out.append(f"║  Kategorie: {role_text(clean_code)}".ljust(77) + "║")
 
         loc = (pl_rec.get("lokalizacja_pl") if pl_rec else None) or translate_location(clean_code, meta.get("location") or d.get("note_pl", ""), pinyin)
         if loc:

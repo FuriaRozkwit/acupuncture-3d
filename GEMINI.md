@@ -40,11 +40,13 @@ Z tego wynika sposób pracy:
    i `data/combos.json` zostają lokalnie.
 3. **Przed publikacją czegokolwiek skanuj ZAWARTOŚĆ, nie nazwy plików:**
    `python tools/scan_leak.py`. Wyciek zdarzył się raz właśnie dlatego, że sprawdzano nazwy.
-   Znane, świadomie odłożone trafienie: pole `categories` w `data/points.json` — **nie czyść
-   go bez decyzji Pawła**.
+   Pola `categories` nie ma już w `data/points.json` (SPRAWA-006, BANG-0028): role punktów
+   są w `data/channel_topology.json`, a `scan_leak.py` pilnuje, by pole nie wróciło.
 4. **Nie commituj i nie pushuj bez wyraźnej prośby.** Przed wysyłką na GitHub pytaj wprost.
 5. **Nie uruchamiaj `wsl --shutdown`** i nie wyłączaj Smart App Control.
 6. Po każdej zmianie geometrii: `python tools/validate.py` musi dawać `WYNIK: OK`.
+7. `data/points.json` to źródło prawdy o kotwicach, `tools/build_points.py` jest od niego
+   starszy. Generator odmawia, gdy przebudowa cofnęłaby pomiary; `--force` tylko za zgodą Pawła.
 
 ## 4. Jak uruchamiać
 
