@@ -14,7 +14,6 @@ Uruchomienie:  python tools/build_points.py
 from __future__ import annotations
 
 import json
-import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -756,19 +755,13 @@ def published() -> dict:
     return {p["code"]: p for p in json.loads(path.read_text(encoding="utf-8"))["points"]}
 
 
-def build(force: bool = False) -> None:
+def build() -> None:
     n_fit = apply_azimuth_fit(POINTS)
     meta = json.loads((ROOT / "data" / "point_meta.json").read_text(encoding="utf-8"))
     current = published()
     # Tabele w tym pliku sa starsze niz data/points.json: kotwice poprawiane pomiarem
-    # (verify_*, fit_azimuth) ida wprost do danych. Bez tej blokady przebudowa cicho
-    # cofnelaby je do stanu z tabel.
-    stale = [p["code"] for p in POINTS
-             if p["code"] in current and current[p["code"]]["anchor"] != p["anchor"]]
-    if stale and not force:
-        raise SystemExit(f"BLOKADA: {len(stale)} kotwic w data/points.json rozni sie od tabel "
-                         f"(np. {', '.join(stale[:6])}). Przebudowa cofnelaby pomiary; "
-                         "--force tylko swiadomie.")
+    # (verify_*, fit_azimuth) ida wprost do danych. Punkt juz opublikowany zostaje wiec
+    # taki, jaki jest, a tabele rozstrzygaja tylko o punktach, ktorych w danych nie ma.
     by_code = {}
     out = []
     for p in POINTS:
@@ -777,20 +770,21 @@ def build(force: bool = False) -> None:
             raise SystemExit(f"duplikat kotwicy: {code}")
         ch, idx = code.split("-")
         m = meta.get(code, {})
+        cur = current.get(code, {})
         rec = {
             "code": code,
             "channel": ch,
             "index": int(idx),
-            "pinyin": m.get("pinyin", ""),
+            "pinyin": cur.get("pinyin") or m.get("pinyin", ""),
             # OCR ma tu ogonki i cudze zdania; nazwy czyszczone sa w data/points.json.
             # Pola categories nie ma: to brzmienie podrecznika (SPRAWA-006), a role
             # punktow sa w data/channel_topology.json.
-            "english": current.get(code, {}).get("english") or m.get("english", ""),
-            "side": p["side"],
-            "accuracy": p["accuracy"],
-            "anchor": p["anchor"],
-            "note_pl": p["note"],
-            "az_source": p.get("az_source", ""),
+            "english": cur.get("english") or m.get("english", ""),
+            "side": cur.get("side", p["side"]),
+            "accuracy": cur.get("accuracy", p["accuracy"]),
+            "anchor": cur.get("anchor", p["anchor"]),
+            "note_pl": cur.get("note_pl", p["note"]),
+            "az_source": cur.get("az_source", p.get("az_source", "")),
         }
         by_code[code] = rec
         out.append(rec)
@@ -804,7 +798,7 @@ def build(force: bool = False) -> None:
         "points": sorted(out, key=lambda r: (CHANNELS[r["channel"]]["clock"], r["index"])),
     }
     (ROOT / "data" / "points.json").write_text(
-        json.dumps(doc, ensure_ascii=False, indent=1), encoding="utf-8")
+        json.dumps(doc, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
     paths = {}
     for ch in CHANNELS:
@@ -814,8 +808,10 @@ def build(force: bool = False) -> None:
             codes = [r["code"] for r in sorted(
                 (x for x in out if x["channel"] == ch), key=lambda r: r["index"])]
             paths[ch] = [codes]
-    (ROOT / "data" / "meridians.json").write_text(
-        json.dumps({"paths": paths}, ensure_ascii=False, indent=1), encoding="utf-8")
+    # Przebiegi tez poprawiane sa wprost w danych, wiec istniejacego pliku nie nadpisujemy.
+    meridians = ROOT / "data" / "meridians.json"
+    if not meridians.exists():
+        meridians.write_text(json.dumps({"paths": paths}, ensure_ascii=False, indent=1), encoding="utf-8")
 
     kinds = {}
     for r in out:
@@ -829,4 +825,4 @@ def build(force: bool = False) -> None:
 
 
 if __name__ == "__main__":
-    build(force="--force" in sys.argv)
+    build()
