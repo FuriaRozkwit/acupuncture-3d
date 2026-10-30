@@ -6,7 +6,8 @@ na jaw wyciek w polu `categories` - kontrola nazw plikow go nie widziala.
 
 Pilnuje tez struktury danych, ktore wychodza na zewnatrz (SPRAWA-006, SPRAWA-007):
 pole `categories` nie wraca do data/points.json, a `english` zawiera sama nazwe,
-bez ogonkow OCR i bez cudzych zdan - takze w paczce dist/ dla Terrapki.
+bez ogonkow OCR i bez cudzych zdan - takze w paczkach dist/ dla Terrapki. Zgodnosc
+`english` i `pinyin` z ksiazka sprawdza tools/check_names.py, uruchamiany stad.
 
     python tools/scan_leak.py              # pliki sledzone + nowe (bez .gitignore)
     python tools/scan_leak.py --history    # dodatkowo wszystkie bloby z historii
@@ -19,6 +20,8 @@ import re
 import subprocess
 import sys
 from pathlib import Path
+
+import check_names
 
 ROOT = Path(__file__).resolve().parent.parent
 META = ROOT / "data" / "point_meta.json"
@@ -61,10 +64,10 @@ def bad_fields() -> list:
     out += [f"data/points.json {p['code']}: pole categories" for p in doc["points"]
             if "categories" in p]
     sources = [("data/points.json", doc["points"])]
-    bundle = ROOT / "dist" / "meridian-bundle.json"
-    if bundle.exists():
-        sources.append(("dist/meridian-bundle.json",
-                        json.loads(bundle.read_text(encoding="utf-8"))["points"]))
+    for name in check_names.BUNDLES:
+        bundle = ROOT / "dist" / name
+        if bundle.exists():
+            sources.append((f"dist/{name}", json.loads(bundle.read_text(encoding="utf-8"))["points"]))
     for name, points in sources:
         out += [f"{name} {p['code']}: english = {p.get('english')!r}" for p in points
                 if not english.fullmatch(p.get("english") or "")]
@@ -100,6 +103,11 @@ def main() -> int:
     for line in fields:
         print(f"STRUKTURA: {line}")
     print(f"naruszen struktury (categories, english): {len(fields)}")
+
+    names = check_names.main()
+    if names == 2:
+        return 2
+    bad += names
 
     if args.history:
         blobs = subprocess.run(["git", "-C", str(ROOT), "rev-list", "--objects", "--all"],
